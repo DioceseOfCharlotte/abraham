@@ -1,29 +1,3 @@
-/*
- * Web Starter Kit
- *
- * Multi-screen layout styles for your page. Brought to you by the
- * Web Starter Kit team.
- *
- */
-
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  position: relative;
-  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-  background-color: #FFFFFF;
-  box-sizing: border-box;
-  min-height: 100%;
-}
-
 body.open {
   overflow: hidden;
 }
@@ -53,12 +27,12 @@ body.open {
 }
 
 .app-bar.open,
-.app-bar.open ~ main {
+.app-bar.open ~ .main-container {
   -webkit-transform: translate(250px, 0);
           transform: translate(250px, 0);
 }
 
-.app-bar .logo {
+.app-bar .site-title {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -73,7 +47,7 @@ body.open {
   line-height: 60px;
 }
 
-.app-bar .logo a {
+.app-bar .site-title a {
   text-decoration: none;
   color: inherit;
   font-weight: normal;
@@ -87,58 +61,6 @@ body.open {
       -ms-flex-direction: row;
           flex-direction: row;
   z-index: 2;
-}
-
-.app-bar button {
-  width: 60px;
-  height: 60px;
-  background-image: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  -webkit-transition: background-color 0.2s ease-out;
-          transition: background-color 0.2s ease-out;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.app-bar button img {
-  width: 60px;
-  height: 60px;
-}
-
-.app-bar button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.app-bar button:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  outline: 0;
-}
-
-.app-bar button:active {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-button.btn-menu img {
-  height:24px;
-  width: 24px;
-}
-
-.promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
-
-  Replace with will-change when available
-
-  #perfmatters
-  */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.base, p, ul, ol {
-  font-size: 19px;
 }
 
 .navdrawer-container {
@@ -160,7 +82,7 @@ button.btn-menu img {
           transform: translate(0, 0);
 }
 
-.app-bar, .navdrawer-container, main {
+.app-bar, .navdrawer-container, .main-container {
   -webkit-transition: -webkit-transform 0.3s ease-out;
           transition: transform 0.3s ease-out;
 }
@@ -216,13 +138,6 @@ button.btn-menu img {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-main {
-  margin: 0 auto;
-  /* Height of the header */
-  padding: 60px 16px 16px 16px;
-  min-height: 100%;
-}
-
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   .app-bar {
@@ -230,7 +145,7 @@ main {
   }
 
   .app-bar.open,
-  .app-bar.open ~ main {
+  .app-bar.open ~ .main-container {
     -webkit-transform: translate(0px, 0);
             transform: translate(0px, 0);
   }
@@ -244,7 +159,7 @@ main {
     background-color: #4285f4;
   }
 
-  .app-bar .logo {
+  .app-bar .site-title {
     float: left;
     margin: 0;
     padding: 0;
@@ -264,16 +179,12 @@ main {
     clear: both;
   }
 
-  button.btn-menu {
+  .menu-link {
     display: none;
   }
 
-  nav {
-    display: block;
-    margin-top: 130px;
-  }
-
   .navdrawer-container {
+    display: block;
     position: relative;
     width: 100%;
     height: auto;
@@ -304,11 +215,6 @@ main {
     border: none;
   }
 
-  main {
-    max-width: 864px;
-    padding-top: 0;
-    min-height: initial;
-  }
 
   body {
     overflow-y: scroll;
@@ -318,4 +224,70 @@ main {
     position: relative;
     margin-top: 0;
   }
+}
+
+.menu-link {
+  width: 60px;
+  height: 60px;
+background-image: none;
+background-color: transparent;
+border: none;
+padding: .4em;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+z-index: 5;
+  outline: none;
+  
+&:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+&:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 0;
+}
+&:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+}
+
+.menu-link span {
+position: relative;
+display: block;
+}
+
+.menu-link span, .menu-link span:before, .menu-link span:after {
+background-color: $wet-asphalt;
+width: 25px;
+margin: 0 auto;
+height: 3px;
+-webkit-transition: all 0.4s;
+-moz-transition: all 0.4s;
+-ms-transition: all 0.4s;
+-o-transition: all 0.4s;
+transition: all 0.4s;
+}
+
+.menu-link span:before, .menu-link span:after {
+position: absolute;
+  left: 0;
+top: -6px;
+content: " ";
+}
+
+.menu-link span:after {
+top: 6px;
+}
+
+
+.open .menu-link span {
+background: transparent;
+}
+
+.open .menu-link span:before {
+transform: rotate(45deg) translate(5px, 4px);
+}
+
+.open .menu-link span:after {
+transform: rotate(-45deg) translate(4px, -4px);
 }

@@ -7,7 +7,7 @@
 				/* Translators: %s is the nav menu name. This is the nav menu title shown to screen readers. */
 				printf( _x( '%s Menu', 'nav menu title', 'stargazer' ), hybrid_get_menu_location_name( 'secondary' ) ); 
 			?>
-		<i class="icon icon-close side-menu-close"></i></h4><!-- .menu-toggle -->
+		</h4><!-- .menu-toggle -->
 
 		<?php wp_nav_menu(
 			array(

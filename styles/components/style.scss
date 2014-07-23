@@ -1,8 +1,15 @@
 /**
-*
-* Main Stylesheet For Visual Style Guide
-*
-**/
+ * Theme Name:  Hybrid Base
+ * Theme URI:   http://themehybrid.com/themes/hybrid-base
+ * Description: A starter theme from Theme Hybrid. Please fork this.
+ * Version:     1.0.0
+ * Author:      Justin Tadlock
+ * Author URI:  http://justintadlock.com
+ * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready
+ * Text Domain: hybrid-base
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
 
 @import "_base/_normalize";
 @import "_base/_h5bp";
@@ -20,8 +27,10 @@
 @import "_layouts/_header";
 @import "_layouts/_footer";
 @import "_layouts/_sidebar";
+@import "_layouts/_theme-layouts";
 
 // Modules
+@import "_modules/_main-nav";
 @import "_modules/_highlight";
 @import "_modules/_editorial-header";
 @import "_modules/_summary-header";

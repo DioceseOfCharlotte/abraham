@@ -5,140 +5,1168 @@
 **/
 
 
-@include medium-only {
-  // Generating grid classes for medium view
-  @for $i from 1 through $mediumColCount {
-    .g-medium--#{$i} {
-      @include rule--col(medium);
-      width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
-      @if $i == $mediumColCount { margin-right: 0; }
-    }
+// @include medium-only {
+//   // Generating grid classes for medium view
+//   @for $i from 1 through $mediumColCount {
+//     .g-medium--#{$i} {
+//       @include rule--col(medium);
+//       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
+//       @if $i == $mediumColCount { margin-right: 0; }
+//     }
 
-    @if $i < $mediumColCount {
-      .g-medium--push-#{$i} {
-        margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-      }
-      .g-medium--pull-#{$i} {
-        margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-      }
-    }
-  }
+//     @if $i < $mediumColCount {
+//       .g-medium--push-#{$i} {
+//         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+//       }
+//       .g-medium--pull-#{$i} {
+//         margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+//       }
+//     }
+//   }
 
-  .g-medium--full {
-    @include rule--col(medium);
-    margin-right: 0;
+//   .g-medium--full {
+//     @include rule--col(medium);
+//     margin-right: 0;
+//     width: 100%;
+//   }
+
+//   .g--third {
+//     @include rule--col(medium);
+//     width: $mediumColWidth;
+//   }
+
+//   .g--half,
+//   .g-medium--half {
+//     @include rule--col(medium);
+//     width: 50% - $mediumGutterWidth/2;
+//   }
+
+//   .g-medium--last { margin-right: 0; }
+//   .g-medium--last + .g-medium--half { clear: left; }
+
+//   .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
+// }
+
+
+// @include wide {
+//   // Generating grid classes for wide view
+//   @for $i from 1 through $wideColCount {
+//     .g-wide--#{$i} {
+//       @include rule--col(wide);
+//       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
+//       @if $i == $wideColCount { margin-right: 0; }
+//     }
+
+//     @if $i < $wideColCount {
+//       .g-wide--push-#{$i} {
+//         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
+//       }
+//       .g-wide--pull-#{$i} {
+//         margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
+//       }
+//     }
+//   }
+
+//   .g-wide--last { margin-right: 0; }
+
+//   .g-wide--full {
+//     @include rule--col(wide);
+//     margin-right: 0;
+//     width: 100%;
+//   }
+
+//   .g--third {
+//     @include rule--col(wide);
+//     width: 30.8%;
+//   }
+
+//   .g--half,
+//   .g-wide--half {
+//     @include rule--col(wide);
+//     width: 50% - $wideGutterWidth/2;
+//   }
+
+//   .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
+// }
+
+
+// // This is a global 'last' class
+// // to be used with global grid classes, such as 'half' or 'third'
+// // Example usage:
+// //  <div class="third"></div>
+// //  <div class="third"></div>
+// //  <div class="third last"></div>
+// .g--last { margin-right: 0; }
+
+
+// // This is a global 'centered' class
+// .g--centered {
+//   float: none; // reset float to none so we can center it
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// // This is a grid overlay
+// // Its purpose is to show users our grid system
+// // It becomes visible when a class 'debug' is added to the body
+// .grid-overlay {
+
+//   display: none;
+//   pointer-events: none;
+
+//   // Only show when parents (body) has debug class
+//   .debug & {
+//     @include container(true);
+
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 100%;
+//     display: block;
+
+//     [class*="g-"] {
+//       height: 100%;
+//       background-color: rgba(lighten(#000, 35%), .2);
+//     }
+
+//     @include medium-only {
+//       .g-wide--last {
+//         display: none;
+//       }
+//     }
+
+//     @include small-only {
+//       display: none;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+
+.grid {
+    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+    /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+
+    /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
+
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+
+    /* IE10 uses display: flexbox */
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.grid {
+    word-spacing: -0.43em;
+}
+
+.u-size {
+    display: inline-block;
+    *display: inline; /* IE < 8: fake inline-block */
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.grid [class *= "u-size"] {
+    font-family: sans-serif;
+}
+
+.u-size-1,
+.u-size-1of1,
+.u-size-1of2,
+.u-size-1of3,
+.u-size-2of3,
+.u-size-1of4,
+.u-size-3of4,
+.u-size-1of6,
+.u-size-5of6,
+.u-size-1of8,
+.u-size-3of8,
+.u-size-5of8,
+.u-size-7of8,
+.u-size-1of12,
+.u-size-5of12,
+.u-size-7of12,
+.u-size-11of12,
+.u-size-1of24,
+.u-size-2of24,
+.u-size-3of24,
+.u-size-4of24,
+.u-size-5of24,
+.u-size-6of24,
+.u-size-7of24,
+.u-size-8of24,
+.u-size-9of24,
+.u-size-10of24,
+.u-size-11of24,
+.u-size-12of24,
+.u-size-13of24,
+.u-size-14of24,
+.u-size-15of24,
+.u-size-16of24,
+.u-size-17of24,
+.u-size-18of24,
+.u-size-19of24,
+.u-size-20of24,
+.u-size-21of24,
+.u-size-22of24,
+.u-size-23of24,
+.u-size-24of24 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.u-size-1of24 {
+    width: 4.1667%;
+    *width: 4.1357%;
+}
+
+.u-size-1of12,
+.u-size-2of24 {
+    width: 8.3333%;
+    *width: 8.3023%;
+}
+
+.u-size-1of8,
+.u-size-3of24 {
+    width: 12.5000%;
+    *width: 12.4690%;
+}
+
+.u-size-1of6,
+.u-size-4of24 {
+    width: 16.6667%;
+    *width: 16.6357%;
+}
+
+.u-size-5of24 {
+    width: 20.8333%;
+    *width: 20.8023%;
+}
+
+.u-size-1of4,
+.u-size-6of24 {
+    width: 25%;
+    *width: 24.9690%;
+}
+
+.u-size-7of24 {
+    width: 29.1667%;
+    *width: 29.1357%;
+}
+
+.u-size-1of3,
+.u-size-8of24 {
+    width: 33.3333%;
+    *width: 33.3023%;
+}
+
+.u-size-3of8,
+.u-size-9of24 {
+    width: 37.5000%;
+    *width: 37.4690%;
+}
+
+.u-size-5of12,
+.u-size-10of24 {
+    width: 41.6667%;
+    *width: 41.6357%;
+}
+
+.u-size-11of24 {
+    width: 45.8333%;
+    *width: 45.8023%;
+}
+
+.u-size-1of2,
+.u-size-12of24 {
+    width: 50%;
+    *width: 49.9690%;
+}
+
+.u-size-13of24 {
+    width: 54.1667%;
+    *width: 54.1357%;
+}
+
+.u-size-7of12,
+.u-size-14of24 {
+    width: 58.3333%;
+    *width: 58.3023%;
+}
+
+.u-size-5of8,
+.u-size-15of24 {
+    width: 62.5000%;
+    *width: 62.4690%;
+}
+
+.u-size-2of3,
+.u-size-16of24 {
+    width: 66.6667%;
+    *width: 66.6357%;
+}
+
+.u-size-17of24 {
+    width: 70.8333%;
+    *width: 70.8023%;
+}
+
+.u-size-3of4,
+.u-size-18of24 {
+    width: 75%;
+    *width: 74.9690%;
+}
+
+.u-size-19of24 {
+    width: 79.1667%;
+    *width: 79.1357%;
+}
+
+.u-size-5of6,
+.u-size-20of24 {
+    width: 83.3333%;
+    *width: 83.3023%;
+}
+
+.u-size-7of8,
+.u-size-21of24 {
+    width: 87.5000%;
+    *width: 87.4690%;
+}
+
+.u-size-11of12,
+.u-size-22of24 {
+    width: 91.6667%;
+    *width: 91.6357%;
+}
+
+.u-size-23of24 {
+    width: 95.8333%;
+    *width: 95.8023%;
+}
+
+.u-size-1,
+.u-size-1of1,
+.u-size-24of24 {
     width: 100%;
-  }
-
-  .g--third {
-    @include rule--col(medium);
-    width: $mediumColWidth;
-  }
-
-  .g--half,
-  .g-medium--half {
-    @include rule--col(medium);
-    width: 50% - $mediumGutterWidth/2;
-  }
-
-  .g-medium--last { margin-right: 0; }
-  .g-medium--last + .g-medium--half { clear: left; }
-
-  .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
 
-
-@include wide {
-  // Generating grid classes for wide view
-  @for $i from 1 through $wideColCount {
-    .g-wide--#{$i} {
-      @include rule--col(wide);
-      width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
-      @if $i == $wideColCount { margin-right: 0; }
+@media screen and (min-width: 35.5em) {
+    .u-size-1-sm,
+    .u-size-1of1-sm,
+    .u-size-1of2-sm,
+    .u-size-1of3-sm,
+    .u-size-2of3-sm,
+    .u-size-1of4-sm,
+    .u-size-3of4-sm,
+    .u-size-1of6-sm,
+    .u-size-5of6-sm,
+    .u-size-1of8-sm,
+    .u-size-3of8-sm,
+    .u-size-5of8-sm,
+    .u-size-7of8-sm,
+    .u-size-1of12-sm,
+    .u-size-5of12-sm,
+    .u-size-7of12-sm,
+    .u-size-11of12-sm,
+    .u-size-1of24-sm,
+    .u-size-2of24-sm,
+    .u-size-3of24-sm,
+    .u-size-4of24-sm,
+    .u-size-5of24-sm,
+    .u-size-6of24-sm,
+    .u-size-7of24-sm,
+    .u-size-8of24-sm,
+    .u-size-9of24-sm,
+    .u-size-10of24-sm,
+    .u-size-11of24-sm,
+    .u-size-12of24-sm,
+    .u-size-13of24-sm,
+    .u-size-14of24-sm,
+    .u-size-15of24-sm,
+    .u-size-16of24-sm,
+    .u-size-17of24-sm,
+    .u-size-18of24-sm,
+    .u-size-19of24-sm,
+    .u-size-20of24-sm,
+    .u-size-21of24-sm,
+    .u-size-22of24-sm,
+    .u-size-23of24-sm,
+    .u-size-24of24-sm {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
     }
 
-    @if $i < $wideColCount {
-      .g-wide--push-#{$i} {
-        margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-      }
-      .g-wide--pull-#{$i} {
-        margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-      }
+    .u-size-1of24-sm {
+        width: 4.1667%;
+        *width: 4.1357%;
     }
-  }
 
-  .g-wide--last { margin-right: 0; }
+    .u-size-1of12-sm,
+    .u-size-2of24-sm {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
 
-  .g-wide--full {
-    @include rule--col(wide);
-    margin-right: 0;
-    width: 100%;
-  }
+    .u-size-1of8-sm,
+    .u-size-3of24-sm {
+        width: 12.5000%;
+        *width: 12.4690%;
+    }
 
-  .g--third {
-    @include rule--col(wide);
-    width: 30.8%;
-  }
+    .u-size-1of6-sm,
+    .u-size-4of24-sm {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
 
-  .g--half,
-  .g-wide--half {
-    @include rule--col(wide);
-    width: 50% - $wideGutterWidth/2;
-  }
+    .u-size-5of24-sm {
+        width: 20.8333%;
+        *width: 20.8023%;
+    }
 
-  .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
+    .u-size-1of4-sm,
+    .u-size-6of24-sm {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .u-size-7of24-sm {
+        width: 29.1667%;
+        *width: 29.1357%;
+    }
+
+    .u-size-1of3-sm,
+    .u-size-8of24-sm {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .u-size-3of8-sm,
+    .u-size-9of24-sm {
+        width: 37.5000%;
+        *width: 37.4690%;
+    }
+
+    .u-size-5of12-sm,
+    .u-size-10of24-sm {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .u-size-11of24-sm {
+        width: 45.8333%;
+        *width: 45.8023%;
+    }
+
+    .u-size-1of2-sm,
+    .u-size-12of24-sm {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .u-size-13of24-sm {
+        width: 54.1667%;
+        *width: 54.1357%;
+    }
+
+    .u-size-7of12-sm,
+    .u-size-14of24-sm {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .u-size-5of8-sm,
+    .u-size-15of24-sm {
+        width: 62.5000%;
+        *width: 62.4690%;
+    }
+
+    .u-size-2of3-sm,
+    .u-size-16of24-sm {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .u-size-17of24-sm {
+        width: 70.8333%;
+        *width: 70.8023%;
+    }
+
+    .u-size-3of4-sm,
+    .u-size-18of24-sm {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .u-size-19of24-sm {
+        width: 79.1667%;
+        *width: 79.1357%;
+    }
+
+    .u-size-5of6-sm,
+    .u-size-20of24-sm {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .u-size-7of8-sm,
+    .u-size-21of24-sm {
+        width: 87.5000%;
+        *width: 87.4690%;
+    }
+
+    .u-size-11of12-sm,
+    .u-size-22of24-sm {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .u-size-23of24-sm {
+        width: 95.8333%;
+        *width: 95.8023%;
+    }
+
+    .u-size-1-sm,
+    .u-size-1of1-sm,
+    .u-size-24of24-sm {
+        width: 100%;
+    }
 }
 
+@media screen and (min-width: 48em) {
+    .u-size-1-md,
+    .u-size-1of1-md,
+    .u-size-1of2-md,
+    .u-size-1of3-md,
+    .u-size-2of3-md,
+    .u-size-1of4-md,
+    .u-size-3of4-md,
+    .u-size-1of6-md,
+    .u-size-5of6-md,
+    .u-size-1of8-md,
+    .u-size-3of8-md,
+    .u-size-5of8-md,
+    .u-size-7of8-md,
+    .u-size-1of12-md,
+    .u-size-5of12-md,
+    .u-size-7of12-md,
+    .u-size-11of12-md,
+    .u-size-1of24-md,
+    .u-size-2of24-md,
+    .u-size-3of24-md,
+    .u-size-4of24-md,
+    .u-size-5of24-md,
+    .u-size-6of24-md,
+    .u-size-7of24-md,
+    .u-size-8of24-md,
+    .u-size-9of24-md,
+    .u-size-10of24-md,
+    .u-size-11of24-md,
+    .u-size-12of24-md,
+    .u-size-13of24-md,
+    .u-size-14of24-md,
+    .u-size-15of24-md,
+    .u-size-16of24-md,
+    .u-size-17of24-md,
+    .u-size-18of24-md,
+    .u-size-19of24-md,
+    .u-size-20of24-md,
+    .u-size-21of24-md,
+    .u-size-22of24-md,
+    .u-size-23of24-md,
+    .u-size-24of24-md{
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+    }
 
-// This is a global 'last' class
-// to be used with global grid classes, such as 'half' or 'third'
-// Example usage:
-//  <div class="third"></div>
-//  <div class="third"></div>
-//  <div class="third last"></div>
-.g--last { margin-right: 0; }
+    .u-size-1of24-md{
+        width: 4.1667%;
+        *width: 4.1357%;
+    }
 
+    .u-size-1of12-md,
+    .u-size-2of24-md{
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
 
-// This is a global 'centered' class
-.g--centered {
-  float: none; // reset float to none so we can center it
-  margin-left: auto;
-  margin-right: auto;
+    .u-size-1of8-md,
+    .u-size-3of24-md{
+        width: 12.5000%;
+        *width: 12.4690%;
+    }
+
+    .u-size-1of6-md,
+    .u-size-4of24-md{
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .u-size-5of24-md{
+        width: 20.8333%;
+        *width: 20.8023%;
+    }
+
+    .u-size-1of4-md,
+    .u-size-6of24-md{
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .u-size-7of24-md{
+        width: 29.1667%;
+        *width: 29.1357%;
+    }
+
+    .u-size-1of3-md,
+    .u-size-8of24-md{
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .u-size-3of8-md,
+    .u-size-9of24-md{
+        width: 37.5000%;
+        *width: 37.4690%;
+    }
+
+    .u-size-5of12-md,
+    .u-size-10of24-md{
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .u-size-11of24-md{
+        width: 45.8333%;
+        *width: 45.8023%;
+    }
+
+    .u-size-1of2-md,
+    .u-size-12of24-md{
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .u-size-13of24-md{
+        width: 54.1667%;
+        *width: 54.1357%;
+    }
+
+    .u-size-7of12-md,
+    .u-size-14of24-md{
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .u-size-5of8-md,
+    .u-size-15of24-md{
+        width: 62.5000%;
+        *width: 62.4690%;
+    }
+
+    .u-size-2of3-md,
+    .u-size-16of24-md{
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .u-size-17of24-md{
+        width: 70.8333%;
+        *width: 70.8023%;
+    }
+
+    .u-size-3of4-md,
+    .u-size-18of24-md{
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .u-size-19of24-md{
+        width: 79.1667%;
+        *width: 79.1357%;
+    }
+
+    .u-size-5of6-md,
+    .u-size-20of24-md{
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .u-size-7of8-md,
+    .u-size-21of24-md{
+        width: 87.5000%;
+        *width: 87.4690%;
+    }
+
+    .u-size-11of12-md,
+    .u-size-22of24-md{
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .u-size-23of24-md{
+        width: 95.8333%;
+        *width: 95.8023%;
+    }
+
+    .u-size-1-md,
+    .u-size-1of1-md,
+    .u-size-24of24-md{
+        width: 100%;
+    }
 }
 
-// This is a grid overlay
-// Its purpose is to show users our grid system
-// It becomes visible when a class 'debug' is added to the body
-.grid-overlay {
-
-  display: none;
-  pointer-events: none;
-
-  // Only show when parents (body) has debug class
-  .debug & {
-    @include container(true);
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: block;
-
-    [class*="g-"] {
-      height: 100%;
-      background-color: rgba(lighten(#000, 35%), .2);
+@media screen and (min-width: 64em) {
+    .u-size-1-lg,
+    .u-size-1of1-lg,
+    .u-size-1of2-lg,
+    .u-size-1of3-lg,
+    .u-size-2of3-lg,
+    .u-size-1of4-lg,
+    .u-size-3of4-lg,
+    .u-size-1of6-lg,
+    .u-size-5of6-lg,
+    .u-size-1of8-lg,
+    .u-size-3of8-lg,
+    .u-size-5of8-lg,
+    .u-size-7of8-lg,
+    .u-size-1of12-lg,
+    .u-size-5of12-lg,
+    .u-size-7of12-lg,
+    .u-size-11of12-lg,
+    .u-size-1of24-lg,
+    .u-size-2of24-lg,
+    .u-size-3of24-lg,
+    .u-size-4of24-lg,
+    .u-size-5of24-lg,
+    .u-size-6of24-lg,
+    .u-size-7of24-lg,
+    .u-size-8of24-lg,
+    .u-size-9of24-lg,
+    .u-size-10of24-lg,
+    .u-size-11of24-lg,
+    .u-size-12of24-lg,
+    .u-size-13of24-lg,
+    .u-size-14of24-lg,
+    .u-size-15of24-lg,
+    .u-size-16of24-lg,
+    .u-size-17of24-lg,
+    .u-size-18of24-lg,
+    .u-size-19of24-lg,
+    .u-size-20of24-lg,
+    .u-size-21of24-lg,
+    .u-size-22of24-lg,
+    .u-size-23of24-lg,
+    .u-size-24of24-lg{
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
     }
 
-    @include medium-only {
-      .g-wide--last {
-        display: none;
-      }
+    .u-size-1of24-lg{
+        width: 4.1667%;
+        *width: 4.1357%;
     }
 
-    @include small-only {
-      display: none;
+    .u-size-1of12-lg,
+    .u-size-2of24-lg{
+        width: 8.3333%;
+        *width: 8.3023%;
     }
-  }
+
+    .u-size-1of8-lg,
+    .u-size-3of24-lg{
+        width: 12.5000%;
+        *width: 12.4690%;
+    }
+
+    .u-size-1of6-lg,
+    .u-size-4of24-lg{
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .u-size-5of24-lg{
+        width: 20.8333%;
+        *width: 20.8023%;
+    }
+
+    .u-size-1of4-lg,
+    .u-size-6of24-lg{
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .u-size-7of24-lg{
+        width: 29.1667%;
+        *width: 29.1357%;
+    }
+
+    .u-size-1of3-lg,
+    .u-size-8of24-lg{
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .u-size-3of8-lg,
+    .u-size-9of24-lg{
+        width: 37.5000%;
+        *width: 37.4690%;
+    }
+
+    .u-size-5of12-lg,
+    .u-size-10of24-lg{
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .u-size-11of24-lg{
+        width: 45.8333%;
+        *width: 45.8023%;
+    }
+
+    .u-size-1of2-lg,
+    .u-size-12of24-lg{
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .u-size-13of24-lg{
+        width: 54.1667%;
+        *width: 54.1357%;
+    }
+
+    .u-size-7of12-lg,
+    .u-size-14of24-lg{
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .u-size-5of8-lg,
+    .u-size-15of24-lg{
+        width: 62.5000%;
+        *width: 62.4690%;
+    }
+
+    .u-size-2of3-lg,
+    .u-size-16of24-lg{
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .u-size-17of24-lg{
+        width: 70.8333%;
+        *width: 70.8023%;
+    }
+
+    .u-size-3of4-lg,
+    .u-size-18of24-lg{
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .u-size-19of24-lg{
+        width: 79.1667%;
+        *width: 79.1357%;
+    }
+
+    .u-size-5of6-lg,
+    .u-size-20of24-lg{
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .u-size-7of8-lg,
+    .u-size-21of24-lg{
+        width: 87.5000%;
+        *width: 87.4690%;
+    }
+
+    .u-size-11of12-lg,
+    .u-size-22of24-lg{
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .u-size-23of24-lg{
+        width: 95.8333%;
+        *width: 95.8023%;
+    }
+
+    .u-size-1-lg,
+    .u-size-1of1-lg,
+    .u-size-24of24-lg{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .u-size-1-xl,
+    .u-size-1of1-xl,
+    .u-size-1of2-xl,
+    .u-size-1of3-xl,
+    .u-size-2of3-xl,
+    .u-size-1of4-xl,
+    .u-size-3of4-xl,
+    .u-size-1of6-xl,
+    .u-size-5of6-xl,
+    .u-size-1of8-xl,
+    .u-size-3of8-xl,
+    .u-size-5of8-xl,
+    .u-size-7of8-xl,
+    .u-size-1of12-xl,
+    .u-size-5of12-xl,
+    .u-size-7of12-xl,
+    .u-size-11of12-xl,
+    .u-size-1of24-xl,
+    .u-size-2of24-xl,
+    .u-size-3of24-xl,
+    .u-size-4of24-xl,
+    .u-size-5of24-xl,
+    .u-size-6of24-xl,
+    .u-size-7of24-xl,
+    .u-size-8of24-xl,
+    .u-size-9of24-xl,
+    .u-size-10of24-xl,
+    .u-size-11of24-xl,
+    .u-size-12of24-xl,
+    .u-size-13of24-xl,
+    .u-size-14of24-xl,
+    .u-size-15of24-xl,
+    .u-size-16of24-xl,
+    .u-size-17of24-xl,
+    .u-size-18of24-xl,
+    .u-size-19of24-xl,
+    .u-size-20of24-xl,
+    .u-size-21of24-xl,
+    .u-size-22of24-xl,
+    .u-size-23of24-xl,
+    .u-size-24of24-xl{
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+    }
+
+    .u-size-1of24-xl{
+        width: 4.1667%;
+        *width: 4.1357%;
+    }
+
+    .u-size-1of12-xl,
+    .u-size-2of24-xl{
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .u-size-1of8-xl,
+    .u-size-3of24-xl{
+        width: 12.5000%;
+        *width: 12.4690%;
+    }
+
+    .u-size-1of6-xl,
+    .u-size-4of24-xl{
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .u-size-5of24-xl{
+        width: 20.8333%;
+        *width: 20.8023%;
+    }
+
+    .u-size-1of4-xl,
+    .u-size-6of24-xl{
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .u-size-7of24-xl{
+        width: 29.1667%;
+        *width: 29.1357%;
+    }
+
+    .u-size-1of3-xl,
+    .u-size-8of24-xl{
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .u-size-3of8-xl,
+    .u-size-9of24-xl{
+        width: 37.5000%;
+        *width: 37.4690%;
+    }
+
+    .u-size-5of12-xl,
+    .u-size-10of24-xl{
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .u-size-11of24-xl{
+        width: 45.8333%;
+        *width: 45.8023%;
+    }
+
+    .u-size-1of2-xl,
+    .u-size-12of24-xl{
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .u-size-13of24-xl{
+        width: 54.1667%;
+        *width: 54.1357%;
+    }
+
+    .u-size-7of12-xl,
+    .u-size-14of24-xl{
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .u-size-5of8-xl,
+    .u-size-15of24-xl{
+        width: 62.5000%;
+        *width: 62.4690%;
+    }
+
+    .u-size-2of3-xl,
+    .u-size-16of24-xl{
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .u-size-17of24-xl{
+        width: 70.8333%;
+        *width: 70.8023%;
+    }
+
+    .u-size-3of4-xl,
+    .u-size-18of24-xl{
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .u-size-19of24-xl{
+        width: 79.1667%;
+        *width: 79.1357%;
+    }
+
+    .u-size-5of6-xl,
+    .u-size-20of24-xl{
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .u-size-7of8-xl,
+    .u-size-21of24-xl{
+        width: 87.5000%;
+        *width: 87.4690%;
+    }
+
+    .u-size-11of12-xl,
+    .u-size-22of24-xl{
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .u-size-23of24-xl{
+        width: 95.8333%;
+        *width: 95.8023%;
+    }
+
+    .u-size-1-xl,
+    .u-size-1of1-xl,
+    .u-size-24of24-xl{
+        width: 100%;
+    }
 }

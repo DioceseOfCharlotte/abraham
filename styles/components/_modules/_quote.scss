@@ -47,8 +47,36 @@
 /* === Blockquotes, quotes, and cites === */
 
 blockquote {
+display: flex;
+  p {
+width: 500px;
+display: flex;
+flex-direction: column;
+  }
 
-  blockquote {}
+  &::before {
+    content: open-quote;
+    display: block;
+    font-family: $fontHighlight;
+    font-weight: 700;
+    color: $colorGrayBackground;
+    top: 90px;
+    left: $lineHeight;
+    font-size: 260px;
 
-  cite {}
+    @include medium {
+font-size: 445px;
+position: relative;
+margin: auto 45px auto;
+    }
+  }
+
+  cite {
+    border-top: 1px solid #e0e0e0;
+    text-align: right;
+font-weight: 500;
+margin-top: 12px;
+padding-top: 13px;
+font-style: normal;
+  }
 }

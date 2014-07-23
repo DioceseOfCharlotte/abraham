@@ -334,3 +334,10 @@ ol.list-links {
     }
   }
 }
+
+
+dd {
+    position: relative;
+  padding-left: 16px;
+  @include bullet-type("", icon-chevron-right);
+}

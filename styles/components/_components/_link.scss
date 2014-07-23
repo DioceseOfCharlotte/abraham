@@ -12,10 +12,6 @@ a:hover {
   text-decoration: none;
 }
 
-.cta--primary {
-  @include style-cta($colorBlue, $icon-chevron-right);
-}
-
-.cta--secondary {
-  @include style-cta($colorBlue);
+td a, .cta--secondary {
+  @include style-cta($colorBlue, false);
 }

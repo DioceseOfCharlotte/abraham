@@ -1,6 +1,121 @@
-    .layout-1c .container {}
-    .layout-2c-l .container {}
-    .layout-2c-r .container {}
-    .layout-3c-l .container {}
-    .layout-3c-r .container {}
-    .layout-3c-c .container {}
+    .main-container {
+      @extend .grid;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 60px 16px 16px 16px;
+      min-height: 100%;
+            @include wider {
+        padding-top: 40px;
+    }
+    }
+
+    .layout-1c .main-container {
+
+    }
+    .layout-2c-l .main-container {
+      .site-main {
+        @extend .u-size-2of3;
+      }
+      .sidebar-primary {
+        @extend .u-size-1of3;
+      }
+      .sidebar-sub {
+        @extend .u-size-1of1;
+      }
+      @include small-only {
+        .site-main, .sidebar-primary, .sidebar-sub {
+          width: 100%; 
+      }
+    }
+    }
+    .layout-2c-r .main-container {
+      .site-main {
+        @extend .u-size-2of3;
+        order: 2;
+      }
+      .sidebar-primary {
+        @extend .u-size-1of3;
+        order: 1;
+      }
+      .sidebar-sub {
+        @extend .u-size-1of1;
+        order: 3;
+      }
+      @include small-only {
+        .site-main, .sidebar-primary, .sidebar-sub {
+          width: 100%; 
+      }
+    }
+    }
+    .layout-3c-l .main-container {
+            .site-main {
+        @extend .u-size-12of24;
+      }
+      .sidebar-primary {
+        @extend .u-size-6of24;
+      }
+      .sidebar-sub {
+        @extend .u-size-6of24;
+      }
+      @include small-only {
+        .site-main, .sidebar-primary, .sidebar-sub {
+          width: 100%; 
+      }
+    }
+    }
+    .layout-3c-r .main-container {
+      .site-main {
+        @extend .u-size-12of24;
+        order: 3;
+      }
+      .sidebar-primary {
+        @extend .u-size-6of24;
+        order: 1;
+      }
+      .sidebar-sub {
+        @extend .u-size-6of24;
+        order: 2;
+      }
+      @include small-only {
+        .site-main, .sidebar-primary, .sidebar-sub {
+          width: 100%; 
+      }
+    }
+    }
+    .layout-3c-c .main-container {
+      .site-main {
+        @extend .u-size-12of24;
+        order: 2;
+      }
+      .sidebar-primary {
+        @extend .u-size-6of24;
+        order: 1;
+      }
+      .sidebar-sub {
+        @extend .u-size-6of24;
+        order: 3;
+      }
+      @include small-only {
+        .site-main, .sidebar-primary, .sidebar-sub {
+          width: 100%; 
+      }
+    }
+    }
+
+
+
+    .main-container {
+      background-color: $clouds;
+    }
+
+    .sidebar-primary {
+      background-color: $silver;
+    }
+
+    .sidebar-sub {
+      background-color: #A3B1B2;
+    }
+
+    .site-main {
+      background-color: #CBD0D3;
+    }

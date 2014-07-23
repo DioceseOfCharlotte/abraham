@@ -1,6 +1,6 @@
 <?php if ( is_active_sidebar( 'subsidiary' ) ) : // If the sidebar has widgets. ?>
 
-	<aside <?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
+	<aside class="sidebar-sub"<?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
 
 		<?php dynamic_sidebar( 'subsidiary' ); // Displays the subsidiary sidebar. ?>
 

@@ -37,7 +37,10 @@ function hybrid_base_theme_setup() {
 		array(
 			'1c'        => __( '1 Column',                     'hybrid-base' ),
 			'2c-l'      => __( '2 Columns: Content / Sidebar', 'hybrid-base' ),
-			'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' )
+			'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' ),
+			'3c-l'      => __( '3 Columns: Content / Sidebar / Sidebar', 'hybrid-base' ),
+			'3c-r'      => __( '3 Columns: Sidebar / Sidebar / Content', 'hybrid-base' ),
+			'3c-c'      => __( '3 Columns: Sidebar / Content / Sidebar', 'hybrid-base' )
 		),
 		array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) 
 	);

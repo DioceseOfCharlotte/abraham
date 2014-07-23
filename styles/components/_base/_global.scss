@@ -27,17 +27,17 @@ body {
 }
 
 
-a {
-  color: royalblue;
-}
-a:visited {
-  color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-  color: midnightblue;
-}
+// a {
+//   color: royalblue;
+// }
+// a:visited {
+//   color: purple;
+// }
+// a:hover,
+// a:focus,
+// a:active {
+//   color: midnightblue;
+// }
 
 
 
@@ -50,9 +50,9 @@ code {
 font-size: .8em;
 }
 
-.main-container {
-  @include container(true);
-}
+// .main-container {
+//   @include container(true);
+// }
 
 // .container {
 //   @include container(true);

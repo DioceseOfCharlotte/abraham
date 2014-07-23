@@ -44,7 +44,6 @@ add_filter( 'hybrid_attr_content', 'meh_attr_content' );
 
 function meh_attr_content( $attr ) {
 
-  $attr['id'] = 'main';
   $attr['class'] = 'site-main';
 
   return $attr;

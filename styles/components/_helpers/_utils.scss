@@ -30,6 +30,10 @@
       @media only screen and (min-width:$wide) { @content; }
     }
 
+    @if $media-query == wider {
+      @media only screen and (min-width:$wider) { @content; }
+    }
+
     @if $media-query == huge {
       @media only screen and (min-width:$huge) { @content; }
     }
@@ -40,6 +44,7 @@
   @mixin medium { @include media-query(medium) { @content }; }
   @mixin medium-only { @include media-query(medium-only) { @content }; }
   @mixin wide { @include media-query(wide) { @content }; }
+  @mixin wider { @include media-query(wider) { @content }; }
   @mixin huge { @include media-query(huge) { @content }; }
 
   // Mixin to constrain elements
@@ -111,6 +116,7 @@
     line-height: 1.6250em; /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
+    font-weight: 300;
   }
 
   @mixin rule--medium {

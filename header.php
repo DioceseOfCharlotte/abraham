@@ -20,7 +20,7 @@
 			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 
 				<div class="app-bar-container">
-          <button class="btn-menu"><img src="<?php echo get_bloginfo('template_directory');?>/images/hamburger.svg" alt="Menu"></button>
+          <button class="menu-link btn-menu"><span></span></button>
 				<div <?php hybrid_attr( 'branding' ); ?>>
 					<?php hybrid_site_title(); ?>
 					<?php hybrid_site_description(); ?>
@@ -49,6 +49,6 @@
 
 			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
 
-		<div id="content" class="site-content">
+		<div class="main-container">
 
 			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
