@@ -7,7 +7,7 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<div id="container" class="container">
+	<div id="container" class="site-container">
 
 		<div class="skip-link">
 			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'hybrid-base' ); ?></a>
@@ -48,7 +48,7 @@
 			<?php endif; // End check for header image. ?>
 
 			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
+			
+			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
 
 		<div class="main-container">
-
-			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>

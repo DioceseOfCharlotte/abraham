@@ -6,10 +6,13 @@
 
 a {
   color: $colorBlue;
+  text-decoration: none;
+  transition: color .1s linear;
 }
 
 a:hover {
-  text-decoration: none;
+  color: darken($colorBlue, 20);
+  outline: 0;
 }
 
 td a, .cta--secondary {

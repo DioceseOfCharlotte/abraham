@@ -87,16 +87,10 @@ body.open {
           transition: transform 0.3s ease-out;
 }
 
-.navdrawer-container h4,
 .navdrawer-container ul li a {
   height: auto;
   padding: 17px 20px;
   line-height: 1.4;
-}
-
-.navdrawer-container h4 {
-  background-color: white;
-  color: #3367D6;
 }
 
 .navdrawer-container ul {
@@ -155,8 +149,6 @@ body.open {
     height: 130px;
     max-width: 864px;
     padding: 0 16px;
-    box-sizing: border-box;
-    background-color: #4285f4;
   }
 
   .app-bar .site-title {
@@ -196,7 +188,7 @@ body.open {
     overflow-y: auto;
   }
 
-  .navdrawer-container h4 {
+  .menu-header {
     display: none;
   }
 
@@ -290,4 +282,10 @@ transform: rotate(45deg) translate(5px, 4px);
 
 .open .menu-link span:after {
 transform: rotate(-45deg) translate(4px, -4px);
+}
+
+
+.menu-header {
+height: 60px;
+background-color: #fff;
 }

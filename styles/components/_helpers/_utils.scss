@@ -49,7 +49,7 @@
 
   // Mixin to constrain elements
   @mixin container($isRelative: false) {
-    box-sizing: content-box;
+    //box-sizing: content-box;
 
     @if $isRelative {
       position: relative;

@@ -63,3 +63,9 @@
     }
 
   }
+
+  body.open .breadcrumbs {
+display: block;
+max-width: 250px;
+z-index: 1;
+}

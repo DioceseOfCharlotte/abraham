@@ -1,6 +1,6 @@
     .main-container {
       @extend .grid;
-      max-width: 1300px;
+      max-width: $almostHuge;
       margin: 0 auto;
       padding: 60px 16px 16px 16px;
       min-height: 100%;

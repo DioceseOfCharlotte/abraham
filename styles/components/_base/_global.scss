@@ -54,9 +54,10 @@ font-size: .8em;
 //   @include container(true);
 // }
 
-// .container {
-//   @include container(true);
-// }
+.container {
+  max-width: $almostHuge;
+  margin: 0 auto;
+}
 
 .container-medium {
   @include medium {

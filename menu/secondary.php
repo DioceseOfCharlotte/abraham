@@ -2,12 +2,7 @@
 
 <nav class="navdrawer-container promote-layer" role="navigation" aria-label="Secondary Menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-		<h4 class="menu-header">
-		<?php
-				/* Translators: %s is the nav menu name. This is the nav menu title shown to screen readers. */
-				printf( _x( '%s Menu', 'nav menu title', 'stargazer' ), hybrid_get_menu_location_name( 'secondary' ) ); 
-			?>
-		</h4><!-- .menu-toggle -->
+		<div class="menu-header"></div><!-- breadcrumb container -->
 
 		<?php wp_nav_menu(
 			array(

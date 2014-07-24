@@ -16,7 +16,7 @@ function hybrid_base_custom_header_setup() {
 	add_theme_support( 
 		'custom-header', 
 		array(
-			'default-image'          => '',
+			'default-image'          => '%s/images/headers/paper_material.jpg',
 			'random-default'         => false,
 			'width'                  => 1280,
 			'height'                 => 400,
@@ -32,7 +32,60 @@ function hybrid_base_custom_header_setup() {
 	);
 
 	/* Registers default headers for the theme. */
-	//register_default_headers();
+	register_default_headers(
+		array(
+			'horizon' => array(
+				'url'           => '%s/images/headers/paper_material.jpg',
+				'thumbnail_url' => '%s/images/headers/paper-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Paper', 'hybrid-base' )
+			),
+			'orange-burn' => array(
+				'url'           => '%s/images/headers/mtn_material.jpg',
+				'thumbnail_url' => '%s/images/headers/mtn-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Mountain', 'hybrid-base' )
+			),
+			'planets-blue' => array(
+				'url'           => '%s/images/headers/day_material.jpg',
+				'thumbnail_url' => '%s/images/headers/day-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Day', 'hybrid-base' )
+			),
+			'planet-burst' => array(
+				'url'           => '%s/images/headers/night_material.jpg',
+				'thumbnail_url' => '%s/images/headers/night-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Night', 'hybrid-base' )
+			),
+		)
+	);
+
+	/* Load the stylesheet for the custom header screen. */
+	add_action( 'admin_enqueue_scripts', 'hybrid_base_enqueue_admin_custom_header_styles', 5 );
+}
+
+/**
+ * Enqueues the styles for the "Appearance > Custom Header" screen in the admin.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function hybrid_base_enqueue_admin_custom_header_styles( $hook_suffix ) {
+
+	if ( 'appearance_page_custom-header' === $hook_suffix ) {
+		wp_enqueue_style( 'hybrid-base-fonts' );
+		wp_enqueue_style( 'hybrid-base-admin-custom-header' );
+
+		if ( is_child_theme() ) {
+			$dir = trailingslashit( get_stylesheet_directory() );
+			$uri = trailingslashit( get_stylesheet_directory_uri() );
+
+			if ( file_exists( $dir . 'styles/admin/admin-custom-header.css' ) )
+				wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}styles/admin/admin-custom-header.css" );
+		}
+	}
 }
 
 /**
@@ -72,22 +125,28 @@ function hybrid_base_custom_header_admin_preview() { ?>
 
 				<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 
-					<div id="branding">
-						<?php hybrid_site_title(); ?>
-						<?php hybrid_site_description(); ?>
-					</div><!-- #branding -->
+				<div class="app-bar-container">
+				<div <?php hybrid_attr( 'branding' ); ?>>
+					<?php hybrid_site_title(); ?>
+					<?php hybrid_site_description(); ?>
+				</div><!-- #branding -->
+				<section class="app-bar-actions">
+        <!-- Put App Bar Buttons Here -->
+        </section>
+        </div>
 
 				<?php endif; // End check for header text. ?>
 
 			</header><!-- #header -->
 
-			<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+			<?php if ( get_header_image() ) : // If there's a header image. ?>
 
-				<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-
-			<?php elseif ( get_header_image() ) : // If there's a header image. ?>
-
-				<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+				<style type="text/css" id="custom-header-css">
+				            .app-bar {
+				      background: url(<?php header_image(); ?>) no-repeat scroll center;
+				      background-size: cover;
+				    }
+				</style>
 
 			<?php endif; // End check for header image. ?>
 
