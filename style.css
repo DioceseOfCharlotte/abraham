@@ -660,37 +660,37 @@ code {
 	max-width: 1400px;
 	margin: 0 auto; }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.container-medium {
 		position: relative;
 		margin-right: auto; 
 		margin-left: auto;
 		padding-right: 5%;
 		padding-left: 5%;} }
-@media only screen and (min-width: 620px) and (min-width: 620px) {
+@media only screen and (min-width: 600px) and (min-width: 600px) {
 	.container-medium {
 		max-width: 688px; 
 		padding-right: 4.8%;
 		padding-left: 4.8%;} }
-@media only screen and (min-width: 620px) and (min-width: 800px) {
+@media only screen and (min-width: 600px) and (min-width: 800px) {
 	.container-medium {
 		max-width: 864px; 
 		padding-right: 4.4%;
 		padding-left: 4.4%;} }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 599px) {
 	.container-small {
 		position: relative;
 		margin-right: auto; 
 		margin-left: auto;
 		padding-right: 5%;
 		padding-left: 5%;} }
-@media only screen and (max-width: 619px) and (min-width: 620px) {
+@media only screen and (max-width: 599px) and (min-width: 600px) {
 	.container-small {
 		max-width: 688px; 
 		padding-right: 4.8%;
 		padding-left: 4.8%;} }
-@media only screen and (max-width: 619px) and (min-width: 800px) {
+@media only screen and (max-width: 599px) and (min-width: 800px) {
 	.container-small {
 		max-width: 864px; 
 		padding-right: 4.4%;
@@ -731,8 +731,7 @@ ul,
 ol,
 h5 {
 	/* 26px */
-	padding-top: 1.6250em;
-	padding-bottom: 0;
+	padding-bottom: 1.6250em;
 	font-size: 16px;
 	font-weight: 300; 
 	line-height: 1.6250em;}
@@ -740,8 +739,7 @@ h5 {
 .medium,
 h4 {
 	/* 26px */
-	padding-top: 1.6250em;
-	padding-bottom: 0;
+	padding-bottom: 1.6250em;
 	font-size: 16px;
 	font-weight: 300; 
 	line-height: 1.6250em;}
@@ -834,6 +832,17 @@ h1 {
 
 li > p {
 	padding-top: 0; }
+
+.post_tag-columns .entry-content {
+	-webkit-columns: 2 300px;
+	   -moz-columns: 2 300px;
+	        columns: 2 300px;
+	-webkit-column-rule: 1px solid #ecf0f1;
+	   -moz-column-rule: 1px solid #ecf0f1;
+	        column-rule: 1px solid #ecf0f1;
+	-webkit-column-gap: 3em;
+	   -moz-column-gap: 3em;
+	        column-gap: 3em; }
 
 @font-face {
 	font-family: "Roboto Condensed";
@@ -976,87 +985,29 @@ li > p {
 * Grid
 *
 **/
-/*!
-Pure v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 .grid, .main-container {
-	/*
-    Use flexbox when possible to avoid `letter-spacing` side-effects.
-
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
-    */
-	display: -webkit-flex;
-	/* IE10 uses display: flexbox */
-	display: -ms-flexbox;
-	/* Webkit: fixes text-rendering: optimizeLegibility */
-	/*
-    Sets the font stack to fonts known to work properly with the above letter
-    and word spacings. See: https://github.com/yui/pure/issues/41/
-
-    The following font stack makes Pure Grids work on all known environments.
-
-    * FreeSans: Ships with many Linux distros, including Ubuntu
-
-    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-      Arial to get picked up by the browser, even though neither is available
-      in Chrome OS.
-
-    * Droid Sans: Ships with all versions of Android.
-
-    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-    */
-	font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-	letter-spacing: -0.31em;
-	/* Webkit: collapse white-space between units */
-
-	*letter-spacing: normal;
-	/* reset IE < 8 */
-	*word-spacing: -0.43em;
 	/* IE < 8: collapse white-space between units */
-	text-rendering: optimizespeed;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+
+	*word-spacing: -0.43em;
 	-webkit-flex-flow: row wrap;
-	    -ms-flex-flow: row wrap; }
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap; }
 
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
-.opera-only :-o-prefocus,
-.grid,
-.main-container {
-	word-spacing: -0.43em; }
-
-.u-size {
-	display: inline-block;
-	/* IE < 8: fake inline-block */
-	zoom: 1;
-	vertical-align: top;
-	letter-spacing: normal;
-	word-spacing: normal;
-
-	*display: inline;
-	text-rendering: auto; }
-
-/*
-Resets the font family back to the OS/browser's default sans-serif font,
-this the same font stack that Normalize.css sets for the `body`.
-*/
-.grid [class*="u-size"], .main-container [class*="u-size"] {
-	font-family: sans-serif; }
+/* IE9: collapse white-space between units */
+:root .grid, :root .main-container {
+	word-spacing: -0.43em\0; }
 
 .u-size-1,
 .u-size-1of1,
-.layout-2c-l .main-container .sidebar-sub,
-.layout-2c-r .main-container .sidebar-sub,
+.layout-2c-l .main-container .Sidebar-secondary,
+.layout-2c-r .main-container .Sidebar-secondary,
 .u-size-1of2,
 .u-size-1of3,
-.layout-2c-l .main-container .sidebar-primary,
-.layout-2c-r .main-container .sidebar-primary,
+.layout-2c-l .main-container .Sidebar-primary,
+.layout-2c-r .main-container .Sidebar-primary,
 .u-size-2of3,
 .layout-2c-l .main-container .site-main,
 .layout-2c-r .main-container .site-main,
@@ -1078,12 +1029,12 @@ this the same font stack that Normalize.css sets for the `body`.
 .u-size-4of24,
 .u-size-5of24,
 .u-size-6of24,
-.layout-3c-l .main-container .sidebar-primary,
-.layout-3c-l .main-container .sidebar-sub,
-.layout-3c-r .main-container .sidebar-primary,
-.layout-3c-r .main-container .sidebar-sub,
-.layout-3c-c .main-container .sidebar-primary,
-.layout-3c-c .main-container .sidebar-sub,
+.layout-3c-l .main-container .Sidebar-primary,
+.layout-3c-l .main-container .Sidebar-secondary,
+.layout-3c-r .main-container .Sidebar-primary,
+.layout-3c-r .main-container .Sidebar-secondary,
+.layout-3c-c .main-container .Sidebar-primary,
+.layout-3c-c .main-container .Sidebar-secondary,
 .u-size-7of24,
 .u-size-8of24,
 .u-size-9of24,
@@ -1106,9 +1057,9 @@ this the same font stack that Normalize.css sets for the `body`.
 .u-size-23of24,
 .u-size-24of24 {
 	display: inline-block;
+	/* IE < 8: fake inline-block */
 	zoom: 1;
 	vertical-align: top;
-	letter-spacing: normal;
 	word-spacing: normal;
 
 	*display: inline;
@@ -1144,12 +1095,12 @@ this the same font stack that Normalize.css sets for the `body`.
 
 .u-size-1of4,
 .u-size-6of24,
-.layout-3c-l .main-container .sidebar-primary,
-.layout-3c-l .main-container .sidebar-sub,
-.layout-3c-r .main-container .sidebar-primary,
-.layout-3c-r .main-container .sidebar-sub,
-.layout-3c-c .main-container .sidebar-primary,
-.layout-3c-c .main-container .sidebar-sub {
+.layout-3c-l .main-container .Sidebar-primary,
+.layout-3c-l .main-container .Sidebar-secondary,
+.layout-3c-r .main-container .Sidebar-primary,
+.layout-3c-r .main-container .Sidebar-secondary,
+.layout-3c-c .main-container .Sidebar-primary,
+.layout-3c-c .main-container .Sidebar-secondary {
 	width: 25%;
 
 	*width: 24.9690%; }
@@ -1159,7 +1110,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 	*width: 29.1357%; }
 
-.u-size-1of3, .layout-2c-l .main-container .sidebar-primary, .layout-2c-r .main-container .sidebar-primary,
+.u-size-1of3, .layout-2c-l .main-container .Sidebar-primary, .layout-2c-r .main-container .Sidebar-primary,
 .u-size-8of24 {
 	width: 33.3333%;
 
@@ -1255,8 +1206,8 @@ this the same font stack that Normalize.css sets for the `body`.
 
 .u-size-1,
 .u-size-1of1,
-.layout-2c-l .main-container .sidebar-sub,
-.layout-2c-r .main-container .sidebar-sub,
+.layout-2c-l .main-container .Sidebar-secondary,
+.layout-2c-r .main-container .Sidebar-secondary,
 .u-size-24of24 {
 	width: 100%; }
 
@@ -1305,7 +1256,6 @@ this the same font stack that Normalize.css sets for the `body`.
 		display: inline-block;
 		zoom: 1;
 		vertical-align: top;
-		letter-spacing: normal;
 		word-spacing: normal;
 
 		*display: inline;
@@ -1490,7 +1440,6 @@ this the same font stack that Normalize.css sets for the `body`.
 		display: inline-block;
 		zoom: 1;
 		vertical-align: top;
-		letter-spacing: normal;
 		word-spacing: normal;
 
 		*display: inline;
@@ -1675,7 +1624,6 @@ this the same font stack that Normalize.css sets for the `body`.
 		display: inline-block;
 		zoom: 1;
 		vertical-align: top;
-		letter-spacing: normal;
 		word-spacing: normal;
 
 		*display: inline;
@@ -1860,7 +1808,6 @@ this the same font stack that Normalize.css sets for the `body`.
 		display: inline-block;
 		zoom: 1;
 		vertical-align: top;
-		letter-spacing: normal;
 		word-spacing: normal;
 
 		*display: inline;
@@ -2005,83 +1952,146 @@ this the same font stack that Normalize.css sets for the `body`.
 * Header
 *
 **/
+.Footer-top {
+	background-color: #95a5a6; 
+
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	        justify-content: space-around;}
+
+.menu-social-items {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex; }
+
 /**
 *
 * Sidebar
 *
 **/
 .main-container {
-	max-width: 1400px;
+	max-width: 1600px;
 	min-height: 100%; 
 	margin: 0 auto;
 	padding: 60px 16px 16px 16px;}
 @media only screen and (min-width: 990px) {
 	.main-container {
-		padding-top: 40px; } }
+		padding-top: 0; } }
 
-@media only screen and (max-width: 619px) {
-	.layout-2c-l .main-container .site-main, .layout-2c-l .main-container .sidebar-primary, .layout-2c-l .main-container .sidebar-sub {
+.Sidebar, .site-main {
+	padding: 1em 1.5em; }
+
+@media only screen and (max-width: 599px) {
+	.layout-2c-l .main-container .site-main, .layout-2c-l .main-container .Sidebar-primary, .layout-2c-l .main-container .Sidebar-secondary {
 		width: 100%; } }
+@media only screen and (min-width: 800px) {
+	.layout-2c-l .main-container .Sidebar-secondary {
+		width: 100%; }
+	.layout-2c-l .main-container .Sidebar-primary {
+		width: 33.3333%;
+
+		*width: 33.3023%; }
+	.layout-2c-l .main-container .site-main {
+		width: 66.6667%;
+
+		*width: 66.6357%; } }
 
 .layout-2c-r .main-container .site-main {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
 	        order: 2; }
-.layout-2c-r .main-container .sidebar-primary {
+.layout-2c-r .main-container .Sidebar-primary {
 	-webkit-order: 1;
 	-ms-flex-order: 1;
 	        order: 1; }
-.layout-2c-r .main-container .sidebar-sub {
+.layout-2c-r .main-container .Sidebar-secondary {
 	-webkit-order: 3;
 	-ms-flex-order: 3;
 	        order: 3; }
-@media only screen and (max-width: 619px) {
-	.layout-2c-r .main-container .site-main, .layout-2c-r .main-container .sidebar-primary, .layout-2c-r .main-container .sidebar-sub {
+@media only screen and (max-width: 599px) {
+	.layout-2c-r .main-container .site-main, .layout-2c-r .main-container .Sidebar-primary, .layout-2c-r .main-container .Sidebar-secondary {
 		width: 100%; } }
 
-@media only screen and (max-width: 619px) {
-	.layout-3c-l .main-container .site-main, .layout-3c-l .main-container .sidebar-primary, .layout-3c-l .main-container .sidebar-sub {
+@media only screen and (max-width: 599px) {
+	.layout-3c-l .main-container .site-main, .layout-3c-l .main-container .Sidebar-primary, .layout-3c-l .main-container .Sidebar-secondary {
 		width: 100%; } }
 
 .layout-3c-r .main-container .site-main {
 	-webkit-order: 3;
 	-ms-flex-order: 3;
 	        order: 3; }
-.layout-3c-r .main-container .sidebar-primary {
+.layout-3c-r .main-container .Sidebar-primary {
 	-webkit-order: 1;
 	-ms-flex-order: 1;
 	        order: 1; }
-.layout-3c-r .main-container .sidebar-sub {
+.layout-3c-r .main-container .Sidebar-secondary {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
 	        order: 2; }
-@media only screen and (max-width: 619px) {
-	.layout-3c-r .main-container .site-main, .layout-3c-r .main-container .sidebar-primary, .layout-3c-r .main-container .sidebar-sub {
+@media only screen and (max-width: 599px) {
+	.layout-3c-r .main-container .site-main, .layout-3c-r .main-container .Sidebar-primary, .layout-3c-r .main-container .Sidebar-secondary {
 		width: 100%; } }
 
 .layout-3c-c .main-container .site-main {
-	-webkit-order: 2;
-	-ms-flex-order: 2;
-	        order: 2; }
-.layout-3c-c .main-container .sidebar-primary {
-	-webkit-order: 1;
-	-ms-flex-order: 1;
-	        order: 1; }
-.layout-3c-c .main-container .sidebar-sub {
-	-webkit-order: 3;
-	-ms-flex-order: 3;
-	        order: 3; }
-@media only screen and (max-width: 619px) {
-	.layout-3c-c .main-container .site-main, .layout-3c-c .main-container .sidebar-primary, .layout-3c-c .main-container .sidebar-sub {
-		width: 100%; } }
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
+.layout-3c-c .main-container .Sidebar-primary {
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
+.layout-3c-c .main-container .Sidebar-secondary {
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
+@media only screen and (min-width: 600px) {
+	.layout-3c-c .main-container .Sidebar-primary {
+		-webkit-flex: 1 50%;
+		    -ms-flex: 1 50%;
+		        flex: 1 50%; }
+	.layout-3c-c .main-container .Sidebar-secondary {
+		-webkit-flex: 1 50%;
+		    -ms-flex: 1 50%;
+		        flex: 1 50%; } }
+@media only screen and (min-width: 800px) {
+	.layout-3c-c .main-container .site-main {
+		-webkit-flex: 2 0;
+		    -ms-flex: 2 0;
+		        flex: 2 0; }
+	.layout-3c-c .main-container .Sidebar-primary {
+		-webkit-flex: 0 1 27%;
+		    -ms-flex: 0 1 27%;
+		        flex: 0 1 27%;
+		-webkit-order: 1;
+		-ms-flex-order: 1;
+		        order: 1; }
+	.layout-3c-c .main-container .site-main {
+		-webkit-flex: 2 0;
+		    -ms-flex: 2 0;
+		        flex: 2 0;
+		-webkit-order: 2;
+		-ms-flex-order: 2;
+		        order: 2; }
+	.layout-3c-c .main-container .Sidebar-secondary {
+		-webkit-flex: 0 1 23%;
+		    -ms-flex: 0 1 23%;
+		        flex: 0 1 23%;
+		-webkit-order: 3;
+		-ms-flex-order: 3;
+		        order: 3; } }
+@media screen and (min-width: 800px) and (max-width: 990px) {
+	.layout-3c-c .main-container .Sidebar-secondary {
+		-webkit-flex: 1 100%;
+		    -ms-flex: 1 100%;
+		        flex: 1 100%; } }
 
 .main-container {
 	background-color: #ecf0f1; }
 
-.sidebar-primary {
+.Sidebar-primary {
 	background-color: #bdc3c7; }
 
-.sidebar-sub {
+.Sidebar-secondary {
 	background-color: #a3b1b2; }
 
 .site-main {
@@ -2175,9 +2185,13 @@ body.open {
 	line-height: 1.4; }
 
 .navdrawer-container ul {
+	        flex-direction: column; 
 	margin: 0;
 	padding: 0;
-	list-style-type: none; }
+	list-style-type: none;
+
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;}
 
 .navdrawer-container ul li a {
 	display: block;
@@ -2218,7 +2232,7 @@ body.open {
 
 	.app-bar-container {
 		display: block;
-		max-width: 864px;
+		max-width: 1400px;
 		height: 130px;
 		padding: 0 16px; }
 
@@ -2367,7 +2381,7 @@ body.open {
 	padding-right: 5%;
 	padding-bottom: 78px;
 	padding-left: 5%;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.highlight-module__container {
 		max-width: 688px; 
 		padding-right: 4.8%;
@@ -2379,7 +2393,7 @@ body.open {
 		padding-left: 4.4%;} }
 .highlight-module__container::before {
 	display: none; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.highlight-module__container::before {
 		display: block;
 		position: absolute;
@@ -2402,7 +2416,7 @@ body.open {
 		font-size: 180px; }
 	.highlight-module--large .highlight-module__container::before {
 		font-size: 430px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.highlight-module__container {
 		padding-bottom: 52px; } }
 @media only screen and (min-width: 800px) {
@@ -2786,7 +2800,7 @@ div.highlight > pre > code .il, code .highlight .il {
 	color: #3372df; }
 .editorial-header .breadcrumbs a {
 	color: #3372df; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.editorial-header .container {
 		position: relative; }
 	.editorial-header .container::before {
@@ -2832,7 +2846,7 @@ div.highlight > pre > code .il, code .highlight .il {
 		font-size: 68px;
 		font-weight: 300;
 		line-height: 1.1471em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.editorial-header__subtitle {
 		padding-top: 0;
 		padding-bottom: 26px; } }
@@ -2841,7 +2855,7 @@ div.highlight > pre > code .il, code .highlight .il {
 	margin-top: 26px; }
 .editorial-header__toc ol {
 	padding-top: 0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.editorial-header__toc ol {
 		padding-top: 0; } }
 
@@ -2906,7 +2920,7 @@ div.highlight > pre > code .il, code .highlight .il {
 		font-size: 42px;
 		font-weight: 300;
 		line-height: 1.2381em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.related-guides__title {
 		padding-top: 0; } }
 
@@ -2952,7 +2966,7 @@ div.highlight > pre > code .il, code .highlight .il {
 
 .article-section__icon {
 	top: -26px; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.article-section__icon {
 		top: -39px; } }
 
@@ -3012,7 +3026,7 @@ div.highlight > pre > code .il, code .highlight .il {
 .featured-spotlight__container {
 	position: relative; }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 599px) {
 	.featured-spotlight__img {
 		overflow: hidden;
 		position: relative;
@@ -3028,7 +3042,7 @@ div.highlight > pre > code .il, code .highlight .il {
 	width: 100%;
 	margin: 0 auto;
 	margin: 0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.featured-spotlight__img img {
 		left: 109%; 
 		width: auto;
@@ -3044,10 +3058,9 @@ div.highlight > pre > code .il, code .highlight .il {
 **/
 .quote__content {
 	position: relative;
-	/* 26px */
-	padding-top: 1.6250em;
 	padding-top: 104px;
-	padding-bottom: 0;
+	/* 26px */
+	padding-bottom: 1.6250em;
 	padding-left: 26px; 
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
 	font-size: 16px;
@@ -3061,7 +3074,7 @@ div.highlight > pre > code .il, code .highlight .il {
 		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.3000em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.quote__content {
 		padding-top: 52px;
 		padding-left: 0; } }
@@ -3081,7 +3094,7 @@ div.highlight > pre > code .il, code .highlight .il {
 	font-size: 260px; 
 	font-weight: 700;
 	content: open-quote;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.quote__content::before {
 		top: 225px;
 		left: -210px;
@@ -3110,7 +3123,7 @@ blockquote::before {
 	font-size: 260px; 
 	font-weight: 700;
 	content: open-quote;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	blockquote::before {
 		position: relative;
 		margin: auto 45px auto; 
@@ -3150,7 +3163,7 @@ blockquote cite {
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: 400; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.article-nav-link::before {
 		display: block;
 		top: 25px;
@@ -3168,14 +3181,14 @@ blockquote cite {
 .article-nav-link--prev::before {
 	left: 32px; 
 	font-family: "icons";}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.article-nav-link--prev p {
 		padding-left: 52px; } }
 
 .article-nav-link--next::before {
 	right: 32px; 
 	font-family: "icons";}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.article-nav-link--next p {
 		padding-right: 52px; } }
 
@@ -3196,7 +3209,7 @@ blockquote cite {
 		font-size: 26px;
 		font-weight: 300;
 		line-height: 1.0000em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.article-nav-count {
 		font-weight: 400; } }
 
@@ -3205,7 +3218,7 @@ blockquote cite {
 * Text module
 *
 **/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.did-you-know ol {
 		padding-top: 0 !important; } }
 .did-you-know .cta--primary {
@@ -3214,13 +3227,13 @@ blockquote cite {
 .did-you-know > .g--half {
 	position: relative;
 	padding-left: 0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.did-you-know > .g--half {
 		padding-left: 32px; } }
 
 .did-you-know__symbol {
 	padding-bottom: 312px; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.did-you-know__symbol {
 		padding-bottom: 26px; } }
 .did-you-know__symbol::after {
@@ -3233,7 +3246,7 @@ blockquote cite {
 	font-family: "icons";
 	font-size: 300px;
 	content: "\e014";}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.did-you-know__symbol::after {
 		position: absolute;
 		top: 200px;
@@ -3254,8 +3267,7 @@ blockquote cite {
 .toc__title {
 	margin-bottom: 12px;
 	/* 26px */
-	padding-top: 1.6250em;
-	padding-bottom: 0;
+	padding-bottom: 1.6250em;
 	padding-bottom: 13px;
 	border-bottom: 1px solid #e0e0e0; 
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -3270,7 +3282,7 @@ blockquote cite {
 		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.3000em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.toc__title {
 		margin-bottom: 13px; 
 		padding-bottom: 13px;} }
@@ -3297,17 +3309,17 @@ blockquote cite {
 	padding: 26px 26px 52px;
 	color: #fff;
 	background: #404040;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.next-lessons h3 i {
 		display: none; } }
 .next-lessons::before, .next-lessons::after {
 	display: none; 
 	position: absolute;
 	color: rgba(255, 255, 255, 0.5);}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.next-lessons::before, .next-lessons::after {
 		display: inline-block; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.next-lessons::before {
 		display: inline-block;
 		z-index: 1;
@@ -3328,7 +3340,7 @@ blockquote cite {
 		padding-right: 15px;
 		padding-left: 15px;
 		font-size: 20px;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.next-lessons::after {
 		top: 185px; 
 		right: 40px;
@@ -3398,7 +3410,7 @@ ul,
 ol {
 	margin: 0; 
 	list-style: none;}
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 599px) {
 	ul,
 	ol {
 		padding-left: 0; } }
@@ -3489,8 +3501,7 @@ ol.list-links.list-links--secondary a::before {
 
 .list-links--secondary {
 	/* 26px */
-	padding-top: 1.6250em;
-	padding-bottom: 0;
+	padding-bottom: 1.6250em;
 	padding-left: 0; 
 	font-size: 16px;
 	font-weight: 300;
@@ -3502,10 +3513,9 @@ ol.list-links.list-links--secondary a::before {
 .list-anchor {
 	padding-left: 0; }
 .list-anchor li {
-	/* 26px */
-	padding-top: 1.6250em;
 	padding-top: 0;
-	padding-bottom: 0;
+	/* 26px */
+	padding-bottom: 1.6250em;
 	padding-left: 0; 
 	font-size: 16px;
 	font-weight: 300;
@@ -3529,7 +3539,7 @@ ol.list-links.list-links--secondary a::before {
 	font-size: 4px; }
 
 /*==========  SMALL LIST  ==========*/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.list-small li {
 		/* 26px */
 		padding-top: 2.0000em;
@@ -3554,7 +3564,7 @@ ol.list-links.list-links--secondary a::before {
 	padding-bottom: 26px;
 	padding-left: 0;
 	background: #fff;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.featured-list__item {
 		min-height: 338px;
 		padding: 52px 32px; } }
@@ -3568,13 +3578,13 @@ ol.list-links.list-links--secondary a::before {
 	position: relative;
 	margin: 0 -5%; 
 	padding-top: 26px;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.featured-list__img-wrapper {
 		display: block;
 		margin: 0; 
 		padding-top: 0;} }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.featured-list__img {
 		overflow: hidden;
 		position: absolute;
@@ -3586,7 +3596,7 @@ ol.list-links.list-links--secondary a::before {
 	display: block;
 	max-width: 100%; 
 	margin: 0 auto;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.featured-list__img img {
 		position: absolute;
 		top: 0;
@@ -3600,7 +3610,7 @@ ol.list-links.list-links--secondary a::before {
 	padding-top: 0;
 	padding-left: 0; 
 	font-family: "Roboto Condensed", Helvetica, sans-serif;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.related-guides-list {
 		padding-top: 26px; } }
 @media only screen and (min-width: 800px) {
@@ -3616,7 +3626,7 @@ ol.list-links.list-links--secondary a::before {
 	border-bottom: 1px solid #e0e0e0; }
 .related-guides-list li:last-child {
 	border-color: transparent; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.related-guides-list li {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -3652,14 +3662,14 @@ ol.list-links.list-links--secondary a::before {
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
 	margin-bottom: 52px; }
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 599px) {
 	.list-guides-intro {
 		padding-top: 52px; } }
 .list-guides-intro li {
 	margin-bottom: 52px; 
 	padding-bottom: 51px;
 	border-bottom: 1px solid #e0e0e0;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.list-guides-intro li {
 		padding-bottom: 0; 
 		border-color: transparent;} }
@@ -3718,8 +3728,7 @@ table thead {
 table th {
 	display: none;
 	/* 26px */
-	padding-top: 1.6250em;
-	padding-bottom: 0;
+	padding-bottom: 1.6250em;
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: 300; 
@@ -3733,7 +3742,7 @@ table th {
 		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.3000em;} }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	table tr {
 		border-bottom: 1px solid #fff; } }
 table tbody {
@@ -3759,23 +3768,23 @@ table td::before {
 	font-size: 16px;
 	font-weight: 400;
 	content: attr(data-th) " :";}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	table td::before {
 		display: none; } }
 table th,
   table td {
 	position: relative;
 	padding-left: 140px; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	table th,
 	table td {
 		display: table-cell; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	table th {
 		padding: 26px;
 		padding-top: 13px;
 		padding-bottom: 12px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	table td {
 		padding: 26px;
 		padding-bottom: 25px; } }
@@ -3789,7 +3798,7 @@ td:last-child::after {
 	height: 1px;
 	background: #fff;
 	content: "";}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	td:last-child::after {
 		display: none; } }
 
@@ -3798,7 +3807,7 @@ td:last-child::after {
 @media only screen and (min-width: 800px) {
 	.table-2 col {
 		width: 432px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.table-2 th:first-child,
 	.table-2 td:first-child {
 		border-right: 2px solid #fff; } }
@@ -3808,7 +3817,7 @@ td:last-child::after {
 @media only screen and (min-width: 800px) {
 	.table-3 col {
 		width: 288px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.table-3 th:nth-child(2),
 	.table-3 td:nth-child(2) {
 		border-right: 2px solid #fff; 
@@ -3819,7 +3828,7 @@ td:last-child::after {
 @media only screen and (min-width: 800px) {
 	.table-4 col {
 		width: 216px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.table-4 th:nth-child(2), .table-4 th:nth-child(3),
 	.table-4 td:nth-child(2),
 	.table-4 td:nth-child(3) {
@@ -3848,7 +3857,7 @@ object {
 .breadcrumbs {
 	display: none;
 	position: relative; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.breadcrumbs {
 		display: block; } }
 
@@ -3869,7 +3878,7 @@ object {
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 2.0000em;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.breadcrumbs a, .trail-end, .breadcrumbs__link {
 		padding-top: 0; } }
 
@@ -3897,10 +3906,9 @@ body.open .breadcrumbs {
 
 .subsection-number {
 	display: block; 
-	/* 26px */
-	padding-top: 1.6250em;
 	padding-top: 0;
-	padding-bottom: 0;
+	/* 26px */
+	padding-bottom: 1.6250em;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6250em;}
@@ -3933,7 +3941,7 @@ body.open .breadcrumbs {
 	margin-bottom: 26px; }
 .articles-list__item:first-child {
 	padding-top: 0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.articles-list__item:first-child {
 		padding-top: 24px; } }
 .articles-list__item:first-child::before {
@@ -3946,7 +3954,7 @@ body.open .breadcrumbs {
 **/
 .guides-list {
 	overflow: hidden; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.guides-list {
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -3965,7 +3973,7 @@ body.open .breadcrumbs {
 	margin-bottom: 0; 
 	padding: 0;
 	background: #fff;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.guides-list__item {
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -3981,7 +3989,7 @@ body.open .breadcrumbs {
 	margin: 0 32px; }
 .guides-list__item p {
 	margin: 26px 32px 0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.guides-list__item .primary-content {
 		-webkit-flex: 1;
 		    -ms-flex: 1;
@@ -3990,7 +3998,7 @@ body.open .breadcrumbs {
 	position: relative;
 	margin-top: 51px;
 	border-top: 1px solid #e0e0e0; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.guides-list__item .secondary-content {
 		width: 100%; } }
 .guides-list__item .secondary-content .icon-circle {
@@ -4021,7 +4029,7 @@ body.open .breadcrumbs {
 	margin-bottom: 1px; 
 	padding-bottom: 25px;
 	border-bottom: 1px solid #ccc;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.list--columns {
 		-webkit-column-count: 2;
 		   -moz-column-count: 2;
@@ -4060,8 +4068,7 @@ body.open .breadcrumbs {
 	margin: 4px auto; 
 	padding: 22px;
 	border-radius: 100%;
-	background: #737373;
-	font-size: 0;}
+	background: #737373;}
 .icon-circle i,
   .icon-circle span,
   .icon-circle--large i,
@@ -4079,7 +4086,7 @@ body.open .breadcrumbs {
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 700; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.icon-circle span,
 	.icon-circle--large span {
 		font-size: 42px; } }
@@ -4091,10 +4098,10 @@ body.open .breadcrumbs {
 	padding: 26px;}
 .icon-circle--large i {
 	font-size: 26px; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.icon-circle--large i {
 		font-size: 42px; } }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.icon-circle--large {
 		padding: 37px;
 		border: 2px solid #fff; }
@@ -4121,7 +4128,7 @@ body.open .breadcrumbs {
 	border-radius: 100%;
 	background: #737373;
 	font-size: 0;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.icon-circle--nav {
 		margin-top: 4px;
 		margin-bottom: 4px; 
@@ -4135,9 +4142,111 @@ body.open .breadcrumbs {
 	font-size: 16px; 
 	line-height: 1px;
 	text-align: center;}
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 600px) {
 	.icon-circle--nav i {
 		font-size: 26px; } }
+
+/* Social menu */
+.menu-social li a {
+	font-size: 26px; }
+
+.menu-social li::before {
+	display: none; }
+
+.menu-social li a::before {
+	display: inline-block;
+	padding: 0 3px;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	list-style: none; 
+	content: "\f1e0";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;}
+
+.menu-social li a:hover::before,
+.menu-social li a:focus::befoe {
+	opacity: 0.75; }
+
+.menu-social li a[href*="codepen.io"]::before {
+	color: #fff; 
+	content: "\f1cb";}
+
+.menu-social li a[href*="digg.com"]::before {
+	color: #fff; 
+	content: "\f1a6";}
+
+.menu-social li a[href*="dribbble.com"]::before {
+	color: #ea4c89; 
+	content: "\f17d";}
+
+.menu-social li a[href*="dropbox.com"]::before {
+	color: #007ee5; 
+	content: "\f16b";}
+
+.menu-social li a[href*="facebook.com"]::before {
+	color: #3b5998; 
+	content: "\f09a";}
+
+.menu-social li a[href*="flickr.com"]::before {
+	color: #ff0084; 
+	content: "\f16e";}
+
+.menu-social li a[href*="plus.google.com"]::before {
+	color: #dd4b39; 
+	content: "\f0d5";}
+
+.menu-social li a[href*="github.com"]::before {
+	color: #4183c4; 
+	content: "\f09b";}
+
+.menu-social li a[href*="instagram.com"]::before {
+	color: #3f729b; 
+	content: "\f16d";}
+
+.menu-social li a[href*="linkedin.com"]::before {
+	color: #0e76a8; 
+	content: "\f0e1";}
+
+.menu-social li a[href*="pinterest.com"]::before {
+	color: #c8232c; 
+	content: "\f0d2";}
+
+.menu-social li a[href*="reddit.com"]::before {
+	color: #369; 
+	content: "\f1a1";}
+
+.menu-social li a[href*="skype.com"]::before,
+.menu-social li a[href*="skype:"]::before {
+	color: #00aff0; 
+	content: "\f17e";}
+
+.menu-social li a[href*="stumbleupon.com"]::before {
+	color: #ff2618; 
+	content: "\f1a4";}
+
+.menu-social li a[href*="tumblr.com"]::before {
+	color: #34526f; 
+	content: "\f173";}
+
+.menu-social li a[href*="twitter.com"]::before {
+	color: #3cf; 
+	content: "\f099";}
+
+.menu-social li a[href*="vimeo.com"]::before {
+	color: #1ab7ea; 
+	content: "\f194";}
+
+.menu-social li a[href*="wordpress.org"]::before,
+.menu-social li a[href*="wordpress.com"]::before {
+	color: #21759b; 
+	content: "\f19a";}
+
+.menu-social li a[href*="youtube.com"]::before {
+	color: #c4302b; 
+	content: "\f167";}
 
 /**
 *

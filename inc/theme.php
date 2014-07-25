@@ -38,7 +38,7 @@ function hybrid_base_register_image_sizes() {
 function hybrid_base_register_menus() {
 	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'hybrid-base' ) );
 	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
-	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'social', 		 _x( 'Social', 'nav menu location', 'hybrid-base' ) );
 }
 
 /**
@@ -54,16 +54,24 @@ function hybrid_base_register_sidebars() {
 		array(
 			'id'          => 'primary',
 			'class'       => 'primary-sidebar',
-			'name'        => _x( 'Primary', 'sidebar', 'hybrid-base' ),
-			'description' => __( 'Add sidebar description.', 'hybrid-base' )
+			'name'        => _x( 'Primary Sidebar', 'sidebar', 'hybrid-base' ),
+			'description' => __( 'Typically on the screens left side.', 'hybrid-base' )
 		)
 	);
 
 	hybrid_register_sidebar(
 		array(
+			'id'          => 'secondary',
+			'name'        => _x( 'Secondary Sidebar', 'sidebar', 'hybrid-base' ),
+			'description' => __( 'Typically on the screens right side.', 'hybrid-base' )
+		)
+	);
+
+		hybrid_register_sidebar(
+		array(
 			'id'          => 'subsidiary',
-			'name'        => _x( 'Subsidiary', 'sidebar', 'hybrid-base' ),
-			'description' => __( 'Add sidebar description.', 'hybrid-base' )
+			'name'        => _x( 'Footer Widget Area', 'sidebar', 'hybrid-base' ),
+			'description' => __( 'Footer widgets.', 'hybrid-base' )
 		)
 	);
 }
@@ -93,6 +101,9 @@ function hybrid_base_enqueue_styles() {
 
 	/* Register Google-fonts. */
 	wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,700' );
+
+	/* Register Font Awesome. */
+	wp_register_style( 'meh-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	/* Gets ".min" suffix. */
 	$suffix = hybrid_get_min_suffix();

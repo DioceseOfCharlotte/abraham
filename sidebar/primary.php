@@ -1,6 +1,6 @@
 <?php if ( '1c' !== get_theme_mod( 'theme_layout' ) ) : // If not a one-column layout. ?>
 
-	<aside class="sidebar-primary"<?php hybrid_attr( 'sidebar', 'primary' ); ?>>
+	<aside class="Sidebar Sidebar-primary"<?php hybrid_attr( 'sidebar', 'primary' ); ?>>
 
 		<?php if ( is_active_sidebar( 'primary' ) ) : // If the sidebar has widgets. ?>
 

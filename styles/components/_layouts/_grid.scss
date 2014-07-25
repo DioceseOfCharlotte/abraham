@@ -5,233 +5,14 @@
 **/
 
 
-// @include medium-only {
-//   // Generating grid classes for medium view
-//   @for $i from 1 through $mediumColCount {
-//     .g-medium--#{$i} {
-//       @include rule--col(medium);
-//       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
-//       @if $i == $mediumColCount { margin-right: 0; }
-//     }
-
-//     @if $i < $mediumColCount {
-//       .g-medium--push-#{$i} {
-//         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-//       }
-//       .g-medium--pull-#{$i} {
-//         margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-//       }
-//     }
-//   }
-
-//   .g-medium--full {
-//     @include rule--col(medium);
-//     margin-right: 0;
-//     width: 100%;
-//   }
-
-//   .g--third {
-//     @include rule--col(medium);
-//     width: $mediumColWidth;
-//   }
-
-//   .g--half,
-//   .g-medium--half {
-//     @include rule--col(medium);
-//     width: 50% - $mediumGutterWidth/2;
-//   }
-
-//   .g-medium--last { margin-right: 0; }
-//   .g-medium--last + .g-medium--half { clear: left; }
-
-//   .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
-// }
-
-
-// @include wide {
-//   // Generating grid classes for wide view
-//   @for $i from 1 through $wideColCount {
-//     .g-wide--#{$i} {
-//       @include rule--col(wide);
-//       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
-//       @if $i == $wideColCount { margin-right: 0; }
-//     }
-
-//     @if $i < $wideColCount {
-//       .g-wide--push-#{$i} {
-//         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-//       }
-//       .g-wide--pull-#{$i} {
-//         margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-//       }
-//     }
-//   }
-
-//   .g-wide--last { margin-right: 0; }
-
-//   .g-wide--full {
-//     @include rule--col(wide);
-//     margin-right: 0;
-//     width: 100%;
-//   }
-
-//   .g--third {
-//     @include rule--col(wide);
-//     width: 30.8%;
-//   }
-
-//   .g--half,
-//   .g-wide--half {
-//     @include rule--col(wide);
-//     width: 50% - $wideGutterWidth/2;
-//   }
-
-//   .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
-// }
-
-
-// // This is a global 'last' class
-// // to be used with global grid classes, such as 'half' or 'third'
-// // Example usage:
-// //  <div class="third"></div>
-// //  <div class="third"></div>
-// //  <div class="third last"></div>
-// .g--last { margin-right: 0; }
-
-
-// // This is a global 'centered' class
-// .g--centered {
-//   float: none; // reset float to none so we can center it
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// // This is a grid overlay
-// // Its purpose is to show users our grid system
-// // It becomes visible when a class 'debug' is added to the body
-// .grid-overlay {
-
-//   display: none;
-//   pointer-events: none;
-
-//   // Only show when parents (body) has debug class
-//   .debug & {
-//     @include container(true);
-
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     height: 100%;
-//     display: block;
-
-//     [class*="g-"] {
-//       height: 100%;
-//       background-color: rgba(lighten(#000, 35%), .2);
-//     }
-
-//     @include medium-only {
-//       .g-wide--last {
-//         display: none;
-//       }
-//     }
-
-//     @include small-only {
-//       display: none;
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*!
-Pure v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-
 .grid {
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
-
-    /*
-    Sets the font stack to fonts known to work properly with the above letter
-    and word spacings. See: https://github.com/yui/pure/issues/41/
-
-    The following font stack makes Pure Grids work on all known environments.
-
-    * FreeSans: Ships with many Linux distros, including Ubuntu
-
-    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-      Arial to get picked up by the browser, even though neither is available
-      in Chrome OS.
-
-    * Droid Sans: Ships with all versions of Android.
-
-    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-    */
-    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-
-    /*
-    Use flexbox when possible to avoid `letter-spacing` side-effects.
-
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
-    */
-
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-
-    /* IE10 uses display: flexbox */
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
-.opera-only :-o-prefocus,
-.grid {
-    word-spacing: -0.43em;
-}
-
-.u-size {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
-
-/*
-Resets the font family back to the OS/browser's default sans-serif font,
-this the same font stack that Normalize.css sets for the `body`.
-*/
-.grid [class *= "u-size"] {
-    font-family: sans-serif;
-}
+/* IE9: collapse white-space between units */
+:root .grid {word-spacing: -0.43em\0 ;}
 
 .u-size-1,
 .u-size-1of1,
@@ -275,9 +56,8 @@ this the same font stack that Normalize.css sets for the `body`.
 .u-size-23of24,
 .u-size-24of24 {
     display: inline-block;
-    *display: inline;
+    *display: inline; /* IE < 8: fake inline-block */
     zoom: 1;
-    letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
@@ -464,7 +244,6 @@ this the same font stack that Normalize.css sets for the `body`.
         display: inline-block;
         *display: inline;
         zoom: 1;
-        letter-spacing: normal;
         word-spacing: normal;
         vertical-align: top;
         text-rendering: auto;
@@ -652,7 +431,6 @@ this the same font stack that Normalize.css sets for the `body`.
         display: inline-block;
         *display: inline;
         zoom: 1;
-        letter-spacing: normal;
         word-spacing: normal;
         vertical-align: top;
         text-rendering: auto;
@@ -840,7 +618,6 @@ this the same font stack that Normalize.css sets for the `body`.
         display: inline-block;
         *display: inline;
         zoom: 1;
-        letter-spacing: normal;
         word-spacing: normal;
         vertical-align: top;
         text-rendering: auto;
@@ -1028,7 +805,6 @@ this the same font stack that Normalize.css sets for the `body`.
         display: inline-block;
         *display: inline;
         zoom: 1;
-        letter-spacing: normal;
         word-spacing: normal;
         vertical-align: top;
         text-rendering: auto;

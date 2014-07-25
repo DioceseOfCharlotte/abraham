@@ -1,13 +1,18 @@
     .main-container {
       @extend .grid;
-      max-width: $almostHuge;
+      max-width: $huge;
       margin: 0 auto;
       padding: 60px 16px 16px 16px;
       min-height: 100%;
-            @include wider {
-        padding-top: 40px;
+      @include wider {
+        padding-top: 0;
     }
     }
+
+    .Sidebar, .site-main {
+      padding: 1em 1.5em;
+    }
+
 
     .layout-1c .main-container {
 
@@ -16,33 +21,46 @@
       .site-main {
         @extend .u-size-2of3;
       }
-      .sidebar-primary {
+      .Sidebar-primary {
         @extend .u-size-1of3;
       }
-      .sidebar-sub {
+      .Sidebar-secondary {
         @extend .u-size-1of1;
       }
       @include small-only {
-        .site-main, .sidebar-primary, .sidebar-sub {
+        .site-main, .Sidebar-primary, .Sidebar-secondary {
           width: 100%; 
       }
     }
+      @include wide {
+        .Sidebar-secondary {
+          width: 100%
+        }
+        .Sidebar-primary {
+          width: 33.3333%;
+          *width: 33.3023%;
+        }
+        .site-main {
+          width: 66.6667%;
+          *width: 66.6357%;
+        }
+      }
     }
     .layout-2c-r .main-container {
       .site-main {
         @extend .u-size-2of3;
         order: 2;
       }
-      .sidebar-primary {
+      .Sidebar-primary {
         @extend .u-size-1of3;
         order: 1;
       }
-      .sidebar-sub {
+      .Sidebar-secondary {
         @extend .u-size-1of1;
         order: 3;
       }
       @include small-only {
-        .site-main, .sidebar-primary, .sidebar-sub {
+        .site-main, .Sidebar-primary, .Sidebar-secondary {
           width: 100%; 
       }
     }
@@ -51,14 +69,14 @@
             .site-main {
         @extend .u-size-12of24;
       }
-      .sidebar-primary {
+      .Sidebar-primary {
         @extend .u-size-6of24;
       }
-      .sidebar-sub {
+      .Sidebar-secondary {
         @extend .u-size-6of24;
       }
       @include small-only {
-        .site-main, .sidebar-primary, .sidebar-sub {
+        .site-main, .Sidebar-primary, .Sidebar-secondary {
           width: 100%; 
       }
     }
@@ -68,16 +86,16 @@
         @extend .u-size-12of24;
         order: 3;
       }
-      .sidebar-primary {
+      .Sidebar-primary {
         @extend .u-size-6of24;
         order: 1;
       }
-      .sidebar-sub {
+      .Sidebar-secondary {
         @extend .u-size-6of24;
         order: 2;
       }
       @include small-only {
-        .site-main, .sidebar-primary, .sidebar-sub {
+        .site-main, .Sidebar-primary, .Sidebar-secondary {
           width: 100%; 
       }
     }
@@ -85,22 +103,54 @@
     .layout-3c-c .main-container {
       .site-main {
         @extend .u-size-12of24;
-        order: 2;
       }
-      .sidebar-primary {
+      .Sidebar-primary {
         @extend .u-size-6of24;
+      }
+      .Sidebar-secondary {
+        @extend .u-size-6of24;
+      }
+    }
+
+
+
+    .layout-3c-c .main-container {
+      .site-main {
+        flex: 1 100%;
+      }
+      .Sidebar-primary {
+        flex: 1 100%;
+      }
+      .Sidebar-secondary {
+        flex: 1 100%;
+      }
+      @include medium {
+        .Sidebar-primary { flex: 1 50%; }
+        .Sidebar-secondary { flex: 1 50%; }
+      }
+      @include wide {
+         .site-main {
+        flex: 2 0px;
+      }
+      .Sidebar-primary {
+        flex: 0 1 27%;
         order: 1;
       }
-      .sidebar-sub {
-        @extend .u-size-6of24;
+      .site-main {
+        flex: 2 0px;
+        order: 2;
+      }
+      .Sidebar-secondary {
+        flex: 0 1 23%;
         order: 3;
       }
-      @include small-only {
-        .site-main, .sidebar-primary, .sidebar-sub {
-          width: 100%; 
+    }
+          @media screen and (min-width: $wide) and (max-width: $wider) {
+         .Sidebar-secondary {
+        flex: 1 100%;
       }
     }
-    }
+  }
 
 
 
@@ -108,11 +158,11 @@
       background-color: $clouds;
     }
 
-    .sidebar-primary {
+    .Sidebar-primary {
       background-color: $silver;
     }
 
-    .sidebar-sub {
+    .Sidebar-secondary {
       background-color: #A3B1B2;
     }
 

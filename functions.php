@@ -45,6 +45,12 @@ function hybrid_base_theme_setup() {
 		array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) 
 	);
 
+		/* Load stylesheets. */
+	add_theme_support(
+		'hybrid-core-styles',
+		array( 'meh-fonts', 'meh-font-awesome', 'parent', 'style' )
+	);
+
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
