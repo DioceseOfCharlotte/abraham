@@ -1959,10 +1959,29 @@ li > p {
 	-ms-flex-pack: distribute;
 	        justify-content: space-around;}
 
+.Footer-bottom {
+	background-color: #ecf0f1; 
+
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;}
+
+.credit {
+	margin: auto; 
+	padding: 0;}
+
+.menu-social {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex; 
+	margin: auto;}
+
 .menu-social-items {
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display:         flex; }
+	display:         flex;
+	margin: auto;
+	padding: 1em; }
 
 /**
 *

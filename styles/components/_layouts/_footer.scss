@@ -20,6 +20,23 @@ justify-content: space-around;
 background-color: $concrete;
 }
 
+.Footer-bottom {
+justify-content: space-between;
+background-color: $clouds;
+}
+
+.credit {
+padding: 0;
+margin: auto;
+}
+
+.menu-social {
+margin: auto;
+display: flex;
+}
+
 .menu-social-items {
 display: flex;
+margin: auto;
+padding: 1em;
 }
