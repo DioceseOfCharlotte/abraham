@@ -2,6 +2,7 @@
   "devDependencies": {
     "browser-sync": "^1.1.2",
     "gulp": "^3.8.5",
+    "gulp-composer": "^0.1.0",
     "gulp-autoprefixer": "^0.0.8",
     "gulp-csscomb": "^3.0.2",
     "gulp-cache": "^0.2.0",

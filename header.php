@@ -13,8 +13,6 @@
 			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'hybrid-base' ); ?></a>
 		</div><!-- .skip-link -->
 
-		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
-
 		<header <?php hybrid_attr( 'header' ); ?>>
 
 			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
@@ -25,10 +23,10 @@
 					<?php hybrid_site_title(); ?>
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
-				<section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
+		<section class="app-bar-actions">
+        	<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
         </section>
-        </div>
+        		</div>
 
 			<?php endif; // End check for header text. ?>
 

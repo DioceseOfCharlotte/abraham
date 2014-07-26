@@ -2251,9 +2251,16 @@ body.open {
 
 	.app-bar-container {
 		display: block;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display:         flex;
 		max-width: 1400px;
 		height: 130px;
-		padding: 0 16px; }
+		padding: 0 16px;
+
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		        justify-content: space-between; }
 
 	.app-bar .site-title {
 		float: left;
@@ -2263,7 +2270,15 @@ body.open {
 		line-height: 130px;}
 
 	.app-bar-actions {
-		float: right; }
+		float: right;
+		margin: auto 0; }
+	.app-bar-actions .menu-items {
+		padding: 0; }
+	.app-bar-actions .menu-items li::before {
+		display: none; }
+	.app-bar-actions .menu-items li a {
+		padding: 0.5em 1.5em;
+		background-color: rgba(255, 255, 255, 0.79); }
 
 	.app-bar::after {
 		display: block;
@@ -2290,7 +2305,7 @@ body.open {
 	.menu-header {
 		display: none; }
 
-	.navdrawer-container ul {
+	.app-bar-actions ul, .navdrawer-container ul {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display:         flex;

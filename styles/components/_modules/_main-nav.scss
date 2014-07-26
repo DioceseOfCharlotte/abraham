@@ -150,6 +150,8 @@ body.open {
     height: 130px;
     max-width: $almostHuge;
     padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .app-bar .site-title {
@@ -162,6 +164,20 @@ body.open {
 
   .app-bar-actions {
     float: right;
+    margin: auto 0;
+
+    .menu-items {
+      padding: 0;
+      li {
+        &::before {
+          display: none;
+        }
+      a {
+        padding: .5em 1.5em;
+        background-color: rgba(255, 255, 255, 0.79);
+      }
+      }
+      }
   }
 
   .app-bar::after {
@@ -193,7 +209,7 @@ body.open {
     display: none;
   }
 
-  .navdrawer-container ul {
+  .app-bar-actions ul, .navdrawer-container ul {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;

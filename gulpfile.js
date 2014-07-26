@@ -22,6 +22,7 @@
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var composer = require('gulp-composer');
 //var del = require('del');
 //var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
@@ -51,6 +52,20 @@ var AUTOPREFIXER_BROWSERS = [
 //     .pipe($.jshint.reporter('jshint-stylish'))
 //     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 // });
+
+gulp.task('composer', function () {
+    composer('init', {'no-interaction':true});
+    composer('require "justintadlock/hybrid-core:2.0.1"', {});
+    composer(); //default install
+    composer('dumpautoload', {optimize: true});
+});
+
+
+// Copy Web Fonts To Dist
+gulp.task('copy', function () {
+  return gulp.src(['vendor/justintadlock/hybrid-core/**'])
+    .pipe(gulp.dest('library'));
+});
 
 // Optimize Images
 gulp.task('images', function () {
@@ -212,7 +227,7 @@ gulp.task('serve', function () {
 // try { require('require-dir')('tasks'); } catch (err) {}
 
 //Default task
-gulp.task('default', ['styles', 'images', 'serve']);
+gulp.task('default', ['composer', 'copy', 'styles', 'images', 'serve']);
 
 // gulp.task('default', ['styles', 'browser-sync'], function () {
 //     gulp.watch("styles/*.scss", ['styles']);
