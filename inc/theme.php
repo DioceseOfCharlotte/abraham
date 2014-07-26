@@ -53,7 +53,6 @@ function hybrid_base_register_sidebars() {
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'primary',
-			'class'       => 'primary-sidebar',
 			'name'        => _x( 'Primary Sidebar', 'sidebar', 'hybrid-base' ),
 			'description' => __( 'Typically on the screens left side.', 'hybrid-base' )
 		)

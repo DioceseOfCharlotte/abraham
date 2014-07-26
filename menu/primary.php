@@ -1,6 +1,8 @@
 <?php if ( has_nav_menu( 'primary' ) ) : // Check if there's a menu assigned to the 'primary' location. ?>
+	
+	<nav class="navdrawer-container" <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
-	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
+		<div class="menu-header"></div><!-- breadcrumb container -->
 
 		<?php wp_nav_menu(
 			array(

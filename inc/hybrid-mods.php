@@ -67,6 +67,23 @@ function meh_attr_site_description( $attr ) {
   return $attr;
 }
 
+add_filter( 'hybrid_attr_sidebar', 'meh_attr_sidebar', 10, 2 );
+
+function meh_attr_sidebar( $attr, $context ) {
+
+  $attr['class'] = "Sidebar-{$context} Sidebar";
+
+  return $attr;
+}
+
+add_filter( 'hybrid_attr_menu', 'meh_attr_menu', 10, 2 );
+
+function meh_attr_menu( $attr, $context ) {
+
+  $attr['class'] = "Menu-{$context} Menu";
+
+  return $attr;
+}
 
 add_filter('show_admin_bar', '__return_false');
 

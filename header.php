@@ -24,15 +24,13 @@
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
 		<section class="app-bar-actions">
-        	<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
+			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
         </section>
         		</div>
 
 			<?php endif; // End check for header text. ?>
 
 		</header><!-- #header -->
-
-		<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
 
 			<?php if ( get_header_image() ) : // If there's a header image. ?>
 
@@ -45,7 +43,7 @@
 
 			<?php endif; // End check for header image. ?>
 
-			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
+			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 			
 			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
 
