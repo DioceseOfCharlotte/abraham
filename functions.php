@@ -78,6 +78,8 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
 	);
 
+	add_theme_support( 'site-logo' );
+
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1280 );
 }

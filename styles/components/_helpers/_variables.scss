@@ -58,13 +58,13 @@ $asbestos:                  #7f8c8d;
 
 $base-bg-color: #e0e0e0 !default;
 
-  $colorBlue: #3372df !default;
+  $colorBlue: #2d4ea2 !default;
   $colorBlueSecondary: lighten($colorBlue, 30%) !default;
-  $colorGreen: #0f9d58 !default;
+  $colorGreen: #278852 !default;
   $colorGreenSecondary: lighten($colorGreen, 30%) !default;
   $colorRed: #cb4437 !default;
   $colorRedSecondary: lighten($colorRed, 30%) !default;
-  $colorYellow: #f4b400 !default;
+  $colorYellow: #DFC00C !default;
   $colorYellowSecondary: lighten($colorYellow, 20%) !default;
 
   $colorRemember: #09829a !default;
@@ -74,7 +74,7 @@ $base-bg-color: #e0e0e0 !default;
   $colorGrayKeyline: #e0e0e0 !default;
   $colorGray: #737373 !default;
   $colorGrayLight: #eeeeee !default;
-  $colorGrayDark: #404040 !default;
+  $colorGrayDark: #37464F !default;
 
   $colorText: $colorGrayDark !default;
   $colorHighlight: $colorBlue !default;
@@ -97,7 +97,7 @@ $base-bg-color: $colorGrayBackground;
 // Font Colors
 $base-font-color: $colorText;
 $base-accent-color: $colorBlue;
-$secondary-color: $green-sea;
+$secondary-color: $colorGreen;
 
 // Link Colors
 $base-link-color: $base-accent-color;
@@ -128,7 +128,7 @@ $base-line-height: $base-font-size * 1.5;
 $type-bottom-margin: $base-line-height * .5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height
 $header-line-height: $base-font-size * 1.25;
-$base-border-radius: em(3);
+$base-border-radius: 2px;
 
 $base-transition-time: 0.1s;
 

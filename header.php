@@ -7,8 +7,6 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<div id="container" class="site-container">
-
 		<div class="skip-link">
 			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'hybrid-base' ); ?></a>
 		</div><!-- .skip-link -->
@@ -20,6 +18,7 @@
 				<div class="app-bar-container">
           <button class="menu-link btn-menu"><span></span></button>
 				<div <?php hybrid_attr( 'branding' ); ?>>
+					<div class="header-logo"><?php the_site_logo() ?></div>
 					<?php hybrid_site_title(); ?>
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->

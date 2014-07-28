@@ -6,8 +6,24 @@
 
 .app-bar {}
 
-  .branding {}
+  .branding {
+    display: flex;
+  }
 
+  .header-logo {
+margin: auto;
+}
+
+  img.site-logo {
+    height: 40px;
+    width: auto;
+    margin: auto;
+    @include wider {
+    height: 100px;
+    width: auto;
+    }
+
+  }
     .site-title {
       a {
 

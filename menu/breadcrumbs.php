@@ -1,7 +1,6 @@
 <?php if ( function_exists( 'breadcrumb_trail' ) ) : // Check for breadcrumb support. ?>
 
-<div class="grid container">
-<div class="u-size-1of1">
+<div class="crumb-container">
 	<?php breadcrumb_trail(
 		array( 
 			'container'     => 'nav', 
@@ -10,6 +9,5 @@
 			'show_on_front' => true,
 		) 
 	); ?>
-</div>
 </div>
 <?php endif; // End check for breadcrumb support. ?>

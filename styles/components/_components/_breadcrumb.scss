@@ -4,14 +4,15 @@
 *
 **/
 
-.breadcrumbs {
-  display: none;
-  @include medium {
-    display: block;
-  }
+.crumb-container {
+  background-color: rgba($colorGrayBackground, 0.9);
+}
 
+.breadcrumbs {
   position: relative;
-  //z-index: 1;
+  max-width: $huge;
+  margin: 0 auto;
+  padding: .5em 1em;
 }
 
 .breadcrumbs p {

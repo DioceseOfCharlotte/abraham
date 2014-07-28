@@ -1,20 +1,30 @@
-    .main-container {
+        .main-container {
       @extend .grid;
       max-width: $huge;
       margin: 0 auto;
-      padding: 60px 16px 16px 16px;
-      min-height: 100%;
-      @include wider {
-        padding-top: 0;
-    }
+      //padding: 1em 0 0;
+      //min-height: 100%;
+    //   @include wider {
+    //     padding-top: 0;
+    // }
+    .Sidebar,
+      .site-main {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
-    .Sidebar, .site-main {
-      padding: 1em 1.5em;
-    }
+    // .site-main {
+    //   background-color: rgba($colorBlue, 0.7);
+    //   //border: 4px solid $colorGrayDark;
+    // } 
 
+    // .Sidebar-primary, .Sidebar-secondary {
+    //   background-color: rgba($colorYellow, 0.7);
+    // }
 
-    .layout-1c .main-container {
+    .layout-1c {
       .Sidebar,
       .site-main {
           width: 100%;
@@ -24,7 +34,7 @@
       }
 
     }
-    .layout-2c-l .main-container {
+    .layout-2c-l {
       .site-main {
         @extend .u-size-2of3;
       }
@@ -45,7 +55,7 @@
     }
     }
 
-    .layout-2c-r .main-container {
+    .layout-2c-r {
       .site-main {
         @extend .u-size-2of3;
         order: 2;
@@ -64,7 +74,7 @@
       }
     }
     }
-    .layout-3c-l .main-container {
+    .layout-3c-l {
             .site-main {
         @extend .u-size-12of24;
       }
@@ -80,7 +90,7 @@
       }
     }
     }
-    .layout-3c-r .main-container {
+    .layout-3c-r {
       .site-main {
         @extend .u-size-12of24;
         order: 3;
@@ -99,7 +109,7 @@
       }
     }
     }
-    .layout-3c-c .main-container {
+    .layout-3c-c {
       .site-main {
         @extend .u-size-12of24;
       }
@@ -113,7 +123,7 @@
 
 
 
-    .layout-3c-c .main-container {
+    .layout-3c-c {
       .site-main {
         flex: 1 100%;
       }
@@ -153,18 +163,35 @@
 
 
 
-    .main-container {
-      background-color: $clouds;
-    }
+    // .main-container {
+    //   background-color: $clouds;
+    // }
 
-    .Sidebar-primary {
-      background-color: $silver;
-    }
+    // .Sidebar-primary {
+    //   background-color: $silver;
+    // }
 
-    .Sidebar-secondary {
-      background-color: #A3B1B2;
-    }
+    // .Sidebar-secondary {
+    //   background-color: #A3B1B2;
+    // }
 
-    .site-main {
-      background-color: #CBD0D3;
-    }
+    // .site-main {
+    //   background-color: #CBD0D3;
+    // }
+
+.entry, .widget {
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+margin-bottom: .7em;
+padding: 1em;
+background-color: #F8F6DF;
+width: 100%;
+border-radius: $base-border-radius;
+
+@include wide {
+  margin-bottom: 1em;
+  }
+}
+
+body.custom-background {
+background-size: cover;
+}

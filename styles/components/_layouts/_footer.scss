@@ -1,4 +1,18 @@
 .footer {
+  background-color: rgba($secondary-color, 0.8);
+  color: #fff;
+  .Footer-top {
+justify-content: space-around;
+padding-top: 1em;
+background: none;
+.widget {
+flex: 1 1 200px;
+flex-wrap: wrap;
+margin: .5em;
+background-color: rgba($secondary-color, 0.95);
+box-shadow: none;
+}
+}
 
   .copyright {
 
@@ -7,26 +21,15 @@
 
   }
   a {
-
+    color: $colorGrayKeyline;
     &:hover {
 
     }
   }
 }
 
-
-.Footer-top {
-justify-content: space-around;
-background-color: $concrete;
-.widget {
-flex: 1 1 200px;
-flex-wrap: wrap;
-}
-}
-
 .Footer-bottom {
 justify-content: space-between;
-background-color: $clouds;
 }
 
 .credit {
