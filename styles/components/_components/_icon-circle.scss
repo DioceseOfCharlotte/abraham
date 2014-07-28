@@ -17,7 +17,9 @@
   margin: 4px auto; // Adds margin top/bottom to fix baseline grid ;)
 
   i,
-  span {
+  span,
+  a,
+  li {
     position: absolute;
     line-height: 0px;
     top: 50%;
@@ -45,7 +47,7 @@
   padding: $lineHeight;
   position: relative;
 
-  i {
+  i, a {
     font-size: $fontLarge;
 
     @include medium {
@@ -93,7 +95,7 @@
     margin-bottom: 4px; // Adds margin top/bottom to fix baseline grid ;)
   }
 
-  i {
+  i, a {
     position: absolute;
     line-height: 1px;
     top: 50%;
@@ -111,17 +113,30 @@
 
   /* Social menu */
 
-  .menu-social li a {
+  .menu-social li {
   font-size: $fontLarge;
   }
 
   .menu-social li::before {
     display: none;
   }
+
+.icon-circle,
+.icon-circle--large {
+    li {
+    font-size: $fontLarge;
+    font-weight: 700;
+
+    @include medium {
+      font-size: $fontXLarge;
+    }
+  }
+}
+
   .menu-social li a::before {
     content: $fa-share-alt ;
     padding: 0 3px;
-      display: inline-block;
+     display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;

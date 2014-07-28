@@ -18,6 +18,10 @@
 .Footer-top {
 justify-content: space-around;
 background-color: $concrete;
+.widget {
+flex: 1 1 200px;
+flex-wrap: wrap;
+}
 }
 
 .Footer-bottom {

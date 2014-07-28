@@ -162,6 +162,7 @@ body.open {
     font-size: 46px;
   }
 
+$menu-button-color : rgba(255, 255, 255, 0.79);
   .app-bar-actions {
     float: right;
     margin: auto 0;
@@ -173,8 +174,8 @@ body.open {
           display: none;
         }
       a {
-        padding: .5em 1.5em;
-        background-color: rgba(255, 255, 255, 0.79);
+        @include button($menu-button-color, $colorBlue)
+        
       }
       }
       }

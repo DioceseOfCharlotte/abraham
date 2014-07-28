@@ -15,6 +15,13 @@
 
 
     .layout-1c .main-container {
+      .Sidebar,
+      .site-main {
+          width: 100%;
+    }
+      .Sidebar{
+       // margin-top: 1em;
+      }
 
     }
     .layout-2c-l .main-container {
@@ -26,26 +33,18 @@
       }
       .Sidebar-secondary {
         @extend .u-size-1of1;
+        //margin-top: 1em;
       }
       @include small-only {
         .site-main, .Sidebar-primary, .Sidebar-secondary {
           width: 100%; 
       }
-    }
-      @include wide {
-        .Sidebar-secondary {
-          width: 100%
-        }
-        .Sidebar-primary {
-          width: 33.3333%;
-          *width: 33.3023%;
-        }
-        .site-main {
-          width: 66.6667%;
-          *width: 66.6357%;
-        }
+      .Sidebar-primary {
+        //margin-top: 1em;
       }
     }
+    }
+
     .layout-2c-r .main-container {
       .site-main {
         @extend .u-size-2of3;

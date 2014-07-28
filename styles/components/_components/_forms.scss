@@ -1,0 +1,150 @@
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+
+fieldset {
+  background: $base-bg-color;
+  border-radius: $base-border-radius;
+  margin: 0 0 ($base-line-height / 2) 0;
+  padding: $base-line-height;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+fieldset label {
+  font-weight: bold;
+  margin-bottom: $base-line-height / 4;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  //@include transition(border-color);
+  background-color: white;
+  border-radius: $form-border-radius;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  margin-bottom: $base-line-height / 2;
+  padding: ($base-line-height / 3) ($base-line-height / 3);
+  width: 100%;
+
+  &:hover {
+    border-color: $form-border-color-hover;
+    box-shadow: $form-box-shadow-hover;
+  }
+
+  &:focus {
+    border-color: $form-border-color-focus;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+// input[type="search"] {
+//   @include appearance(none);
+// }
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $base-line-height / 4;
+}
+
+input[type="file"] {
+  margin-bottom: $base-line-height / 2;
+  padding-bottom: ($base-line-height / 3);
+  width: 100%;
+}
+
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: $base-line-height;
+}
+
+
+.search-form {
+    position: relative;
+    display: inline-block;
+
+    input[type=search] {
+      width: 100%;
+      padding: .52em .8em;
+      font-size: .9em;
+      font-style: italic;
+      border-radius: $base-border-radius;
+      margin: 0;
+    }
+  }
+
+// .search-form input[type="submit"].search-submit {
+// @include icon($search);
+// @include fa;
+// @include button($blue);
+// box-shadow: none;
+// position: absolute;
+// top: 0;
+// right: 0;
+// bottom: 0;
+// margin: 0;
+// padding: 8px;
+//       border-top-left-radius: 0;
+//       border-bottom-left-radius: 0;
+// }
+
+
+// legend {
+//   @extend %scut-side-lined;
+// }
+
+// #atoms-checkbox label:hover, #atoms-radio-buttons label:hover {
+//   background: lighten($base-bg-color, 5);
+//   border-radius: $base-border-radius;
+// }
+
+
+
+.search-form {
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+}
+
+input[type=search] {
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-moz-box-flex: 1;
+-ms-flex: 1;
+flex: 1;
+}

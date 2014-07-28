@@ -41,19 +41,19 @@
 
 
 .button--primary {
-  @extend .button;
-  @include style-button($colorGreen, #ffffff);
+  @include button;
+  //@include style-button($colorGreen, #ffffff);
 }
 
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button--secondary {
-  @extend .button;
-  @include style-button(#ffffff, $colorBlue);
+  @include button;
+  //@include style-button(#ffffff, $colorBlue);
 }
 
 .button--secondary-variation {
-  @extend .button;
-  @include style-button(#ffffff, $colorBlue, true);
+  @include button;
+  //@include style-button(#ffffff, $colorBlue, true);
 }
