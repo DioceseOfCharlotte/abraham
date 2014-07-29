@@ -32,21 +32,21 @@
 
 // Modules
 @import "_modules/_main-nav";
-@import "_modules/_highlight";
+//@import "_modules/_highlight";
 @import "_modules/_editorial-header";
 @import "_modules/_summary-header";
-@import "_modules/_related-guides";
-@import "_modules/_in-this-guide";
+//@import "_modules/_related-guides";
+//@import "_modules/_in-this-guide";
 @import "_modules/_articles-section";
-@import "_modules/_guides-section";
+//@import "_modules/_guides-section";
 @import "_modules/_page-header";
 @import "_modules/_featured-section";
 @import "_modules/_featured-spotlight";
 @import "_modules/_quote";
 @import "_modules/_article-nav";
-@import "_modules/_did-you-know";
-@import "_modules/_toc";
-@import "_modules/_next-lessons";
+//@import "_modules/_did-you-know";
+//@import "_modules/_toc";
+//@import "_modules/_next-lessons";
 
 // Components
 @import "_components/_button";
@@ -58,7 +58,7 @@
 @import "_components/_breadcrumb";
 @import "_components/_subsection-title";
 @import "_components/_articles-list";
-@import "_components/_guides-list";
+//@import "_components/_guides-list";
 @import "_components/_column-list";
 @import "_components/_icon-circle";
 
@@ -66,8 +66,8 @@
 @import "_themes/_themed";
 
 // Pages
-@import "_pages/_styleguide";
-@import "_pages/_page-resources";
+//@import "_pages/_styleguide";
+//@import "_pages/_page-resources";
 
 // Make sure this is last to override anything else :)
 @import "_helpers/_helper";
