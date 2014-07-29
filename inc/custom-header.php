@@ -1,7 +1,7 @@
 <?php
 
 /* Call late so child themes can override. */
-add_action( 'after_setup_theme', 'hybrid_base_custom_header_setup', 15 );
+add_action( 'after_setup_theme', 'grace_custom_header_setup', 15 );
 
 /**
  * Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
@@ -10,7 +10,7 @@ add_action( 'after_setup_theme', 'hybrid_base_custom_header_setup', 15 );
  * @access public
  * @return void
  */
-function hybrid_base_custom_header_setup() {
+function grace_custom_header_setup() {
 
 	/* Adds support for WordPress' "custom-header" feature. */
 	add_theme_support( 
@@ -25,9 +25,9 @@ function hybrid_base_custom_header_setup() {
 			'default-text-color'     => '000000',
 			'header-text'            => true,
 			'uploads'                => true,
-			'wp-head-callback'       => 'hybrid_base_custom_header_wp_head',
-			'admin-head-callback'    => 'hybrid_base_custom_header_admin_head',
-			'admin-preview-callback' => 'hybrid_base_custom_header_admin_preview',
+			'wp-head-callback'       => 'grace_custom_header_wp_head',
+			'admin-head-callback'    => 'grace_custom_header_admin_head',
+			'admin-preview-callback' => 'grace_custom_header_admin_preview',
 		)
 	);
 
@@ -38,31 +38,31 @@ function hybrid_base_custom_header_setup() {
 				'url'           => '%s/images/headers/paper_material.jpg',
 				'thumbnail_url' => '%s/images/headers/paper-thumb.jpg',
 				/* Translators: Header image description. */
-				'description'   => __( 'Paper', 'hybrid-base' )
+				'description'   => __( 'Paper', 'grace' )
 			),
 			'orange-burn' => array(
 				'url'           => '%s/images/headers/mtn_material.jpg',
 				'thumbnail_url' => '%s/images/headers/mtn-thumb.jpg',
 				/* Translators: Header image description. */
-				'description'   => __( 'Mountain', 'hybrid-base' )
+				'description'   => __( 'Mountain', 'grace' )
 			),
 			'planets-blue' => array(
 				'url'           => '%s/images/headers/day_material.jpg',
 				'thumbnail_url' => '%s/images/headers/day-thumb.jpg',
 				/* Translators: Header image description. */
-				'description'   => __( 'Day', 'hybrid-base' )
+				'description'   => __( 'Day', 'grace' )
 			),
 			'planet-burst' => array(
 				'url'           => '%s/images/headers/night_material.jpg',
 				'thumbnail_url' => '%s/images/headers/night-thumb.jpg',
 				/* Translators: Header image description. */
-				'description'   => __( 'Night', 'hybrid-base' )
+				'description'   => __( 'Night', 'grace' )
 			),
 		)
 	);
 
 	/* Load the stylesheet for the custom header screen. */
-	add_action( 'admin_enqueue_scripts', 'hybrid_base_enqueue_admin_custom_header_styles', 5 );
+	add_action( 'admin_enqueue_scripts', 'grace_enqueue_admin_custom_header_styles', 5 );
 }
 
 /**
@@ -72,11 +72,11 @@ function hybrid_base_custom_header_setup() {
  * @access public
  * @return void
  */
-function hybrid_base_enqueue_admin_custom_header_styles( $hook_suffix ) {
+function grace_enqueue_admin_custom_header_styles( $hook_suffix ) {
 
 	if ( 'appearance_page_custom-header' === $hook_suffix ) {
-		wp_enqueue_style( 'hybrid-base-fonts' );
-		wp_enqueue_style( 'hybrid-base-admin-custom-header' );
+		wp_enqueue_style( 'grace-fonts' );
+		wp_enqueue_style( 'grace-admin-custom-header' );
 
 		if ( is_child_theme() ) {
 			$dir = trailingslashit( get_stylesheet_directory() );
@@ -95,7 +95,7 @@ function hybrid_base_enqueue_admin_custom_header_styles( $hook_suffix ) {
  * @access public
  * @return void
  */
-function hybrid_base_custom_header_wp_head() {
+function grace_custom_header_wp_head() {
 
 	if ( !display_header_text() )
 		return;
@@ -117,7 +117,7 @@ function hybrid_base_custom_header_wp_head() {
  * @access public
  * @return void
  */
-function hybrid_base_custom_header_admin_preview() { ?>
+function grace_custom_header_admin_preview() { ?>
 
 		<div <?php hybrid_attr( 'body' ); // Fake <body> class. ?>>
 
@@ -162,7 +162,7 @@ function hybrid_base_custom_header_admin_preview() { ?>
  * @access public
  * @return void
  */
-function hybrid_base_custom_header_admin_head() {
+function grace_custom_header_admin_head() {
 
 	$hex = get_header_textcolor();
 

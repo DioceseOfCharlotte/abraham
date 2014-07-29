@@ -24,7 +24,7 @@
 
 		<div class="media-info">
 
-			<h3><?php _e( 'Audio Info', 'hybrid-base' ); ?></h3>
+			<h3><?php _e( 'Audio Info', 'grace' ); ?></h3>
 
 			<?php hybrid_media_meta(); ?>
 

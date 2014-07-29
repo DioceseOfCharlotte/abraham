@@ -452,12 +452,8 @@ function hybrid_attr_entry_published( $attr ) {
  */
 function hybrid_attr_entry_content( $attr ) {
 
-	$attr['class'] = 'entry-content';
-
-	if ( 'post' === get_post_type() )
-		$attr['itemprop'] = 'articleBody';
-	else
-		$attr['itemprop'] = 'text';
+	$attr['class']    = 'entry-content';
+	$attr['itemprop'] = 'articleBody';
 
 	return $attr;
 }
