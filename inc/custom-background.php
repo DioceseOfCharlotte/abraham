@@ -16,7 +16,7 @@ function grace_custom_background_setup() {
 	add_theme_support(
 		'custom-background',
 		array(
-			'default-color'    => 'ffffff',
+			'default-color'    => 'ECF0F1',
 			'default-image'    => '',
 			'wp-head-callback' => 'grace_custom_background_callback',
 		)

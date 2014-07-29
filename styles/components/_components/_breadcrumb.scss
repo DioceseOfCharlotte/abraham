@@ -8,10 +8,8 @@
   background-color: $colorGrayDark;
   display: none;
   @include wider {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    display: block;
+
   }
 }
 

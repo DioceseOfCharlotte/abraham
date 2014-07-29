@@ -95,6 +95,7 @@ select {
 .search-form {
     position: relative;
     display: inline-block;
+    display: flex;
 
     input[type=search] {
       width: 100%;
@@ -106,20 +107,21 @@ select {
     }
   }
 
-// .search-form input[type="submit"].search-submit {
+.search-form input[type="submit"].search-submit {
 // @include icon($search);
 // @include fa;
 // @include button($blue);
-// box-shadow: none;
-// position: absolute;
-// top: 0;
-// right: 0;
-// bottom: 0;
-// margin: 0;
-// padding: 8px;
-//       border-top-left-radius: 0;
-//       border-bottom-left-radius: 0;
-// }
+//box-shadow: none;
+font-family: FontAwesome;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+margin: 0;
+padding: 8px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+}
 
 
 // legend {

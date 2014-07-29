@@ -362,8 +362,9 @@ $Placeholder-Selectors: ();
   display: inline-block;
   letter-spacing: .15em;
   padding: 12px 32px 8px;
-  margin-bottom: 13px;
-  margin-top: 13px;
+  // margin-bottom: 13px;
+  // margin-top: 13px;
+  margin: 1em;
   min-height: 26px;
   text-align: center;
   text-decoration: none; 
@@ -382,9 +383,9 @@ transition: all .28s $animationEasing;
  //    border-bottom-width: 1px;
  // border-color: mix(white, $bg-color, 5%);
  // border-bottom-color: mix(black, $bg-color, 20%);
- background-color: mix(black, $bg-color, 5%);
+ background-color: mix(white, $bg-color, 10%);
   color: $font-color;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: $shadow-medium;
     //-webkit-transform: scale(1.01);
     // -ms-transform: translate(0px, -2px);
     // transform: translate(0px, -2px);
@@ -395,11 +396,11 @@ transition: all .28s $animationEasing;
 
 &:not(.btn-disabled):active, &:not(.btn-disabled):focus { 
   //border-color: mix(black, $bg-color, 40%);
-  background-color: mix(black, $bg-color, 20%);
+  background-color: mix(white, $bg-color, 20%);
   // border-bottom-color: mix(black, $bg-color, 20%);
   color: $font-color;
   outline: 0;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $shadow-large;
 }
 
 &.btn-hollow {

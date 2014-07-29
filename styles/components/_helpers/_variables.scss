@@ -111,7 +111,10 @@ $base-button-color: $base-accent-color;
 $hover-button-color: mix(black, $base-button-color, 15%);
 $active-button-color: mix(black, $base-button-color, 35%);
 
-
+// Shadows
+$shadow-small: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+$shadow-medium: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$shadow-large: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif !default;

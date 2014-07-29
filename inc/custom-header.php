@@ -22,7 +22,7 @@ function grace_custom_header_setup() {
 			'height'                 => 400,
 			'flex-width'             => true,
 			'flex-height'            => true,
-			'default-text-color'     => '000000',
+			'default-text-color'     => 'FBFCFC',
 			'header-text'            => true,
 			'uploads'                => true,
 			'wp-head-callback'       => 'grace_custom_header_wp_head',
