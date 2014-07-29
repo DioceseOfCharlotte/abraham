@@ -1,15 +1,16 @@
 .footer {
-  background-color: rgba($secondary-color, 0.8);
+  background-color: rgba($colorGray, 0.8);
   color: #fff;
+  padding: .5em;
   .Footer-top {
 justify-content: space-around;
-padding-top: 1em;
+//padding-top: 1em;
 background: none;
 .widget {
 flex: 1 1 200px;
 flex-wrap: wrap;
 margin: .5em;
-background-color: rgba($secondary-color, 0.95);
+background-color: rgba($colorGray, 0.95);
 box-shadow: none;
 }
 }

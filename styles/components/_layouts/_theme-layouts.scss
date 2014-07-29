@@ -2,23 +2,27 @@
       @extend .grid;
       max-width: $huge;
       margin: 0 auto;
-      //padding: 1em 0 0;
-      //min-height: 100%;
-    //   @include wider {
-    //     padding-top: 0;
-    // }
-    .Sidebar,
+      padding: .5em;
+      padding-top: 60px;
+       @include wider {
+        padding-top: 20px;
+      }
+
+      .Sidebar,
       .site-main {
-        padding: 1em;
+        padding: .5em;
         display: flex;
         flex-direction: column;
       }
+
     }
 
-    // .site-main {
-    //   background-color: rgba($colorBlue, 0.7);
-    //   //border: 4px solid $colorGrayDark;
-    // } 
+
+
+    .site-main {
+      // padding-right: .7em;
+      // padding-left: .7em;
+    } 
 
     // .Sidebar-primary, .Sidebar-secondary {
     //   background-color: rgba($colorYellow, 0.7);
@@ -109,17 +113,17 @@
       }
     }
     }
-    .layout-3c-c {
-      .site-main {
-        @extend .u-size-12of24;
-      }
-      .Sidebar-primary {
-        @extend .u-size-6of24;
-      }
-      .Sidebar-secondary {
-        @extend .u-size-6of24;
-      }
-    }
+    // .layout-3c-c {
+    //   .site-main {
+    //     @extend .u-size-12of24;
+    //   }
+    //   .Sidebar-primary {
+    //     @extend .u-size-6of24;
+    //   }
+    //   .Sidebar-secondary {
+    //     @extend .u-size-6of24;
+    //   }
+    // }
 
 
 
@@ -154,7 +158,12 @@
         order: 3;
       }
     }
-          @media screen and (min-width: $wide) and (max-width: $wider) {
+
+    @include wider {
+         .site-main {
+      }
+    }
+          @media screen and (min-width: $wide) and (max-width: $wider){
          .Sidebar-secondary {
         flex: 1 100%;
       }
@@ -164,28 +173,39 @@
 
 
     // .main-container {
-    //   background-color: $clouds;
+    //  // background-color: $clouds;
     // }
 
     // .Sidebar-primary {
-    //   background-color: $silver;
+    //   background-color: $colorGrayBackground;
+    //  // border: 5px solid $base-font-color;
     // }
 
     // .Sidebar-secondary {
-    //   background-color: #A3B1B2;
+    //   background-color: $colorGrayKeyline;
+    // //  border: 5px solid $base-font-color;
     // }
 
     // .site-main {
-    //   background-color: #CBD0D3;
+    //   background-color: $colorGrayLight;
+    //  // border: 5px solid $base-font-color;
+    //   border-top: none;
+    //   border-bottom: none;
     // }
 
-.entry, .widget {
+.comments-template,
+.entry, 
+.widget {
 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 margin-bottom: .7em;
 padding: 1em;
-background-color: #F8F6DF;
+background-color: #fff;
 width: 100%;
 border-radius: $base-border-radius;
+
+&:last-child {
+  margin-bottom: 0;
+}
 
 @include wide {
   margin-bottom: 1em;

@@ -5,7 +5,14 @@
 **/
 
 .crumb-container {
-  background-color: rgba($colorGrayBackground, 0.9);
+  background-color: $colorGrayDark;
+  display: none;
+  @include wider {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 .breadcrumbs {
@@ -22,7 +29,7 @@
 
 .breadcrumbs a, .trail-end, .breadcrumbs__link {
   @include type--small;
-  color: black;
+  color: #fff;
   font-weight: 400;
   padding-top: 0;
 
@@ -54,7 +61,7 @@
 
     }
     .sep {
-
+      color: #fff;
     }
     a {
 
@@ -65,8 +72,16 @@
 
   }
 
-  body.open .breadcrumbs {
-display: block;
-max-width: 250px;
+  body.open .crumb-container {
+display: flex;
+overflow-y: auto;
+position: absolute;
 z-index: 1;
+width: 250px;
+height: 60px;
+align-items: center;
+flex-wrap: wrap;
+.breadcrumbs {
+  margin-left: 0;
+}
 }

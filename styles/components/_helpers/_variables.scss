@@ -58,23 +58,23 @@ $asbestos:                  #7f8c8d;
 
 $base-bg-color: #e0e0e0 !default;
 
-  $colorBlue: #2d4ea2 !default;
+  $colorBlue: #0C7499 !default;
   $colorBlueSecondary: lighten($colorBlue, 30%) !default;
-  $colorGreen: #278852 !default;
+  $colorGreen: #73C395 !default;
   $colorGreenSecondary: lighten($colorGreen, 30%) !default;
-  $colorRed: #cb4437 !default;
+  $colorRed: #B28953 !default;
   $colorRedSecondary: lighten($colorRed, 30%) !default;
-  $colorYellow: #DFC00C !default;
+  $colorYellow: #EAC16F !default;
   $colorYellowSecondary: lighten($colorYellow, 20%) !default;
 
-  $colorRemember: #09829a !default;
+  $colorRemember: #E7DAC9 !default;
   $colorLearning: #da2e75 !default;
 
-  $colorGrayBackground: #f0f0f0 !default;
+  $colorGrayBackground: #bdc3c7 !default;
   $colorGrayKeyline: #e0e0e0 !default;
-  $colorGray: #737373 !default;
-  $colorGrayLight: #eeeeee !default;
-  $colorGrayDark: #37464F !default;
+  $colorGray: $asbestos !default;
+  $colorGrayLight: #ecf0f1 !default;
+  $colorGrayDark: #414344 !default;
 
   $colorText: $colorGrayDark !default;
   $colorHighlight: $colorBlue !default;
@@ -97,7 +97,7 @@ $base-bg-color: $colorGrayBackground;
 // Font Colors
 $base-font-color: $colorText;
 $base-accent-color: $colorBlue;
-$secondary-color: $colorGreen;
+$secondary-color: $colorRed;
 
 // Link Colors
 $base-link-color: $base-accent-color;
