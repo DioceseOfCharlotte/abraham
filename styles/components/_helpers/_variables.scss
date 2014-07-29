@@ -94,6 +94,11 @@ $base-bg-color: #e0e0e0 !default;
   // Body Color
 $base-body-color: white;
 $base-bg-color: $colorGrayBackground;
+
+  // Header Color
+$nav-drawer-color: $colorBlue;
+$base-header-color: lighten($nav-drawer-color, 8%) !default;
+
 // Font Colors
 $base-font-color: $colorText;
 $base-accent-color: $colorBlue;

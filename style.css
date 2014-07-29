@@ -1,6 +1,7 @@
 /**
  * Theme Name:  Hybrid Base
  * Theme URI:   http://themehybrid.com/themes/hybrid-base
+ * GitHub Theme URI: m-e-h/starter-kit
  * Description: A starter theme from Theme Hybrid. Please fork this.
  * Version:     1.0.0
  * Author:      Justin Tadlock
@@ -2124,8 +2125,7 @@ img.site-logo {
 	margin-bottom: 0.7em;
 	padding: 1em;
 	border-radius: 2px; 
-	background-color: #fff;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);}
+	background-color: #fff;}
 .comments-template:last-child,
   .entry:last-child,
   .widget:last-child {
@@ -2150,7 +2150,7 @@ body.open {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba(12, 116, 153, 0.7);}
+	background-color: #0f91bf;}
 
 .app-bar-container {
 	display: -webkit-flex;
@@ -2209,7 +2209,7 @@ body.open {
 	width: 250px;
 	height: 100%;
 	color: #fefefe;
-	background-color: rgba(12, 116, 153, 0.9);
+	background-color: #0c7499;
 	-webkit-transform: translate(-250px, 0);
 	        transform: translate(-250px, 0);}
 
@@ -2305,15 +2305,11 @@ body.open {
 		margin-top: 13px;
 		margin-bottom: 13px;
 		padding: 12px 32px 8px;
-		border: none;
-		border-bottom-width: 1px;
-		border-bottom-style: solid;
-		border-bottom-color: rgba(255, 255, 255, 0.79);
+		border: 0;
 		border-radius: 2px;
 		outline: 0;
 		color: #0c7499;
 		background-color: rgba(255, 255, 255, 0.79);
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 		text-align: center;
 		text-decoration: none;
 		letter-spacing: 0.15em;
@@ -2322,17 +2318,14 @@ body.open {
 		        transition: all 0.28s cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 		-webkit-transform: translate3d(0, 0, 0);}
 	.app-bar-actions .menu-items li a:not(.btn-disabled):hover {
-		border-color: rgba(254, 254, 254, 0.8005);
-		border-bottom-width: 1px;
-		border-bottom-color: rgba(184, 184, 184, 0.832);
 		color: #0c7499;
 		background-color: rgba(235, 235, 235, 0.8005);
-		box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36); }
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16); }
 	.app-bar-actions .menu-items li a:not(.btn-disabled):active, .app-bar-actions .menu-items li a:not(.btn-disabled):focus {
-		border-bottom-color: rgba(184, 184, 184, 0.832);
-		outline: 0; 
+		outline: 0;
 		color: #0c7499;
-		background-color: rgba(184, 184, 184, 0.832);}
+		background-color: rgba(184, 184, 184, 0.832);
+		box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 	.app-bar-actions .menu-items li a.btn-hollow {
 		border: none; 
 		color: #676869;
@@ -3476,15 +3469,11 @@ blockquote cite {
 	margin-top: 13px;
 	margin-bottom: 13px;
 	padding: 12px 32px 8px;
-	border: none;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #0c7499;
+	border: 0;
 	border-radius: 2px;
 	outline: 0;
 	color: white;
 	background-color: #0c7499;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 	text-align: center;
 	text-decoration: none;
 	letter-spacing: 0.15em;
@@ -3493,17 +3482,14 @@ blockquote cite {
 	        transition: all 0.28s cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 	-webkit-transform: translate3d(0, 0, 0);}
 .button--primary:not(.btn-disabled):hover {
-	border-color: #187a9e;
-	border-bottom-width: 1px;
-	border-bottom-color: #095c7a;
 	color: white;
 	background-color: #0b6e91;
-	box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36); }
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16); }
 .button--primary:not(.btn-disabled):active, .button--primary:not(.btn-disabled):focus {
-	border-bottom-color: #095c7a;
-	outline: 0; 
+	outline: 0;
 	color: white;
-	background-color: #095c7a;}
+	background-color: #095c7a;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .button--primary.btn-hollow {
 	border: none; 
 	color: #676869;
@@ -3536,15 +3522,11 @@ input[type="submit"],
 	margin-top: 13px;
 	margin-bottom: 13px;
 	padding: 12px 32px 8px;
-	border: none;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #0c7499;
+	border: 0;
 	border-radius: 2px;
 	outline: 0;
 	color: white;
 	background-color: #0c7499;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 	text-align: center;
 	text-decoration: none;
 	letter-spacing: 0.15em;
@@ -3556,12 +3538,9 @@ input[type="button"]:not(.btn-disabled):hover,
   input[type="reset"]:not(.btn-disabled):hover,
   input[type="submit"]:not(.btn-disabled):hover,
   .button--secondary:not(.btn-disabled):hover {
-	border-color: #187a9e;
-	border-bottom-width: 1px;
-	border-bottom-color: #095c7a;
 	color: white;
 	background-color: #0b6e91;
-	box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36); }
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16); }
 input[type="button"]:not(.btn-disabled):active, input[type="button"]:not(.btn-disabled):focus,
   input[type="reset"]:not(.btn-disabled):active,
   input[type="reset"]:not(.btn-disabled):focus,
@@ -3569,10 +3548,10 @@ input[type="button"]:not(.btn-disabled):active, input[type="button"]:not(.btn-di
   input[type="submit"]:not(.btn-disabled):focus,
   .button--secondary:not(.btn-disabled):active,
   .button--secondary:not(.btn-disabled):focus {
-	border-bottom-color: #095c7a;
-	outline: 0; 
+	outline: 0;
 	color: white;
-	background-color: #095c7a;}
+	background-color: #095c7a;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 input[type="button"].btn-hollow,
   input[type="reset"].btn-hollow,
   input[type="submit"].btn-hollow,
@@ -3620,15 +3599,11 @@ input[type="button"].btn-full,
 	margin-top: 13px;
 	margin-bottom: 13px;
 	padding: 12px 32px 8px;
-	border: none;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #0c7499;
+	border: 0;
 	border-radius: 2px;
 	outline: 0;
 	color: white;
 	background-color: #0c7499;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 	text-align: center;
 	text-decoration: none;
 	letter-spacing: 0.15em;
@@ -3637,17 +3612,14 @@ input[type="button"].btn-full,
 	        transition: all 0.28s cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 	-webkit-transform: translate3d(0, 0, 0);}
 .button--secondary-variation:not(.btn-disabled):hover {
-	border-color: #187a9e;
-	border-bottom-width: 1px;
-	border-bottom-color: #095c7a;
 	color: white;
 	background-color: #0b6e91;
-	box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36); }
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16); }
 .button--secondary-variation:not(.btn-disabled):active, .button--secondary-variation:not(.btn-disabled):focus {
-	border-bottom-color: #095c7a;
-	outline: 0; 
+	outline: 0;
 	color: white;
-	background-color: #095c7a;}
+	background-color: #095c7a;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .button--secondary-variation.btn-hollow {
 	border: none; 
 	color: #676869;

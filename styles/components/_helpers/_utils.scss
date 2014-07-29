@@ -353,10 +353,10 @@ $Placeholder-Selectors: ();
 @mixin button($bg-color: $base-button-color, $font-color: #fff) {
 
   border-radius: $base-border-radius;
-  border: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: $bg-color;
+  border: 0;
+  // border-bottom-style: solid;
+  // border-bottom-width: 1px;
+  // border-bottom-color: $bg-color;
   background-color: $bg-color;
   color: $font-color;
   display: inline-block;
@@ -371,7 +371,7 @@ $Placeholder-Selectors: ();
   text-transform: uppercase;
   -webkit-transform: translate3d(0,0,0);
   // transition: color .4s, background-color .4s, border .4s;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.36);
+  //box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 // transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
 -moz-transition: all .28s $animationEasing;
@@ -379,12 +379,12 @@ $Placeholder-Selectors: ();
 transition: all .28s $animationEasing;
 
 &:not(.btn-disabled):hover { 
-    border-bottom-width: 1px;
- border-color: mix(white, $bg-color, 5%);
- border-bottom-color: mix(black, $bg-color, 20%);
+ //    border-bottom-width: 1px;
+ // border-color: mix(white, $bg-color, 5%);
+ // border-bottom-color: mix(black, $bg-color, 20%);
  background-color: mix(black, $bg-color, 5%);
   color: $font-color;
-    box-shadow: 0 6px 14px 0 rgba(0,0,0,.36);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
     //-webkit-transform: scale(1.01);
     // -ms-transform: translate(0px, -2px);
     // transform: translate(0px, -2px);
@@ -396,9 +396,10 @@ transition: all .28s $animationEasing;
 &:not(.btn-disabled):active, &:not(.btn-disabled):focus { 
   //border-color: mix(black, $bg-color, 40%);
   background-color: mix(black, $bg-color, 20%);
-  border-bottom-color: mix(black, $bg-color, 20%);
+  // border-bottom-color: mix(black, $bg-color, 20%);
   color: $font-color;
   outline: 0;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 &.btn-hollow {

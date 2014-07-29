@@ -8,7 +8,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($colorBlue, 0.7);
+  background-color: $base-header-color;
   overflow: hidden;
   z-index: 1;
 }
@@ -70,7 +70,7 @@ body.open {
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: rgba($colorBlue, 0.9);
+  background-color: $nav-drawer-color;
   // border-top: 4px solid $colorGrayDark;
   // border-bottom: 4px solid $colorGrayDark;
   //background-color: $colorGrayDark;
