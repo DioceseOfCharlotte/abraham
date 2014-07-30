@@ -17,11 +17,11 @@
 .breadcrumbs {
   background-color: $colorGrayBackground;
   position: relative;
-  padding: .5em 2em;
+  padding: .3rem 1.5rem;
   width: 100%;
   @include wider {
-    border-radius: 50px;
-    margin: 0 1em;
+    border-radius: $base-border-radius;
+    margin: 0 .5em;
   }
 }
 
