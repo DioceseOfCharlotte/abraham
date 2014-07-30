@@ -1,11 +1,11 @@
 /**
  * Theme Name:        Abraham
- * Theme URI:         http://martyhelmick.com/themes/abraham
+ * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
  * Version:           1.0.0
  * Author:            Marty Helmick
- * Author URI:        http://martyhelmick.com
+ * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
  * License:           GNU General Public License v2.0 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -2008,7 +2008,8 @@ img.site-logo {
 	padding-top: 60px; }
 @media only screen and (min-width: 990px) {
 	.main-container {
-		padding-top: 20px; } }
+		margin-top: -0.5em; 
+		padding-top: 0;} }
 .main-container .Sidebar,
   .main-container .site-main {
 	display: -webkit-flex;
@@ -2692,37 +2693,37 @@ body.open {
 blockquote {
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display:         flex; }
-blockquote p {
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display:         flex;
-	        flex-direction: column; 
-	width: 500px;
-
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;}
+	position: relative;
+	margin: 1em 2em;
+	padding: 2em;
+	border-radius: 2px; 
+	background-color: #eee;}
+blockquote p {
+	z-index: 2;
+	padding: 0;
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1.25rem; 
+	font-weight: 300;}
+blockquote p cite {
+	float: right;
+	margin-top: 1.5em;
+	color: #7f8c8d; 
+	font-size: 1rem;
+	font-weight: 400;}
 blockquote::before {
-	display: block;
-	top: 90px;
-	left: 26px;
-	color: #bdc3c7;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
-	font-size: 260px; 
-	font-weight: 700;
-	content: open-quote;}
-@media only screen and (min-width: 600px) {
-	blockquote::before {
-		position: relative;
-		margin: auto 45px auto; 
-		font-size: 445px;} }
-blockquote cite {
-	margin-top: 12px;
-	padding-top: 13px;
-	border-top: 1px solid #e0e0e0;
-	font-weight: 500;
-	font-style: normal; 
-	text-align: right;}
+	z-index: 2;
+	margin-top: -22px; 
+	color: #fff;
+	font-family: "diocons" !important;
+	font-size: 10em;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\e008";}
+
+blockquote.verse::before {
+	content: "\e000"; }
 
 /**
 *
@@ -3567,47 +3568,35 @@ object {
 *
 **/
 .crumb-container {
-	display: none; 
-	background-color: #414344;}
+	display: none; }
 @media only screen and (min-width: 990px) {
 	.crumb-container {
-		display: block; } }
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display:         flex;
+		max-width: 1600px;
+		margin: 1em auto; } }
 
 .breadcrumbs {
 	position: relative;
-	max-width: 1600px;
-	margin: 0 auto;
-	padding: 0.5em 1em; }
+	width: 100%; 
+	padding: 0.5em 2em;
+	background-color: #bdc3c7;}
+@media only screen and (min-width: 990px) {
+	.breadcrumbs {
+		margin: 0 1em; 
+		border-radius: 50px;} }
 
-.breadcrumbs p {
-	padding-top: 26px; 
-	/* 26px */
-	padding-bottom: 0;
-	font-size: 13px;
-	line-height: 2.0000em;}
-
-.breadcrumbs a, .trail-end, .breadcrumbs__link {
-	padding-top: 0; 
-	/* 26px */
-	padding-bottom: 0;
-	color: #fff;
-	font-size: 13px;
-	font-weight: 400;
-	line-height: 2.0000em;}
-@media only screen and (min-width: 600px) {
-	.breadcrumbs a, .trail-end, .breadcrumbs__link {
-		padding-top: 0; } }
-
-.main .breadcrumbs {
-	color: #0c7499; 
+.breadcrumbs {
+	color: #414344; 
 	text-align: left;}
-.main .breadcrumbs a {
-	color: #0c7499; }
-.main .breadcrumbs .trail-end {
+.breadcrumbs .sep {
+	color: #414344; }
+.breadcrumbs a {
+	color: #0c7499;
+	font-weight: bold; }
+.breadcrumbs .trail-end {
 	color: #da2e75; }
-
-.breadcrumb-trail .sep {
-	color: #fff; }
 
 body.open .crumb-container {
 	display: -webkit-flex;

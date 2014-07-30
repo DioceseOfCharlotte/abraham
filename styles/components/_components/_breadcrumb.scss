@@ -5,43 +5,50 @@
 **/
 
 .crumb-container {
-  background-color: $colorGrayDark;
   display: none;
   @include wider {
-    display: block;
-
+    display: flex;
+    max-width: $huge;
+    margin: 1em auto;
+    //box-shadow: $shadow-small;
   }
 }
 
 .breadcrumbs {
+  background-color: $colorGrayBackground;
   position: relative;
-  max-width: $huge;
-  margin: 0 auto;
-  padding: .5em 1em;
-}
-
-.breadcrumbs p {
-  @include type--small;
-  padding-top: $lineHeight;
-}
-
-.breadcrumbs a, .trail-end, .breadcrumbs__link {
-  @include type--small;
-  color: #fff;
-  font-weight: 400;
-  padding-top: 0;
-
-  @include medium {
-    padding-top: 0;
+  padding: .5em 2em;
+  width: 100%;
+  @include wider {
+    border-radius: 50px;
+    margin: 0 1em;
   }
 }
 
-.main .breadcrumbs {
-    text-align: left;
-    color: $colorBlue;
+.breadcrumbs p {
+  // @include type--small;
+  // padding-top: $lineHeight;
+}
 
+// .breadcrumbs a, .trail-end, .breadcrumbs__link {
+//   @include type--small;
+//   font-weight: 400;
+//   padding-top: 0;
+
+//   @include medium {
+//     padding-top: 0;
+//   }
+// }
+
+.breadcrumbs {
+    text-align: left;
+    color: $colorText;
+    .sep {
+      color: $colorText;
+    }
     a {
-      color: $colorBlue;
+      color: $base-link-color;
+      font-weight: bold;
     }
     .trail-end {
       color: #da2e75;
@@ -57,9 +64,6 @@
     }
     .trail-end {
 
-    }
-    .sep {
-      color: #fff;
     }
     a {
 

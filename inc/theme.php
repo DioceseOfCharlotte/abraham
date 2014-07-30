@@ -99,10 +99,13 @@ function abraham_enqueue_scripts() {
 function abraham_enqueue_styles() {
 
 	/* Register Google-fonts. */
-	wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,700' );
+	wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Source+Code+Pro:400,700' );
 
 	/* Register Font Awesome. */
-	wp_register_style( 'meh-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+	wp_register_style( 'meh-font-awesome', '//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css' );
+
+	/* Register Fontastic Icons. */
+	wp_register_style( 'meh-fontastic', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	/* Gets ".min" suffix. */
 	$suffix = hybrid_get_min_suffix();

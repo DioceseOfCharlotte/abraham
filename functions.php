@@ -48,7 +48,7 @@ function abraham_theme_setup() {
 		/* Load stylesheets. */
 	add_theme_support(
 		'hybrid-core-styles',
-		array( 'meh-fonts', 'meh-font-awesome', 'parent', 'style' )
+		array( 'meh-fonts', 'meh-font-awesome', 'meh-fontastic', 'parent', 'style' )
 	);
 
 	/* Enable custom template hierarchy. */

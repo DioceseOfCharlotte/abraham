@@ -46,37 +46,88 @@
 
 /* === Blockquotes, quotes, and cites === */
 
+// blockquote {
+// display: flex;
+//   p {
+// width: 500px;
+// display: flex;
+// flex-direction: column;
+//   }
+
+//   &::before {
+//     content: open-quote;
+//     display: block;
+//     font-family: $fontHighlight;
+//     font-weight: 700;
+//     color: $colorGrayBackground;
+//     top: 90px;
+//     left: $lineHeight;
+//     font-size: 260px;
+
+//     @include medium {
+// font-size: 445px;
+// position: relative;
+// margin: auto 45px auto;
+//     }
+//   }
+
+//   cite {
+//     border-top: 1px solid #e0e0e0;
+//     text-align: right;
+// font-weight: 500;
+// margin-top: 12px;
+// padding-top: 13px;
+// font-style: normal;
+//   }
+// }
+
+
 blockquote {
+padding: 2em;
 display: flex;
+background-color: #eee;
+margin: 1em 2em;
+position: relative;
+border-radius: $base-border-radius;
   p {
-width: 500px;
-display: flex;
-flex-direction: column;
+    padding: 0;
+    z-index: 2;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+// width: 500px;
+// display: flex;
+// flex-direction: column;
+cite {
+  font-weight: 400;
+float: right;
+margin-top: 1.5em;
+font-size: 1rem;
+color: $colorGray;
+}
   }
 
   &::before {
-    content: open-quote;
-    display: block;
-    font-family: $fontHighlight;
-    font-weight: 700;
-    color: $colorGrayBackground;
-    top: 90px;
-    left: $lineHeight;
-    font-size: 260px;
-
-    @include medium {
-font-size: 445px;
-position: relative;
-margin: auto 45px auto;
-    }
-  }
-
-  cite {
-    border-top: 1px solid #e0e0e0;
-    text-align: right;
-font-weight: 500;
-margin-top: 12px;
-padding-top: 13px;
+    font-family: "diocons" !important;
+color: #fff;
+//text-shadow: rgba(0,0,0,.26)2px 3px 2px;
+//font-family: "Fira Sans",sans-serif;
+font-size: 10em;
+    font-weight: normal;
 font-style: normal;
-  }
+line-height: 1;
+content: "\e008";
+z-index: 2;
+margin-top: -22px;
+}
+}
+
+blockquote.verse {
+    &::before {
+    //text-shadow: rgba(0,0,0,.26)2px 3px 2px;
+  //  font-size: 14.5em;
+    // font-weight: normal;
+    // font-style: normal;
+    content: "\e000";
+    }
 }
