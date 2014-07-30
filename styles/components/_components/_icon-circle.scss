@@ -145,8 +145,7 @@
   -moz-osx-font-smoothing: grayscale;
   list-style: none;
    }
-  .menu-social li a:hover::before,
-  .menu-social li a:focus::befoe  { opacity: 0.75; }
+
 
   .menu-social li a[href*="codepen.io"]::before      { content: $fa-codepen ; color: #fff;    }
   .menu-social li a[href*="digg.com"]::before        { content: $fa-digg ; color: #fff;    }
@@ -171,3 +170,6 @@
   .menu-social li a[href*="wordpress.org"]::before,
   .menu-social li a[href*="wordpress.com"]::before   { content: $fa-wordpress ; color: #21759b; }
   .menu-social li a[href*="youtube.com"]::before     { content: $fa-youtube ; color: #c4302b; }
+
+    .menu-social li a:hover::before,
+  .menu-social li a:focus::before  { opacity: 0.75; }

@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -1962,8 +1962,7 @@ img.site-logo {
 	        justify-content: space-around;}
 .footer .Footer-top .widget {
 	margin: 0.5em;
-	background-color: rgba(127, 140, 141, 0.95);
-	box-shadow: none; 
+	background-color: rgba(127, 140, 141, 0.95); 
 
 	-webkit-flex: 1 1 200px;
 	    -ms-flex: 1 1 200px;
@@ -2025,6 +2024,23 @@ img.site-logo {
 .layout-1c .site-main {
 	width: 100%; }
 
+.layout-2c-l .Sidebar-secondary {
+	        flex-direction: row;
+
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap; }
+.layout-2c-l .Sidebar-secondary .widget {
+	margin: 0.5em;
+
+	-webkit-flex: 1 1 200px;
+	    -ms-flex: 1 1 200px;
+	        flex: 1 1 200px; }
 @media only screen and (max-width: 599px) {
 	.layout-2c-l .site-main, .layout-2c-l .Sidebar-primary, .layout-2c-l .Sidebar-secondary {
 		width: 100%; } }
@@ -2038,9 +2054,22 @@ img.site-logo {
 	-ms-flex-order: 1;
 	        order: 1; }
 .layout-2c-r .Sidebar-secondary {
-	-webkit-order: 3;
-	-ms-flex-order: 3;
-	        order: 3; }
+	        flex-direction: row;
+
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap; }
+.layout-2c-r .Sidebar-secondary .widget {
+	margin: 0.5em;
+
+	-webkit-flex: 1 1 200px;
+	    -ms-flex: 1 1 200px;
+	        flex: 1 1 200px; }
 @media only screen and (max-width: 599px) {
 	.layout-2c-r .site-main, .layout-2c-r .Sidebar-primary, .layout-2c-r .Sidebar-secondary {
 		width: 100%; } }
@@ -3831,10 +3860,6 @@ body.open .crumb-container .breadcrumbs {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;}
 
-.menu-social li a:hover::before,
-.menu-social li a:focus::befoe {
-	opacity: 0.75; }
-
 .menu-social li a[href*="codepen.io"]::before {
 	color: #fff; 
 	content: "\f1cb";}
@@ -3912,6 +3937,10 @@ body.open .crumb-container .breadcrumbs {
 .menu-social li a[href*="youtube.com"]::before {
 	color: #c4302b; 
 	content: "\f167";}
+
+.menu-social li a:hover::before,
+.menu-social li a:focus::before {
+	opacity: 0.75; }
 
 /**
 *

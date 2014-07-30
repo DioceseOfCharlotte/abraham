@@ -49,6 +49,16 @@
       .Sidebar-secondary {
         @extend .u-size-1of1;
         //margin-top: 1em;
+//         @include wider {
+                flex-direction: row;
+        justify-content: space-around;
+        //margin: .5em;
+        flex-wrap: wrap;
+      .widget {
+        margin: .5em;
+        flex: 1 1 200px;
+      }
+ //   }
       }
       @include small-only {
         .site-main, .Sidebar-primary, .Sidebar-secondary {
@@ -71,7 +81,14 @@
       }
       .Sidebar-secondary {
         @extend .u-size-1of1;
-        order: 3;
+                flex-direction: row;
+        justify-content: space-around;
+        //margin: .5em;
+        flex-wrap: wrap;
+      .widget {
+        margin: .5em;
+        flex: 1 1 200px;
+      }
       }
       @include small-only {
         .site-main, .Sidebar-primary, .Sidebar-secondary {
