@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -2593,6 +2593,10 @@ body.open {
 @media only screen and (min-width: 600px) {
 	.article-section__icon {
 		top: -39px; } }
+
+.entry-thumbnail {
+	float: left;
+	margin: 1em; }
 
 /**
 *
