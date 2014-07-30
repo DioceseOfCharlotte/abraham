@@ -1,25 +1,25 @@
 <?php
 /**
- * Grace functions and definitions
+ * Abraham functions and definitions
  *
- * @package Grace
+ * @package Abraham
  */
 
 /* Get the template directory and make sure it has a trailing slash. */
-$grace_dir = trailingslashit( get_template_directory() );
+$abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
-require_once( $grace_dir . 'library/hybrid.php'        );
-require_once( $grace_dir . 'inc/custom-background.php' );
-require_once( $grace_dir . 'inc/custom-header.php'     );
-require_once( $grace_dir . 'inc/theme.php'             );
-require_once( $grace_dir . 'inc/hybrid-mods.php'       );
+require_once( $abraham_dir . 'library/hybrid.php'        );
+require_once( $abraham_dir . 'inc/custom-background.php' );
+require_once( $abraham_dir . 'inc/custom-header.php'     );
+require_once( $abraham_dir . 'inc/theme.php'             );
+require_once( $abraham_dir . 'inc/hybrid-mods.php'       );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'grace_theme_setup', 5 );
+add_action( 'after_setup_theme', 'abraham_theme_setup', 5 );
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
@@ -29,18 +29,18 @@ add_action( 'after_setup_theme', 'grace_theme_setup', 5 );
  * @access public
  * @return void
  */
-function grace_theme_setup() {
+function abraham_theme_setup() {
 
 	/* Theme layouts. */
 	add_theme_support( 
 		'theme-layouts', 
 		array(
-			'1c'        => __( '1 Column',                     'grace' ),
-			'2c-l'      => __( '2 Columns: Content / Sidebar', 'grace' ),
-			'2c-r'      => __( '2 Columns: Sidebar / Content', 'grace' ),
-			'3c-l'      => __( '3 Columns: Content / Sidebar / Sidebar', 'grace' ),
-			'3c-r'      => __( '3 Columns: Sidebar / Sidebar / Content', 'grace' ),
-			'3c-c'      => __( '3 Columns: Sidebar / Content / Sidebar', 'grace' )
+			'1c'        => __( '1 Column',                     'abraham' ),
+			'2c-l'      => __( '2 Columns: Content / Sidebar', 'abraham' ),
+			'2c-r'      => __( '2 Columns: Sidebar / Content', 'abraham' ),
+			'3c-l'      => __( '3 Columns: Content / Sidebar / Sidebar', 'abraham' ),
+			'3c-r'      => __( '3 Columns: Sidebar / Sidebar / Content', 'abraham' ),
+			'3c-c'      => __( '3 Columns: Sidebar / Content / Sidebar', 'abraham' )
 		),
 		array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) 
 	);

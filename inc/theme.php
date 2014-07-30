@@ -1,19 +1,19 @@
 <?php
 
 /* Register custom image sizes. */
-add_action( 'init', 'grace_register_image_sizes', 5 );
+add_action( 'init', 'abraham_register_image_sizes', 5 );
 
 /* Register custom menus. */
-add_action( 'init', 'grace_register_menus', 5 );
+add_action( 'init', 'abraham_register_menus', 5 );
 
 /* Register sidebars. */
-add_action( 'widgets_init', 'grace_register_sidebars', 5 );
+add_action( 'widgets_init', 'abraham_register_sidebars', 5 );
 
 /* Add custom scripts. */
-add_action( 'wp_enqueue_scripts', 'grace_enqueue_scripts', 5 );
+add_action( 'wp_enqueue_scripts', 'abraham_enqueue_scripts', 5 );
 
 /* Add custom styles. */
-add_action( 'wp_enqueue_scripts', 'grace_enqueue_styles', 5 );
+add_action( 'wp_enqueue_scripts', 'abraham_enqueue_styles', 5 );
 
 /**
  * Registers custom image sizes for the theme. 
@@ -22,7 +22,7 @@ add_action( 'wp_enqueue_scripts', 'grace_enqueue_styles', 5 );
  * @access public
  * @return void
  */
-function grace_register_image_sizes() {
+function abraham_register_image_sizes() {
 
 	/* Sets the 'post-thumbnail' size. */
 	//set_post_thumbnail_size( 150, 150, true );
@@ -35,10 +35,10 @@ function grace_register_image_sizes() {
  * @access public
  * @return void
  */
-function grace_register_menus() {
-	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'grace' ) );
-	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'grace' ) );
-	register_nav_menu( 'social', 		 _x( 'Social', 'nav menu location', 'grace' ) );
+function abraham_register_menus() {
+	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'abraham' ) );
+	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'abraham' ) );
+	register_nav_menu( 'social', 		 _x( 'Social', 'nav menu location', 'abraham' ) );
 }
 
 /**
@@ -48,29 +48,29 @@ function grace_register_menus() {
  * @access public
  * @return void
  */
-function grace_register_sidebars() {
+function abraham_register_sidebars() {
 
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'primary',
-			'name'        => _x( 'Primary Sidebar', 'sidebar', 'grace' ),
-			'description' => __( 'Typically on the screens left side.', 'grace' )
+			'name'        => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
+			'description' => __( 'Typically on the screens left side.', 'abraham' )
 		)
 	);
 
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'secondary',
-			'name'        => _x( 'Secondary Sidebar', 'sidebar', 'grace' ),
-			'description' => __( 'Typically on the screens right side.', 'grace' )
+			'name'        => _x( 'Secondary Sidebar', 'sidebar', 'abraham' ),
+			'description' => __( 'Typically on the screens right side.', 'abraham' )
 		)
 	);
 
 		hybrid_register_sidebar(
 		array(
 			'id'          => 'subsidiary',
-			'name'        => _x( 'Footer Widget Area', 'sidebar', 'grace' ),
-			'description' => __( 'Footer widgets.', 'grace' )
+			'name'        => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
+			'description' => __( 'Footer widgets.', 'abraham' )
 		)
 	);
 }
@@ -82,7 +82,7 @@ function grace_register_sidebars() {
  * @access public
  * @return void
  */
-function grace_enqueue_scripts() {
+function abraham_enqueue_scripts() {
 
 	wp_register_script( 'meh', trailingslashit( get_template_directory_uri() ) . "scripts/main.js", array(), null, true );
 
@@ -96,7 +96,7 @@ function grace_enqueue_scripts() {
  * @access public
  * @return void
  */
-function grace_enqueue_styles() {
+function abraham_enqueue_styles() {
 
 	/* Register Google-fonts. */
 	wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,700' );

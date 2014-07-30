@@ -8,7 +8,7 @@
 <body <?php hybrid_attr( 'body' ); ?>>
 
 		<div class="skip-link">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'grace' ); ?></a>
+			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'abraham' ); ?></a>
 		</div><!-- .skip-link -->
 
 		<header <?php hybrid_attr( 'header' ); ?>>
