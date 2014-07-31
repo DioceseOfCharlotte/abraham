@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'abraham_enqueue_styles', 5 );
 function abraham_register_image_sizes() {
 
 	/* Sets the 'post-thumbnail' size. */
-	set_post_thumbnail_size( 350, 350, true );
+	set_post_thumbnail_size( 150, 150, true );
 }
 
 /**

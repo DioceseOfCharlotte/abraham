@@ -117,8 +117,8 @@ $shadow-medium: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 $shadow-large: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
   // Defining font family
-  $fontDefault: Helvetica, Arial, sans-serif !default;
-  $fontHighlight: "Roboto Condensed", Helvetica, sans-serif !default;
+  $fontDefault: 'Fira Sans', Helvetica, Arial, sans-serif !default;
+  $fontHighlight: 'Fira Sans', Helvetica, Arial, sans-serif !default;
   $fontIcon: "icons" !default;
 
   // Defining font sizes
@@ -160,3 +160,7 @@ $form-box-shadow-hover: inset 0 1px 3px rgba(0,0,0,0.03);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $fontBase;
 $form-font-family: $fontDefault;
+
+
+// Component Variables
+

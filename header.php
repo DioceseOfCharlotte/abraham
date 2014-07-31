@@ -13,21 +13,33 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
-
 				<div class="app-bar-container">
           <button class="menu-link btn-menu"><span></span></button>
+
+        <?php if ( display_header_text() && !has_site_logo() ) : // If user chooses to display header text. ?>
 				<div <?php hybrid_attr( 'branding' ); ?>>
-					<div class="header-logo"><?php the_site_logo() ?></div>
 					<?php hybrid_site_title(); ?>
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
+
+    <?php elseif ( display_header_text() && has_site_logo() ) : // If user chooses to display header text. ?>
+				<div <?php hybrid_attr( 'branding' ); ?>>
+					<?php the_site_logo() ?>
+					<?php hybrid_site_title(); ?>
+					<?php hybrid_site_description(); ?>
+				</div><!-- #branding -->
+
+		<?php elseif ( has_site_logo() ) : // If there's a header image. ?>
+				<div <?php hybrid_attr( 'branding' ); ?>>
+					<?php the_site_logo() ?>
+				</div><!-- #branding -->
+
+		<?php endif; // End check for header image. ?>
+
 		<section class="app-bar-actions">
 			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
         </section>
         		</div>
-
-			<?php endif; // End check for header text. ?>
 
 		</header><!-- #header -->
 

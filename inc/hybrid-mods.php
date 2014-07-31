@@ -54,6 +54,8 @@ add_filter( 'hybrid_attr_branding', 'meh_attr_branding' );
 function meh_attr_branding( $attr ) {
 
   $attr['class'] = 'branding';
+  $attr['itemscope'] = '';
+  $attr['itemtype']  = 'http://schema.org/Organization';
 
   return $attr;
 }

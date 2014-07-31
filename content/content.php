@@ -17,7 +17,7 @@
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
 						<div class="entry-thumbnail">
-							<?php get_the_image(); ?>
+							<?php get_the_image( array( 'size' => 'medium', 'link_to_post' => false ) ); ?>
 						</div>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
@@ -30,11 +30,15 @@
 
 	<?php else : // If not viewing a single post. ?>
 
-		<?php get_the_image(); ?>
-
 		<header class="entry-header">
 
 			<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
+
+			
+		<div class="blog-thumbnail">
+		<?php get_the_image(); ?>
+		</div>
+
 
 			<div class="entry-byline">
 				<span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>

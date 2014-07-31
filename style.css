@@ -624,7 +624,7 @@ html, body, button {
 body {
 	position: relative; 
 	color: #414344;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	/* 26px */
 	font-weight: 300;
@@ -760,7 +760,7 @@ h3 {
 	h3 {
 		/* 26px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 26px;
 		font-weight: 300;
 		line-height: 1.0000em;} }
@@ -769,7 +769,7 @@ h3 {
 h2 {
 	/* 26px */
 	padding-bottom: 0; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 26px;
 	font-weight: 300;
 	line-height: 1.0000em;}
@@ -778,7 +778,7 @@ h2 {
 	h2 {
 		/* 52px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 42px;
 		font-weight: 300;
 		line-height: 1.2381em;} }
@@ -787,7 +787,7 @@ h2 {
 h1 {
 	/* 52px */
 	padding-bottom: 0; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 42px;
 	font-weight: 300;
 	line-height: 1.2381em;}
@@ -796,7 +796,7 @@ h1 {
 	h1 {
 		/* 78px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 68px;
 		font-weight: 300;
 		line-height: 1.1471em;} }
@@ -804,7 +804,7 @@ h1 {
 .huge {
 	/* 78px */
 	padding-bottom: 0; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 68px;
 	font-weight: 300;
 	line-height: 1.1471em;}
@@ -812,7 +812,7 @@ h1 {
 	.huge {
 		/* 130px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 110px;
 		font-weight: 300;
 		line-height: 1.19em;} }
@@ -1938,7 +1938,7 @@ li > p {
 	display: -ms-flexbox;
 	display:         flex; }
 
-.header-logo {
+.site-logo-anchor {
 	margin: auto; }
 
 img.site-logo {
@@ -2508,7 +2508,7 @@ body.open {
 .editorial-header__excerpt {
 	/* 26px */
 	padding-bottom: 0;
-	font-family: "Roboto Condensed", Helvetica, sans-serif; 
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif; 
 	font-size: 20px;
 	font-weight: 300;
 	line-height: 1.3000em;}
@@ -2521,7 +2521,7 @@ body.open {
 	/* 52px */
 	padding-bottom: 0;
 	color: #0c7499; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 42px;
 	font-weight: 300;
 	line-height: 1.2381em;}
@@ -2529,7 +2529,7 @@ body.open {
 	.editorial-header__subtitle {
 		/* 78px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 68px;
 		font-weight: 300;
 		line-height: 1.1471em;} }
@@ -2551,7 +2551,7 @@ body.open {
 	padding-bottom: 13px !important;
 	border-bottom: 1px solid #e0e0e0;
 	color: #0c7499; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;}
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;}
 
 /**
 *
@@ -2585,7 +2585,7 @@ body.open {
 
 .articles-count {
 	color: #0c7499;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-weight: 400; }
 
 .article-section__icon {
@@ -2685,7 +2685,7 @@ body.open {
 	/* 26px */
 	padding-bottom: 1.6250em;
 	padding-left: 26px; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6250em;}
@@ -2712,7 +2712,7 @@ body.open {
 	top: 90px;
 	left: 26px;
 	color: #bdc3c7;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 260px; 
 	font-weight: 700;
 	content: open-quote;}
@@ -2782,7 +2782,7 @@ blockquote.verse::before {
 .article-nav-link::before {
 	position: absolute;
 	top: 21px;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	font-weight: 400; }
 @media only screen and (min-width: 600px) {
@@ -2825,7 +2825,7 @@ blockquote.verse::before {
 	.article-nav-count {
 		/* 26px */
 		padding-bottom: 0; 
-		font-family: "Roboto Condensed", Helvetica, sans-serif;
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 		font-size: 26px;
 		font-weight: 300;
 		line-height: 1.0000em;} }
@@ -2845,7 +2845,7 @@ blockquote.verse::before {
 	margin-bottom: 13px;
 	padding: 12px 32px;
 	outline: 0;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
@@ -3100,7 +3100,7 @@ ul.list-links a::before {
 ul.list-links a::before {
 	font-size: 4px; }
 ul.list-links.list-links--primary a {
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1;
 	text-decoration: none; }
@@ -3241,7 +3241,7 @@ ol.list-links.list-links--secondary a::before {
 .related-guides-list {
 	padding-top: 0;
 	padding-left: 0; 
-	font-family: "Roboto Condensed", Helvetica, sans-serif;}
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;}
 @media only screen and (min-width: 600px) {
 	.related-guides-list {
 		padding-top: 26px; } }
@@ -3340,7 +3340,7 @@ a:hover {
 td a, .cta--secondary {
 	display: inline-block;
 	color: #0c7499;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1; }
 td a:hover, .cta--secondary:hover {
@@ -3361,7 +3361,7 @@ table th {
 	display: none;
 	/* 26px */
 	padding-bottom: 1.6250em;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300; 
 	line-height: 1.6250em;
@@ -3395,7 +3395,7 @@ table td::before {
 	border-right: 2px solid #fff;
 	color: #fff;
 	background: #0c7499;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	content: attr(data-th) " :";}
@@ -3482,7 +3482,7 @@ input,
 label,
 select {
 	display: block;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px; }
 
 fieldset label {
@@ -3507,7 +3507,7 @@ select {
 	border-radius: 2px;
 	background-color: white;
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;}
 input[type="text"]:hover,
   input[type="email"]:hover,
@@ -3612,24 +3612,17 @@ object {
 
 .breadcrumbs {
 	position: relative;
-	width: 100%; 
-	padding: 0.3rem 1.5rem;
-	background-color: #bdc3c7;}
+	width: 100%; }
 @media only screen and (min-width: 990px) {
 	.breadcrumbs {
-		margin: 0 0.5em; 
-		border-radius: 2px;} }
+		margin: 0 0.5em; } }
 
 .breadcrumbs {
-	color: #414344; 
+	font-size: 0.9rem; 
 	text-align: left;}
 .breadcrumbs .sep {
-	color: #414344; }
-.breadcrumbs a {
-	color: #0c7499;
-	font-weight: bold; }
-.breadcrumbs .trail-end {
-	color: #da2e75; }
+	padding: 0 0.4em; 
+	color: #414344;}
 
 body.open .crumb-container {
 	display: -webkit-flex;
@@ -3772,7 +3765,7 @@ body.open .crumb-container .breadcrumbs {
 	text-align: center;}
 .icon-circle span,
   .icon-circle--large span {
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 26px;
 	font-weight: 700; }
 @media only screen and (min-width: 600px) {
@@ -4155,7 +4148,7 @@ body.open .crumb-container .breadcrumbs {
 	display: inline-block;
 	/* 26px */
 	padding-bottom: 0;
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-weight: 700;
 	line-height: 2.0000em;
@@ -4230,29 +4223,3 @@ body.open .crumb-container .breadcrumbs {
  * Web Starter Kit team.
  *
  */
-html,
-body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0; }
-
-body {
-	position: relative;
-	box-sizing: border-box;
-	min-height: 100%; 
-	background-color: #fff;
-	font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
-	font-weight: 300;}
-
-.promote-layer {
-	/*
-  This may promote the layer to a composited
-  layer.
-
-  Replace with will-change when available
-
-  #perfmatters
-  */
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden; }

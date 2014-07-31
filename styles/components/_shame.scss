@@ -7,35 +7,35 @@
  */
 
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+// html,
+// body {
+//   width: 100%;
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
 
-body {
-  position: relative;
-  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-  background-color: #FFFFFF;
-  box-sizing: border-box;
-  min-height: 100%;
-}
+// body {
+//   position: relative;
+//   // font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+//   // font-weight: 300;
+//   background-color: #FFFFFF;
+//   box-sizing: border-box;
+//   min-height: 100%;
+// }
 
-.promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
+// .promote-layer {
+//   /*
+//   This may promote the layer to a composited
+//   layer.
 
-  Replace with will-change when available
+//   Replace with will-change when available
 
-  #perfmatters
-  */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+//   #perfmatters
+//   */
+//   -webkit-backface-visibility: hidden;
+//   backface-visibility: hidden;
+// }
 
 
 
