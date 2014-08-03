@@ -7,7 +7,15 @@
 		</header><!-- .entry-header -->
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
-						<?php get_the_image(); ?>
+
+			<?php get_the_image( array( 
+			'size' => 'medium', 
+			'link_to_post' => false, 
+			'attachment' => false, 
+			'before' => '<div class="page-thumb">',
+			'after' => '</div>' 
+			) ); ?>
+
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
 		</div><!-- .entry-content -->

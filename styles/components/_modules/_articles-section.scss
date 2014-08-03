@@ -25,9 +25,11 @@
 }
 
 
-.entry-thumbnail {
+.page-thumb, .article-thumb {
 float: left;
-margin: 1em;
+margin: 0 1rem 1rem 0;
+position: relative;
+max-width: 180px;
 }
 
 .entry-title {
