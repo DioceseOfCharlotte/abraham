@@ -2281,10 +2281,12 @@ body.open {
 	background-color: rgba(255, 255, 255, 0.2); }
 
 .navdrawer-container ul li a:focus,
-.navdrawer-container ul li a:active,
-.current-menu-item a {
+.navdrawer-container ul li a:active {
 	outline: 0; 
 	background-color: rgba(255, 255, 255, 0.3);}
+
+.current-menu-item a {
+	font-weight: bold; }
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
