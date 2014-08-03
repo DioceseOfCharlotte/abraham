@@ -17,7 +17,13 @@
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
 
-			<?php get_the_image( array( 'size' => 'medium', 'link_to_post' => false, 'attachment' => false, 'image_class' => 'article-thumb' ) ); ?>
+			<?php get_the_image( array( 
+			'size' => 'medium', 
+			'link_to_post' => false, 
+			'attachment' => false, 
+			'before' => '<div class="article-thumb">',
+			'after' => '</div>' 
+			) ); ?>
 
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
