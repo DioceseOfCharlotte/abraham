@@ -16,7 +16,7 @@ function abraham_custom_background_setup() {
 	add_theme_support(
 		'custom-background',
 		array(
-			'default-color'    => 'ECF0F1',
+			'default-color'    => 'F1F5F5',
 			'default-image'    => '',
 			'wp-head-callback' => 'abraham_custom_background_callback',
 		)

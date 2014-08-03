@@ -127,13 +127,11 @@ body.open {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.navdrawer-container ul li a:focus {
+.navdrawer-container ul li a:focus,
+.navdrawer-container ul li a:active,
+.current-menu-item a {
   background-color: rgba(255, 255, 255, 0.3);
   outline: 0;
-}
-
-.navdrawer-container ul li a:active {
-  background-color: rgba(255, 255, 255, 0.4);
 }
 
 /** Larger Screens - desktops and tablets **/
@@ -162,7 +160,8 @@ body.open {
     margin: 0;
     padding: 0;
     line-height: 130px;
-    font-size: 46px;
+    font-size: 32px;
+    font-size: 2rem;
   }
 
 $menu-button-color : rgba(255, 255, 255, 0.79);

@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -2000,6 +2000,10 @@ img.site-logo {
 * Sidebar
 *
 **/
+.widget-title {
+	font-size: 18px;
+	font-size: 1.15rem; }
+
 .main-container {
 	max-width: 1600px;
 	margin: 0 auto;
@@ -2015,7 +2019,7 @@ img.site-logo {
 	display: -ms-flexbox;
 	display:         flex;
 	        flex-direction: column; 
-	padding: 0.5em;
+	padding: 0.5rem 0.75rem;
 
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
@@ -2151,8 +2155,8 @@ img.site-logo {
 .entry,
 .widget {
 	width: 100%;
-	margin-bottom: 0.7em;
-	padding: 1em;
+	margin-bottom: 1rem;
+	padding: 1.5rem 2rem;
 	border-radius: 2px; 
 	background-color: #fff;}
 .comments-template:last-child,
@@ -2163,7 +2167,10 @@ img.site-logo {
 	.comments-template,
 	.entry,
 	.widget {
-		margin-bottom: 1em; } }
+		margin-bottom: 1.5rem; } }
+
+.widget {
+	padding: 1.5rem; }
 
 body.custom-background {
 	background-size: cover; }
@@ -2284,12 +2291,11 @@ body.open {
 .navdrawer-container ul li a:hover {
 	background-color: rgba(255, 255, 255, 0.2); }
 
-.navdrawer-container ul li a:focus {
+.navdrawer-container ul li a:focus,
+.navdrawer-container ul li a:active,
+.current-menu-item a {
 	outline: 0; 
 	background-color: rgba(255, 255, 255, 0.3);}
-
-.navdrawer-container ul li a:active {
-	background-color: rgba(255, 255, 255, 0.4); }
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
@@ -2318,7 +2324,8 @@ body.open {
 		float: left;
 		margin: 0;
 		padding: 0;
-		font-size: 46px; 
+		font-size: 32px;
+		font-size: 2rem; 
 		line-height: 130px;}
 
 	.app-bar-actions {
@@ -2597,6 +2604,10 @@ body.open {
 .entry-thumbnail {
 	float: left;
 	margin: 1em; }
+
+.entry-title {
+	font-size: 36px;
+	font-size: 2.25rem; }
 
 /**
 *

@@ -11,7 +11,7 @@
 
       .Sidebar,
       .site-main {
-        padding: .5em;
+        padding: .5rem .75rem;
         display: flex;
         flex-direction: column;
       }
@@ -215,8 +215,8 @@
 .entry, 
 .widget {
 //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
-margin-bottom: .7em;
-padding: 1em;
+margin-bottom: 1rem;
+padding: 1.5rem 2rem;
 background-color: #fff;
 width: 100%;
 border-radius: $base-border-radius;
@@ -226,8 +226,12 @@ border-radius: $base-border-radius;
 }
 
 @include wide {
-  margin-bottom: 1em;
+  margin-bottom: 1.5rem;
   }
+}
+
+.widget {
+  padding: 1.5rem;
 }
 
 body.custom-background {

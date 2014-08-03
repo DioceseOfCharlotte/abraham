@@ -82,8 +82,8 @@ function abraham_enqueue_admin_custom_header_styles( $hook_suffix ) {
 			$dir = trailingslashit( get_stylesheet_directory() );
 			$uri = trailingslashit( get_stylesheet_directory_uri() );
 
-			if ( file_exists( $dir . 'styles/admin/admin-custom-header.css' ) )
-				wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}styles/admin/admin-custom-header.css" );
+			if ( file_exists( $dir . 'admin/admin-custom-header.css' ) )
+				wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}admin/admin-custom-header.css" );
 		}
 	}
 }
