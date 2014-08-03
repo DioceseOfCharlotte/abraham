@@ -7,9 +7,7 @@
 		</header><!-- .entry-header -->
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
-				<div class="entry-thumbnail">
 						<?php get_the_image(); ?>
-				</div>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
 		</div><!-- .entry-content -->
