@@ -5,16 +5,16 @@
 **/
 
 a {
-  color: $colorBlue;
+  color: $base-link-color;
   text-decoration: none;
   transition: color .1s linear;
 }
 
 a:hover {
-  color: darken($colorBlue, 20);
+  color: $hover-link-color;
   outline: 0;
 }
 
 td a, .cta--secondary {
-  @include style-cta($colorBlue, false);
+  @include style-cta($base-link-color, false);
 }

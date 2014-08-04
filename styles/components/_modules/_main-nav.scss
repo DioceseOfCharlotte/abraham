@@ -71,9 +71,6 @@ body.open {
   width: 250px;
   height: 100%;
   background-color: $nav-drawer-color;
-  // border-top: 4px solid $colorGrayDark;
-  // border-bottom: 4px solid $colorGrayDark;
-  //background-color: $colorGrayDark;
   color: #fefefe;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
@@ -133,7 +130,7 @@ body.open {
   outline: 0;
 }
 
-.current-menu-item a {
+.navdrawer-container ul li.current-menu-item a {
   font-weight: bold;
 }
 

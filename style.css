@@ -2285,7 +2285,7 @@ body.open {
 	outline: 0; 
 	background-color: rgba(255, 255, 255, 0.3);}
 
-.current-menu-item a {
+.navdrawer-container ul li.current-menu-item a {
 	font-weight: bold; }
 
 /** Larger Screens - desktops and tablets **/
@@ -3351,7 +3351,7 @@ a {
 
 a:hover {
 	outline: 0; 
-	color: #052c3a;}
+	color: #08506a;}
 
 td a, .cta--secondary {
 	display: inline-block;
