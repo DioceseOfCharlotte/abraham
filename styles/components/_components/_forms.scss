@@ -45,6 +45,7 @@ textarea,
 select {
   //@include transition(border-color);
   background-color: white;
+  color: $base-font-color;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
@@ -97,7 +98,7 @@ select {
     display: inline-block;
     display: flex;
 
-    input[type=search] {
+    .search-field {
       width: 100%;
       padding: .52em .8em;
       font-size: .9em;
@@ -149,4 +150,41 @@ input[type=search] {
 -moz-box-flex: 1;
 -ms-flex: 1;
 flex: 1;
+}
+
+
+
+.navdrawer-container .search-form {
+  position: absolute;
+  right: 20px;
+  top: 1px;
+}
+
+.navdrawer-container .search-field {
+  background-color: transparent;
+  background-image: url(images/search-icon.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+    border: none;
+  cursor: pointer;
+  height: 37px;
+  margin: 3px 0;
+  padding: 0 0 0 34px;
+  width: 0;
+  color: $base-font-color;
+    position: relative;
+  -webkit-transition: width 400ms ease, background 400ms ease;
+  transition:         width 400ms ease, background 400ms ease;
+}
+
+.navdrawer-container input[type="submit"].search-submit {
+  display: none;
+}
+
+.navdrawer-container .search-field:focus {
+  background-color: #fff;
+  cursor: text;
+  outline: 0;
+  width: 230px;
 }

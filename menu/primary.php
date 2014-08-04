@@ -14,7 +14,7 @@
 				'items_wrap'      => '<ul id="%s" class="%s">%s</ul></div>'
 			)
 		); ?>
-
+<?php get_search_form(); ?>
 	</nav><!-- #menu-primary -->
 
 <?php endif; // End check for menu. ?>
