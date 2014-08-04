@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.0.9
+ * Version:           1.1.0
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -2013,6 +2013,11 @@ img.site-logo {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 
+.wrap {
+	position: relative; 
+	max-width: 1600px;
+	margin: 0 auto;}
+
 .layout-1c .Sidebar,
 .layout-1c .site-main {
 	width: 100%; }
@@ -2163,6 +2168,121 @@ img.site-logo {
 
 body.custom-background {
 	background-size: cover; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+	resize: vertical; }
+
+fieldset {
+	margin: 0 0 0.75em 0;
+	padding: 1.5em; 
+	border-radius: 2px;
+	background: #bdc3c7;}
+
+input,
+label,
+select {
+	display: block;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px; }
+
+fieldset label {
+	margin-bottom: 0.375em; 
+	font-weight: bold;}
+fieldset label.required:after {
+	content: "*"; }
+fieldset label abbr {
+	display: none; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+	width: 100%; 
+	margin-bottom: 0.75em;
+	padding: 0.5em 0.5em;
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	color: #414344;
+	background-color: white;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;}
+input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="url"]:hover,
+  input[type="password"]:hover,
+  input[type="search"]:hover,
+  textarea:hover,
+  select:hover {
+	border-color: #bababa;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); }
+input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  select:focus {
+	border-color: #0c7499;
+	outline: none;
+	box-shadow: none; }
+
+textarea {
+	resize: vertical; }
+
+input[type="checkbox"], input[type="radio"] {
+	display: inline;
+	margin-right: 0.375em; }
+
+input[type="file"] {
+	width: 100%; 
+	margin-bottom: 0.75em;
+	padding-bottom: 0.5em;}
+
+select {
+	width: auto;
+	max-width: 100%;
+	margin-bottom: 1.5em; }
+
+.search-form {
+	display: inline-block;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex; 
+	position: relative;}
+.search-form .search-field {
+	width: 100%;
+	margin: 0; 
+	padding: 0.52em 0.8em;
+	border-radius: 2px;
+	font-size: 0.9em;}
+
+.search-form input[type="submit"].search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 8px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0; 
+	font-family: FontAwesome;}
+
+.search-form {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex; }
+
+input[type=search] {
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
 
 body.open {
 	overflow: hidden; }
@@ -2406,7 +2526,6 @@ body.open {
 		display:         flex;
 		        flex-direction: row; 
 		max-width: 864px;
-		margin: 0 auto;
 
 		-webkit-flex-direction: row;
 		    -ms-flex-direction: row;}
@@ -2476,6 +2595,39 @@ body.open {
 .menu-header {
 	height: 60px;
 	background-color: #fff; }
+
+.navdrawer-container .search-form {
+	position: absolute;
+	top: 1px; 
+	right: 20px;}
+
+.navdrawer-container .search-field {
+	position: relative;
+	width: 0;
+	height: 55px;
+	margin: 0;
+	padding: 0 0 0 34px;
+	border: none;
+	border-radius: 0;
+	color: #414344;
+	background-color: transparent;
+	background-image: url(images/search.svg);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background-size: 24px 24px;
+	font-size: 1rem;
+	cursor: pointer;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	        transition: width 400ms ease, background 400ms ease; }
+
+.navdrawer-container input[type="submit"].search-submit {
+	display: none; }
+
+.navdrawer-container .search-field:focus {
+	width: 230px; 
+	outline: 0;
+	background-color: #fff;
+	cursor: text;}
 
 /**
 *
@@ -3481,153 +3633,6 @@ td:last-child::after {
 	.table-4 td:nth-child(3) {
 		border-right: 2px solid #fff; 
 		border-left: 2px solid #fff;} }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-	resize: vertical; }
-
-fieldset {
-	margin: 0 0 0.75em 0;
-	padding: 1.5em; 
-	border-radius: 2px;
-	background: #bdc3c7;}
-
-input,
-label,
-select {
-	display: block;
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-	font-size: 16px; }
-
-fieldset label {
-	margin-bottom: 0.375em; 
-	font-weight: bold;}
-fieldset label.required:after {
-	content: "*"; }
-fieldset label abbr {
-	display: none; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea,
-select {
-	width: 100%; 
-	margin-bottom: 0.75em;
-	padding: 0.5em 0.5em;
-	border: 1px solid lightgray;
-	border-radius: 2px;
-	color: #414344;
-	background-color: white;
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-	font-size: 16px;}
-input[type="text"]:hover,
-  input[type="email"]:hover,
-  input[type="url"]:hover,
-  input[type="password"]:hover,
-  input[type="search"]:hover,
-  textarea:hover,
-  select:hover {
-	border-color: #bababa;
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); }
-input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus,
-  select:focus {
-	border-color: #0c7499;
-	outline: none;
-	box-shadow: none; }
-
-textarea {
-	resize: vertical; }
-
-input[type="checkbox"], input[type="radio"] {
-	display: inline;
-	margin-right: 0.375em; }
-
-input[type="file"] {
-	width: 100%; 
-	margin-bottom: 0.75em;
-	padding-bottom: 0.5em;}
-
-select {
-	width: auto;
-	max-width: 100%;
-	margin-bottom: 1.5em; }
-
-.search-form {
-	display: inline-block;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex; 
-	position: relative;}
-.search-form .search-field {
-	width: 100%;
-	margin: 0; 
-	padding: 0.52em 0.8em;
-	border-radius: 2px;
-	font-size: 0.9em;
-	font-style: italic;}
-
-.search-form input[type="submit"].search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	margin: 0;
-	padding: 8px;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0; 
-	font-family: FontAwesome;}
-
-.search-form {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex; }
-
-input[type=search] {
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1; }
-
-.navdrawer-container .search-form {
-	position: absolute;
-	top: 1px; 
-	right: 20px;}
-
-.navdrawer-container .search-field {
-	position: relative;
-	width: 0;
-	height: 37px;
-	margin: 3px 0;
-	padding: 0 0 0 34px;
-	border: none;
-	color: #414344;
-	background-color: transparent;
-	background-image: url(images/search-icon.png);
-	background-repeat: no-repeat;
-	background-position: 5px center;
-	background-size: 24px 24px;
-	cursor: pointer;
-	-webkit-transition: width 400ms ease, background 400ms ease;
-	        transition: width 400ms ease, background 400ms ease; }
-
-.navdrawer-container input[type="submit"].search-submit {
-	display: none; }
-
-.navdrawer-container .search-field:focus {
-	width: 230px; 
-	outline: 0;
-	background-color: #fff;
-	cursor: text;}
 
 /**
 *

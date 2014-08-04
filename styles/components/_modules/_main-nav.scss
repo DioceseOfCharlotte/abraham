@@ -217,7 +217,6 @@ $menu-button-color : rgba(255, 255, 255, 0.79);
     display: -ms-flexbox;
     display: flex;
     max-width: 864px;
-    margin: 0 auto;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -308,4 +307,42 @@ transform: rotate(-45deg) translate(4px, -4px);
 .menu-header {
 height: 60px;
 background-color: #fff;
+}
+
+
+.navdrawer-container .search-form {
+  position: absolute;
+  right: 20px;
+  top: 1px;
+}
+
+.navdrawer-container .search-field {
+  font-size: 1rem;
+  background-color: transparent;
+  background-image: url(images/search.svg);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+    border: none;
+  cursor: pointer;
+  height: 55px;
+  margin: 0;
+  padding: 0 0 0 34px;
+  width: 0;
+  border-radius: 0;
+  color: $base-font-color;
+    position: relative;
+  -webkit-transition: width 400ms ease, background 400ms ease;
+  transition:         width 400ms ease, background 400ms ease;
+}
+
+.navdrawer-container input[type="submit"].search-submit {
+  display: none;
+}
+
+.navdrawer-container .search-field:focus {
+  background-color: #fff;
+  cursor: text;
+  outline: 0;
+  width: 230px;
 }
