@@ -884,7 +884,7 @@ li > p {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; }
 
-.icon-bullet::before, ul li::before, ul.list-links a::before, .list-anchor a::before {
+.icon-bullet::before, ul.list-links a::before, .list-anchor a::before {
 	content: "\e001"; }
 
 .icon-chevron-down::before {
@@ -1997,7 +1997,7 @@ img.site-logo {
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0.5em;
-	padding-top: 60px; }
+	padding-top: 67px; }
 @media only screen and (min-width: 990px) {
 	.main-container {
 		margin-top: -0.5em; 
@@ -2291,11 +2291,12 @@ body.open {
 	display: block;
 	overflow: hidden;
 	position: fixed;
-	z-index: 1; 
+	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #0f91bf;}
+	background-color: #0f91bf;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
 
 .app-bar-container {
 	display: -webkit-flex;
@@ -2321,9 +2322,8 @@ body.open {
 	margin: 0 16px;
 	padding: 0;
 	color: #fefefe;
-	font-size: 2em;
+	font-size: 1.3rem;
 	font-weight: 300;
-	line-height: 60px;
 	line-height: 60px; 
 
 	-webkit-flex: 1;
@@ -2626,7 +2626,7 @@ body.open {
 .navdrawer-container .search-field:focus {
 	width: 230px; 
 	outline: 0;
-	background-color: #fff;
+	background-color: #85b9cc;
 	cursor: text;}
 
 /**
@@ -3207,29 +3207,10 @@ input[type="button"].btn-full,
 * List
 *
 **/
-ul,
-ol {
+ul, li {
 	margin: 0; 
+	padding: 0;
 	list-style: none;}
-@media only screen and (max-width: 599px) {
-	ul,
-	ol {
-		padding-left: 0; } }
-
-ul li {
-	position: relative;
-	padding-left: 16px; }
-ul li::before {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-family: "icons";
-	font-size: 13px;
-	font-weight: 400;
-	line-height: 26px; }
-ul li::before {
-	font-size: 4px; }
 
 ol {
 	counter-reset: list; }

@@ -11,6 +11,7 @@ body.open {
   background-color: $base-header-color;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
 .app-bar-container {
@@ -36,8 +37,7 @@ body.open {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 2em;
-  line-height: 60px;
+  font-size: 1.3rem;
   margin: 0 16px;
   padding: 0;
   color: #fefefe;
@@ -341,7 +341,7 @@ background-color: #fff;
 }
 
 .navdrawer-container .search-field:focus {
-  background-color: #fff;
+  background-color: mix(white, $base-accent-color, 50%);
   cursor: text;
   outline: 0;
   width: 230px;
