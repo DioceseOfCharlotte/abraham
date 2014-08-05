@@ -34,3 +34,71 @@ margin: auto;
     }
 
     .site-description {}
+
+    @media all and (max-width: 990px) {
+
+                   .headroom--not-top {
+
+                &.app-bar {
+                  position:fixed;
+                  height: 60px;
+                     }
+                }
+
+       .headroom--not-top.headroom--unpinned {
+
+    &.app-bar {
+  transition: 500ms;
+  transform: translateY(-108%);
+      }
+      }
+
+   .headroom--not-top.headroom--pinned {
+
+    &.app-bar {
+        -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  transform: translateY(0%);
+      }
+      }
+    }
+
+
+    @media all and (min-width: 990px) {
+
+                   .headroom--not-top {
+
+                .navdrawer-container {
+                  position:fixed;
+                  height: 50px;
+                     }
+                }
+
+       .headroom--not-top.headroom--unpinned {
+
+    .navdrawer-container {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+      }
+      }
+
+   .headroom--not-top.headroom--pinned {
+
+    .navdrawer-container {
+        -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+      }
+      }
+    }

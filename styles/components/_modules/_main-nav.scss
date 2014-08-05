@@ -5,12 +5,12 @@ body.open {
 .app-bar {
   display: block;
   width: 100%;
-  position: fixed;
+  //position: fixed;
   top: 0;
   left: 0;
   background-color: $base-header-color;
   overflow: hidden;
-  z-index: 1;
+  z-index: 5;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
@@ -64,7 +64,7 @@ body.open {
 }
 
 .navdrawer-container {
-  z-index: 1;
+  z-index: 5;
   position: fixed;
   top: 0;
   bottom: 0;

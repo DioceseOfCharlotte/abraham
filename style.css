@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -1939,6 +1939,39 @@ img.site-logo {
 		width: auto; 
 		height: 100px;} }
 
+@media all and (max-width: 990px) {
+	.headroom--not-top.app-bar {
+		position: fixed;
+		height: 60px; }
+
+	.headroom--not-top.headroom--unpinned.app-bar {
+		-webkit-transition: 500ms;
+		        transition: 500ms;
+		-webkit-transform: translateY(-108%);
+		        transform: translateY(-108%); }
+
+	.headroom--not-top.headroom--pinned.app-bar {
+		-webkit-transition: 500ms;
+		        transition: 500ms;
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%); } }
+@media all and (min-width: 990px) {
+	.headroom--not-top .navdrawer-container {
+		position: fixed;
+		height: 50px; }
+
+	.headroom--not-top.headroom--unpinned .navdrawer-container {
+		-webkit-transition: 500ms;
+		        transition: 500ms;
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%); }
+
+	.headroom--not-top.headroom--pinned .navdrawer-container {
+		visibility: visible;
+		-webkit-transition: 500ms;
+		        transition: 500ms;
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%); } }
 .footer {
 	padding: 0.5em; 
 	color: #fff;
@@ -2290,8 +2323,7 @@ body.open {
 .app-bar {
 	display: block;
 	overflow: hidden;
-	position: fixed;
-	z-index: 1;
+	z-index: 5;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -2348,7 +2380,7 @@ body.open {
 .navdrawer-container {
 	overflow-y: auto; 
 	position: fixed;
-	z-index: 1;
+	z-index: 5;
 	top: 0;
 	bottom: 0;
 	width: 250px;
