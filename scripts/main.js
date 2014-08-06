@@ -444,14 +444,14 @@
 
 (function() {
     var header = new Headroom(document.querySelector("#header"), {
-        tolerance: 0,
+        tolerance: 5,
         offset : 0
     });
     header.init();
 
-    var bodyHeadroom = new Headroom(document.querySelector("body"), {
-        tolerance : 0,
-        offset : 135
+    var bodyHeadroom = new Headroom(document.querySelector(".navdrawer-container"), {
+        tolerance: 5,
+        offset : 130
     });
     bodyHeadroom.init();
 }());

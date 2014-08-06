@@ -1,6 +1,6 @@
         .main-container {
       @extend .grid;
-      max-width: $huge;
+      max-width: $almostHuge;
       margin: 0 auto;
       padding: .5em;
       padding-top: 67px;
@@ -23,7 +23,7 @@
     // }
 
     .wrap {
-            max-width: $huge;
+            max-width: $almostHuge;
       margin: 0 auto;
       position: relative;
     }

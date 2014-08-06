@@ -1940,38 +1940,42 @@ img.site-logo {
 		height: 100px;} }
 
 @media all and (max-width: 990px) {
-	.headroom--not-top.app-bar {
+	.app-bar {
 		position: fixed;
-		height: 60px; }
+		z-index: 10;
+		top: 0; 
+		right: 0;
+		left: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		        transition: all 0.25s ease-in-out;}
 
-	.headroom--not-top.headroom--unpinned.app-bar {
-		-webkit-transition: 500ms;
-		        transition: 500ms;
+	.headroom--pinned.app-bar {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0); }
+
+	.headroom--unpinned.app-bar {
 		-webkit-transform: translateY(-108%);
-		        transform: translateY(-108%); }
-
-	.headroom--not-top.headroom--pinned.app-bar {
-		-webkit-transition: 500ms;
-		        transition: 500ms;
-		-webkit-transform: translateY(0%);
-		        transform: translateY(0%); } }
+		        transform: translateY(-108%); } }
 @media all and (min-width: 990px) {
-	.headroom--not-top .navdrawer-container {
+	.headroom--not-top.navdrawer-container {
 		position: fixed;
-		height: 50px; }
+		z-index: 10;
+		top: 0; 
+		right: 0;
+		left: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		        transition: all 0.25s ease-in-out;}
 
-	.headroom--not-top.headroom--unpinned .navdrawer-container {
-		-webkit-transition: 500ms;
-		        transition: 500ms;
+	.headroom--pinned.navdrawer-container {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0); }
+
+	.headroom--unpinned.navdrawer-container {
 		-webkit-transform: translateY(-100%);
 		        transform: translateY(-100%); }
 
-	.headroom--not-top.headroom--pinned .navdrawer-container {
-		visibility: visible;
-		-webkit-transition: 500ms;
-		        transition: 500ms;
-		-webkit-transform: translateY(0%);
-		        transform: translateY(0%); } }
+	.headroom--top.navdrawer-container {
+		position: relative; } }
 .footer {
 	padding: 0.5em; 
 	color: #fff;
@@ -2027,7 +2031,7 @@ img.site-logo {
 	font-size: 1.15rem; }
 
 .main-container {
-	max-width: 1600px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0.5em;
 	padding-top: 67px; }
@@ -2048,7 +2052,7 @@ img.site-logo {
 
 .wrap {
 	position: relative; 
-	max-width: 1600px;
+	max-width: 1400px;
 	margin: 0 auto;}
 
 .layout-1c .Sidebar,
@@ -2542,7 +2546,7 @@ body.open {
 		overflow-y: auto; 
 		position: relative;
 		width: 100%;
-		height: auto;
+		height: 57px;
 		margin-top: 130px;
 		-webkit-transition: none;
 		        transition: none;
@@ -3674,7 +3678,7 @@ object {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display:         flex;
-		max-width: 1600px;
+		max-width: 1400px;
 		margin: 1em auto; } }
 
 .breadcrumbs {
