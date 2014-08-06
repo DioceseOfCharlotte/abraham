@@ -2790,7 +2790,7 @@ body.open {
 	font-size: 36px;
 	font-size: 2.25rem; }
 
-.entry-content {
+.post_tag-columns .entry-content {
 	-webkit-columns: 2 300px;
 	   -moz-columns: 2 300px;
 	        columns: 2 300px;

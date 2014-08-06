@@ -84,9 +84,13 @@ function abraham_register_sidebars() {
  */
 function abraham_enqueue_scripts() {
 
-	wp_register_script( 'meh', trailingslashit( get_template_directory_uri() ) . "scripts/main.js", array(), null, true );
+	wp_register_script( 'meh-mainjs', trailingslashit( get_template_directory_uri() ) . "scripts/main.js", array(), null, true );
 
-  wp_enqueue_script( 'meh' );
+  wp_enqueue_script( 'meh-mainjs' );
+
+  	wp_register_script( 'meh-slider', trailingslashit( get_template_directory_uri() ) . "scripts/jquery.flexslider.js", array( 'jquery' ), null, true );
+
+  wp_enqueue_script( 'meh-slider' );
 }
 
 /**
