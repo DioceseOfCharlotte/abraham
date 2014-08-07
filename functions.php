@@ -12,6 +12,7 @@ $abraham_dir = trailingslashit( get_template_directory() );
 require_once( $abraham_dir . 'library/hybrid.php'        );
 require_once( $abraham_dir . 'inc/custom-background.php' );
 require_once( $abraham_dir . 'inc/custom-header.php'     );
+require_once( $abraham_dir . 'inc/site-logo.php'     	 );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'       );
 
