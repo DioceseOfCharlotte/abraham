@@ -57,7 +57,7 @@ gulp.task('styles', function () {
 // Watch Files For Changes & Reload
 gulp.task('serve', function () {
   browserSync({
-    proxy: "local.wordpress.dev",
+    proxy: "src.wordpress-develop.dev",
     host: "192.168.50.1"
      });
 
