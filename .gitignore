@@ -3,3 +3,4 @@ library
 node_modules
 .sass-cache
 composer.lock
+images/site-login-logo.svg

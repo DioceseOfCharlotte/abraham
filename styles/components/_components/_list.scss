@@ -30,7 +30,7 @@ ul, li {
   margin: 0;
 }
 
-ol {
+ol.numbered {
   counter-reset: list;
   > li {
     @include numbered-list;

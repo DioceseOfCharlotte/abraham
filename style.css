@@ -3248,12 +3248,12 @@ ul, li {
 	padding: 0;
 	list-style: none;}
 
-ol {
+ol.numbered {
 	counter-reset: list; }
-ol > li {
+ol.numbered > li {
 	position: relative;
 	padding-left: 32px; }
-ol > li::before {
+ol.numbered > li::before {
 	display: inline-block;
 	position: absolute;
 	left: 0; 
@@ -3261,7 +3261,7 @@ ol > li::before {
 	font-weight: 400;
 	content: "0" counter(list);
 	counter-increment: list;}
-ol > li:nth-child(10n) ~ li::before, ol > li:nth-child(10n)::before {
+ol.numbered > li:nth-child(10n) ~ li::before, ol.numbered > li:nth-child(10n)::before {
 	content: counter(list); }
 
 ul ol,
