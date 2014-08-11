@@ -31,6 +31,15 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
+// Lint JavaScript
+gulp.task('jshint', function () {
+  return gulp.src('scripts/**/*.js')
+    .pipe(reload({stream: true, once: true}))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+
 // Optimize Images
 gulp.task('images', function () {
   return gulp.src('images/**/*')
@@ -43,7 +52,7 @@ gulp.task('images', function () {
 
 gulp.task('styles', function () {
     return gulp.src('styles/components/**/*.scss')
-        .pipe(sass())
+        .pipe(sass({ style: 'expanded' }))
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe(csscomb())
         .pipe(gulp.dest('./'))

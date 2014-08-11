@@ -6,7 +6,7 @@
 			'container'     => 'nav', 
 			'separator'     => '/',
 			'show_browse'   => false,
-			'show_on_front' => true,
+			'show_on_front' => false,
 		) 
 	); ?>
 </div>

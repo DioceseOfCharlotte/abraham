@@ -4,16 +4,19 @@
       margin: 0 auto;
       padding: .5em;
       padding-top: 67px;
-       @include wider {
-        padding-top: 0;
-        margin-top: -.5em;
-      }
 
       .Sidebar,
       .site-main {
         padding: .5rem .75rem;
         display: flex;
         flex-direction: column;
+      }
+       @include wider {
+        padding-top: 0;
+        margin-top: -.5em;
+        .Sidebar-featured {
+  flex-direction: row;
+}
       }
 
     }
@@ -44,10 +47,11 @@
       .site-main {
           width: 100%;
     }
+    @include wider {
       .Sidebar{
-       // margin-top: 1em;
+       flex-direction: row;
       }
-
+}
     }
     .layout-2c-l {
       .site-main {

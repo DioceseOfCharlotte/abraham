@@ -54,7 +54,11 @@ function abraham_register_sidebars() {
 		array(
 			'id'          => 'primary',
 			'name'        => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
-			'description' => __( 'Typically on the screens left side.', 'abraham' )
+			'description' => __( 'Typically on the screens left side.', 'abraham' ),
+			'before_title'  => '<h2 class="primary-title">',
+			'after_title'   => '</h2>',
+			'before_widget' => '<section id="%1$s" class="primary-item %2$s">',
+			'after_widget'  => '</section>',
 		)
 	);
 
@@ -62,7 +66,11 @@ function abraham_register_sidebars() {
 		array(
 			'id'          => 'secondary',
 			'name'        => _x( 'Secondary Sidebar', 'sidebar', 'abraham' ),
-			'description' => __( 'Typically on the screens right side.', 'abraham' )
+			'description' => __( 'Typically on the screens right side.', 'abraham' ),
+			'before_title'  => '<h2 class="secondary-title">',
+			'after_title'   => '</h2>',
+			'before_widget' => '<section id="%1$s" class="secondary-item %2$s">',
+			'after_widget'  => '</section>',
 		)
 	);
 
@@ -70,7 +78,23 @@ function abraham_register_sidebars() {
 		array(
 			'id'          => 'subsidiary',
 			'name'        => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
-			'description' => __( 'Footer widgets.', 'abraham' )
+			'description' => __( 'Footer widgets.', 'abraham' ),
+			'before_title'  => '<h2 class="subsidiary-title">',
+			'after_title'   => '</h2>',
+			'before_widget' => '<section id="%1$s" class="subsidiary-item %2$s">',
+			'after_widget'  => '</section>',
+		)
+	);
+
+		hybrid_register_sidebar(
+		array(
+			'id'            => 'featured',
+			'name'          => _x( 'Home Features', 'sidebar', 'abraham' ),
+			'description'   => __( 'Add services or features you\'d like to highlight.', 'abraham' ),
+			'before_title'  => '<h2 class="feature-title">',
+			'after_title'   => '</h2>',
+			'before_widget' => '<section id="%1$s" class="%1$s feature-item %2$s">',
+			'after_widget'  => '</section>',
 		)
 	);
 }
@@ -88,9 +112,9 @@ function abraham_enqueue_scripts() {
 
   wp_enqueue_script( 'meh-mainjs' );
 
-  	wp_register_script( 'meh-slider', trailingslashit( get_template_directory_uri() ) . "scripts/jquery.flexslider.js", array( 'jquery' ), null, true );
+  // 	wp_register_script( 'meh-slider', trailingslashit( get_template_directory_uri() ) . "scripts/jquery.flexslider.js", array( 'jquery' ), null, true );
 
-  wp_enqueue_script( 'meh-slider' );
+  // wp_enqueue_script( 'meh-slider' );
 }
 
 /**
