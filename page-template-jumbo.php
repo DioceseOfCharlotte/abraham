@@ -5,7 +5,7 @@
 
 get_header(); // Loads the header.php template. ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="home-site-main" itemprop="mainContentOfPage">
 
 	<?php if ( have_posts() ) : // Checks if any posts were found. ?>
 
@@ -15,16 +15,9 @@ get_header(); // Loads the header.php template. ?>
 
 			<?php if ( hybrid_post_has_content() ) : // Check if the page has content. ?>
 
-				<article <?php hybrid_attr( 'post' ); ?>>
-
-					<header class="entry-header">
-						<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div <?php hybrid_attr( 'entry-content' ); ?>>
 						<?php the_content(); ?>
-						<?php wp_link_pages(); ?>
-					</div><!-- .entry-content -->
+
+				<article <?php hybrid_attr( 'post' ); ?>>
 
 					<?php hybrid_get_sidebar( 'featured' ); // Loads the sidebar/subsidiary.php template. ?>
 

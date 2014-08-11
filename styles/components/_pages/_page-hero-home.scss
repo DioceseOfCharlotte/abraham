@@ -1,0 +1,36 @@
+/**
+*
+* Page Hero Home
+*
+**/
+
+.home .crumb-container {
+  display: none;
+}
+
+.flex-viewport {
+  margin: 0 auto;
+}
+
+.home-site-main .flexslider {
+background: $nav-drawer-color;
+//padding-bottom: 60px;
+}
+
+
+  /* Control Nav */
+.home-site-main {
+.flex-control-paging li a {
+  background: $nav-drawer-color;
+}
+.flex-control-paging li a:hover {
+  background: rgba(255,255,255,.2); 
+}
+.flex-control-paging li a.flex-active {
+  background: $base-header-color;
+}
+
+.flex-direction-nav a:before  { 
+  color: $base-link-color;
+  }
+}

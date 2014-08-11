@@ -2330,9 +2330,8 @@ img.site-logo {
 	}
 
 .main-container {
-	max-width: 1400px;
 	margin: 0 auto;
-	padding: 0.5em;
+	padding: 0.5em 0;
 	padding-top: 67px;
 	}
 .main-container .Sidebar,
@@ -4847,6 +4846,37 @@ body.open .crumb-container .breadcrumbs {
 	}
 .nav-theme--performance .themed--background {
 	background-color: #7b5294;
+	}
+
+/**
+*
+* Page Hero Home
+*
+**/
+.home .crumb-container {
+	display: none;
+	}
+
+.flex-viewport {
+	margin: 0 auto;
+	}
+
+.home-site-main .flexslider {
+	background: #0c7499;
+	}
+
+/* Control Nav */
+.home-site-main .flex-control-paging li a {
+	background: #0c7499;
+	}
+.home-site-main .flex-control-paging li a:hover {
+	background: rgba(255, 255, 255, 0.2);
+	}
+.home-site-main .flex-control-paging li a.flex-active {
+	background: #0f91bf;
+	}
+.home-site-main .flex-direction-nav a:before {
+	color: #0c7499;
 	}
 
 /**

@@ -1,8 +1,8 @@
         .main-container {
       @extend .grid;
-      max-width: $almostHuge;
+      //max-width: $almostHuge;
       margin: 0 auto;
-      padding: .5em;
+      padding: .5em 0;
       padding-top: 67px;
 
       .Sidebar,
