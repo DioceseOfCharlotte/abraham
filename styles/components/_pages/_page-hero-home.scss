@@ -20,11 +20,15 @@ background: $nav-drawer-color;
 
   /* Control Nav */
 .home-site-main {
+  .flex-control-paging li {
+    background-color: #fff;
+    padding: 1px;
+  }
 .flex-control-paging li a {
   background: $nav-drawer-color;
 }
 .flex-control-paging li a:hover {
-  background: rgba(255,255,255,.2); 
+  background: mix(white, $nav-drawer-color, 20%);
 }
 .flex-control-paging li a.flex-active {
   background: $base-header-color;
