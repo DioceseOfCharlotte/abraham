@@ -46,6 +46,10 @@
       .Sidebar,
       .site-main {
           width: 100%;
+          padding: 0;
+      .widget {
+        margin: 0;
+      }
     }
     @include wider {
       .Sidebar{
