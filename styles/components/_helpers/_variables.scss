@@ -104,6 +104,10 @@ $secondary-color: $colorRed;
 $nav-drawer-color: $base-accent-color;
 $base-header-color: lighten($nav-drawer-color, 8%) !default;
 
+  // Header Color
+$footer-color: $colorGrayBackground;
+$footer-widget-color: darken($footer-color, 20%) !default;
+
 // Link Colors
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-link-color, 10);

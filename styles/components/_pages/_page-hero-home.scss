@@ -43,3 +43,8 @@ background: rgba(mix(white, $nav-drawer-color, 95%), 0.84);
   color: $base-link-color;
   }
 }
+
+
+.flex-direction-nav a {
+box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.4);
+}
