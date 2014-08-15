@@ -734,7 +734,7 @@ code {
 
 /* line 43, ../_base/_global.scss */
 .container {
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto; }
 
 @media only screen and (min-width: 600px) {
@@ -1088,7 +1088,19 @@ li > p {
 * Grid
 *
 **/
-/* line 8, ../_layouts/_grid.scss */
+/* line 6, ../_layouts/_grid.scss */
+.wrap-flex {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	max-width: 1200px;
+	margin: 0 auto; }
+
+/* line 12, ../_layouts/_grid.scss */
+.home-site-main {
+	width: 100%; }
+
+/* line 15, ../_layouts/_grid.scss */
 .grid, .main-container {
 	/* IE < 8: collapse white-space between units */
 	display: -webkit-flex;
@@ -1101,11 +1113,11 @@ li > p {
 	        flex-flow: row wrap; }
 
 /* IE9: collapse white-space between units */
-/* line 15, ../_layouts/_grid.scss */
+/* line 22, ../_layouts/_grid.scss */
 :root .grid, :root .main-container {
 	word-spacing: -0.43em\0; }
 
-/* line 17, ../_layouts/_grid.scss */
+/* line 24, ../_layouts/_grid.scss */
 .u-size-1,
 .u-size-1of1,
 .layout-2c-l .Sidebar-secondary,
@@ -1168,40 +1180,40 @@ li > p {
 	*display: inline;
 	text-rendering: auto; }
 
-/* line 66, ../_layouts/_grid.scss */
+/* line 73, ../_layouts/_grid.scss */
 .u-size-1of24 {
 	width: 4.1667%;
 
 	*width: 4.1357%; }
 
-/* line 71, ../_layouts/_grid.scss */
+/* line 78, ../_layouts/_grid.scss */
 .u-size-1of12,
 .u-size-2of24 {
 	width: 8.3333%;
 
 	*width: 8.3023%; }
 
-/* line 77, ../_layouts/_grid.scss */
+/* line 84, ../_layouts/_grid.scss */
 .u-size-1of8,
 .u-size-3of24 {
 	width: 12.5000%;
 
 	*width: 12.4690%; }
 
-/* line 83, ../_layouts/_grid.scss */
+/* line 90, ../_layouts/_grid.scss */
 .u-size-1of6,
 .u-size-4of24 {
 	width: 16.6667%;
 
 	*width: 16.6357%; }
 
-/* line 89, ../_layouts/_grid.scss */
+/* line 96, ../_layouts/_grid.scss */
 .u-size-5of24 {
 	width: 20.8333%;
 
 	*width: 20.8023%; }
 
-/* line 94, ../_layouts/_grid.scss */
+/* line 101, ../_layouts/_grid.scss */
 .u-size-1of4,
 .u-size-6of24,
 .layout-3c-l .Sidebar-primary,
@@ -1212,40 +1224,40 @@ li > p {
 
 	*width: 24.9690%; }
 
-/* line 100, ../_layouts/_grid.scss */
+/* line 107, ../_layouts/_grid.scss */
 .u-size-7of24 {
 	width: 29.1667%;
 
 	*width: 29.1357%; }
 
-/* line 105, ../_layouts/_grid.scss */
+/* line 112, ../_layouts/_grid.scss */
 .u-size-1of3, .layout-2c-l .Sidebar-primary, .layout-2c-r .Sidebar-primary,
 .u-size-8of24 {
 	width: 33.3333%;
 
 	*width: 33.3023%; }
 
-/* line 111, ../_layouts/_grid.scss */
+/* line 118, ../_layouts/_grid.scss */
 .u-size-3of8,
 .u-size-9of24 {
 	width: 37.5000%;
 
 	*width: 37.4690%; }
 
-/* line 117, ../_layouts/_grid.scss */
+/* line 124, ../_layouts/_grid.scss */
 .u-size-5of12,
 .u-size-10of24 {
 	width: 41.6667%;
 
 	*width: 41.6357%; }
 
-/* line 123, ../_layouts/_grid.scss */
+/* line 130, ../_layouts/_grid.scss */
 .u-size-11of24 {
 	width: 45.8333%;
 
 	*width: 45.8023%; }
 
-/* line 128, ../_layouts/_grid.scss */
+/* line 135, ../_layouts/_grid.scss */
 .u-size-1of2,
 .u-size-12of24,
 .layout-3c-l .site-main,
@@ -1254,80 +1266,80 @@ li > p {
 
 	*width: 49.9690%; }
 
-/* line 134, ../_layouts/_grid.scss */
+/* line 141, ../_layouts/_grid.scss */
 .u-size-13of24 {
 	width: 54.1667%;
 
 	*width: 54.1357%; }
 
-/* line 139, ../_layouts/_grid.scss */
+/* line 146, ../_layouts/_grid.scss */
 .u-size-7of12,
 .u-size-14of24 {
 	width: 58.3333%;
 
 	*width: 58.3023%; }
 
-/* line 145, ../_layouts/_grid.scss */
+/* line 152, ../_layouts/_grid.scss */
 .u-size-5of8,
 .u-size-15of24 {
 	width: 62.5000%;
 
 	*width: 62.4690%; }
 
-/* line 151, ../_layouts/_grid.scss */
+/* line 158, ../_layouts/_grid.scss */
 .u-size-2of3, .layout-2c-l .site-main, .layout-2c-r .site-main,
 .u-size-16of24 {
 	width: 66.6667%;
 
 	*width: 66.6357%; }
 
-/* line 157, ../_layouts/_grid.scss */
+/* line 164, ../_layouts/_grid.scss */
 .u-size-17of24 {
 	width: 70.8333%;
 
 	*width: 70.8023%; }
 
-/* line 162, ../_layouts/_grid.scss */
+/* line 169, ../_layouts/_grid.scss */
 .u-size-3of4,
 .u-size-18of24 {
 	width: 75%;
 
 	*width: 74.9690%; }
 
-/* line 168, ../_layouts/_grid.scss */
+/* line 175, ../_layouts/_grid.scss */
 .u-size-19of24 {
 	width: 79.1667%;
 
 	*width: 79.1357%; }
 
-/* line 173, ../_layouts/_grid.scss */
+/* line 180, ../_layouts/_grid.scss */
 .u-size-5of6,
 .u-size-20of24 {
 	width: 83.3333%;
 
 	*width: 83.3023%; }
 
-/* line 179, ../_layouts/_grid.scss */
+/* line 186, ../_layouts/_grid.scss */
 .u-size-7of8,
 .u-size-21of24 {
 	width: 87.5000%;
 
 	*width: 87.4690%; }
 
-/* line 185, ../_layouts/_grid.scss */
+/* line 192, ../_layouts/_grid.scss */
 .u-size-11of12,
 .u-size-22of24 {
 	width: 91.6667%;
 
 	*width: 91.6357%; }
 
-/* line 191, ../_layouts/_grid.scss */
+/* line 198, ../_layouts/_grid.scss */
 .u-size-23of24 {
 	width: 95.8333%;
 
 	*width: 95.8023%; }
 
-/* line 196, ../_layouts/_grid.scss */
+/* line 203, ../_layouts/_grid.scss */
 .u-size-1,
 .u-size-1of1,
 .layout-2c-l .Sidebar-secondary,
@@ -1336,7 +1348,7 @@ li > p {
 	width: 100%; }
 
 @media screen and (min-width: 35.5em) {
-	/* line 203, ../_layouts/_grid.scss */
+	/* line 210, ../_layouts/_grid.scss */
 	.u-size-1-sm,
 	.u-size-1of1-sm,
 	.u-size-1of2-sm,
@@ -1386,166 +1398,166 @@ li > p {
 		*display: inline;
 		text-rendering: auto; }
 
-	/* line 252, ../_layouts/_grid.scss */
+	/* line 259, ../_layouts/_grid.scss */
 	.u-size-1of24-sm {
 		width: 4.1667%;
 
 		*width: 4.1357%; }
 
-	/* line 257, ../_layouts/_grid.scss */
+	/* line 264, ../_layouts/_grid.scss */
 	.u-size-1of12-sm,
 	.u-size-2of24-sm {
 		width: 8.3333%;
 
 		*width: 8.3023%; }
 
-	/* line 263, ../_layouts/_grid.scss */
+	/* line 270, ../_layouts/_grid.scss */
 	.u-size-1of8-sm,
 	.u-size-3of24-sm {
 		width: 12.5000%;
 
 		*width: 12.4690%; }
 
-	/* line 269, ../_layouts/_grid.scss */
+	/* line 276, ../_layouts/_grid.scss */
 	.u-size-1of6-sm,
 	.u-size-4of24-sm {
 		width: 16.6667%;
 
 		*width: 16.6357%; }
 
-	/* line 275, ../_layouts/_grid.scss */
+	/* line 282, ../_layouts/_grid.scss */
 	.u-size-5of24-sm {
 		width: 20.8333%;
 
 		*width: 20.8023%; }
 
-	/* line 280, ../_layouts/_grid.scss */
+	/* line 287, ../_layouts/_grid.scss */
 	.u-size-1of4-sm,
 	.u-size-6of24-sm {
 		width: 25%;
 
 		*width: 24.9690%; }
 
-	/* line 286, ../_layouts/_grid.scss */
+	/* line 293, ../_layouts/_grid.scss */
 	.u-size-7of24-sm {
 		width: 29.1667%;
 
 		*width: 29.1357%; }
 
-	/* line 291, ../_layouts/_grid.scss */
+	/* line 298, ../_layouts/_grid.scss */
 	.u-size-1of3-sm,
 	.u-size-8of24-sm {
 		width: 33.3333%;
 
 		*width: 33.3023%; }
 
-	/* line 297, ../_layouts/_grid.scss */
+	/* line 304, ../_layouts/_grid.scss */
 	.u-size-3of8-sm,
 	.u-size-9of24-sm {
 		width: 37.5000%;
 
 		*width: 37.4690%; }
 
-	/* line 303, ../_layouts/_grid.scss */
+	/* line 310, ../_layouts/_grid.scss */
 	.u-size-5of12-sm,
 	.u-size-10of24-sm {
 		width: 41.6667%;
 
 		*width: 41.6357%; }
 
-	/* line 309, ../_layouts/_grid.scss */
+	/* line 316, ../_layouts/_grid.scss */
 	.u-size-11of24-sm {
 		width: 45.8333%;
 
 		*width: 45.8023%; }
 
-	/* line 314, ../_layouts/_grid.scss */
+	/* line 321, ../_layouts/_grid.scss */
 	.u-size-1of2-sm,
 	.u-size-12of24-sm {
 		width: 50%;
 
 		*width: 49.9690%; }
 
-	/* line 320, ../_layouts/_grid.scss */
+	/* line 327, ../_layouts/_grid.scss */
 	.u-size-13of24-sm {
 		width: 54.1667%;
 
 		*width: 54.1357%; }
 
-	/* line 325, ../_layouts/_grid.scss */
+	/* line 332, ../_layouts/_grid.scss */
 	.u-size-7of12-sm,
 	.u-size-14of24-sm {
 		width: 58.3333%;
 
 		*width: 58.3023%; }
 
-	/* line 331, ../_layouts/_grid.scss */
+	/* line 338, ../_layouts/_grid.scss */
 	.u-size-5of8-sm,
 	.u-size-15of24-sm {
 		width: 62.5000%;
 
 		*width: 62.4690%; }
 
-	/* line 337, ../_layouts/_grid.scss */
+	/* line 344, ../_layouts/_grid.scss */
 	.u-size-2of3-sm,
 	.u-size-16of24-sm {
 		width: 66.6667%;
 
 		*width: 66.6357%; }
 
-	/* line 343, ../_layouts/_grid.scss */
+	/* line 350, ../_layouts/_grid.scss */
 	.u-size-17of24-sm {
 		width: 70.8333%;
 
 		*width: 70.8023%; }
 
-	/* line 348, ../_layouts/_grid.scss */
+	/* line 355, ../_layouts/_grid.scss */
 	.u-size-3of4-sm,
 	.u-size-18of24-sm {
 		width: 75%;
 
 		*width: 74.9690%; }
 
-	/* line 354, ../_layouts/_grid.scss */
+	/* line 361, ../_layouts/_grid.scss */
 	.u-size-19of24-sm {
 		width: 79.1667%;
 
 		*width: 79.1357%; }
 
-	/* line 359, ../_layouts/_grid.scss */
+	/* line 366, ../_layouts/_grid.scss */
 	.u-size-5of6-sm,
 	.u-size-20of24-sm {
 		width: 83.3333%;
 
 		*width: 83.3023%; }
 
-	/* line 365, ../_layouts/_grid.scss */
+	/* line 372, ../_layouts/_grid.scss */
 	.u-size-7of8-sm,
 	.u-size-21of24-sm {
 		width: 87.5000%;
 
 		*width: 87.4690%; }
 
-	/* line 371, ../_layouts/_grid.scss */
+	/* line 378, ../_layouts/_grid.scss */
 	.u-size-11of12-sm,
 	.u-size-22of24-sm {
 		width: 91.6667%;
 
 		*width: 91.6357%; }
 
-	/* line 377, ../_layouts/_grid.scss */
+	/* line 384, ../_layouts/_grid.scss */
 	.u-size-23of24-sm {
 		width: 95.8333%;
 
 		*width: 95.8023%; }
 
-	/* line 382, ../_layouts/_grid.scss */
+	/* line 389, ../_layouts/_grid.scss */
 	.u-size-1-sm,
 	.u-size-1of1-sm,
 	.u-size-24of24-sm {
 		width: 100%; } }
 @media screen and (min-width: 48em) {
-	/* line 390, ../_layouts/_grid.scss */
+	/* line 397, ../_layouts/_grid.scss */
 	.u-size-1-md,
 	.u-size-1of1-md,
 	.u-size-1of2-md,
@@ -1595,166 +1607,166 @@ li > p {
 		*display: inline;
 		text-rendering: auto; }
 
-	/* line 439, ../_layouts/_grid.scss */
+	/* line 446, ../_layouts/_grid.scss */
 	.u-size-1of24-md {
 		width: 4.1667%;
 
 		*width: 4.1357%; }
 
-	/* line 444, ../_layouts/_grid.scss */
+	/* line 451, ../_layouts/_grid.scss */
 	.u-size-1of12-md,
 	.u-size-2of24-md {
 		width: 8.3333%;
 
 		*width: 8.3023%; }
 
-	/* line 450, ../_layouts/_grid.scss */
+	/* line 457, ../_layouts/_grid.scss */
 	.u-size-1of8-md,
 	.u-size-3of24-md {
 		width: 12.5000%;
 
 		*width: 12.4690%; }
 
-	/* line 456, ../_layouts/_grid.scss */
+	/* line 463, ../_layouts/_grid.scss */
 	.u-size-1of6-md,
 	.u-size-4of24-md {
 		width: 16.6667%;
 
 		*width: 16.6357%; }
 
-	/* line 462, ../_layouts/_grid.scss */
+	/* line 469, ../_layouts/_grid.scss */
 	.u-size-5of24-md {
 		width: 20.8333%;
 
 		*width: 20.8023%; }
 
-	/* line 467, ../_layouts/_grid.scss */
+	/* line 474, ../_layouts/_grid.scss */
 	.u-size-1of4-md,
 	.u-size-6of24-md {
 		width: 25%;
 
 		*width: 24.9690%; }
 
-	/* line 473, ../_layouts/_grid.scss */
+	/* line 480, ../_layouts/_grid.scss */
 	.u-size-7of24-md {
 		width: 29.1667%;
 
 		*width: 29.1357%; }
 
-	/* line 478, ../_layouts/_grid.scss */
+	/* line 485, ../_layouts/_grid.scss */
 	.u-size-1of3-md,
 	.u-size-8of24-md {
 		width: 33.3333%;
 
 		*width: 33.3023%; }
 
-	/* line 484, ../_layouts/_grid.scss */
+	/* line 491, ../_layouts/_grid.scss */
 	.u-size-3of8-md,
 	.u-size-9of24-md {
 		width: 37.5000%;
 
 		*width: 37.4690%; }
 
-	/* line 490, ../_layouts/_grid.scss */
+	/* line 497, ../_layouts/_grid.scss */
 	.u-size-5of12-md,
 	.u-size-10of24-md {
 		width: 41.6667%;
 
 		*width: 41.6357%; }
 
-	/* line 496, ../_layouts/_grid.scss */
+	/* line 503, ../_layouts/_grid.scss */
 	.u-size-11of24-md {
 		width: 45.8333%;
 
 		*width: 45.8023%; }
 
-	/* line 501, ../_layouts/_grid.scss */
+	/* line 508, ../_layouts/_grid.scss */
 	.u-size-1of2-md,
 	.u-size-12of24-md {
 		width: 50%;
 
 		*width: 49.9690%; }
 
-	/* line 507, ../_layouts/_grid.scss */
+	/* line 514, ../_layouts/_grid.scss */
 	.u-size-13of24-md {
 		width: 54.1667%;
 
 		*width: 54.1357%; }
 
-	/* line 512, ../_layouts/_grid.scss */
+	/* line 519, ../_layouts/_grid.scss */
 	.u-size-7of12-md,
 	.u-size-14of24-md {
 		width: 58.3333%;
 
 		*width: 58.3023%; }
 
-	/* line 518, ../_layouts/_grid.scss */
+	/* line 525, ../_layouts/_grid.scss */
 	.u-size-5of8-md,
 	.u-size-15of24-md {
 		width: 62.5000%;
 
 		*width: 62.4690%; }
 
-	/* line 524, ../_layouts/_grid.scss */
+	/* line 531, ../_layouts/_grid.scss */
 	.u-size-2of3-md,
 	.u-size-16of24-md {
 		width: 66.6667%;
 
 		*width: 66.6357%; }
 
-	/* line 530, ../_layouts/_grid.scss */
+	/* line 537, ../_layouts/_grid.scss */
 	.u-size-17of24-md {
 		width: 70.8333%;
 
 		*width: 70.8023%; }
 
-	/* line 535, ../_layouts/_grid.scss */
+	/* line 542, ../_layouts/_grid.scss */
 	.u-size-3of4-md,
 	.u-size-18of24-md {
 		width: 75%;
 
 		*width: 74.9690%; }
 
-	/* line 541, ../_layouts/_grid.scss */
+	/* line 548, ../_layouts/_grid.scss */
 	.u-size-19of24-md {
 		width: 79.1667%;
 
 		*width: 79.1357%; }
 
-	/* line 546, ../_layouts/_grid.scss */
+	/* line 553, ../_layouts/_grid.scss */
 	.u-size-5of6-md,
 	.u-size-20of24-md {
 		width: 83.3333%;
 
 		*width: 83.3023%; }
 
-	/* line 552, ../_layouts/_grid.scss */
+	/* line 559, ../_layouts/_grid.scss */
 	.u-size-7of8-md,
 	.u-size-21of24-md {
 		width: 87.5000%;
 
 		*width: 87.4690%; }
 
-	/* line 558, ../_layouts/_grid.scss */
+	/* line 565, ../_layouts/_grid.scss */
 	.u-size-11of12-md,
 	.u-size-22of24-md {
 		width: 91.6667%;
 
 		*width: 91.6357%; }
 
-	/* line 564, ../_layouts/_grid.scss */
+	/* line 571, ../_layouts/_grid.scss */
 	.u-size-23of24-md {
 		width: 95.8333%;
 
 		*width: 95.8023%; }
 
-	/* line 569, ../_layouts/_grid.scss */
+	/* line 576, ../_layouts/_grid.scss */
 	.u-size-1-md,
 	.u-size-1of1-md,
 	.u-size-24of24-md {
 		width: 100%; } }
 @media screen and (min-width: 64em) {
-	/* line 577, ../_layouts/_grid.scss */
+	/* line 584, ../_layouts/_grid.scss */
 	.u-size-1-lg,
 	.u-size-1of1-lg,
 	.u-size-1of2-lg,
@@ -1804,166 +1816,166 @@ li > p {
 		*display: inline;
 		text-rendering: auto; }
 
-	/* line 626, ../_layouts/_grid.scss */
+	/* line 633, ../_layouts/_grid.scss */
 	.u-size-1of24-lg {
 		width: 4.1667%;
 
 		*width: 4.1357%; }
 
-	/* line 631, ../_layouts/_grid.scss */
+	/* line 638, ../_layouts/_grid.scss */
 	.u-size-1of12-lg,
 	.u-size-2of24-lg {
 		width: 8.3333%;
 
 		*width: 8.3023%; }
 
-	/* line 637, ../_layouts/_grid.scss */
+	/* line 644, ../_layouts/_grid.scss */
 	.u-size-1of8-lg,
 	.u-size-3of24-lg {
 		width: 12.5000%;
 
 		*width: 12.4690%; }
 
-	/* line 643, ../_layouts/_grid.scss */
+	/* line 650, ../_layouts/_grid.scss */
 	.u-size-1of6-lg,
 	.u-size-4of24-lg {
 		width: 16.6667%;
 
 		*width: 16.6357%; }
 
-	/* line 649, ../_layouts/_grid.scss */
+	/* line 656, ../_layouts/_grid.scss */
 	.u-size-5of24-lg {
 		width: 20.8333%;
 
 		*width: 20.8023%; }
 
-	/* line 654, ../_layouts/_grid.scss */
+	/* line 661, ../_layouts/_grid.scss */
 	.u-size-1of4-lg,
 	.u-size-6of24-lg {
 		width: 25%;
 
 		*width: 24.9690%; }
 
-	/* line 660, ../_layouts/_grid.scss */
+	/* line 667, ../_layouts/_grid.scss */
 	.u-size-7of24-lg {
 		width: 29.1667%;
 
 		*width: 29.1357%; }
 
-	/* line 665, ../_layouts/_grid.scss */
+	/* line 672, ../_layouts/_grid.scss */
 	.u-size-1of3-lg,
 	.u-size-8of24-lg {
 		width: 33.3333%;
 
 		*width: 33.3023%; }
 
-	/* line 671, ../_layouts/_grid.scss */
+	/* line 678, ../_layouts/_grid.scss */
 	.u-size-3of8-lg,
 	.u-size-9of24-lg {
 		width: 37.5000%;
 
 		*width: 37.4690%; }
 
-	/* line 677, ../_layouts/_grid.scss */
+	/* line 684, ../_layouts/_grid.scss */
 	.u-size-5of12-lg,
 	.u-size-10of24-lg {
 		width: 41.6667%;
 
 		*width: 41.6357%; }
 
-	/* line 683, ../_layouts/_grid.scss */
+	/* line 690, ../_layouts/_grid.scss */
 	.u-size-11of24-lg {
 		width: 45.8333%;
 
 		*width: 45.8023%; }
 
-	/* line 688, ../_layouts/_grid.scss */
+	/* line 695, ../_layouts/_grid.scss */
 	.u-size-1of2-lg,
 	.u-size-12of24-lg {
 		width: 50%;
 
 		*width: 49.9690%; }
 
-	/* line 694, ../_layouts/_grid.scss */
+	/* line 701, ../_layouts/_grid.scss */
 	.u-size-13of24-lg {
 		width: 54.1667%;
 
 		*width: 54.1357%; }
 
-	/* line 699, ../_layouts/_grid.scss */
+	/* line 706, ../_layouts/_grid.scss */
 	.u-size-7of12-lg,
 	.u-size-14of24-lg {
 		width: 58.3333%;
 
 		*width: 58.3023%; }
 
-	/* line 705, ../_layouts/_grid.scss */
+	/* line 712, ../_layouts/_grid.scss */
 	.u-size-5of8-lg,
 	.u-size-15of24-lg {
 		width: 62.5000%;
 
 		*width: 62.4690%; }
 
-	/* line 711, ../_layouts/_grid.scss */
+	/* line 718, ../_layouts/_grid.scss */
 	.u-size-2of3-lg,
 	.u-size-16of24-lg {
 		width: 66.6667%;
 
 		*width: 66.6357%; }
 
-	/* line 717, ../_layouts/_grid.scss */
+	/* line 724, ../_layouts/_grid.scss */
 	.u-size-17of24-lg {
 		width: 70.8333%;
 
 		*width: 70.8023%; }
 
-	/* line 722, ../_layouts/_grid.scss */
+	/* line 729, ../_layouts/_grid.scss */
 	.u-size-3of4-lg,
 	.u-size-18of24-lg {
 		width: 75%;
 
 		*width: 74.9690%; }
 
-	/* line 728, ../_layouts/_grid.scss */
+	/* line 735, ../_layouts/_grid.scss */
 	.u-size-19of24-lg {
 		width: 79.1667%;
 
 		*width: 79.1357%; }
 
-	/* line 733, ../_layouts/_grid.scss */
+	/* line 740, ../_layouts/_grid.scss */
 	.u-size-5of6-lg,
 	.u-size-20of24-lg {
 		width: 83.3333%;
 
 		*width: 83.3023%; }
 
-	/* line 739, ../_layouts/_grid.scss */
+	/* line 746, ../_layouts/_grid.scss */
 	.u-size-7of8-lg,
 	.u-size-21of24-lg {
 		width: 87.5000%;
 
 		*width: 87.4690%; }
 
-	/* line 745, ../_layouts/_grid.scss */
+	/* line 752, ../_layouts/_grid.scss */
 	.u-size-11of12-lg,
 	.u-size-22of24-lg {
 		width: 91.6667%;
 
 		*width: 91.6357%; }
 
-	/* line 751, ../_layouts/_grid.scss */
+	/* line 758, ../_layouts/_grid.scss */
 	.u-size-23of24-lg {
 		width: 95.8333%;
 
 		*width: 95.8023%; }
 
-	/* line 756, ../_layouts/_grid.scss */
+	/* line 763, ../_layouts/_grid.scss */
 	.u-size-1-lg,
 	.u-size-1of1-lg,
 	.u-size-24of24-lg {
 		width: 100%; } }
 @media screen and (min-width: 80em) {
-	/* line 764, ../_layouts/_grid.scss */
+	/* line 771, ../_layouts/_grid.scss */
 	.u-size-1-xl,
 	.u-size-1of1-xl,
 	.u-size-1of2-xl,
@@ -2013,160 +2025,160 @@ li > p {
 		*display: inline;
 		text-rendering: auto; }
 
-	/* line 813, ../_layouts/_grid.scss */
+	/* line 820, ../_layouts/_grid.scss */
 	.u-size-1of24-xl {
 		width: 4.1667%;
 
 		*width: 4.1357%; }
 
-	/* line 818, ../_layouts/_grid.scss */
+	/* line 825, ../_layouts/_grid.scss */
 	.u-size-1of12-xl,
 	.u-size-2of24-xl {
 		width: 8.3333%;
 
 		*width: 8.3023%; }
 
-	/* line 824, ../_layouts/_grid.scss */
+	/* line 831, ../_layouts/_grid.scss */
 	.u-size-1of8-xl,
 	.u-size-3of24-xl {
 		width: 12.5000%;
 
 		*width: 12.4690%; }
 
-	/* line 830, ../_layouts/_grid.scss */
+	/* line 837, ../_layouts/_grid.scss */
 	.u-size-1of6-xl,
 	.u-size-4of24-xl {
 		width: 16.6667%;
 
 		*width: 16.6357%; }
 
-	/* line 836, ../_layouts/_grid.scss */
+	/* line 843, ../_layouts/_grid.scss */
 	.u-size-5of24-xl {
 		width: 20.8333%;
 
 		*width: 20.8023%; }
 
-	/* line 841, ../_layouts/_grid.scss */
+	/* line 848, ../_layouts/_grid.scss */
 	.u-size-1of4-xl,
 	.u-size-6of24-xl {
 		width: 25%;
 
 		*width: 24.9690%; }
 
-	/* line 847, ../_layouts/_grid.scss */
+	/* line 854, ../_layouts/_grid.scss */
 	.u-size-7of24-xl {
 		width: 29.1667%;
 
 		*width: 29.1357%; }
 
-	/* line 852, ../_layouts/_grid.scss */
+	/* line 859, ../_layouts/_grid.scss */
 	.u-size-1of3-xl,
 	.u-size-8of24-xl {
 		width: 33.3333%;
 
 		*width: 33.3023%; }
 
-	/* line 858, ../_layouts/_grid.scss */
+	/* line 865, ../_layouts/_grid.scss */
 	.u-size-3of8-xl,
 	.u-size-9of24-xl {
 		width: 37.5000%;
 
 		*width: 37.4690%; }
 
-	/* line 864, ../_layouts/_grid.scss */
+	/* line 871, ../_layouts/_grid.scss */
 	.u-size-5of12-xl,
 	.u-size-10of24-xl {
 		width: 41.6667%;
 
 		*width: 41.6357%; }
 
-	/* line 870, ../_layouts/_grid.scss */
+	/* line 877, ../_layouts/_grid.scss */
 	.u-size-11of24-xl {
 		width: 45.8333%;
 
 		*width: 45.8023%; }
 
-	/* line 875, ../_layouts/_grid.scss */
+	/* line 882, ../_layouts/_grid.scss */
 	.u-size-1of2-xl,
 	.u-size-12of24-xl {
 		width: 50%;
 
 		*width: 49.9690%; }
 
-	/* line 881, ../_layouts/_grid.scss */
+	/* line 888, ../_layouts/_grid.scss */
 	.u-size-13of24-xl {
 		width: 54.1667%;
 
 		*width: 54.1357%; }
 
-	/* line 886, ../_layouts/_grid.scss */
+	/* line 893, ../_layouts/_grid.scss */
 	.u-size-7of12-xl,
 	.u-size-14of24-xl {
 		width: 58.3333%;
 
 		*width: 58.3023%; }
 
-	/* line 892, ../_layouts/_grid.scss */
+	/* line 899, ../_layouts/_grid.scss */
 	.u-size-5of8-xl,
 	.u-size-15of24-xl {
 		width: 62.5000%;
 
 		*width: 62.4690%; }
 
-	/* line 898, ../_layouts/_grid.scss */
+	/* line 905, ../_layouts/_grid.scss */
 	.u-size-2of3-xl,
 	.u-size-16of24-xl {
 		width: 66.6667%;
 
 		*width: 66.6357%; }
 
-	/* line 904, ../_layouts/_grid.scss */
+	/* line 911, ../_layouts/_grid.scss */
 	.u-size-17of24-xl {
 		width: 70.8333%;
 
 		*width: 70.8023%; }
 
-	/* line 909, ../_layouts/_grid.scss */
+	/* line 916, ../_layouts/_grid.scss */
 	.u-size-3of4-xl,
 	.u-size-18of24-xl {
 		width: 75%;
 
 		*width: 74.9690%; }
 
-	/* line 915, ../_layouts/_grid.scss */
+	/* line 922, ../_layouts/_grid.scss */
 	.u-size-19of24-xl {
 		width: 79.1667%;
 
 		*width: 79.1357%; }
 
-	/* line 920, ../_layouts/_grid.scss */
+	/* line 927, ../_layouts/_grid.scss */
 	.u-size-5of6-xl,
 	.u-size-20of24-xl {
 		width: 83.3333%;
 
 		*width: 83.3023%; }
 
-	/* line 926, ../_layouts/_grid.scss */
+	/* line 933, ../_layouts/_grid.scss */
 	.u-size-7of8-xl,
 	.u-size-21of24-xl {
 		width: 87.5000%;
 
 		*width: 87.4690%; }
 
-	/* line 932, ../_layouts/_grid.scss */
+	/* line 939, ../_layouts/_grid.scss */
 	.u-size-11of12-xl,
 	.u-size-22of24-xl {
 		width: 91.6667%;
 
 		*width: 91.6357%; }
 
-	/* line 938, ../_layouts/_grid.scss */
+	/* line 945, ../_layouts/_grid.scss */
 	.u-size-23of24-xl {
 		width: 95.8333%;
 
 		*width: 95.8023%; }
 
-	/* line 943, ../_layouts/_grid.scss */
+	/* line 950, ../_layouts/_grid.scss */
 	.u-size-1-xl,
 	.u-size-1of1-xl,
 	.u-size-24of24-xl {
@@ -2346,7 +2358,7 @@ img.site-logo {
 /* line 28, ../_layouts/_theme-layouts.scss */
 .wrap {
 	position: relative; 
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;}
 
 /* line 46, ../_layouts/_theme-layouts.scss */
@@ -2833,7 +2845,7 @@ body.open {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display:         flex;
-		max-width: 1400px;
+		max-width: 1200px;
 		height: 130px;
 		padding: 0 16px;
 
@@ -4272,7 +4284,7 @@ object {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display:         flex;
-		max-width: 1400px;
+		max-width: 1200px;
 		margin: 1em auto; } }
 
 /* line 17, ../_components/_breadcrumb.scss */
