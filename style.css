@@ -3,7 +3,7 @@
  * Theme URI:         https://github.com/m-e-h/abraham
  * GitHub Theme URI:  m-e-h/abraham
  * Description:       A parent WordPress theme from The Diocese of Charlotte.
- * Version:           1.1.8
+ * Version:           1.1.9
  * Author:            Marty Helmick
  * Author URI:        https://github.com/m-e-h
  * Text Domain:       abraham
@@ -2329,6 +2329,7 @@ img.site-logo {
 
 /* line 1, ../_layouts/_theme-layouts.scss */
 .main-container {
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0.5em 0;
 	padding-top: 67px; }
@@ -2355,30 +2356,40 @@ img.site-logo {
 		-webkit-flex-direction: row;
 		    -ms-flex-direction: row;} }
 
-/* line 28, ../_layouts/_theme-layouts.scss */
+/* line 24, ../_layouts/_theme-layouts.scss */
+.page-template-jumbo .main-container {
+	max-width: 100%; }
+
+/* line 32, ../_layouts/_theme-layouts.scss */
 .wrap {
 	position: relative; 
 	max-width: 1200px;
 	margin: 0 auto;}
 
-/* line 46, ../_layouts/_theme-layouts.scss */
+/* line 50, ../_layouts/_theme-layouts.scss */
 .layout-1c .Sidebar,
 .layout-1c .site-main {
 	width: 100%;
 	padding: 0; }
-/* line 50, ../_layouts/_theme-layouts.scss */
+/* line 54, ../_layouts/_theme-layouts.scss */
 .layout-1c .Sidebar .widget,
   .layout-1c .site-main .widget {
 	margin: 0; }
 @media only screen and (min-width: 990px) {
-	/* line 55, ../_layouts/_theme-layouts.scss */
+	/* line 59, ../_layouts/_theme-layouts.scss */
 	.layout-1c .Sidebar {
 		        flex-direction: row; 
 
 		-webkit-flex-direction: row;
 		    -ms-flex-direction: row;} }
 
-/* line 67, ../_layouts/_theme-layouts.scss */
+/* line 70, ../_layouts/_theme-layouts.scss */
+.layout-2c-l .Sidebar-primary .wrap-flex {
+	        flex-direction: column; 
+
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;}
+/* line 75, ../_layouts/_theme-layouts.scss */
 .layout-2c-l .Sidebar-secondary {
 	        flex-direction: row;
 
@@ -2390,7 +2401,7 @@ img.site-logo {
 	-webkit-flex-wrap: wrap;
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap; }
-/* line 75, ../_layouts/_theme-layouts.scss */
+/* line 83, ../_layouts/_theme-layouts.scss */
 .layout-2c-l .Sidebar-secondary .widget {
 	margin: 0.5em;
 
@@ -2398,21 +2409,21 @@ img.site-logo {
 	    -ms-flex: 1 1 200px;
 	        flex: 1 1 200px; }
 @media only screen and (max-width: 599px) {
-	/* line 82, ../_layouts/_theme-layouts.scss */
+	/* line 90, ../_layouts/_theme-layouts.scss */
 	.layout-2c-l .site-main, .layout-2c-l .Sidebar-primary, .layout-2c-l .Sidebar-secondary {
 		width: 100%; } }
 
-/* line 92, ../_layouts/_theme-layouts.scss */
+/* line 100, ../_layouts/_theme-layouts.scss */
 .layout-2c-r .site-main {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
 	        order: 2; }
-/* line 96, ../_layouts/_theme-layouts.scss */
+/* line 104, ../_layouts/_theme-layouts.scss */
 .layout-2c-r .Sidebar-primary {
 	-webkit-order: 1;
 	-ms-flex-order: 1;
 	        order: 1; }
-/* line 100, ../_layouts/_theme-layouts.scss */
+/* line 108, ../_layouts/_theme-layouts.scss */
 .layout-2c-r .Sidebar-secondary {
 	        flex-direction: row;
 
@@ -2424,7 +2435,7 @@ img.site-logo {
 	-webkit-flex-wrap: wrap;
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap; }
-/* line 106, ../_layouts/_theme-layouts.scss */
+/* line 114, ../_layouts/_theme-layouts.scss */
 .layout-2c-r .Sidebar-secondary .widget {
 	margin: 0.5em;
 
@@ -2432,68 +2443,68 @@ img.site-logo {
 	    -ms-flex: 1 1 200px;
 	        flex: 1 1 200px; }
 @media only screen and (max-width: 599px) {
-	/* line 112, ../_layouts/_theme-layouts.scss */
+	/* line 120, ../_layouts/_theme-layouts.scss */
 	.layout-2c-r .site-main, .layout-2c-r .Sidebar-primary, .layout-2c-r .Sidebar-secondary {
 		width: 100%; } }
 
 @media only screen and (max-width: 599px) {
-	/* line 128, ../_layouts/_theme-layouts.scss */
+	/* line 136, ../_layouts/_theme-layouts.scss */
 	.layout-3c-l .site-main, .layout-3c-l .Sidebar-primary, .layout-3c-l .Sidebar-secondary {
 		width: 100%; } }
 
-/* line 134, ../_layouts/_theme-layouts.scss */
+/* line 142, ../_layouts/_theme-layouts.scss */
 .layout-3c-r .site-main {
 	-webkit-order: 3;
 	-ms-flex-order: 3;
 	        order: 3; }
-/* line 138, ../_layouts/_theme-layouts.scss */
+/* line 146, ../_layouts/_theme-layouts.scss */
 .layout-3c-r .Sidebar-primary {
 	-webkit-order: 1;
 	-ms-flex-order: 1;
 	        order: 1; }
-/* line 142, ../_layouts/_theme-layouts.scss */
+/* line 150, ../_layouts/_theme-layouts.scss */
 .layout-3c-r .Sidebar-secondary {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
 	        order: 2; }
 @media only screen and (max-width: 599px) {
-	/* line 147, ../_layouts/_theme-layouts.scss */
+	/* line 155, ../_layouts/_theme-layouts.scss */
 	.layout-3c-r .site-main, .layout-3c-r .Sidebar-primary, .layout-3c-r .Sidebar-secondary {
 		width: 100%; } }
 
-/* line 167, ../_layouts/_theme-layouts.scss */
+/* line 175, ../_layouts/_theme-layouts.scss */
 .layout-3c-c .site-main {
 	-webkit-flex: 1 100%;
 	    -ms-flex: 1 100%;
 	        flex: 1 100%; }
-/* line 170, ../_layouts/_theme-layouts.scss */
+/* line 178, ../_layouts/_theme-layouts.scss */
 .layout-3c-c .Sidebar-primary {
 	-webkit-flex: 1 100%;
 	    -ms-flex: 1 100%;
 	        flex: 1 100%; }
-/* line 173, ../_layouts/_theme-layouts.scss */
+/* line 181, ../_layouts/_theme-layouts.scss */
 .layout-3c-c .Sidebar-secondary {
 	-webkit-flex: 1 100%;
 	    -ms-flex: 1 100%;
 	        flex: 1 100%; }
 @media only screen and (min-width: 600px) {
-	/* line 177, ../_layouts/_theme-layouts.scss */
+	/* line 185, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .Sidebar-primary {
 		-webkit-flex: 1 50%;
 		    -ms-flex: 1 50%;
 		        flex: 1 50%; }
-	/* line 178, ../_layouts/_theme-layouts.scss */
+	/* line 186, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .Sidebar-secondary {
 		-webkit-flex: 1 50%;
 		    -ms-flex: 1 50%;
 		        flex: 1 50%; } }
 @media only screen and (min-width: 800px) {
-	/* line 181, ../_layouts/_theme-layouts.scss */
+	/* line 189, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .site-main {
 		-webkit-flex: 2 0;
 		    -ms-flex: 2 0;
 		        flex: 2 0; }
-	/* line 184, ../_layouts/_theme-layouts.scss */
+	/* line 192, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .Sidebar-primary {
 		-webkit-flex: 0 1 27%;
 		    -ms-flex: 0 1 27%;
@@ -2501,7 +2512,7 @@ img.site-logo {
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		        order: 1; }
-	/* line 188, ../_layouts/_theme-layouts.scss */
+	/* line 196, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .site-main {
 		-webkit-flex: 2 0;
 		    -ms-flex: 2 0;
@@ -2509,7 +2520,7 @@ img.site-logo {
 		-webkit-order: 2;
 		-ms-flex-order: 2;
 		        order: 2; }
-	/* line 192, ../_layouts/_theme-layouts.scss */
+	/* line 200, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .Sidebar-secondary {
 		-webkit-flex: 0 1 23%;
 		    -ms-flex: 0 1 23%;
@@ -2518,13 +2529,13 @@ img.site-logo {
 		-ms-flex-order: 3;
 		        order: 3; } }
 @media screen and (min-width: 800px) and (max-width: 990px) {
-	/* line 203, ../_layouts/_theme-layouts.scss */
+	/* line 211, ../_layouts/_theme-layouts.scss */
 	.layout-3c-c .Sidebar-secondary {
 		-webkit-flex: 1 100%;
 		    -ms-flex: 1 100%;
 		        flex: 1 100%; } }
 
-/* line 232, ../_layouts/_theme-layouts.scss */
+/* line 240, ../_layouts/_theme-layouts.scss */
 .comments-template,
 .entry,
 .widget {
@@ -2533,23 +2544,23 @@ img.site-logo {
 	padding: 1.5rem 2rem;
 	border-radius: 2px; 
 	background-color: #fff;}
-/* line 242, ../_layouts/_theme-layouts.scss */
+/* line 250, ../_layouts/_theme-layouts.scss */
 .comments-template:last-child,
   .entry:last-child,
   .widget:last-child {
 	margin-bottom: 0; }
 @media only screen and (min-width: 800px) {
-	/* line 232, ../_layouts/_theme-layouts.scss */
+	/* line 240, ../_layouts/_theme-layouts.scss */
 	.comments-template,
 	.entry,
 	.widget {
 		margin-bottom: 1.5rem; } }
 
-/* line 251, ../_layouts/_theme-layouts.scss */
+/* line 259, ../_layouts/_theme-layouts.scss */
 .widget {
 	padding: 1.5rem; }
 
-/* line 255, ../_layouts/_theme-layouts.scss */
+/* line 263, ../_layouts/_theme-layouts.scss */
 body.custom-background {
 	background-size: cover; }
 
