@@ -57,7 +57,7 @@ function abraham_register_sidebars() {
 			'description' => __( 'Typically on the screens left side.', 'abraham' ),
 			'before_title'  => '<h2 class="primary-title">',
 			'after_title'   => '</h2>',
-			'before_widget' => '<section id="%1$s" class="primary-item %2$s">',
+			'before_widget' => '<section id="%1$s" class="primary widget %2$s">',
 			'after_widget'  => '</section>',
 		)
 	);
@@ -69,7 +69,7 @@ function abraham_register_sidebars() {
 			'description' => __( 'Typically on the screens right side.', 'abraham' ),
 			'before_title'  => '<h2 class="secondary-title">',
 			'after_title'   => '</h2>',
-			'before_widget' => '<section id="%1$s" class="secondary-item %2$s">',
+			'before_widget' => '<section id="%1$s" class="secondary widget %2$s">',
 			'after_widget'  => '</section>',
 		)
 	);
@@ -81,7 +81,7 @@ function abraham_register_sidebars() {
 			'description' => __( 'Footer widgets.', 'abraham' ),
 			'before_title'  => '<h2 class="subsidiary-title">',
 			'after_title'   => '</h2>',
-			'before_widget' => '<section id="%1$s" class="subsidiary-item %2$s">',
+			'before_widget' => '<section id="%1$s" class="subsidiary widget %2$s">',
 			'after_widget'  => '</section>',
 		)
 	);
@@ -93,7 +93,7 @@ function abraham_register_sidebars() {
 			'description'   => __( 'Add services or features you\'d like to highlight.', 'abraham' ),
 			'before_title'  => '<h2 class="feature-title">',
 			'after_title'   => '</h2>',
-			'before_widget' => '<section id="%1$s" class="%1$s feature-item %2$s">',
+			'before_widget' => '<section id="%1$s" class="%1$s feature widget %2$s">',
 			'after_widget'  => '</section>',
 		)
 	);

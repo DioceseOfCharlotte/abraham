@@ -2,7 +2,11 @@
 
 	<aside class="Sidebar Footer-top grid"<?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
 
+  <div class="wrap-flex">
+
 		<?php dynamic_sidebar( 'subsidiary' ); // Displays the subsidiary sidebar. ?>
+
+  </div>
 
 	</aside><!-- #sidebar-subsidiary -->
 

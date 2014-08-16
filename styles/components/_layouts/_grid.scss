@@ -3,8 +3,15 @@
 * Grid
 *
 **/
+.wrap-flex {
+    display: flex;
+    max-width: $almostHuge;
+    margin: 0 auto;
+}
 
-
+.home-site-main {
+width: 100%;
+}
 .grid {
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     display: flex;

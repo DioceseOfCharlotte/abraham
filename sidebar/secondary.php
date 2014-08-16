@@ -2,7 +2,11 @@
 
 	<aside <?php hybrid_attr( 'sidebar', 'secondary' ); ?>>
 
+  <div class="wrap-flex">
+
 		<?php dynamic_sidebar( 'secondary' ); // Displays the secondary sidebar. ?>
+
+  </div>
 
 	</aside><!-- #sidebar-secondary -->
 

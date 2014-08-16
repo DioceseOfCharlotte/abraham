@@ -40,10 +40,15 @@ function meh_attr_footer( $attr ) {
   return $attr;
 }
 
-add_filter( 'hybrid_attr_content', 'meh_attr_content' );
 
-function meh_attr_content( $attr ) {
+add_filter( 'hybrid_attr_content', 'meh_attr_content_home' );
 
+function meh_attr_content_home( $attr ) {
+
+  if ( is_page_template( 'page-template-jumbo.php' ) )
+  $attr['class'] = 'home-site-main';
+
+  elseif ( !is_page_template( 'page-template-jumbo.php' ) )
   $attr['class'] = 'site-main';
 
   return $attr;

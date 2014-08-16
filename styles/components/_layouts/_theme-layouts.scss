@@ -1,6 +1,6 @@
         .main-container {
       @extend .grid;
-      //max-width: $almostHuge;
+      max-width: $almostHuge;
       margin: 0 auto;
       padding: .5em 0;
       padding-top: 67px;
@@ -19,6 +19,10 @@
 }
       }
 
+    }
+
+    .page-template-jumbo .main-container {
+      max-width: 100%;
     }
 
     // .open .main-container {
@@ -46,6 +50,10 @@
       .Sidebar,
       .site-main {
           width: 100%;
+          padding: 0;
+      .widget {
+        margin: 0;
+      }
     }
     @include wider {
       .Sidebar{
@@ -59,7 +67,11 @@
       }
       .Sidebar-primary {
         @extend .u-size-1of3;
+        .wrap-flex {
+          flex-direction: column;
+        }
       }
+
       .Sidebar-secondary {
         @extend .u-size-1of1;
         //margin-top: 1em;

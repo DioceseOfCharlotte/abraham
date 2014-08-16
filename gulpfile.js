@@ -52,7 +52,7 @@ gulp.task('images', function () {
 
 gulp.task('styles', function () {
     return gulp.src('styles/components/**/*.scss')
-        .pipe(sass({ style: 'expanded' }))
+        .pipe(sass({lineNumbers: true}))
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe(csscomb())
         .pipe(gulp.dest('./'))
