@@ -40,4 +40,20 @@
 
 
 
+.layout-1c {
+.features.columns-3 {
+display: flex;
+}
 
+.feature {
+  flex: 1;
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+
+.feature-title {
+padding: 1rem 0;
+}
+}

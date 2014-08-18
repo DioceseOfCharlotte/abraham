@@ -15,6 +15,7 @@ require_once( $abraham_dir . 'inc/custom-header.php'     );
 require_once( $abraham_dir . 'inc/site-logo.php'     	 );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'       );
+require_once( $abraham_dir . 'inc/required-plugins.php'       );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
@@ -49,7 +50,7 @@ function abraham_theme_setup() {
 		/* Load stylesheets. */
 	add_theme_support(
 		'hybrid-core-styles',
-		array( 'meh-fonts', 'meh-font-awesome', 'meh-fontastic', 'parent', 'style' )
+		array( 'meh-fonts', 'meh-font-awesome', /*'meh-fontastic',*/ 'parent', 'style' )
 	);
 
 	/* Enable custom template hierarchy. */

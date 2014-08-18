@@ -40,6 +40,6 @@
 
 </main><!-- #content -->
 
-<?php hybrid_get_sidebar( 'featured' ); // Loads the sidebar/featured.php template. ?>
+<?php do_action( 'woothemes_features', array( 'limit' => 10, 'before' => '<div class="wrap woothemes_features">', 'after' => '</div>' ) ); ?>
 
 <?php get_footer(); // Loads the footer.php template. ?>
