@@ -5102,36 +5102,11 @@ body.open .crumb-container .breadcrumbs {
  * Web Starter Kit team.
  *
  */
-/* line 44, ../_shame.scss */
-.layout-1c .features.columns-3 {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex; }
-/* line 48, ../_shame.scss */
-.layout-1c .feature {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-	        flex-direction: column;
-	padding: 1rem; 
-
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	        align-items: center;}
-/* line 56, ../_shame.scss */
-.layout-1c .card-single .gadget-title {
+/* line 45, ../_shame.scss */
+.card-single .card-title {
 	padding: 1rem 0; }
 
-/* line 61, ../_shame.scss */
-.woothemes_features {
-	width: 100%; }
-
-/* line 66, ../_shame.scss */
+/* line 49, ../_shame.scss */
 .gadgets.gadgets-card {
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -5145,7 +5120,7 @@ body.open .crumb-container .breadcrumbs {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 @media only screen and (min-width: 990px) {
-	/* line 66, ../_shame.scss */
+	/* line 49, ../_shame.scss */
 	.gadgets.gadgets-card {
 		        flex-direction: row;
 		max-width: 1200px;
@@ -5159,45 +5134,47 @@ body.open .crumb-container .breadcrumbs {
 		-ms-flex-pack: center;
 		        justify-content: center; } }
 
-/* line 83, ../_shame.scss */
+/* line 66, ../_shame.scss */
 .card-thumb {
 	overflow: hidden; 
 	width: 27%;}
 @media only screen and (min-width: 600px) {
-	/* line 83, ../_shame.scss */
+	/* line 66, ../_shame.scss */
 	.card-thumb {
 		width: 34%; } }
 @media only screen and (min-width: 990px) {
-	/* line 83, ../_shame.scss */
+	/* line 66, ../_shame.scss */
 	.card-thumb {
 		width: 100%;
 		height: 150px; }
-	/* line 95, ../_shame.scss */
+	/* line 78, ../_shame.scss */
 	.card-thumb img.attachment-gadget-square {
 		margin-top: -30%; } }
 
-/* line 100, ../_shame.scss */
+/* line 83, ../_shame.scss */
 .card-single {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display:         flex;
 	overflow-y: hidden;
 	position: relative;
-	width: 100%; 
+	width: 100%;
 	height: 75px;
 	margin-bottom: 1rem;
 	border-radius: 2px;
 	background-color: #fff;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	        transition:         transform 0.3s ease; 
 
 	-webkit-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;}
 @media only screen and (min-width: 600px) {
-	/* line 100, ../_shame.scss */
+	/* line 83, ../_shame.scss */
 	.card-single {
 		height: 200px; } }
 @media only screen and (min-width: 990px) {
-	/* line 100, ../_shame.scss */
+	/* line 83, ../_shame.scss */
 	.card-single {
 		        flex-direction: column;
 		height: 400px;
@@ -5205,11 +5182,11 @@ body.open .crumb-container .breadcrumbs {
 
 		-webkit-flex-direction: column;
 		    -ms-flex-direction: column;}
-	/* line 119, ../_shame.scss */
+	/* line 103, ../_shame.scss */
 	.card-single:first-child {
 		margin-left: 0; } }
 
-/* line 125, ../_shame.scss */
+/* line 109, ../_shame.scss */
 .card-content-wrap {
 	position: relative;
 	width: 66%; 
@@ -5219,11 +5196,11 @@ body.open .crumb-container .breadcrumbs {
 	    -ms-flex: 1;
 	        flex: 1;}
 @media only screen and (min-width: 990px) {
-	/* line 125, ../_shame.scss */
+	/* line 109, ../_shame.scss */
 	.card-content-wrap {
 		width: 100%; } }
 
-/* line 139, ../_shame.scss */
+/* line 123, ../_shame.scss */
 .fade-more {
 	position: absolute;
 	right: 0;
@@ -5236,7 +5213,7 @@ body.open .crumb-container .breadcrumbs {
 	font-style: italic;
 	text-align: center;
 	cursor: pointer; }
-/* line 152, ../_shame.scss */
+/* line 136, ../_shame.scss */
 .fade-more:after {
 	display: inline-block;
 	font-family: FontAwesome !important;
@@ -5247,3 +5224,25 @@ body.open .crumb-container .breadcrumbs {
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; }
+
+/* line 149, ../_shame.scss */
+.card-single.card-open {
+	display: block;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	        transition:         transform 0.3s ease-out; }
+
+/* line 155, ../_shame.scss */
+.effeckt-off-screen-nav-push-top {
+	bottom: auto;
+	width: 100%;
+	-webkit-transition: 500ms;
+	        transition: 500ms;
+	-webkit-transform: translateY(-100%);
+	        transform: translateY(-100%); }
+
+/* line 167, ../_shame.scss */
+.effeckt-off-screen-nav-push-top.effeckt-show {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	        transform: translateY(0%); }

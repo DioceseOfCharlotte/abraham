@@ -40,28 +40,11 @@
 
 
 
-.layout-1c {
-.features.columns-3 {
-display: flex;
-}
 
-.feature {
-  flex: 1;
-  display: flex;
-flex-direction: column;
-align-items: center;
-padding: 1rem;
-}
 
-.card-single .gadget-title {
+.card-single .card-title {
 padding: 1rem 0;
 }
-}
-
-.woothemes_features {
-width: 100%;
-}
-
 
 .gadgets.gadgets-card {
 display: flex;
@@ -107,6 +90,7 @@ background-color: #fff;
 border-radius: 2px;
 position:relative;
 width: 100%;
+  transition: transform .3s ease;
 
   @include medium {
 height: 200px;
@@ -160,4 +144,30 @@ line-height: 1;
 -moz-osx-font-smoothing: grayscale;
 }
 
+}
+
+.card-single.card-open {
+height: 100%;
+display: block;
+  transition: transform .3s ease-out;
+}
+
+.effeckt-off-screen-nav-push-top {
+  width: 100%;
+  bottom: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.effeckt-off-screen-nav-push-top.effeckt-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
 }
