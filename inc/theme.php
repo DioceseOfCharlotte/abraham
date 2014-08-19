@@ -26,6 +26,7 @@ function abraham_register_image_sizes() {
 
 	/* Sets the 'post-thumbnail' size. */
 	set_post_thumbnail_size( 150, 150, true );
+	add_image_size( 'medium-square', 300, 300, true );
 }
 
 /**
@@ -130,10 +131,10 @@ function abraham_enqueue_styles() {
 	wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Source+Code+Pro:400,700' );
 
 	/* Register Font Awesome. */
-	// wp_register_style( 'meh-font-awesome', '//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css' );
+	wp_register_style( 'meh-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	/* Register Fontastic Icons. */
-	wp_register_style( 'meh-fontastic', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+	//wp_register_style( 'meh-fontastic', '//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css' );
 
 	/* Gets ".min" suffix. */
 	$suffix = hybrid_get_min_suffix();
