@@ -1,3 +1,6 @@
+#### 1.2.2
+* fix for WP Coding Guidelines
+
 #### 1.1.0
 
 * Add support for Github Updater.
