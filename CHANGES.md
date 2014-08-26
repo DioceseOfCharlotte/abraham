@@ -1,4 +1,4 @@
-#### 1.2.2
+#### 1.1.2
 * fix for WP Coding Guidelines
 
 #### 1.1.0
