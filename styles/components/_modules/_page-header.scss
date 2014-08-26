@@ -30,3 +30,11 @@
     padding-bottom: $lineHeight * 3;
   }
 }
+
+img.site-logo {
+transition: opacity .2s ease-out;
+}
+
+.branding:hover img.site-logo {
+opacity: .6;
+}

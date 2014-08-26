@@ -15,7 +15,7 @@ require_once( $abraham_dir . 'inc/custom-header.php'     );
 require_once( $abraham_dir . 'inc/site-logo.php'     	 );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'       );
-require_once( $abraham_dir . 'inc/required-plugins.php'       );
+//require_once( $abraham_dir . 'inc/required-plugins.php'       );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
