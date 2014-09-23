@@ -1,61 +1,37 @@
-<!DOCTYPE html>
-<html <?php language_attributes( 'html' ); ?>>
-
+<?php
+/**
+ * The header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="content">
+ *
+ * @package Abraham
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-<?php wp_head(); // Hook required for scripts, styles, and other <head> items. ?>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+<?php wp_head(); ?>
 </head>
 
-<body <?php hybrid_attr( 'body' ); ?>>
+<body <?php body_class(); ?>>
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abraham' ); ?></a>
 
-		<div class="skip-link">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'abraham' ); ?></a>
-		</div><!-- .skip-link -->
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</div>
 
-		<header <?php hybrid_attr( 'header' ); ?>>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'abraham' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
-				<div class="app-bar-container">
-          <button class="menu-link btn-menu"><span></span></button>
-
-        <?php if ( display_header_text() && !has_site_logo() ) : // If user chooses to display header text. ?>
-				<div <?php hybrid_attr( 'branding' ); ?>>
-					<?php hybrid_site_title(); ?>
-					<?php hybrid_site_description(); ?>
-				</div><!-- #branding -->
-
-    <?php elseif ( display_header_text() && has_site_logo() ) : // If user chooses to display header text. ?>
-				<div <?php hybrid_attr( 'branding' ); ?>>
-					<?php the_site_logo() ?>
-					<?php hybrid_site_title(); ?>
-					<?php hybrid_site_description(); ?>
-				</div><!-- #branding -->
-
-		<?php elseif ( has_site_logo() ) : // If there's a header image. ?>
-				<div <?php hybrid_attr( 'branding' ); ?>>
-					<?php the_site_logo() ?>
-				</div><!-- #branding -->
-
-		<?php endif; // End check for header image. ?>
-
-		<section class="app-bar-actions">
-			<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
-        </section>
-        		</div>
-
-		</header><!-- #header -->
-
-			<?php if ( get_header_image() ) : // If there's a header image. ?>
-
-				<style type="text/css" id="custom-header-css">
-				            .app-bar {
-				      background: url(<?php header_image(); ?>) no-repeat scroll center;
-				      background-size: cover;
-				    }
-				</style>
-
-			<?php endif; // End check for header image. ?>
-
-			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
-			
-			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
-
-		<div class="main-container">
+	<div id="content" class="site-content">

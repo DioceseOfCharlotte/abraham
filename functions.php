@@ -5,83 +5,126 @@
  * @package Abraham
  */
 
-/* Get the template directory and make sure it has a trailing slash. */
-$abraham_dir = trailingslashit( get_template_directory() );
-
-/* Load the Hybrid Core framework and theme files. */
-require_once( $abraham_dir . 'library/hybrid.php'        );
-require_once( $abraham_dir . 'inc/custom-background.php' );
-require_once( $abraham_dir . 'inc/custom-header.php'     );
-require_once( $abraham_dir . 'inc/site-logo.php'     	 );
-require_once( $abraham_dir . 'inc/theme.php'             );
-require_once( $abraham_dir . 'inc/hybrid-mods.php'       );
-//require_once( $abraham_dir . 'inc/required-plugins.php'       );
-
-/* Launch the Hybrid Core framework. */
-new Hybrid();
-
-/* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'abraham_theme_setup', 5 );
-
 /**
- * Theme setup function.  This function adds support for theme features and defines the default theme
- * actions and filters.
- *
- * @since  1.0.0
- * @access public
- * @return void
+ * Set the content width based on the theme's design and stylesheet.
  */
-function abraham_theme_setup() {
+if ( ! isset( $content_width ) ) {
+	$content_width = 640; /* pixels */
+}
 
-	/* Theme layouts. */
-	add_theme_support( 
-		'theme-layouts', 
-		array(
-			'1c'        => __( '1 Column',                     'abraham' ),
-			'2c-l'      => __( '2 Columns: Content / Sidebar', 'abraham' ),
-			'2c-r'      => __( '2 Columns: Sidebar / Content', 'abraham' ),
-			'3c-l'      => __( '3 Columns: Content / Sidebar / Sidebar', 'abraham' ),
-			'3c-r'      => __( '3 Columns: Sidebar / Sidebar / Content', 'abraham' ),
-			'3c-c'      => __( '3 Columns: Sidebar / Content / Sidebar', 'abraham' )
-		),
-		array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) 
-	);
+if ( ! function_exists( 'abraham_setup' ) ) :
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function abraham_setup() {
 
-		/* Load stylesheets. */
-	add_theme_support(
-		'hybrid-core-styles',
-		array( 'meh-fonts', 'meh-font-awesome', /*'meh-fontastic',*/ 'parent', 'style' )
-	);
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on Abraham, use a find and replace
+	 * to change 'abraham' to the name of your theme in all the template files
+	 */
+	load_theme_textdomain( 'abraham', get_template_directory() . '/languages' );
 
-	/* Enable custom template hierarchy. */
-	add_theme_support( 'hybrid-core-template-hierarchy' );
-
-	/* The best thumbnail/image script ever. */
-	add_theme_support( 'get-the-image' );
-
-	/* Breadcrumbs. Yay! */
-	add_theme_support( 'breadcrumb-trail' );
-
-	/* Pagination. */
-	add_theme_support( 'loop-pagination' );
-
-	/* Nicer [gallery] shortcode implementation. */
-	add_theme_support( 'cleaner-gallery' );
-
-	/* Better captions for themes to style. */
-	add_theme_support( 'cleaner-caption' );
-
-	/* Automatically add feed links to <head>. */
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/* Post formats. */
-	add_theme_support( 
-		'post-formats', 
-		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
-	);
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+	//add_theme_support( 'post-thumbnails' );
 
-	add_theme_support( 'site-logo' );
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'abraham' ),
+	) );
 
-	/* Handle content width for embeds and images. */
-	hybrid_set_content_width( 1280 );
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+	) );
+
+	/*
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside', 'image', 'video', 'quote', 'link',
+	) );
+
+	// Setup the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'abraham_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 }
+endif; // abraham_setup
+add_action( 'after_setup_theme', 'abraham_setup' );
+
+/**
+ * Register widget area.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function abraham_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'abraham' ),
+		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+}
+add_action( 'widgets_init', 'abraham_widgets_init' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function abraham_scripts() {
+	wp_enqueue_style( 'abraham-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'abraham-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'abraham-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'abraham_scripts' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+//require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
