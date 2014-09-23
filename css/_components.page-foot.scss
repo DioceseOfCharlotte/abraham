@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #PAGE-FOOT
+\*------------------------------------*/
+
+.page-foot {
+    @include font-size(12px);
+    padding-bottom: 0;
+
+    @include media-query(xl) {
+        padding-bottom: $spacing-unit;
+    }
+
+}
+
+.credit {
+  align-items: baseline;
+}

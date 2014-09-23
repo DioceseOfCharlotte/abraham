@@ -1,0 +1,327 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+$header-border-width:   6px;
+$header-max-height:     480px;
+
+/**
+ * The site’s main page-head can have two different states:
+ *
+ * 1) Regular page-head with no backgrounds or extra treatments; it just
+ *    contains the site-title and nav.
+ * 2) A masthead that has a fluid-height (becoming fixed after a certain point)
+ *    which has a large background image, and some supporting text.
+ *
+ * The regular page-head is incredibly simple, but the masthead version has some
+ * slightly intermingled dependency with the wrapper that lives inside it.
+ */
+
+
+.app-bar {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-brand;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.app-bar-container {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app-bar.open,
+.app-bar.open ~ .main-container {
+  transform: translate(250px, 0);
+}
+
+.logo {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2em;
+  line-height: 60px;
+  margin: 0 16px;
+  padding: 0;
+  color: $color-tint;
+  float: none;
+  max-width: none;
+  font-weight: 300;
+  display: initial;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.app-bar-actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-menu-toggle {
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transition: background-color 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.side-menu-toggle img {
+  height: 24px;
+  width: 24px;
+}
+
+.side-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.side-menu-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 0;
+}
+
+.side-menu-toggle:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.side-menu-toggle span {
+position: relative;
+display: block;
+}
+
+.side-menu-toggle span, .side-menu-toggle span:before, .side-menu-toggle span:after {
+background-color: $color-brand-dark;
+width: 25px;
+margin: 0 auto;
+height: 3px;
+-webkit-transition: all 0.4s;
+-moz-transition: all 0.4s;
+-ms-transition: all 0.4s;
+-o-transition: all 0.4s;
+transition: all 0.4s;
+}
+
+.side-menu-toggle span:before, .side-menu-toggle span:after {
+position: absolute;
+  left: 0;
+top: -6px;
+content: " ";
+}
+
+.side-menu-toggle span:after {
+top: 6px;
+}
+
+
+.open .side-menu-toggle span {
+background: transparent;
+}
+
+.open .side-menu-toggle span:before {
+transform: rotate(45deg) translate(5px, 4px);
+}
+
+.open .side-menu-toggle span:after {
+transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.promote-layer {
+  /*
+  This may promote the layer to a composited
+  layer.
+
+  Replace with will-change when available
+
+  #perfmatters
+  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.menu-primary {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  background-color: $color-brand-dark;
+  color: $color-tint;
+  -webkit-transform: translate(-250px, 0);
+          transform: translate(-250px, 0);
+  overflow-y: auto;
+}
+
+.menu-primary.open {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.app-bar,
+.menu-primary.opened,
+.main-container {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+}
+
+.menu-primary h4 {
+    height: 50px;
+    padding: 13px 16px;
+    line-height: 1.4;
+}
+
+.menu-primary h4 {
+  background-color: white;
+  color: $color-brand-dark;
+}
+
+.menu-primary__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+li {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 0;
+
+
+&::before {
+  content: none;
+}
+
+a {
+  height: 50px;
+  padding: 13px 16px;
+  line-height: 1.4;
+  display: block;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  white-space: nowrap;
+
+&:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+&:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+}
+
+&:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+}
+}
+}
+
+.main-container {
+  margin: 0 auto;
+  /* Height of the header */
+  padding: 60px 16px 16px 16px;
+  min-height: 100%;
+}
+
+/** Larger Screens - desktops and tablets **/
+@include media-query(lg) {
+  .app-bar {
+    position: relative;
+  }
+
+  .app-bar.open,
+  .app-bar.open ~ .main-container {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+
+  .app-bar-container {
+    display: block;
+    height: 130px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    //background-color: $color-brand;
+  }
+
+  .logo {
+    float: left;
+    margin: 0;
+    padding: 0;
+    line-height: 130px;
+    font-size: 46px;
+  }
+  .app-bar-actions {
+    float: right;
+  }
+
+  .app-bar::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .side-menu-toggle {
+    display: none;
+  }
+
+  .menu-primary {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: none;
+            transition: none;
+    overflow-y: auto;
+  }
+
+  .menu-primary h4 {
+    display: none;
+  }
+
+  .menu-primary__list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 864px;
+    margin: 0 auto;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .menu-primary__list li {
+    border: none;
+  }
+}
+

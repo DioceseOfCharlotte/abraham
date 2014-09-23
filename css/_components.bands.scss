@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #BANDS
+\*------------------------------------*/
+
+.band {
+    padding-top:    $spacing-unit;
+    padding-bottom: $spacing-unit;
+
+    @include media-query(xl) {
+        padding-top:    $spacing-unit--large;
+        padding-bottom: $spacing-unit--large;
+    }
+
+}
+
+.band--large {
+    padding: $spacing-unit--large;
+}
+
+.band--highlight {
+    background-color: $color-band-highlight-background;
+}
+
+.band--tint {
+    background-color: $color-band-tint-background;
+}
+
+.band--flex {
+  display: flex;
+  justify-content: center;
+}

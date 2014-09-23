@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    #BOXES
+\*------------------------------------*/
+
+.box {
+    border-radius: $base-round;
+}
+
+.box--highlight {
+    background-color: $color-box-highlight-background;
+    border-bottom: 1px solid $color-box-highlight-border;
+}
+
+.box--tint {
+    background-color: $color-box-tint-background;
+}
+
+.card--staff {
+background-color: #fff;
+margin: .8rem;
+border-radius: $base-round;
+font-size: .8rem;
+word-break: break-word;
+position: relative;
+justify-content: space-between;
+min-height: 80px;
+.fa:before {
+    font-size: 1rem;
+    padding-right: 5px;
+    color: $color-brand-dark;
+}
+}
+
+.card-header {
+font-weight: bold;
+font-size: 1rem;
+padding-left: .5rem;
+&:hover {
+text-decoration: underline;
+}
+}
+
+.card__avatar {
+width: 80px;
+background-color: $color-gray-ui;
+//height: 80px;
+}
+
+.card__details {
+width: auto;
+display: flex;
+flex: 1;
+}
+
+.cardemail {
+width: 100%;
+text-align: center;
+}
+
+.card__layout {
+background: #FBFCFC;
+border-radius: $base-round;
+padding: .5rem;
+}
+
+.middle--info {
+display: flex;
+padding: 0 .5rem;
+justify-content: space-between;
+flex: 1;
+align-items: center;
+.layout__item {
+    width: auto;
+}
+}
+
+.card__phone-list {
+//flex: 1;
+text-align: right;
+}
+
+.card__titles {
+//flex: 1;
+}
+
+
+.facetwp-facet-staff_by_category.facetwp-type-radio {
+display: flex;
+justify-content: space-around;
+height: 50px;
+align-items: center;
+margin-bottom: 0;
+}
+
+.tabs--facet .facetwp-radio {
+background: #eee;
+margin: 0;
+text-align: center;
+padding: 0;
+width: 25%;
+height: 100%;
+border-radius: $base-round $base-round 0 0;
+border-right: 1px solid #fff;
+}
+
+.tabs--facet .facetwp-radio.selected {
+background: #FBFCFC;
+}

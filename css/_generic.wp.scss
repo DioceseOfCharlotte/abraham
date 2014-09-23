@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #WORDPRESS
+\*------------------------------------*/
+
+
+.form-allowed-tags {
+    white-space: pre;
+    word-wrap: break-word;
+    overflow: auto;
+    padding: $spacing-unit--small;
+    background-color: $color-pre-background;
+    border-radius: $base-round;
+    color: $color-pre;
+
+    code {
+      display: block;
+    }
+}
+
+.widget {
+flex: 1;
+margin: .5rem;
+padding: 1rem;
+}

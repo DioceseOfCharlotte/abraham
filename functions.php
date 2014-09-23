@@ -5,41 +5,68 @@
  * @package Abraham
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1100; /* pixels */
-}
+/* Get the template directory and make sure it has a trailing slash. */
+$abraham_dir = trailingslashit( get_template_directory() );
+
+/* Load the Hybrid Core framework and theme files. */
+require_once( $abraham_dir . 'hybrid-core/hybrid.php'    );
+
+/* Launch the Hybrid Core framework. */
+new Hybrid();
 
 if ( ! function_exists( 'abraham_setup' ) ) :
 /**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
+ * Theme setup function.  This function adds support for theme features and defines the default theme
+ * actions and filters.
  */
 function abraham_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Abraham, use a find and replace
-	 * to change 'abraham' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'abraham', get_template_directory() . '/languages' );
-
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+	/*
+	 * Enable custom template hierarchy.
+	 * See http://themehybrid.com/docs/template-hierarchy
+	 */
+	add_theme_support( 'hybrid-core-template-hierarchy' );
+
+	/*
+	 * Enable custom thumbnail/image script.
+	 * See http://themehybrid.com/docs/get-the-image
+	 */
+	add_theme_support( 'get-the-image' );
+
+	/*
+	 * Enable custom breadcrumbs.
+	 * See http://themehybrid.com/docs/breadcrumb-trail
+	 */
+	add_theme_support( 'breadcrumb-trail' );
+
+	/*
+	 * Enable paginated numbers for multi-posts.
+	 * See http://themehybrid.com/docs/loop-pagination
+	 */
+	add_theme_support( 'loop-pagination' );
 
 	/*
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside', 'image', 'video', 'audio', 'quote', 'link',
 	) );
+
+	/*
+	 * Enable support for Theme layouts.
+	 * See http://themehybrid.com/docs/theme-layouts
+	 */
+	add_theme_support( 'theme-layouts',	array(
+		'1c'        => __( '1 Column',                     'hybrid-base' ),
+		'2c-l'      => __( '2 Columns: Content / Sidebar', 'hybrid-base' ),
+		'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' ) 
+	), array( 
+		'default' => '2c-l' 
+		) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'abraham_custom_background_args', array(
@@ -54,6 +81,11 @@ add_action( 'after_setup_theme', 'abraham_setup' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Implement the Custom Background feature.
+ */
+require get_template_directory() . '/inc/custom-background.php';
 
 /**
  * Custom template tags for this theme.
