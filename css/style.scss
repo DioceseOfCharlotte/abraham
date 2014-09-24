@@ -1,10 +1,18 @@
-/*------------------------------------*\
-    #PROJECT
-\*------------------------------------*/
+/*
+Theme Name: Abraham
+Theme URI: http://underscores.me/
+Author: Marty Helmick
+Author URI: http://martyhelmick.com
+Description: A parent theme.
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: abraham
+*/
 
-/**
- * Master Sass file for PROJECT.
- */
+/*------------------------------------*\
+    #TABLE OF CONTENTS
+\*------------------------------------*/
 
 /**
  * SETTINGS             GLOBAL CONFIG AND SETTINGS
@@ -24,6 +32,7 @@
  * Box-sizing...........Apply global `border-box`.
  * Normalize.css........Use @necolas’ Normalize.css for consistency.
  * Reset................Remove default margins.
+ * H5BP.................A few general styles from HTML5 Boilerplate.
  * Shared...............High-level shared traits (mainly for vertical rhythm).
  *
  *
@@ -58,6 +67,7 @@
 @import "generic.box-sizing";
 @import "generic.normalize";
 @import "generic.reset";
+@import "generic.h5bp";
 @import "generic.shared";
 
 @import "base.page";

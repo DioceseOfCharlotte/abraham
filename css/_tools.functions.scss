@@ -7,14 +7,14 @@
 // Halve and double numbers, returning rounded integers. E.g.:
 //
 // .foo {
-//     padding: halve(12px);
+//     padding: half(12px);
 // }
 //
 @function quarter($inuit-number) {
     @return round($inuit-number / 4);
 }
 
-@function halve($inuit-number) {
+@function half($inuit-number) {
     @return round($inuit-number / 2);
 }
 

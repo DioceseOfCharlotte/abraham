@@ -14,10 +14,12 @@ require_once( $abraham_dir . 'hybrid-core/hybrid.php'    );
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
+/* Do theme setup on the 'after_setup_theme' hook. */
+add_action( 'after_setup_theme', 'abraham_setup' );
+
 if ( ! function_exists( 'abraham_setup' ) ) :
 /**
- * Theme setup function.  This function adds support for theme features and defines the default theme
- * actions and filters.
+ * Sets up theme defaults and registers support for various WordPress features.
  */
 function abraham_setup() {
 
@@ -48,6 +50,15 @@ function abraham_setup() {
 	 */
 	add_theme_support( 'loop-pagination' );
 
+  /*
+   * Load stylesheets.
+   * See http://themehybrid.com/docs/theme-layouts
+   */
+  add_theme_support(
+    'hybrid-core-styles',
+    array( 'meh-fonts', 'meh-font-awesome', 'parent', 'style',
+  ) );
+
 	/*
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
@@ -63,9 +74,9 @@ function abraham_setup() {
 	add_theme_support( 'theme-layouts',	array(
 		'1c'        => __( '1 Column',                     'hybrid-base' ),
 		'2c-l'      => __( '2 Columns: Content / Sidebar', 'hybrid-base' ),
-		'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' ) 
-	), array( 
-		'default' => '2c-l' 
+		'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' )
+	), array(
+		'default' => '2c-l'
 		) );
 
 	// Setup the WordPress core custom background feature.
@@ -75,7 +86,6 @@ function abraham_setup() {
 	) ) );
 }
 endif; // abraham_setup
-add_action( 'after_setup_theme', 'abraham_setup' );
 
 /**
  * Implement the Custom Header feature.
