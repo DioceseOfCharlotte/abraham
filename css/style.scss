@@ -51,6 +51,7 @@ Text Domain: abraham
  * COMPONENTS           DESIGNED, COMPLETE COMPONENTS
  * ==========           =============================
  * Buttons..............Fully styled buttons and their variants.
+ * Forms................Fully styled forms and inputs.
  *
  *
  * TRUMPS               HELPERS AND OVERRIDES
@@ -77,5 +78,6 @@ Text Domain: abraham
 @import "objects.buttons";
 
 @import "components.buttons";
+@import "components.forms";
 
 @import "trumps.widths";

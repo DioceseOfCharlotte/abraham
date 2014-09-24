@@ -1,12 +1,8 @@
-<?php if ( is_active_sidebar( 'primary' ) ) : // If the sidebar has widgets. ?>
+<?php if ( ! is_active_sidebar( 'primary' ) ) {
+  return;
+}
+?>
 
-	<aside <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
-
-	<div class="wrap-flex">
-
-			<?php dynamic_sidebar( 'primary' ); // Displays the primary sidebar. ?>
-
-	</div><!-- wrap-flex -->
-	</aside><!-- #sidebar-primary -->
-
-<?php endif; // End layout check. ?>
+<div <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
+  <?php dynamic_sidebar( 'primary' ); ?>
+</div><!-- #primary -->

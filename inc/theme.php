@@ -40,8 +40,8 @@ function abraham_widgets_init() {
 
 	hybrid_register_sidebar( array(
     'name'          => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar. Typically on the left.', 'abraham' ),
+		'id'            => 'primary',
+		'description'   => '',
     'before_widget' => '<aside id="%1$s" class="primary widget %2$s">',
     'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="primary-title">',
@@ -50,8 +50,8 @@ function abraham_widgets_init() {
 
 	hybrid_register_sidebar( array(
 		'name'          => _x( 'Secondary Sidebar', 'sidebar', 'abraham' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar. Typically on the right.', 'abraham' ),
+		'id'            => 'secondary',
+		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="secondary widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -60,8 +60,8 @@ function abraham_widgets_init() {
 
 		hybrid_register_sidebar( array(
     'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Footer widgets.', 'abraham' ),
+		'id'            => 'footer',
+		'description'   => '',
     'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
     'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="subsidiary-title">',

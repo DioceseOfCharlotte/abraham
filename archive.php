@@ -101,5 +101,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php hybrid_get_sidebar( 'primary' ); ?>
 <?php get_footer(); ?>

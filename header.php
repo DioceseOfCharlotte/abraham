@@ -35,20 +35,20 @@
     <?php wp_head(); ?>
   </head>
 
-<body <?php body_class(); ?>>
+<body <?php hybrid_attr( 'body' ); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abraham' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php hybrid_site_title(); ?>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'abraham' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<?php hybrid_get_menu( 'secondary' ); ?>
+
 	</header><!-- #masthead -->
+
+    <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
 	<div id="content" class="site-content">
