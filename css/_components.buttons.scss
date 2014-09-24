@@ -6,11 +6,7 @@
  * Extends `.btn` in _objects.buttons.scss.
  */
 
-.btn,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+.btn {
     background-color: $color-btn-background;
 
     &,

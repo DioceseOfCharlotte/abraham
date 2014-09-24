@@ -15,11 +15,7 @@
  * 5. Force all button-styled elements to appear clickable.
  * 6. Fixes odd inner spacing in IE7.
  */
-.btn,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+.btn {
     display: inline-block; /* [1] */
     vertical-align: middle; /* [2] */
     font: inherit; /* [3] */

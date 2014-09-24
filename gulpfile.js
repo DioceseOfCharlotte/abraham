@@ -9,15 +9,11 @@
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-//var composer = require('gulp-composer');
-//var del = require('del');
-//var runSequence = require('run-sequence');
+var rename = require('gulp-rename');
+var csscomb = require('gulp-csscomb');
+var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-var sass = require('gulp-ruby-sass');
-var csso = require('gulp-csso');
-var rename = require("gulp-rename");
-var csscomb = require('gulp-csscomb');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -31,15 +27,6 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
-// Lint JavaScript
-gulp.task('jshint', function () {
-  return gulp.src('scripts/**/*.js')
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-});
-
 // Optimize Images
 gulp.task('images', function () {
   return gulp.src('images/**/*')
@@ -50,32 +37,44 @@ gulp.task('images', function () {
     .pipe(gulp.dest('images'));
 });
 
+// Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
-    return gulp.src('styles/components/**/*.scss')
-        .pipe(sass({lineNumbers: true}))
-        .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-        .pipe(csscomb())
-        // .pipe(gulp.dest('./'))
-        // .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./'))
-        .pipe(csso())
-        .pipe(gulp.dest('./'))
-        .pipe(reload({stream:true}));;
+  // For best performance, don't add Sass partials to `gulp.src`
+  return gulp.src([
+    'css/*.scss',
+    'css/**/*.css',
+    'css/style.scss'
+  ])
+    .pipe($.changed('styles', {extension: '.scss'}))
+    .pipe($.rubySass({
+      style: 'expanded',
+      precision: 10
+    }))
+    .on('error', console.error.bind(console))
+    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(csscomb())
+    .pipe(gulp.dest('./'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./'))
+    // Concatenate And Minify Styles
+    .pipe($.if('*.css', $.csso()))
+    .pipe(gulp.dest('./'));
 });
 
-// Watch Files For Changes & Reload
-gulp.task('serve', function () {
+// Build and serve the output from the dist build
+gulp.task('serve', ['default'], function () {
   browserSync({
-    proxy: "local.wordpress-trunk.dev",
+    proxy: "local.wordpress.dev",
     host: "192.168.50.1"
      });
 
- gulp.watch(['**/*.php'], reload);
-  gulp.watch(['styles/**/*.scss'], ['styles']);
-  gulp.watch(['./*.css'], reload);
-  gulp.watch(['scripts/**/*.js'], ['jshint']);
+  gulp.watch(['**/*.php'], reload);
+  gulp.watch(['css/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['js/**/*.js'], reload);
   gulp.watch(['images/**/*'], reload);
 });
 
-//Default task
-gulp.task('default', ['styles', 'images', 'serve']);
+// Build Production Files, the Default Task
+gulp.task('default', function (cb) {
+  runSequence('styles', ['images'], cb);
+});
