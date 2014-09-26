@@ -1,7 +1,5 @@
 <?php
 /**
- * The header for our theme.
- *
  * Displays all of the <head> section and everything up till <div id="content">
  *
  * @package Abraham
@@ -36,18 +34,19 @@
   </head>
 
 <body <?php hybrid_attr( 'body' ); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abraham' ); ?></a>
+<div id="page" class="site">
+		<!--[if lt IE 9]>
+			  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and better experience.</p>
+		<![endif]-->
+		<a class="screen-reader" href="#main">Skip to main content</a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="site-branding">
 			<?php hybrid_site_title(); ?>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php hybrid_site_description(); ?>
 		</div>
-
 		<?php hybrid_get_menu( 'secondary' ); ?>
-
-	</header><!-- #masthead -->
+	</header>
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
