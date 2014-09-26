@@ -39,7 +39,6 @@ gulp.task('images', function () {
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
-  // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'css/*.scss',
     'css/**/*.css',
@@ -61,7 +60,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'));
 });
 
-// Build and serve the output from the dist build
+// Build and serve the output
 gulp.task('serve', ['default'], function () {
   browserSync({
     proxy: "local.wordpress.dev",
