@@ -5,7 +5,7 @@
  * @package Abraham
  */
 ?><!doctype html>
-<html <?php language_attributes( 'html' ); ?>>
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,7 @@
 		<!--[if lt IE 9]>
 			  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and better experience.</p>
 		<![endif]-->
-		<a class="screen-reader" href="#main">Skip to main content</a>
+		<a class="screen-reader-text visuallyhidden" href="#content">Skip to main content</a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="site-branding">
