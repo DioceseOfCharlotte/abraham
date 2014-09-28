@@ -36,7 +36,9 @@
 <body <?php hybrid_attr( 'body' ); ?>>
 <div id="page" class="site">
 		<!--[if lt IE 9]>
-			  <p class="browsehappy"><?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and more pleasant experience.', 'abraham'); ?></p>
+		  <div class="alert alert-warning">
+			  <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and more pleasant experience.', 'abraham'); ?>
+			</div>
 		<![endif]-->
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 
