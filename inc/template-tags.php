@@ -7,11 +7,11 @@
  * @package Abraham
  */
 
-if ( ! function_exists( 'abraham_paging_nav' ) ) :
+if ( ! function_exists( 'abraham_loop_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function abraham_paging_nav() {
+function abraham_loop_nav() {
 
 <?php if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
 
@@ -54,10 +54,57 @@ function abraham_entry_footer() {
 			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'abraham' ) ) ); ?>
 			<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'abraham' ), 'before' => '<br />' ) );
 }
+endif;
+
+if ( ! function_exists( 'abraham_comments_nav' ) ) :
+/**
+ * Display navigation to next/previous set of comments.
+ */
+function abraham_comments_nav() {
+if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : // Check for paged comments. ?>
+
+	<nav class="comments-nav" role="navigation" aria-labelledby="comments-nav-title">
+
+		<h3 id="comments-nav-title" class="screen-reader-text"><?php _e( 'Comments Navigation', 'abraham' ); ?></h3>
+
+		<?php previous_comments_link( _x( '&larr; Previous', 'comments navigation', 'abraham' ) ); ?>
+
+		<span class="page-numbers"><?php
+			/* Translators: Comments page numbers. 1 is current page and 2 is total pages. */
+			printf( __( 'Page %1$s of %2$s', 'abraham' ), get_query_var( 'cpage' ) ? absint( get_query_var( 'cpage' ) ) : 1, get_comment_pages_count() );
+		?></span>
+
+		<?php next_comments_link( _x( 'Next &rarr;', 'comments navigation', 'abraham' ) ); ?>
+
+	</nav><!-- .comments-nav -->
+
+<?php endif; // End check for paged comments.
+}
+endif;
+
+if ( ! function_exists( 'abraham_comments_error' ) ) :
+/**
+ * Display navigation to next/previous set of comments.
+ */
+function abraham_comments_error() {
+if ( pings_open() && !comments_open() ) : ?>
+
+	<p class="comments-closed pings-open">
+		<?php
+			/* Translators: The two %s are placeholders for HTML. The order can't be changed. */
+			printf( __( 'Comments are closed, but %strackbacks%s and pingbacks are open.', 'abraham' ), '<a href="' . esc_url( get_trackback_url() ) . '">', '</a>' );
+		?>
+	</p><!-- .comments-closed .pings-open -->
+
+<?php elseif ( !comments_open() ) : ?>
+
+	<p class="comments-closed">
+		<?php _e( 'Comments are closed.', 'abraham' ); ?>
+	</p><!-- .comments-closed -->
+
+<?php endif;
+}
 endif; ?>
-
-
-
 
 
 

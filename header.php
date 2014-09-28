@@ -38,7 +38,7 @@
 		<!--[if lt IE 9]>
 			  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and better experience.</p>
 		<![endif]-->
-		<a class="screen-reader-text visuallyhidden" href="#content">Skip to main content</a>
+		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="site-branding">
@@ -50,4 +50,4 @@
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-	<div id="content" class="site-content">
+	<div id="container" class="site-container">

@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<?php hybrid_get_sidebar( 'primary' ); ?>
 
 	<div id="primary" class="content-area">
 		<main <?php hybrid_attr( 'content' ); ?>>
@@ -18,7 +19,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php abraham_paging_nav(); ?>
+			<?php abraham_loop_nav(); ?>
 
 		<?php else : ?>
 
@@ -29,5 +30,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php hybrid_get_sidebar( 'primary' ); ?>
+<?php hybrid_get_sidebar( 'secondary' ); ?>
 <?php get_footer(); ?>
