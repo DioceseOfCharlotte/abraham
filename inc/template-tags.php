@@ -12,29 +12,61 @@ if ( ! function_exists( 'abraham_paging_nav' ) ) :
  * Display navigation to next/previous set of posts when applicable.
  */
 function abraham_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'abraham' ); ?></h1>
-		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'abraham' ) ); ?></div>
-			<?php endif; ?>
+<?php if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'abraham' ) ); ?></div>
-			<?php endif; ?>
+	<div class="loop-nav">
+		<?php previous_post_link( '<div class="prev">' . __( 'Previous Post: %link', 'abraham' ) . '</div>', '%title' ); ?>
+		<?php next_post_link(     '<div class="next">' . __( 'Next Post: %link',     'abraham' ) . '</div>', '%title' ); ?>
+	</div><!-- .loop-nav -->
 
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
+<?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
+
+	<?php loop_pagination(
+		array(
+			'prev_text' => _x( '&larr; Previous', 'posts navigation', 'abraham' ),
+			'next_text' => _x( 'Next &rarr;',     'posts navigation', 'abraham' )
+		)
+	); ?>
+
+<?php endif; // End check for type of page being viewed. ?>
 	<?php
 }
 endif;
 
+if ( ! function_exists( 'abraham_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function abraham_posted_on() { ?>
+				<span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
+				<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
+				<?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' );
+				 edit_post_link();
+}
+endif;
+
+if ( ! function_exists( 'abraham_entry_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function abraham_entry_footer() {
+			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'abraham' ) ) ); ?>
+			<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'abraham' ), 'before' => '<br />' ) );
+}
+endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+<?php
 if ( ! function_exists( 'abraham_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
@@ -58,68 +90,6 @@ function abraham_post_nav() {
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
-}
-endif;
-
-if ( ! function_exists( 'abraham_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function abraham_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
-
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
-
-	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'abraham' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
-
-	$byline = sprintf(
-		_x( 'by %s', 'post author', 'abraham' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
-
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
-
-}
-endif;
-
-if ( ! function_exists( 'abraham_entry_footer' ) ) :
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-function abraham_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'abraham' ) );
-		if ( $categories_list && abraham_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'abraham' ) . '</span>', $categories_list );
-		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'abraham' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'abraham' ) . '</span>', $tags_list );
-		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'abraham' ), __( '1 Comment', 'abraham' ), __( '% Comments', 'abraham' ) );
-		echo '</span>';
-	}
-
-	edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
