@@ -1,7 +1,10 @@
-<?php if ( has_nav_menu( 'primary' ) ) : // Check if there's a menu assigned to the 'primary' location. ?>
-	
+<?php if ( ! has_nav_menu( 'primary' ) ) {
+  return;
+}
+?>
+
 	<nav class="navdrawer-container" <?php hybrid_attr( 'menu', 'primary' ); ?>>
-	
+
 		<div class="menu-header"></div><!-- breadcrumb container -->
 
 		<?php wp_nav_menu(
@@ -16,5 +19,3 @@
 		); ?>
 
 	</nav><!-- #menu-primary -->
-
-<?php endif; // End check for menu. ?>

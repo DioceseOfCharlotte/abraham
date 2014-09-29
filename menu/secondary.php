@@ -1,4 +1,7 @@
-<?php if ( has_nav_menu( 'secondary' ) ) : // Check if there's a menu assigned to the 'secondary' location. ?>
+<?php if ( ! has_nav_menu( 'secondary' ) ) {
+  return;
+}
+?>
 
 	<nav <?php hybrid_attr( 'menu', 'secondary' ); ?>>
 
@@ -14,5 +17,3 @@
 		); ?>
 
 	</nav><!-- #menu-secondary -->
-
-<?php endif; // End check for menu. ?>

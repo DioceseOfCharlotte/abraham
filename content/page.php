@@ -19,9 +19,9 @@
     			  <?php wp_link_pages(); ?>
     		</div><!-- .entry-content -->
 
-    		<footer class="entry-footer">
-    			  <?php edit_post_link(); ?>
-    		</footer><!-- .entry-footer -->
+		<footer class="entry-footer">
+			<?php abraham_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 
   	<?php else : // If not viewing a single page. ?>
 

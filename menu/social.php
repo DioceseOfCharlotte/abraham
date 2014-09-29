@@ -1,4 +1,7 @@
-<?php if ( has_nav_menu( 'social' ) ) : // Check if there's a menu assigned to the 'social' location. ?>
+<?php if ( ! has_nav_menu( 'social' ) ) {
+  return;
+}
+?>
 
 	<?php wp_nav_menu(
 		array(
@@ -14,5 +17,3 @@
 			'fallback_cb'     => '',
 		)
 	); ?>
-
-<?php endif; // End check for menu. ?>
