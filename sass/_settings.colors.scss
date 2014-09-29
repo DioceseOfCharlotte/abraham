@@ -2,21 +2,67 @@
 //    #COLORS
 //\*------------------------------------*/
 
-// Literal color variables.
+$color-brand:       #0C7499;
+$color-brand-dark:  darken($color-brand, 10);
+$color-pink:        $color-brand;
+$color-gray:        #4e5758;
+$color-gray-light:  #ecf0f1;
+$color-gray-ui:     #bdc3c7;
+$color-green:       #73C395;
+$color-highlight:   #FBFCFC;
+$color-tint:        #f2f2f2;
+$color-positive:    #3f990f;
+$color-negative:    #9f102e;
 
-$color-pink:            #f43059;
-$color-gray-dark:       #424242;
-$color-gray-light:      #f7f6f6;
+// Page
+$inuit-base-background-color:   $color-gray-ui;
+$inuit-base-text-color:         $color-gray;
+$base-background-color:   $color-gray-ui;
 
+// Links
+$color-links:           $color-brand;
+$color-links-hover:     darken($color-links, 10);
+$color-links-carousel:  $color-gray-ui;
 
+// Text
+$color-code:            #BDC3C7;
+$color-pre-background:  #34495E;
+$color-pre:             #ECF0F1;
 
+// Buttons
+$color-btn:     $color-links;
 
+// Iconic
+$color-iconic:  $color-gray-ui;
 
-// Assign colors to more meaningful variables.
+// Page head
+$color-masthead:                #fff;
+$color-page-head-border:        $color-links-hover;
+$color-page-head:               #fff;
+$color-page-head-background:    $color-gray-light;
 
-// Text-level
-$color-text:            $color-gray-dark;
-$color-links:           $color-pink;
+// Site nav
+$color-site-nav:    $inuit-base-text-color;
+
+// Page foot
+$color-page-foot:               #fff;
+
+// Headings
+$color-headings:    $color-pink;
+$color-heading-sub: $color-gray;
+
+// Quotes
+$color-quote:           $color-gray-light;
+$color-quote--banner:   $color-gray;
+
+// Boxes
+$color-box-highlight-background:    $color-highlight;
+$color-box-highlight-border:        $color-gray-ui;
+$color-box-tint-background:         $color-gray-light;
+
+// Bands
+$color-band-highlight-background:   $color-highlight;
+$color-band-tint-background:        $color-tint;
 
 // Buttons
 $color-btn-text:        #fff;
