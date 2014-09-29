@@ -6,9 +6,9 @@
 
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 
-			<div class="entry-byline">
+			<div class="entry-meta">
 				<?php abraham_posted_on(); ?>
-			</div><!-- .entry-byline -->
+			</div><!-- .entry-meta -->
 
 		</header><!-- .entry-header -->
 
@@ -29,9 +29,9 @@
 
 			<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
 
-			<div class="entry-byline">
+			<div class="entry-meta">
 				<?php abraham_posted_on(); ?>
-			</div><!-- .entry-byline -->
+			</div><!-- .entry-meta -->
 
 		</header><!-- .entry-header -->
 

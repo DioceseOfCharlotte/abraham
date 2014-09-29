@@ -7,6 +7,24 @@
  * @package Abraham
  */
 
+if ( ! function_exists( 'abraham_loop_meta' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ */
+function abraham_loop_meta() { ?>
+
+        <div <?php hybrid_attr( 'loop-meta' ); ?>>
+        	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
+        	<?php if ( !is_paged() && $desc = hybrid_get_loop_description() ) : // Check if we're on page/1. ?>
+        		<div <?php hybrid_attr( 'loop-description' ); ?>>
+        			<?php echo $desc; ?>
+        		</div><!-- .loop-description -->
+        	<?php endif; // End paged check. ?>
+        </div><!-- .loop-meta -->
+	<?php
+}
+endif;
+
 if ( ! function_exists( 'abraham_loop_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
@@ -16,8 +34,8 @@ function abraham_loop_nav() {
 if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
 
 	<div class="loop-nav">
-		<?php previous_post_link( '<div class="prev">' . __( 'Previous Post: %link', 'abraham' ) . '</div>', '%title' ); ?>
-		<?php next_post_link(     '<div class="next">' . __( 'Next Post: %link',     'abraham' ) . '</div>', '%title' ); ?>
+		<?php previous_post_link( '<div class="prev">' . __( '%link', 'abraham' ) . '</div>', '&larr; %title' ); ?>
+		<?php next_post_link(     '<div class="next">' . __( '%link',     'abraham' ) . '</div>', '%title &rarr;' ); ?>
 	</div><!-- .loop-nav -->
 
 <?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results.
@@ -111,34 +129,7 @@ endif; ?>
 
 
 
-
-
 <?php
-if ( ! function_exists( 'abraham_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- */
-function abraham_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'abraham' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'abraham' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'abraham' ) );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
 
 /**
  * Returns true if a blog has more than 1 category.

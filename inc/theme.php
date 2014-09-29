@@ -12,6 +12,10 @@ add_action( 'widgets_init', 'abraham_widgets_init', 5 );
 /* Add custom scripts. */
 add_action( 'wp_enqueue_scripts', 'abraham_scripts', 5 );
 
+add_filter( 'excerpt_more',   'abraham_excerpt_more'   );
+
+add_filter( 'the_excerpt',    'abraham_the_excerpt', 5 );
+
 /**
  * Registers custom image sizes for the theme.
  */
@@ -85,4 +89,20 @@ function abraham_scripts() {
 
   /* Register Font Awesome. */
   wp_register_style( 'meh-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+}
+
+/**
+ * Set read-more links text and link it to the post.
+ */
+function abraham_excerpt_more( $more ) {
+	return ' &hellip; ';
+}
+
+function abraham_the_excerpt( $excerpt ) {
+
+	/* Translators: The %s is the post title shown to screen readers. */
+	$text = sprintf( __( 'Continue reading %s', 'saga' ), '<span class="screen-reader-text visuallyhidden">' . get_the_title() . '</span>' );
+	$more = sprintf( '<p class="more-link-wrap"><a href="%s" class="more-link">%s</a></p>', get_permalink(), $text );
+
+	return $excerpt . $more;
 }
