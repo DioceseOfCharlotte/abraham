@@ -9,7 +9,7 @@
 $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
-require_once( $abraham_dir . 'hybrid-core/hybrid.php'    );
+require_once( $abraham_dir . 'hybrid/hybrid.php'    );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
