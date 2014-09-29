@@ -10,6 +10,15 @@ $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
 require_once( $abraham_dir . 'hybrid/hybrid.php'    );
+require_once( $abraham_dir . 'inc/custom-background.php' );
+require_once( $abraham_dir . 'inc/custom-header.php'     );
+//require_once( $abraham_dir . 'inc/custom-colors.php'     );
+require_once( $abraham_dir . 'inc/theme.php'             );
+require_once( $abraham_dir . 'inc/customizer.php'        );
+require_once( $abraham_dir . 'inc/template-tags.php'     );
+require_once( $abraham_dir . 'inc/extras.php'            );
+require_once( $abraham_dir . 'inc/jetpack.php'           );
+require_once( $abraham_dir . 'inc/hybrid-mods.php'      );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
@@ -87,37 +96,4 @@ function abraham_setup() {
 }
 endif; // abraham_setup
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
-/**
- * Implement the Custom Background feature.
- */
-require get_template_directory() . '/inc/custom-background.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Abraham additions.
- */
-require get_template_directory() . '/inc/theme.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

@@ -1,123 +1,287 @@
 <?php
 /**
- * Edits to the Hybrid-core Framework
+ * Classes defined here will be used in templates throughout the theme.
  *
  */
 
-add_filter( 'hybrid_attr_header', 'meh_attr_header' );
+class Doc_Attributes {
 
-function meh_attr_header( $attr ) {
+	/* Attributes for major structural elements. */
+  public $body        					= ' logo';
+  public $header            		= ' app-bar';
+  public $footer     						= ' doc-card layout__item';
+  public $content        				= ' logo';
+  public $sidebar            		= ' app-bar';
+  public $menu     							= ' doc-card';
 
-	$attr['class'] = 'app-bar';
+	/* Header attributes. */
+  public $branding        			= ' logo';
+  public $site_title            = ' app-bar';
+  public $site_description     	= ' doc-card  sm-1-2 lg-1-3';
+
+	/* Loop attributes. */
+  public $loop_meta        			= ' logo';
+  public $loop_title            = ' app-bar';
+  public $loop_description     	= ' doc-card  sm-1-2 lg-1-3';
+
+	/* Post-specific attributes. */
+  public $post        					= ' logo';
+  public $entry_title           = ' app-bar';
+  public $entry_author     			= ' doc-card layout__item lg-1-3';
+  public $entry_published       = ' logo';
+  public $entry_content         = ' app-bar';
+  public $entry_summary     		= ' doc-card palm-1-1 sm-1-2 lg-1-3';
+  public $entry_terms      		 	= ' doc-card palm-1-1 sm-1-2 lg-1-3';
+
+	/* Comment specific attributes. */
+  public $comment            	 	= ' app-bar';
+  public $comment_author       	= ' logo';
+  public $comment_published    	= ' app-bar';
+  public $comment_permalink    	= ' doc-card layout__item lg-1-3';
+  public $comment_content      	= ' logo';
+
+
+
+  public function __construct() {
+
+/* Attributes for major structural elements. */
+add_filter( 'hybrid_attr_body',    					array( $this, 'body' 									) );
+add_filter( 'hybrid_attr_header',  					array( $this, 'header' 								) );
+add_filter( 'hybrid_attr_footer',  					array( $this, 'footer' 								) );
+add_filter( 'hybrid_attr_content', 					array( $this, 'content' 							) );
+add_filter( 'hybrid_attr_sidebar',  				array( $this, 'sidebar' 								) );
+add_filter( 'hybrid_attr_menu', 						array( $this, 'menu' 							) );
+
+/* Header attributes. */
+add_filter( 'hybrid_attr_branding',         array( $this, 'branding' 							) );
+add_filter( 'hybrid_attr_site-title',       array( $this, 'site_title' 						) );
+add_filter( 'hybrid_attr_site-description', array( $this, 'site_description' 			) );
+
+/* Loop attributes. */
+add_filter( 'hybrid_attr_loop-meta',        array( $this, 'loop_meta' 						) );
+add_filter( 'hybrid_attr_loop-title',       array( $this, 'loop_title' 						) );
+add_filter( 'hybrid_attr_loop-description', array( $this, 'loop_description' 			) );
+
+/* Post-specific attributes. */
+add_filter( 'hybrid_attr_post',            	array( $this, 'post' 									) );
+add_filter( 'hybrid_attr_entry-title',     	array( $this, 'entry_title' 					) );
+add_filter( 'hybrid_attr_entry-author',    	array( $this, 'entry_author' 					) );
+add_filter( 'hybrid_attr_entry-published', 	array( $this, 'entry_published' 			) );
+add_filter( 'hybrid_attr_entry-content',   	array( $this, 'entry_content' 				) );
+add_filter( 'hybrid_attr_entry-summary',   	array( $this, 'entry_summary' 				) );
+add_filter( 'hybrid_attr_entry-terms',     	array( $this, 'entry_terms' 					) );
+
+/* Comment specific attributes. */
+add_filter( 'hybrid_attr_comment',           array( $this, 'comment' 							) );
+add_filter( 'hybrid_attr_comment-author',    array( $this, 'comment_author' 			) );
+add_filter( 'hybrid_attr_comment-published', array( $this, 'comment_published' 		) );
+add_filter( 'hybrid_attr_comment-permalink', array( $this, 'comment_permalink' 		) );
+add_filter( 'hybrid_attr_comment-content',   array( $this, 'comment_content' 			) );
+}
+
+
+/* === STRUCTURAL === */
+
+public function body( $attr ) {
+
+	$attr['class']     .= $this->body;
 
 	return $attr;
 }
 
-add_filter( 'hybrid_attr_site-title', 'meh_attr_sitetitle' );
+public function header( $attr ) {
 
-function meh_attr_sitetitle( $attr ) {
+	$attr['class']       = $this->header;
 
-  $attr['class'] = 'site-title';
-
-  return $attr;
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_entry_title', 'meh_attr_entry_title' );
+public function footer( $attr ) {
 
-function meh_attr_entry_title( $attr ) {
+	$attr['class']        = $this->footer;
 
-  $attr['class'] .= ' xxlarge text-divider';
-
-  return $attr;
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_footer', 'meh_attr_footer' );
+public function content( $attr ) {
 
-function meh_attr_footer( $attr ) {
+	$attr['class']    = $this->content;
 
-  $attr['class'] = 'footer';
+	return $attr;
+}
 
-  return $attr;
+public function sidebar( $attr ) {
+
+	$attr['class']     .= $this->sidebar;
+
+	return $attr;
+}
+
+public function menu( $attr ) {
+
+	$attr['class']      .= $this->menu;
+
+	return $attr;
 }
 
 
-add_filter( 'hybrid_attr_content', 'meh_attr_content_home' );
+/* === HEADER === */
 
-function meh_attr_content_home( $attr ) {
+public function branding( $attr ) {
 
-  if ( is_page_template( 'page-template-jumbo.php' ) )
-  $attr['class'] = 'home-site-main';
+	$attr['class']         = $this->branding;
 
-  elseif ( !is_page_template( 'page-template-jumbo.php' ) )
-  $attr['class'] = 'site-main';
-
-  return $attr;
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_branding', 'meh_attr_branding' );
+public function site_title( $attr ) {
 
-function meh_attr_branding( $attr ) {
+	$attr['class']       = $this->site_title;
 
-  $attr['class'] = 'branding';
-  $attr['itemscope'] = '';
-  $attr['itemtype']  = 'http://schema.org/Organization';
-
-  return $attr;
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_site_description', 'meh_attr_site_description' );
+public function site_description( $attr ) {
 
-function meh_attr_site_description( $attr ) {
+	$attr['class']       = $this->site_description;
 
-  $attr['class'] = 'site_description';
-
-  return $attr;
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_sidebar', 'meh_attr_sidebar', 10, 2 );
 
-function meh_attr_sidebar( $attr, $context ) {
+/* === LOOP === */
 
-  $attr['class'] = "Sidebar-{$context} Sidebar";
+public function loop_meta( $attr ) {
 
-  return $attr;
+	$attr['class']     = $this->loop_meta;
+
+	return $attr;
 }
 
-add_filter( 'hybrid_attr_menu', 'meh_attr_menu', 10, 2 );
+public function loop_title( $attr ) {
 
-function meh_attr_menu( $attr, $context ) {
+	$attr['class']     = $this->loop_title;
 
-  $attr['class'] = "Menu-{$context} Menu";
-
-  return $attr;
+	return $attr;
 }
 
-add_filter('show_admin_bar', '__return_false');
+public function loop_description( $attr ) {
 
-if ( current_theme_supports( 'wsk-head' ) ) {
+	$attr['class']     = $this->loop_description;
 
-add_action( 'init', 'meh_clean_head' );
-function meh_clean_head() {
-
-remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
-remove_action('wp_head', 'feed_links', 2); // remove rss feed links (make sure you add them in yourself if youre using feedblitz or an rss service)
-remove_action('wp_head', 'feed_links_extra', 3); // removes all extra rss feed links
-remove_action('wp_head', 'index_rel_link'); // remove link to index page
-remove_action('wp_head', 'wlwmanifest_link'); // remove wlwmanifest.xml (needed to support windows live writer)
-remove_action('wp_head', 'start_post_rel_link', 10, 0); // remove random post link
-remove_action('wp_head', 'parent_post_rel_link', 10, 0); // remove parent post link
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // remove the next and previous post links
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 ); // remove shortlink
-remove_action('wp_head', 'rel_canonical', 10, 0 ); // remove canonical link
-remove_action( 'wp_head', 'wp_generator', 1 );
-
-
-remove_action( 'wp_head', 'hybrid_meta_charset',  0 );
-remove_action( 'wp_head', 'hybrid_doctitle',      0 );
-remove_action( 'wp_head', 'hybrid_meta_viewport', 1 );
-remove_action( 'wp_head', 'hybrid_meta_template', 1 );
-remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
+	return $attr;
 }
 
+
+/* === POSTS === */
+
+public function post( $attr ) {
+
+	$attr['class']     .= $this->post;
+
+	return $attr;
 }
+
+public function entry_title( $attr ) {
+
+	$attr['class']     .= $this->entry_title;
+
+	return $attr;
+}
+
+public function entry_author( $attr ) {
+
+	$attr['class']     .= $this->loop_description;
+
+	return $attr;
+}
+
+public function entry_published( $attr ) {
+
+	$attr['class']     .= $this->entry_published;
+
+	return $attr;
+}
+
+public function entry_content( $attr ) {
+
+	$attr['class']     .= $this->entry_content;
+
+	return $attr;
+}
+
+public function entry_summary( $attr ) {
+
+	$attr['class']     .= $this->entry_summary;
+
+	return $attr;
+}
+
+public function entry_terms( $attr ) {
+
+	$attr['class']     .= $this->entry_terms;
+
+	return $attr;
+}
+
+
+/* === COMMENTS === */
+
+
+function comment( $attr ) {
+
+	$attr['class']  	.= $this->comment;
+
+	return $attr;
+}
+
+function comment_author( $attr ) {
+
+	$attr['class']     .= $this->comment-author;
+
+	return $attr;
+}
+
+function comment_published( $attr ) {
+
+	$attr['class']    .= $this->comment-published;
+
+	return $attr;
+}
+
+function comment_permalink( $attr ) {
+
+	$attr['class']    .= $this->comment-permalink;
+
+	return $attr;
+}
+
+function comment_content( $attr ) {
+
+	$attr['class']    .= $this->comment-content;
+
+	return $attr;
+}
+
+
+}
+
+
+
+
+
+//   public public function card( $attr ) {
+//     if ( is_post_type_archive('employee') ) {
+//       $attr['id']        = 'post-' . get_the_ID();
+//       $attr['class']     = join( ' ', get_post_class($this->employee_card) );
+//     }
+//     else {
+//       $attr['id']        = 'post-' . get_the_ID();
+//       $attr['class']     = join( ' ', get_post_class() );
+//     }
+//     return $attr;
+//   }
+
+// }
+
+$ShinyAtts = new Doc_Attributes();

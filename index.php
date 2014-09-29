@@ -9,8 +9,7 @@ get_header(); ?>
 
 <?php hybrid_get_sidebar( 'primary' ); ?>
 
-	<div id="primary" class="content-area">
-		<main <?php hybrid_attr( 'content' ); ?>>
+<main <?php hybrid_attr( 'content' ); ?>>
 
 	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
 
@@ -34,8 +33,7 @@ get_header(); ?>
 
 		<?php endif; // End check for posts. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</main><!-- #main -->
 
 <?php hybrid_get_sidebar( 'secondary' ); ?>
 
