@@ -40,9 +40,9 @@ gulp.task('images', function () {
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'css/*.scss',
-    'css/**/*.css',
-    'css/style.scss'
+    'sass/*.scss',
+    'sass/**/*.css',
+    'sass/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.rubySass({
@@ -68,7 +68,7 @@ gulp.task('serve', ['default'], function () {
      });
 
   gulp.watch(['**/*.php'], reload);
-  gulp.watch(['css/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['sass/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['js/**/*.js'], reload);
   gulp.watch(['images/**/*'], reload);
 });
