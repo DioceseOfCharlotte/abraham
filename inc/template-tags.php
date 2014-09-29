@@ -13,23 +13,23 @@ if ( ! function_exists( 'abraham_loop_nav' ) ) :
  */
 function abraham_loop_nav() {
 
-<?php if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
+if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
 
 	<div class="loop-nav">
 		<?php previous_post_link( '<div class="prev">' . __( 'Previous Post: %link', 'abraham' ) . '</div>', '%title' ); ?>
 		<?php next_post_link(     '<div class="next">' . __( 'Next Post: %link',     'abraham' ) . '</div>', '%title' ); ?>
 	</div><!-- .loop-nav -->
 
-<?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
+<?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results.
 
-	<?php loop_pagination(
+	loop_pagination(
 		array(
 			'prev_text' => _x( '&larr; Previous', 'posts navigation', 'abraham' ),
 			'next_text' => _x( 'Next &rarr;',     'posts navigation', 'abraham' )
 		)
-	); ?>
+	);
 
-<?php endif; // End check for type of page being viewed. ?>
+endif; // End check for type of page being viewed. ?>
 	<?php
 }
 endif;
@@ -51,8 +51,8 @@ if ( ! function_exists( 'abraham_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function abraham_entry_footer() {
-			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'abraham' ) ) ); ?>
-			<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'abraham' ), 'before' => '<br />' ) );
+			hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'abraham' ) ) );
+			hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'abraham' ), 'before' => '<br />' ) );
 }
 endif;
 
