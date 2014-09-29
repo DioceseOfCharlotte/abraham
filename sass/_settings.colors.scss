@@ -15,8 +15,8 @@ $color-positive:    #3f990f;
 $color-negative:    #9f102e;
 
 // Page
-$inuit-base-background-color:   $color-gray-ui;
-$inuit-base-text-color:         $color-gray;
+$base-background-color:   $color-gray-ui;
+$base-text-color:         $color-gray;
 $base-background-color:   $color-gray-ui;
 
 // Links
@@ -28,6 +28,7 @@ $color-links-carousel:  $color-gray-ui;
 $color-code:            #BDC3C7;
 $color-pre-background:  #34495E;
 $color-pre:             #ECF0F1;
+$color-text:            $base-text-color;
 
 // Buttons
 $color-btn:     $color-links;
@@ -42,7 +43,7 @@ $color-page-head:               #fff;
 $color-page-head-background:    $color-gray-light;
 
 // Site nav
-$color-site-nav:    $inuit-base-text-color;
+$color-site-nav:    $base-text-color;
 
 // Page foot
 $color-page-foot:               #fff;
