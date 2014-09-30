@@ -3,7 +3,6 @@
 }
 ?>
 
-<div class="crumb-container">
 	<?php breadcrumb_trail(
 		array(
 			'container'     => 'nav',
@@ -12,4 +11,3 @@
 			'show_on_front' => false,
 		)
 	); ?>
-</div>

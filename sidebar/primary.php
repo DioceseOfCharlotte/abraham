@@ -3,6 +3,6 @@
 }
 ?>
 
-<div <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
+<div <?php hybrid_attr( 'sidebar_1', 'primary' ); ?>>
   <?php dynamic_sidebar( 'primary' ); ?>
 </div><!-- #primary -->

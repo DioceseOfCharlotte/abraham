@@ -55,4 +55,4 @@
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-	<div class="content-area">
+	<div class="layout main-container">
