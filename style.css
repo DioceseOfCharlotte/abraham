@@ -57,6 +57,26 @@ Text Domain: abraham
  * ======               =====================
  * Widths...............Width helper classes.
  */
+.shadow-z1 {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	}
+
+.shadow-z2 {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+	}
+
+.shadow-z3 {
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+	}
+
+.shadow-z4 {
+	box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
+	}
+
+.shadow-z5 {
+	box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
+	}
+
 /*------------------------------------*\
     #BOX-SIZING
 \*------------------------------------*/
@@ -2150,21 +2170,32 @@ input[type="submit"] {
 	display: inline-block;
 	/* [5] */
 	overflow: visible;
+	min-height: 26px;
 	/* [4] */
 	margin: 0;
+	padding: 12px 32px 8px;
 	padding: 12px 24px;
 	/* [4] */
 	border: none;
 	/* [6] */
-	outline: none;
+	outline: 0;
+	color: white;
+	background-color: #8aa2de;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
 	/* [2] */
 	font: inherit;
 	/* [3] */
 	text-align: center;
 	/* [1] */
 	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
 	/* [4] */
 	cursor: pointer;
+	-webkit-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
+	        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
+	-webkit-transform: translate3d(0, 0, 0);
 	/**
    * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
    */
@@ -2186,8 +2217,11 @@ input[type="submit"],
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	text-decoration: none;
-	/* [4] */
+	color: white;
+	background-color: #8399d2;
+	box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36);
+	-webkit-transform: translate3d(0, -0.5px, 0);
+	        transform: translate3d(0, 0, 1);
 	}
 .btn::-moz-focus-inner,
 button::-moz-focus-inner,
