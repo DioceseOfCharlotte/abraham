@@ -7,13 +7,7 @@
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <?php if ( is_home () ) : ?>
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-    <?php endif; ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -29,7 +23,6 @@
     <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- Hook required for scripts, styles, and other <head> items -->
     <?php wp_head(); ?>
   </head>
 
