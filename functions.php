@@ -95,5 +95,3 @@ function abraham_setup() {
 	) ) );
 }
 endif; // abraham_setup
-
-
