@@ -20,6 +20,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+background-color: #8aa2de;
+color: white;
+letter-spacing: .15em;
+padding: 12px 32px 8px;
+min-height: 26px;
+text-decoration: none;
+text-transform: uppercase;
+-webkit-transform: translate3d(0, 0, 0);
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+-moz-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
+-webkit-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
+transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
     display: inline-block; /* [1] */
     vertical-align: middle; /* [2] */
     font: inherit; /* [3] */
@@ -28,14 +40,19 @@ input[type="submit"] {
     margin:  0; /* [4] */
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
-    outline: none;
+    outline: 0;
     padding: half($base-spacing-unit) $base-spacing-unit;
 
     &,
     &:hover,
     &:active,
     &:focus {
-        text-decoration: none; /* [4] */
+background-color: #8399d2;
+color: white;
+box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36);
+-moz-transform: translate3d(0, 0, 1);
+-webkit-transform: translate3d(0, -0.5px, 0);
+transform: translate3d(0, 0, 1);
     }
 
     /**
