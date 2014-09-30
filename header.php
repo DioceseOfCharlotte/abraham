@@ -41,12 +41,12 @@
 			</div>
 		<![endif]-->
 
-<div id="page" class="site">
+<div class="site">
 
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
-		<div class="site-branding">
+		<div <?php hybrid_attr( 'branding' ); ?>>
 			<?php hybrid_site_title(); ?>
 			<?php hybrid_site_description(); ?>
 		</div>
@@ -55,4 +55,4 @@
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-	<div id="container" class="content-area">
+	<div class="content-area">
