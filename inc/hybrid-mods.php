@@ -7,48 +7,48 @@
 class Doc_Attributes {
 
 	/* Attributes for major structural elements. */
-	public $body                  = ' ';	// get_body_class()
-	public $header                = 'app-bar'; 	// na
-	public $footer                = 'layout footer-layout'; 	// na
-	public $content_1c            = ' layout__item'; 	// content
-	public $content_2cl           = ' layout__item  md-1-2'; 	// content
-	public $content_2cr           = ' layout__item  md-5-8'; 	// content
-	public $sidebar_1c     		  = ' layout__item';	// sidebar
-	public $sidebar_2cl    		  = ' layout__item';	// sidebar
-	public $sidebar_2cr    		  = ' layout__item';	// sidebar
-	public $sidebar_1_1c     		  = ' layout__item';	// sidebar
-	public $sidebar_1_2cl    		  = ' layout__item  md-5-24';	// sidebar
-	public $sidebar_1_2cr    		  = ' layout__item  md-3-8';	// sidebar
-	public $sidebar_2_1c     		  = ' layout__item';	// sidebar
-	public $sidebar_2_2cl    		  = ' layout__item  md-7-24';	// sidebar
-	public $sidebar_2_2cr    		  = ' layout__item  md-3-8';	// sidebar
-	public $menu                  = ' ';	// menu
+	public $body                  	= ' ';	// get_body_class()
+	public $header                	= 'app-bar'; 	// na
+	public $footer                	= 'layout footer-layout'; 	// na
+	public $content_1c            	= ' layout__item'; 	// content
+	public $content_2cl           	= ' layout__item  md-1-2'; 	// content
+	public $content_2cr           	= ' layout__item  md-5-8'; 	// content
+	public $sidebar_1c     		  	= ' layout__item';	// sidebar
+	public $sidebar_2cl    			= ' layout__item';	// sidebar
+	public $sidebar_2cr    			= ' layout__item';	// sidebar
+	public $sidebar_1_1c     		= ' layout__item';	// sidebar
+	public $sidebar_1_2cl    		= ' layout__item  md-5-24';	// sidebar
+	public $sidebar_1_2cr    		= ' layout__item  md-3-8';	// sidebar
+	public $sidebar_2_1c     		= ' layout__item';	// sidebar
+	public $sidebar_2_2cl    		= ' layout__item  md-7-24';	// sidebar
+	public $sidebar_2_2cr    		= ' layout__item  md-3-8';	// sidebar
+	public $menu                  	= ' ';	// menu
 
 	/* Header attributes. */
-	public $branding              = 'branding';	// na
-	public $site_title            = 'logo site-title';	// na
-	public $site_description      = 'site-description';	// na
+	public $branding              	= 'branding';	// na
+	public $site_title            	= 'logo site-title';	// na
+	public $site_description      	= 'site-description';	// na
 
 	/* Loop attributes. */
-	public $loop_meta             = ' ';	// loop-meta
-	public $loop_title            = ' ';	// loop-title
-	public $loop_description      = ' ';	// loop-description
+	public $loop_meta             	= ' ';	// loop-meta
+	public $loop_title            	= ' ';	// loop-title
+	public $loop_description      	= ' ';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  = ' ';	// get_post_class()
-	public $entry_title           = ' ';	// entry-title
-	public $entry_author          = ' ';	// entry-author
-	public $entry_published       = ' ';	// entry-published updated
-	public $entry_content         = ' ';	// entry-content
-	public $entry_summary         = ' ';	// entry-summary
-	public $entry_terms           = ' ';	// entry-terms
+	public $post                  	= ' ';	// get_post_class()
+	public $entry_title           	= ' ';	// entry-title
+	public $entry_author          	= ' ';	// entry-author
+	public $entry_published       	= ' ';	// entry-published updated
+	public $entry_content         	= ' ';	// entry-content
+	public $entry_summary         	= ' ';	// entry-summary
+	public $entry_terms           	= ' ';	// entry-terms
 
 	/* Comment specific attributes. */
-	public $comment               = ' ';	// comment-get_comment_ID()
-	public $comment_author        = ' ';	// comment-author
-	public $comment_published     = ' ';	// comment-published
-	public $comment_permalink     = ' ';	// comment-permalink
-	public $comment_content       = ' ';	// comment-content
+	public $comment               	= ' ';	// comment-get_comment_ID()
+	public $comment_author        	= ' ';	// comment-author
+	public $comment_published     	= ' ';	// comment-published
+	public $comment_permalink     	= ' ';	// comment-permalink
+	public $comment_content       	= ' ';	// comment-content
 
 
 

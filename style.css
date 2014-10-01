@@ -2161,7 +2161,6 @@ a:hover, a:active {
  *    buttons).
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
- * 6. Fixes odd inner spacing in IE7.
  */
 .btn,
 button,
@@ -2170,25 +2169,25 @@ input[type="reset"],
 input[type="submit"] {
 	display: inline-block;
 	/* [5] */
-	overflow: visible;
+	overflow: hidden;
 	position: relative;
 	/* [4] */
 	margin: 0;
 	margin: 10px 1px;
-	padding: 8px 24px;
+	padding: 12px 24px;
 	/* [4] */
 	border: 0;
-	/* [6] */
 	border-radius: 2px;
 	outline: none !important;
 	/* [2] */
 	font: inherit;
+	line-height: 1;
 	/* [3] */
 	text-align: center;
 	/* [1] */
 	vertical-align: middle;
 	text-decoration: none;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	/* [4] */
 	cursor: pointer;
