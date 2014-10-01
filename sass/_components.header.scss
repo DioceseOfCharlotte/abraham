@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+.app-bar {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4285f4;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.app-bar-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+.app-bar-actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 2;
+}
+
+
+
+
+@media all and (min-width: 990px) {
+  .app-bar {
+    position: relative;
+  }
+
+
+    .app-bar-container {
+    display: block;
+    height: 130px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+
+    .app-bar-actions {
+    float: right;
+  }
+
+  .app-bar::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+
+}

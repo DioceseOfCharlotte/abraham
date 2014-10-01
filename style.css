@@ -2624,6 +2624,75 @@ input.form-input-rounded,
 		}
 	}
 /*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+.app-bar {
+	display: block;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #4285f4;
+	}
+
+.app-bar-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display:         flex;
+	        flex-direction: row;
+	position: relative;
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	}
+
+.app-bar-actions {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display:         flex;
+	        flex-direction: row;
+	z-index: 2;
+
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	}
+
+@media all and (min-width: 990px) {
+	.app-bar {
+		position: relative;
+		}
+
+	.app-bar-container {
+		display: block;
+		box-sizing: border-box;
+		height: 130px;
+		padding: 0 16px;
+		}
+
+	.app-bar-actions {
+		float: right;
+		}
+
+	.app-bar::after {
+		display: block;
+		clear: both;
+		overflow: hidden;
+		height: 0;
+		content: " ";
+		}
+	}
+/*------------------------------------*\
     #WIDTHS
 \*------------------------------------*/
 /**

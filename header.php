@@ -49,18 +49,20 @@
 	        	<?php hybrid_get_menu( 'social' ); ?>
 	        </section>
 		</div>
-	</header>
-	<?php hybrid_get_menu( 'secondary' ); ?>
 
-	<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+	<?php if ( get_header_image() ) : // If there's a header image. ?>
 
-            <a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-
-    <?php elseif ( get_header_image() ) : // If there's a header image. ?>
-
-            <img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+            	<style type="text/css" id="custom-header-css">
+				            .app-bar {
+				      background: url(<?php header_image(); ?>) no-repeat scroll center;
+				      background-size: cover;
+				    }
+				</style>
 
     <?php endif; // End check for header image. ?>
+    </header>
+
+	<?php hybrid_get_menu( 'secondary' ); ?>
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
