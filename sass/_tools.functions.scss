@@ -14,6 +14,10 @@
     @return round($inuit-number / 4);
 }
 
+@function third($inuit-number) {
+    @return round($inuit-number / 3);
+}
+
 @function half($inuit-number) {
     @return round($inuit-number / 2);
 }

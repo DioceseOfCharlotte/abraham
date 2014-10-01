@@ -2170,18 +2170,16 @@ input[type="submit"] {
 	display: inline-block;
 	/* [5] */
 	overflow: visible;
-	min-height: 26px;
+	position: relative;
 	/* [4] */
 	margin: 0;
-	padding: 12px 32px 8px;
-	padding: 12px 24px;
+	margin: 10px 1px;
+	padding: 8px 24px;
 	/* [4] */
-	border: none;
+	border: 0;
 	/* [6] */
-	outline: 0;
-	color: white;
-	background-color: #8aa2de;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+	border-radius: 2px;
+	outline: none !important;
 	/* [2] */
 	font: inherit;
 	/* [3] */
@@ -2193,35 +2191,29 @@ input[type="submit"] {
 	text-transform: uppercase;
 	/* [4] */
 	cursor: pointer;
-	-webkit-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
-	        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 0.1);
-	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 	/**
    * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
    */
 	}
-.btn, .btn:hover, .btn:active, .btn:focus,
-button,
+.btn:hover,
 button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.28);
+	}
+.btn:active, .btn:focus,
 button:active,
 button:focus,
-input[type="button"],
-input[type="button"]:hover,
 input[type="button"]:active,
 input[type="button"]:focus,
-input[type="reset"],
-input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus,
-input[type="submit"],
-input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	color: white;
-	background-color: #8399d2;
-	box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.36);
-	-webkit-transform: translate3d(0, -0.5px, 0);
-	        transform: translate3d(0, 0, 1);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 	}
 .btn::-moz-focus-inner,
 button::-moz-focus-inner,
@@ -2243,26 +2235,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: #0c7499;
-	}
-.btn, .btn:hover, .btn:active, .btn:focus,
-button,
-button:hover,
-button:active,
-button:focus,
-input[type="button"],
-input[type="button"]:hover,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"],
-input[type="reset"]:hover,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"],
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"]:focus {
 	color: #fff;
+	background-color: #0c7499;
 	}
 
 /*------------------------------------*\
