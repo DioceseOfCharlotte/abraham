@@ -43,11 +43,11 @@ function abraham_register_menus() {
 function abraham_widgets_init() {
 
 	hybrid_register_sidebar( array(
-    'name'          => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
+    	'name'          => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
 		'id'            => 'primary',
 		'description'   => '',
-    'before_widget' => '<aside id="%1$s" class="primary widget %2$s">',
-    'after_widget'  => '</aside>',
+    	'before_widget' => '<aside id="%1$s" class="primary widget %2$s">',
+    	'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="primary-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -63,11 +63,11 @@ function abraham_widgets_init() {
 	) );
 
 		hybrid_register_sidebar( array(
-    'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
+    	'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
 		'id'            => 'footer',
 		'description'   => '',
-    'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
-    'after_widget'  => '</aside>',
+    	'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
+    	'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="subsidiary-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -111,9 +111,9 @@ add_filter( 'hybrid_attr_sidebar_1', 'meh_attr_sidebar_1' );
 
 function meh_attr_sidebar_1( $attr ) {
 
-  $attr['class']     = 'sidebar';
-  $attr['role']      = 'complementary';
-  $attr['itemscope'] = 'itemscope';
+  	$attr['class']     = 'sidebar';
+  	$attr['role']      = 'complementary';
+  	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WPSideBar';
 
   return $attr;
@@ -123,9 +123,9 @@ add_filter( 'hybrid_attr_sidebar_2', 'meh_attr_sidebar_2' );
 
 function meh_attr_sidebar_2( $attr ) {
 
-  $attr['class']     = 'sidebar';
-  $attr['role']      = 'complementary';
-  $attr['itemscope'] = 'itemscope';
+  	$attr['class']     = 'sidebar';
+  	$attr['role']      = 'complementary';
+  	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WPSideBar';
 
   return $attr;

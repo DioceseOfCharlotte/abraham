@@ -39,12 +39,28 @@
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
-		<div <?php hybrid_attr( 'branding' ); ?>>
-			<?php hybrid_site_title(); ?>
-			<?php hybrid_site_description(); ?>
+		<div class="app-bar-container">
+			<button class="side-menu-toggle"><span></span></button>
+			<div <?php hybrid_attr( 'branding' ); ?>>
+				<?php hybrid_site_title(); ?>
+				<?php hybrid_site_description(); ?>
+			</div>
+			<section class="app-bar-actions">
+	        	<?php hybrid_get_menu( 'social' ); ?>
+	        </section>
 		</div>
-		<?php hybrid_get_menu( 'secondary' ); ?>
 	</header>
+	<?php hybrid_get_menu( 'secondary' ); ?>
+
+	<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+
+            <a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+
+    <?php elseif ( get_header_image() ) : // If there's a header image. ?>
+
+            <img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+
+    <?php endif; // End check for header image. ?>
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
