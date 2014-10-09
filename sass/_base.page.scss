@@ -21,3 +21,11 @@ html {
     overflow-y: scroll; /* [2] */
     min-height: 100%; /* [3] */
 }
+
+body {
+  position: relative;
+  font-family: $font;
+  font-weight: 300;
+  box-sizing: border-box;
+  min-height: 100%;
+}

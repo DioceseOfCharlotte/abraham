@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    #SIDE NAV
+\*------------------------------------*/
+
+.side-menu-toggle span {
+    position: relative;
+    display: block;
+
+}
+.side-menu-toggle span,
+.side-menu-toggle span:before,
+.side-menu-toggle span:after {
+    background-color: $color-btn-text;
+    width: 25px;
+    margin: 0 auto;
+    height: 3px;
+    transition: all 0.4s;
+
+}
+.side-menu-toggle span:before,
+.side-menu-toggle span:after {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    content: " ";
+
+}
+.side-menu-toggle span:after {
+    top: 6px;
+
+}
+.open .side-menu-toggle span {
+    background: transparent;
+
+}
+.open .side-menu-toggle span:before {
+    transform: rotate(45deg) translate(5px, 4px);
+
+}
+.open .side-menu-toggle span:after {
+    transform: rotate(-45deg) translate(4px, -4px);
+
+}
+
+.navdrawer-container {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  background-color: $color-brand-dark;
+  color: #fefefe;
+  transform: translate(-250px, 0);
+  overflow-y: auto;
+}
+
+.navdrawer-container.open {
+    transform: translate(0, 0);
+    transition: transform 0.3s ease-out;
+}
+
+.navdrawer-container h4,
+.navdrawer-container ul li a {
+  height: 60px;
+  padding: 17px 20px;
+  line-height: 1.4;
+}
+
+.navdrawer-container h4 {
+  background-color: white;
+  color: #3367D6;
+}
+
+.navdrawer-container ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navdrawer-container ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.navdrawer-container ul li {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 0;
+}
+
+.navdrawer-container ul li::before {
+  content: none;
+}
+
+.navdrawer-container ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navdrawer-container ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+}
+
+.navdrawer-container ul li a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media all and (min-width: 990px) {
+
+}

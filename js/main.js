@@ -3,32 +3,35 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-( function() {
-	var container, button, menu;
+(function () {
+  'use strict';
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container )
-		return;
+  var querySelector = document.querySelector.bind(document);
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button )
-		return;
+  var navdrawerContainer = querySelector('.navdrawer-container');
+  var body = document.body;
+  var appbarElement = querySelector('.app-bar');
+  var menuBtn = querySelector('.side-menu-toggle');
+  var main = querySelector('.main-container');
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+  function closeMenu() {
+    body.classList.remove('open');
+    appbarElement.classList.remove('open');
+    navdrawerContainer.classList.remove('open');
+  }
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
+  function toggleMenu() {
+    body.classList.toggle('open');
+    appbarElement.classList.toggle('open');
+    navdrawerContainer.classList.toggle('open');
+    navdrawerContainer.classList.add('opened');
+  }
 
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-		menu.className += ' nav-menu';
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
-		else
-			container.className += ' toggled';
-	};
-} )();
+  main.addEventListener('click', closeMenu);
+  menuBtn.addEventListener('click', toggleMenu);
+  navdrawerContainer.addEventListener('click', function (event) {
+    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
+      closeMenu();
+    }
+  });
+})();

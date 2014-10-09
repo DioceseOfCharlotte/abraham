@@ -78,6 +78,9 @@ Text Domain: abraham
 	}
 
 /*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
     #BOX-SIZING
 \*------------------------------------*/
 /**
@@ -744,6 +747,14 @@ html {
 	/* [3] */
 	}
 
+body {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 100%;
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 300;
+	}
+
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
@@ -793,7 +804,7 @@ h6,
     #LINKS
 \*------------------------------------*/
 a {
-	color: #0c7499;
+	color: #176c92;
 	text-decoration: none;
 	}
 a:hover, a:active {
@@ -2149,6 +2160,22 @@ a:hover, a:active {
 		}
 	}
 /*------------------------------------*\
+    #MAIN-LAYOUT
+\*------------------------------------*/
+body.open {
+	overflow: hidden;
+	}
+
+.main-container {
+	min-height: 100%;
+	margin: 0 auto;
+	/* Height of the header */
+	padding: 60px 16px 16px 16px;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	        transition:         transform 0.3s ease-out;
+	}
+
+/*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
 /**
@@ -2236,7 +2263,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	color: #fff;
-	background-color: #0c7499;
+	background-color: #1e8cbe;
 	}
 
 /*------------------------------------*\
@@ -2634,13 +2661,15 @@ input.form-input-rounded,
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #4285f4;
+	background-color: #1e8cbe;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	        transition:         transform 0.3s ease-out;
 	}
 
 .app-bar-container {
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: -webkit-box;
 	display:         flex;
 	        flex-direction: row;
 	position: relative;
@@ -2648,24 +2677,81 @@ input.form-input-rounded,
 	height: 60px;
 	margin: 0 auto;
 
-	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	}
+
+.app-bar.open,
+.app-bar.open ~ .main-container {
+	-webkit-transform: translate(250px, 0);
+	    -ms-transform: translate(250px, 0);
+	        transform: translate(250px, 0);
+	}
+
+.site-title {
+	display: initial;
+	float: none;
+	max-width: none;
+	margin: 0 16px;
+	padding: 0;
+	color: #fefefe;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 60px;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	}
+
+.site-title a {
+	color: inherit;
+	font-weight: normal;
+	text-decoration: none;
 	}
 
 .app-bar-actions {
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: -webkit-box;
 	display:         flex;
 	        flex-direction: row;
 	z-index: 2;
 
-	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	}
+
+.side-menu-toggle {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	-webkit-transition: background-color 0.2s ease-out;
+	        transition: background-color 0.2s ease-out;
+
+	-webkit-tap-highlight-color: transparent;
+	}
+
+.side-menu-toggle:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	}
+
+.side-menu-toggle:focus {
+	outline: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	}
+
+.side-menu-toggle:active {
+	background-color: rgba(255, 255, 255, 0.4);
 	}
 
 @media all and (min-width: 990px) {
@@ -2692,6 +2778,127 @@ input.form-input-rounded,
 		content: " ";
 		}
 	}
+/*------------------------------------*\
+    #SIDE NAV
+\*------------------------------------*/
+.side-menu-toggle span {
+	display: block;
+	position: relative;
+	}
+
+.side-menu-toggle span,
+.side-menu-toggle span:before,
+.side-menu-toggle span:after {
+	width: 25px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-transition: all 0.4s;
+	        transition: all 0.4s;
+	}
+
+.side-menu-toggle span:before,
+.side-menu-toggle span:after {
+	position: absolute;
+	top: -6px;
+	left: 0;
+	content: " ";
+	}
+
+.side-menu-toggle span:after {
+	top: 6px;
+	}
+
+.open .side-menu-toggle span {
+	background: transparent;
+	}
+
+.open .side-menu-toggle span:before {
+	-webkit-transform: rotate(45deg) translate(5px, 4px);
+	    -ms-transform: rotate(45deg) translate(5px, 4px);
+	        transform: rotate(45deg) translate(5px, 4px);
+	}
+
+.open .side-menu-toggle span:after {
+	-webkit-transform: rotate(-45deg) translate(4px, -4px);
+	    -ms-transform: rotate(-45deg) translate(4px, -4px);
+	        transform: rotate(-45deg) translate(4px, -4px);
+	}
+
+.navdrawer-container {
+	overflow-y: auto;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	width: 250px;
+	height: 100%;
+	color: #fefefe;
+	background-color: #176c92;
+	-webkit-transform: translate(-250px, 0);
+	    -ms-transform: translate(-250px, 0);
+	        transform: translate(-250px, 0);
+	}
+
+.navdrawer-container.open {
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	        transition:         transform 0.3s ease-out;
+	-webkit-transform: translate(0, 0);
+	    -ms-transform: translate(0, 0);
+	        transform: translate(0, 0);
+	}
+
+.navdrawer-container h4,
+.navdrawer-container ul li a {
+	height: 60px;
+	padding: 17px 20px;
+	line-height: 1.4;
+	}
+
+.navdrawer-container h4 {
+	color: #3367d6;
+	background-color: white;
+	}
+
+.navdrawer-container ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+
+.navdrawer-container ul li a {
+	display: block;
+	color: white;
+	white-space: nowrap;
+	text-decoration: none;
+	-webkit-transition: background-color 0.2s ease-out;
+	        transition: background-color 0.2s ease-out;
+	}
+
+.navdrawer-container ul li {
+	padding: 0;
+	border-width: 1px;
+	border-color: white;
+	border-bottom-style: solid;
+	}
+
+.navdrawer-container ul li::before {
+	content: none;
+	}
+
+.navdrawer-container ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	}
+
+.navdrawer-container ul li a:focus {
+	outline: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	}
+
+.navdrawer-container ul li a:active {
+	background-color: rgba(255, 255, 255, 0.4);
+	}
+
 /*------------------------------------*\
     #WIDTHS
 \*------------------------------------*/
