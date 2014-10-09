@@ -10,12 +10,12 @@
     "gulp-flatten": "^0.0.3",
     "gulp-if": "^1.2.1",
     "gulp-imagemin": "^1.0.0",
-    "gulp-load-plugins": "^0.6.0",
+    "gulp-load-plugins": "^0.7.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.4.0",
     "gulp-ruby-sass": "^0.7.1",
     "opn": "^1.0.0",
-    "run-sequence": "^0.3.7"
+    "run-sequence": "^1.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
