@@ -2759,11 +2759,27 @@ input.form-input-rounded,
 		position: relative;
 		}
 
+	.app-bar.open,
+	.app-bar.open ~ .main-container {
+		-webkit-transform: translate(0px, 0);
+		    -ms-transform: translate(0px, 0);
+		        transform: translate(0px, 0);
+		}
+
 	.app-bar-container {
 		display: block;
-		box-sizing: border-box;
+		max-width: 864px;
 		height: 130px;
 		padding: 0 16px;
+		background-color: #1e8cbe;
+		}
+
+	.site-title {
+		float: left;
+		margin: 0;
+		padding: 0;
+		font-size: 46px;
+		line-height: 130px;
 		}
 
 	.app-bar-actions {
@@ -2776,6 +2792,10 @@ input.form-input-rounded,
 		overflow: hidden;
 		height: 0;
 		content: " ";
+		}
+
+	.side-menu-toggle {
+		display: none;
 		}
 	}
 /*------------------------------------*\
@@ -2841,11 +2861,14 @@ input.form-input-rounded,
 	}
 
 .navdrawer-container.open {
-	-webkit-transition: -webkit-transform 0.3s ease-out;
-	        transition:         transform 0.3s ease-out;
 	-webkit-transform: translate(0, 0);
 	    -ms-transform: translate(0, 0);
 	        transform: translate(0, 0);
+	}
+
+.navdrawer-container.opened {
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	        transition:         transform 0.3s ease-out;
 	}
 
 .navdrawer-container h4,
@@ -2899,6 +2922,43 @@ input.form-input-rounded,
 	background-color: rgba(255, 255, 255, 0.4);
 	}
 
+@media all and (min-width: 990px) {
+	.navdrawer-container {
+		overflow-y: auto;
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+		-webkit-transition: none;
+		        transition: none;
+		-webkit-transform: translate(0, 0);
+		    -ms-transform: translate(0, 0);
+		        transform: translate(0, 0);
+		}
+
+	.navdrawer-container h4 {
+		display: none;
+		}
+
+	.navdrawer-container ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display:         flex;
+		        flex-direction: row;
+		max-width: 864px;
+		margin: 0 auto;
+
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		}
+
+	.navdrawer-container ul li {
+		border: none;
+		}
+	}
 /*------------------------------------*\
     #WIDTHS
 \*------------------------------------*/
