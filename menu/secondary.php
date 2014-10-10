@@ -10,7 +10,7 @@
 				'theme_location'  => 'secondary',
 				'container'       => '',
 				'menu_id'         => 'menu-secondary-items',
-				'menu_class'      => 'menu-items grid',
+				'menu_class'      => 'menu__items--secondary',
 				'fallback_cb'     => '',
 				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
 			)

@@ -10,23 +10,23 @@ class Doc_Attributes {
 	public $body                  	= ' ';	// get_body_class()
 	public $header                	= 'app-bar'; 	// na
 	public $footer                	= 'layout footer-layout'; 	// na
-	public $content_1c            	= ' layout__item'; 	// content
-	public $content_2cl           	= ' layout__item  md-1-2'; 	// content
-	public $content_2cr           	= ' layout__item  md-5-8'; 	// content
-	public $sidebar_1c     		  	= ' layout__item';	// sidebar
-	public $sidebar_2cl    			= ' layout__item';	// sidebar
-	public $sidebar_2cr    			= ' layout__item';	// sidebar
-	public $sidebar_1_1c     		= ' layout__item';	// sidebar
-	public $sidebar_1_2cl    		= ' layout__item  md-5-24';	// sidebar
-	public $sidebar_1_2cr    		= ' layout__item  md-3-8';	// sidebar
-	public $sidebar_2_1c     		= ' layout__item';	// sidebar
-	public $sidebar_2_2cl    		= ' layout__item  md-7-24';	// sidebar
-	public $sidebar_2_2cr    		= ' layout__item  md-3-8';	// sidebar
-	public $menu                  	= ' navdrawer-container';	// menu
+	public $content_1c            	= '  layout__item'; 	// content
+	public $content_2cl           	= '  layout__item  md-1-2'; 	// content
+	public $content_2cr           	= '  layout__item  md-5-8'; 	// content
+	public $sidebar_1c     		  	= '  layout__item';	// sidebar
+	public $sidebar_2cl    			= '  layout__item';	// sidebar
+	public $sidebar_2cr    			= '  layout__item';	// sidebar
+	public $sidebar_1_1c     		= '  layout__item';	// sidebar
+	public $sidebar_1_2cl    		= '  layout__item  md-5-24';	// sidebar
+	public $sidebar_1_2cr    		= '  layout__item  md-3-8';	// sidebar
+	public $sidebar_2_1c     		= '  layout__item';	// sidebar
+	public $sidebar_2_2cl    		= '  layout__item  md-7-24';	// sidebar
+	public $sidebar_2_2cr    		= '  layout__item  md-3-8';	// sidebar
+	public $menu                  	= '  navdrawer';	// menu
 
 	/* Header attributes. */
 	public $branding              	= 'branding';	// na
-	public $site_title            	= 'logo site-title';	// na
+	public $site_title            	= 'logo  site-title';	// na
 	public $site_description      	= 'site-description';	// na
 
 	/* Loop attributes. */

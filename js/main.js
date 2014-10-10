@@ -8,10 +8,10 @@
 
   var querySelector = document.querySelector.bind(document);
 
-  var navdrawerContainer = querySelector('.navdrawer-container');
+  var navdrawerContainer = querySelector('.navdrawer');
   var body = document.body;
   var appbarElement = querySelector('.app-bar');
-  var menuBtn = querySelector('.side-menu-toggle');
+  var menuBtn = querySelector('.navdrawer__toggle');
   var main = querySelector('.main-container');
 
   function closeMenu() {

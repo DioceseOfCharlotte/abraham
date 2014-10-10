@@ -39,13 +39,13 @@
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 
 	<header <?php hybrid_attr( 'header' ); ?>>
-		<div class="app-bar-container">
-			<button class="side-menu-toggle"><span></span></button>
+		<div class="app-bar__container">
+			<button class="navdrawer__toggle"><span class="toggle-btn"></span></button>
 			<div <?php hybrid_attr( 'branding' ); ?>>
 				<?php hybrid_site_title(); ?>
 				<?php hybrid_site_description(); ?>
 			</div>
-			<section class="app-bar-actions">
+			<section class="app-bar__actions">
 	        	<?php hybrid_get_menu( 'social' ); ?>
 	        </section>
 		</div>

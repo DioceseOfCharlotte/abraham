@@ -3,7 +3,7 @@
 }
 ?>
 
-	<nav class="navdrawer-container" <?php hybrid_attr( 'menu', 'primary' ); ?>>
+	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
 		<div class="menu-header"></div><!-- breadcrumb container -->
 
@@ -12,7 +12,7 @@
 				'theme_location'  => 'primary',
 				'container'       => '',
 				'menu_id'         => 'menu-primary-items',
-				'menu_class'      => 'menu-items',
+				'menu_class'      => 'menu__items--primary',
 				'fallback_cb'     => '',
 				'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul>' . get_search_form( false ) . '</div>'
 			)
