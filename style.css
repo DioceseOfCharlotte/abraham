@@ -2173,8 +2173,16 @@ body.open {
 	padding: 60px 16px 16px 16px;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out;
+
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
 	}
 
+/*------------------------------------*\
+    #LAYOUT-2C-L
+\*------------------------------------*/
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
