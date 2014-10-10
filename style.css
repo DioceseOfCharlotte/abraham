@@ -2226,8 +2226,8 @@ input[type="submit"] {
 	text-transform: uppercase;
 	/* [4] */
 	cursor: pointer;
-	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease-in-out;
+	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease-in-out;
 	/**
    * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
    */
@@ -2237,7 +2237,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 3px 6px rgba(23, 108, 146, 0.2), 0 3px 6px rgba(23, 108, 146, 0.28);
+	text-shadow: 0 3px 1px rgba(23, 108, 146, 0.65);
 	}
 .btn:active, .btn:focus,
 button:active,
@@ -2248,7 +2249,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 10px 20px rgba(23, 108, 146, 0.19), 0 6px 6px rgba(23, 108, 146, 0.23);
 	}
 .btn::-moz-focus-inner,
 button::-moz-focus-inner,
@@ -2272,6 +2273,21 @@ input[type="reset"],
 input[type="submit"] {
 	color: #fff;
 	background-color: #1e8cbe;
+	}
+.btn:hover, .btn:active, .btn:focus,
+button:hover,
+button:active,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	background-color: #219cd4;
 	}
 
 /*------------------------------------*\

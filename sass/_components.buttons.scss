@@ -17,7 +17,7 @@ input[type="submit"] {
     &:hover,
     &:active,
     &:focus {
-
+        background-color: lighten($color-btn-background,5)
     }
 
 }
