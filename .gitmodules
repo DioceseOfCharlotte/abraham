@@ -1,0 +1,3 @@
+[submodule "scss"]
+	path = scss
+	url = git@github.com:m-e-h/doc-scss.git
