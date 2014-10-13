@@ -97,7 +97,7 @@ html {
 	box-sizing: inherit;
 	}
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -121,10 +121,11 @@ body {
 	}
 
 /* HTML5 display definitions
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 article,
@@ -136,6 +137,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -175,12 +177,12 @@ template {
 	}
 
 /* Links
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Remove the gray background color from active links in IE 10.
  */
 a {
-	background: transparent;
+	background-color: transparent;
 	}
 
 /**
@@ -192,7 +194,7 @@ a:hover {
 	}
 
 /* Text-level semantics
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
@@ -259,7 +261,7 @@ sub {
 	}
 
 /* Embedded content
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
@@ -275,7 +277,7 @@ svg:not(:root) {
 	}
 
 /* Grouping content
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
@@ -310,7 +312,7 @@ samp {
 	}
 
 /* Forms
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
@@ -479,7 +481,7 @@ optgroup {
 	}
 
 /* Tables
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Remove most spacing between table cells.
  */
