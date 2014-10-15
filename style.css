@@ -81,20 +81,17 @@ Text Domain: abraham
     #COLORS
 \*------------------------------------*/
 /*------------------------------------*\
-    #BOX-SIZING
+    #HELPERS
 \*------------------------------------*/
-/**
- * Set the global `box-sizing` state to `border-box`.
- *
- * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
- * paulirish.com/2012/box-sizing-border-box-ftw
- */
-html {
-	box-sizing: border-box;
-	}
-
-*, *:before, *:after {
-	box-sizing: inherit;
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.0.1
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*==========  GENERIC  ==========*/
+.centered {
+	text-align: center;
 	}
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -499,21 +496,28 @@ th {
     #RESET
 \*------------------------------------*/
 /**
- * As well as using normalize.css, it is often advantageous to remove all
- * margins from certain elements.
+ * Remove browser defaults
  */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
+	margin: 0;
+	padding: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
+	font: inherit;
 	font-family: inherit;
 	font-size: 100%;
 	font-weight: inherit;
@@ -544,6 +548,23 @@ ins {
 	border-bottom: 1px solid;
 	}
 
+/*------------------------------------*\
+    #BOX-SIZING
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+	box-sizing: border-box;
+	}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	}
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -553,12 +574,6 @@ ins {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html {
-	color: #222;
-	font-size: 1em;
-	line-height: 1.4;
-	}
-
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -602,12 +617,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-fieldset {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	}
-
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -756,6 +765,7 @@ body {
 	min-height: 100%;
 	font-family: "Fira Sans", sans-serif;
 	font-weight: 300;
+	cursor: default;
 	}
 
 /*------------------------------------*\
@@ -2173,7 +2183,7 @@ body.open {
 	min-height: 100%;
 	margin: 0 auto;
 	/* Height of the header */
-	padding: 60px 16px 16px 16px;
+	padding-top: 60px;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out;
 
@@ -2401,8 +2411,9 @@ input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
 	color: #cad2d3;
-	background-color: #eaeded;
 	cursor: not-allowed;
+
+	backgradius-color: #eaeded;
 	}
 
 /*
@@ -2411,8 +2422,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 input:not([type])[disabled] {
 	color: #cad2d3;
-	background-color: #eaeded;
 	cursor: not-allowed;
+
+	backgradius-color: #eaeded;
 	}
 
 input[readonly],
@@ -2422,7 +2434,8 @@ textarea[readonly] {
 	border-color: #ccc;
 	/* menu hover bg color */
 	color: #777;
-	background: #eee;
+
+	backgradius: #eee;
 	}
 
 input:focus:invalid,
@@ -2446,7 +2459,8 @@ input[type="checkbox"]:focus:invalid:focus {
 
 select {
 	border: 1px solid #ccc;
-	background-color: white;
+
+	backgradius-color: white;
 	}
 
 select[multiple] {
@@ -2535,9 +2549,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	margin: 1.5em 0 0 10em;
 	}
 
-/* Rounded Inputs */
-input.form-input-rounded,
-.form-input-rounded {
+/* radiused Inputs */
+input.form-input-radiused,
+.form-input-radiused {
 	padding: 0.5em 1em;
 	border-radius: 2em;
 	}
@@ -2982,6 +2996,105 @@ input.form-input-rounded,
 		border: none;
 		}
 	}
+/*------------------------------------*\
+    #MESSAGE-BOARD
+\*------------------------------------*/
+.board-topic {
+	position: relative;
+	}
+
+.post-num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	}
+
+.num {
+	float: right;
+	position: relative;
+	width: 30px;
+	height: 26px;
+	border-radius: 50%;
+	background: #6ab48a;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	font-weight: bold;
+	line-height: 1.8;
+	text-align: center;
+	text-decoration: none;
+	}
+
+.num:before {
+	position: absolute;
+	top: 13px;
+	right: 85%;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 10px solid #6ab48a;
+	border-bottom: 2px solid transparent;
+	content: "";
+	}
+
+.topic-link {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	-webkit-transition: box-shadow 0.2s ease-out;
+	        transition: box-shadow 0.2s ease-out;
+	}
+.topic-link:hover {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+	text-decoration: none;
+	-webkit-transition: box-shadow 0.2s ease-in;
+	        transition: box-shadow 0.2s ease-in;
+	}
+.topic-link:focus, .topic-link:active {
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+	text-decoration: none;
+	-webkit-transition: box-shadow 0.2s ease-in;
+	        transition: box-shadow 0.2s ease-in;
+	}
+
+.loop-description {
+	padding: 0.5rem 1rem;
+	border-radius: 2px;
+	background-color: #ecf0f1;
+
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	        align-items: center;
+	}
+
+.loop-description a {
+	color: #4e5758;
+	}
+
+.avatar {
+	max-width: 60px;
+	height: auto;
+	border-radius: 50%;
+	}
+
+.comment-author {
+	max-width: 100px;
+	text-align: center;
+	}
+
+.forum-comment {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	}
+
 /*------------------------------------*\
     #WIDTHS
 \*------------------------------------*/

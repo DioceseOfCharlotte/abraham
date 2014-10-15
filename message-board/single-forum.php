@@ -1,4 +1,13 @@
-<?php get_header(); // Loads the header.php template. ?>
+<?php
+/**
+ * The main forum template file.
+ *
+ * @package Abraham
+ */
+
+get_header(); ?>
+
+<?php hybrid_get_sidebar( 'primary' ); ?>
 
 <main <?php hybrid_attr( 'content' ); ?>>
 
@@ -85,6 +94,8 @@ Last post
 
 	<?php if ( function_exists( 'mb_topic_form' ) ) mb_topic_form(); ?>
 
-</main><!-- #content -->
+</main><!-- #main -->
 
-<?php get_footer(); // Loads the footer.php template. ?>
+<?php hybrid_get_sidebar( 'secondary' ); ?>
+
+<?php get_footer(); ?>
