@@ -90,7 +90,7 @@ Text Domain: abraham
 * Docs at http://davidtheclark.github.io/scut
 */
 /*==========  GENERIC  ==========*/
-.centered {
+.text-center {
 	text-align: center;
 	}
 
@@ -821,7 +821,7 @@ a {
 	text-decoration: none;
 	}
 a:hover, a:active {
-	text-decoration: underline;
+	color: #104b66;
 	}
 
 /*------------------------------------*\
@@ -2191,13 +2191,12 @@ a:hover, a:active {
 		}
 	}
 
-/**
- * This is a bit of a magic number; a wrapper this wide will allow us to ‘hang’
- * one icon out of the rest of the page’s ‘grid’. It is used primarily on the
- * home page promo boxes.
- */
-.wrapper--wide {
+.wrapper--major {
 	max-width: 1276px;
+	}
+
+.wrapper--minor {
+	max-width: 864px;
 	}
 
 body.open {
@@ -2298,6 +2297,12 @@ input[type="submit"]::-moz-focus-inner {
 	border: 0;
 	}
 
+.btn--small {
+	padding: 6px 12px;
+	letter-spacing: inherit;
+	text-transform: lowercase;
+	}
+
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
@@ -2311,6 +2316,28 @@ input[type="reset"],
 input[type="submit"] {
 	color: #fff;
 	background-color: #1e8cbe;
+	}
+.btn a,
+button a,
+input[type="button"] a,
+input[type="reset"] a,
+input[type="submit"] a {
+	color: #fff;
+	}
+.btn a:hover, .btn a:active, .btn a:focus,
+button a:hover,
+button a:active,
+button a:focus,
+input[type="button"] a:hover,
+input[type="button"] a:active,
+input[type="button"] a:focus,
+input[type="reset"] a:hover,
+input[type="reset"] a:active,
+input[type="reset"] a:focus,
+input[type="submit"] a:hover,
+input[type="submit"] a:active,
+input[type="submit"] a:focus {
+	color: #fff;
 	}
 .btn:hover, .btn:active, .btn:focus,
 button:hover,
@@ -3085,7 +3112,6 @@ input.form-input-radiused,
 .loop-description {
 	padding: 0.5rem 1rem;
 	border-radius: 2px;
-	background-color: #ecf0f1;
 
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
@@ -3097,8 +3123,8 @@ input.form-input-radiused,
 	        align-items: center;
 	}
 
-.loop-description a {
-	color: #4e5758;
+.comment-list {
+	margin-left: 0;
 	}
 
 .avatar {
@@ -3118,6 +3144,12 @@ input.form-input-radiused,
 	border-radius: 2px;
 	background-color: #fff;
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	}
+
+.topic-info {
+	padding: 0.5em 1em;
+	border-radius: 3px;
+	background-color: #ddd;
 	}
 
 /*------------------------------------*\

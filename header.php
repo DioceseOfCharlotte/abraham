@@ -64,6 +64,6 @@
 
 	<?php hybrid_get_menu( 'secondary' ); ?>
 
-    <div class="wrapper wrapper--wide"><?php hybrid_get_menu( 'breadcrumbs' ); ?></div>
+    <div class="wrapper"><?php hybrid_get_menu( 'breadcrumbs' ); ?></div>
 
 	<div class="layout main-container wrapper">

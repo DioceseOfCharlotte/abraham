@@ -1,54 +1,55 @@
-<?php get_header(); // Loads the header.php template. ?>
+<?php
+/**
+ * The main forum topic template file.
+ *
+ * @package Abraham
+ */
 
-<main <?php hybrid_attr( 'content' ); ?>>
+get_header(); ?>
+
+<main id="content" class="content layout__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
 	<?php if ( mb_have_topics() ) : // Checks if any posts were found. ?>
 
-		<table>
-			<thead>
-				<tr>
-					<th>Topics <?php mb_topic_form_link(); ?></th>
-					<th class="num">Posts</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<th>Topics</th>
-					<th class="num">Posts</th>
-				</tr>
-			</tfoot>
-			<tbody>
+		<div class="layout">
+					<div>
+						<?php if ( current_user_can( 'create_forum_topics' ) ) : ?>
+						<a href="<?php mb_topic_form_url(); ?>" class="new-topic">New Topic <i class="fa fa-plus-circle"></i></a>
+						<?php endif; ?>
+					</div>
+
+			<div class="all-1">
 
 			<?php while ( mb_have_topics() ) : // Begins the loop through found posts. ?>
 
 				<?php mb_the_topic(); // Loads the post data. ?>
 
-				<tr class="<?php echo mb_is_topic_super_sticky() ? 'sticky' : ''; ?>">
-					<td>
-						<a class="topic-link" href="<?php mb_topic_url(); ?>"><?php mb_topic_title(); ?></a>
+				<div class="layout  board-topic <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>">
+					<a class="topic-link layout__item" href="<?php mb_topic_url(); ?>">
+						<h4><?php mb_topic_title(); ?></h4>
 						<div class="entry-meta">
 
 							<?php mb_topic_labels(); ?>
-							
-Last post 
-<a href="<?php mb_topic_last_post_url(); ?>">
-<?php mb_topic_last_active_time(); ?> ago</a> by 
+
+Last post
+
+<?php mb_topic_last_active_time(); ?> ago by
 <?php mb_topic_last_poster(); ?>
 
 						</div><!-- .entry-meta -->
-					</td>
-					<td class="num">
-						<a href="<?php mb_topic_last_post_url(); ?>"><?php mb_topic_post_count(); ?></a>
-					</td>
-				</tr>
+					<div class="post-num">
+						<span class="num"><?php mb_topic_post_count( get_the_ID() ); ?></span>
+					</div>
+					</a>
+				</div>
 		<?php endwhile; // End found posts loop. ?>
 
-			</tbody>
-		</table>
+			</div>
+		</div>
 
-		<?php locate_template( array( 'misc/loop-nav.php' ), true ); // Loads the misc/loop-nav.php template. ?>
+		<?php abraham_loop_nav(); ?>
 
 	<?php endif; // End check for posts. ?>
 

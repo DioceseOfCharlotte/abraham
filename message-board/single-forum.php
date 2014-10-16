@@ -7,11 +7,11 @@
 
 get_header(); ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="content layout__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
-	<?php locate_template( array( 'misc/loop-meta.php' ), true ); // Loads the misc/loop-meta.php template. ?>
+	<?php abraham_loop_meta(); ?>
 
 	<?php $forums = mb_get_sub_forums(); ?>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 
-	<?php if ( have_posts() ) : // Checks if any posts were found. ?>
+	<?php if ( have_posts() ) : ?>
 
 		<div class="layout">
 					<div>
@@ -55,9 +55,9 @@ get_header(); ?>
 
 			<div class="all-1">
 
-		<?php while ( have_posts() ) : // Begins the loop through found posts. ?>
+		<?php while ( have_posts() ) : ?>
 
-			<?php the_post(); // Loads the post data. ?>
+			<?php the_post(); ?>
 
 				<div class="layout  board-topic <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>">
 					<a class="topic-link layout__item" href="<?php mb_topic_url(); ?>">
@@ -82,11 +82,11 @@ Last post
 			</div>
 		</div>
 
-		<?php locate_template( array( 'misc/loop-nav.php' ), true ); // Loads the misc/loop-nav.php template. ?>
+				<?php abraham_loop_nav(); ?>
 
-	<?php else : // If no posts were found. ?>
+		<?php else : ?>
 
-		<?php locate_template( array( 'content/error.php' ), true ); // Loads the content/error.php template. ?>
+			<?php get_template_part( 'content/error' ); ?>
 
 	<?php endif; // End check for posts. ?>
 

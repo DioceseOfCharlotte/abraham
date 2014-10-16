@@ -1,29 +1,35 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="content layout__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
 		<div class="loop-meta">
-			<h1 class="topic-title loop-title"><?php mb_single_topic_title(); ?></h1>
+			<h1 class="topic-title text-center loop-title"><?php mb_single_topic_title(); ?></h1>
 
 			<div class="loop-description layout">
+			<div class="topic-info">
 					<?php mb_topic_forum_link( get_queried_object_id() ); ?>
+					&nbsp; &nbsp;
 					<span class="entry-terms topic-posts">
 						<?php $count = mb_get_topic_post_count( get_queried_object_id() ); ?>
 						<?php echo ( 1 == $count ) ? "{$count} <i class='fa fa-comment'></i>" : "{$count} <i class='fa fa-comments'></i>"; ?>
 					</span>
+					&nbsp;
 					<span class="entry-terms topic-voices">
 						<?php $voices = mb_get_topic_voice_count( get_queried_object_id() ); ?>
 						<?php echo ( 1 == $voices ) ? "{$voices} <i class='fa fa-user'></i>" : "{$voices} <i class='fa fa-users'></i>"; ?>
 					</span>
-					<span class="entry-terms topic-subscribe fa fa-envelope-o">
+			</div>
+			<div>
+					<button class="entry-terms btn--small topic-subscribe fa fa-envelope-o">
 						<?php mb_topic_subscribe_link(get_queried_object_id()); ?>
-					</span>
-					<span class="entry-terms topic-favorite fa fa-bookmark-o">
+					</button>
+					<button class="entry-terms btn--small topic-favorite fa fa-bookmark-o">
 						<?php mb_topic_favorite_link(get_queried_object_id()); ?>
-					</span>
+					</button>
 			</div><!-- .loop-description -->
+			</div>
 
 		</div><!-- .loop-meta -->
 
