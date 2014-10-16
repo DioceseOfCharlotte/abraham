@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Extend `.btn` in _components.buttons.scss.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	letter-spacing: 0.05em;
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font: inherit; /* [3] */
+    text-align: center; /* [4] */
+    border: 0; /* [4] */
+    margin:  0; /* [4] */
+    cursor: pointer; /* [5] */
+    overflow: hidden;
+    border-radius: 2px;
+    padding: half($base-spacing-unit) $base-spacing-unit;
+	position: relative;
+	margin: 10px 1px;
+	text-transform: uppercase;
+	line-height: 1;
+	text-decoration: none;
+	transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+	text-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+	background-color .3s ease-in-out;
+	outline: none !important;
+
+
+    &:hover {
+    	box-shadow: 0 3px 6px rgba(23, 108, 146, 0.2), 0 3px 6px rgba(23, 108, 146, 0.28);
+		text-shadow: 0px 3px 1px rgba(23, 108, 146, 0.65);
+    }
+
+
+
+    &:active,
+    &:focus {
+		box-shadow: 0 10px 20px rgba(23, 108, 146, 0.19), 0 6px 6px rgba(23, 108, 146, 0.23);
+    }
+
+    /**
+     * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+     */
+    &::-moz-focus-inner {
+        border:  0;
+        padding: 0;
+    }
+
+}

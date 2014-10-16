@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #MESSAGE-BOARD
+\*------------------------------------*/
+
+.board-topic {
+	position: relative;
+	}
+
+.post-num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	}
+
+.num {
+	float: right;
+	position: relative;
+	width: 30px;
+	height: 26px;
+	border-radius: 50%;
+	//color: #fff;
+	background: $color-brand-secondary-light;
+	font-weight: bold;
+	line-height: 1.8;
+	text-align: center;
+	text-decoration: none;
+	@include shadow-z1();
+	}
+
+
+.num:before {
+	position: absolute;
+	top: 13px;
+	right: 85%;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 10px solid $color-brand-secondary-light;
+	border-bottom: 2px solid transparent;
+	content: "";
+	}
+
+.topic-link {
+@include card(true);
+	}
+
+.loop-description {
+	padding: 0.5rem 1rem;
+	border-radius: 2px;
+	background-color: #ecf0f1;
+	justify-content: space-between;
+	align-items: center;
+	}
+.loop-description a {
+	color: #4e5758;
+	}
+
+.avatar {
+	border-radius: 50%;
+	max-width: 60px;
+	height: auto;
+	}
+
+.comment-author {
+	max-width: 100px;
+	text-align: center;
+	}
+
+.forum-comment {
+@include card;
+	}
