@@ -7,8 +7,6 @@
 
 get_header(); ?>
 
-<?php hybrid_get_sidebar( 'primary' ); ?>
-
 <main <?php hybrid_attr( 'content' ); ?>>
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
