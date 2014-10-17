@@ -4,13 +4,13 @@
 
 // Fonts
 $base-font-size:    16px;
-$base-line-height:  24px;
+$base-line-height:  20px;
 
-$font : 'Fira Sans', sans-serif;
+$font : 'Lato', 'Helvetica', 'Arial', sans-serif;
 $font-mono : 'Fira Mono', monospace;
 
 // Border-Radius
-$base-radius:  3px;
+$base-radius:  2px;
 
 // Reassign some internal variables.
 $base-spacing-unit: $base-line-height;
@@ -45,3 +45,5 @@ $base-spacing-unit: $base-line-height;
 .shadow-z5 {
   @include shadow-z5();
 }
+
+

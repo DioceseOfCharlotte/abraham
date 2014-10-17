@@ -67,20 +67,21 @@ Text Domain: abraham
 @import "tools.mixins";
 @import "tools.helpers";
 
-@import "generic.normalize";
 @import "generic.reset";
+@import "generic.normalize";
 @import "generic.box-sizing";
 @import "generic.h5bp";
 @import "generic.shared";
 
 @import "base.page";
-@import "base.headings";
+@import "base.typography";
 @import "base.links";
 
 @import "objects.grid";
 @import "objects.layout";
 @import "objects.layout-2c-l";
 @import "objects.buttons";
+@import "objects.tooltips";
 
 @import "components.buttons";
 @import "components.forms";

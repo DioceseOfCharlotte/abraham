@@ -1,8 +1,6 @@
 <?php if ( !mb_is_topic_paged() ) : ?>
 
-	<li id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="topic topic-post">
-		<article>
-		<div class="forum-comment layout">
+	<article id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="forum-comment layout">
 			<div class="comment-author layout__item md-3-24">
 				<?php echo get_avatar( mb_get_topic_author_id() ); ?>
 				<span <?php hybrid_attr( 'entry-author' ); ?>>
@@ -18,13 +16,11 @@
 			</div><!-- .entry-content -->
 
 
-<div class="comment-footer all-1 centered">
+<div class="comment-footer text-minor all-1 text-center">
 							<time <?php hybrid_attr( 'entry-published' ); ?>><?php printf( __( '%s ago', 'th4' ), human_time_diff( get_post_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time>
-				<a class="comment-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><i class="fa fa-link"></i></a>
 				<?php edit_post_link(); ?>
-</div>
+				<a class="comment-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><span class="hint--top" data-hint="Get a link to this comment"><i class="fa fa-link"></i></span></a>
 </div>
 		</article>
-	</li>
 
 <?php endif; ?>

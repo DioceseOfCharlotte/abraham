@@ -70,21 +70,22 @@
 
 
 @mixin card($hover: false) {
-	margin: 0.5rem;
+	margin: 1rem 0 .5rem;
 	padding: 0.5rem;
-	border-radius: 2px;
+	border-radius: $base-radius;
 	background-color: #fff;
-	@include shadow-z1();
+	position: relative;
+	@include shadow-z2();
 @if $hover {
 	//transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 	transition: box-shadow 0.2s ease-out;
 		&:hover {
-			@include shadow-z2();
+			@include shadow-z3();
 			text-decoration: none;
 			transition: box-shadow 0.2s ease-in;
 		}
 		&:focus, &:active {
-  			@include shadow-z3();
+  			@include shadow-z2();
   			text-decoration: none;
   			transition: box-shadow 0.2s ease-in;
 	}

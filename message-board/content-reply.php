@@ -1,7 +1,6 @@
 
 
-	<li id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="topic topic-post">
-		<article>
+		<article id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="topic-post topic-post__reply">
 		<div class="forum-comment layout">
 			<div class="comment-author layout__item md-3-24">
 				<?php echo get_avatar( mb_get_topic_author_id() ); ?>
@@ -18,11 +17,10 @@
 			</div><!-- .entry-content -->
 
 
-<div class="comment-footer all-1 centered">
+<div class="comment-footer text-minor all-1 text-center">
 							<time <?php hybrid_attr( 'entry-published' ); ?>><?php printf( __( '%s ago', 'th4' ), human_time_diff( get_post_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time>
-				<a class="comment-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><i class="fa fa-link"></i></a>
 				<?php edit_post_link(); ?>
+				<a class="comment-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><span class="hint--top" data-hint="Get a link to this comment"><i class="fa fa-link"></i></span></a>
 </div>
 </div>
 		</article>
-	</li>

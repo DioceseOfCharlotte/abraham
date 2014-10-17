@@ -20,6 +20,7 @@ $color-negative:            #9f102e;
 // Page
 $base-background-color:   $color-gray-ui;
 $base-text-color:         $color-gray;
+$base-minor-color:        lighten($base-text-color, 10);
 $base-background-color:   $color-gray-ui;
 
 // Links

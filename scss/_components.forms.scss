@@ -108,7 +108,7 @@ input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
     cursor: not-allowed;
-    backgradius-color: #eaeded;
+    background-color: #eaeded;
     color: #cad2d3;
 }
 
@@ -118,13 +118,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 input:not([type])[disabled] {
     cursor: not-allowed;
-    backgradius-color: #eaeded;
+    background-color: #eaeded;
     color: #cad2d3;
 }
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    backgradius: #eee; /* menu hover bg color */
+    background: #eee; /* menu hover bg color */
     color: #777; /* menu text color */
     border-color: #ccc;
 }
@@ -147,7 +147,7 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 select {
     border: 1px solid #ccc;
-    backgradius-color: white;
+    background-color: white;
 }
 select[multiple] {
     height: auto;
@@ -228,12 +228,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     margin: 1.5em 0 0 10em;
 }
 
-/* radiused Inputs */
-input.form-input-radiused,
-.form-input-radiused {
-    border-radius: 2em;
-    padding: 0.5em 1em;
-}
 
 /* Grouped Inputs */
 .form-group fieldset {

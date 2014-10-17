@@ -33,7 +33,7 @@
 
 		</div><!-- .loop-meta -->
 
-	<ol id="thread" class="comment-list">
+	<div id="thread" class="comment-list">
 
 	<?php while ( have_posts() ) : // Begins the loop through found posts. ?>
 
@@ -53,7 +53,7 @@
 
 		<?php endif; ?>
 
-	</ol><!-- #thread -->
+	</div><!-- #thread -->
 
 		<div class="loop-nav">
 			<?php echo mb_topic_pagination(); ?>

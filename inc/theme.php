@@ -48,8 +48,8 @@ function abraham_widgets_init() {
 		'description'   => '',
     	'before_widget' => '<aside id="%1$s" class="primary widget %2$s">',
     	'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="primary-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="primary-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	hybrid_register_sidebar( array(
@@ -58,8 +58,8 @@ function abraham_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="secondary widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 		hybrid_register_sidebar( array(
@@ -68,8 +68,8 @@ function abraham_widgets_init() {
 		'description'   => '',
     	'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
     	'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="subsidiary-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="subsidiary-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 
@@ -85,7 +85,7 @@ function abraham_scripts() {
   wp_enqueue_script( 'meh-mainjs' );
 
   /* Register Google-fonts. */
-  wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Source+Code+Pro:400,700' );
+  wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Lato:300,400,700,900' );
 
   /* Register Font Awesome. */
   wp_register_style( 'meh-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
