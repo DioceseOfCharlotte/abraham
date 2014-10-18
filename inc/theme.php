@@ -106,27 +106,3 @@ function abraham_the_excerpt( $excerpt ) {
 
 	return $excerpt . $more;
 }
-
-add_filter( 'hybrid_attr_sidebar_1', 'meh_attr_sidebar_1' );
-
-function meh_attr_sidebar_1( $attr ) {
-
-  	$attr['class']     = 'sidebar';
-  	$attr['role']      = 'complementary';
-  	$attr['itemscope'] = 'itemscope';
-	$attr['itemtype']  = 'http://schema.org/WPSideBar';
-
-  return $attr;
-}
-
-add_filter( 'hybrid_attr_sidebar_2', 'meh_attr_sidebar_2' );
-
-function meh_attr_sidebar_2( $attr ) {
-
-  	$attr['class']     = 'sidebar';
-  	$attr['role']      = 'complementary';
-  	$attr['itemscope'] = 'itemscope';
-	$attr['itemtype']  = 'http://schema.org/WPSideBar';
-
-  return $attr;
-}
