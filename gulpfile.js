@@ -45,8 +45,7 @@ gulp.task('styles', function () {
     'scss/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.rubySass({
-      style: 'expanded',
+    .pipe($.sass({
       precision: 10
     }))
     .on('error', console.error.bind(console))
@@ -61,10 +60,9 @@ gulp.task('styles', function () {
 });
 
 // Build and serve the output
-gulp.task('serve', ['default'], function () {
+gulp.task('serve', function () {
   browserSync({
-    proxy: "local.wordpress.dev",
-    host: "192.168.50.1"
+    proxy: "local.wordpress.dev"
      });
 
   gulp.watch(['**/*.php'], reload);
