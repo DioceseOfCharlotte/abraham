@@ -1,6 +1,6 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="content layout__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 

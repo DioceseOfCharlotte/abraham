@@ -19,15 +19,15 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-			<div class="layout">
+			<div class="layout layout__topics">
 
 			<?php while ( mb_have_topics() ) : // Begins the loop through found posts. ?>
 
 				<?php mb_the_topic(); // Loads the post data. ?>
 
-				<div class="board-topic layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>">
-					<a class="topic-link layout__item" href="<?php mb_topic_url(); ?>">
-						<h4><?php mb_topic_title(); ?></h4>
+
+					<a class="board-topic topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
+						<h6><?php mb_topic_title(); ?></h6>
 						<div class="entry-meta">
 
 							<?php mb_topic_labels(); ?>
@@ -42,7 +42,6 @@ Last post by
 						<span class="num"><?php mb_topic_post_count( get_the_ID() ); ?></span>
 					</div>
 					</a>
-				</div>
 		<?php endwhile; // End found posts loop. ?>
 
 			</div>

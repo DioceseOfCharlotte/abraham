@@ -70,12 +70,13 @@
 
 
 @mixin card($hover: false) {
-	margin: 1rem 0 .5rem;
-	padding: 0.5rem;
+	//margin: .5rem 0;
+	padding: 16px;
+	border-top: 1px solid rgba(0,0,0,0.10);
 	border-radius: $base-radius;
 	background-color: #fff;
 	position: relative;
-	@include shadow-z2();
+	@include shadow-z1();
 @if $hover {
 	//transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 	transition: box-shadow 0.2s ease-out;

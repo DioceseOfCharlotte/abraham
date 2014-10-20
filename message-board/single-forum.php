@@ -46,40 +46,36 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<div class="layout">
+		<div class="layout layout__topics">
 					<div>
 						<?php if ( current_user_can( 'create_forum_topics' ) ) : ?>
 						<a href="<?php mb_topic_form_url(); ?>" class="new-topic">New Topic <i class="fa fa-plus-circle"></i></a>
 						<?php endif; ?>
 					</div>
 
-			<div class="all-1">
 
 		<?php while ( have_posts() ) : ?>
 
 			<?php the_post(); ?>
 
-				<div class="layout  board-topic <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>">
-					<a class="topic-link layout__item" href="<?php mb_topic_url(); ?>">
-						<h4><?php mb_topic_title(); ?></h4>
+				<a class="board-topic topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
+						<h6><?php mb_topic_title(); ?></h6>
 						<div class="entry-meta">
 
 							<?php mb_topic_labels(); ?>
 
-Last post
-
-<?php mb_topic_last_active_time( get_the_ID() ); ?> ago by
-<?php mb_topic_last_poster( get_the_ID() ); ?>
-
+<div class="text-minor">
+Last post by
+<strong><?php mb_topic_last_poster(); ?> -
+<?php mb_topic_last_active_time(); ?> ago</strong>
+</div>
 						</div><!-- .entry-meta -->
 					<div class="post-num">
 						<span class="num"><?php mb_topic_post_count( get_the_ID() ); ?></span>
 					</div>
 					</a>
-				</div>
 		<?php endwhile; // End found posts loop. ?>
 
-			</div>
 		</div>
 
 				<?php abraham_loop_nav(); ?>

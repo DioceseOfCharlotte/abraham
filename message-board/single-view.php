@@ -1,6 +1,6 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="content layout__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
@@ -11,7 +11,7 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Topics 
+					<th>Topics
 						<?php if ( current_user_can( 'create_forum_topics' ) ) : ?>
 						<a href="<?php mb_topic_form_url(); ?>" class="genericon-edit new-topic">New Topic &rarr;</a>
 						<?php endif; ?>
@@ -37,10 +37,10 @@
 						<div class="entry-meta">
 
 							<?php mb_topic_labels(); ?>
-							
-Last post 
+
+Last post
 <a href="<?php mb_topic_last_post_url( get_the_ID() ); ?>">
-<?php mb_topic_last_active_time( get_the_ID() ); ?> ago</a> by 
+<?php mb_topic_last_active_time( get_the_ID() ); ?> ago</a> by
 <?php mb_topic_last_poster( get_the_ID() ); ?>
 
 						</div><!-- .entry-meta -->

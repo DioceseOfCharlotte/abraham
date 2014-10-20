@@ -1,6 +1,6 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+<main id="content" class="content layout__item">
 
 		<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
@@ -37,10 +37,10 @@
 						<div class="entry-meta">
 
 							<?php mb_topic_labels(); ?>
-							
-Last post 
+
+Last post
 <a href="<?php mb_topic_last_post_url(); ?>">
-<?php mb_topic_last_active_time(); ?> ago</a> by 
+<?php mb_topic_last_active_time(); ?> ago</a> by
 <?php mb_topic_last_poster(); ?>
 
 						</div><!-- .entry-meta -->

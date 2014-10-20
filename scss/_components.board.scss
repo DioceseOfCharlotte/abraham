@@ -3,9 +3,13 @@
 \*------------------------------------*/
 
 .board-topic {
-max-width: 360px;
-padding: .65rem;
+max-width: 345px;
+margin: 0 10px 10px 0;
 	}
+
+.layout__topics {
+align-items: stretch;
+}
 
 .post-num {
 	position: absolute;
@@ -67,8 +71,9 @@ padding: .65rem;
 	text-align: center;
 	}
 
-.forum-comment {
+.topic-post {
 @include card;
+margin-bottom: 10px;
 	}
 
 
@@ -84,3 +89,8 @@ right: 5px;
 top: 5px;
 color: $color-gray;
 }
+
+textarea#mb_post_content {
+min-height: 250px;
+}
+
