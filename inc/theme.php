@@ -48,7 +48,7 @@ function abraham_widgets_init() {
 		'description'   => '',
     	'before_widget' => '<aside id="%1$s" class="primary widget %2$s">',
     	'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="primary-title">',
+		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
@@ -68,7 +68,7 @@ function abraham_widgets_init() {
 		'description'   => '',
     	'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
     	'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="subsidiary-title">',
+		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }

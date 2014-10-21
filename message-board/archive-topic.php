@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php mb_the_topic(); // Loads the post data. ?>
 
 
-					<a class="board-topic topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
+					<a class="card--link layout board-topic all-1 md-1-2 lg-1-3 xl-1-4 topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
 						<h6><?php mb_topic_title(); ?></h6>
 						<div class="entry-meta">
 

@@ -3,12 +3,17 @@
 \*------------------------------------*/
 
 .board-topic {
-max-width: 345px;
-margin: 0 10px 10px 0;
+flex-direction: column;
+justify-content: space-between;
+padding-right: 30px;
 	}
 
 .layout__topics {
 align-items: stretch;
+}
+
+.topic-title {
+	@include typo-display-1;
 }
 
 .post-num {
@@ -46,9 +51,9 @@ align-items: stretch;
 	content: "";
 	}
 
-.topic-link {
-@include card(true);
-	}
+// .topic-link {
+// @include card(true);
+// 	}
 
 .loop-description {
 	//background-color: #ecf0f1;

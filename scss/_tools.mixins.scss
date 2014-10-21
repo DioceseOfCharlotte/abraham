@@ -68,10 +68,8 @@
 
 
 
-
 @mixin card($hover: false) {
-	//margin: .5rem 0;
-	padding: 16px;
+	padding: 10px;
 	border-top: 1px solid rgba(0,0,0,0.10);
 	border-radius: $base-radius;
 	background-color: #fff;
@@ -92,3 +90,4 @@
 	}
 	}
 }
+

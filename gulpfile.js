@@ -52,11 +52,11 @@ gulp.task('styles', function () {
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./'))
     // Concatenate And Minify Styles
-    .pipe($.if('*.css', $.csso()))
-    .pipe(gulp.dest('./'));
+    // .pipe(rename({ suffix: '.min' }))
+    // .pipe(gulp.dest('./'))
+    // .pipe($.if('*.css', $.csso()))
+    // .pipe(gulp.dest('./'));
 });
 
 // Build and serve the output

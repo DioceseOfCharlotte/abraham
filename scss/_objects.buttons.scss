@@ -20,10 +20,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	@include typo-button();
-	//letter-spacing: 0.05em;
     display: inline-block; /* [1] */
     vertical-align: middle; /* [2] */
-    //font: inherit; /* [3] */
     text-align: center; /* [4] */
     border: 0; /* [4] */
     margin:  0; /* [4] */
@@ -33,8 +31,6 @@ input[type="submit"] {
     padding: half($base-spacing-unit) $base-spacing-unit;
 	position: relative;
 	margin: 10px 1px;
-	//text-transform: uppercase;
-	//line-height: 1;
 	text-decoration: none;
 	transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
 	text-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),

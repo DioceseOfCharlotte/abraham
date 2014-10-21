@@ -277,12 +277,16 @@ a {
   font-weight: bold;
 }
 
-blockquote {
+blockquote p {
   @include typo-blockquote();
 }
 
 mark {
   background-color: #f4ff81;
+}
+
+code {
+	background-color: #eeeeee;
 }
 
 dt {
@@ -352,7 +356,7 @@ h1, h2, h3 {
   @include typo-subhead();
 }
 
-.Typography--subhead--colorContrast {
+.entry-meta, .Typography--subhead--colorContrast {
   @include typo-subhead($colorContrast:true);
 }
 
@@ -444,4 +448,16 @@ h1, h2, h3 {
 
 .text-minor {
 @include typo-caption($colorContrast:true);
+}
+
+.loop-title {
+	@include typo-display-2;
+}
+
+.entry-title {
+	@include typo-display-1;
+}
+
+.widget-title {
+	@include typo-headline();
 }

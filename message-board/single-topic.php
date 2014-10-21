@@ -5,7 +5,6 @@
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
 		<div class="loop-meta">
-			<h1 class="topic-title text-center loop-title"><?php mb_single_topic_title(); ?></h1>
 
 			<div class="loop-description layout">
 			<div class="topic-info">
@@ -30,6 +29,7 @@
 					</button>
 			</div><!-- .loop-description -->
 			</div>
+			<h1 class="topic-title text-center loop-title"><?php mb_single_topic_title(); ?></h1>
 
 		</div><!-- .loop-meta -->
 
