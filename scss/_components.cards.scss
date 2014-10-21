@@ -4,12 +4,10 @@
 
 .card {
 	@include card;
-	margin-bottom: $base-spacing-unit;
 }
 
 .card--link {
 	@include card($hover: true);
-	margin-bottom: $base-spacing-unit;
 }
 
 .card--inner {
