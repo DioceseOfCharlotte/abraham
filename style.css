@@ -626,10 +626,14 @@ html {
 body {
 	position: relative;
 	box-sizing: border-box;
+	height: 100%;
 	min-height: 100%;
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-weight: 300;
 	cursor: default; }
+
+.site {
+	min-height: 100vh; }
 
 /*------------------------------------*\
     #HEADINGS
@@ -1530,7 +1534,7 @@ a:hover, a:active {
 		width: 100%; }
 	}
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 48rem) {
 	.portable-1-24 {
 		width: 4.1667%;
 		max-width: 4%; }
@@ -1898,7 +1902,7 @@ body.open {
 	min-height: 100%;
 	margin: 0 auto;
 	/* Height of the header */
-	padding-top: 60px;
+	padding-top: 70px;
 	padding-left: 0;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out; }
@@ -1906,6 +1910,14 @@ body.open {
 /*------------------------------------*\
     #LAYOUT-2C-L
 \*------------------------------------*/
+@media screen and (max-width: 48rem) {
+	.sidebar-1 {
+		-webkit-box-ordinal-group: 2;
+		-webkit-order: 1;
+		-ms-flex-order: 1;
+		        order: 1; }
+	}
+
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
