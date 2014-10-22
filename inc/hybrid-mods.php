@@ -13,9 +13,9 @@ class Doc_Attributes {
 	public $content_1c            	= '  layout__item'; 	// content
 	public $content_2cl           	= '  layout__item  card  md-18-24'; 	// content
 	public $content_2cr           	= '  layout__item  md-5-8'; 	// content
-	public $sidebar_1c     		  	= '  layout__item';	// sidebar
-	public $sidebar_2cl    			= '  layout__item';	// sidebar
-	public $sidebar_2cr    			= '  layout__item';	// sidebar
+	public $sidebar_1c     		  	= '  wrapper layout';	// sidebar
+	public $sidebar_2cl    			= '  wrapper layout';	// sidebar
+	public $sidebar_2cr    			= '  wrapper layout';	// sidebar
 	public $sidebar_1_1c     		= '  layout__item';	// sidebar
 	public $sidebar_1_2cl    		= '  layout__item  sidebar-1 card  md-6-24';	// sidebar
 	public $sidebar_1_2cr    		= '  layout__item  md-3-8';	// sidebar

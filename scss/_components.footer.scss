@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+.footer-layout {
+background-color: $color-page-foot-bg;
+color: $color-page-foot;
+a {
+	color: $dark-bg-color-links;
+	&:hover {
+		color: $dark-bg-color-links-hover;
+	}
+}
+}

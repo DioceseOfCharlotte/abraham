@@ -34,4 +34,10 @@ body {
 
 .site {
 min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.footer-layout {
+margin-top: auto;
 }

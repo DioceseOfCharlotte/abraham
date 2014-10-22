@@ -633,7 +633,20 @@ body {
 	cursor: default; }
 
 .site {
-	min-height: 100vh; }
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	        flex-direction: column; 
+	min-height: 100vh;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;}
+
+.footer-layout {
+	margin-top: auto; }
 
 /*------------------------------------*\
     #HEADINGS
@@ -1076,9 +1089,9 @@ a:hover, a:active {
 	vertical-align: top;
 
 	-webkit-box-flex: 1;
-	-webkit-flex: 1 74%;
-	    -ms-flex: 1 74%;
-	        flex: 1 74%;}
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;}
 
 /**
  * Some simple, crude, starting-point widths to use alongside the layout system.
@@ -1647,7 +1660,7 @@ a:hover, a:active {
 		width: 100%; }
 	}
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 62rem) {
 	.lg-1-24 {
 		width: 4.1667%;
 		max-width: 4%; }
@@ -1880,6 +1893,7 @@ a:hover, a:active {
  * #WRAPPERS
 */
 .wrapper {
+	width: 100%;
 	max-width: 1100px;
 	margin: 0 auto;
 	padding-right: 5px;
@@ -1900,12 +1914,14 @@ body.open {
 
 .main-container {
 	min-height: 100%;
-	margin: 0 auto;
-	/* Height of the header */
 	padding-top: 70px;
 	padding-left: 0;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out; }
+@media screen and (min-width: 62rem) {
+	.main-container {
+		/* Height of the header */
+		padding-top: 10px; } }
 
 /*------------------------------------*\
     #LAYOUT-2C-L
@@ -2554,7 +2570,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .navdrawer__toggle:active {
 	background-color: rgba(255, 255, 255, 0.4); }
 
-@media all and (min-width: 990px) {
+@media screen and (min-width: 62rem) {
 	.app-bar {
 		position: relative; }
 
@@ -2592,6 +2608,17 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	.navdrawer__toggle {
 		display: none; }
 	}
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+.footer-layout {
+	color: #fbfcfc; 
+	background-color: #4e5758;}
+.footer-layout a {
+	color: #1e8cbe; }
+.footer-layout a:hover {
+	color: #31a8de; }
 
 /*------------------------------------*\
     #SIDE NAV
@@ -2690,7 +2717,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .menu__items--secondary li::before {
 	content: none; }
 
-@media all and (min-width: 990px) {
+@media screen and (min-width: 62rem) {
 	.navdrawer {
 		overflow-y: auto; 
 		position: relative;

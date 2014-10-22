@@ -11,15 +11,14 @@
 	</div><!-- .main-container -->
 
 
-</div><!-- .site -->
-
-<?php hybrid_get_sidebar( 'footer' ); ?>
-
 	<footer <?php hybrid_attr( 'footer' ); ?>>
+	<?php hybrid_get_sidebar( 'footer' ); ?>
 		<p class="site-info copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 	</footer><!-- #footer -->
 
 <?php wp_footer(); ?>
+
+</div><!-- .site -->
 
 </body>
 </html>

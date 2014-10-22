@@ -66,7 +66,7 @@ function abraham_widgets_init() {
     	'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
 		'id'            => 'footer',
 		'description'   => '',
-    	'before_widget' => '<aside id="%1$s" class="subsidiary widget %2$s">',
+    	'before_widget' => '<aside id="%1$s" class="layout__item widget %2$s">',
     	'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
