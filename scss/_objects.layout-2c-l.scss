@@ -2,8 +2,9 @@
     #LAYOUT-2C-L
 \*------------------------------------*/
 
-@include media-query(portable) {
+
 .sidebar-1 {
+@include media-query(portable) {
 	order: 1;
 }
 }

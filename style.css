@@ -1921,7 +1921,18 @@ body.open {
 @media screen and (min-width: 62rem) {
 	.main-container {
 		/* Height of the header */
-		padding-top: 10px; } }
+		padding-top: 20px; } }
+
+.content {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
+
+@media screen and (min-width: 62rem) {
+	.content, .sidebar {
+		margin-bottom: 20px; 
+		margin-left: 20px;} }
 
 /*------------------------------------*\
     #LAYOUT-2C-L
@@ -1931,8 +1942,7 @@ body.open {
 		-webkit-box-ordinal-group: 2;
 		-webkit-order: 1;
 		-ms-flex-order: 1;
-		        order: 1; }
-	}
+		        order: 1; } }
 
 /*------------------------------------*\
     #BUTTONS
@@ -2619,6 +2629,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	color: #1e8cbe; }
 .footer-layout a:hover {
 	color: #31a8de; }
+.footer-layout .sidebar {
+	margin: 0 auto; }
 
 /*------------------------------------*\
     #SIDE NAV
@@ -2854,6 +2866,12 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 textarea#mb_post_content {
 	min-height: 250px; }
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+.breadcrumb__wrapper {
+	margin-top: 20px; }
 
 /*------------------------------------*\
     #WIDTHS

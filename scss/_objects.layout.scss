@@ -41,7 +41,17 @@ body.open {
   transition: transform 0.3s ease-out;
 @include media-query(lg) {
   /* Height of the header */
-  padding-top: $base-spacing-unit-sm;
+  padding-top: $base-spacing-unit;
 }
 }
 
+.content {
+	flex: 1 100%;
+}
+
+.content, .sidebar {
+  @include media-query(lg) {
+  		margin-left: $base-spacing-unit;
+  		margin-bottom: $base-spacing-unit;
+  }
+}
