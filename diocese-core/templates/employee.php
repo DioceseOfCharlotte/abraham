@@ -69,19 +69,12 @@ foreach ( $emp_emails as $email ) { ?>
 
 <?php else : // If not viewing a single post. ?>
 
-<div class="card layout layout__item all-1 md-1-2 lg-1-3 xl-1-4">
+<div class="card layout layout__item all-1 md-1-2 ">
 
-		<?php
-		// if ( has_post_thumbnail() ) {
-		// 	the_post_thumbnail( 'directory-thumbnail', array( 'class' => 'avatar' ) );
-		// }
-		?>
-
-		<div class="layout__item avatar card__avatar">
-			<?php get_the_image( array( 'size' => 'directory-thumbnail' ) ); ?>
-		</div>
-
-	<div class="card__details layout__item layout layout__column">
+<div class="comment-author layout__item md-3-24">
+		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
+</div>
+	<div class="md-21-24 card__details layout__item layout layout__column">
 		<header class="card-header all-1-1">
 			<?php the_title( '<a href="' . get_permalink() . '">', '</a>' ); ?>
 		</header><!-- .card-header -->

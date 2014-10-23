@@ -1934,11 +1934,14 @@ body.open {
 
 @media screen and (max-width: 48rem) {
 	.content, .sidebar {
-		margin-left: 0; } }
-@media screen and (min-width: 62rem) {
+		margin-left: 10px; } }
+@media screen and (min-width: 48rem) {
 	.content, .sidebar {
 		margin-bottom: 20px; 
 		margin-left: 20px;} }
+
+.widget {
+	margin-left: -10px; }
 
 /*------------------------------------*\
     #LAYOUT-2C-L
@@ -2251,6 +2254,12 @@ body.open {
 	text-decoration: none;
 	-webkit-transition: box-shadow 0.2s ease-in;
 	        transition: box-shadow 0.2s ease-in; }
+
+.card__details {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
 
 /*------------------------------------*\
     #BUTTONS

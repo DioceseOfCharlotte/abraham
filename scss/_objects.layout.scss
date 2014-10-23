@@ -54,10 +54,18 @@ body.open {
 
 .content, .sidebar {
 	  @include media-query(portable) {
-	margin-left: 0;
+	margin-left: $base-spacing-unit-sm;
 }
-  @include media-query(lg) {
+  @include media-query(md) {
   		margin-left: $base-spacing-unit;
   		margin-bottom: $base-spacing-unit;
   }
 }
+
+.widget {
+margin-left: -($base-spacing-unit / 2);
+}
+
+// .content {
+// 	min-width: 100%;
+// }
