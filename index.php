@@ -17,6 +17,8 @@ get_header(); ?>
 
     <?php endif; // End check for multi-post page. ?>
 
+	<div class="layout">
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -32,6 +34,7 @@ get_header(); ?>
 			<?php get_template_part( 'content/error' ); ?>
 
 		<?php endif; // End check for posts. ?>
+	</div>
 
 </main><!-- #main -->
 

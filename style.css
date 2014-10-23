@@ -1089,9 +1089,9 @@ a:hover, a:active {
 	vertical-align: top;
 
 	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;}
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%;}
 
 /**
  * Some simple, crude, starting-point widths to use alongside the layout system.
@@ -1926,11 +1926,11 @@ body.open {
 		padding-top: 20px;
 		padding-left: 0; } }
 
-.content {
+.sidebar-1 {
 	-webkit-box-flex: 1;
-	-webkit-flex: 1 100%;
-	    -ms-flex: 1 100%;
-	        flex: 1 100%; }
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
 
 @media screen and (max-width: 48rem) {
 	.content, .sidebar {
@@ -2786,12 +2786,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	-webkit-justify-content: space-between;
 	-ms-flex-pack: justify;
 	        justify-content: space-between;}
-
-.layout__topics {
-	-webkit-box-align: stretch;
-	-webkit-align-items: stretch;
-	-ms-flex-align: stretch;
-	        align-items: stretch; }
 
 .topic-title {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
