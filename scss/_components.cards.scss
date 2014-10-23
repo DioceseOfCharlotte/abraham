@@ -8,8 +8,7 @@
 
 .card--link {
 	@include card($hover: true);
+	flex: 1 100%;
 }
 
-.card--inner {
-	margin-right: 10px;
-}
+

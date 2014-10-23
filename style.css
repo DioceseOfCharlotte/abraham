@@ -1915,13 +1915,16 @@ body.open {
 .main-container {
 	min-height: 100%;
 	padding-top: 70px;
-	padding-left: 0;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out; }
+@media screen and (min-width: 48rem) {
+	.main-container {
+		padding-left: 10px; } }
 @media screen and (min-width: 62rem) {
 	.main-container {
 		/* Height of the header */
-		padding-top: 20px; } }
+		padding-top: 20px;
+		padding-left: 0; } }
 
 .content {
 	-webkit-box-flex: 1;
@@ -1929,6 +1932,9 @@ body.open {
 	    -ms-flex: 1 100%;
 	        flex: 1 100%; }
 
+@media screen and (max-width: 48rem) {
+	.content, .sidebar {
+		margin-left: 0; } }
 @media screen and (min-width: 62rem) {
 	.content, .sidebar {
 		margin-bottom: 20px; 
@@ -2229,7 +2235,12 @@ body.open {
 	background-color: #fff;
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 	-webkit-transition: box-shadow 0.2s ease-out;
-	        transition: box-shadow 0.2s ease-out; }
+	        transition: box-shadow 0.2s ease-out;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
 .card--link:hover {
 	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 	text-decoration: none;
@@ -2240,9 +2251,6 @@ body.open {
 	text-decoration: none;
 	-webkit-transition: box-shadow 0.2s ease-in;
 	        transition: box-shadow 0.2s ease-in; }
-
-.card--inner {
-	margin-right: 10px; }
 
 /*------------------------------------*\
     #BUTTONS
@@ -2792,6 +2800,28 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	font-weight: 400; 
 	line-height: 1.1764705882;}
 
+.topic-post {
+	position: relative;
+	margin: 0; 
+	margin-bottom: 10px;
+	padding: 10px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+@media screen and (max-width: 48rem) {
+	.topic-post {
+		        flex-direction: column;
+
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		        align-items: center; } }
+
 .post-num {
 	position: absolute;
 	top: 0;
@@ -2841,17 +2871,10 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	border-radius: 50%;}
 
 .comment-author {
-	max-width: 100px;
 	text-align: center; }
-
-.topic-post {
-	position: relative;
-	margin-bottom: 10px; 
-	padding: 10px;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 2px;
-	background-color: #fff;
-	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+@media screen and (min-width: 48rem) {
+	.comment-author {
+		max-width: 100px; } }
 
 .topic-info {
 	padding: 0.5em 1em;
@@ -2866,6 +2889,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 textarea#mb_post_content {
 	min-height: 250px; }
+
+.user-profile-link {
+	vertical-align: bottom; }
 
 /*------------------------------------*\
     #HEADER

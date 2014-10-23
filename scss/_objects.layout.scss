@@ -36,12 +36,15 @@ body.open {
 
 .main-container {
   padding-top: 70px;
-  padding-left: 0;
+  @include media-query(md) {
+  padding-left: $base-spacing-unit-sm;
+}
   min-height: 100%;
   transition: transform 0.3s ease-out;
 @include media-query(lg) {
   /* Height of the header */
   padding-top: $base-spacing-unit;
+  padding-left: 0;
 }
 }
 
@@ -50,6 +53,9 @@ body.open {
 }
 
 .content, .sidebar {
+	  @include media-query(portable) {
+	margin-left: 0;
+}
   @include media-query(lg) {
   		margin-left: $base-spacing-unit;
   		margin-bottom: $base-spacing-unit;
