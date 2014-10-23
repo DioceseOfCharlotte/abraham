@@ -13,6 +13,7 @@ require_once( $abraham_dir . 'hybrid/hybrid.php'    );
 require_once( $abraham_dir . 'inc/custom-background.php' );
 require_once( $abraham_dir . 'inc/custom-header.php'     );
 //require_once( $abraham_dir . 'inc/custom-colors.php'     );
+require_once( $abraham_dir . 'diocese-core/diocese.php'  );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/customizer.php'        );
 require_once( $abraham_dir . 'inc/template-tags.php'     );
@@ -23,6 +24,9 @@ require_once( $abraham_dir . 'inc/hybrid-mods.php'      );
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
+/* Launch the Diocese Core framework. */
+new Diocese();
+
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'abraham_setup' );
 
@@ -31,6 +35,16 @@ if ( ! function_exists( 'abraham_setup' ) ) :
  * Sets up theme defaults and registers support for various WordPress features.
  */
 function abraham_setup() {
+
+		/* Staff Directory. */
+	add_theme_support( 'diocese-employees' );
+
+	/* Department Directory. */
+	add_theme_support( 'diocese-departments' );
+
+	/* Document Directory. */
+	add_theme_support( 'diocese-documents' );
+
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
