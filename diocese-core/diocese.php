@@ -95,10 +95,6 @@ if ( !class_exists( 'Diocese' ) ) {
 		 */
 		function includes() {
 
-			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'p2p/posts-to-posts.php' );
-			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'cmb/init.php' );
-			require_once( trailingslashit( DIOCESE_DIR ) . 'core.php' );
-
 			if ( current_theme_supports( 'diocese-employees' ) && current_theme_supports( 'diocese-departments' ) ) {
 				require_once( trailingslashit( DIOCESE_CONNECTIONS ) . 'dept-to-staff.php' );
 			}
@@ -106,28 +102,29 @@ if ( !class_exists( 'Diocese' ) ) {
 			if ( current_theme_supports( 'diocese-departments' ) && current_theme_supports( 'diocese-documents' ) ) {
 				require_once( trailingslashit( DIOCESE_CONNECTIONS ) . 'dept-to-docs.php' );
 			}
-		}
 
-		function extensions() {
-
-			/* Load the post-types if supported. */
+						/* Load the post-types if supported. */
 			require_if_theme_supports( 'diocese-employees', trailingslashit( DIOCESE_POSTS ) . 'employees.php' );
 
 			require_if_theme_supports( 'diocese-employees', trailingslashit( DIOCESE_META ) . 'employee-meta.php' );
 
 			/* Load the post-types if supported. */
 			require_if_theme_supports( 'diocese-documents', trailingslashit( DIOCESE_POSTS ) . 'documents.php' );
+			require_if_theme_supports( 'diocese-documents', trailingslashit( DIOCESE_META ) . 'document-meta.php' );
 
 			/* Load the post-types if supported. */
 			require_if_theme_supports( 'diocese-departments', trailingslashit( DIOCESE_POSTS ) . 'departments.php' );
+		}
 
-			if ( current_theme_supports( 'diocese-documents' ) ) {
-				require_once( trailingslashit( DIOCESE_POSTS ) . 'departments.php' );
-				require_once( trailingslashit( DIOCESE_META ) . 'document-meta.php' );
-			}
+		function extensions() {
+
+			// require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'p2p/posts-to-posts.php' );
+			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'cmb/init.php' );
+			require_once( trailingslashit( DIOCESE_DIR ) . 'core.php' );
 
 		}
 
 	}
 
 }
+
