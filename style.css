@@ -2330,6 +2330,10 @@ body.open {
 .entry.department {
 	padding: 0 10px 0 0; }
 
+img.thumbnail.dept-thumb {
+	width: 100px;
+	height: 100px; }
+
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
