@@ -882,11 +882,12 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.04em;}
 
 .Typography--body-2 {
+	color: #7f8c8d; 
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
-	letter-spacing: 0.04em; }
+	letter-spacing: 0.04em;}
 
 .Typography--Body-2--colorContrast {
 	opacity: 0.87; 
@@ -911,7 +912,7 @@ h1 a, h2 a, h3 a {
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
 
-.Typography--baption {
+.Typography--caption {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -1034,6 +1035,30 @@ a {
 	text-decoration: none;}
 a:hover, a:active {
 	color: #104b66; }
+
+a[href*="tel:"]::before {
+	display: inline-block;
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f095";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+a[href*="mailto:"]::before {
+	display: inline-block;
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f0e0";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
 
 /*------------------------------------*\
     #WIDTHS-RESPONSIVE
@@ -2260,6 +2285,19 @@ body.open {
 	-webkit-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1; }
+
+.staff-info {
+	display: inline;
+	margin: 0; }
+.staff-info li {
+	height: 30px; }
+.staff-info a {
+	color: inherit;
+	font-weight: inherit;
+	vertical-align: middle; }
+
+.middle--info {
+	margin-bottom: 0; }
 
 /*------------------------------------*\
     #BUTTONS

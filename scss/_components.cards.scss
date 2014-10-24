@@ -15,3 +15,23 @@
 .card__details {
 	flex: 1;
 }
+
+.staff-info {
+    display: inline;
+    margin: 0;
+    li {
+      &:hover {
+        //background: $color-tint;
+      }
+      height: $list-container-item-height;
+    }
+a {
+	color: inherit;
+	font-weight: inherit;
+	vertical-align: middle;
+}
+}
+
+.middle--info {
+	margin-bottom: 0;
+}

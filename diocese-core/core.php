@@ -26,7 +26,10 @@ add_action( 'init', 'doc_add_image_sizes' );
  * @return void
  */
 function doc_add_image_sizes() {
-	add_image_size( 'directory-thumbnail', 80, 80, true );
+	add_image_size( 'directory-thumbnail', 60, 60, true );
+
+	/* Adds the 'saga-large' image size. */
+	add_image_size( 'dept-thumb', 1100, 9999, false );
 }
 
 

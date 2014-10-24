@@ -362,6 +362,7 @@ h1, h2, h3 {
 
 .Typography--body-2 {
   @include typo-body-2();
+  color: $base-minor-color;
 }
 
 .Typography--Body-2--colorContrast {
@@ -376,7 +377,7 @@ h1, h2, h3 {
   @include typo-body-1($colorContrast:true);
 }
 
-.Typography--baption {
+.Typography--caption {
   @include typo-caption();
 }
 

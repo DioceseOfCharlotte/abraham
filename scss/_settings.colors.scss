@@ -20,7 +20,7 @@ $color-negative:            #9f102e;
 // Page
 $base-background-color:   $color-gray-ui;
 $base-text-color:         $color-gray;
-$base-minor-color:        lighten($base-text-color, 10);
+$base-minor-color:        lighten($base-text-color, 20);
 $base-background-color:   $color-gray-ui;
 
 // Links
@@ -28,6 +28,13 @@ $color-links:           $color-brand-dark;
 $color-links-hover:     darken($color-links, 10);
 $dark-bg-color-links:           lighten($color-links, 10);
 $dark-bg-color-links-hover:     lighten($dark-bg-color-links, 10);
+
+// Lists
+$list-container-height: 500px;
+$list-container-width: 400px;
+$list-container-item-height: $base-line-height * 1.5;
+$list-container-item-border-color: $color-gray-light;
+$list-container-view-background: rgba(255,255,255,1);
 
 // Text
 $color-code:            #BDC3C7;

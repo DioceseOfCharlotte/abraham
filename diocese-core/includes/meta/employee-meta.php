@@ -93,3 +93,41 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 
     return $meta_boxes;
 }
+
+
+if ( ! function_exists( 'doc_phone' ) ) :
+
+function doc_phone() {
+
+            $phone_entries = get_post_meta( get_the_ID(), 'phone_group', true );
+
+            foreach ( $phone_entries as $phone_entry ) { ?>
+            <a href="tel:<?php echo $phone_entry['emp_phone']; ?>" itemprop="telephone">
+                <?php echo $phone_entry['emp_phone']; ?>
+            </a>
+        <?php
+        } //endforeach
+
+}
+endif;
+
+
+if ( ! function_exists( 'doc_staff_email' ) ) :
+
+function doc_staff_email() {
+
+$emp_emails = get_post_meta( get_the_id(), '_doc_emp_email', true );
+
+	if($emp_emails){
+
+	    foreach ( $emp_emails as $email ) { ?>
+
+	        <a href="mailto:<?php echo $email; ?>" itemprop="email">
+	            <?php echo $email; ?>
+	        </a>
+	    <?php
+	    }
+	}
+
+}
+endif;

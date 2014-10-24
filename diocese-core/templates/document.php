@@ -50,8 +50,8 @@ endif;
 
 </div>
 
-</div>
 
+</div>
 <?php doc_staff_email() ?>
 </div>
 </div>
@@ -65,37 +65,40 @@ endif;
 		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 </div>
 	<div class="md-21-24 card__details layout__item layout layout__column">
+		<header class="card-header all-1-1">
+			<?php the_title( '<a href="' . get_permalink() . '">', '</a>' ); ?>
+		</header><!-- .card-header -->
 
 		<div class="layout layout__item middle--info">
-	<ul class="staff-info">
-	    <li class="Typography--subhead">
-	    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	    </li>
-	    <li class="Typography--body-2">
-	    	<?php doc_phone(); ?>
-	    </li>
-	    <li class="Typography--body-2">
-	    	<?php doc_staff_email() ?>
-	    </li>
-	</ul>
+			<div class="card__titles layout__item">
 
-		</div>
+				<?php if ( $connected->have_posts() ) :	?>
+					<div class="card__department">
 
+						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+							<div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+							<div><?php echo  p2p_get_meta( get_post()->p2p_id, 'role', true ); ?></div>
+						<?php endwhile; ?>
 
-	</div>
-
-			<?php if ( $connected->have_posts() ) :	?>
-
-				<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-					<div class="card__department all-1">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</div>
-				<?php endwhile; ?>
 
 	<?php wp_reset_postdata(); ?>
 
-			<?php endif; ?>
+				<?php endif; ?>
 
+			</div>
+
+			<div class="card__phone-list layout__item">
+					<div class="card__phone">
+						<?php doc_phone(); ?>
+					</div>
+			</div>
+
+		</div>
+
+		<?php doc_staff_email() ?>
+
+	</div>
 </div>
 
 	<?php wp_reset_postdata(); ?>

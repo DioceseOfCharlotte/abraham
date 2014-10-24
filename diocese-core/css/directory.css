@@ -1,4 +1,4 @@
-.postbox-container .cmb-repeat-group-field, .postbox-container .remove-field-row {
+/*.postbox-container .cmb-repeat-group-field, .postbox-container .remove-field-row {
 padding: .8em 0 0;
 }
 
@@ -12,7 +12,7 @@ display: block;
 width: 100%;
 padding-top: 1.8em;
 padding-bottom: 0;
-}
+}*/
 
 
 /*.cmb2_wrap .repeatable-group .cmb-group-title .cmb-th h4 {
@@ -32,7 +32,7 @@ text-align: center;
  * Display repeatable rows inline.
  */
 
-.postbox-container .repeatable-group>.cmb-row {
+/*.postbox-container .repeatable-group>.cmb-row {
 border-bottom: 0;
 }
 
@@ -67,17 +67,17 @@ padding: 0;
 
 .postbox-container .cmb-row.cmb-repeat-group-field {
 padding: 0;
-}
+}*/
 
 /**
  * Hover effect on delete button.
  */
- 
-.cmb2_wrap .cmb2_media_status .img_status .cmb2_remove_file_button, .cmb2_wrap .cmb2_media_status .embed_status .cmb2_remove_file_button {
+
+/*.cmb2_wrap .cmb2_media_status .img_status .cmb2_remove_file_button, .cmb2_wrap .cmb2_media_status .embed_status .cmb2_remove_file_button {
 opacity: 0.5;
 }
 
 
 .cmb2_wrap .cmb2_media_status .img_status .cmb2_remove_file_button:hover, .cmb2_wrap .cmb2_media_status .embed_status .cmb2_remove_file_button:hover {
 opacity: 1;
-}
+}*/
