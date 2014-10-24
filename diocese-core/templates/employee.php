@@ -20,7 +20,7 @@ $connected = new WP_Query( array(
 	<div class="card layout__item palm-1-1 sm-1-2 lg-1-3">
 <div class="card--staff layout" itemscope itemtype="http://schema.org/Person">
 <div class="layout__item card__avatar">
-<?php get_the_image( array( 'size' => 'directory-thumbnail' ) ); ?>
+<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 </div>
 <div class="card__details layout__item layout layout__column">
   <header class="card-header all-1-1" itemprop="name"><?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></header><!-- .card-header -->
@@ -37,10 +37,11 @@ if ( $connected->have_posts() ) :
     <div><?php echo  p2p_get_meta( get_post()->p2p_id, 'role', true ); ?></div>
 <?php endwhile; ?>
 </div>
-<?php
-wp_reset_postdata();
-endif;
-?>
+
+<?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
+
 </div>
 
 
@@ -92,12 +93,10 @@ endif;
 					</div>
 				<?php endwhile; ?>
 
-	<?php wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); ?>
 
 			<?php endif; ?>
 
 </div>
-
-	<?php wp_reset_postdata(); ?>
 
 		<?php endif; // End single post check. ?>

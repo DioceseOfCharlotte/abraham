@@ -17,6 +17,10 @@
         <footer class="entry-footer">
 
 <?php
+	/*
+	 * Query the connected employees
+	 *
+	 */
 	$connected = new WP_Query( array(
 	  'connected_type' => 'departments_to_employees',
 	  'connected_items' => get_queried_object(),
@@ -44,59 +48,49 @@
 	<?php endwhile; ?>
 	</ul>
 
-<?php
-// Prevent weirdness
-wp_reset_postdata();
+<?php wp_reset_postdata(); ?>
 
-endif;
-?>
+<?php endif; ?>
+
 
 <?php
-$connected = new WP_Query( array(
-  'connected_type' => 'departments_to_documents',
-  'connected_items' => get_queried_object(),
-  'nopaging' => true,
-) );
+	/**
+	 * Query the connected documents
+	 *
+	 */
+	$connected = new WP_Query( array(
+	  'connected_type' => 'departments_to_documents',
+	  'connected_items' => get_queried_object(),
+	  'nopaging' => true,
+	) );
 
 if ( $connected->have_posts() ) :
 ?>
+
 <h5>Related documents:</h5>
-<ul>
-<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-    <li class="Typography--subhead">
-    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </li>
-<?php endwhile; ?>
-</ul>
+	<ul>
+	<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+	    <li class="Typography--subhead">
+	    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	    </li>
+	<?php endwhile; ?>
+	</ul>
 
-<?php
-// Prevent weirdness
-wp_reset_postdata();
+<?php wp_reset_postdata(); ?>
 
-endif;
-?>
+<?php endif; ?>
 
         </footer><!-- .entry-footer -->
 
+    <?php else : ?>
 
+    	<div class="dept-image left">
+        <?php get_the_image( array( 'size' => 'dept-thumb', 'default_image' => get_stylesheet_directory_uri() . '/images/doc-shield_shield-symbol-color.png' ) ); ?>
+        </div>
 
-
-
-
-
-
-
-
-
-    <?php else : // If not viewing a single post. ?>
-
-        <?php get_the_image(); ?>
-
-        <header class="entry-header">
-
-            <?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
-
-        </header><!-- .entry-header -->
+        <h3 class="right entry-title">
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h3>
 
         <div <?php hybrid_attr( 'entry-summary' ); ?>>
 

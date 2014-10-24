@@ -462,3 +462,8 @@ h1, h2, h3 {
 .widget-title {
 	@include typo-headline();
 }
+
+.loop-title {
+	@include scut-side-lined(0.1em, .5em, $color-gray-ui, $v-adjust: 0.1em);
+	margin-bottom: $base-spacing-unit;
+}

@@ -29,7 +29,7 @@ function doc_add_image_sizes() {
 	add_image_size( 'directory-thumbnail', 60, 60, true );
 
 	/* Adds the 'saga-large' image size. */
-	add_image_size( 'dept-thumb', 1100, 9999, false );
+	add_image_size( 'dept-thumb', 100, 100, true );
 }
 
 
