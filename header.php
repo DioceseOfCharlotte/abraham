@@ -18,11 +18,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ?>/images/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri() ?>/images/touch/apple-touch-icon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/touch/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#70ab88">
 
     <?php wp_head(); ?>
   </head>
