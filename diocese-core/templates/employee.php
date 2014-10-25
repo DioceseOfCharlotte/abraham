@@ -1,7 +1,6 @@
 <?php global $post;
 		$first_name = get_post_meta( get_the_id(), '_doc_emp_first_name', true );
 		$last_name = get_post_meta( get_the_id(), '_doc_emp_last_name', true );
-		$emp_emails = get_post_meta( get_the_id(), '_doc_emp_email', true );
 ?>
 
 <?php
@@ -62,40 +61,40 @@ if ( $connected->have_posts() ) :
 
 <div class="card layout layout__item all-1 md-1-2 ">
 
-<div class="comment-author layout__item md-3-24">
+	<div class="comment-author layout__item md-3-24">
 		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
-</div>
+	</div>
 	<div class="md-21-24 card__details layout__item layout layout__column">
 
 		<div class="layout layout__item middle--info">
-	<ul class="staff-info">
-	    <li class="Typography--subhead">
-	    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	    </li>
-	    <li class="Typography--body-2">
-	    	<?php doc_phone(); ?>
-	    </li>
-	    <li class="Typography--body-2">
-	    	<?php doc_staff_email() ?>
-	    </li>
-	</ul>
+
+			<ul class="staff-info">
+			    <li class="Typography--subhead">
+			    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			    </li>
+			    <li class="Typography--body-2">
+			    	<?php doc_phone(); ?>
+			    </li>
+			    <li class="Typography--body-2">
+			    	<?php doc_staff_email() ?>
+			    </li>
+			</ul>
 
 		</div>
 
-
 	</div>
 
-			<?php if ( $connected->have_posts() ) :	?>
+<?php if ( $connected->have_posts() ) :	?>
 
-				<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-					<div class="card__department all-1">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					</div>
-				<?php endwhile; ?>
+<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+	<div class="card__department all-1">
+		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	</div>
+<?php endwhile; ?>
 
 <?php wp_reset_postdata(); ?>
 
-			<?php endif; ?>
+<?php endif; ?>
 
 </div>
 
