@@ -86,12 +86,21 @@ opacity: 1;
 background: url("../images/ico-delete.png") no-repeat scroll 50% 50% transparent;
 }
 
+th.p2p-col-delete span.p2p-icon {
+background: url("../images/ico-delete-head.png") no-repeat scroll 50% 50% transparent;
+opacity: 1;
+}
+
+.p2p-col-create span.p2p-icon {
+background: url("../images/ico-add.png") no-repeat scroll 50% 50% transparent;
+}
 
 .cmb-repeatable-group .cmb-group-title .cmb-th h4 {
-width: 10%;
 background-color: #e9e9e9;
 text-align: center;
-border-radius: 2px 2px 0 0;
+border-radius: 3px 3px 0 0;
+display: inline-block;
+padding: 4px 20px 0;
 }
 
 .postbox-container .cmb-repeatable-group>.cmb-row {
@@ -100,4 +109,31 @@ padding-bottom: 0;
 
 .cmb-row.cmb-group-title {
 padding-bottom: 0;
+}
+
+
+
+#phone_group_repeat h4:before, #dept_phone_group_repeat h4:before {
+content: '\f470';
+}
+
+#dept_address_group_repeat h4:before, #address_group_repeat h4:before {
+content: '\f230';
+}
+
+
+
+
+.cmb-group-title h4:before {
+font: 400 20px/1 dashicons;
+speak: none;
+display: inline-block;
+padding: 0 2px 0 0;
+top: 0;
+left: -1px;
+position: relative;
+vertical-align: top;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-decoration: none!important;
 }

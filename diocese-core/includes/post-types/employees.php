@@ -83,7 +83,7 @@ function doc_employees_register_post_types() {
             /* What features the post type supports. */
             'supports' => array(
                 'title',
-                'editor',
+                //'editor',
                 'author',
                 'thumbnail'
             ),

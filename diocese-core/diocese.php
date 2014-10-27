@@ -133,6 +133,7 @@ if ( !class_exists( 'Diocese' ) ) {
 
 			// require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'p2p/posts-to-posts.php' );
 			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'cmb/init.php' );
+			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'cmb-field-select2/cmb-field-select2.php' );
 			require_once( trailingslashit( DIOCESE_DIR ) . 'core.php' );
 
 		}

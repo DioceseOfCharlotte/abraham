@@ -28,11 +28,10 @@ function cmb2_department_metaboxes( array $meta_boxes ) {
         'fields'        => array(
 
             array(
-                'name' => __( 'Phone', 'cmb2' ),
                 'id'          => 'dept_phone_group',
                 'type'        => 'group',
                 'options'     => array(
-                    'group_title'   => __( '{#}', 'cmb2' ), // {#} gets replaced by row number
+                    'group_title'   => __( 'Phone {#}', 'cmb2' ), // {#} gets replaced by row number
                     'add_button'    => __( 'Add Another Phone', 'cmb2' ),
                     'remove_button' => __( 'Remove Phone', 'cmb2' ),
                     'sortable'      => true, // beta
@@ -68,10 +67,55 @@ function cmb2_department_metaboxes( array $meta_boxes ) {
                 'type' => 'text_email',
                 'add_button'    => __( 'Add Another email', 'cmb2' ),
                 'attributes'  => array(
-                'placeholder' => '@charlottediocese.org',
+                'default' => '@charlottediocese.org',
             ),
                 'repeatable' => true,
             ),
+
+                        array(
+                'id'          => 'dept_address_group',
+                'type'        => 'group',
+                'options'     => array(
+                    'group_title'   => __( 'Address {#}', 'cmb2' ), // {#} gets replaced by row number
+                    'add_button'    => __( 'Add Another Address', 'cmb2' ),
+                    'remove_button' => __( 'Remove Address', 'cmb2' ),
+                    //'sortable'      => true, // beta
+                ),
+                'fields'      => array(
+
+            array(
+                'name' => __( 'Address Line 1', 'cmb2' ),
+                'id'   => 'emp_address_line_1',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __( 'Address Line 2', 'cmb2' ),
+                'id'   => 'emp_address_line_2',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __( 'City', 'cmb2' ),
+                'id'   => 'emp_city',
+                'type' => 'text_medium',
+            ),
+
+            array(
+                'name' => __( 'State', 'cmb2' ),
+                'id'   => 'emp_state',
+                'type' => 'text_small',
+                'default' => 'NC'
+            ),
+
+            array(
+                'name' => __( 'Zip', 'cmb2' ),
+                'id'   => 'emp_zip',
+                'type' => 'text_small',
+            ),
+
+                ),
+                ),
         ),
     );
 

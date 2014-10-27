@@ -81,14 +81,14 @@ function doc_departments_register_post_types() {
             /* What features the post type supports. */
             'supports' => array(
                 'title',
-                'editor',
+                //'editor',
                 'author',
                 'thumbnail'
             ),
 
             /* Taxonomies of the post type. */
-            'taxonomies'  => array( 
-                'agency' 
+            'taxonomies'  => array(
+                'agency'
             ),
 
             /* Labels used when displaying the posts. */

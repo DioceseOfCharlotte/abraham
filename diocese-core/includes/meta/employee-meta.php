@@ -44,7 +44,6 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 	            ),
             ),
 
-
 	        array(
 				'name'     => __( 'Contact Type', 'cmb2' ),
 				'id'       => $prefix . 'contact_type_select',
@@ -71,12 +70,16 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 			// 	),
 			// ),
 
+
+
+
+
             array(
-                'name' => __( 'Phone', 'cmb2' ),
+                //'name' => __( 'Phone', 'cmb2' ),
                 'id'          => 'phone_group',
                 'type'        => 'group',
                 'options'     => array(
-                    'group_title'   => __( '{#}', 'cmb2' ), // {#} gets replaced by row number
+                    'group_title'   => __( 'Phone {#}', 'cmb2' ), // {#} gets replaced by row number
                     'add_button'    => __( 'Add Another Phone', 'cmb2' ),
                     'remove_button' => __( 'Remove Phone', 'cmb2' ),
                     'sortable'      => true, // beta
@@ -98,11 +101,9 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
                 'name' => __( 'Phone number', 'cmb2' ),
                 'id'   => 'emp_phone',
                 'type' => 'text_medium',
-                'add_button' => __( 'Add Another Phone', 'cmb2' ),
                 'attributes'  => array(
                 'placeholder' => '704-###-####',
-            ),
-                //'repeatable' => true,
+            	),
             ),
                 ),
                 ),
@@ -111,10 +112,57 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
                 'id'   => $prefix . 'emp_email',
                 'type' => 'text_email',
                 'attributes'  => array(
-                'placeholder' => '@charlottediocese.org',
+                'default' => '@charlottediocese.org',
             ),
                 'repeatable' => true,
             ),
+
+
+            array(
+                'id'          => 'address_group',
+                'type'        => 'group',
+                'options'     => array(
+                    'group_title'   => __( 'Address {#}', 'cmb2' ), // {#} gets replaced by row number
+                    'add_button'    => __( 'Add Another Address', 'cmb2' ),
+                    'remove_button' => __( 'Remove Address', 'cmb2' ),
+                    //'sortable'      => true, // beta
+                ),
+                'fields'      => array(
+
+            array(
+                'name' => __( 'Address Line 1', 'cmb2' ),
+                'id'   => 'emp_address_line_1',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __( 'Address Line 2', 'cmb2' ),
+                'id'   => 'emp_address_line_2',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __( 'City', 'cmb2' ),
+                'id'   => 'emp_city',
+                'type' => 'text_medium',
+            ),
+
+            array(
+                'name' => __( 'State', 'cmb2' ),
+                'id'   => 'emp_state',
+                'type' => 'text_small',
+                'default' => 'NC'
+            ),
+
+            array(
+                'name' => __( 'Zip', 'cmb2' ),
+                'id'   => 'emp_zip',
+                'type' => 'text_small',
+            ),
+
+                ),
+                ),
+
         ),
     );
 

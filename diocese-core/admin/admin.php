@@ -23,4 +23,6 @@ add_action( 'admin_enqueue_scripts', 'load_doc_admin_style' );
 function load_doc_admin_style() {
         wp_register_style( 'doc_admin_css', trailingslashit( DOC_CSS ) . 'directory.css', false, '1.0.0' );
         wp_enqueue_style( 'doc_admin_css' );
+
+        wp_enqueue_script( 'doc_admin_js', trailingslashit( DOC_JS ) . 'directory.js' );
 }
