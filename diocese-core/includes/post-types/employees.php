@@ -89,8 +89,8 @@ function doc_employees_register_post_types() {
             ),
 
             /* Taxonomies of the post type. */
-            // 'taxonomies'  => array( 
-            //     'department' 
+            // 'taxonomies'  => array(
+            //     'department'
             // ),
 
             /* Labels used when displaying the posts. */
@@ -128,4 +128,51 @@ function employee_enter_title_here( $title, $post ) {
         $title = __( 'Name to be displayed on the website', 'directory' );
 
     return $title;
+}
+
+
+
+
+
+
+
+
+if ( ! function_exists( 'contact_type_taxonomy' ) ) {
+
+// Register Custom Taxonomy
+function contact_type_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Contact Types', 'Taxonomy General Name', 'abraham' ),
+		'singular_name'              => _x( 'Contact Type', 'Taxonomy Singular Name', 'abraham' ),
+		'menu_name'                  => __( 'Contact Type', 'abraham' ),
+		'all_items'                  => __( 'All types', 'abraham' ),
+		'parent_item'                => __( 'Parent type', 'abraham' ),
+		'parent_item_colon'          => __( 'Parent type:', 'abraham' ),
+		'new_item_name'              => __( 'New type Name', 'abraham' ),
+		'add_new_item'               => __( 'Add New type', 'abraham' ),
+		'edit_item'                  => __( 'Edit type', 'abraham' ),
+		'update_item'                => __( 'Update type', 'abraham' ),
+		'separate_items_with_commas' => __( 'Separate types with commas', 'abraham' ),
+		'search_items'               => __( 'Search types', 'abraham' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'abraham' ),
+		'choose_from_most_used'      => __( 'Choose from the most used types', 'abraham' ),
+		'not_found'                  => __( 'Contact Type Not Found', 'abraham' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'contact_type', array( 'employee' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'contact_type_taxonomy', 0 );
+
 }

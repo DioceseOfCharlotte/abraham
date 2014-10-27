@@ -38,6 +38,9 @@ if ( !class_exists( 'Diocese' ) ) {
 			/* Load the framework extensions. */
 			add_action( 'after_setup_theme', array( $this, 'extensions' ), 14 );
 
+			/* Load admin files. */
+			add_action( 'wp_loaded', array( $this, 'admin' ) );
+
 
 }
 
@@ -66,6 +69,9 @@ if ( !class_exists( 'Diocese' ) ) {
 			if ( !defined( 'DIOCESE_URI' ) )
 				define( 'DIOCESE_URI', trailingslashit( ABRAHAM_URI ) . basename( dirname( __FILE__ ) ) );
 
+			/* Sets the path to the core framework admin directory. */
+			define( 'DIOCESE_ADMIN', trailingslashit( DIOCESE_DIR ) . 'admin' );
+
 			/* Sets the path to the core framework extensions directory. */
 			define( 'DIOCESE_EXTENSIONS', trailingslashit( DIOCESE_DIR ) . 'extensions' );
 
@@ -83,6 +89,12 @@ if ( !class_exists( 'Diocese' ) ) {
 
 			/* Sets the path to the core framework includes directory. */
 			define( 'DIOCESE_CONNECTIONS', trailingslashit( DIOCESE_INCLUDES ) . 'connections' );
+
+			/* Sets the path to the core framework CSS directory URI. */
+			define( 'DOC_CSS', trailingslashit( DIOCESE_URI ) . 'css' );
+
+			/* Sets the path to the core framework CSS directory URI. */
+			define( 'DOC_JS', trailingslashit( DIOCESE_URI ) . 'js' );
 }
 
 		/**
@@ -114,6 +126,7 @@ if ( !class_exists( 'Diocese' ) ) {
 
 			/* Load the post-types if supported. */
 			require_if_theme_supports( 'diocese-departments', trailingslashit( DIOCESE_POSTS ) . 'departments.php' );
+			require_if_theme_supports( 'diocese-departments', trailingslashit( DIOCESE_META ) . 'department-meta.php' );
 		}
 
 		function extensions() {
@@ -122,6 +135,18 @@ if ( !class_exists( 'Diocese' ) ) {
 			require_once( trailingslashit( DIOCESE_EXTENSIONS ) . 'cmb/init.php' );
 			require_once( trailingslashit( DIOCESE_DIR ) . 'core.php' );
 
+		}
+
+
+		function admin() {
+
+			/* Check if in the WordPress admin. */
+			if ( is_admin() ) {
+
+				/* Load the main admin file. */
+				require_once( trailingslashit( DIOCESE_ADMIN ) . 'admin.php' );
+
+			}
 		}
 
 	}

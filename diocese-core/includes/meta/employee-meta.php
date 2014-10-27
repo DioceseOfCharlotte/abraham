@@ -27,22 +27,49 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
         // 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
         'fields'        => array(
 
-            array(
-                'name' => __( 'First Name', 'cmb2' ),
-                'id'   => $prefix . 'emp_first_name',
-                'type' => 'text_medium',
-                'attributes'  => array(
-                'placeholder' => 'First',
+	            array(
+	                'name' => __( 'First Name', 'cmb2' ),
+	                'id'   => $prefix . 'emp_first_name',
+	                'type' => 'text_medium',
+	                'attributes'  => array(
+	                	'placeholder' => 'First',
+	            ),
             ),
+	            array(
+	                'name' => __( 'Last Name', 'cmb2' ),
+	                'id'   => $prefix . 'emp_last_name',
+	                'type' => 'text_medium',
+	                'attributes'  => array(
+	                	'placeholder' => 'Last',
+	            ),
             ),
-            array(
-                'name' => __( 'Last Name', 'cmb2' ),
-                'id'   => $prefix . 'emp_last_name',
-                'type' => 'text_medium',
-                'attributes'  => array(
-                'placeholder' => 'Last',
-            ),
-            ),
+
+
+	        array(
+				'name'     => __( 'Contact Type', 'cmb2' ),
+				'id'       => $prefix . 'contact_type_select',
+				'type'     => 'taxonomy_select',
+				'taxonomy' => 'contact_type', // Taxonomy Slug
+			),
+
+   //          	array(
+			// 		'name'    	=> __( 'Contact Type', 'cmb2' ),
+			// 		'id'      	=> $prefix . 'contact_type',
+			// 		'type'   	=> 'select',
+			// 		'options' 	=> array(
+			// 				'bishop'			=> __( 'Bishop', 'cmb2' ),
+			// 				'priest'   			=> __( 'Priest', 'cmb2' ),
+			// 				'deacon'  			=> __( 'Deacon', 'cmb2' ),
+			// 				'sister' 			=> __( 'Sister', 'cmb2' ),
+			// 				'laity'   			=> __( 'Laity', 'cmb2' ),
+			// 				'permanent-deacon'	=> __( 'Permanent Deacon', 'cmb2' ),
+			// 				'brother' 			=> __( 'Brother', 'cmb2' ),
+			// 				'seminarian'   		=> __( 'Seminarian', 'cmb2' ),
+			// 				'order-priest'     	=> __( 'Order Priest', 'cmb2' ),
+			// 				'advocate'     		=> __( 'Advocate', 'cmb2' ),
+			// 				'other'     		=> __( 'Other', 'cmb2' ),
+			// 	),
+			// ),
 
             array(
                 'name' => __( 'Phone', 'cmb2' ),
@@ -57,7 +84,7 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
                 'fields'      => array(
 
             array(
-                'name'    => __( 'Type', 'cmb2' ),
+                'name'    => __( 'Phone type', 'cmb2' ),
                 'id'      => 'phone_type_select',
                 'type'    => 'select',
                 'options' => array(
@@ -68,7 +95,7 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
             ),
 
             array(
-                'name' => __( 'Number', 'cmb2' ),
+                'name' => __( 'Phone number', 'cmb2' ),
                 'id'   => 'emp_phone',
                 'type' => 'text_medium',
                 'add_button' => __( 'Add Another Phone', 'cmb2' ),
