@@ -39,9 +39,10 @@ function dept_to_staff_connection() {
         'create' => __( 'Add Staff', 'hybrid-base' ),
         ),
         'cardinality' => 'one-to-many',
+        'sortable' => 'any',
         'title' => array( 'from' => 'Staff', 'to' => 'Department' ),
         'fields' => array(
-        'status' => array( 
+        'status' => array(
             'title' => 'Status',
             'type' => 'select',
             'values' => array( 'Active', 'Retired', 'Deceased', 'On Leave' )

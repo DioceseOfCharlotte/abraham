@@ -111,9 +111,7 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
                 'name' => __( 'Email', 'cmb2' ),
                 'id'   => $prefix . 'emp_email',
                 'type' => 'text_email',
-                'attributes'  => array(
                 'default' => '@charlottediocese.org',
-            ),
                 'repeatable' => true,
             ),
 

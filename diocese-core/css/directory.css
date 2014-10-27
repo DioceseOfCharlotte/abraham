@@ -95,6 +95,25 @@ opacity: 1;
 background: url("../images/ico-add.png") no-repeat scroll 50% 50% transparent;
 }
 
+.ui-sortable tr td.p2p-col-order {
+width: 30px;
+height: 30px;
+text-align: center;
+}
+
+
+.ui-sortable tr:hover td.p2p-col-order {
+cursor: move;
+background: none;
+}
+
+
+.ui-sortable tr:hover td.p2p-col-order:before {
+content: '\f156';
+font-size: 28px;
+color: #777;
+}
+
 .cmb-repeatable-group .cmb-group-title .cmb-th h4 {
 background-color: #e9e9e9;
 text-align: center;
@@ -111,7 +130,15 @@ padding-bottom: 0;
 padding-bottom: 0;
 }
 
+tr.ui-sortable-helper {
+	background-color: #f9f9f9;
+	border: 1px solid #DFDFDF;
+	opacity: 0.5;
+}
 
+tr.ui-sortable-placeholder {
+	height: 37px;
+}
 
 #phone_group_repeat h4:before, #dept_phone_group_repeat h4:before {
 content: '\f470';
@@ -124,7 +151,7 @@ content: '\f230';
 
 
 
-.cmb-group-title h4:before {
+tr:hover td.p2p-col-order:before, .cmb-group-title h4:before {
 font: 400 20px/1 dashicons;
 speak: none;
 display: inline-block;
