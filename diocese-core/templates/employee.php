@@ -72,13 +72,27 @@ if ( $connected->have_posts() ) :
 			    <li class="Typography--subhead">
 			    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			    </li>
-			    <li class="Typography--body-2">
+			</ul>
+
+
+    <li class="dropdown-basic" data-dropdown>
+    	<a href="#">Dropdown 1</a>
+        <div class="dropdown-menu-basic" data-dropdown-menu>
+            <ul>
+                <li class="Typography--body-2">
 			    	<?php doc_phone(); ?>
 			    </li>
 			    <li class="Typography--body-2">
 			    	<?php doc_staff_email() ?>
 			    </li>
-			</ul>
+            </ul>
+        </div>
+    </li>
+
+
+
+
+
 
 		</div>
 

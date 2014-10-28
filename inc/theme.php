@@ -16,6 +16,8 @@ add_filter( 'excerpt_more',   'abraham_excerpt_more'   );
 
 add_filter( 'the_excerpt',    'abraham_the_excerpt', 5 );
 
+add_action('wp_footer', 'doc_drop', 100);
+
 /**
  * Registers custom image sizes for the theme.
  */
@@ -84,6 +86,14 @@ function abraham_scripts() {
 
   wp_enqueue_script( 'meh-mainjs' );
 
+    wp_register_script( 'meh-classlistjs', trailingslashit( get_template_directory_uri() ) . "js/classList{$suffix}.js", array(), null, true );
+
+  wp_enqueue_script( 'meh-classlistjs' );
+
+    wp_register_script( 'meh-dropjs', trailingslashit( get_template_directory_uri() ) . "js/drop{$suffix}.js", array(), null, true );
+
+  wp_enqueue_script( 'meh-dropjs' );
+
   /* Register Google-fonts. */
   wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Lato:300,400,700,900' );
 
@@ -132,4 +142,16 @@ function meh_attr_sidebar_2( $attr ) {
 	$attr['itemtype']  = 'http://schema.org/WPSideBar';
 
   return $attr;
+}
+
+
+/**
+ * initialize the drop js
+ */
+function doc_drop(){
+?>
+    <script type='text/javascript'>
+    	drop.init();
+   </script>
+<?php
 }
