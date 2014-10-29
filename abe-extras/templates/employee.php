@@ -71,7 +71,7 @@ if ( $connected->have_posts() ) :
 			    </div>
 	</div>
 
-<?php if ( is_user_logged_in() ) : ?>
+<?php //if ( is_user_logged_in() ) : ?>
 	    <div class="dropdown-basic staff-meta Typography--textRight all-1" data-dropdown>
     	<a class="info-btn fa fa-info" href="#"></a>
         <div class="dropdown-menu-basic Typography--textLeft all-1" data-dropdown-menu>
@@ -85,7 +85,7 @@ if ( $connected->have_posts() ) :
             </ul>
         </div>
     </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 <?php if ( $connected->have_posts() ) :	?>
 
