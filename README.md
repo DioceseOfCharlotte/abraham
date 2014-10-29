@@ -43,7 +43,7 @@ install the dependencies: *you may or may not need the 'sudo'*
 ```sh
 $ sudo npm install
 ```
-run the gulp server:
+launch the server and watch everything get compiled in real time, as changes are made:
 ```sh
 $ gulp server
 ```
