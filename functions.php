@@ -13,7 +13,6 @@ require_once( $abraham_dir . 'hybrid/hybrid.php'    );
 require_once( $abraham_dir . 'inc/custom-background.php' );
 require_once( $abraham_dir . 'inc/custom-header.php'     );
 //require_once( $abraham_dir . 'inc/custom-colors.php'     );
-require_once( $abraham_dir . 'abe-extras/diocese.php'  );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/customizer.php'        );
 require_once( $abraham_dir . 'inc/template-tags.php'     );
@@ -22,7 +21,8 @@ require_once( $abraham_dir . 'inc/hybrid-mods.php'      );
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
-/* Launch the Diocese Core framework. */
+/* Remove these two lines if not using the extra functions */
+require_once( $abraham_dir . 'abe-extras/diocese.php'  );
 new Diocese();
 
 /* Do theme setup on the 'after_setup_theme' hook. */

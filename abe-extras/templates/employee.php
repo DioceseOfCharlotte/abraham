@@ -59,25 +59,22 @@ if ( $connected->have_posts() ) :
 
 <?php else : // If not viewing a single post. ?>
 
-<div class="card layout layout__item all-1 md-1-2 ">
+<div class="card card--staff layout layout__item all-1 md-1-2 ">
 
 	<div class="comment-author layout__item md-3-24">
 		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 	</div>
 	<div class="md-21-24 card__details layout__item layout layout__column">
 
-		<div class="layout layout__item middle--info">
-
-			<ul class="staff-info">
-			    <li class="Typography--subhead">
+			    <div class="Typography--subhead Typography--textCenter staff--name">
 			    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			    </li>
-			</ul>
+			    </div>
+	</div>
 
-
-    <li class="dropdown-basic" data-dropdown>
-    	<a href="#">Dropdown 1</a>
-        <div class="dropdown-menu-basic" data-dropdown-menu>
+<?php if ( is_user_logged_in() ) : ?>
+	    <div class="dropdown-basic staff-meta Typography--textRight all-1" data-dropdown>
+    	<a class="info-btn fa fa-info" href="#"></a>
+        <div class="dropdown-menu-basic Typography--textLeft all-1" data-dropdown-menu>
             <ul>
                 <li class="Typography--body-2">
 			    	<?php doc_phone(); ?>
@@ -87,23 +84,13 @@ if ( $connected->have_posts() ) :
 			    </li>
             </ul>
         </div>
-    </li>
-
-
-
-
-
-
-		</div>
-
-	</div>
+    </div>
+<?php endif; ?>
 
 <?php if ( $connected->have_posts() ) :	?>
 
 <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-	<div class="card__department all-1">
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</div>
+		<a class="btn btn--small btn--full card__department all-1" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 <?php endwhile; ?>
 
 <?php wp_reset_postdata(); ?>

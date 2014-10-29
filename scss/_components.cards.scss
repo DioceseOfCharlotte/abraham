@@ -11,9 +11,17 @@
 	flex: 1 100%;
 }
 
+.card--staff {
+	padding: 0;
+	align-self: flex-start;
+}
 
 .card__details {
 	flex: 1;
+}
+
+.card__details li {
+list-style: none;
 }
 
 .staff-info {
@@ -32,8 +40,29 @@ a {
 }
 }
 
-.middle--info {
-	margin-bottom: 0;
+.info-btn {
+width: 34px;
+height: 34px;
+border-radius: 50%;
+background-color: $color-gray-ui;
+text-align: center;
+line-height: 1.5;
+font-size: 24px;
+color: #fff;
+position: absolute;
+right: 5px;
+top: 14px;
+@include shadow-z1();
+transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+&:hover {
+	@include shadow-z2();
+	color: #fff;
+}
+&:active,
+&:focus {
+	@include shadow-z1();
+	color: #fff;
+}
 }
 
 .entry.department {

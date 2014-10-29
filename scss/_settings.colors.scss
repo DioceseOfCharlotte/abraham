@@ -72,7 +72,7 @@ $color-quote--banner:   $color-gray;
 
 // Boxes
 $color-box-highlight-background:    $color-highlight;
-$color-box-highlight-border:        $color-gray-ui;
+$color-box-highlight-border:        darken($color-box-highlight-background, 3);
 $color-box-tint-background:         $color-gray-light;
 
 // Bands

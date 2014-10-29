@@ -72,16 +72,15 @@ align-items: center;
 	margin-left: 0;
 }
 .avatar {
-	border-radius: 50%;
 	max-width: 60px;
 	height: auto;
 	}
 
 .comment-author {
-	text-align: center;
-@include media-query(md) {
-	max-width: 100px;
-}
+text-align: center;
+margin: 0;
+padding: 0;
+max-width: 60px;
 }
 
 

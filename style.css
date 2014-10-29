@@ -615,74 +615,34 @@ ul, ol, dd {
  * Free to use under the MIT License.
  * http://gomakethings.com/mit/
  */
-/*  Sets dropdown link to relative positioning */
-.dropdown-basic {
-	position: relative; }
-
-/*  Display a caret after each dropdown link when JavaScript is supported.
- *  You can remove this or change it to a different symbol.
- *  (For example, a "+" symbol.) */
-.js-drop .dropdown-basic > a:after {
-	font-size: 0.8em; 
-	content: " +";}
-
-/*  When a dropdown is active, display a caret pointing up instead.
- *  You can remove this or change it to a different symbol.
- *  (For example, a "-" symbol.) */
-.js-drop .dropdown-basic > a.active:after {
-	content: " –"; }
-
 /*  Styling for the dropdown content.
  *  Hides the content by default. */
 .dropdown-menu-basic {
-	display: none;
-	visibility: hidden;
-	float: left;
-	position: absolute;
-	z-index: 1000;
-	top: 100%;
-	box-sizing: border-box; 
+	overflow: hidden;
 	min-width: 10em;
-	margin-top: 0.5em;
-	margin-left: 0;
-	border: 0.0725em solid #b8b8b8;
-	border-radius: 0.0725em;
-	background-color: #fff;
-	box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
-	text-align: left;}
+	max-height: 0;
+	border-radius: 2px;
+	background-color: #fbfcfc;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	        transition: max-height 0.5s ease-in-out; }
 
 /*  Remove list-style and margin-left
  *  from dropdown menu lists */
 .dropdown-menu-basic ul, .dropdown-menu-basic ol {
-	margin-left: 0;
-	list-style: none; }
+	margin: 0;
+	padding: 0.5em; 
+	list-style: none;}
 
 /*  When a dropdown is active, display it. */
 .dropdown-menu-basic.active {
 	display: block;
-	visibility: visible;
-	padding: 0.5em; }
+	max-height: 600px; }
 
 /*  If dropdown link is near the right edge of the screen,
  *  shift the dropdown menu position to avoid content clipping. */
 .dropdown-menu-basic.dropdown-right {
 	right: 0;
 	left: auto; }
-
-/*  Optional small screen styling for use
- *  with collapse-and-toggle navigation menus.
- *  Learn more - http://cferdinandi.github.com/astro/ */
-@media (max-width: 40em) {
-	/*  Switch dropdown content to relative positioning.
-   *  Remove styling. */
-	.js-drop .dropdown-menu-basic {
-		float: none;
-		position: relative;
-		min-width: 100%;
-		border: none;
-		background-color: #f4f4f4;
-		box-shadow: none; }
-	}
 
 /*------------------------------------*\
     #PAGE
@@ -1190,7 +1150,7 @@ a[href*="mailto:"]::before {
 	display:         flex;
 	/* [4] */
 	margin: 0;
-	margin-left: -10px; 
+	margin-left: -20px; 
 	/* [5] */
 	padding: 0;
 	text-align: left;
@@ -1212,8 +1172,8 @@ a[href*="mailto:"]::before {
 	zoom: 1;
 	/* 4 */
 	width: 100%;
-	margin-bottom: 10px; 
-	margin-left: 10px;
+	margin-bottom: 20px; 
+	margin-left: 20px;
 	text-align: left;
 	/* 3 */
 	vertical-align: top;
@@ -1280,7 +1240,7 @@ a[href*="mailto:"]::before {
 
 .all-1-2, .all-12-24 {
 	width: 50%;
-	max-width: 48%; }
+	max-width: 47%; }
 
 .all-13-24 {
 	width: 54.1667%;
@@ -1393,7 +1353,7 @@ a[href*="mailto:"]::before {
 
 	.palm-1-2, .palm-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.palm-13-24 {
 		width: 54.1667%;
@@ -1506,7 +1466,7 @@ a[href*="mailto:"]::before {
 
 	.sm-1-2, .sm-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.sm-13-24 {
 		width: 54.1667%;
@@ -1619,7 +1579,7 @@ a[href*="mailto:"]::before {
 
 	.md-1-2, .md-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.md-13-24 {
 		width: 54.1667%;
@@ -1732,7 +1692,7 @@ a[href*="mailto:"]::before {
 
 	.portable-1-2, .portable-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.portable-13-24 {
 		width: 54.1667%;
@@ -1845,7 +1805,7 @@ a[href*="mailto:"]::before {
 
 	.lg-1-2, .lg-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.lg-13-24 {
 		width: 54.1667%;
@@ -1958,7 +1918,7 @@ a[href*="mailto:"]::before {
 
 	.xl-1-2, .xl-12-24 {
 		width: 50%;
-		max-width: 48%; }
+		max-width: 47%; }
 
 	.xl-13-24 {
 		width: 54.1667%;
@@ -2139,9 +2099,13 @@ body.open {
 	border: 0;}
 
 .btn--small {
-	padding: 6px 12px;
+	padding: 1px 12px;
 	letter-spacing: inherit; 
-	text-transform: lowercase;}
+	text-transform: capitalize;}
+
+.btn--full {
+	margin: 0;
+	border-radius: 0; }
 
 /*! Hint.css (base version) - v1.3.3 - 2014-07-06
 * http://kushagragour.in/lab/hint/
@@ -2385,11 +2349,21 @@ body.open {
 	-webkit-transition: box-shadow 0.2s ease-in;
 	        transition: box-shadow 0.2s ease-in; }
 
+.card--staff {
+	padding: 0;
+
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	        align-self: flex-start; }
+
 .card__details {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1; }
+
+.card__details li {
+	list-style: none; }
 
 .staff-info {
 	display: inline;
@@ -2401,8 +2375,27 @@ body.open {
 	font-weight: inherit;
 	vertical-align: middle; }
 
-.middle--info {
-	margin-bottom: 0; }
+.info-btn {
+	position: absolute;
+	top: 14px;
+	right: 5px;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	color: #fff;
+	background-color: #bdc3c7;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	font-size: 24px;
+	line-height: 1.5;
+	text-align: center;
+	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
+.info-btn:hover {
+	color: #fff; 
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);}
+.info-btn:active, .info-btn:focus {
+	color: #fff; 
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
 
 .entry.department {
 	padding: 0 10px 0 0; }
@@ -2426,6 +2419,11 @@ img.thumbnail.dept-thumb {
 	color: #fff; }
 .btn:hover, .btn:active, .btn:focus, button:hover, button:active, button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
 	background-color: #219cd4; }
+
+a.btn {
+	color: #fff; }
+a.btn:hover, a.btn:active, a.btn:focus {
+	color: #fff; }
 
 /*------------------------------------*\
     #FORMS
@@ -3020,14 +3018,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 .avatar {
 	max-width: 60px;
-	height: auto; 
-	border-radius: 50%;}
+	height: auto; }
 
 .comment-author {
-	text-align: center; }
-@media screen and (min-width: 48rem) {
-	.comment-author {
-		max-width: 100px; } }
+	max-width: 60px; 
+	margin: 0;
+	padding: 0;
+	text-align: center;}
 
 .topic-info {
 	padding: 0.5em 1em;
