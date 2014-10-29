@@ -75,25 +75,6 @@ Text Domain: abraham
     #COLORS
 \*------------------------------------*/
 /*------------------------------------*\
-    #HELPERS
-\*------------------------------------*/
-.left {
-	float: left; }
-
-.right {
-	float: right; }
-
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.0.1
-* Docs at http://davidtheclark.github.io/scut
-*/
-/*==========  GENERIC  ==========*/
-.text-center {
-	text-align: center; }
-
-/*------------------------------------*\
     #RESET
 \*------------------------------------*/
 /**
@@ -645,487 +626,6 @@ ul, ol, dd {
 	left: auto; }
 
 /*------------------------------------*\
-    #PAGE
-\*------------------------------------*/
-/**
- * High-, page-level styling.
- *
- * 1. Set the default `font-size` and `line-height` for the entire project,
- *    sourced from our default variables. The `font-size` is calculated to exist
- *    in ems, the `line-height` is calculated to exist unitlessly.
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
- */
-html {
-	overflow-y: scroll;
-	/* [2] */
-	min-height: 100%;
-	color: #4e5758;
-	background-color: #fff;
-	/* [3] */ }
-
-body {
-	position: relative;
-	box-sizing: border-box;
-	height: 100%;
-	min-height: 100%;
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-weight: 300;
-	cursor: default; }
-
-.site {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-	        flex-direction: column; 
-	min-height: 100vh;
-
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;}
-
-.footer-layout {
-	margin-top: auto; }
-
-/*------------------------------------*\
-    #HEADINGS
-\*------------------------------------*/
-html, body {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400; 
-	line-height: 1.25;}
-
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
-	padding: 0; }
-
-/**
- * Styles for HTML elements
- */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	opacity: 0.54;
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 56px;
-	font-size: 3.5rem;
-	font-size: 0.6em; 
-	font-weight: 400;
-	line-height: 1.0714285714;
-	letter-spacing: -0.02em;}
-
-h1 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 56px;
-	font-size: 3.5rem;
-	font-weight: 400;
-	line-height: 1.0714285714;
-	letter-spacing: -0.02em; }
-
-h2 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 45px;
-	font-size: 2.8125rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
-
-h3 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 34px;
-	font-size: 2.125rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
-
-h4 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.6666666667;
-
-	-moz-osx-font-smoothing: grayscale; }
-
-h5 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: 700;
-	line-height: 1;
-	letter-spacing: 0.02em; }
-
-h6 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.04em; }
-
-p {
-	margin: 0 0 16px 0; 
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-a {
-	font-weight: bold; }
-
-blockquote p {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 300;
-	font-style: italic;
-	line-height: 1.6666666667;
-	letter-spacing: 0.08em; }
-blockquote p:before {
-	opacity: 0.54; 
-	content: "“";}
-blockquote p:after {
-	opacity: 0.54; 
-	content: "”";}
-
-mark {
-	background-color: #f4ff81; }
-
-code {
-	background-color: #eee; }
-
-dt {
-	font-weight: 900; }
-
-h1 a, h2 a, h3 a {
-	color: inherit; 
-	font-weight: inherit;}
-
-/**
- * Class Name Styles
- */
-.Typography--display-4 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 112px;
-	font-size: 7rem;
-	font-weight: 300;
-	line-height: 1.0714285714;
-	letter-spacing: -0.04em; }
-
-.Typography--display-4--colorContrast {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 112px;
-	font-size: 7rem;
-	font-weight: 300;
-	line-height: 1.0714285714;
-	letter-spacing: -0.04em;}
-
-.Typography--display-3 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 56px;
-	font-size: 3.5rem;
-	font-weight: 400;
-	line-height: 1.0714285714;
-	letter-spacing: -0.02em; }
-
-.Typography--display-3--colorContrast {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 56px;
-	font-size: 3.5rem;
-	font-weight: 400;
-	line-height: 1.0714285714;
-	letter-spacing: -0.02em;}
-
-.Typography--display-2 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 45px;
-	font-size: 2.8125rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
-
-.Typography--display-2--colorContrast {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 45px;
-	font-size: 2.8125rem;
-	font-weight: 400;
-	line-height: 1.3333333333;}
-
-.Typography--display-1 {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 34px;
-	font-size: 2.125rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
-
-.Typography--display-1--colorContrast {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 34px;
-	font-size: 2.125rem;
-	font-weight: 400;
-	line-height: 1.1764705882;}
-
-.Typography--headline {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.6666666667;
-
-	-moz-osx-font-smoothing: grayscale; }
-
-.Typography--headline--colorContrast {
-	opacity: 0.87; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.6666666667;
-
-	-moz-osx-font-smoothing: grayscale;}
-
-.Typography--title {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: 700;
-	line-height: 1;
-	letter-spacing: 0.02em; }
-
-.Typography--title--colorContrast {
-	opacity: 0.87; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: 700;
-	line-height: 1;
-	letter-spacing: 0.02em;}
-
-.Typography--subhead {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.04em; }
-
-.entry-meta, .Typography--subhead--colorContrast {
-	opacity: 0.87; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.25;
-	letter-spacing: 0.04em;}
-
-.Typography--body-2 {
-	color: #7f8c8d; 
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-.Typography--Body-2--colorContrast {
-	opacity: 0.87; 
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-.Typography--body-1 {
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em; }
-
-.Typography--body-1--colorContrast {
-	opacity: 0.87; 
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-.Typography--caption {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 400;
-	line-height: 1.5384615385;
-	letter-spacing: 0.08em; }
-
-.Typography--caption--colorContrast {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 400;
-	line-height: 1.5384615385;
-	letter-spacing: 0.08em;}
-
-.Typography--menu {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em; }
-
-.Typography--menu--colorContrast {
-	opacity: 0.87; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-.Typography--button {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em; 
-	text-transform: uppercase;}
-
-.Typography--button--colorContrast {
-	opacity: 0.87; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;}
-
-.Typography--textLeft {
-	text-align: left; }
-
-.Typography--textRight {
-	text-align: right; }
-
-.Typography--textCenter {
-	text-align: center; }
-
-.Typography--textJustify {
-	text-align: justify; }
-
-.Typography--textNowrap {
-	white-space: nowrap; }
-
-.Typography--textLowercase {
-	text-transform: lowercase; }
-
-.Typography--textUppercase {
-	text-transform: uppercase; }
-
-.Typography--textCapitalize {
-	text-transform: capitalize; }
-
-.Typography--tableStriped > tbody > tr:nth-child(odd) > td, .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
-	background-color: #f9f9f9; }
-
-.Typography--tableStriped > tbody > tr:nth-child(odd) > td, .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
-	background-color: #f9f9f9; }
-
-.text-minor {
-	opacity: 0.54; 
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 400;
-	line-height: 1.5384615385;
-	letter-spacing: 0.08em;}
-
-.loop-title {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 45px;
-	font-size: 2.8125rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
-
-.entry-title {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 34px;
-	font-size: 2.125rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
-
-.widget-title {
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.6666666667;
-
-	-moz-osx-font-smoothing: grayscale; }
-
-.loop-title {
-	display: block;
-	overflow: hidden;
-	margin-bottom: 20px; 
-	text-align: center;}
-.loop-title:before, .loop-title:after {
-	display: inline-block;
-	position: relative;
-	bottom: 0.1em; 
-	width: 50%;
-	border-top-width: 0.1em;
-	border-top-style: solid;
-	border-top-color: #bdc3c7;
-	vertical-align: middle;
-	content: "";}
-.loop-title:before {
-	right: 0.5em;
-	margin-left: -50%; }
-.loop-title:after {
-	left: 0.5em;
-	margin-right: -50%; }
-
-/*------------------------------------*\
-    #LINKS
-\*------------------------------------*/
-a {
-	color: #176c92; 
-	text-decoration: none;}
-a:hover, a:active {
-	color: #104b66; }
-
-a[href*="tel:"]::before {
-	display: inline-block;
-	color: inherit;
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1;
-	content: "\f095";
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale; }
-
-a[href*="mailto:"]::before {
-	display: inline-block;
-	color: inherit;
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1;
-	content: "\f0e0";
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale; }
-
-/*------------------------------------*\
     #WIDTHS-RESPONSIVE
 \*------------------------------------*/
 /**
@@ -1161,7 +661,8 @@ a[href*="mailto:"]::before {
 	        flex-wrap: wrap;}
 
 .layout__column {
-	        flex-direction: column; 
+	        flex-direction: column;
+	margin: 0; 
 
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -1977,6 +1478,518 @@ a[href*="mailto:"]::before {
 	}
 
 /*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+.left {
+	float: left; }
+
+.right {
+	float: right; }
+
+.flex-fit {
+	margin: 0;
+	padding: 0;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
+
+.strong {
+	font-weight: bold; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.0.1
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*==========  GENERIC  ==========*/
+.text-center {
+	text-align: center; }
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+html {
+	overflow-y: scroll;
+	/* [2] */
+	min-height: 100%;
+	color: #4e5758;
+	background-color: #fff;
+	/* [3] */ }
+
+body {
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	min-height: 100%;
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-weight: 300;
+	cursor: default; }
+
+.site {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	        flex-direction: column; 
+	min-height: 100vh;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;}
+
+.footer-layout {
+	margin-top: auto; }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+html, body {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400; 
+	line-height: 1.25;}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0; }
+
+/**
+ * Styles for HTML elements
+ */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	opacity: 0.54;
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-size: 3.5rem;
+	font-size: 0.6em; 
+	font-weight: 400;
+	line-height: 1.0714285714;
+	letter-spacing: -0.02em;}
+
+h1 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-size: 3.5rem;
+	font-weight: 400;
+	line-height: 1.0714285714;
+	letter-spacing: -0.02em; }
+
+h2 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	font-weight: 400; 
+	line-height: 1.3333333333;}
+
+h3 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 34px;
+	font-size: 2.125rem;
+	font-weight: 400; 
+	line-height: 1.1764705882;}
+
+h4 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.6666666667;
+
+	-moz-osx-font-smoothing: grayscale; }
+
+h5 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em; }
+
+h6 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.04em; }
+
+p {
+	margin: 0 0 16px 0; 
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;}
+
+a {
+	font-weight: bold; }
+
+blockquote p {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.6666666667;
+	letter-spacing: 0.08em; }
+blockquote p:before {
+	opacity: 0.54; 
+	content: "“";}
+blockquote p:after {
+	opacity: 0.54; 
+	content: "”";}
+
+mark {
+	background-color: #f4ff81; }
+
+code {
+	background-color: #eee; }
+
+dt {
+	font-weight: 900; }
+
+h1 a, h2 a, h3 a {
+	color: inherit; 
+	font-weight: inherit;}
+
+/**
+ * Class Name Styles
+ */
+.Typography--display-4 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 112px;
+	font-size: 7rem;
+	font-weight: 300;
+	line-height: 1.0714285714;
+	letter-spacing: -0.04em; }
+
+.Typography--display-4--colorContrast {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 112px;
+	font-size: 7rem;
+	font-weight: 300;
+	line-height: 1.0714285714;
+	letter-spacing: -0.04em;}
+
+.Typography--display-3 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-size: 3.5rem;
+	font-weight: 400;
+	line-height: 1.0714285714;
+	letter-spacing: -0.02em; }
+
+.Typography--display-3--colorContrast {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-size: 3.5rem;
+	font-weight: 400;
+	line-height: 1.0714285714;
+	letter-spacing: -0.02em;}
+
+.Typography--display-2 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	font-weight: 400; 
+	line-height: 1.3333333333;}
+
+.Typography--display-2--colorContrast {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	font-weight: 400;
+	line-height: 1.3333333333;}
+
+.Typography--display-1 {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 34px;
+	font-size: 2.125rem;
+	font-weight: 400; 
+	line-height: 1.1764705882;}
+
+.Typography--display-1--colorContrast {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 34px;
+	font-size: 2.125rem;
+	font-weight: 400;
+	line-height: 1.1764705882;}
+
+.Typography--headline {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.6666666667;
+
+	-moz-osx-font-smoothing: grayscale; }
+
+.Typography--headline--colorContrast {
+	opacity: 0.87; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.6666666667;
+
+	-moz-osx-font-smoothing: grayscale;}
+
+.Typography--title a, .Typography--title {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em; }
+
+.Typography--title--colorContrast {
+	opacity: 0.87; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em;}
+
+.Typography--subhead a, .Typography--subhead {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.04em; }
+
+.entry-meta, .Typography--subhead--colorContrast {
+	opacity: 0.87; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.04em;}
+
+.Typography--body-2 a, .Typography--body-2 {
+	color: #7f8c8d; 
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;}
+
+.Typography--body-2--colorContrast {
+	opacity: 0.87; 
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;}
+
+.Typography--body-1 a, .Typography--body-1 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em; }
+
+.Typography--body-1--colorContrast {
+	opacity: 0.87; 
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;}
+
+.Typography--caption {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.5384615385;
+	letter-spacing: 0.08em; }
+
+.Typography--caption--colorContrast {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.5384615385;
+	letter-spacing: 0.08em;}
+
+.Typography--menu {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em; }
+
+.Typography--menu--colorContrast {
+	opacity: 0.87; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;}
+
+.Typography--button {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em; 
+	text-transform: uppercase;}
+
+.Typography--button--colorContrast {
+	opacity: 0.87; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.4285714286;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;}
+
+.Typography--textLeft {
+	text-align: left; }
+
+.Typography--textRight {
+	text-align: right; }
+
+.Typography--textCenter {
+	text-align: center; }
+
+.Typography--textJustify {
+	text-align: justify; }
+
+.Typography--textNowrap {
+	white-space: nowrap; }
+
+.Typography--textLowercase {
+	text-transform: lowercase; }
+
+.Typography--textUppercase {
+	text-transform: uppercase; }
+
+.Typography--textCapitalize {
+	text-transform: capitalize; }
+
+.Typography--tableStriped > tbody > tr:nth-child(odd) > td, .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
+	background-color: #f9f9f9; }
+
+.Typography--tableStriped > tbody > tr:nth-child(odd) > td, .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
+	background-color: #f9f9f9; }
+
+.text-minor {
+	opacity: 0.54; 
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.5384615385;
+	letter-spacing: 0.08em;}
+
+.loop-title {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	font-weight: 400; 
+	line-height: 1.3333333333;}
+
+.entry-title {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 34px;
+	font-size: 2.125rem;
+	font-weight: 400; 
+	line-height: 1.1764705882;}
+
+.widget-title {
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.6666666667;
+
+	-moz-osx-font-smoothing: grayscale; }
+
+.loop-title {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px; 
+	text-align: center;}
+.loop-title:before, .loop-title:after {
+	display: inline-block;
+	position: relative;
+	bottom: 0.1em; 
+	width: 50%;
+	border-top-width: 0.1em;
+	border-top-style: solid;
+	border-top-color: #bdc3c7;
+	vertical-align: middle;
+	content: "";}
+.loop-title:before {
+	right: 0.5em;
+	margin-left: -50%; }
+.loop-title:after {
+	left: 0.5em;
+	margin-right: -50%; }
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+a {
+	color: #176c92; 
+	text-decoration: none;}
+a:hover, a:active {
+	color: #104b66; }
+
+a[href*="tel:"]::before {
+	display: inline-block;
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f095";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+a[href*="mailto:"]::before {
+	display: inline-block;
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f0e0";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+/*------------------------------------*\
     #MAIN-LAYOUT
 \*------------------------------------*/
 /**
@@ -2107,7 +2120,7 @@ body.open {
 	margin: 0;
 	border-radius: 0; }
 
-/*! Hint.css (base version) - v1.3.3 - 2014-07-06
+/*! Hint.css - v1.3.3 - 2014-07-06
 * http://kushagragour.in/lab/hint/
 * Copyright (c) 2014 Kushagra Gour; Licensed MIT */
 /*-------------------------------------*\
@@ -2281,6 +2294,94 @@ body.open {
 	        transform: translateX(-8px); }
 
 /**
+ * source: hint-color-types.scss
+ *
+ * Contains tooltips of various types based on color differences.
+ *
+ * Classes added:
+ * 	1) hint--error
+ * 	2) hint--warning
+ * 	3) hint--info
+ * 	4) hint--success
+ *
+ */
+/**
+ * Error
+ */
+.hint--error:after {
+	background-color: #b34e4d;
+	text-shadow: 0 -1px 0 #592726; }
+
+.hint--error.hint--top:before {
+	border-top-color: #b34e4d; }
+
+.hint--error.hint--bottom:before {
+	border-bottom-color: #b34e4d; }
+
+.hint--error.hint--left:before {
+	border-left-color: #b34e4d; }
+
+.hint--error.hint--right:before {
+	border-right-color: #b34e4d; }
+
+/**
+ * Warning
+ */
+.hint--warning:after {
+	background-color: #c09854;
+	text-shadow: 0 -1px 0 #6c5328; }
+
+.hint--warning.hint--top:before {
+	border-top-color: #c09854; }
+
+.hint--warning.hint--bottom:before {
+	border-bottom-color: #c09854; }
+
+.hint--warning.hint--left:before {
+	border-left-color: #c09854; }
+
+.hint--warning.hint--right:before {
+	border-right-color: #c09854; }
+
+/**
+ * Info
+ */
+.hint--info:after {
+	background-color: #3986ac;
+	text-shadow: 0 -1px 0 #193b4d; }
+
+.hint--info.hint--top:before {
+	border-top-color: #3986ac; }
+
+.hint--info.hint--bottom:before {
+	border-bottom-color: #3986ac; }
+
+.hint--info.hint--left:before {
+	border-left-color: #3986ac; }
+
+.hint--info.hint--right:before {
+	border-right-color: #3986ac; }
+
+/**
+ * Success
+ */
+.hint--success:after {
+	background-color: #458746;
+	text-shadow: 0 -1px 0 #1a321a; }
+
+.hint--success.hint--top:before {
+	border-top-color: #458746; }
+
+.hint--success.hint--bottom:before {
+	border-bottom-color: #458746; }
+
+.hint--success.hint--left:before {
+	border-left-color: #458746; }
+
+.hint--success.hint--right:before {
+	border-right-color: #458746; }
+
+/**
  * source: hint-always.scss
  *
  * Defines a persisted tooltip which shows always.
@@ -2312,6 +2413,36 @@ body.open {
 	-webkit-transform: translateX(8px);
 	    -ms-transform: translateX(8px);
 	        transform: translateX(8px); }
+
+/**
+ * source: hint-rounded.scss
+ *
+ * Defines rounded corner tooltips.
+ *
+ * Classes added:
+ * 	1) hint--rounded
+ *
+ */
+.hint--rounded:after {
+	border-radius: 4px; }
+
+/**
+ * source: hint-effects.scss
+ *
+ * Defines various transition effects for the tooltips.
+ *
+ * Classes added:
+ * 	1) hint--no-animate
+ * 	2) hint--bounce
+ *
+ */
+.hint--no-animate:before, .hint--no-animate:after {
+	-webkit-transition-duration: 0ms;
+	        transition-duration: 0ms; }
+
+.hint--bounce:before, .hint--bounce:after {
+	-webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24); }
 
 /*------------------------------------*\
     #CARDS
@@ -2356,46 +2487,29 @@ body.open {
 	-ms-flex-item-align: start;
 	        align-self: flex-start; }
 
-.card__details {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1; }
+.staff--detail {
+	margin: auto 10px; }
 
-.card__details li {
-	list-style: none; }
-
-.staff-info {
-	display: inline;
-	margin: 0; }
-.staff-info li {
-	height: 30px; }
-.staff-info a {
-	color: inherit;
-	font-weight: inherit;
-	vertical-align: middle; }
-
-.info-btn {
-	position: absolute;
-	top: 14px;
-	right: 5px;
+.info-btn__center {
 	width: 34px;
 	height: 34px;
 	border-radius: 50%;
-	color: #fff;
-	background-color: #bdc3c7;
+	background-color: #f2f2f2;
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 	font-size: 24px;
 	line-height: 1.5;
 	text-align: center;
 	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
-.info-btn:hover {
-	color: #fff; 
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);}
-.info-btn:active, .info-btn:focus {
-	color: #fff; 
-	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+.info-btn__center:hover {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); }
+.info-btn__center:active, .info-btn__center:focus {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
+.info-btn {
+	position: absolute;
+	top: 5px; 
+	right: 5px;}
 
 .entry.department {
 	padding: 0 10px 0 0; }
@@ -2403,6 +2517,14 @@ body.open {
 img.thumbnail.dept-thumb {
 	width: 100px;
 	height: 100px; }
+
+.btn.card__department {
+	background-color: #4f9c70; }
+.btn.card__department:hover {
+	background-color: #6ab48a; }
+
+.contact-info__list a {
+	color: #4e5758; }
 
 /*------------------------------------*\
     #BUTTONS

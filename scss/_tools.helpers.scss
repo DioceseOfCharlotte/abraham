@@ -10,6 +10,16 @@
 	float: right;
 }
 
+.flex-fit {
+	margin: 0;
+	padding: 0;
+	flex: 1;
+}
+
+.strong {
+	font-weight: bold;
+}
+
 /*
 * Scut, a collection of Sass utilities
 * to ease and improve our implementations of common style-code patterns.

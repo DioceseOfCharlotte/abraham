@@ -42,10 +42,14 @@ function dept_to_staff_connection() {
         'sortable' => 'any',
         'title' => array( 'from' => 'Staff', 'to' => 'Department' ),
         'fields' => array(
-        'status' => array(
-            'title' => 'Status',
-            'type' => 'select',
-            'values' => array( 'Active', 'Retired', 'Deceased', 'On Leave' )
+	        'status' => array(
+	            'title' => 'Status',
+	            'type' => 'select',
+	            'values' => array( 'Active', 'Retired', 'Deceased', 'On Leave' )
+	        ),
+	        'job-title' => array(
+	            'title' => 'Title',
+	            'type' => 'text',
         ),
         )
     ) );

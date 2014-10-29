@@ -126,10 +126,6 @@ padding: 4px 20px 0;
 padding-bottom: 0;
 }
 
-.cmb-row.cmb-group-title {
-padding-bottom: 0;
-}
-
 tr.ui-sortable-helper {
 	background-color: #f9f9f9;
 	border: 1px solid #DFDFDF;
@@ -163,4 +159,27 @@ vertical-align: top;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-decoration: none!important;
+}
+
+
+.cmb-add-row {
+margin: 0.4em 0 1.8em;
+}
+
+.postbox-container .cmb2-wrap>.cmb-field-list>.cmb-row, .cmb2-wrap  .cmb-row {
+	padding-top: 12px;
+	padding-bottom: 12px;
+
+}
+
+.cmb-row.cmb-group-title {
+padding-bottom: 0;
+}
+
+.postbox-container .cmb-repeatable-group>.cmb-row {
+padding-top: 0;
+}
+
+.postbox-container .cmb-repeat-row .cmb-td {
+padding-bottom: 12px;
 }

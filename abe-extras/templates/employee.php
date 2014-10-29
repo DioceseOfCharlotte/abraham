@@ -64,22 +64,37 @@ if ( $connected->have_posts() ) :
 	<div class="comment-author layout__item md-3-24">
 		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 	</div>
-	<div class="md-21-24 card__details layout__item layout layout__column">
+	<div class="layout layout__column layout__item md-21-24 flex-fit">
+		<div class="Typography--title staff--detail staff--name">
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</div>
 
-			    <div class="Typography--subhead Typography--textCenter staff--name">
-			    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			    </div>
+<?php if ( $connected->have_posts() ) :	?>
+
+<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+
+		<div class="Typography--subhead--colorContrast staff--detail staff--title">
+			<?php echo p2p_get_meta( get_post()->p2p_id, 'job-title', true ); ?>
+		</div>
+
+<?php endwhile; ?>
+
+<?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
 	</div>
 
 <?php //if ( is_user_logged_in() ) : ?>
 	    <div class="dropdown-basic staff-meta Typography--textRight all-1" data-dropdown>
-    	<a class="info-btn fa fa-info" href="#"></a>
+
+	    		<a class="hint--left hint--info info-btn info-btn__center strong" data-hint="contact information" href="#">i</a>
+
         <div class="dropdown-menu-basic Typography--textLeft all-1" data-dropdown-menu>
             <ul>
-                <li class="Typography--body-2">
+                <li class="Typography--body-1 contact-info__list">
 			    	<?php doc_phone(); ?>
 			    </li>
-			    <li class="Typography--body-2">
+			    <li class="Typography--body-1 contact-info__list">
 			    	<?php doc_staff_email() ?>
 			    </li>
             </ul>

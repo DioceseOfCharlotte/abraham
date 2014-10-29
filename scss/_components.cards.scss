@@ -16,53 +16,33 @@
 	align-self: flex-start;
 }
 
-.card__details {
-	flex: 1;
+.staff--detail {
+margin: auto $base-spacing-unit-sm;
 }
 
-.card__details li {
-list-style: none;
-}
-
-.staff-info {
-    display: inline;
-    margin: 0;
-    li {
-      &:hover {
-        //background: $color-tint;
-      }
-      height: $list-container-item-height;
-    }
-a {
-	color: inherit;
-	font-weight: inherit;
-	vertical-align: middle;
-}
-}
-
-.info-btn {
+.info-btn__center {
 width: 34px;
 height: 34px;
 border-radius: 50%;
-background-color: $color-gray-ui;
+background-color: $color-gray-light;
 text-align: center;
 line-height: 1.5;
 font-size: 24px;
-color: #fff;
-position: absolute;
-right: 5px;
-top: 14px;
 @include shadow-z1();
 transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 &:hover {
 	@include shadow-z2();
-	color: #fff;
 }
 &:active,
 &:focus {
 	@include shadow-z1();
-	color: #fff;
 }
+}
+
+.info-btn {
+position: absolute;
+right: 5px;
+top: 5px;
 }
 
 .entry.department {
@@ -72,4 +52,15 @@ padding: 0 $base-spacing-unit-sm 0 0;
 img.thumbnail.dept-thumb {
 width: 100px;
 height: 100px;
+}
+
+.btn.card__department {
+background-color: $color-brand-secondary;
+&:hover {
+	background-color: $color-brand-secondary-light;
+}
+}
+
+.contact-info__list a {
+color: $base-text-color;
 }

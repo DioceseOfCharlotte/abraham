@@ -344,7 +344,7 @@ h1, h2, h3 {
   @include typo-headline($colorContrast:true);
 }
 
-.Typography--title {
+.Typography--title a, .Typography--title {
   @include typo-title();
 }
 
@@ -352,7 +352,7 @@ h1, h2, h3 {
   @include typo-title($colorContrast:true);
 }
 
-.Typography--subhead {
+.Typography--subhead a, .Typography--subhead {
   @include typo-subhead();
 }
 
@@ -360,16 +360,16 @@ h1, h2, h3 {
   @include typo-subhead($colorContrast:true);
 }
 
-.Typography--body-2 {
+.Typography--body-2 a, .Typography--body-2 {
   @include typo-body-2();
   color: $base-minor-color;
 }
 
-.Typography--Body-2--colorContrast {
+.Typography--body-2--colorContrast {
   @include typo-body-2($colorContrast:true);
 }
 
-.Typography--body-1 {
+.Typography--body-1 a, .Typography--body-1 {
   @include typo-body-1();
 }
 
