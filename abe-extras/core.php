@@ -50,7 +50,7 @@ function doc_content_template_hierarchy( $templates ) {
 
 	$post_type = get_post_type();
 
-		$templates = array_merge( array( "diocese-core/templates/{$post_type}.php" ), $templates );
+		$templates = array_merge( array( "abe-extras/templates/{$post_type}.php" ), $templates );
 
 
 	return $templates;

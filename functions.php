@@ -13,12 +13,10 @@ require_once( $abraham_dir . 'hybrid/hybrid.php'    );
 require_once( $abraham_dir . 'inc/custom-background.php' );
 require_once( $abraham_dir . 'inc/custom-header.php'     );
 //require_once( $abraham_dir . 'inc/custom-colors.php'     );
-require_once( $abraham_dir . 'diocese-core/diocese.php'  );
+require_once( $abraham_dir . 'abe-extras/diocese.php'  );
 require_once( $abraham_dir . 'inc/theme.php'             );
 require_once( $abraham_dir . 'inc/customizer.php'        );
 require_once( $abraham_dir . 'inc/template-tags.php'     );
-require_once( $abraham_dir . 'inc/extras.php'            );
-require_once( $abraham_dir . 'inc/jetpack.php'           );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'      );
 
 /* Launch the Hybrid Core framework. */

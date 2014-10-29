@@ -45,5 +45,5 @@ $ sudo npm install
 ```
 launch the server and watch everything get compiled in real time, as changes are made:
 ```sh
-$ gulp server
+$ gulp serve
 ```
