@@ -75,19 +75,6 @@ Text Domain: abraham
     #COLORS
 \*------------------------------------*/
 /*------------------------------------*\
-    #HELPERS
-\*------------------------------------*/
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.0.1
-* Docs at http://davidtheclark.github.io/scut
-*/
-/*==========  GENERIC  ==========*/
-.text-center {
-	text-align: center; }
-
-/*------------------------------------*\
     #RESET
 \*------------------------------------*/
 /**
@@ -601,6 +588,926 @@ ul, ol, dd {
 	margin-left: 20px;
 	list-style: none; }
 
+/**
+ * Drop v6.0.0
+ * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/drop
+ *
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+/*  Styling for the dropdown content.
+ *  Hides the content by default. */
+.dropdown-menu-basic {
+	overflow: hidden;
+	min-width: 10em;
+	max-height: 0;
+	border-radius: 2px;
+	background-color: #fbfcfc;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	        transition: max-height 0.5s ease-in-out; }
+
+/*  Remove list-style and margin-left
+ *  from dropdown menu lists */
+.dropdown-menu-basic ul, .dropdown-menu-basic ol {
+	margin: 0;
+	padding: 0.5em; 
+	list-style: none;}
+
+/*  When a dropdown is active, display it. */
+.dropdown-menu-basic.active {
+	display: block;
+	max-height: 600px; }
+
+/*  If dropdown link is near the right edge of the screen,
+ *  shift the dropdown menu position to avoid content clipping. */
+.dropdown-menu-basic.dropdown-right {
+	right: 0;
+	left: auto; }
+
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+/**
+ * 1. Webkit: collapse white-space between units.
+ * 2. Reset IE < 8.
+ * 3. IE < 8: collapse white-space between units.
+ * 4. Webkit: fixes text-rendering: optimizeLegibility.
+ * 5. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+.layout__item {
+	display: inline-block;
+
+	*display: inline; }
+
+.layout {
+	display: block;
+	/* [5] */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	/* [4] */
+	margin: 0;
+	margin-left: -20px; 
+	/* [5] */
+	padding: 0;
+	text-align: left;
+
+	text-rendering: optimizespeed;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;}
+
+.layout__column {
+	        flex-direction: column;
+	margin: 0; 
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;}
+
+.layout__item {
+	zoom: 1;
+	/* 4 */
+	width: 100%;
+	margin-bottom: 20px; 
+	margin-left: 20px;
+	text-align: left;
+	/* 3 */
+	vertical-align: top;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%;}
+
+/**
+ * Some simple, crude, starting-point widths to use alongside the layout system.
+ */
+.all-1-24 {
+	width: 4.1667%;
+	max-width: 4%; }
+
+.all-1-12, .all-2-24 {
+	width: 8.3333%;
+	max-width: 8%; }
+
+.all-1-8, .all-3-24 {
+	width: 12.5%;
+	max-width: 12%; }
+
+.all-1-6, .all-4-24 {
+	width: 16.6667%;
+	max-width: 16%; }
+
+.all-1-5 {
+	width: 20%;
+	max-width: 19%; }
+
+.all-5-24 {
+	width: 20.8333%;
+	max-width: 20%; }
+
+.all-1-4, .all-6-24 {
+	width: 25%;
+	max-width: 23.5%; }
+
+.all-7-24 {
+	width: 29.1667%;
+	max-width: 29%; }
+
+.all-1-3, .all-8-24 {
+	width: 33.3333%;
+	max-width: 32%; }
+
+.all-3-8, .all-9-24 {
+	width: 37.5%;
+	max-width: 37%; }
+
+.all-2-5 {
+	width: 40%;
+	max-width: 39%; }
+
+.all-5-12, .all-10-24 {
+	width: 41.6667%;
+	max-width: 41%; }
+
+.all-11-24 {
+	width: 45.8333%;
+	max-width: 45%; }
+
+.all-1-2, .all-12-24 {
+	width: 50%;
+	max-width: 47%; }
+
+.all-13-24 {
+	width: 54.1667%;
+	max-width: 54%; }
+
+.all-7-12, .all-14-24 {
+	width: 58.3333%;
+	max-width: 58%; }
+
+.all-3-5 {
+	width: 60%;
+	max-width: 59%; }
+
+.all-5-8, .all-15-24 {
+	width: 62.5%;
+	max-width: 62%; }
+
+.all-2-3, .all-16-24 {
+	width: 66.6667%;
+	max-width: 66%; }
+
+.all-17-24 {
+	width: 70.8333%;
+	max-width: 70%; }
+
+.all-3-4, .all-18-24 {
+	width: 75%;
+	max-width: 73.5%; }
+
+.all-19-24 {
+	width: 79.1667%;
+	max-width: 79%; }
+
+.all-4-5 {
+	width: 80%;
+	max-width: 79%; }
+
+.all-5-6, .all-20-24 {
+	width: 83.3333%;
+	max-width: 83%; }
+
+.all-7-8, .all-21-24 {
+	width: 87.5%;
+	max-width: 87%; }
+
+.all-11-12, .all-22-24 {
+	width: 91.6667%;
+	max-width: 91%; }
+
+.all-23-24 {
+	width: 95.8333%;
+	max-width: 95%; }
+
+.all-1, .all-1-1, .all-5-5, .all-24-24 {
+	width: 100%;
+	max-width: 100%; }
+
+@media screen and (max-width: 480px) {
+	.palm-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.palm-1-12, .palm-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.palm-1-8, .palm-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.palm-1-6, .palm-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.palm-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.palm-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.palm-1-4, .palm-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.palm-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.palm-1-3, .palm-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.palm-3-8, .palm-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.palm-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.palm-5-12, .palm-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.palm-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.palm-1-2, .palm-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.palm-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.palm-7-12, .palm-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.palm-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.palm-5-8, .palm-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.palm-2-3, .palm-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.palm-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.palm-3-4, .palm-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.palm-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.palm-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.palm-5-6, .palm-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.palm-7-8, .palm-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.palm-11-12, .palm-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.palm-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.palm-1, .palm-1-1, .palm-5-5, .palm-24-24 {
+		width: 100%; }
+	}
+
+@media screen and (min-width: 35.5rem) {
+	.sm-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.sm-1-12, .sm-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.sm-1-8, .sm-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.sm-1-6, .sm-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.sm-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.sm-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.sm-1-4, .sm-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.sm-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.sm-1-3, .sm-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.sm-3-8, .sm-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.sm-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.sm-5-12, .sm-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.sm-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.sm-1-2, .sm-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.sm-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.sm-7-12, .sm-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.sm-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.sm-5-8, .sm-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.sm-2-3, .sm-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.sm-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.sm-3-4, .sm-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.sm-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.sm-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.sm-5-6, .sm-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.sm-7-8, .sm-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.sm-11-12, .sm-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.sm-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.sm-1, .sm-1-1, .sm-5-5, .sm-24-24 {
+		width: 100%; }
+	}
+
+@media screen and (min-width: 48rem) {
+	.md-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.md-1-12, .md-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.md-1-8, .md-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.md-1-6, .md-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.md-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.md-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.md-1-4, .md-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.md-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.md-1-3, .md-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.md-3-8, .md-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.md-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.md-5-12, .md-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.md-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.md-1-2, .md-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.md-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.md-7-12, .md-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.md-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.md-5-8, .md-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.md-2-3, .md-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.md-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.md-3-4, .md-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.md-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.md-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.md-5-6, .md-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.md-7-8, .md-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.md-11-12, .md-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.md-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.md-1, .md-1-1, .md-5-5, .md-24-24 {
+		width: 100%; }
+	}
+
+@media screen and (max-width: 48rem) {
+	.portable-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.portable-1-12, .portable-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.portable-1-8, .portable-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.portable-1-6, .portable-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.portable-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.portable-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.portable-1-4, .portable-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.portable-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.portable-1-3, .portable-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.portable-3-8, .portable-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.portable-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.portable-5-12, .portable-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.portable-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.portable-1-2, .portable-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.portable-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.portable-7-12, .portable-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.portable-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.portable-5-8, .portable-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.portable-2-3, .portable-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.portable-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.portable-3-4, .portable-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.portable-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.portable-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.portable-5-6, .portable-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.portable-7-8, .portable-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.portable-11-12, .portable-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.portable-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.portable-1, .portable-1-1, .portable-5-5, .portable-24-24 {
+		width: 100%; }
+	}
+
+@media screen and (min-width: 62rem) {
+	.lg-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.lg-1-12, .lg-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.lg-1-8, .lg-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.lg-1-6, .lg-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.lg-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.lg-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.lg-1-4, .lg-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.lg-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.lg-1-3, .lg-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.lg-3-8, .lg-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.lg-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.lg-5-12, .lg-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.lg-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.lg-1-2, .lg-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.lg-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.lg-7-12, .lg-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.lg-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.lg-5-8, .lg-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.lg-2-3, .lg-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.lg-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.lg-3-4, .lg-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.lg-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.lg-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.lg-5-6, .lg-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.lg-7-8, .lg-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.lg-11-12, .lg-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.lg-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.lg-1, .lg-1-1, .lg-5-5, .lg-24-24 {
+		width: 100%; }
+	}
+
+@media screen and (min-width: 80rem) {
+	.xl-1-24 {
+		width: 4.1667%;
+		max-width: 4%; }
+
+	.xl-1-12, .xl-2-24 {
+		width: 8.3333%;
+		max-width: 8%; }
+
+	.xl-1-8, .xl-3-24 {
+		width: 12.5%;
+		max-width: 12%; }
+
+	.xl-1-6, .xl-4-24 {
+		width: 16.6667%;
+		max-width: 16%; }
+
+	.xl-1-5 {
+		width: 20%;
+		max-width: 19%; }
+
+	.xl-5-24 {
+		width: 20.8333%;
+		max-width: 20%; }
+
+	.xl-1-4, .xl-6-24 {
+		width: 25%;
+		max-width: 23.5%; }
+
+	.xl-7-24 {
+		width: 29.1667%;
+		max-width: 29%; }
+
+	.xl-1-3, .xl-8-24 {
+		width: 33.3333%;
+		max-width: 32%; }
+
+	.xl-3-8, .xl-9-24 {
+		width: 37.5%;
+		max-width: 37%; }
+
+	.xl-2-5 {
+		width: 40%;
+		max-width: 39%; }
+
+	.xl-5-12, .xl-10-24 {
+		width: 41.6667%;
+		max-width: 41%; }
+
+	.xl-11-24 {
+		width: 45.8333%;
+		max-width: 45%; }
+
+	.xl-1-2, .xl-12-24 {
+		width: 50%;
+		max-width: 47%; }
+
+	.xl-13-24 {
+		width: 54.1667%;
+		max-width: 54%; }
+
+	.xl-7-12, .xl-14-24 {
+		width: 58.3333%;
+		max-width: 58%; }
+
+	.xl-3-5 {
+		width: 60%;
+		max-width: 59%; }
+
+	.xl-5-8, .xl-15-24 {
+		width: 62.5%;
+		max-width: 62%; }
+
+	.xl-2-3, .xl-16-24 {
+		width: 66.6667%;
+		max-width: 66%; }
+
+	.xl-17-24 {
+		width: 70.8333%;
+		max-width: 70%; }
+
+	.xl-3-4, .xl-18-24 {
+		width: 75%;
+		max-width: 73.5%; }
+
+	.xl-19-24 {
+		width: 79.1667%;
+		max-width: 79%; }
+
+	.xl-4-5 {
+		width: 80%;
+		max-width: 79%; }
+
+	.xl-5-6, .xl-20-24 {
+		width: 83.3333%;
+		max-width: 83%; }
+
+	.xl-7-8, .xl-21-24 {
+		width: 87.5%;
+		max-width: 87%; }
+
+	.xl-11-12, .xl-22-24 {
+		width: 91.6667%;
+		max-width: 91%; }
+
+	.xl-23-24 {
+		width: 95.8333%;
+		max-width: 95%; }
+
+	.xl-1, .xl-1-1, .xl-5-5, .xl-24-24 {
+		width: 100%; }
+	}
+
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+.left {
+	float: left; }
+
+.right {
+	float: right; }
+
+.flex-fit {
+	margin: 0;
+	padding: 0;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
+
+.strong {
+	font-weight: bold; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.0.1
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*==========  GENERIC  ==========*/
+.text-center {
+	text-align: center; }
+
 /*------------------------------------*\
     #PAGE
 \*------------------------------------*/
@@ -847,7 +1754,7 @@ h1 a, h2 a, h3 a {
 
 	-moz-osx-font-smoothing: grayscale;}
 
-.Typography--title {
+.Typography--title a, .Typography--title {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -864,7 +1771,7 @@ h1 a, h2 a, h3 a {
 	line-height: 1;
 	letter-spacing: 0.02em;}
 
-.Typography--subhead {
+.Typography--subhead a, .Typography--subhead {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -881,14 +1788,15 @@ h1 a, h2 a, h3 a {
 	line-height: 1.25;
 	letter-spacing: 0.04em;}
 
-.Typography--body-2 {
+.Typography--body-2 a, .Typography--body-2 {
+	color: #7f8c8d; 
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
-	letter-spacing: 0.04em; }
+	letter-spacing: 0.04em;}
 
-.Typography--Body-2--colorContrast {
+.Typography--body-2--colorContrast {
 	opacity: 0.87; 
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -896,7 +1804,7 @@ h1 a, h2 a, h3 a {
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
 
-.Typography--body-1 {
+.Typography--body-1 a, .Typography--body-1 {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -911,7 +1819,7 @@ h1 a, h2 a, h3 a {
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
 
-.Typography--baption {
+.Typography--caption {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -1026,6 +1934,28 @@ h1 a, h2 a, h3 a {
 
 	-moz-osx-font-smoothing: grayscale; }
 
+.loop-title {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px; 
+	text-align: center;}
+.loop-title:before, .loop-title:after {
+	display: inline-block;
+	position: relative;
+	bottom: 0.1em; 
+	width: 50%;
+	border-top-width: 0.1em;
+	border-top-style: solid;
+	border-top-color: #bdc3c7;
+	vertical-align: middle;
+	content: "";}
+.loop-title:before {
+	right: 0.5em;
+	margin-left: -50%; }
+.loop-title:after {
+	left: 0.5em;
+	margin-right: -50%; }
+
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
@@ -1035,856 +1965,29 @@ a {
 a:hover, a:active {
 	color: #104b66; }
 
-/*------------------------------------*\
-    #WIDTHS-RESPONSIVE
-\*------------------------------------*/
-/**
- * 1. Webkit: collapse white-space between units.
- * 2. Reset IE < 8.
- * 3. IE < 8: collapse white-space between units.
- * 4. Webkit: fixes text-rendering: optimizeLegibility.
- * 5. Account for browser defaults of elements that might be the root node of
- *    the component.
- */
-.layout__item {
+a[href*="tel:"]::before {
 	display: inline-block;
-
-	*display: inline; }
-
-.layout {
-	display: block;
-	/* [5] */
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-	/* [4] */
-	margin: 0;
-	margin-left: -10px; 
-	/* [5] */
-	padding: 0;
-	text-align: left;
-
-	text-rendering: optimizespeed;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;}
-
-.layout__column {
-	        flex-direction: column; 
-
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;}
-
-.layout__item {
-	zoom: 1;
-	/* 4 */
-	width: 100%;
-	margin-bottom: 10px; 
-	margin-left: 10px;
-	text-align: left;
-	/* 3 */
-	vertical-align: top;
-
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;}
-
-/**
- * Some simple, crude, starting-point widths to use alongside the layout system.
- */
-.all-1-24 {
-	width: 4.1667%;
-	max-width: 4%; }
-
-.all-1-12, .all-2-24 {
-	width: 8.3333%;
-	max-width: 8%; }
-
-.all-1-8, .all-3-24 {
-	width: 12.5%;
-	max-width: 12%; }
-
-.all-1-6, .all-4-24 {
-	width: 16.6667%;
-	max-width: 16%; }
-
-.all-1-5 {
-	width: 20%;
-	max-width: 19%; }
-
-.all-5-24 {
-	width: 20.8333%;
-	max-width: 20%; }
-
-.all-1-4, .all-6-24 {
-	width: 25%;
-	max-width: 23.5%; }
-
-.all-7-24 {
-	width: 29.1667%;
-	max-width: 29%; }
-
-.all-1-3, .all-8-24 {
-	width: 33.3333%;
-	max-width: 32%; }
-
-.all-3-8, .all-9-24 {
-	width: 37.5%;
-	max-width: 37%; }
-
-.all-2-5 {
-	width: 40%;
-	max-width: 39%; }
-
-.all-5-12, .all-10-24 {
-	width: 41.6667%;
-	max-width: 41%; }
-
-.all-11-24 {
-	width: 45.8333%;
-	max-width: 45%; }
-
-.all-1-2, .all-12-24 {
-	width: 50%;
-	max-width: 48%; }
-
-.all-13-24 {
-	width: 54.1667%;
-	max-width: 54%; }
-
-.all-7-12, .all-14-24 {
-	width: 58.3333%;
-	max-width: 58%; }
-
-.all-3-5 {
-	width: 60%;
-	max-width: 59%; }
-
-.all-5-8, .all-15-24 {
-	width: 62.5%;
-	max-width: 62%; }
-
-.all-2-3, .all-16-24 {
-	width: 66.6667%;
-	max-width: 66%; }
-
-.all-17-24 {
-	width: 70.8333%;
-	max-width: 70%; }
-
-.all-3-4, .all-18-24 {
-	width: 75%;
-	max-width: 73.5%; }
-
-.all-19-24 {
-	width: 79.1667%;
-	max-width: 79%; }
-
-.all-4-5 {
-	width: 80%;
-	max-width: 79%; }
-
-.all-5-6, .all-20-24 {
-	width: 83.3333%;
-	max-width: 83%; }
-
-.all-7-8, .all-21-24 {
-	width: 87.5%;
-	max-width: 87%; }
-
-.all-11-12, .all-22-24 {
-	width: 91.6667%;
-	max-width: 91%; }
-
-.all-23-24 {
-	width: 95.8333%;
-	max-width: 95%; }
-
-.all-1, .all-1-1, .all-5-5, .all-24-24 {
-	width: 100%;
-	max-width: 100%; }
-
-@media screen and (max-width: 480px) {
-	.palm-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.palm-1-12, .palm-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.palm-1-8, .palm-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.palm-1-6, .palm-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.palm-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.palm-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.palm-1-4, .palm-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.palm-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.palm-1-3, .palm-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.palm-3-8, .palm-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.palm-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.palm-5-12, .palm-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.palm-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.palm-1-2, .palm-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.palm-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.palm-7-12, .palm-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.palm-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.palm-5-8, .palm-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.palm-2-3, .palm-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.palm-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.palm-3-4, .palm-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.palm-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.palm-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.palm-5-6, .palm-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.palm-7-8, .palm-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.palm-11-12, .palm-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.palm-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.palm-1, .palm-1-1, .palm-5-5, .palm-24-24 {
-		width: 100%; }
-	}
-
-@media screen and (min-width: 35.5rem) {
-	.sm-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.sm-1-12, .sm-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.sm-1-8, .sm-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.sm-1-6, .sm-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.sm-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.sm-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.sm-1-4, .sm-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.sm-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.sm-1-3, .sm-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.sm-3-8, .sm-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.sm-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.sm-5-12, .sm-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.sm-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.sm-1-2, .sm-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.sm-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.sm-7-12, .sm-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.sm-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.sm-5-8, .sm-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.sm-2-3, .sm-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.sm-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.sm-3-4, .sm-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.sm-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.sm-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.sm-5-6, .sm-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.sm-7-8, .sm-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.sm-11-12, .sm-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.sm-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.sm-1, .sm-1-1, .sm-5-5, .sm-24-24 {
-		width: 100%; }
-	}
-
-@media screen and (min-width: 48rem) {
-	.md-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.md-1-12, .md-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.md-1-8, .md-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.md-1-6, .md-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.md-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.md-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.md-1-4, .md-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.md-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.md-1-3, .md-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.md-3-8, .md-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.md-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.md-5-12, .md-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.md-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.md-1-2, .md-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.md-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.md-7-12, .md-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.md-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.md-5-8, .md-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.md-2-3, .md-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.md-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.md-3-4, .md-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.md-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.md-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.md-5-6, .md-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.md-7-8, .md-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.md-11-12, .md-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.md-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.md-1, .md-1-1, .md-5-5, .md-24-24 {
-		width: 100%; }
-	}
-
-@media screen and (max-width: 48rem) {
-	.portable-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.portable-1-12, .portable-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.portable-1-8, .portable-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.portable-1-6, .portable-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.portable-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.portable-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.portable-1-4, .portable-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.portable-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.portable-1-3, .portable-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.portable-3-8, .portable-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.portable-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.portable-5-12, .portable-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.portable-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.portable-1-2, .portable-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.portable-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.portable-7-12, .portable-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.portable-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.portable-5-8, .portable-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.portable-2-3, .portable-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.portable-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.portable-3-4, .portable-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.portable-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.portable-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.portable-5-6, .portable-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.portable-7-8, .portable-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.portable-11-12, .portable-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.portable-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.portable-1, .portable-1-1, .portable-5-5, .portable-24-24 {
-		width: 100%; }
-	}
-
-@media screen and (min-width: 62rem) {
-	.lg-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.lg-1-12, .lg-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.lg-1-8, .lg-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.lg-1-6, .lg-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.lg-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.lg-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.lg-1-4, .lg-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.lg-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.lg-1-3, .lg-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.lg-3-8, .lg-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.lg-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.lg-5-12, .lg-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.lg-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.lg-1-2, .lg-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.lg-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.lg-7-12, .lg-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.lg-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.lg-5-8, .lg-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.lg-2-3, .lg-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.lg-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.lg-3-4, .lg-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.lg-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.lg-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.lg-5-6, .lg-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.lg-7-8, .lg-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.lg-11-12, .lg-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.lg-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.lg-1, .lg-1-1, .lg-5-5, .lg-24-24 {
-		width: 100%; }
-	}
-
-@media screen and (min-width: 80rem) {
-	.xl-1-24 {
-		width: 4.1667%;
-		max-width: 4%; }
-
-	.xl-1-12, .xl-2-24 {
-		width: 8.3333%;
-		max-width: 8%; }
-
-	.xl-1-8, .xl-3-24 {
-		width: 12.5%;
-		max-width: 12%; }
-
-	.xl-1-6, .xl-4-24 {
-		width: 16.6667%;
-		max-width: 16%; }
-
-	.xl-1-5 {
-		width: 20%;
-		max-width: 19%; }
-
-	.xl-5-24 {
-		width: 20.8333%;
-		max-width: 20%; }
-
-	.xl-1-4, .xl-6-24 {
-		width: 25%;
-		max-width: 23.5%; }
-
-	.xl-7-24 {
-		width: 29.1667%;
-		max-width: 29%; }
-
-	.xl-1-3, .xl-8-24 {
-		width: 33.3333%;
-		max-width: 32%; }
-
-	.xl-3-8, .xl-9-24 {
-		width: 37.5%;
-		max-width: 37%; }
-
-	.xl-2-5 {
-		width: 40%;
-		max-width: 39%; }
-
-	.xl-5-12, .xl-10-24 {
-		width: 41.6667%;
-		max-width: 41%; }
-
-	.xl-11-24 {
-		width: 45.8333%;
-		max-width: 45%; }
-
-	.xl-1-2, .xl-12-24 {
-		width: 50%;
-		max-width: 48%; }
-
-	.xl-13-24 {
-		width: 54.1667%;
-		max-width: 54%; }
-
-	.xl-7-12, .xl-14-24 {
-		width: 58.3333%;
-		max-width: 58%; }
-
-	.xl-3-5 {
-		width: 60%;
-		max-width: 59%; }
-
-	.xl-5-8, .xl-15-24 {
-		width: 62.5%;
-		max-width: 62%; }
-
-	.xl-2-3, .xl-16-24 {
-		width: 66.6667%;
-		max-width: 66%; }
-
-	.xl-17-24 {
-		width: 70.8333%;
-		max-width: 70%; }
-
-	.xl-3-4, .xl-18-24 {
-		width: 75%;
-		max-width: 73.5%; }
-
-	.xl-19-24 {
-		width: 79.1667%;
-		max-width: 79%; }
-
-	.xl-4-5 {
-		width: 80%;
-		max-width: 79%; }
-
-	.xl-5-6, .xl-20-24 {
-		width: 83.3333%;
-		max-width: 83%; }
-
-	.xl-7-8, .xl-21-24 {
-		width: 87.5%;
-		max-width: 87%; }
-
-	.xl-11-12, .xl-22-24 {
-		width: 91.6667%;
-		max-width: 91%; }
-
-	.xl-23-24 {
-		width: 95.8333%;
-		max-width: 95%; }
-
-	.xl-1, .xl-1-1, .xl-5-5, .xl-24-24 {
-		width: 100%; }
-	}
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f095";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+a[href*="mailto:"]::before {
+	display: inline-block;
+	color: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	content: "\f0e0";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
 
 /*------------------------------------*\
     #MAIN-LAYOUT
@@ -1915,24 +2018,33 @@ body.open {
 .main-container {
 	min-height: 100%;
 	padding-top: 70px;
-	padding-left: 0;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out; }
+@media screen and (min-width: 48rem) {
+	.main-container {
+		padding-left: 10px; } }
 @media screen and (min-width: 62rem) {
 	.main-container {
 		/* Height of the header */
-		padding-top: 20px; } }
+		padding-top: 20px;
+		padding-left: 0; } }
 
-.content {
+.sidebar-1 {
 	-webkit-box-flex: 1;
-	-webkit-flex: 1 100%;
-	    -ms-flex: 1 100%;
-	        flex: 1 100%; }
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
 
-@media screen and (min-width: 62rem) {
+@media screen and (max-width: 48rem) {
+	.content, .sidebar {
+		margin-left: 10px; } }
+@media screen and (min-width: 48rem) {
 	.content, .sidebar {
 		margin-bottom: 20px; 
 		margin-left: 20px;} }
+
+.widget {
+	margin-left: -10px; }
 
 /*------------------------------------*\
     #LAYOUT-2C-L
@@ -2000,11 +2112,15 @@ body.open {
 	border: 0;}
 
 .btn--small {
-	padding: 6px 12px;
+	padding: 1px 12px;
 	letter-spacing: inherit; 
-	text-transform: lowercase;}
+	text-transform: capitalize;}
 
-/*! Hint.css (base version) - v1.3.3 - 2014-07-06
+.btn--full {
+	margin: 0;
+	border-radius: 0; }
+
+/*! Hint.css - v1.3.3 - 2014-07-06
 * http://kushagragour.in/lab/hint/
 * Copyright (c) 2014 Kushagra Gour; Licensed MIT */
 /*-------------------------------------*\
@@ -2178,6 +2294,94 @@ body.open {
 	        transform: translateX(-8px); }
 
 /**
+ * source: hint-color-types.scss
+ *
+ * Contains tooltips of various types based on color differences.
+ *
+ * Classes added:
+ * 	1) hint--error
+ * 	2) hint--warning
+ * 	3) hint--info
+ * 	4) hint--success
+ *
+ */
+/**
+ * Error
+ */
+.hint--error:after {
+	background-color: #b34e4d;
+	text-shadow: 0 -1px 0 #592726; }
+
+.hint--error.hint--top:before {
+	border-top-color: #b34e4d; }
+
+.hint--error.hint--bottom:before {
+	border-bottom-color: #b34e4d; }
+
+.hint--error.hint--left:before {
+	border-left-color: #b34e4d; }
+
+.hint--error.hint--right:before {
+	border-right-color: #b34e4d; }
+
+/**
+ * Warning
+ */
+.hint--warning:after {
+	background-color: #c09854;
+	text-shadow: 0 -1px 0 #6c5328; }
+
+.hint--warning.hint--top:before {
+	border-top-color: #c09854; }
+
+.hint--warning.hint--bottom:before {
+	border-bottom-color: #c09854; }
+
+.hint--warning.hint--left:before {
+	border-left-color: #c09854; }
+
+.hint--warning.hint--right:before {
+	border-right-color: #c09854; }
+
+/**
+ * Info
+ */
+.hint--info:after {
+	background-color: #3986ac;
+	text-shadow: 0 -1px 0 #193b4d; }
+
+.hint--info.hint--top:before {
+	border-top-color: #3986ac; }
+
+.hint--info.hint--bottom:before {
+	border-bottom-color: #3986ac; }
+
+.hint--info.hint--left:before {
+	border-left-color: #3986ac; }
+
+.hint--info.hint--right:before {
+	border-right-color: #3986ac; }
+
+/**
+ * Success
+ */
+.hint--success:after {
+	background-color: #458746;
+	text-shadow: 0 -1px 0 #1a321a; }
+
+.hint--success.hint--top:before {
+	border-top-color: #458746; }
+
+.hint--success.hint--bottom:before {
+	border-bottom-color: #458746; }
+
+.hint--success.hint--left:before {
+	border-left-color: #458746; }
+
+.hint--success.hint--right:before {
+	border-right-color: #458746; }
+
+/**
  * source: hint-always.scss
  *
  * Defines a persisted tooltip which shows always.
@@ -2210,6 +2414,36 @@ body.open {
 	    -ms-transform: translateX(8px);
 	        transform: translateX(8px); }
 
+/**
+ * source: hint-rounded.scss
+ *
+ * Defines rounded corner tooltips.
+ *
+ * Classes added:
+ * 	1) hint--rounded
+ *
+ */
+.hint--rounded:after {
+	border-radius: 4px; }
+
+/**
+ * source: hint-effects.scss
+ *
+ * Defines various transition effects for the tooltips.
+ *
+ * Classes added:
+ * 	1) hint--no-animate
+ * 	2) hint--bounce
+ *
+ */
+.hint--no-animate:before, .hint--no-animate:after {
+	-webkit-transition-duration: 0ms;
+	        transition-duration: 0ms; }
+
+.hint--bounce:before, .hint--bounce:after {
+	-webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24); }
+
 /*------------------------------------*\
     #CARDS
 \*------------------------------------*/
@@ -2229,7 +2463,12 @@ body.open {
 	background-color: #fff;
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 	-webkit-transition: box-shadow 0.2s ease-out;
-	        transition: box-shadow 0.2s ease-out; }
+	        transition: box-shadow 0.2s ease-out;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 100%;
+	    -ms-flex: 1 100%;
+	        flex: 1 100%; }
 .card--link:hover {
 	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 	text-decoration: none;
@@ -2241,8 +2480,51 @@ body.open {
 	-webkit-transition: box-shadow 0.2s ease-in;
 	        transition: box-shadow 0.2s ease-in; }
 
-.card--inner {
-	margin-right: 10px; }
+.card--staff {
+	padding: 0;
+
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	        align-self: flex-start; }
+
+.staff--detail {
+	margin: auto 10px; }
+
+.info-btn__center {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: #f2f2f2;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	font-size: 24px;
+	line-height: 1.5;
+	text-align: center;
+	-webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
+.info-btn__center:hover {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); }
+.info-btn__center:active, .info-btn__center:focus {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
+.info-btn {
+	position: absolute;
+	top: 5px; 
+	right: 5px;}
+
+.entry.department {
+	padding: 0 10px 0 0; }
+
+img.thumbnail.dept-thumb {
+	width: 100px;
+	height: 100px; }
+
+.btn.card__department {
+	background-color: #4f9c70; }
+.btn.card__department:hover {
+	background-color: #6ab48a; }
+
+.contact-info__list a {
+	color: #4e5758; }
 
 /*------------------------------------*\
     #BUTTONS
@@ -2259,6 +2541,11 @@ body.open {
 	color: #fff; }
 .btn:hover, .btn:active, .btn:focus, button:hover, button:active, button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
 	background-color: #219cd4; }
+
+a.btn {
+	color: #fff; }
+a.btn:hover, a.btn:active, a.btn:focus {
+	color: #fff; }
 
 /*------------------------------------*\
     #FORMS
@@ -2779,18 +3066,34 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	-ms-flex-pack: justify;
 	        justify-content: space-between;}
 
-.layout__topics {
-	-webkit-box-align: stretch;
-	-webkit-align-items: stretch;
-	-ms-flex-align: stretch;
-	        align-items: stretch; }
-
 .topic-title {
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
 	font-size: 34px;
 	font-size: 2.125rem;
 	font-weight: 400; 
 	line-height: 1.1764705882;}
+
+.topic-post {
+	position: relative;
+	margin: 0; 
+	margin-bottom: 10px;
+	padding: 10px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+@media screen and (max-width: 48rem) {
+	.topic-post {
+		        flex-direction: column;
+
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		        align-items: center; } }
 
 .post-num {
 	position: absolute;
@@ -2837,21 +3140,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 .avatar {
 	max-width: 60px;
-	height: auto; 
-	border-radius: 50%;}
+	height: auto; }
 
 .comment-author {
-	max-width: 100px;
-	text-align: center; }
-
-.topic-post {
-	position: relative;
-	margin-bottom: 10px; 
-	padding: 10px;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 2px;
-	background-color: #fff;
-	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+	max-width: 60px; 
+	margin: 0;
+	padding: 0;
+	text-align: center;}
 
 .topic-info {
 	padding: 0.5em 1em;
@@ -2866,6 +3161,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 textarea#mb_post_content {
 	min-height: 250px; }
+
+.user-profile-link {
+	vertical-align: bottom; }
 
 /*------------------------------------*\
     #HEADER

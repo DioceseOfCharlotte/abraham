@@ -2,6 +2,23 @@
     #HELPERS
 \*------------------------------------*/
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.flex-fit {
+	margin: 0;
+	padding: 0;
+	flex: 1;
+}
+
+.strong {
+	font-weight: bold;
+}
 
 /*
 * Scut, a collection of Sass utilities

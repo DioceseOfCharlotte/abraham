@@ -12,3 +12,29 @@ a {
     }
 
 }
+
+a[href*="tel:"]::before {
+	content: '\f095';
+	color: inherit;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="mailto:"]::before {
+	content: '\f0e0';
+	color: inherit;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+

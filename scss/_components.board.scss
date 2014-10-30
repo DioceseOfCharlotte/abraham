@@ -6,14 +6,20 @@
 flex-direction: column;
 justify-content: space-between;
 padding-right: 30px;
-	}
-
-.layout__topics {
-align-items: stretch;
 }
 
 .topic-title {
 	@include typo-display-1;
+}
+
+.topic-post {
+@include card;
+margin-bottom: 10px;
+margin: 0;
+@include media-query(portable) {
+flex-direction: column;
+align-items: center;
+}
 }
 
 .post-num {
@@ -66,20 +72,16 @@ align-items: stretch;
 	margin-left: 0;
 }
 .avatar {
-	border-radius: 50%;
 	max-width: 60px;
 	height: auto;
 	}
 
 .comment-author {
-	max-width: 100px;
-	text-align: center;
-	}
-
-.topic-post {
-@include card;
-margin-bottom: 10px;
-	}
+text-align: center;
+margin: 0;
+padding: 0;
+max-width: 60px;
+}
 
 
 .topic-info {
@@ -99,3 +101,6 @@ textarea#mb_post_content {
 min-height: 250px;
 }
 
+.user-profile-link {
+vertical-align: bottom;
+}

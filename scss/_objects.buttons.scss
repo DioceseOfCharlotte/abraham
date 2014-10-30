@@ -61,7 +61,12 @@ input[type="submit"] {
 }
 
 .btn--small {
-	padding: 6px 12px;
-	text-transform: lowercase;
+	padding: 1px 12px;
+	text-transform: capitalize;
 	letter-spacing: inherit;
+}
+
+.btn--full {
+	margin: 0;
+	border-radius: 0;
 }

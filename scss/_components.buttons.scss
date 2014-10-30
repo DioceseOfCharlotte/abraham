@@ -30,3 +30,12 @@ input[type="submit"] {
     }
 
 }
+
+    a.btn {
+    	color: $color-btn-text;
+    	&:hover,
+    	&:active,
+    	&:focus {
+        color: $color-btn-text;
+    }
+}

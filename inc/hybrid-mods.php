@@ -11,13 +11,13 @@ class Doc_Attributes {
 	public $header                	= 'app-bar'; 	// na
 	public $footer                	= 'footer-layout'; 	// na
 	public $content_1c            	= '  layout__item'; 	// content
-	public $content_2cl           	= '  layout__item  card  md-18-24'; 	// content
+	public $content_2cl           	= '  layout__item  md-18-24'; 	// content
 	public $content_2cr           	= '  layout__item  md-5-8'; 	// content
 	public $sidebar_1c     		  	= '  wrapper layout';	// sidebar
 	public $sidebar_2cl    			= '  wrapper layout';	// sidebar
 	public $sidebar_2cr    			= '  wrapper layout';	// sidebar
 	public $sidebar_1_1c     		= '  layout__item';	// sidebar
-	public $sidebar_1_2cl    		= '  layout__item  sidebar-1 card  md-6-24';	// sidebar
+	public $sidebar_1_2cl    		= '  layout__item  sidebar-1 layout  md-6-24';	// sidebar
 	public $sidebar_1_2cr    		= '  layout__item  md-3-8';	// sidebar
 	public $sidebar_2_1c     		= '  layout__item';	// sidebar
 	public $sidebar_2_2cl    		= '  layout__item  md-7-24';	// sidebar
@@ -35,7 +35,7 @@ class Doc_Attributes {
 	public $loop_description      	= ' ';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  	= ' ';	// get_post_class()
+	public $post                  	= ' card layout__item';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
 	public $entry_author          	= ' ';	// entry-author
 	public $entry_published       	= ' ';	// entry-published updated

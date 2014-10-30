@@ -26,11 +26,12 @@
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    margin-left: -($base-spacing-unit / 2);
+    margin-left: -$base-spacing-unit;
 }
 
     .layout__column {
         flex-direction: column;
+        margin: 0;
     }
 
     .layout__item {
@@ -43,9 +44,9 @@
         text-align: left; /* 3 */
         vertical-align: top; /* 4 */
         width: 100%;
-        flex: 1;
-        margin-left: ($base-spacing-unit / 2);
-        margin-bottom: ($base-spacing-unit / 2);
+        flex: 1 100%;
+        margin-left: $base-spacing-unit;
+        margin-bottom: $base-spacing-unit;
     }
 
 
@@ -128,7 +129,7 @@
 .all-1-2,
 .all-12-24 {
     width: 50%;
-    max-width: 48%;
+    max-width: 47%;
 }
 
 .all-13-24 {
@@ -294,7 +295,7 @@
     .palm-1-2,
     .palm-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .palm-13-24 {
@@ -459,7 +460,7 @@
     .sm-1-2,
     .sm-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .sm-13-24 {
@@ -624,7 +625,7 @@
     .md-1-2,
     .md-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .md-13-24 {
@@ -789,7 +790,7 @@
     .portable-1-2,
     .portable-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .portable-13-24 {
@@ -954,7 +955,7 @@
     .lg-1-2,
     .lg-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .lg-13-24 {
@@ -1118,7 +1119,7 @@
     .xl-1-2,
     .xl-12-24 {
         width: 50%;
-        max-width: 48%;
+        max-width: 47%;
     }
 
     .xl-13-24 {

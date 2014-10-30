@@ -30,3 +30,52 @@ ul, ol, dd,
     margin-left: $base-spacing-unit;
     list-style: none;
 }
+
+
+
+
+/**
+ * Drop v6.0.0
+ * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/drop
+ *
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+
+
+/*  Styling for the dropdown content.
+ *  Hides the content by default. */
+.dropdown-menu-basic {
+  max-height: 0;
+  overflow: hidden;
+  min-width: 10em;
+  background-color: $color-box-highlight-background;
+  border-radius: $base-radius;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/*  Remove list-style and margin-left
+ *  from dropdown menu lists */
+.dropdown-menu-basic ul,
+.dropdown-menu-basic ol {
+  margin: 0;
+  list-style: none;
+  padding: 0.5em;
+}
+
+/*  When a dropdown is active, display it. */
+.dropdown-menu-basic.active {
+  display: block;
+  max-height: 600px;
+  //visibility: visible;
+
+}
+
+/*  If dropdown link is near the right edge of the screen,
+ *  shift the dropdown menu position to avoid content clipping. */
+.dropdown-menu-basic.dropdown-right {
+  right: 0;
+  left: auto;
+}
+

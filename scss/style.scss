@@ -65,7 +65,6 @@ Text Domain: abraham
 
 @import "tools.functions";
 @import "tools.mixins";
-@import "tools.helpers";
 
 @import "generic.reset";
 @import "generic.normalize";
@@ -73,11 +72,14 @@ Text Domain: abraham
 @import "generic.h5bp";
 @import "generic.shared";
 
+@import "objects.grid";
+
+@import "tools.helpers";
+
 @import "base.page";
 @import "base.typography";
 @import "base.links";
 
-@import "objects.grid";
 @import "objects.layout";
 @import "objects.layout-2c-l";
 @import "objects.buttons";
