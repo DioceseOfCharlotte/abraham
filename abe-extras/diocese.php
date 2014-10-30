@@ -153,4 +153,3 @@ if ( !class_exists( 'Diocese' ) ) {
 	}
 
 }
-

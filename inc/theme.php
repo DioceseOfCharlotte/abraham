@@ -155,3 +155,22 @@ function doc_drop(){
    </script>
 <?php
 }
+
+/**
+ * Hooks
+ */
+function doc_header_before() {
+	do_action( 'doc_header_before' );
+}
+
+function doc_header_after() {
+	do_action( 'doc_header_after' );
+}
+
+function doc_content_top() {
+	do_action( 'doc_content_top' );
+}
+
+function doc_content_bottom() {
+	do_action( 'doc_content_bottom' );
+}

@@ -40,7 +40,7 @@
 <div class="site">
 
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
-
+<?php doc_header_before(); ?>
 	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="app-bar__container">
 			<button class="navdrawer__toggle"><span class="toggle-btn"></span></button>
@@ -68,5 +68,5 @@
 	<?php hybrid_get_menu( 'secondary' ); ?>
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
-
+    <?php doc_header_after(); ?>
 	<div class="layout main-container wrapper">

@@ -570,62 +570,6 @@ textarea {
 	clear: both; }
 
 /*------------------------------------*\
-    #SHARED
-\*------------------------------------*/
-/**
- * Where `margin-bottom` is concerned,this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
- */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre {
-	margin-bottom: 20px; }
-
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once,here.
- */
-ul, ol, dd {
-	margin-left: 20px;
-	list-style: none; }
-
-/**
- * Drop v6.0.0
- * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
- * http://github.com/cferdinandi/drop
- *
- * Free to use under the MIT License.
- * http://gomakethings.com/mit/
- */
-/*  Styling for the dropdown content.
- *  Hides the content by default. */
-.dropdown-menu-basic {
-	overflow: hidden;
-	min-width: 10em;
-	max-height: 0;
-	border-radius: 2px;
-	background-color: #fbfcfc;
-	-webkit-transition: max-height 0.5s ease-in-out;
-	        transition: max-height 0.5s ease-in-out; }
-
-/*  Remove list-style and margin-left
- *  from dropdown menu lists */
-.dropdown-menu-basic ul, .dropdown-menu-basic ol {
-	margin: 0;
-	padding: 0.5em; 
-	list-style: none;}
-
-/*  When a dropdown is active, display it. */
-.dropdown-menu-basic.active {
-	display: block;
-	max-height: 600px; }
-
-/*  If dropdown link is near the right edge of the screen,
- *  shift the dropdown menu position to avoid content clipping. */
-.dropdown-menu-basic.dropdown-right {
-	right: 0;
-	left: auto; }
-
-/*------------------------------------*\
     #WIDTHS-RESPONSIVE
 \*------------------------------------*/
 /**
@@ -636,12 +580,12 @@ ul, ol, dd {
  * 5. Account for browser defaults of elements that might be the root node of
  *    the component.
  */
-.layout__item {
+.layout__item, .site .facetwp-radio {
 	display: inline-block;
 
 	*display: inline; }
 
-.layout {
+.layout, .facetwp-facet-dept_type.facetwp-type-radio {
 	display: block;
 	/* [5] */
 	display: -webkit-box;
@@ -669,7 +613,7 @@ ul, ol, dd {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 
-.layout__item {
+.layout__item, .site .facetwp-radio {
 	zoom: 1;
 	/* 4 */
 	width: 100%;
@@ -1486,7 +1430,7 @@ ul, ol, dd {
 .right {
 	float: right; }
 
-.flex-fit {
+.flex-fit, .site .facetwp-radio {
 	margin: 0;
 	padding: 0;
 
@@ -1507,6 +1451,56 @@ ul, ol, dd {
 /*==========  GENERIC  ==========*/
 .text-center {
 	text-align: center; }
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * Drop v6.0.0
+ * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/drop
+ *
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+/*  Styling for the dropdown content.
+ *  Hides the content by default. */
+.dropdown-menu-basic {
+	overflow: hidden;
+	min-width: 10em;
+	max-height: 0;
+	border-radius: 2px;
+	background-color: #fbfcfc;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	        transition: max-height 0.5s ease-in-out; }
+
+/*  Remove list-style and margin-left
+ *  from dropdown menu lists */
+.dropdown-menu-basic ul, .dropdown-menu-basic ol {
+	margin: 0;
+	padding: 0.5em; 
+	list-style: none;}
+
+/*  When a dropdown is active, display it. */
+.dropdown-menu-basic.active {
+	display: block;
+	max-height: 600px; }
+
+/*  If dropdown link is near the right edge of the screen,
+ *  shift the dropdown menu position to avoid content clipping. */
+.dropdown-menu-basic.dropdown-right {
+	right: 0;
+	left: auto; }
+
+.facetwp-facet-dept_type.facetwp-type-radio {
+	margin: 0; }
+
+.site .facetwp-radio {
+	width: 25%;
+	background: #bdc3c7;
+	text-align: center; }
+.site .facetwp-radio.selected {
+	background: #fbfcfc; }
 
 /*------------------------------------*\
     #PAGE

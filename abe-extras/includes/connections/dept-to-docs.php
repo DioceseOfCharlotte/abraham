@@ -16,7 +16,7 @@ add_action( 'p2p_init', 'dept_to_doc_connection' );
 
 
 function dept_to_doc_connection() {
-    
+
     p2p_register_connection_type( array(
         'name' => 'departments_to_documents',
         'from' => 'department',

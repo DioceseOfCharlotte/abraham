@@ -40,5 +40,4 @@
 		</div><!-- .entry-summary -->
 
 	<?php endif; // End single post check. ?>
-
 </article><!-- .entry -->

@@ -70,11 +70,11 @@ Text Domain: abraham
 @import "generic.normalize";
 @import "generic.box-sizing";
 @import "generic.h5bp";
-@import "generic.shared";
 
 @import "objects.grid";
 
 @import "tools.helpers";
+@import "generic.shared";
 
 @import "base.page";
 @import "base.typography";

@@ -17,5 +17,4 @@
 				'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul>' . get_search_form( false ) . '</div>'
 			)
 		); ?>
-
 	</nav><!-- #menu-primary -->

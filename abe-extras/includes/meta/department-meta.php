@@ -27,6 +27,17 @@ function cmb2_department_metaboxes( array $meta_boxes ) {
         // 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
         'fields'        => array(
 
+        	array(
+				'name'    => __( 'Doc Type', 'cmb2' ),
+				'id'      => $prefix . 'doc_type',
+				'type'    => 'radio_inline',
+				'options' => array(
+					'pastoral-center' => __( 'Pastoral Center', 'cmb2' ),
+					'parish'   => __( 'Parish', 'cmb2' ),
+					'school'     => __( 'School', 'cmb2' ),
+				),
+			),
+
             array(
                 'id'          => 'dept_phone_group',
                 'type'        => 'group',
