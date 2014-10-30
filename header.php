@@ -24,6 +24,8 @@
     <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/touch/mstile-144x144.png">
     <meta name="msapplication-TileColor" content="#70ab88">
 
+    <meta name="theme-color" content="#3372DF">
+
     <?php wp_head(); ?>
   </head>
 
