@@ -11,13 +11,13 @@ get_header(); ?>
 
 <main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php doc_content_top(); ?>
-
 	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
 
         <?php abraham_loop_meta(); ?>
 
     <?php endif; // End check for multi-post page. ?>
+
+	<?php doc_content_top(); ?>
 
 	<div <?php hybrid_attr( 'archive_wrap' ); ?>>
 
