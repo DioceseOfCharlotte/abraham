@@ -30,7 +30,7 @@ function dept_to_people_connection() {
 		'from' => 'department',
 		'to' => 'people',
 		'admin_box' => array(
-		  'context' => 'advanced'
+		  'context' => 'side'
 		  ),
 		'from_labels' => array(
 		'create' => __( 'Add Department', 'hybrid-base' ),

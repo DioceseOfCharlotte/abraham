@@ -44,13 +44,6 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 				),
 			),
 
-			array(
-				'name'     => __( 'Contact Type', 'cmb2' ),
-				'id'       => $prefix . 'contact_type_select',
-				'type'     => 'taxonomy_select',
-				'taxonomy' => 'contact_type', // Taxonomy Slug
-			),
-
    //          	array(
 			// 		'name'    	=> __( 'Contact Type', 'cmb2' ),
 			// 		'id'      	=> $prefix . 'contact_type',
