@@ -2,16 +2,16 @@
 /**
  * Post Stylesheets - A WordPress script for post-specific stylesheets.
  *
- * Post Stylesheets allows users and developers to add unique, per-post stylesheets.  This script was
+ * Post Stylesheets allows users and developers to add unique, per-post stylesheets.  This script was 
  * created so that custom stylesheet files could be dropped into a theme folder or sub-folder and loaded
- * for individual posts using the 'Stylesheet' post meta key and the stylesheet name as the post meta
+ * for individual posts using the 'Stylesheet' post meta key and the stylesheet name as the post meta 
  * value.  Custom stylesheets must have the 'Style Name: Value' header.
  *
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
- * General Public License as published by the Free Software Foundation; either version 2 of the License,
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
+ * General Public License as published by the Free Software Foundation; either version 2 of the License, 
  * or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package   PostStylesheets
@@ -48,8 +48,8 @@ function post_stylesheets_register_meta() {
 }
 
 /**
- * Callback function for sanitizing meta when add_metadata() or update_metadata() is called by WordPress.
- * If a developer wants to set up a custom method for sanitizing the data, they should use the
+ * Callback function for sanitizing meta when add_metadata() or update_metadata() is called by WordPress. 
+ * If a developer wants to set up a custom method for sanitizing the data, they should use the 
  * "sanitize_{$meta_type}_meta_{$meta_key}" filter hook to do so.
  *
  * @since 0.3.0
@@ -99,9 +99,9 @@ function post_stylesheets_remove_post_type_support() {
 }
 
 /**
- * Checks if a post (or any post type) has the given meta key of 'Stylesheet' when on the singular view of
- * the post on the front of the site.  If found, the function checks within the '/css' folder of the stylesheet
- * directory (child theme) and the template directory (parent theme).  If the file exists, it is used rather
+ * Checks if a post (or any post type) has the given meta key of 'Stylesheet' when on the singular view of 
+ * the post on the front of the site.  If found, the function checks within the '/css' folder of the stylesheet 
+ * directory (child theme) and the template directory (parent theme).  If the file exists, it is used rather 
  * than the typical style.css file.
  *
  * @since 0.1.0
@@ -244,7 +244,7 @@ function post_stylesheets_admin_setup() {
 }
 
 /**
- * Hooks into the 'add_meta_boxes' hook to add the post stylesheets meta box and the 'save_post' hook
+ * Hooks into the 'add_meta_boxes' hook to add the post stylesheets meta box and the 'save_post' hook 
  * to save the metadata.
  *
  * @since 0.3.0
@@ -263,7 +263,7 @@ function post_stylesheets_load_meta_boxes() {
 }
 
 /**
- * Adds the post stylesheets meta box if the post type supports 'post-stylesheets' and the current user has
+ * Adds the post stylesheets meta box if the post type supports 'post-stylesheets' and the current user has 
  * permission to edit post meta.
  *
  * @since 0.2.0
@@ -359,7 +359,7 @@ function post_stylesheets_meta_box_save( $post_id, $post = '' ) {
 }
 
 /**
- * Gets the stylesheet files within the parent or child theme and checks if they have the 'Style Name'
+ * Gets the stylesheet files within the parent or child theme and checks if they have the 'Style Name' 
  * header. If any files are found, they are returned in an array.
  *
  * @since 0.4.0
@@ -388,11 +388,11 @@ function post_stylesheets_get_styles( $post_type = 'post' ) {
 
 		/* Get file data based on the 'Style Name' header. */
 		$headers = get_file_data(
-			$path,
-			array(
+			$path, 
+			array( 
 				'Style Name'         => 'Style Name',
 				"{$post_type} Style" => "{$post_type} Style"
-			)
+			) 
 		);
 
 		/* Add the CSS filename and template name to the array. */
@@ -420,3 +420,5 @@ function post_stylesheets_get_styles( $post_type = 'post' ) {
 function post_stylesheets_get_meta_key() {
 	return apply_filters( 'post_stylesheets_meta_key', 'Stylesheet' );
 }
+
+?>
