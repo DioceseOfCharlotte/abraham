@@ -346,9 +346,9 @@ function comment_content( $attr ) {
 
 
 //   public public function card( $attr ) {
-//     if ( is_post_type_archive('employee') ) {
+//     if ( is_post_type_archive('people') ) {
 //       $attr['id']        = 'post-' . get_the_ID();
-//       $attr['class']     = join( ' ', get_post_class($this->employee_card) );
+//       $attr['class']     = join( ' ', get_post_class($this->people_card) );
 //     }
 //     else {
 //       $attr['id']        = 'post-' . get_the_ID();

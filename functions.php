@@ -41,7 +41,7 @@ function abraham_setup() {
 	) );
 
 	/* Staff Directory. */
-	add_theme_support( 'diocese-employees' );
+	add_theme_support( 'diocese-people' );
 
 	/* Department Directory. */
 	add_theme_support( 'diocese-departments' );

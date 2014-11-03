@@ -9,22 +9,12 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico">
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/touch/chrome-touch-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
-    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri() ?>/images/touch/apple-touch-icon.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/touch/mstile-144x144.png">
-    <meta name="msapplication-TileColor" content="#70ab88">
-
-    <meta name="theme-color" content="#3372DF">
 
     <?php wp_head(); ?>
   </head>
@@ -32,9 +22,7 @@
 <body <?php hybrid_attr( 'body' ); ?>>
 
 		<!--[if lt IE 9]>
-		  <div class="alert alert-warning">
-			  <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and more pleasant experience.', 'abraham'); ?>
-			</div>
+			<div class="alert alert-warning"><?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and more pleasant experience.', 'abraham'); ?></div>
 		<![endif]-->
 
 <div class="site">

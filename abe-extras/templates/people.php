@@ -6,7 +6,7 @@
 <?php
 // Find connected pages
 $connected = new WP_Query( array(
-	'connected_type' => 'departments_to_employees',
+	'connected_type' => 'departments_to_people',
 	'connected_items' => $post,
 	'nopaging' => true,
 ) );

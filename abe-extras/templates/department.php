@@ -18,11 +18,11 @@
 
 <?php
 	/*
-	 * Query the connected employees
+	 * Query the connected people
 	 *
 	 */
 	$connected = new WP_Query( array(
-	  'connected_type' => 'departments_to_employees',
+	  'connected_type' => 'departments_to_people',
 	  'connected_items' => get_queried_object(),
 	  'nopaging' => true,
 	) );
