@@ -2820,6 +2820,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 	-webkit-tap-highlight-color: transparent; }
 
+.branding {
+	height: 100%; }
+
+.site-logo-link {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	        align-self: center; }
+
 .navdrawer__toggle:hover {
 	background-color: rgba(255, 255, 255, 0.1); }
 
@@ -2841,13 +2849,11 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 	.app-bar__container {
 		display: block;
-		max-width: 864px;
 		height: 130px;
 		padding: 0 16px;
 		background-color: #7fa9dd; }
 
 	.site-title {
-		float: left;
 		font-family: "Lato", "Helvetica", "Arial", sans-serif;
 		font-size: 45px;
 		font-size: 2.8125rem;

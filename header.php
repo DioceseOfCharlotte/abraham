@@ -42,9 +42,10 @@
 		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
 <?php doc_header_before(); ?>
 	<header <?php hybrid_attr( 'header' ); ?>>
-		<div class="app-bar__container">
+		<div class="app-bar__container wrapper">
 			<button class="navdrawer__toggle"><span class="toggle-btn"></span></button>
 			<div <?php hybrid_attr( 'branding' ); ?>>
+				<?php jetpack_the_site_logo(); ?>
 				<?php hybrid_site_title(); ?>
 				<?php hybrid_site_description(); ?>
 			</div>

@@ -26,7 +26,10 @@ function abraham_image_sizes() {
 	/* Sets the 'post-thumbnail' size. */
 	set_post_thumbnail_size( 150, 150, true );
 
-  /* Adds the 'medium-square' image size. */
+	/* Adds the 'medium-square' image size. */
+	add_image_size( 'logo', 100, 100, false );
+
+  	/* Adds the 'medium-square' image size. */
 	add_image_size( 'medium-square', 300, 300, true );
 }
 

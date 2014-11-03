@@ -26,7 +26,7 @@ class Doc_Attributes {
 	public $archive_wrap           	= 'layout';
 
 	/* Header attributes. */
-	public $branding              	= 'branding';	// na
+	public $branding              	= 'branding layout';	// na
 	public $site_title            	= 'logo  site-title';	// na
 	public $site_description      	= 'site-description';	// na
 
