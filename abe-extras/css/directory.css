@@ -1,3 +1,16 @@
+#cmb2-metabox-ppl_name {
+display: flex;
+flex-wrap: wrap;
+}
+
+#cmb2-metabox-ppl_name>div {
+flex: 1;
+}
+
+#cmb2-metabox-ppl_name label {
+display: block;
+}
+
 /*.postbox-container .cmb-repeat-group-field, .postbox-container .remove-field-row {
 padding: .8em 0 0;
 }

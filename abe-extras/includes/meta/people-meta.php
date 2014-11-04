@@ -17,22 +17,38 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 	$prefix = '_doc_';
 
 
-	$meta_boxes['emp_contact_info'] = array(
-		'id'            => 'emp_contact_info',
-		'title'         => __( 'Contact Information', 'cmb2' ),
+	$meta_boxes['ppl_name'] = array(
+		'id'            => 'ppl_name',
+		'title'         => __( 'Name', 'cmb2' ),
 		'object_types'  => array( 'people', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
-		'show_names'    => true, // Show field names on the left
+		'show_names'    => false, // Show field names on the left
 		// 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
 		'fields'        => array(
 
+				array(
+					'name' => __( 'Prefix', 'cmb2' ),
+					'id'   => $prefix . 'prefix',
+					'type' => 'text_medium',
+					'attributes'  => array(
+						'placeholder' => 'Prefix',
+				),
+			),
 				array(
 					'name' => __( 'First Name', 'cmb2' ),
 					'id'   => $prefix . 'emp_first_name',
 					'type' => 'text_medium',
 					'attributes'  => array(
 						'placeholder' => 'First',
+				),
+			),
+				array(
+					'name' => __( 'Middle', 'cmb2' ),
+					'id'   => $prefix . 'middle_name',
+					'type' => 'text_medium',
+					'attributes'  => array(
+						'placeholder' => 'optional',
 				),
 			),
 				array(
@@ -43,29 +59,29 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 						'placeholder' => 'Last',
 				),
 			),
+				array(
+					'name' => __( 'Suffix', 'cmb2' ),
+					'id'   => $prefix . 'suffix',
+					'type' => 'text_medium',
+					'attributes'  => array(
+						'placeholder' => 'Suffix',
+				),
+			),
 
-   //          	array(
-			// 		'name'    	=> __( 'Contact Type', 'cmb2' ),
-			// 		'id'      	=> $prefix . 'contact_type',
-			// 		'type'   	=> 'select',
-			// 		'options' 	=> array(
-			// 				'bishop'			=> __( 'Bishop', 'cmb2' ),
-			// 				'priest'   			=> __( 'Priest', 'cmb2' ),
-			// 				'deacon'  			=> __( 'Deacon', 'cmb2' ),
-			// 				'sister' 			=> __( 'Sister', 'cmb2' ),
-			// 				'laity'   			=> __( 'Laity', 'cmb2' ),
-			// 				'permanent-deacon'	=> __( 'Permanent Deacon', 'cmb2' ),
-			// 				'brother' 			=> __( 'Brother', 'cmb2' ),
-			// 				'seminarian'   		=> __( 'Seminarian', 'cmb2' ),
-			// 				'order-priest'     	=> __( 'Order Priest', 'cmb2' ),
-			// 				'advocate'     		=> __( 'Advocate', 'cmb2' ),
-			// 				'other'     		=> __( 'Other', 'cmb2' ),
-			// 	),
-			// ),
+		),
+	);
 
 
 
-
+	$meta_boxes['emp_contact_info'] = array(
+		'id'            => 'emp_contact_info',
+		'title'         => __( 'Contact Information', 'cmb2' ),
+		'object_types'  => array( 'people', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => false, // Show field names on the left
+		// 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
+		'fields'        => array(
 
 			array(
 				//'name' => __( 'Phone', 'cmb2' ),
@@ -100,6 +116,8 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 			),
 				),
 				),
+
+
 			array(
 				'name' => __( 'Email', 'cmb2' ),
 				'id'   => $prefix . 'emp_email',
@@ -156,6 +174,27 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 
 		),
 	);
+
+
+	$meta_boxes['ppl_orders'] = array(
+		'id'            => 'ppl_orders',
+		'title'         => __( 'Orders', 'cmb2' ),
+		'object_types'  => array( 'people', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => false, // Show field names on the left
+		// 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
+		'fields'        => array(
+			array(
+				'name' => __( 'Date of Ordination', 'cmb2' ),
+				'id'   => $prefix . 'date_of_ordination',
+				'type' => 'text_date',
+			),
+		),
+	);
+
+
+
 
 	return $meta_boxes;
 }
