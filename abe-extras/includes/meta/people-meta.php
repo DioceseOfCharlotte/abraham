@@ -13,7 +13,6 @@ add_filter( 'cmb2_meta_boxes', 'cmb2_staff_metaboxes' );
  */
 function cmb2_staff_metaboxes( array $meta_boxes ) {
 
-	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_doc_';
 
 
@@ -79,7 +78,7 @@ function cmb2_staff_metaboxes( array $meta_boxes ) {
 		'object_types'  => array( 'people', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
-		'show_names'    => false, // Show field names on the left
+		'show_names'    => true, // Show field names on the left
 		// 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
 		'fields'        => array(
 

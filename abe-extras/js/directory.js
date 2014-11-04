@@ -40,6 +40,26 @@
 			$('.cmb2-id--doc-prefix').show(),
 			$('.cmb2-id--doc-suffix').show(),
 			$('#ppl_orders').show();
+		if ($('#in-contact_type-10').is(':checked')) //brother
+			$('#address_group_repeat').show(),
+			$('.cmb2-id--doc-prefix').show(),
+			$('.cmb2-id--doc-suffix').show(),
+			$('#ppl_orders').show();
+		if ($('#in-contact_type-11').is(':checked')) //Order Priest
+			$('#address_group_repeat').show(),
+			$('.cmb2-id--doc-prefix').show(),
+			$('.cmb2-id--doc-suffix').show(),
+			$('#ppl_orders').show();
+		if ($('#in-contact_type-11').is(':checked')) //Seminarian
+			$('#address_group_repeat').show(),
+			$('.cmb2-id--doc-prefix').show(),
+			$('.cmb2-id--doc-suffix').show(),
+			$('#ppl_orders').show();
+		if ($('#in-contact_type-11').is(':checked')) //Sister
+			$('#address_group_repeat').show(),
+			$('.cmb2-id--doc-prefix').show(),
+			$('.cmb2-id--doc-suffix').show(),
+			$('#ppl_orders').show();
 
 
         });

@@ -196,3 +196,8 @@ padding-top: 0;
 .postbox-container .cmb-repeat-row .cmb-td {
 padding-bottom: 12px;
 }
+
+
+.postbox-container .cmb-row {
+	border: none;
+}

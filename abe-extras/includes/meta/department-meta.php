@@ -13,7 +13,6 @@ add_filter( 'cmb2_meta_boxes', 'cmb2_department_metaboxes' );
  */
 function cmb2_department_metaboxes( array $meta_boxes ) {
 
-    // Start with an underscore to hide fields from custom fields list
     $prefix = '_doc_';
 
 
@@ -33,8 +32,8 @@ function cmb2_department_metaboxes( array $meta_boxes ) {
 				'type'    => 'radio_inline',
 				'options' => array(
 					'pastoral-center' => __( 'Pastoral Center', 'cmb2' ),
-					'parish'   => __( 'Parish', 'cmb2' ),
-					'school'     => __( 'School', 'cmb2' ),
+					'parishes'   => __( 'Parishes', 'cmb2' ),
+					'schools'     => __( 'Schools', 'cmb2' ),
 				),
 			),
 
