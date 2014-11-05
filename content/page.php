@@ -36,5 +36,4 @@
     		</div><!-- .entry-summary -->
 
   	<?php endif; // End single page check. ?>
-
 </article><!-- .entry -->

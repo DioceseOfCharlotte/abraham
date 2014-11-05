@@ -50,5 +50,4 @@
 		<?php endif; // End excerpt/audio checks. ?>
 
 	<?php endif; // End single post check. ?>
-
 </article><!-- .entry -->

@@ -26,3 +26,17 @@ function load_doc_admin_style() {
 
         wp_enqueue_script( 'doc_admin_js', trailingslashit( DOC_JS ) . 'directory.js' );
 }
+
+// add_action( 'cmb2_before_post_form_cmb2-metabox-ppl_name', 'doc_admin_box' );
+
+// function doc_admin_box() {
+
+// 	echo '<div class="flex-grid">';
+// }
+
+// add_action( 'cmb2_after_post_form_cmb2-metabox-ppl_name', 'doc_admin_box_after' );
+
+// function doc_admin_box_after() {
+
+// 	echo '</div>';
+// }

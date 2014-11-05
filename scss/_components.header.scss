@@ -66,6 +66,14 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.branding {
+	height: 100%;
+}
+
+.site-logo-link {
+align-self: center;
+}
+
 .navdrawer__toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -92,14 +100,13 @@
   .app-bar__container {
     display: block;
     height: 130px;
-    max-width: 864px;
     padding: 0 16px;
     background-color: $color-brand;
   }
 
   .site-title {
   	@include typo-display-2;
-    float: left;
+    //float: left;
     //margin: 0;
     //padding: 0;
     line-height: 130px;

@@ -17,7 +17,9 @@ get_header(); ?>
 
     <?php endif; // End check for multi-post page. ?>
 
-	<div class="layout">
+	<?php doc_content_top(); ?>
+
+	<div <?php hybrid_attr( 'archive_wrap' ); ?>>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -35,6 +37,8 @@ get_header(); ?>
 
 		<?php endif; // End check for posts. ?>
 	</div>
+
+	<?php doc_content_bottom(); ?>
 
 </main><!-- #main -->
 

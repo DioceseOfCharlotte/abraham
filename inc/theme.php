@@ -26,7 +26,10 @@ function abraham_image_sizes() {
 	/* Sets the 'post-thumbnail' size. */
 	set_post_thumbnail_size( 150, 150, true );
 
-  /* Adds the 'medium-square' image size. */
+	/* Adds the 'medium-square' image size. */
+	add_image_size( 'logo', 100, 100, false );
+
+  	/* Adds the 'medium-square' image size. */
 	add_image_size( 'medium-square', 300, 300, true );
 }
 
@@ -68,7 +71,7 @@ function abraham_widgets_init() {
     	'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
 		'id'            => 'footer',
 		'description'   => '',
-    	'before_widget' => '<aside id="%1$s" class="layout__item widget %2$s">',
+    	'before_widget' => '<aside id="%1$s" class="layout__item widget__footer widget %2$s">',
     	'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -154,4 +157,23 @@ function doc_drop(){
     	drop.init();
    </script>
 <?php
+}
+
+/**
+ * Hooks
+ */
+function doc_header_before() {
+	do_action( 'doc_header_before' );
+}
+
+function doc_header_after() {
+	do_action( 'doc_header_after' );
+}
+
+function doc_content_top() {
+	do_action( 'doc_content_top' );
+}
+
+function doc_content_bottom() {
+	do_action( 'doc_content_bottom' );
 }

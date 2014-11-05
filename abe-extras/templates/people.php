@@ -6,7 +6,7 @@
 <?php
 // Find connected pages
 $connected = new WP_Query( array(
-	'connected_type' => 'departments_to_employees',
+	'connected_type' => 'departments_to_people',
 	'connected_items' => $post,
 	'nopaging' => true,
 ) );
@@ -87,7 +87,7 @@ if ( $connected->have_posts() ) :
 <?php //if ( is_user_logged_in() ) : ?>
 	    <div class="dropdown-basic staff-meta Typography--textRight all-1" data-dropdown>
 
-	    		<a class="hint--left hint--info info-btn info-btn__center strong" data-hint="contact information" href="#">i</a>
+	    		<a class="info-btn info-btn__center strong" title="contact info" href="#">i</a>
 
         <div class="dropdown-menu-basic Typography--textLeft all-1" data-dropdown-menu>
             <ul>

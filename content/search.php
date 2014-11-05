@@ -15,5 +15,4 @@
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
-
 </article><!-- .entry -->

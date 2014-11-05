@@ -36,18 +36,18 @@ final class DOC_Directory_Post_Meta_Boxes {
 	 */
 	public static function add_meta_boxes() {
 
-		add_meta_box( 
-			'directory-item-details', 
-			__( 'Menu Item Details', 'directory' ), 
-			array( __CLASS__, 'details_meta_box' ), 
-			'directory_item', 
-			'side', 
-			'core' 
+		add_meta_box(
+			'directory-item-details',
+			__( 'Menu Item Details', 'directory' ),
+			array( __CLASS__, 'details_meta_box' ),
+			'directory_item',
+			'side',
+			'core'
 		);
 	}
 
 	/**
-	 * Displays the "menu item details" meta box.  Currently, this only holds a single text field for 
+	 * Displays the "menu item details" meta box.  Currently, this only holds a single text field for
 	 * entering the menu item price.
 	 *
 	 * @since  1.0.0

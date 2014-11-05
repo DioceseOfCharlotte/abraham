@@ -23,9 +23,10 @@ class Doc_Attributes {
 	public $sidebar_2_2cl    		= '  layout__item  md-7-24';	// sidebar
 	public $sidebar_2_2cr    		= '  layout__item  md-3-8';	// sidebar
 	public $menu                  	= '  navdrawer';	// menu
+	public $archive_wrap           	= 'layout';
 
 	/* Header attributes. */
-	public $branding              	= 'branding';	// na
+	public $branding              	= 'branding layout';	// na
 	public $site_title            	= 'logo  site-title';	// na
 	public $site_description      	= 'site-description';	// na
 
@@ -63,6 +64,7 @@ add_filter( 'hybrid_attr_sidebar',           array( $this, 'sidebar' ) );
 add_filter( 'hybrid_attr_sidebar_1',         array( $this, 'sidebar_1' ) );
 add_filter( 'hybrid_attr_sidebar_2',         array( $this, 'sidebar_2' ) );
 add_filter( 'hybrid_attr_menu',              array( $this, 'menu' ) );
+add_filter( 'hybrid_attr_archive_wrap',      array( $this, 'archive_wrap' ) );
 
 /* Header attributes. */
 add_filter( 'hybrid_attr_branding',          array( $this, 'branding' ) );
@@ -190,6 +192,13 @@ public function menu( $attr ) {
 	return $attr;
 }
 
+
+public function archive_wrap( $attr ) {
+
+	$attr['class']   = $this->archive_wrap;
+
+	return $attr;
+}
 
 /* === HEADER === */
 
@@ -337,9 +346,9 @@ function comment_content( $attr ) {
 
 
 //   public public function card( $attr ) {
-//     if ( is_post_type_archive('employee') ) {
+//     if ( is_post_type_archive('people') ) {
 //       $attr['id']        = 'post-' . get_the_ID();
-//       $attr['class']     = join( ' ', get_post_class($this->employee_card) );
+//       $attr['class']     = join( ' ', get_post_class($this->people_card) );
 //     }
 //     else {
 //       $attr['id']        = 'post-' . get_the_ID();

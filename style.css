@@ -570,62 +570,6 @@ textarea {
 	clear: both; }
 
 /*------------------------------------*\
-    #SHARED
-\*------------------------------------*/
-/**
- * Where `margin-bottom` is concerned,this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
- */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre {
-	margin-bottom: 20px; }
-
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once,here.
- */
-ul, ol, dd {
-	margin-left: 20px;
-	list-style: none; }
-
-/**
- * Drop v6.0.0
- * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
- * http://github.com/cferdinandi/drop
- *
- * Free to use under the MIT License.
- * http://gomakethings.com/mit/
- */
-/*  Styling for the dropdown content.
- *  Hides the content by default. */
-.dropdown-menu-basic {
-	overflow: hidden;
-	min-width: 10em;
-	max-height: 0;
-	border-radius: 2px;
-	background-color: #fbfcfc;
-	-webkit-transition: max-height 0.5s ease-in-out;
-	        transition: max-height 0.5s ease-in-out; }
-
-/*  Remove list-style and margin-left
- *  from dropdown menu lists */
-.dropdown-menu-basic ul, .dropdown-menu-basic ol {
-	margin: 0;
-	padding: 0.5em; 
-	list-style: none;}
-
-/*  When a dropdown is active, display it. */
-.dropdown-menu-basic.active {
-	display: block;
-	max-height: 600px; }
-
-/*  If dropdown link is near the right edge of the screen,
- *  shift the dropdown menu position to avoid content clipping. */
-.dropdown-menu-basic.dropdown-right {
-	right: 0;
-	left: auto; }
-
-/*------------------------------------*\
     #WIDTHS-RESPONSIVE
 \*------------------------------------*/
 /**
@@ -636,12 +580,12 @@ ul, ol, dd {
  * 5. Account for browser defaults of elements that might be the root node of
  *    the component.
  */
-.layout__item {
+.layout__item, .site .facetwp-radio {
 	display: inline-block;
 
 	*display: inline; }
 
-.layout {
+.layout, .facetwp-facet-dept_type.facetwp-type-radio {
 	display: block;
 	/* [5] */
 	display: -webkit-box;
@@ -669,7 +613,7 @@ ul, ol, dd {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 
-.layout__item {
+.layout__item, .site .facetwp-radio {
 	zoom: 1;
 	/* 4 */
 	width: 100%;
@@ -1486,7 +1430,7 @@ ul, ol, dd {
 .right {
 	float: right; }
 
-.flex-fit {
+.flex-fit, .site .facetwp-radio {
 	margin: 0;
 	padding: 0;
 
@@ -1960,10 +1904,10 @@ h1 a, h2 a, h3 a {
     #LINKS
 \*------------------------------------*/
 a {
-	color: #176c92; 
+	color: #578ed2; 
 	text-decoration: none;}
 a:hover, a:active {
-	color: #104b66; }
+	color: #3473c2; }
 
 a[href*="tel:"]::before {
 	display: inline-block;
@@ -1988,6 +1932,25 @@ a[href*="mailto:"]::before {
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre {
+	margin-bottom: 20px; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+ul, ol, dd {
+	margin-left: 20px;
+	list-style: none; }
 
 /*------------------------------------*\
     #MAIN-LAYOUT
@@ -2519,9 +2482,9 @@ img.thumbnail.dept-thumb {
 	height: 100px; }
 
 .btn.card__department {
-	background-color: #4f9c70; }
+	background-color: #70ab88; }
 .btn.card__department:hover {
-	background-color: #6ab48a; }
+	background-color: #90bea3; }
 
 .contact-info__list a {
 	color: #4e5758; }
@@ -2534,13 +2497,13 @@ img.thumbnail.dept-thumb {
  */
 .btn, button, input[type="button"], input[type="reset"], input[type="submit"] {
 	color: #fff; 
-	background-color: #1e8cbe;}
+	background-color: #7fa9dd;}
 .btn a, button a, input[type="button"] a, input[type="reset"] a, input[type="submit"] a {
 	color: #fff; }
 .btn a:hover, .btn a:active, .btn a:focus, button a:hover, button a:active, button a:focus, input[type="button"] a:hover, input[type="button"] a:active, input[type="button"] a:focus, input[type="reset"] a:hover, input[type="reset"] a:active, input[type="reset"] a:focus, input[type="submit"] a:hover, input[type="submit"] a:active, input[type="submit"] a:focus {
 	color: #fff; }
 .btn:hover, .btn:active, .btn:focus, button:hover, button:active, button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-	background-color: #219cd4; }
+	background-color: #93b7e2; }
 
 a.btn {
 	color: #fff; }
@@ -2784,7 +2747,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #1e8cbe;
+	background-color: #7fa9dd;
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	        transition:         transform 0.3s ease-out; }
 
@@ -2857,6 +2820,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 	-webkit-tap-highlight-color: transparent; }
 
+.branding {
+	height: 100%; }
+
+.site-logo-link {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	        align-self: center; }
+
 .navdrawer__toggle:hover {
 	background-color: rgba(255, 255, 255, 0.1); }
 
@@ -2878,13 +2849,11 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 	.app-bar__container {
 		display: block;
-		max-width: 864px;
 		height: 130px;
 		padding: 0 16px;
-		background-color: #1e8cbe; }
+		background-color: #7fa9dd; }
 
 	.site-title {
-		float: left;
 		font-family: "Lato", "Helvetica", "Arial", sans-serif;
 		font-size: 45px;
 		font-size: 2.8125rem;
@@ -2913,11 +2882,17 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	color: #fbfcfc; 
 	background-color: #4e5758;}
 .footer-layout a {
-	color: #1e8cbe; }
+	color: #7fa9dd; }
 .footer-layout a:hover {
-	color: #31a8de; }
+	color: #a7c4e8; }
 .footer-layout .sidebar {
 	margin: 0 auto; }
+
+.widget__footer {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; }
 
 /*------------------------------------*\
     #SIDE NAV
@@ -2965,7 +2940,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	width: 250px;
 	height: 100%;
 	color: #fefefe;
-	background-color: #176c92;
+	background-color: #578ed2;
 	-webkit-transform: translate(-250px, 0);
 	    -ms-transform: translate(-250px, 0);
 	        transform: translate(-250px, 0);}
@@ -3107,7 +3082,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	height: 26px;
 	border-radius: 50%;
 	color: #fff;
-	background: #6ab48a;
+	background: #90bea3;
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
 	font-weight: bold;
 	line-height: 1.8;
@@ -3121,7 +3096,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 	width: 0;
 	height: 0;
 	border-top: 8px solid transparent;
-	border-right: 10px solid #6ab48a;
+	border-right: 10px solid #90bea3;
 	border-bottom: 2px solid transparent;
 	content: ""; }
 
@@ -3293,3 +3268,72 @@ textarea#mb_post_content {
 
 .eleven-twelfths {
 	width: 91.6666666% !important; }
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * Drop v6.0.0
+ * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/drop
+ *
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+/*  Styling for the dropdown content.
+ *  Hides the content by default. */
+.dropdown-menu-basic {
+	overflow: hidden;
+	min-width: 10em;
+	max-height: 0;
+	border-radius: 2px;
+	background-color: #fbfcfc;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	        transition: max-height 0.5s ease-in-out; }
+
+/*  Remove list-style and margin-left
+ *  from dropdown menu lists */
+.dropdown-menu-basic ul, .dropdown-menu-basic ol {
+	margin: 0;
+	padding: 0.5em; 
+	list-style: none;}
+
+/*  When a dropdown is active, display it. */
+.dropdown-menu-basic.active {
+	display: block;
+	max-height: 600px; }
+
+/*  If dropdown link is near the right edge of the screen,
+ *  shift the dropdown menu position to avoid content clipping. */
+.dropdown-menu-basic.dropdown-right {
+	right: 0;
+	left: auto; }
+
+.facetwp-facet-dept_type.facetwp-type-radio {
+	margin: 0;
+	margin-bottom: 20px;
+	border-radius: 2px; 
+	background-color: #90bea3;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);}
+
+.site .facetwp-radio {
+	display: block;
+	position: relative;
+	width: 25%;
+	padding: 10px 15px;
+	background: none;
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	font-weight: bold; 
+	line-height: 1.4285714286;
+	text-align: center;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;}
+.site .facetwp-radio.selected {
+	border-bottom: 3px solid #f9e653; 
+	background: none;}
+
+span.counts {
+	display: none; }

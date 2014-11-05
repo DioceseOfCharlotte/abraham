@@ -30,5 +30,4 @@
 		</div><!-- .entry-summary -->
 
 	<?php endif; // End single attachment check. ?>
-
 </article><!-- .entry -->

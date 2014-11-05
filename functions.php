@@ -34,8 +34,14 @@ if ( ! function_exists( 'abraham_setup' ) ) :
  */
 function abraham_setup() {
 
-		/* Staff Directory. */
-	add_theme_support( 'diocese-employees' );
+	/* Site Logo. */
+	add_theme_support(
+		'site-logo', array(
+		'size' => 'logo',
+	) );
+
+	/* Staff Directory. */
+	add_theme_support( 'diocese-people' );
 
 	/* Department Directory. */
 	add_theme_support( 'diocese-departments' );

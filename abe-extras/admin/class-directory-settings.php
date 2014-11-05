@@ -60,7 +60,7 @@ final class DOC_Directory_Settings {
 	 */
 	public function admin_menu() {
 
-		$this->settings_page = add_submenu_page( 
+		$this->settings_page = add_submenu_page(
 			'edit.php?post_type=directory_item',
 			__( 'Directory Settings', 'directory' ),
 			__( 'Settings',            'directory' ),
@@ -96,9 +96,9 @@ final class DOC_Directory_Settings {
 
 		register_setting( 'directory_settings', 'directory_settings', array( $this, 'validate_settings' ) );
 
-		add_settings_section( 
-			'doc_section_menu', 
-			__( 'Menu Settings', 'directory' ), 
+		add_settings_section(
+			'doc_section_menu',
+			__( 'Menu Settings', 'directory' ),
 			array( $this, 'section_menu' ),
 			$this->settings_page
 		);

@@ -31,5 +31,4 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 	<?php abraham_comments_error(); ?>
 
 	<?php comment_form(); ?>
-
 </section><!-- #comments-template -->

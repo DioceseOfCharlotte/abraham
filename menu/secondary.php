@@ -15,5 +15,4 @@
 				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
 			)
 		); ?>
-
 	</nav><!-- #menu-secondary -->
