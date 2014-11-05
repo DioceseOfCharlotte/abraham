@@ -31,8 +31,11 @@
   main.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', function (event) {
-    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      closeMenu();
-    }
   });
 })();
+
+    	document.querySelector('.menu-item-has-children').classList.add('dropdown-basic');
+    	document.querySelector('.menu-item-has-children').dataset.dropdown = "";
+
+    	document.querySelector('.sub-menu').classList.add('dropdown-menu-basic');
+    	document.querySelector('.sub-menu').dataset.dropdown = "";

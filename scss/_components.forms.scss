@@ -66,7 +66,7 @@ select:focus,
 textarea:focus {
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    border-color: #129FEA;
+    border-color: $color-links-hover;
 }
 
 /*
@@ -76,14 +76,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 input:not([type]):focus {
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    border-color: #129FEA;
+    border-color: $color-links-hover;
 }
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
     outline: thin dotted #333;
-    outline: 1px auto #129FEA;
+    outline: 1px auto $color-links-hover;
 }
 .form-checkbox,
 .form-radio {

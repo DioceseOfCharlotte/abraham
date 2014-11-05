@@ -154,7 +154,7 @@ function meh_attr_sidebar_2( $attr ) {
 function doc_drop(){
 ?>
     <script type='text/javascript'>
-    	drop.init();
+    drop.init();
    </script>
 <?php
 }

@@ -2539,7 +2539,7 @@ input[type="color"] {
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, select:focus, textarea:focus {
 	/* IE6-9 */
-	border-color: #129fea; 
+	border-color: #3473c2; 
 	outline: 0;
 	outline: thin dotted \9;}
 
@@ -2549,13 +2549,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 input:not([type]):focus {
 	/* IE6-9 */
-	border-color: #129fea; 
+	border-color: #3473c2; 
 	outline: 0;
 	outline: thin dotted \9;}
 
 input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
 	outline: thin dotted #333;
-	outline: 1px auto #129fea; }
+	outline: 1px auto #3473c2; }
 
 .form-checkbox, .form-radio {
 	display: block; 
@@ -3270,6 +3270,50 @@ textarea#mb_post_content {
 	width: 91.6666666% !important; }
 
 /*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+body .select2-results .select2-highlighted {
+	color: #fff; 
+	background: #7fa9dd;}
+
+body .select2-container .select2-choice {
+	border-radius: 2px; }
+
+body .select2-container-multi .select2-choices {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	background-image: none; }
+
+body .select2-drop {
+	border-radius: 0 0 2px 2px; }
+
+body .select2-container.select2-drop-above .select2-choice {
+	border-radius: 0 0 2px 2px; }
+
+body .select2-drop.select2-drop-above {
+	border-radius: 2px 2px 0 0;
+	box-shadow: none; }
+
+body .select2-drop-active {
+	border: 1px solid #3473c2;
+	border-top: none; }
+
+body .select2-drop.select2-drop-above.select2-drop-active {
+	border-top: 1px solid #3473c2; }
+
+body .select2-container-active .select2-choice, body .select2-container-active .select2-choices, body .select2-container-multi.select2-container-active .select2-choices {
+	border: 1px solid #3473c2;
+	outline: none;
+	box-shadow: none; }
+
+body .select2-dropdown-open .select2-choice {
+	border-bottom-color: transparent;
+	box-shadow: none; }
+
+body .select2-container-multi .select2-choices .select2-search-choice {
+	box-shadow: none; }
+
+/*------------------------------------*\
     #SHARED
 \*------------------------------------*/
 /**
@@ -3284,23 +3328,26 @@ textarea#mb_post_content {
  *  Hides the content by default. */
 .dropdown-menu-basic {
 	overflow: hidden;
-	min-width: 10em;
 	max-height: 0;
-	border-radius: 2px;
-	background-color: #fbfcfc;
+	margin: 0;
 	-webkit-transition: max-height 0.5s ease-in-out;
 	        transition: max-height 0.5s ease-in-out; }
+
+.sub-menu li {
+	float: left; }
 
 /*  Remove list-style and margin-left
  *  from dropdown menu lists */
 .dropdown-menu-basic ul, .dropdown-menu-basic ol {
 	margin: 0;
-	padding: 0.5em; 
-	list-style: none;}
+	list-style: none; }
 
 /*  When a dropdown is active, display it. */
 .dropdown-menu-basic.active {
-	display: block;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
 	max-height: 600px; }
 
 /*  If dropdown link is near the right edge of the screen,
@@ -3308,6 +3355,17 @@ textarea#mb_post_content {
 .dropdown-menu-basic.dropdown-right {
 	right: 0;
 	left: auto; }
+
+.js-drop .dropdown-basic > a:after {
+	display: inline-block;
+	padding-left: 10px;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	content: "\f055";
+
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
 
 .facetwp-facet-dept_type.facetwp-type-radio {
 	margin: 0;

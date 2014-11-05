@@ -22,10 +22,15 @@
 .dropdown-menu-basic {
   max-height: 0;
   overflow: hidden;
-  min-width: 10em;
-  background-color: $color-box-highlight-background;
-  border-radius: $base-radius;
+  //min-width: 10em;
+  margin: 0;
+  //background-color: $color-box-highlight-background;
+  //border-radius: $base-radius;
   transition: max-height 0.5s ease-in-out;
+}
+
+.sub-menu li {
+	float: left;
 }
 
 /*  Remove list-style and margin-left
@@ -34,12 +39,12 @@
 .dropdown-menu-basic ol {
   margin: 0;
   list-style: none;
-  padding: 0.5em;
+  //padding: 0.5em;
 }
 
 /*  When a dropdown is active, display it. */
 .dropdown-menu-basic.active {
-  display: block;
+  display: flex;
   max-height: 600px;
   //visibility: visible;
 
@@ -51,6 +56,23 @@
   right: 0;
   left: auto;
 }
+
+
+.js-drop .dropdown-basic > a:after {
+content: "\f055";
+padding-left: 10px;
+display: inline-block;
+font: normal normal normal 14px/1 FontAwesome;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
 
 
 .facetwp-facet-dept_type.facetwp-type-radio {
