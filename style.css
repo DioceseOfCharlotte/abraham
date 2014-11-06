@@ -585,7 +585,7 @@ textarea {
 
 	*display: inline; }
 
-.layout, .facetwp-facet-dept_type.facetwp-type-radio {
+.layout, .facetwp-facet-dept_type.facetwp-type-radio, .entry-meta {
 	display: block;
 	/* [5] */
 	display: -webkit-box;
@@ -2970,9 +2970,6 @@ textarea#mb_post_content {
 /*------------------------------------*\
     #ICONIC
 \*------------------------------------*/
-.entry-meta .iconic {
-	margin: 0 3px 0 10px; }
-
 .iconic-property-fill {
 	fill: #90bea2; }
 
@@ -3277,3 +3274,12 @@ body .select2-container-multi .select2-choices .select2-search-choice {
 
 span.counts {
 	display: none; }
+
+.entry-meta {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	        justify-content: center; }
+
+.entry-meta span, .entry-meta time {
+	margin-right: 1rem; }

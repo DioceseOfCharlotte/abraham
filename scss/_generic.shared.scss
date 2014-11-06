@@ -107,3 +107,12 @@ padding: 10px 15px;
 span.counts {
 	display: none;
 }
+
+.entry-meta {
+@extend .layout;
+justify-content: center;
+}
+
+.entry-meta span, .entry-meta time {
+margin-right: 1rem;
+}

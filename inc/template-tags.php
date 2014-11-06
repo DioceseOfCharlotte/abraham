@@ -69,9 +69,11 @@ if ( ! function_exists( 'abraham_posted_on' ) ) :
 function abraham_posted_on() { ?>
 				<span <?php hybrid_attr( 'entry-author' ); ?>><?php abe_icon('inkwell', 'sm') ?><?php the_author_posts_link(); ?></span>
 				<time <?php hybrid_attr( 'entry-published' ); ?>><?php abe_icon('calendar', 'sm') ?><?php echo get_the_date(); ?></time>
+				<span class="comment-count">
 				<?php abe_icon('chat', 'sm') ?><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' );
-				 edit_post_link();
-}
+				 edit_post_link(); ?>
+				 </span>
+<?php }
 endif;
 
 if ( ! function_exists( 'abraham_entry_footer' ) ) :
