@@ -97,6 +97,10 @@ function abraham_scripts() {
 
   wp_enqueue_script( 'meh-dropjs' );
 
+  wp_register_script( 'meh-iconicjs', trailingslashit( get_template_directory_uri() ) . "js/iconic{$suffix}.js", array(), null, true );
+
+  wp_enqueue_script( 'meh-iconicjs' );
+
   /* Register Google-fonts. */
   wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Lato:300,400,700,900' );
 
@@ -176,4 +180,21 @@ function doc_content_top() {
 
 function doc_content_bottom() {
 	do_action( 'doc_content_bottom' );
+}
+
+
+
+/**
+ * Filter the hybrid_post_format_link to remove the text
+ */
+
+function doc_post_format_link() {
+	echo doc_get_post_format_link();
+}
+
+
+function doc_get_post_format_link() {
+	$format = get_post_format();
+	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
+	return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ), get_post_format_string( $format ) );
 }

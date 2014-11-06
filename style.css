@@ -2965,6 +2965,70 @@ textarea#mb_post_content {
 	margin-top: 20px; }
 
 /*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
+/*------------------------------------*\
+    #ICONIC
+\*------------------------------------*/
+.entry-meta .iconic {
+	margin: 0 3px 0 10px; }
+
+.iconic-property-fill {
+	fill: #90bea2; }
+
+.iconic-property-accent {
+	fill: #7fa9dd; }
+
+/* Links */
+/* Posts */
+.entry-author a::before, .entry-published::before, .comments-link::before, .post-edit-link::before, .entry-permalink::before, .post-format-link::before, .entry-terms::before, .image-sizes::before, .chat-author cite::before, .entry-views::before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+.format-standard .post-format-link::before {
+	content: "\f036"; }
+
+.format-aside .post-format-link::before {
+	content: "\f069"; }
+
+.format-audio .post-format-link::before {
+	content: "\f028"; }
+
+.format-chat .post-format-link::before {
+	content: "\f086"; }
+
+.format-gallery .post-format-link::before {
+	content: "\f030"; }
+
+.image-sizes::before, .format-image .post-format-link::before {
+	content: "\f03e"; }
+
+.format-link .post-format-link::before {
+	content: "\f08e"; }
+
+.format-quote .post-format-link::before {
+	content: "\f10d"; }
+
+.format-status .post-format-link::before {
+	content: "\f1da"; }
+
+.format-video .post-format-link::before {
+	content: "\f16a"; }
+
+a.post-format-link {
+	float: left;
+	margin-right: 10px;
+	color: #bdc3c7; 
+	font-size: 30px;}
+a.post-format-link:hover {
+	color: #a1aab0; }
+
+/*------------------------------------*\
     #WIDTHS
 \*------------------------------------*/
 /**
@@ -3198,7 +3262,7 @@ body .select2-container-multi .select2-choices .select2-search-choice {
 	width: 25%;
 	padding: 10px 15px;
 	background: none;
-	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	font-family: "\f031";
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 400;

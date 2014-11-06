@@ -7,6 +7,16 @@
  * @package Abraham
  */
 
+
+if ( ! function_exists( 'doc_icon' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ */
+function abe_icon($icon, $size) {
+	echo '<img data-src="' . get_stylesheet_directory_uri() . '/images/svg/smart/' . $icon . '.svg"class="iconic iconic-' . $size . '">';
+}
+endif;
+
 if ( ! function_exists( 'abraham_loop_meta' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
@@ -57,9 +67,9 @@ if ( ! function_exists( 'abraham_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function abraham_posted_on() { ?>
-				<span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
-				<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
-				<?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' );
+				<span <?php hybrid_attr( 'entry-author' ); ?>><?php abe_icon('inkwell', 'sm') ?><?php the_author_posts_link(); ?></span>
+				<time <?php hybrid_attr( 'entry-published' ); ?>><?php abe_icon('calendar', 'sm') ?><?php echo get_the_date(); ?></time>
+				<?php abe_icon('chat', 'sm') ?><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' );
 				 edit_post_link();
 }
 endif;

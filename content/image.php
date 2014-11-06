@@ -1,6 +1,6 @@
 <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php get_the_image( array( 'size' => 'full', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
+<?php doc_post_format_link(); ?>
 
 	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
@@ -13,6 +13,8 @@
 			</div><!-- .entry-meta -->
 
 		</header><!-- .entry-header -->
+
+	<?php get_the_image( array( 'size' => 'full', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
@@ -34,6 +36,8 @@
 			</div><!-- .entry-meta -->
 
 		</header><!-- .entry-header -->
+
+	<?php get_the_image( array( 'size' => 'full', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
 
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_excerpt(); ?>
