@@ -53,17 +53,18 @@ body.open {
 }
 
 .content, .sidebar {
-	  @include media-query(portable) {
-	margin-left: $base-spacing-unit-sm;
-}
-  @include media-query(md) {
-  		margin-left: $base-spacing-unit;
-  		margin-bottom: $base-spacing-unit;
-  }
+	margin: 0;
+// 	  @include media-query(portable) {
+// 	margin-left: $base-spacing-unit-sm;
+// }
+//   @include media-query(md) {
+//   		margin-left: $base-spacing-unit;
+//   		margin-bottom: $base-spacing-unit;
+//   }
 }
 
 .widget {
-margin-left: -($base-spacing-unit / 2);
+margin-left: 0;
 }
 
 // .content {

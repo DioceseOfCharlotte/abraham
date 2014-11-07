@@ -1830,16 +1830,11 @@ body.open {
 	    -ms-flex: 1;
 	        flex: 1; }
 
-@media screen and (max-width: 48rem) {
-	.content, .sidebar {
-		margin-left: 10px; } }
-@media screen and (min-width: 48rem) {
-	.content, .sidebar {
-		margin-bottom: 20px; 
-		margin-left: 20px;} }
+.content, .sidebar {
+	margin: 0; }
 
 .widget {
-	margin-left: -10px; }
+	margin-left: 0; }
 
 /*------------------------------------*\
     #LAYOUT-2C-L
@@ -3195,6 +3190,11 @@ body .select2-container-multi .select2-choices .select2-search-choice {
 /*------------------------------------*\
     #SHARED
 \*------------------------------------*/
+img {
+	display: block; 
+	max-width: 100%;
+	height: auto;}
+
 /**
  * Drop v6.0.0
  * Simple, mobile-friendly dropdown menus, by Chris Ferdinandi.

@@ -1,5 +1,7 @@
 <article <?php hybrid_attr( 'post' ); ?>>
 
+<?php doc_post_format_link(); ?>
+
 	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
 		<header class="entry-header">

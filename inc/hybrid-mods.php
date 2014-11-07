@@ -16,7 +16,7 @@ class Doc_Attributes {
 	public $sidebar_1c     		  	= '  wrapper layout';	// sidebar
 	public $sidebar_2cl    			= '  wrapper layout';	// sidebar
 	public $sidebar_2cr    			= '  wrapper layout';	// sidebar
-	public $sidebar_1_1c     		= '  layout__item';	// sidebar
+	public $sidebar_1_1c     		= '  layout layout__item';	// sidebar
 	public $sidebar_1_2cl    		= '  layout__item  sidebar-1 layout  md-6-24';	// sidebar
 	public $sidebar_1_2cr    		= '  layout__item  md-3-8';	// sidebar
 	public $sidebar_2_1c     		= '  layout__item';	// sidebar
