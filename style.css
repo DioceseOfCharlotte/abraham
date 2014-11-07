@@ -544,7 +544,7 @@ textarea {
 	margin: 0;}
 
 /*
- * Hide visually and from screen readers, but maintain layout
+ * Hide visually and from screen readers, but maintain grid
  */
 .invisible {
 	visibility: hidden; }
@@ -585,7 +585,7 @@ textarea {
 
 	*display: inline; }
 
-.layout, .facetwp-facet-dept_type.facetwp-type-radio, .entry-meta {
+.grid, .facetwp-facet-dept_type.facetwp-type-radio, .entry-meta {
 	display: block;
 	/* [5] */
 	display: -webkit-box;
@@ -629,7 +629,7 @@ textarea {
 	        flex: 1 100%;}
 
 /**
- * Some simple, crude, starting-point widths to use alongside the layout system.
+ * Some simple, crude, starting-point widths to use alongside the grid system.
  */
 .all-1-24 {
 	width: 4.1667%;
@@ -1785,7 +1785,7 @@ ul, ol, dd {
 	list-style: none; }
 
 /*------------------------------------*\
-    #MAIN-LAYOUT
+		#MAIN-grid
 \*------------------------------------*/
 /**
  * #WRAPPERS
@@ -1837,7 +1837,7 @@ body.open {
 	margin-left: 0; }
 
 /*------------------------------------*\
-    #LAYOUT-2C-L
+    #grid-2C-L
 \*------------------------------------*/
 @media screen and (max-width: 48rem) {
 	.sidebar-1 {
@@ -2695,14 +2695,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
-.footer-layout {
+.footer-grid {
 	color: #fbfcfc; 
 	background-color: #4e5758;}
-.footer-layout a {
+.footer-grid a {
 	color: #7fa9dd; }
-.footer-layout a:hover {
+.footer-grid a:hover {
 	color: #a7c5e8; }
-.footer-layout .sidebar {
+.footer-grid .sidebar {
 	margin: 0 auto; }
 
 .widget__footer {

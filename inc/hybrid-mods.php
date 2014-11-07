@@ -23,7 +23,7 @@ class Doc_Attributes {
 	public $sidebar_2_2cl    		= '  grid__item  md-7-24';	// sidebar
 	public $sidebar_2_2cr    		= '  grid__item  md-3-8';	// sidebar
 	public $menu                  	= '  navdrawer';	// menu
-	public $archive_wrap           	= 'grid';
+	public $archive_wrap           	= 'grid grid--fit';
 
 	/* Header attributes. */
 	public $branding              	= 'branding grid';	// na
@@ -94,6 +94,7 @@ add_filter( 'hybrid_attr_comment-content',   array( $this, 'comment_content' ) )
 }
 
 
+
 /* === STRUCTURAL === */
 
 public function body( $attr ) {
@@ -119,15 +120,15 @@ public function footer( $attr ) {
 
 public function content( $attr ) {
 
-	if ( '1c' == get_theme_mod( 'theme_grid' ) ) :
+	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->content_1c;
 endif;
 
-if ( '2c-l' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->content_2cl;
 endif;
 
-if ( '2c-r' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->content_2cr;
 endif;
 
@@ -136,15 +137,15 @@ endif;
 
 public function sidebar( $attr ) {
 
-	if ( '1c' == get_theme_mod( 'theme_grid' ) ) :
+	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_1c;
 endif;
 
-if ( '2c-l' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_2cl;
 endif;
 
-if ( '2c-r' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_2cr;
 endif;
 
@@ -153,15 +154,15 @@ endif;
 
 public function sidebar_1( $attr ) {
 
-	if ( '1c' == get_theme_mod( 'theme_grid' ) ) :
+	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_1_1c;
 endif;
 
-if ( '2c-l' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_1_2cl;
 endif;
 
-if ( '2c-r' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_1_2cr;
 endif;
 
@@ -170,15 +171,15 @@ endif;
 
 public function sidebar_2( $attr ) {
 
-	if ( '1c' == get_theme_mod( 'theme_grid' ) ) :
+	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_2_1c;
 endif;
 
-if ( '2c-l' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_2_2cl;
 endif;
 
-if ( '2c-r' == get_theme_mod( 'theme_grid' ) ) :
+if ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
   $attr['class'] .= $this->sidebar_2_2cr;
 endif;
 
