@@ -205,9 +205,10 @@ function doc_phone() {
 
 $phone_entries = get_post_meta( get_the_ID(), 'phone_group', true );
 
-	if($emp_phone){
+	if($phone_entries){
 
 		foreach ( $phone_entries as $phone_entry ) { ?>
+
 			<a href="tel:<?php echo $phone_entry['emp_phone']; ?>" itemprop="telephone">
 				<?php echo $phone_entry['emp_phone']; ?>
 			</a>
