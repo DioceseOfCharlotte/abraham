@@ -16,16 +16,16 @@ $connected = new WP_Query( array(
 
 <?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
-	<div class="card layout__item palm-1-1 sm-1-2 lg-1-3">
-<div class="card--staff layout" itemscope itemtype="http://schema.org/Person">
-<div class="layout__item card__avatar">
+	<div class="card grid__item palm-1-1 sm-1-2 lg-1-3">
+<div class="card--staff grid" itemscope itemtype="http://schema.org/Person">
+<div class="grid__item card__avatar">
 <?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 </div>
-<div class="card__details layout__item layout layout__column">
+<div class="card__details grid__item grid grid--column">
   <header class="card-header all-1-1" itemprop="name"><?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></header><!-- .card-header -->
 
-<div class="layout layout__item middle--info">
-<div class="card__titles layout__item">
+<div class="grid grid__item middle--info">
+<div class="card__titles grid__item">
   <?php
 // Display connected pages
 if ( $connected->have_posts() ) :
@@ -44,7 +44,7 @@ if ( $connected->have_posts() ) :
 </div>
 
 
-<div class="card__phone-list layout__item">
+<div class="card__phone-list grid__item">
 
 <?php doc_phone(); ?>
 
@@ -59,12 +59,12 @@ if ( $connected->have_posts() ) :
 
 <?php else : // If not viewing a single post. ?>
 
-<div class="card card--staff layout layout__item all-1 md-1-2 ">
+<div class="card card--staff grid grid__item all-1 md-1-2 ">
 
-	<div class="comment-author layout__item md-3-24">
+	<div class="comment-author grid__item md-3-24">
 		<?php get_the_image( array( 'size' => 'directory-thumbnail', 'image_class' => 'avatar', 'default_image' => get_stylesheet_directory_uri() . '/images/avatar-default.png' ) ); ?>
 	</div>
-	<div class="layout layout__column layout__item md-21-24 flex-fit">
+	<div class="grid grid--column grid__item md-21-24 flex-fit">
 		<div class="Typography--title staff--detail staff--name">
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		</div>

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="content" class="content layout__item">
+<main id="content" class="content grid__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
@@ -19,14 +19,14 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-			<div class="layout layout__topics">
+			<div class="grid grid__topics">
 
 			<?php while ( mb_have_topics() ) : // Begins the loop through found posts. ?>
 
 				<?php mb_the_topic(); // Loads the post data. ?>
 
 
-					<a class="card--link layout board-topic all-1 md-1-2 lg-1-3 xl-1-4 topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
+					<a class="card--link grid board-topic all-1 md-1-2 lg-1-3 xl-1-4 topic-link grid__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
 						<h6><?php mb_topic_title(); ?></h6>
 						<div class="entry-meta">
 

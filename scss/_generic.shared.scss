@@ -1,12 +1,12 @@
 /*------------------------------------*\
-    #SHARED
+		#SHARED
 \*------------------------------------*/
 
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+		max-width: 100%;
+		height: auto;
+		display: block;
 }
 
 
@@ -24,13 +24,13 @@ img {
 /*  Styling for the dropdown content.
  *  Hides the content by default. */
 .dropdown-menu-basic {
-  max-height: 0;
-  overflow: hidden;
-  //min-width: 10em;
-  margin: 0;
-  //background-color: $color-box-highlight-background;
-  //border-radius: $base-radius;
-  transition: max-height 0.5s ease-in-out;
+	max-height: 0;
+	overflow: hidden;
+	//min-width: 10em;
+	margin: 0;
+	//background-color: $color-box-highlight-background;
+	//border-radius: $base-radius;
+	transition: max-height 0.5s ease-in-out;
 }
 
 .sub-menu li {
@@ -41,24 +41,24 @@ img {
  *  from dropdown menu lists */
 .dropdown-menu-basic ul,
 .dropdown-menu-basic ol {
-  margin: 0;
-  list-style: none;
-  //padding: 0.5em;
+	margin: 0;
+	list-style: none;
+	//padding: 0.5em;
 }
 
 /*  When a dropdown is active, display it. */
 .dropdown-menu-basic.active {
-  display: flex;
-  max-height: 600px;
-  //visibility: visible;
+	display: flex;
+	max-height: 600px;
+	//visibility: visible;
 
 }
 
 /*  If dropdown link is near the right edge of the screen,
  *  shift the dropdown menu position to avoid content clipping. */
 .dropdown-menu-basic.dropdown-right {
-  right: 0;
-  left: auto;
+	right: 0;
+	left: auto;
 }
 
 
@@ -80,7 +80,7 @@ text-rendering: auto;
 
 
 .facetwp-facet-dept_type.facetwp-type-radio {
-@extend .layout;
+@extend .grid;
 margin: 0;
 margin-bottom: $base-spacing-unit;
 background-color: $color-brand-secondary-light;
@@ -90,7 +90,7 @@ border-radius: $base-radius;
 
 .site {
 	.facetwp-radio {
-		@extend .layout__item;
+		@extend .grid__item;
 		@extend .flex-fit;
 		width: 25%;
 		background: none;
@@ -113,7 +113,7 @@ span.counts {
 }
 
 .entry-meta {
-@extend .layout;
+@extend .grid;
 justify-content: center;
 }
 

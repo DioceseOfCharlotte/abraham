@@ -58,4 +58,4 @@
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
     <?php doc_header_after(); ?>
-	<div class="layout main-container wrapper">
+	<div class="grid main-container wrapper">

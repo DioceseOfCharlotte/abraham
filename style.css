@@ -570,7 +570,7 @@ textarea {
 	clear: both; }
 
 /*------------------------------------*\
-    #WIDTHS-RESPONSIVE
+	#WIDTHS-RESPONSIVE
 \*------------------------------------*/
 /**
  * 1. Webkit: collapse white-space between units.
@@ -580,7 +580,7 @@ textarea {
  * 5. Account for browser defaults of elements that might be the root node of
  *    the component.
  */
-.layout__item, .site .facetwp-radio {
+.grid__item, .site .facetwp-radio {
 	display: inline-block;
 
 	*display: inline; }
@@ -604,7 +604,7 @@ textarea {
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap;}
 
-.layout__column {
+.grid--column {
 	        flex-direction: column;
 	margin: 0; 
 
@@ -613,7 +613,7 @@ textarea {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 
-.layout__item, .site .facetwp-radio {
+.grid__item, .site .facetwp-radio {
 	zoom: 1;
 	/* 4 */
 	width: 100%;
@@ -1285,7 +1285,7 @@ textarea {
 	text-align: center; }
 
 /*------------------------------------*\
-    #PAGE
+		#PAGE
 \*------------------------------------*/
 /**
  * High-, page-level styling.
@@ -1328,7 +1328,7 @@ body {
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;}
 
-.footer-layout {
+.footer-grid {
 	margin-top: auto; }
 
 /*------------------------------------*\
@@ -3188,7 +3188,7 @@ body .select2-container-multi .select2-choices .select2-search-choice {
 	box-shadow: none; }
 
 /*------------------------------------*\
-    #SHARED
+		#SHARED
 \*------------------------------------*/
 img {
 	display: block; 

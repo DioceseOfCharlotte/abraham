@@ -1,12 +1,12 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-<main id="content" class="content layout__item">
+<main id="content" class="content grid__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
 		<div class="loop-meta">
 
-			<div class="loop-description layout">
+			<div class="loop-description grid">
 			<div class="topic-info">
 					<?php mb_topic_forum_link( get_queried_object_id() ); ?>
 					&nbsp; &nbsp;

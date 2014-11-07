@@ -1,7 +1,7 @@
 <?php if ( !mb_is_topic_paged() ) : ?>
 
-	<article id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="topic-post layout">
-			<div class="comment-author layout__item md-3-24">
+	<article id="post-<?php echo esc_attr( mb_get_topic_id( get_the_ID() ) ); ?>" class="topic-post grid">
+			<div class="comment-author grid__item md-3-24">
 				<?php echo get_avatar( mb_get_topic_author_id() ); ?>
 				<span <?php hybrid_attr( 'entry-author' ); ?>>
 					<?php mb_topic_author_profile_link(); ?>
@@ -10,7 +10,7 @@
 					<?php endif; ?>
 				</span>
 				</div>
-			<div class="comment-content layout__item md-21-24">
+			<div class="comment-content grid__item md-21-24">
 				<?php mb_topic_content(); ?>
 				<?php wp_link_pages(); ?>
 			</div><!-- .entry-content -->

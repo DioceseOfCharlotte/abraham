@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="content" class="content layout__item">
+<main id="content" class="content grid__item">
 
 	<?php hybrid_get_menu( 'forum-views' ); // Loads the menu/forum-views.php template. ?>
 
@@ -17,7 +17,7 @@ get_header(); ?>
 
 	<?php if ( !empty( $forums ) ) : ?>
 
-		<div class="layout">
+		<div class="grid">
 
 			<div>
 
@@ -46,7 +46,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<div class="layout layout__topics">
+		<div class="grid grid__topics">
 					<div>
 						<?php if ( current_user_can( 'create_forum_topics' ) ) : ?>
 						<a href="<?php mb_topic_form_url(); ?>" class="new-topic">New Topic <i class="fa fa-plus-circle"></i></a>
@@ -58,7 +58,7 @@ get_header(); ?>
 
 			<?php the_post(); ?>
 
-				<a class="board-topic topic-link layout__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
+				<a class="board-topic topic-link grid__item <?php echo mb_is_topic_sticky() ? 'sticky' : ''; ?>" href="<?php mb_topic_url(); ?>">
 						<h6><?php mb_topic_title(); ?></h6>
 						<div class="entry-meta">
 
