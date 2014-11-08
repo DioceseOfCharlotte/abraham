@@ -64,3 +64,8 @@ background-color: $color-brand-secondary;
 .contact-info__list a {
 color: $base-text-color;
 }
+
+
+.js-drop .dropdown-basic > .info-btn:after {
+content: none;
+}

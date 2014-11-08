@@ -40,6 +40,9 @@ function abraham_setup() {
 		'size' => 'logo',
 	) );
 
+	add_theme_support( 'jetpack-responsive-videos' );
+
+
 	/* Staff Directory. */
 	add_theme_support( 'diocese-people' );
 

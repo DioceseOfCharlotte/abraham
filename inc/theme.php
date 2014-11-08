@@ -51,7 +51,7 @@ function abraham_widgets_init() {
     	'name'          => _x( 'Primary Sidebar', 'sidebar', 'abraham' ),
 		'id'            => 'primary',
 		'description'   => '',
-    	'before_widget' => '<aside id="%1$s" class="primary card layout__item widget %2$s">',
+    	'before_widget' => '<aside id="%1$s" class="primary card grid__item widget %2$s">',
     	'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -61,7 +61,7 @@ function abraham_widgets_init() {
 		'name'          => _x( 'Secondary Sidebar', 'sidebar', 'abraham' ),
 		'id'            => 'secondary',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="secondary card layout__item widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="secondary card grid__item widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -71,7 +71,7 @@ function abraham_widgets_init() {
     	'name'          => _x( 'Footer Widget Area', 'sidebar', 'abraham' ),
 		'id'            => 'footer',
 		'description'   => '',
-    	'before_widget' => '<aside id="%1$s" class="layout__item widget__footer widget %2$s">',
+    	'before_widget' => '<aside id="%1$s" class="grid__item widget__footer widget %2$s">',
     	'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -96,6 +96,10 @@ function abraham_scripts() {
     wp_register_script( 'meh-dropjs', trailingslashit( get_template_directory_uri() ) . "js/drop{$suffix}.js", array(), null, true );
 
   wp_enqueue_script( 'meh-dropjs' );
+
+  wp_register_script( 'meh-iconicjs', trailingslashit( get_template_directory_uri() ) . "js/iconic{$suffix}.js", array(), null, true );
+
+  wp_enqueue_script( 'meh-iconicjs' );
 
   /* Register Google-fonts. */
   wp_register_style( 'meh-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Fira+Sans:300,400,500,700|Lato:300,400,700,900' );
@@ -154,7 +158,7 @@ function meh_attr_sidebar_2( $attr ) {
 function doc_drop(){
 ?>
     <script type='text/javascript'>
-    	drop.init();
+    drop.init();
    </script>
 <?php
 }
@@ -176,4 +180,21 @@ function doc_content_top() {
 
 function doc_content_bottom() {
 	do_action( 'doc_content_bottom' );
+}
+
+
+
+/**
+ * Filter the hybrid_post_format_link to remove the text
+ */
+
+function doc_post_format_link() {
+	echo doc_get_post_format_link();
+}
+
+
+function doc_get_post_format_link() {
+	$format = get_post_format();
+	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
+	return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ), get_post_format_string( $format ) );
 }

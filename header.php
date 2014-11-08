@@ -36,7 +36,7 @@
 				<?php jetpack_the_site_logo(); ?>
 				<?php hybrid_site_title(); ?>
 				<?php hybrid_site_description(); ?>
-			</div>
+			</div><!-- .site-branding -->
 			<section class="app-bar__actions">
 	        	<?php hybrid_get_menu( 'social' ); ?>
 	        </section>
@@ -58,4 +58,4 @@
 
     <?php hybrid_get_menu( 'breadcrumbs' ); ?>
     <?php doc_header_after(); ?>
-	<div class="layout main-container wrapper">
+	<div class="grid main-container wrapper">

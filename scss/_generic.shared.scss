@@ -1,9 +1,13 @@
 /*------------------------------------*\
-    #SHARED
+		#SHARED
 \*------------------------------------*/
 
 
-
+img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+}
 
 
 
@@ -20,41 +24,63 @@
 /*  Styling for the dropdown content.
  *  Hides the content by default. */
 .dropdown-menu-basic {
-  max-height: 0;
-  overflow: hidden;
-  min-width: 10em;
-  background-color: $color-box-highlight-background;
-  border-radius: $base-radius;
-  transition: max-height 0.5s ease-in-out;
+	max-height: 0;
+	overflow: hidden;
+	//min-width: 10em;
+	margin: 0;
+	//background-color: $color-box-highlight-background;
+	//border-radius: $base-radius;
+	transition: max-height 0.5s ease-in-out;
+}
+
+.sub-menu li {
+	float: left;
 }
 
 /*  Remove list-style and margin-left
  *  from dropdown menu lists */
 .dropdown-menu-basic ul,
 .dropdown-menu-basic ol {
-  margin: 0;
-  list-style: none;
-  padding: 0.5em;
+	margin: 0;
+	list-style: none;
+	//padding: 0.5em;
 }
 
 /*  When a dropdown is active, display it. */
 .dropdown-menu-basic.active {
-  display: block;
-  max-height: 600px;
-  //visibility: visible;
+	display: flex;
+	max-height: 600px;
+	//visibility: visible;
 
 }
 
 /*  If dropdown link is near the right edge of the screen,
  *  shift the dropdown menu position to avoid content clipping. */
 .dropdown-menu-basic.dropdown-right {
-  right: 0;
-  left: auto;
+	right: 0;
+	left: auto;
 }
 
 
+.js-drop .dropdown-basic > a:after {
+content: "\f055";
+padding-left: 10px;
+display: inline-block;
+font: normal normal normal 14px/1 FontAwesome;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+
 .facetwp-facet-dept_type.facetwp-type-radio {
-@extend .layout;
+@extend .grid;
 margin: 0;
 margin-bottom: $base-spacing-unit;
 background-color: $color-brand-secondary-light;
@@ -64,7 +90,7 @@ border-radius: $base-radius;
 
 .site {
 	.facetwp-radio {
-		@extend .layout__item;
+		@extend .grid__item;
 		@extend .flex-fit;
 		width: 25%;
 		background: none;
@@ -84,4 +110,13 @@ padding: 10px 15px;
 
 span.counts {
 	display: none;
+}
+
+.entry-meta {
+@extend .grid;
+justify-content: center;
+}
+
+.entry-meta span, .entry-meta time {
+margin-right: 1rem;
 }

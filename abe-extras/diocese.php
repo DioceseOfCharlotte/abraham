@@ -95,6 +95,9 @@ if ( !class_exists( 'Diocese' ) ) {
 
 			/* Sets the path to the core framework CSS directory URI. */
 			define( 'DOC_JS', trailingslashit( DIOCESE_URI ) . 'js' );
+
+			/* Sets the path to the core framework CSS directory URI. */
+			define( 'ICONIC', trailingslashit( DIOCESE_URI ) . 'images/svg/smart' );
 }
 
 		/**

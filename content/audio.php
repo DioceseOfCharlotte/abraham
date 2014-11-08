@@ -1,16 +1,12 @@
 <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php echo ( $audio = hybrid_media_grabber( array( 'type' => 'audio', 'split_media' => true ) ) ); ?>
+<?php doc_post_format_link(); ?>
 
 	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
 		<header class="entry-header">
 
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
-
-			<div class="entry-meta">
-				<?php abraham_posted_on(); ?>
-			</div><!-- .entry-meta -->
 
 		</header><!-- .entry-header -->
 
@@ -21,6 +17,9 @@
 
 		<footer class="entry-footer">
 			<?php abraham_entry_footer(); ?>
+			<div class="entry-meta">
+				<?php abraham_posted_on(); ?>
+			</div><!-- .entry-meta -->
 		</footer><!-- .entry-footer -->
 
 	<?php else : // If not viewing a single post. ?>
@@ -46,6 +45,12 @@
 			<div <?php hybrid_attr( 'entry-content' ); ?>>
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
+
+		<footer class="entry-footer">
+			<div class="entry-meta">
+				<?php abraham_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
 
 		<?php endif; // End excerpt/audio checks. ?>
 
