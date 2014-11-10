@@ -9,7 +9,9 @@
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 var rename = require('gulp-rename');
+var composer = require('gulp-composer');
 var csscomb = require('gulp-csscomb');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
@@ -27,6 +29,10 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
+gulp.task('composer', function () {
+    composer({ cwd: './', bin: 'composer' });
+});
+
 // Optimize Images
 gulp.task('images', function () {
   return gulp.src('images/**/*')
@@ -35,6 +41,22 @@ gulp.task('images', function () {
       interlaced: true
     })))
     .pipe(gulp.dest('images'));
+});
+
+// Copy hybrid-core to extras
+gulp.task('hybrid', function () {
+  return gulp.src([
+  	'vendor/justintadlock/**/*'
+  	])
+    .pipe(gulp.dest('./'));
+});
+
+// Copy CMB2 to extras
+gulp.task('cmb2', function () {
+  return gulp.src([
+  	'vendor/webdevstudios/**/*'
+  	])
+    .pipe(gulp.dest('abe-extras/extensions'));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -52,12 +74,13 @@ gulp.task('styles', function () {
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
-    // Concatenate And Minify Styles
-    // .pipe(rename({ suffix: '.min' }))
-    // .pipe(gulp.dest('./'))
-    // .pipe($.if('*.css', $.csso()))
-    // .pipe(gulp.dest('./'));
+    //Concatenate And Minify Styles
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./'))
+    .pipe($.if('*.css', $.csso()))
+    .pipe(gulp.dest('./'));
 });
+
 
 // Build and serve the output
 gulp.task('serve', function () {
@@ -72,6 +95,6 @@ gulp.task('serve', function () {
 });
 
 // Build Production Files, the Default Task
-gulp.task('default', function (cb) {
-  runSequence('styles', ['images'], cb);
+gulp.task('default', ['composer'], function (cb) {
+  runSequence('styles', ['images', 'cmb2', 'hybrid'], cb);
 });

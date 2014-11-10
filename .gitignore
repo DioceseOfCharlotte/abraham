@@ -1,7 +1,8 @@
 vendor
-library
 node_modules
 .sass-cache
 composer.lock
-images/svg
+images/svg/*
 *.map
+hybrid-core/*
+abe-extras/extensions/cmb2/*
