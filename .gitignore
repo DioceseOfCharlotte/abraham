@@ -4,5 +4,5 @@ node_modules
 composer.lock
 images/svg/*
 *.map
-hybrid-core/*
-abe-extras/extensions/cmb2/*
+hybrid-core
+abe-extras/extensions/cmb2
