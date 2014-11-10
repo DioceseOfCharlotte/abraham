@@ -22,6 +22,7 @@ You'll need the following dependencies installed to take advantage of the develo
 * [Node.js](https://nodejs.org)
 * [gulp.js](http://gulpjs.com)
 * [Sass](http://sass-lang.com/install)
+* [Composer](https://getcomposer.org) *installed [globally](https://getcomposer.org/doc/00-intro.md#globally)*
 
 I use [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) to run my local WordPress. This isn't necessary for this theme but the Gulp file is configured for it so if you're environment is different you'll need to edit the file accordingly.
 
@@ -42,6 +43,10 @@ $ cd abraham
 install the dependencies: *you may or may not need the 'sudo'*
 ```sh
 $ sudo npm install
+```
+fetch the dependencies and build the project:
+```sh
+$ gulp
 ```
 launch the server and watch everything get compiled in real time, as changes are made:
 ```sh
