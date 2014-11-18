@@ -1,0 +1,52 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+// inuitcss has a number of default mixins that the framework, and developers
+// working with it, can make use of.
+
+
+
+
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(10px);
+// }
+//
+@mixin font-size($font-size, $line-height: true) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+}
+
+
+@mixin card($hover: false) {
+	padding: 10px;
+	border-top: 1px solid rgba(0,0,0,0.10);
+	border-radius: $base-radius;
+	background-color: #fff;
+	position: relative;
+	@include shadow-z1();
+@if $hover {
+	//transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow 0.2s ease-out;
+		&:hover {
+			@include shadow-z3();
+			text-decoration: none;
+			transition: box-shadow 0.2s ease-in;
+		}
+		&:focus, &:active {
+  			@include shadow-z2();
+  			text-decoration: none;
+  			transition: box-shadow 0.2s ease-in;
+	}
+	}
+}
+

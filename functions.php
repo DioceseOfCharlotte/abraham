@@ -1,118 +1,105 @@
 <?php
-/**
- * Abraham functions and definitions
- *
- * @package Abraham
- */
+/*
+Theme Name: Abraham
+Theme URI: https://github.com/m-e-h/abraham
+Author: Marty Helmick
+Author URI: https://github.com/m-e-h
+Description: Experimental WP parent theme.
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ahabraham
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+ Abraham is based on Stargazer http://themehybrid.com/themes/stargazer, (C) 2013-2014, Justin Tadlock.
+*/
 
 /* Get the template directory and make sure it has a trailing slash. */
 $abraham_dir = trailingslashit( get_template_directory() );
 
-/* Load the Hybrid Core framework and theme files. */
-require_once( $abraham_dir . 'hybrid-core/hybrid.php'    );
-require_once( $abraham_dir . 'inc/custom-background.php' );
-require_once( $abraham_dir . 'inc/custom-header.php'     );
-//require_once( $abraham_dir . 'inc/custom-colors.php'     );
-require_once( $abraham_dir . 'inc/theme.php'             );
-require_once( $abraham_dir . 'inc/customizer.php'        );
-require_once( $abraham_dir . 'inc/template-tags.php'     );
-require_once( $abraham_dir . 'inc/hybrid-mods.php'      );
-
-/* Launch the Hybrid Core framework. */
+/* Load the Hybrid Core framework and launch it. */
+require_once( $abraham_dir . 'library/hybrid.php' );
 new Hybrid();
 
-/* Remove these two lines if not using the extra functions */
-require_once( $abraham_dir . 'abe-extras/diocese.php'  );
-new Diocese();
+/* Load theme-specific files. */
+require_once( $abraham_dir . 'inc/custom-background.php'     );
+require_once( $abraham_dir . 'inc/custom-header.php'         );
+require_once( $abraham_dir . 'inc/custom-colors.php'         );
+require_once( $abraham_dir . 'inc/hybrid-mods.php'         );
 
-/* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'abraham_setup' );
+/* Set up the theme early. */
+add_action( 'after_setup_theme', 'abraham_theme_setup', 5 );
 
-if ( ! function_exists( 'abraham_setup' ) ) :
 /**
- * Sets up theme defaults and registers support for various WordPress features.
+ * The theme setup function.  This function sets up support for various WordPress and framework functionality.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
  */
-function abraham_setup() {
+function abraham_theme_setup() {
 
-	/* Site Logo. */
+	/* Load files. */
+	require_once( trailingslashit( get_template_directory() ) . 'inc/abraham.php' );
+	require_once( trailingslashit( get_template_directory() ) . 'inc/customize.php' );
+
+	/* Load widgets. */
+	add_theme_support( 'hybrid-core-widgets' );
+
+	/* Theme layouts. */
 	add_theme_support(
-		'site-logo', array(
-		'size' => 'logo',
-	) );
+		'theme-layouts',
+		array(
+			'1c'        => __( '1 Column Wide',                'abraham' ),
+			'1c-narrow' => __( '1 Column Narrow',              'abraham' ),
+			'2c-l'      => __( '2 Columns: Content / Sidebar', 'abraham' ),
+			'2c-r'      => __( '2 Columns: Sidebar / Content', 'abraham' )
+		),
+		array( 'default' => is_rtl() ? '2c-r' :'2c-l' )
+	);
 
-	add_theme_support( 'jetpack-responsive-videos' );
+	/* Load stylesheets. */
+	add_theme_support(
+		'hybrid-core-styles',
+		array( 'abraham-fonts', 'gallery', 'abraham-mediaelement', 'parent', 'style' )
+	);
 
-
-	/* Staff Directory. */
-	add_theme_support( 'diocese-people' );
-
-	/* Department Directory. */
-	add_theme_support( 'diocese-departments' );
-
-	/* Document Directory. */
-	add_theme_support( 'diocese-documents' );
-
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Enable custom template hierarchy.
-	 * See http://themehybrid.com/docs/template-hierarchy
-	 */
+	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	/*
-	 * Enable custom thumbnail/image script.
-	 * See http://themehybrid.com/docs/get-the-image
-	 */
+	/* The best thumbnail/image script ever. */
 	add_theme_support( 'get-the-image' );
 
-	/*
-	 * Enable custom breadcrumbs.
-	 * See http://themehybrid.com/docs/breadcrumb-trail
-	 */
+	/* Breadcrumbs. Yay! */
 	add_theme_support( 'breadcrumb-trail' );
 
-	/*
-	 * Enable paginated numbers for multi-posts.
-	 * See http://themehybrid.com/docs/loop-pagination
-	 */
+	/* Pagination. */
 	add_theme_support( 'loop-pagination' );
 
-  /*
-   * Load stylesheets.
-   * See http://themehybrid.com/docs/theme-layouts
-   */
-  add_theme_support(
-    'hybrid-core-styles',
-    array( 'meh-fonts', 'meh-font-awesome', 'parent', 'style',
-  ) );
+	/* Nicer [gallery] shortcode implementation. */
+	add_theme_support( 'cleaner-gallery' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'audio', 'quote', 'link',
-	) );
+	/* Better captions for themes to style. */
+	add_theme_support( 'cleaner-caption' );
 
-	/*
-	 * Enable support for Theme layouts.
-	 * See http://themehybrid.com/docs/theme-layouts
-	 */
-	add_theme_support( 'theme-layouts',	array(
-		'1c'        => __( '1 Column',                     'hybrid-base' ),
-		'2c-l'      => __( '2 Columns: Content / Sidebar', 'hybrid-base' ),
-		'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' )
-	), array(
-		'default' => '2c-l'
-		) );
+	/* Automatically add feed links to <head>. */
+	add_theme_support( 'automatic-feed-links' );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'abraham_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	/* Whistles plugin. */
+	add_theme_support( 'whistles', array( 'styles' => true ) );
+
+	/* Post formats. */
+	add_theme_support(
+		'post-formats',
+		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
+	);
+
+	/* Editor styles. */
+	add_editor_style( abraham_get_editor_styles() );
+
+	/* Handle content width for embeds and images. */
+	// Note: this is the largest size based on the theme's various layouts.
+	hybrid_set_content_width( 1025 );
 }
-endif; // abraham_setup

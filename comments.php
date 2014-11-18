@@ -8,7 +8,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	<?php if ( have_comments() ) : ?>
 
-		<div id="comments" class="comments-area">
+		<div id="comments" class="comments">
 
 			<h3 id="comments-number" class="comments-number"><?php comments_number(); ?></h3>
 
@@ -22,13 +22,14 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 				); ?>
 			</ol><!-- .comment-list -->
 
-			<?php abraham_comments_nav(); ?>
+			<?php locate_template( array( 'misc/comments-nav.php' ), true ); ?>
 
 		</div><!-- #comments-->
 
 	<?php endif; // End check for comments. ?>
 
-	<?php abraham_comments_error(); ?>
+	<?php locate_template( array( 'misc/comments-error.php' ), true ); ?>
 
 	<?php comment_form(); ?>
+
 </section><!-- #comments-template -->

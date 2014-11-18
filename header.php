@@ -1,8 +1,9 @@
 <?php
 /**
- * Displays all of the <head> section and everything up till <div id="content">
+ * The header.
  *
- * @package Abraham
+ *
+ * @package Kit
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
@@ -21,41 +22,38 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-		<!--[if lt IE 9]>
-			<div class="alert alert-warning"><?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">upgrade your browser</a> for a faster, safer, and more pleasant experience.', 'abraham'); ?></div>
-		<![endif]-->
+	<div id="container" class="site-container">
 
-<div class="site">
+		<div class="skip-link">
+			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'abraham' ); ?></a>
+		</div><!-- .skip-link -->
 
-		<a href="#content" class="screen-reader-text visuallyhidden"><?php _e( 'Skip to main content', 'abraham' ); ?></a>
-<?php doc_header_before(); ?>
-	<header <?php hybrid_attr( 'header' ); ?>>
-		<div class="app-bar__container wrapper">
-			<button class="navdrawer__toggle"><span class="toggle-btn"></span></button>
-			<div <?php hybrid_attr( 'branding' ); ?>>
-				<?php jetpack_the_site_logo(); ?>
-				<?php hybrid_site_title(); ?>
-				<?php hybrid_site_description(); ?>
-			</div><!-- .site-branding -->
-			<section class="app-bar__actions">
-	        	<?php hybrid_get_menu( 'social' ); ?>
-	        </section>
-		</div>
+		<?php hybrid_get_menu( 'primary' ); ?>
 
-	<?php if ( get_header_image() ) : // If there's a header image. ?>
+					<?php if ( get_header_image() ) : ?>
 
-            	<style type="text/css" id="custom-header-css">
-				            .app-bar {
-				      background: url(<?php header_image(); ?>) no-repeat scroll center;
-				      background-size: cover;
-				    }
-				</style>
+				<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
 
-    <?php endif; // End check for header image. ?>
-    </header>
+			<?php endif; // End check for header image. ?>
 
-	<?php hybrid_get_menu( 'secondary' ); ?>
+		<div class="wrap content-wrap">
 
-    <?php hybrid_get_menu( 'breadcrumbs' ); ?>
-    <?php doc_header_after(); ?>
-	<div class="grid main-container wrapper">
+			<header <?php hybrid_attr( 'header' ); ?>>
+
+				<?php if ( display_header_text() ) : ?>
+
+					<div <?php hybrid_attr( 'branding' ); ?>>
+						<?php hybrid_site_title(); ?>
+						<?php hybrid_site_description(); ?>
+					</div><!-- #branding -->
+
+				<?php endif; // End check for header text. ?>
+
+				<?php hybrid_get_menu( 'secondary' ); ?>
+
+			</header><!-- #header -->
+
+
+			<div id="main" class="site-main">
+
+				<?php hybrid_get_menu( 'breadcrumbs' ); ?>

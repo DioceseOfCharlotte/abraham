@@ -2,46 +2,43 @@
 /**
  * The main template file.
  *
- * @package Abraham
+ * @package abraham
  */
 
 get_header(); ?>
 
-<?php hybrid_get_sidebar( 'primary' ); ?>
-
 <main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
+	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-        <?php abraham_loop_meta(); ?>
+		<?php kit_loop_meta(); ?>
 
-    <?php endif; // End check for multi-post page. ?>
+	<?php endif; // End check for multi-post page. ?>
 
-	<?php doc_content_top(); ?>
+	<?php if ( have_posts() ) : ?>
 
-	<div <?php hybrid_attr( 'archive_wrap' ); ?>>
+		<?php while ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+			<?php the_post(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
 
-				<?php hybrid_get_content_template(); ?>
+			<?php if ( is_singular() ) : ?>
 
-			<?php endwhile; ?>
+				<?php comments_template( '', true ); ?>
 
-				<?php abraham_loop_nav(); ?>
+			<?php endif; // End check for single post. ?>
 
-		<?php else : ?>
+		<?php endwhile; // End found posts loop. ?>
 
-			<?php get_template_part( 'content/error' ); ?>
+		<?php locate_template( array( 'misc/loop-nav.php' ), true ); ?>
 
-		<?php endif; // End check for posts. ?>
-	</div>
+	<?php else : // If no posts were found. ?>
 
-	<?php doc_content_bottom(); ?>
+		<?php locate_template( array( 'content/error.php' ), true ); ?>
 
-</main><!-- #main -->
+	<?php endif; // End check for posts. ?>
 
-<?php hybrid_get_sidebar( 'secondary' ); ?>
+</main><!-- #content -->
 
 <?php get_footer(); ?>

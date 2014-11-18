@@ -1,126 +1,180 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
- * http://codex.wordpress.org/Custom_Headers
+ * Handles the setup and usage of the WordPress custom headers feature.
  *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
- *
- * @package Abraham
+ * @package    Abraham
  */
 
+/* Call late so child themes can override. */
+add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
+
 /**
- * Set up the WordPress core custom header feature.
+ * Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
  *
- * @uses abraham_header_style()
- * @uses abraham_admin_header_style()
- * @uses abraham_admin_header_image()
+ * @since  1.0.0
+ * @access public
+ * @return void
  */
 function abraham_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'abraham_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'abraham_header_style',
-		'admin-head-callback'    => 'abraham_admin_header_style',
-		'admin-preview-callback' => 'abraham_admin_header_image',
-	) ) );
+
+	/* Adds support for WordPress' "custom-header" feature. */
+	add_theme_support(
+		'custom-header',
+		array(
+			'default-image'          => '%s/images/headers/orange-burn.jpg',
+			'random-default'         => false,
+			'width'                  => 1175,
+			'height'                 => 400,
+			'flex-width'             => true,
+			'flex-height'            => true,
+			'default-text-color'     => '4e5758',
+			'header-text'            => true,
+			'uploads'                => true,
+			'wp-head-callback'       => 'abraham_custom_header_wp_head',
+			'admin-head-callback'    => 'abraham_custom_header_admin_head',
+			'admin-preview-callback' => 'abraham_custom_header_admin_preview',
+		)
+	);
+
+	/* Registers default headers for the theme. */
+	register_default_headers(
+		array(
+			'window' => array(
+				'url'           => '%s/images/headers/doc-window.jpg',
+				'thumbnail_url' => '%s/images/headers/doc-window-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Window', 'abraham' )
+			),
+			'orange-burn' => array(
+				'url'           => '%s/images/headers/doc-inside.jpg',
+				'thumbnail_url' => '%s/images/headers/doc-inside-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Orange Burn', 'abraham' )
+			),
+			'planets-blue' => array(
+				'url'           => '%s/images/headers/planets-blue.jpg',
+				'thumbnail_url' => '%s/images/headers/planets-blue-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Blue Planets', 'abraham' )
+			),
+			'planet-burst' => array(
+				'url'           => '%s/images/headers/planet-burst.jpg',
+				'thumbnail_url' => '%s/images/headers/planet-burst-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Planet Burst', 'abraham' )
+			),
+			'space-splatters' => array(
+				'url'           => '%s/images/headers/space-splatters.jpg',
+				'thumbnail_url' => '%s/images/headers/space-splatters-thumb.jpg',
+				/* Translators: Header image description. */
+				'description'   => __( 'Space Splatters', 'abraham' )
+			),
+		)
+	);
+
+	/* Load the stylesheet for the custom header screen. */
+	add_action( 'admin_enqueue_scripts', 'abraham_enqueue_admin_custom_header_styles', 5 );
 }
-add_action( 'after_setup_theme', 'abraham_custom_header_setup' );
 
-if ( ! function_exists( 'abraham_header_style' ) ) :
 /**
- * Styles the header image and text displayed on the blog
+ * Enqueues the styles for the "Appearance > Custom Header" screen in the admin.
  *
- * @see abraham_custom_header_setup().
+ * @since  1.0.0
+ * @access public
+ * @return void
  */
-function abraham_header_style() {
-	$header_text_color = get_header_textcolor();
+function abraham_enqueue_admin_custom_header_styles( $hook_suffix ) {
 
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
+	if ( 'appearance_page_custom-header' === $hook_suffix ) {
+		wp_enqueue_style( 'abraham-fonts' );
+		wp_enqueue_style( 'abraham-admin-custom-header' );
+
+		if ( is_child_theme() ) {
+			$dir = trailingslashit( get_stylesheet_directory() );
+			$uri = trailingslashit( get_stylesheet_directory_uri() );
+
+			if ( file_exists( $dir . 'css/admin-custom-header.css' ) )
+				wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}css/admin-custom-header.css" );
+		}
 	}
-
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
-	?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-	<?php
-		// If the user has set a custom color for the text use that
-		else :
-	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
 }
-endif; // abraham_header_style
 
-if ( ! function_exists( 'abraham_admin_header_style' ) ) :
 /**
- * Styles the header image displayed on the Appearance > Header admin panel.
+ * Callback function for outputting the custom header CSS to `wp_head`.
  *
- * @see abraham_custom_header_setup().
+ * @since  1.0.0
+ * @access public
+ * @return void
  */
-function abraham_admin_header_style() {
-?>
-	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
-		}
-	</style>
-<?php
-}
-endif; // abraham_admin_header_style
+function abraham_custom_header_wp_head() {
 
-if ( ! function_exists( 'abraham_admin_header_image' ) ) :
-/**
- * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * @see abraham_custom_header_setup().
- */
-function abraham_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
-	</div>
-<?php
+	if ( !display_header_text() )
+		return;
+
+	$hex = get_header_textcolor();
+
+	if ( empty( $hex ) )
+		return;
+
+	$style = "body.custom-header #site-title a { color: #{$hex}; }";
+
+	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 }
-endif; // abraham_admin_header_image
+
+/**
+ * Callback for the admin preview output on the "Appearance > Custom Header" screen.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function abraham_custom_header_admin_preview() { ?>
+
+		<div <?php hybrid_attr( 'body' ); // Fake <body> class. ?>>
+
+			<header <?php hybrid_attr( 'header' ); ?>>
+
+				<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
+
+					<div id="branding">
+						<?php hybrid_site_title(); ?>
+						<?php hybrid_site_description(); ?>
+					</div><!-- #branding -->
+
+				<?php endif; // End check for header text. ?>
+
+			</header><!-- #header -->
+
+			<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+
+				<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+
+			<?php elseif ( get_header_image() ) : // If there's a header image. ?>
+
+				<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+
+			<?php endif; // End check for header image. ?>
+
+		</div><!-- Fake </body> close. -->
+
+<?php }
+
+/**
+ * Callback function for outputting the custom header CSS to `admin_head` on "Appearance > Custom Header".  See
+ * the `css/admin-custom-header.css` file for all the style rules specific to this screen.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function abraham_custom_header_admin_head() {
+
+	$hex = get_header_textcolor();
+
+	if ( empty( $hex ) )
+		return;
+
+	$style = "#site-title a { color: #{$hex}; }";
+
+	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+}

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+h1 {
+  @include typo-display-3();
+}
+
+h2 {
+  @include typo-display-2();
+}
+
+h3 {
+  @include typo-display-1();
+}
+
+h4 {
+  @include typo-headline();
+}
+
+h5 {
+  @include typo-title();
+}
+
+h6 {
+  @include typo-subhead();
+}

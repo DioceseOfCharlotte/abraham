@@ -1,0 +1,357 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $color-gray-light;
+    //box-shadow: inset 0 1px 3px #ddd;
+    border-radius: $base-radius;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid $color-gray-light;
+    //box-shadow: inset 0 1px 3px #ddd;
+    border-radius: $base-radius;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: $color-links-hover;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+input:not([type]):focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: $color-links-hover;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: thin dotted $color-gray;
+    outline: 1px auto $color-links-hover;
+}
+.form-checkbox,
+.form-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+select[disabled],
+textarea[disabled] {
+    cursor: not-allowed;
+    background-color: $color-gray-light;
+    color: $color-gray;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: $color-gray-light;
+    color: $color-gray;
+}
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    background: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: $color-gray-light;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+    color: #b94a48;
+    border-color: #ee5f5b;
+}
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+    border-color: #e9322d;
+}
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+select {
+    border: 1px solid $color-gray-light;
+    background-color: white;
+}
+select[multiple] {
+    height: auto;
+}
+label {
+    margin: 0.5em 0 0.2em;
+}
+fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: $color-gray;
+    border-bottom: 1px solid $color-gray-lighter;
+}
+
+.form-stacked input[type="text"],
+.form-stacked input[type="password"],
+.form-stacked input[type="email"],
+.form-stacked input[type="url"],
+.form-stacked input[type="date"],
+.form-stacked input[type="month"],
+.form-stacked input[type="time"],
+.form-stacked input[type="datetime"],
+.form-stacked input[type="datetime-local"],
+.form-stacked input[type="week"],
+.form-stacked input[type="number"],
+.form-stacked input[type="search"],
+.form-stacked input[type="tel"],
+.form-stacked input[type="color"],
+.form-stacked select,
+.form-stacked label,
+.form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.form-aligned input,
+.form-aligned textarea,
+.form-aligned select,
+/* NOTE: form-help-inline is deprecated. Use .form-message-inline instead. */
+.form-aligned .form-help-inline,
+.form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.form-aligned .form-control-group {
+    margin-bottom: 0.5em;
+}
+.form-aligned .form-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.form-aligned .form-controls {
+    margin: 1.5em 0 0 10em;
+}
+
+
+/* Grouped Inputs */
+.form-group fieldset {
+    margin-bottom: 10px;
+}
+.form-group input {
+    display: block;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.form-group input:focus {
+    z-index: 2;
+}
+.form-group input:first-child {
+    top: 1px;
+    border-radius: $base-radius $base-radius 0 0;
+}
+.form-group input:last-child {
+    top: -2px;
+    border-radius: 0 0 $base-radius $base-radius;
+}
+.form-group button {
+    margin: 0.35em 0;
+}
+
+.form-input-1 {
+    width: 100%;
+}
+.form-input-2-3 {
+    width: 66%;
+}
+.form-input-1-2 {
+    width: 50%;
+}
+.form-input-1-3 {
+    width: 33%;
+}
+.form-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: form-help-inline is deprecated. Use .form-message-inline instead. */
+.form-help-inline,
+.form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: $color-gray;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.form-message {
+    display: block;
+    color: $color-gray;
+    font-size: 0.875em;
+}
+
+@media only screen and (max-width : 480px) {
+    button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+/* Pure responsive forms.css */
+    input:not([type]),
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .form-group input:not([type]),
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"],
+    .form-group input[type="url"],
+    .form-group input[type="date"],
+    .form-group input[type="month"],
+    .form-group input[type="time"],
+    .form-group input[type="datetime"],
+    .form-group input[type="datetime-local"],
+    .form-group input[type="week"],
+    .form-group input[type="number"],
+    .form-group input[type="search"],
+    .form-group input[type="tel"],
+    .form-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .form-aligned .form-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .form-aligned .form-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    /* NOTE: form-help-inline is deprecated. Use .form-message-inline instead. */
+    .form-help-inline,
+    .form-message-inline,
+    .form-message {
+        display: block;
+        font-size: 0.75em;
+        /* Increased bottom padding to make it group with its related input element. */
+        padding: 0.2em 0 0.8em;
+    }
+}

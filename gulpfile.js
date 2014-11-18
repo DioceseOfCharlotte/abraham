@@ -46,25 +46,25 @@ gulp.task('images', function () {
 // Copy hybrid-core to extras
 gulp.task('hybrid', function () {
   return gulp.src([
-  	'vendor/justintadlock/**/*'
+  	'vendor/justintadlock/hybrid-core/**/*'
   	])
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('library'));
 });
 
-// Copy CMB2 to extras
-gulp.task('cmb2', function () {
+// Copy hybrid-core to extras
+gulp.task('customizer', function () {
   return gulp.src([
-  	'vendor/webdevstudios/**/*'
+  	'vendor/devinsays/customizer-library/**/*'
   	])
-    .pipe(gulp.dest('abe-extras/extensions'));
+    .pipe(gulp.dest('inc/customizer-library'));
 });
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'scss/*.scss',
-    'scss/**/*.css',
-    'scss/style.scss'
+    'sass/*.scss',
+    'sass/**/*.css',
+    'sass/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.sass({
@@ -75,26 +75,26 @@ gulp.task('styles', function () {
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
     //Concatenate And Minify Styles
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./'))
-    .pipe($.if('*.css', $.csso()))
-    .pipe(gulp.dest('./'));
+    // .pipe(rename({ suffix: '.min' }))
+    // .pipe(gulp.dest('./'))
+    // .pipe($.if('*.css', $.csso()))
+    // .pipe(gulp.dest('./'));
 });
 
 
 // Build and serve the output
-gulp.task('serve', function () {
+gulp.task('serve', ['default'], function () {
   browserSync({
     proxy: "local.wordpress.dev"
      });
 
   gulp.watch(['**/*.php'], reload);
-  gulp.watch(['scss/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['sass/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['js/**/*.js'], reload);
   gulp.watch(['images/**/*'], reload);
 });
 
 // Build Production Files, the Default Task
-gulp.task('default', ['composer'], function (cb) {
-  runSequence('styles', ['images', 'cmb2', 'hybrid'], cb);
+gulp.task('default', ['hybrid'], function (cb) {
+  runSequence('composer', ['styles', 'images', 'hybrid', 'customizer'], cb);
 });

@@ -3,7 +3,7 @@
     "description": "theme library",
     "require": {
         "justintadlock/hybrid-core": "~2.0",
-        "webdevstudios/cmb2": "dev-master"
+        "devinsays/customizer-library": "dev-master"
     },
     "license": "GPL-2.0+",
     "authors": [

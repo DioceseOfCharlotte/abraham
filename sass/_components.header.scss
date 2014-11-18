@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+/**
+ * Handles the output of the header content.
+ */
+
+
+
+
+	     .site-branding {
+	     	max-width: 80%; margin-top: $base-spacing-unit-sm;
+	     }
+	.ltr .site-branding {
+		float: left;
+	}
+	.rtl .site-branding {
+		float: right;
+	}
+
+	@media only screen and (min-width: 800px) {
+
+		.site-branding {
+			width: 42.85%; max-width: 450px;
+		}
+	}
+
+		.site-title {
+			margin:    0;
+			padding:   0;
+			//font-size: 2.125rem;
+		}
+
+			.site-title a:hover,
+			.site-title a:focus {
+				opacity:         0.75;
+			}
+
+		.site-description {
+			padding:      0;
+			//font-size:    1.125rem;
+			//font-weight:  400;
+			opacity:      0.5;
+		}
+
+			.en .site-description {
+				font-style: italic;
+			}
+
+.header-image {
+opacity: 0.5;
+position: absolute;
+z-index: 1;
+width: 100%;
+margin:    0 auto;
+}
+
+
+.content-wrap {
+z-index: 2;
+position: relative;
+}
+
+.home {
+
+.content-wrap {
+	margin-top: 300px;
+}
+.site-branding {
+position: absolute;
+margin-top: -213px;
+width: 100%;
+max-width: 100%;
+text-align: center;
+}
+}
+
