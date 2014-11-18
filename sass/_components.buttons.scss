@@ -30,8 +30,7 @@
 			border-radius: $base-radius;
 			text-transform: uppercase;
 			text-decoration: none;
-			transition: background-color 0.3s ease-in-out,
-			box-shadow .28s cubic-bezier(0.4,0,.2,1);
+			@include material-animation-default;
 			outline: 0!important;
 		}
 

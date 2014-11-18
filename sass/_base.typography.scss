@@ -28,10 +28,8 @@
 }
 
 @mixin typo-display-2($colorContrast:false) {
-  font-family: $base-font;
   @include font-size(45px);
   //font-size: 45px;
-  font-weight: 400;
   //line-height: 48px;
 
   @if $colorContrast {
@@ -40,10 +38,8 @@
 }
 
 @mixin typo-display-1($colorContrast:false) {
-  font-family: $base-font;
   @include font-size(34px);
   //font-size: 34px;
-  font-weight: 400;
   //line-height: 40px;
 
   @if $colorContrast {
@@ -52,7 +48,6 @@
 }
 
 @mixin typo-headline($colorContrast:false) {
-  font-family: $base-font;
   @include font-size(24px);
   //font-size: 24px;
   font-weight: 400;
@@ -65,7 +60,6 @@
 }
 
 @mixin typo-title($colorContrast:false) {
-  font-family: $base-font;
   @include font-size(20px);
   //font-size: 20px;
   font-weight: 700;

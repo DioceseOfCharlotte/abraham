@@ -40,8 +40,8 @@ function abraham_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'background_image' );
 
 	/* Add our custom background image control. */
-	$wp_customize->add_control( 
-		new Hybrid_Customize_Control_Background_Image( $wp_customize ) 
+	$wp_customize->add_control(
+		new Hybrid_Customize_Control_Background_Image( $wp_customize )
 	);
 }
 

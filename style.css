@@ -1101,7 +1101,7 @@ a[href^="tel:"]::before {
     #HEADINGS
 \*------------------------------------*/
 html, body {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 15px;
 	font-size: 1rem;
 	font-weight: 400; 
@@ -1116,7 +1116,7 @@ h1, h2, h3, h4, h5, h6, p {
  */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	opacity: 0.54;
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
 	font-size: 3.7333333333rem;
 	font-size: 0.6em; 
@@ -1136,7 +1136,7 @@ a {
 	font-weight: bold; }
 
 blockquote p {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	font-size: 1.6rem;
 	font-weight: 300;
@@ -1167,7 +1167,7 @@ h1 a, h2 a, h3 a {
  * Class Name Styles
  */
 .Typography--display-4 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 112px;
 	font-size: 7.4666666667rem;
 	font-weight: 300;
@@ -1176,7 +1176,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--display-4--colorContrast {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 112px;
 	font-size: 7.4666666667rem;
 	font-weight: 300;
@@ -1184,7 +1184,7 @@ h1 a, h2 a, h3 a {
 	letter-spacing: -0.04em;}
 
 .Typography--display-3 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
 	font-size: 3.7333333333rem;
 	font-weight: 400;
@@ -1193,7 +1193,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--display-3--colorContrast {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
 	font-size: 3.7333333333rem;
 	font-weight: 400;
@@ -1201,37 +1201,28 @@ h1 a, h2 a, h3 a {
 	letter-spacing: -0.02em;}
 
 .Typography--display-2 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 45px;
 	font-size: 3rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
+	line-height: 1.3333333333; }
 
 .Typography--display-2--colorContrast {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 45px;
 	font-size: 3rem;
-	font-weight: 400;
 	line-height: 1.3333333333;}
 
 .Typography--display-1 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 34px;
 	font-size: 2.2666666667rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
+	line-height: 1.1764705882; }
 
 .Typography--display-1--colorContrast {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 34px;
 	font-size: 2.2666666667rem;
-	font-weight: 400;
 	line-height: 1.1764705882;}
 
 .Typography--headline {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -1241,7 +1232,6 @@ h1 a, h2 a, h3 a {
 
 .Typography--headline--colorContrast {
 	opacity: 0.87; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -1250,7 +1240,6 @@ h1 a, h2 a, h3 a {
 	-moz-osx-font-smoothing: grayscale;}
 
 .Typography--title a, .Typography--title {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 20px;
 	font-size: 1.3333333333rem;
 	font-weight: 700;
@@ -1259,7 +1248,6 @@ h1 a, h2 a, h3 a {
 
 .Typography--title--colorContrast {
 	opacity: 0.87; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 20px;
 	font-size: 1.3333333333rem;
 	font-weight: 700;
@@ -1267,7 +1255,7 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.02em;}
 
 .Typography--subhead a, .Typography--subhead {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1.0666666667rem;
 	font-weight: 400;
@@ -1276,7 +1264,7 @@ h1 a, h2 a, h3 a {
 
 .entry-meta, .Typography--subhead--colorContrast {
 	opacity: 0.87; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1.0666666667rem;
 	font-weight: 400;
@@ -1315,7 +1303,7 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.04em;}
 
 .Typography--caption {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8666666667rem;
 	font-weight: 400;
@@ -1324,7 +1312,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--caption--colorContrast {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8666666667rem;
 	font-weight: 400;
@@ -1332,7 +1320,7 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.08em;}
 
 .Typography--menu {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-size: 0.9333333333rem;
 	font-weight: 700;
@@ -1341,7 +1329,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--menu--colorContrast {
 	opacity: 0.87; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-size: 0.9333333333rem;
 	font-weight: 700;
@@ -1349,7 +1337,7 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.04em;}
 
 .Typography--button {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-size: 0.9333333333rem;
 	font-weight: 400;
@@ -1359,7 +1347,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--button--colorContrast {
 	opacity: 0.87; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-size: 0.9333333333rem;
 	font-weight: 400;
@@ -1399,7 +1387,7 @@ h1 a, h2 a, h3 a {
 
 .text-minor {
 	opacity: 0.54; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8666666667rem;
 	font-weight: 400;
@@ -1407,21 +1395,16 @@ h1 a, h2 a, h3 a {
 	letter-spacing: 0.08em;}
 
 .loop-title {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 45px;
 	font-size: 3rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
+	line-height: 1.3333333333; }
 
 .entry-title {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 34px;
 	font-size: 2.2666666667rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
+	line-height: 1.1764705882; }
 
 .widget-title {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -1462,7 +1445,7 @@ body {
     #HEADINGS
 \*------------------------------------*/
 h1 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
 	font-size: 3.7333333333rem;
 	font-weight: 400;
@@ -1470,21 +1453,16 @@ h1 {
 	letter-spacing: -0.02em; }
 
 h2 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 45px;
 	font-size: 3rem;
-	font-weight: 400; 
-	line-height: 1.3333333333;}
+	line-height: 1.3333333333; }
 
 h3 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 34px;
 	font-size: 2.2666666667rem;
-	font-weight: 400; 
-	line-height: 1.1764705882;}
+	line-height: 1.1764705882; }
 
 h4 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -1493,7 +1471,6 @@ h4 {
 	-moz-osx-font-smoothing: grayscale; }
 
 h5 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
 	font-size: 20px;
 	font-size: 1.3333333333rem;
 	font-weight: 700;
@@ -1501,7 +1478,7 @@ h5 {
 	letter-spacing: 0.02em; }
 
 h6 {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1.0666666667rem;
 	font-weight: 400;
@@ -1511,6 +1488,10 @@ h6 {
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
+a {
+	-webkit-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out; }
+
 /*------------------------------------*\
     #LISTS
 \*------------------------------------*/
@@ -1713,8 +1694,8 @@ img {
 
 a img {
 	opacity: 0.85;
-	-webkit-transition: all 0.5s ease-in-out;
-	        transition: all 0.5s ease-in-out; }
+	-webkit-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out; }
 
 a:hover img, a:focus img {
 	opacity: 1; }
@@ -1889,6 +1870,9 @@ img.abraham-medium, img.abraham-full {
  * The primary menu is shown at the top of the page.  The secondary menu is shown in the header if the
  * user has selected to display header text.
  */
+.menu__primary {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
 .menu__primary li a {
 	font-weight: 400; }
 
@@ -2013,8 +1997,8 @@ img.abraham-medium, img.abraham-full {
 		position: absolute;
 		z-index: 1;
 		opacity: 0;
-		-webkit-transition: all 0.3s ease-in-out;
-		        transition: all 0.3s ease-in-out; }
+		-webkit-transition: all 0.2s ease-in-out;
+		        transition: all 0.2s ease-in-out; }
 	.menu li:hover > ul, .menu li:focus > ul, .menu li.focus > ul {
 		visibility: visible; 
 		opacity: 1;}
@@ -2100,22 +2084,19 @@ img.abraham-medium, img.abraham-full {
 		width: 230px;
 		margin: 20px 0 0; }
 	.menu__primary ul ul {
-		top: 43px; }
+		z-index: 5; 
+		top: 50px;}
 	.menu__secondary ul ul {
 		top: 33px; }
 	.menu__primary .menu-items li:hover > ul, .menu__primary .menu-items li:focus > ul, .menu__primary .menu-items li.focus > ul, .menu__secondary .menu-items li:hover > ul, .menu__secondary .menu-items li:focus > ul, .menu__secondary .menu-items li.focus > ul {
 		margin: 0; }
-	.ltr .menu__primary ul ul, .ltr .menu__secondary ul ul, .ltr .menu__primary li:hover > ul, .ltr .menu__primary li:focus > ul, .ltr .menu__primary li.focus > ul, .ltr .menu__secondary li:hover > ul, .ltr .menu__secondary li:focus > ul, .ltr .menu__secondary li.focus > ul {
-		margin-left: -20px; }
-	.rtl .menu__primary ul ul, .rtl .menu__secondary ul ul, .rtl .menu__primary li:hover > ul, .rtl .menu__primary li:focus > ul, .rtl .menu__primary li.focus > ul, .rtl .menu__secondary li:hover > ul, .rtl .menu__secondary li:focus > ul, .rtl .menu__secondary li.focus > ul {
-		margin-right: -20px; }
 	.menu__primary.menu li li:hover > ul, .menu__primary.menu li li:focus > ul, .menu__primary.menu li li.focus > ul, .menu__secondary.menu li li:hover > ul, .menu__secondary.menu li li:focus > ul, .menu__secondary.menu li li.focus > ul {
 		margin: 0; }
 	.menu__primary ul ul ul, .menu__secondary ul ul ul {
-		top: 0;
+		top: 10px;
 		margin: 0; }
 	.ltr .menu__primary ul ul ul, .ltr .menu__secondary ul ul ul {
-		left: 236px;
+		left: 185px;
 		margin-left: 20px; }
 	.rtl .menu__primary ul ul ul, .rtl .menu__secondary ul ul ul {
 		right: 236px;
@@ -2164,10 +2145,14 @@ img.abraham-medium, img.abraham-full {
 		border-radius: 50%;
 		background-color: #70ab88 !important;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
-		-webkit-transition: background-color 0.3s ease-in-out, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-		        transition: background-color 0.3s ease-in-out, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
-	.menu__primary .search-toggle:hover, .menu__primary .search-toggle:focus {
+		-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+		-webkit-transition-duration: 0.2s;
+		        transition-duration: 0.2s;}
+	.menu__primary .search-toggle:hover {
 		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23); }
+	.menu__primary .search-toggle:focus {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); }
 	.ltr .menu__primary .search-toggle {
 		float: left;
 		margin-right: -7px; }
@@ -2692,7 +2677,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .btn {
 	border: 0;
 	border-radius: 2px;
 	outline: 0 !important; 
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-size: 0.9333333333rem;
 	font-weight: 400;
@@ -2701,8 +2686,10 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .btn {
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	text-transform: uppercase;
-	-webkit-transition: background-color 0.3s ease-in-out, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-	        transition: background-color 0.3s ease-in-out, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);}
+	-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition-duration: 0.2s;
+	        transition-duration: 0.2s;}
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); }
@@ -2715,11 +2702,14 @@ input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focu
 \*------------------------------------*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
 	display: inline-block;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	width: 100%;
 	padding: 0.5em 0.6em;
 	border: 1px solid #e0e0e0;
-	border-radius: 2px;}
+	border-radius: 2px;
+	background: #e0e0e0;
+	-webkit-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out; }
 
 /*
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
@@ -2737,11 +2727,17 @@ input:not([type]) {
 input[type="color"] {
 	padding: 0.2em 0.5em; }
 
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="week"]:hover, input[type="number"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="color"]:hover, select:hover, textarea:hover {
+	border-color: #f5f5f5; 
+	background: #f5f5f5;}
+
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, select:focus, textarea:focus {
 	/* IE6-9 */
-	border-color: #3474c2; 
+	border-color: #a7c4e8; 
 	outline: 0;
-	outline: thin dotted \9;}
+	outline: thin dotted \9;
+	color: #616161;
+	background: #fafafa;}
 
 /*
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
@@ -2782,12 +2778,12 @@ input[readonly], select[readonly], textarea[readonly] {
 	color: #777;
 	background: #eee;}
 
-input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
-	border-color: #ee5f5b; 
+input:invalid, textarea:invalid, select:invalid, input:hover:invalid, textarea:hover:invalid, select:hover:invalid, input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+	border-color: #ec7063; 
 	color: #b94a48;}
 
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
-	border-color: #e9322d; }
+	border-color: #ec7063; }
 
 input[type="file"]:focus:invalid:focus, input[type="radio"]:focus:invalid:focus, input[type="checkbox"]:focus:invalid:focus {
 	outline-color: #e9322d; }
@@ -3113,33 +3109,19 @@ li.ping, .comment-content {
 /**
  * Handles the output of the header content.
  */
-.site-branding {
-	max-width: 80%;
-	margin-top: 10px; }
-
-.ltr .site-branding {
-	float: left; }
-
-.rtl .site-branding {
-	float: right; }
-
-@media only screen and (min-width: 800px) {
-	.site-branding {
-		width: 42.85%;
-		max-width: 450px; } }
-
-.site-title {
+#site-title {
 	margin: 0;
 	padding: 0; }
 
-.site-title a:hover, .site-title a:focus {
+#site-title a:hover, #site-title a:focus {
 	opacity: 0.75; }
 
-.site-description {
+#site-description {
+	margin: 0;
 	padding: 0;
-	opacity: 0.5; }
+	opacity: 0.7; }
 
-.en .site-description {
+.en #site-description {
 	font-style: italic; }
 
 .header-image {
@@ -3153,17 +3135,62 @@ li.ping, .comment-content {
 	position: relative; 
 	z-index: 2;}
 
+.site-branding {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	width: 100%;
+	max-width: 100%;
+
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	        align-items: center; }
+
+.title-wrap h1 {
+	font-size: 24px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.6666666667;
+
+	-moz-osx-font-smoothing: grayscale; }
+
+.title-wrap h2 {
+	opacity: 0.87; 
+	font-size: 20px;
+	font-size: 1.3333333333rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em;}
+
+.logo img {
+	max-width: 80px; }
+
 .home .content-wrap {
 	margin-top: 300px; }
 .home .site-branding {
 	position: absolute;
-	width: 100%;
-	max-width: 100%;
 	margin-top: -213px;
-	text-align: center; }
+
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	        justify-content: center; }
+.home .title-wrap h1 {
+	font-size: 45px;
+	font-size: 3rem;
+	line-height: 1.3333333333; }
+.home .title-wrap h2 {
+	opacity: 0.54; 
+	font-size: 34px;
+	font-size: 2.2666666667rem;
+	line-height: 1.1764705882;}
+.home .logo img {
+	max-width: 150px; }
 
 /*------------------------------------*\
-    #HEADER
+    #WIDGETS
 \*------------------------------------*/
 .sidebar__subsidiary {
 	padding-top: 40px;
@@ -3184,6 +3211,9 @@ li.ping, .comment-content {
 	line-height: 16px;
 	vertical-align: bottom;
 	text-transform: uppercase; }
+
+#reply-title > .wrap, .widget-title > .wrap {
+	border-radius: 2px 2px 0 0; }
 
 .widget-title > .wrap a {
 	text-decoration: underline; }
@@ -3477,7 +3507,7 @@ li.ping, .comment-content {
 	width: 91.6666666% !important; }
 
 /*------------------------------------*\
-    #MENUS
+    #THEME-EDITS
 \*------------------------------------*/
 /**
  * 2.1 - Font Family Definitions
@@ -3491,17 +3521,13 @@ li.ping, .comment-content {
  * Make sure to include the `.font-*` class as this will maintain forward compatibility with future
  * changes in the parent theme.
  */
-/* ====== Primary Font ====== */
-.font-primary, body, input, textarea, .label-checkbox, .label-radio, .required, .site-description, #reply-title small {
-	font-family: "Roboto Condensed", "Helvetica Neue", sans-serif; }
-
 /* ====== Secondary Font ====== */
-.font-secondary, dt, th, legend, label, input[type="submit"], input[type="reset"], input[type="button"], button, select, option, .wp-caption-text, .gallery-caption, .mejs-controls, .wp-playlist-item-meta, .entry-byline, .entry-footer, .chat-author cite, .chat-author, .comment-meta, .menu, .breadcrumb-trail, .media-info .prep, .comment-reply-link, .comment-reply-login, .clean-my-archives .day, .whistle-title {
-	font-family: "Open Sans", Arial, sans-serif; }
+.font-secondary, body {
+	font-family: "Fira Sans", Arial, sans-serif; }
 
 /* ====== Headlines Font ====== */
 .font-headlines, h1, h2, h3, h4, h5, h6 {
-	font-family: "Open Sans", Arial, sans-serif; }
+	font-family: "Raleway", "Helvetica Neue", sans-serif; }
 
 /**
  * 2.2 - Color Definitions
@@ -3566,15 +3592,6 @@ tr, thead, tfoot, td {
 
 td {
 	background: #f5f5f5; }
-
-input[type="number"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea, select {
-	border-color: #e0e0e0; 
-	background: #f5f5f5;}
-
-input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus, select:focus {
-	border-color: #578ed2; 
-	color: #616161;
-	background: #fbfbfb;}
 
 .wp-caption .wp-caption-text {
 	color: #e0e0e0;
@@ -3652,7 +3669,7 @@ input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-loc
 li.ping, .comment-content {
 	background: #f5f5f5; }
 
-.site-footer a {
+.site-footer, .site-footer a {
 	color: rgba(255, 255, 255, 0.75); }
 
 .clean-my-archives .comments-number {
@@ -3701,20 +3718,20 @@ li.ping, .comment-content {
 @media only screen and (min-width: 800px) {
 	.menu li > ul::before {
 		border-right-color: transparent;
-		border-bottom-color: #212121;
+		border-bottom-color: #616161;
 		border-left-color: transparent; }
 	.menu li li > ul::before {
 		border-top-color: transparent;
 		border-bottom-color: transparent; }
 	.ltr .menu li li > ul::before {
-		border-right-color: #212121; }
+		border-right-color: #616161; }
 	.rtl .menu li li > ul::before {
-		border-left-color: #212121; }
+		border-left-color: #616161; }
 	.menu__primary li li a, .menu__secondary li li a {
-		border-color: #212121; 
-		background: #212121;}
+		border-color: #616161; 
+		background: #616161;}
 	.menu__primary ul ul li a:hover, .menu__secondary ul ul li a:hover, .menu__primary ul ul li a:focus, .menu__secondary ul ul li a:focus {
-		background: #212121; }
+		background: #616161; }
 	.menu__primary .search-form .search-toggle::before {
 		color: rgba(255, 255, 255, 0.75); }
 	.menu__primary .search-toggle:hover::before, .menu__primary .search-toggle:focus::before {
@@ -3804,6 +3821,13 @@ h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, field
 	display: table;
 	clear: both; 
 	content: "";}
+
+body.custom-background {
+	background-color: #7fa9dd; 
+	background-size: cover;}
+
+.site-container {
+	background-color: rgba(255, 255, 255, 0.69); }
 
 /*
  * This should be last

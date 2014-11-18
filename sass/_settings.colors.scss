@@ -16,13 +16,13 @@ $color-gray-lighter: #F5F5F5;
 $color-white: #fff;
 $color-offwhite: #FbFbFb;
 
-$color-primary:         #f43059;
+$color-primary:         #7FA9DD;
 
 $color-brand:               #7FA9DD;
 $color-brand-dark:          darken($color-brand, 10);
 $color-brand-light:         lighten($color-brand, 10);
 $color-brand-secondary:     #70AB88;
-$color-brand-secondary-light:         lighten($color-brand-secondary, 10);
+$color-brand-secondary-light:     lighten($color-brand-secondary, 10);
 $color-pink:                $color-brand;
 $color-yellow:              #F9E653;
 $color-gray-ui:             #bdc3c7;
@@ -71,7 +71,8 @@ $color-page-head:               #fff;
 $color-page-head-background:    $color-gray-light;
 
 // Site nav
-$color-site-nav:    $base-text-color;
+$color-nav-primary:    $color-gray-dark;
+$color-nav-secondary:  $base-text-color;
 
 // Page foot
 $color-page-foot:               $color-highlight;
@@ -97,3 +98,9 @@ $color-band-tint-background:        $color-tint;
 // Buttons
 $color-btn-text:        #fff;
 $color-btn-background:  $color-pink;
+
+//Alerts
+$color-error : #ec7063;
+$color-valid : #58d68d;
+$color-warning : #f4d313;
+$color-information : #5dade2;

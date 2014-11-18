@@ -2,13 +2,7 @@
     #LINKS
 \*------------------------------------*/
 
-// a {
-//     text-decoration: none;
-//     color: $color-links;
+a {
+	@include base-transition;
+}
 
-//     &:hover,
-//     &:active {
-//         color: $color-links-hover
-//     }
-
-// }

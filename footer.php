@@ -13,6 +13,9 @@
 				<?php hybrid_get_menu( 'social' ); ?>
 
 				<p class="credit">
+								<?php if ( get_theme_mod( 'footer-textarea', false ) ) {
+								echo get_theme_mod( 'footer-textarea' );
+								} ?>
 					<?php printf(
 						/* Translators: 1 is current year, 2 is site name/link, 3 is WordPress name/link, and 4 is theme name/link. */
 						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s and %4$s.', 'abraham' ),

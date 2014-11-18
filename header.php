@@ -43,8 +43,14 @@
 				<?php if ( display_header_text() ) : ?>
 
 					<div <?php hybrid_attr( 'branding' ); ?>>
-						<?php hybrid_site_title(); ?>
-						<?php hybrid_site_description(); ?>
+
+						<?php if ( get_theme_mod( 'logo', false ) ) {
+								echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="logo" rel="home"><img src="' . esc_url( get_theme_mod( 'logo' ) ) . '"></a>';
+						}?>
+						<div class="title-wrap">
+							<?php hybrid_site_title(); ?>
+							<?php hybrid_site_description(); ?>
+						</div>
 					</div><!-- #branding -->
 
 				<?php endif; // End check for header text. ?>

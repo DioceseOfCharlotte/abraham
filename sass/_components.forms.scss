@@ -20,11 +20,12 @@ select,
 textarea {
     padding: 0.5em 0.6em;
     display: inline-block;
+    background: $color-gray-light;
     width: 100%;
     border: 1px solid $color-gray-light;
-    //box-shadow: inset 0 1px 3px #ddd;
     border-radius: $base-radius;
     box-sizing: border-box;
+    @include base-transition;
 }
 
 /*
@@ -35,7 +36,6 @@ input:not([type]) {
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid $color-gray-light;
-    //box-shadow: inset 0 1px 3px #ddd;
     border-radius: $base-radius;
     box-sizing: border-box;
 }
@@ -47,6 +47,25 @@ input[type="color"] {
     padding: 0.2em 0.5em;
 }
 
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="date"]:hover,
+input[type="month"]:hover,
+input[type="time"]:hover,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:hover,
+input[type="week"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="color"]:hover,
+select:hover,
+textarea:hover {
+	background:   $color-gray-lighter;
+	border-color: $color-gray-lighter;
+}
 
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -64,9 +83,11 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
+	color:        $color-gray-dark;
+	background:   lighten($color-gray-lighter, 2);
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    border-color: $color-links-hover;
+    border-color: lighten($color-brand, 10);
 }
 
 /*
@@ -129,16 +150,22 @@ textarea[readonly] {
     border-color: $color-gray-light;
 }
 
+input:invalid,
+textarea:invalid,
+select:invalid,
+input:hover:invalid,
+textarea:hover:invalid,
+select:hover:invalid,
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
     color: #b94a48;
-    border-color: #ee5f5b;
+    border-color: $color-error;
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
-    border-color: #e9322d;
+    border-color: $color-error;
 }
 input[type="file"]:focus:invalid:focus,
 input[type="radio"]:focus:invalid:focus,

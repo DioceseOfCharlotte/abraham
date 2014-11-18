@@ -1,6 +1,6 @@
 <?php
 /**
- * Sets up custom filters and actions for the theme.  This does things like sets up sidebars, menus, scripts, 
+ * Sets up custom filters and actions for the theme.  This does things like sets up sidebars, menus, scripts,
  * and lots of other awesome stuff that WordPress themes do.
  *
  * @package    Abraham
@@ -225,7 +225,7 @@ function abraham_mce_css( $mce_css ) {
 }
 
 /**
- * Modifies the theme layout on attachment pages.  If a specific layout is not selected and the global layout 
+ * Modifies the theme layout on attachment pages.  If a specific layout is not selected and the global layout
  * isn't set to '1c-narrow', this filter will change the layout to '1c'.
  *
  * @since  1.0.0
@@ -262,7 +262,7 @@ function abraham_status_content( $content ) {
 }
 
 /**
- * Filter's Hybrid Core's infinity symbol for aside posts.  This changes the symbol to a comments link if 
+ * Filter's Hybrid Core's infinity symbol for aside posts.  This changes the symbol to a comments link if
  * the post's comments are open or if the post has comments.
  *
  * @since  1.0.0
@@ -291,11 +291,11 @@ function abraham_excerpt_length( $length ) {
 }
 
 /**
- * Adds a custom class to the 'subsidiary' sidebar.  This is used to determine the number of columns used to 
+ * Adds a custom class to the 'subsidiary' sidebar.  This is used to determine the number of columns used to
  * display the sidebar's widgets.  This optimizes for 1, 2, and 3 columns or multiples of those values.
  *
- * Note that we're using the global $sidebars_widgets variable here. This is because core has marked 
- * wp_get_sidebars_widgets() as a private function. Therefore, this leaves us with $sidebars_widgets for 
+ * Note that we're using the global $sidebars_widgets variable here. This is because core has marked
+ * wp_get_sidebars_widgets() as a private function. Therefore, this leaves us with $sidebars_widgets for
  * figuring out the widget count.
  * @link http://codex.wordpress.org/Function_Reference/wp_get_sidebars_widgets
  *
@@ -341,7 +341,7 @@ function abraham_get_calendar( $calendar ) {
 }
 
 /**
- * Adds a featured image (if one exists) next to the audio player.  Also adds a section below the player to 
+ * Adds a featured image (if one exists) next to the audio player.  Also adds a section below the player to
  * display the audio file information (toggled by custom JS).
  *
  * @since  1.0.0
@@ -368,7 +368,7 @@ function abraham_audio_shortcode( $html, $atts, $audio, $post_id ) {
 		$extensions = join( '|', wp_get_audio_extensions() );
 
 		preg_match(
-			'/(src|' . $extensions . ')=[\'"](.+?)[\'"]/i', 
+			'/(src|' . $extensions . ')=[\'"](.+?)[\'"]/i',
 			preg_replace( '/(\?_=[0-9])/i', '', $html ),
 			$matches
 		);
@@ -381,13 +381,13 @@ function abraham_audio_shortcode( $html, $atts, $audio, $post_id ) {
 	if ( !empty( $attachment_id ) ) {
 
 		/* Get the attachment's featured image. */
-		$image = get_the_image( 
-			array( 
-				'post_id'      => $attachment_id,  
+		$image = get_the_image(
+			array(
+				'post_id'      => $attachment_id,
 				'image_class'  => 'audio-image',
-				'link_to_post' => is_attachment() ? false : true, 
-				'echo'         => false 
-			) 
+				'link_to_post' => is_attachment() ? false : true,
+				'echo'         => false
+			)
 		);
 
 		/* If there's no attachment featured image, see if there's one for the post. */
@@ -440,7 +440,7 @@ function abraham_video_shortcode( $html, $atts, $video ) {
 		$extensions = join( '|', wp_get_video_extensions() );
 
 		preg_match(
-			'/(src|' . $extensions . ')=[\'"](.+?)[\'"]/i', 
+			'/(src|' . $extensions . ')=[\'"](.+?)[\'"]/i',
 			preg_replace( '/(\?_=[0-9])/i', '', $html ),
 			$matches
 		);
@@ -464,8 +464,8 @@ function abraham_video_shortcode( $html, $atts, $video ) {
 }
 
 /**
- * Featured image for self-hosted videos.  Checks the vidoe attachment for sub-attachment images.  If 
- * none exist, checks the current post (if in The Loop) for its featured image.  If an image is found, 
+ * Featured image for self-hosted videos.  Checks the vidoe attachment for sub-attachment images.  If
+ * none exist, checks the current post (if in The Loop) for its featured image.  If an image is found,
  * it's used as the "poster" attribute in the [video] shortcode.
  *
  * @since  1.0.0
@@ -506,13 +506,13 @@ function abraham_video_atts( $out ) {
 		if ( !empty( $attachment_id ) ) {
 
 			/* Get the attachment's featured image. */
-			$image = get_the_image( 
-				array( 
-					'post_id'      => $attachment_id, 
+			$image = get_the_image(
+				array(
+					'post_id'      => $attachment_id,
 					'size'         => 'full',
 					'format'       => 'array',
 					'echo'         => false
-				) 
+				)
 			);
 		}
 
@@ -526,4 +526,24 @@ function abraham_video_atts( $out ) {
 	}
 
 	return $out;
+}
+
+
+
+if ( file_exists ( get_template_directory() . '/inc/customizer-library/customizer-library.php' ) ) :
+// Helper library for the theme customizer.
+require get_template_directory() . '/inc/customizer-library/customizer-library.php';
+// Define options for the theme customizer.
+require get_template_directory() . '/inc/customizer-options.php';
+// Output inline styles based on theme customizer selections.
+require get_template_directory() . '/inc/styles.php';
+// Additional filters and actions based on theme customizer selections.
+require get_template_directory() . '/inc/mods.php';
+
+
+else :
+add_action( 'customizer-library-notices', 'demo_customizer_library_notice' );
+endif;
+function demo_customizer_library_notice() {
+	_e( '<p>Notice: The "customizer-library" sub-module is not loaded.</p><p>Please add it to the "inc" directory: <a href="https://github.com/devinsays/customizer-library">https://github.com/devinsays/customizer-library</a>.</p><p>The demo, including submodules, can also be installed via Git: "git clone --recursive git@github.com:devinsays/customizer-library-demo".</p>', 'demo' );
 }

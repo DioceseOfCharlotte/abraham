@@ -14,7 +14,7 @@ img {
 
 a img {
 	opacity: 0.85;
-	transition: all 0.5s ease-in-out;
+	@include base-transition;
 }
 
 a:hover img,

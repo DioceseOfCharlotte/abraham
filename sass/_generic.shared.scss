@@ -51,3 +51,12 @@ li.ping::after,
 
 
 
+body.custom-background {
+background-size: cover;
+background-color: $color-brand;
+//background-blend-mode: color-dodge;
+}
+
+.site-container {
+background-color: rgba(255, 255, 255, 0.69);
+}

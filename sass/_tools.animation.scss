@@ -27,3 +27,8 @@ $animation-curve-default: $animation-curve-fast-out-slow-in;
   transition-duration: $duration;
   transition-timing-function: $animation-curve-default;
 }
+
+
+@mixin base-transition($attr:all, $speed:0.2s) {
+  transition: $attr $speed ease-in-out;
+}

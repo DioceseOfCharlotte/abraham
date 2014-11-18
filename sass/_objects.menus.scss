@@ -27,10 +27,7 @@
 		}
 
 			.rtl .menu-items__sub-terms::before {
-				-webkit-transform: scaleX(-1);
-				   -moz-transform: scaleX(-1);
-				     -o-transform: scaleX(-1);
-				        transform: scaleX(-1);
+				transform: scaleX(-1);
 
 				       -ms-filter: "FlipH";
 				           filter: FlipH;
@@ -113,7 +110,9 @@
  * user has selected to display header text.
  */
 
-
+.menu__primary {
+	@include shadow-z1();
+}
 .menu__primary li a {
 	font-weight: 400;
 }
@@ -279,8 +278,7 @@
 				visibility: hidden;
 				position:   absolute;
 				z-index:    1;
-
-				transition: all 0.3s ease-in-out;
+				@include base-transition;
 			}
 
 			.menu li:hover > ul,
@@ -395,7 +393,10 @@
 				margin: 20px 0 0;
 			}
 
-			.menu__primary ul ul   { top: 43px; }
+			.menu__primary ul ul   {
+				top: 50px;
+				z-index: 5;
+			}
 			.menu__secondary ul ul { top: 33px; }
 
 			.menu__primary   .menu-items li:hover > ul,
@@ -405,23 +406,23 @@
 			.menu__secondary .menu-items li:focus > ul,
 			.menu__secondary .menu-items li.focus > ul { margin: 0; }
 
-				.ltr .menu__primary   ul ul,
-				.ltr .menu__secondary ul ul,
-				.ltr .menu__primary   li:hover > ul,
-				.ltr .menu__primary   li:focus > ul,
-				.ltr .menu__primary   li.focus > ul,
-				.ltr .menu__secondary li:hover > ul,
-				.ltr .menu__secondary li:focus > ul,
-				.ltr .menu__secondary li.focus > ul { margin-left: -$base-line-height; }
+				// .ltr .menu__primary   ul ul,
+				// .ltr .menu__secondary ul ul,
+				// .ltr .menu__primary   li:hover > ul,
+				// .ltr .menu__primary   li:focus > ul,
+				// .ltr .menu__primary   li.focus > ul,
+				// .ltr .menu__secondary li:hover > ul,
+				// .ltr .menu__secondary li:focus > ul,
+				// .ltr .menu__secondary li.focus > ul { margin-left: -$base-line-height; }
 
-				.rtl .menu__primary   ul ul,
-				.rtl .menu__secondary ul ul,
-				.rtl .menu__primary   li:hover > ul,
-				.rtl .menu__primary   li:focus > ul,
-				.rtl .menu__primary   li.focus > ul,
-				.rtl .menu__secondary li:hover > ul,
-				.rtl .menu__secondary li:focus > ul,
-				.rtl .menu__secondary li.focus > ul { margin-right: -$base-line-height; }
+				// .rtl .menu__primary   ul ul,
+				// .rtl .menu__secondary ul ul,
+				// .rtl .menu__primary   li:hover > ul,
+				// .rtl .menu__primary   li:focus > ul,
+				// .rtl .menu__primary   li.focus > ul,
+				// .rtl .menu__secondary li:hover > ul,
+				// .rtl .menu__secondary li:focus > ul,
+				// .rtl .menu__secondary li.focus > ul { margin-right: -$base-line-height; }
 
 				.menu__primary.menu   li li:hover > ul,
 				.menu__primary.menu   li li:focus > ul,
@@ -432,12 +433,12 @@
 
 				.menu__primary   ul ul ul,
 				.menu__secondary ul ul ul {
-					top:    0;
+					top:    10px;
 					margin: 0;
 				}
 
 					.ltr .menu__primary   ul ul ul,
-					.ltr .menu__secondary ul ul ul { left: 236px; margin-left: $base-spacing-unit; }
+					.ltr .menu__secondary ul ul ul { left: 185px; margin-left: $base-spacing-unit; }
 
 					.rtl .menu__primary   ul ul ul,
 					.rtl .menu__secondary ul ul ul { right: 236px; margin-right: $base-spacing-unit; }
@@ -505,10 +506,12 @@
 			border-radius: 50%;
 			position: relative;
 			@include shadow-z2();
-			transition: background-color 0.3s ease-in-out,
-			box-shadow .28s cubic-bezier(0.4,0,.2,1);
-			&:hover, &:focus {
+			@include material-animation-default;
+			&:hover {
 				@include shadow-z3();
+			}
+			&:focus {
+				@include shadow-z2();
 			}
 		}
 

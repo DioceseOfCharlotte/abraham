@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #HEADER
+    #WIDGETS
 \*------------------------------------*/
 
 .sidebar {
@@ -32,6 +32,10 @@
 				font-weight:    700;
 				line-height:    16px;
 				text-transform: uppercase;
+			}
+
+			#reply-title > .wrap, .widget-title > .wrap {
+				border-radius: $base-radius $base-radius 0 0;
 			}
 
 			.widget-title > .wrap a { text-decoration: underline; }

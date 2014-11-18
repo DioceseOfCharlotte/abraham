@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #MENUS
+    #THEME-EDITS
 \*------------------------------------*/
 
 /**
@@ -15,49 +15,11 @@
  * changes in the parent theme.
  */
 
-/* ====== Primary Font ====== */
 
-.font-primary,
-body,
-input,
-textarea,
-.label-checkbox,
-.label-radio,
-.required,
-.site-description,
-#reply-title small {
-	font-family: $font-primary;
-}
 
 /* ====== Secondary Font ====== */
 
-.font-secondary,
-dt,
-th,
-legend,
-label,
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
-select,
-option,
-.wp-caption-text,
-.gallery-caption,
-.mejs-controls,
-.wp-playlist-item-meta,
-.entry-byline,
-.entry-footer,
-.chat-author cite,
-.chat-author,
-.comment-meta,
-.menu,
-.breadcrumb-trail,
-.media-info .prep,
-.comment-reply-link,
-.comment-reply-login,
-.clean-my-archives .day,
-.whistle-title {
+.font-secondary, body {
 	font-family: $font-secondary;
 }
 
@@ -70,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-secondary;
+	font-family: $font-primary;
 }
 
 /**
@@ -194,7 +156,7 @@ select,
 .mejs-overlay-play .mejs-overlay-button::after,
 .mejs-time-rail .mejs-time-float,
 .wp-playlist-dark {
-	background: $color-gray-dark;
+	background: $color-nav-primary;
 }
 
 /* ====== background: transparent ====== */
@@ -244,44 +206,7 @@ td { border-color: $color-gray-lighter; }
 
 td { background: $color-gray-lighter; }
 
-input[type="number"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-textarea,
-select {
-	background: $color-gray-lighter;
-	border-color: $color-gray-light;
-}
 
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus,
-textarea:focus,
-select:focus {
-	color:        $color-gray-dark;
-	background:   $color-offwhite;
-	border-color: $color-links;
-}
 
 .wp-caption .wp-caption-text {
 	color:      $color-gray-light;
@@ -364,7 +289,7 @@ select:focus {
 li.ping,
 .comment-content { background: $color-gray-lighter; }
 
-.site-footer a { color: rgba( 255, 255, 255, 0.75 ); }
+.site-footer, .site-footer a { color: rgba( 255, 255, 255, 0.75 ); }
 
 .clean-my-archives .comments-number { color: $color-gray; }
 
@@ -414,7 +339,7 @@ li.ping,
 
 		.menu li > ul::before {
 			border-right-color:  transparent;
-			border-bottom-color: $color-gray-darker;
+			border-bottom-color: $color-nav-primary;
 			border-left-color:   transparent;
 		}
 
@@ -423,19 +348,19 @@ li.ping,
 			border-bottom-color: transparent;
 		}
 
-		.ltr .menu li li > ul::before { border-right-color: $color-gray-darker; }
-		.rtl .menu li li > ul::before { border-left-color:  $color-gray-darker; }
+		.ltr .menu li li > ul::before { border-right-color: $color-nav-primary; }
+		.rtl .menu li li > ul::before { border-left-color:  $color-nav-primary; }
 
 		.menu__primary   li li a,
 		.menu__secondary li li a {
-			background:   $color-gray-darker;
-			border-color: $color-gray-darker;
+			background:   $color-nav-primary;
+			border-color: $color-nav-primary;
 		}
 
 		.menu__primary   ul ul li a:hover,
 		.menu__secondary ul ul li a:hover,
 		.menu__primary   ul ul li a:focus,
-		.menu__secondary ul ul li a:focus { background: $color-gray-darker; }
+		.menu__secondary ul ul li a:focus { background: $color-nav-primary; }
 
 		.menu__primary .search-form .search-toggle::before {
 			color: rgba( 255, 255, 255, 0.75 );
