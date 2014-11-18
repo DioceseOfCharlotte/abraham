@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+
+/**
+ * Breadcrumbs
+ */
+
+.breadcrumb-trail {
+	margin: -$base-spacing-unit 0 $base-spacing-unit 0;
+	//font-size:  1rem;
+
+
+	.trail-end {
+		opacity: 0.5;
+	}
+
+	.sep {
+		display: inline-block;
+		padding: 0 5px;
+		opacity: 0.75;
+	}
+
+	a {
+		display: inline-block;
+		opacity: 0.75;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+}

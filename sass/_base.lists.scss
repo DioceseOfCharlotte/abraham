@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+
+.ltr ul,
+.ltr ol { margin-left: $base-spacing-unit-lg; }
+
+.rtl ul,
+.rtl ol { margin-right: $base-spacing-unit-lg; }
+
+ol ol { list-style: upper-roman; }
+
+ol ol ol { list-style: lower-roman; }
+
+ol ol ol ol { list-style: upper-alpha; }
+
+ol ol ol ol ol { list-style: lower-alpha; }
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+.comment-content li ul,
+.comment-content li ol { margin-bottom: 0; }
+
+
+dl {
+	margin: 0 0 $base-spacing-unit;
+}
+
+	dt {
+		font-weight: bold;
+	}
+
+	.ltr dt {
+		margin-left: $base-spacing-unit-sm;
+	}
+	.rtl dt {
+		margin-right: $base-spacing-unit-sm;
+	}
+
+	.ltr dd {
+		margin-left: $base-spacing-unit;
+	}
+	.rtl dd {
+		margin-right: $base-spacing-unit;
+	}
+
+	dd + dd { margin-top: $base-spacing-unit-sm; }
+
+	dd + dt { margin-top: $base-spacing-unit; }
+
+
+
+.ltr .widget ul { margin-left:  $base-spacing-unit; }
+.rtl .widget ul { margin-right: $base-spacing-unit; }
+
+ul li { padding: 0; margin: 0; }
+ul a { padding: 5px; display: block; }

@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+
+/**
+ * Makes images fit within it's fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a img {
+	opacity: 0.85;
+	transition: all 0.5s ease-in-out;
+}
+
+a:hover img,
+a:focus img {
+	opacity: 1;
+}
+
+/* === Image sizes === */
+
+@media only screen and ( min-width: 700px ) {
+	.ltr img.portrait.abraham-full {
+		float:     right;
+		max-width: 33%;
+		margin:    0 0 $base-spacing-unit $base-spacing-unit;
+	}
+
+	.rtl img.portrait.abraham-full {
+		float:     left;
+		max-width: 33%;
+		margin:    0 $base-spacing-unit $base-spacing-unit 0;
+	}
+}
+
+img.abraham-medium,
+img.abraham-full {
+  margin: 0 0 $base-spacing-unit;
+}
+
+/* === Captions === */
+
+.wp-caption { position: relative; }
+
+	.wp-caption .wp-caption-text {
+		position:   absolute;
+		bottom:     $base-spacing-unit;
+		padding:    $base-spacing-unit-sm;
+		font-size:  0.9375rem;
+	}
+
+		.ltr .wp-caption .wp-caption-text { margin-right: 1.5rem; }
+		.rtl .wp-caption .wp-caption-text { margin-left:  1.5rem; }
+
+/* === Gallery === */
+
+.main .gallery { margin-bottom: $base-spacing-unit; }
+
+	.gallery .gallery-item { margin-bottom: $base-spacing-unit-sm; }
+
+			.gallery .gallery-icon a img {
+				padding: 9px;
+				border:  1px solid;
+			}
+
+		.gallery .gallery-caption { font-size: 0.9375rem; }
+
+			.singular-attachment .gallery-caption { display: none; }
+
+		@media only screen and ( max-width: 481px ) {
+
+			.gallery .gallery-row .gallery-item { float: none; width: 100%; }
+
+			.gallery .gallery-icon img { max-width: 100%; }
+		}
+
+/* === Avatars === */
+
+.avatar {
+	width:         60px;
+	height:        60px;
+	margin:        0 0 $base-spacing-unit;
+	border:        1px solid;
+	border-radius: 50%;
+}
+
+	.ltr .avatar { float: left;  margin-right: $base-spacing-unit; }
+	.rtl .avatar { float: right; margin-left:  $base-spacing-unit; }
+
+	/* === Embeds === */
+
+
+
+	.embed-wrap {
+		position:       relative;
+		margin-bottom:  $base-spacing-unit;
+		padding-bottom: 56.25%;
+		padding-top:    30px;
+		height:         0;
+		overflow:       hidden;
+	}
+
+	.embed-wrap iframe,
+	.embed-wrap object,
+	.embed-wrap embed {
+		position:  absolute;
+		top:       0;
+		left:      0;
+		width:     100%;
+		max-width: 100%;
+		height:    100%;
+	}
+
