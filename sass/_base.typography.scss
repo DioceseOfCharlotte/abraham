@@ -207,13 +207,13 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 p {
-  @include typo-body-1();
+  //@include typo-body-1();
 
   margin: 0 0 16px 0;
 }
 
 a {
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 blockquote p {
@@ -386,9 +386,9 @@ h1, h2, h3 {
 
 
 
-.text-minor {
-@include typo-caption($colorContrast:true);
-}
+// .text-minor {
+// @include typo-caption($colorContrast:true);
+// }
 
 .loop-title {
 	@include typo-display-2;
@@ -398,9 +398,121 @@ h1, h2, h3 {
 	@include typo-display-1;
 }
 
+.entry-byline,
+.entry-footer {
+    //font-size: 1rem;
+}
+
 .widget-title {
 	@include typo-headline();
 }
+.format-chat cite {
+    //font-size:   1rem;
+}
+
+.page-links {
+    //font-size: 1rem;
+}
+
+.loop-pagination .page-numbers,
+.page-links .page-numbers,
+.page-links a {
+    //font-size: 1.25rem;
+}
+
+.loop-pagination .current {
+    //font-weight: 700;
+}
+
+.loop-pagination,
+.loop-nav {
+    //font-size:  1.125rem;
+}
+
+.comment-meta {
+    //font-size: 1rem;
+}
+
+.comment-author {
+    //font-size:   1rem;
+    //font-weight: 700;
+    font-style: normal;
+}
+
+.comment-reply-link,
+.comment-reply-login {
+    //padding:        0.5rem 1rem;
+    //font-size:      0.875rem;
+    //font-weight:    400;
+}
+
+.site-footer {
+    //font-size:   0.9375rem;
+}
+
+#site-title {
+    //font-size: 2.125rem;
+}
+
+#site-description {
+    //font-size:    1.125rem;
+    //font-weight:  400;
+    opacity: 0.7;
+}
+
+blockquote {
+    font-size: 1em;
+    font-style: normal;
+}
+
+blockquote cite {
+    font-size: 0.875em;
+    font-variant: small-caps;
+}
+
+.wp-caption .wp-caption-text {
+    font-size: 0.9375rem;
+}
+
+.gallery .gallery-caption {
+    font-size: 0.9375rem;
+}
+
+.menu__sub-terms li a {
+    //font-size:   0.8125rem;
+    font-weight: 400;
+}
+
+    .menu-toggle {
+//font-size:      0.8125rem;
+}
+
+    .menu__primary .search-form input[type="search"] {
+        //font-size: 1rem;
+        opacity: 1;
+    }
+
+    .menu__primary li a,
+    .menu__secondary li a {
+        display: block;
+        //font-size:       0.8125rem;
+        //line-height:     1;
+        text-transform: uppercase;
+    }
+
+    .menu__primary li li a,
+    .menu__secondary li li a {
+        //font-size:      0.75rem;
+        font-weight: 400;
+        //line-height:    1.5;
+    }
+
+    .menu__primary .search-field {
+        //font-size:   0.9375rem;
+        opacity: 1;
+    }
+
+
 
 // .loop-title {
 // 	@include scut-side-lined(0.1em, .5em, $color-gray-ui, $v-adjust: 0.1em);

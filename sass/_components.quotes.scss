@@ -5,15 +5,8 @@
 blockquote {
     margin: $base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit;
     padding: $base-spacing-unit $base-spacing-unit 0;
-    font-size: 1em;
-    /* relative to parent */
+}
 
-    font-style: normal;
-}
-blockquote cite {
-    font-size: 0.875em;
-    font-variant: small-caps;
-}
 .twitter-tweet {
     width: 100%;
     box-sizing: border-box;

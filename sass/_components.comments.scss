@@ -65,17 +65,10 @@ li.ping {
 
 .comment-meta {
     padding: 5px 0 0;
-    //font-size: 1rem;
 }
 
 .has-avatar.comment .comment-author {
     margin-top: $base-spacing-unit-sm;
-}
-
-.comment-author {
-    //font-size:   1rem;
-    //font-weight: 700;
-    font-style: normal;
 }
 
 .ltr .comment-author,
@@ -110,9 +103,6 @@ li.ping,
 .comment-reply-login {
     display: inline-block;
     margin-top: -$base-spacing-unit;
-    //padding:        0.5rem 1rem;
-    //font-size:      0.875rem;
-    //font-weight:    400;
 }
 
 .ltr .comment-reply-link,
@@ -142,7 +132,7 @@ li.ping,
 }
 
 .comment-respond .required {
-    //font-weight: 700;
+    font-weight: 700;
 }
 
 #reply-title small {

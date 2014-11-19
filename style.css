@@ -1102,10 +1102,10 @@ a[href^="tel:"]::before {
 \*------------------------------------*/
 html, body {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	font-size: 1rem;
 	font-weight: 400; 
-	line-height: 1.3333333333;}
+	line-height: 1.25;}
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
@@ -1118,27 +1118,19 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	opacity: 0.54;
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
-	font-size: 3.7333333333rem;
+	font-size: 3.5rem;
 	font-size: 0.6em; 
 	font-weight: 400;
 	line-height: 1.0714285714;
 	letter-spacing: -0.02em;}
 
 p {
-	margin: 0 0 16px 0; 
-	font-size: 14px;
-	font-size: 0.9333333333rem;
-	font-weight: 400;
-	line-height: 1.4285714286;
-	letter-spacing: 0.04em;}
-
-a {
-	font-weight: bold; }
+	margin: 0 0 16px 0; }
 
 blockquote p {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 300;
 	font-style: italic;
 	line-height: 1.6666666667;
@@ -1169,7 +1161,7 @@ h1 a, h2 a, h3 a {
 .Typography--display-4 {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 112px;
-	font-size: 7.4666666667rem;
+	font-size: 7rem;
 	font-weight: 300;
 	line-height: 1.0714285714;
 	letter-spacing: -0.04em; }
@@ -1178,7 +1170,7 @@ h1 a, h2 a, h3 a {
 	opacity: 0.54; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 112px;
-	font-size: 7.4666666667rem;
+	font-size: 7rem;
 	font-weight: 300;
 	line-height: 1.0714285714;
 	letter-spacing: -0.04em;}
@@ -1186,7 +1178,7 @@ h1 a, h2 a, h3 a {
 .Typography--display-3 {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
-	font-size: 3.7333333333rem;
+	font-size: 3.5rem;
 	font-weight: 400;
 	line-height: 1.0714285714;
 	letter-spacing: -0.02em; }
@@ -1195,36 +1187,36 @@ h1 a, h2 a, h3 a {
 	opacity: 0.54; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
-	font-size: 3.7333333333rem;
+	font-size: 3.5rem;
 	font-weight: 400;
 	line-height: 1.0714285714;
 	letter-spacing: -0.02em;}
 
 .Typography--display-2 {
 	font-size: 45px;
-	font-size: 3rem;
+	font-size: 2.8125rem;
 	line-height: 1.3333333333; }
 
 .Typography--display-2--colorContrast {
 	opacity: 0.54; 
 	font-size: 45px;
-	font-size: 3rem;
+	font-size: 2.8125rem;
 	line-height: 1.3333333333;}
 
 .Typography--display-1 {
 	font-size: 34px;
-	font-size: 2.2666666667rem;
+	font-size: 2.125rem;
 	line-height: 1.1764705882; }
 
 .Typography--display-1--colorContrast {
 	opacity: 0.54; 
 	font-size: 34px;
-	font-size: 2.2666666667rem;
+	font-size: 2.125rem;
 	line-height: 1.1764705882;}
 
 .Typography--headline {
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.6666666667;
 
@@ -1233,7 +1225,7 @@ h1 a, h2 a, h3 a {
 .Typography--headline--colorContrast {
 	opacity: 0.87; 
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.6666666667;
 
@@ -1241,7 +1233,7 @@ h1 a, h2 a, h3 a {
 
 .Typography--title a, .Typography--title {
 	font-size: 20px;
-	font-size: 1.3333333333rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.02em; }
@@ -1249,7 +1241,7 @@ h1 a, h2 a, h3 a {
 .Typography--title--colorContrast {
 	opacity: 0.87; 
 	font-size: 20px;
-	font-size: 1.3333333333rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.02em;}
@@ -1257,7 +1249,7 @@ h1 a, h2 a, h3 a {
 .Typography--subhead a, .Typography--subhead {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
-	font-size: 1.0666666667rem;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.25;
 	letter-spacing: 0.04em; }
@@ -1266,7 +1258,7 @@ h1 a, h2 a, h3 a {
 	opacity: 0.87; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
-	font-size: 1.0666666667rem;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.25;
 	letter-spacing: 0.04em;}
@@ -1274,7 +1266,7 @@ h1 a, h2 a, h3 a {
 .Typography--body-2 a, .Typography--body-2 {
 	color: #949494; 
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
@@ -1282,14 +1274,14 @@ h1 a, h2 a, h3 a {
 .Typography--body-2--colorContrast {
 	opacity: 0.87; 
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
 
 .Typography--body-1 a, .Typography--body-1 {
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em; }
@@ -1297,7 +1289,7 @@ h1 a, h2 a, h3 a {
 .Typography--body-1--colorContrast {
 	opacity: 0.87; 
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
@@ -1305,7 +1297,7 @@ h1 a, h2 a, h3 a {
 .Typography--caption {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8666666667rem;
+	font-size: 0.8125rem;
 	font-weight: 400;
 	line-height: 1.5384615385;
 	letter-spacing: 0.08em; }
@@ -1314,7 +1306,7 @@ h1 a, h2 a, h3 a {
 	opacity: 0.54; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8666666667rem;
+	font-size: 0.8125rem;
 	font-weight: 400;
 	line-height: 1.5384615385;
 	letter-spacing: 0.08em;}
@@ -1322,7 +1314,7 @@ h1 a, h2 a, h3 a {
 .Typography--menu {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em; }
@@ -1331,7 +1323,7 @@ h1 a, h2 a, h3 a {
 	opacity: 0.87; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;}
@@ -1339,7 +1331,7 @@ h1 a, h2 a, h3 a {
 .Typography--button {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em; 
@@ -1349,7 +1341,7 @@ h1 a, h2 a, h3 a {
 	opacity: 0.87; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
 	letter-spacing: 0.04em;
@@ -1385,32 +1377,59 @@ h1 a, h2 a, h3 a {
 .Typography--tableStriped > tbody > tr:nth-child(odd) > td, .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
 	background-color: #e0e0e0; }
 
-.text-minor {
-	opacity: 0.54; 
-	font-family: "Raleway", "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8666666667rem;
-	font-weight: 400;
-	line-height: 1.5384615385;
-	letter-spacing: 0.08em;}
-
 .loop-title {
 	font-size: 45px;
-	font-size: 3rem;
+	font-size: 2.8125rem;
 	line-height: 1.3333333333; }
 
 .entry-title {
 	font-size: 34px;
-	font-size: 2.2666666667rem;
+	font-size: 2.125rem;
 	line-height: 1.1764705882; }
 
 .widget-title {
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.6666666667;
 
 	-moz-osx-font-smoothing: grayscale; }
+
+.comment-author {
+	font-style: normal; }
+
+#site-description {
+	opacity: 0.7; }
+
+blockquote {
+	font-size: 1em;
+	font-style: normal; }
+
+blockquote cite {
+	font-size: 0.875em;
+	font-variant: small-caps; }
+
+.wp-caption .wp-caption-text {
+	font-size: 0.9375rem; }
+
+.gallery .gallery-caption {
+	font-size: 0.9375rem; }
+
+.menu__sub-terms li a {
+	font-weight: 400; }
+
+.menu__primary .search-form input[type="search"] {
+	opacity: 1; }
+
+.menu__primary li a, .menu__secondary li a {
+	display: block;
+	text-transform: uppercase; }
+
+.menu__primary li li a, .menu__secondary li li a {
+	font-weight: 400; }
+
+.menu__primary .search-field {
+	opacity: 1; }
 
 /*------------------------------------*\
 		#PAGE
@@ -1447,24 +1466,24 @@ body {
 h1 {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 56px;
-	font-size: 3.7333333333rem;
+	font-size: 3.5rem;
 	font-weight: 400;
 	line-height: 1.0714285714;
 	letter-spacing: -0.02em; }
 
 h2 {
 	font-size: 45px;
-	font-size: 3rem;
+	font-size: 2.8125rem;
 	line-height: 1.3333333333; }
 
 h3 {
 	font-size: 34px;
-	font-size: 2.2666666667rem;
+	font-size: 2.125rem;
 	line-height: 1.1764705882; }
 
 h4 {
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.6666666667;
 
@@ -1472,7 +1491,7 @@ h4 {
 
 h5 {
 	font-size: 20px;
-	font-size: 1.3333333333rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.02em; }
@@ -1480,7 +1499,7 @@ h5 {
 h6 {
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 16px;
-	font-size: 1.0666666667rem;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.25;
 	letter-spacing: 0.04em; }
@@ -1721,8 +1740,7 @@ img.abraham-medium, img.abraham-full {
 .wp-caption .wp-caption-text {
 	position: absolute;
 	bottom: 20px;
-	padding: 10px;
-	font-size: 0.9375rem; }
+	padding: 10px; }
 
 .ltr .wp-caption .wp-caption-text {
 	margin-right: 1.5rem; }
@@ -1740,9 +1758,6 @@ img.abraham-medium, img.abraham-full {
 .gallery .gallery-icon a img {
 	padding: 9px;
 	border: 1px solid; }
-
-.gallery .gallery-caption {
-	font-size: 0.9375rem; }
 
 .singular-attachment .gallery-caption {
 	display: none; }
@@ -1825,8 +1840,7 @@ img.abraham-medium, img.abraham-full {
 
 .menu__sub-terms li a {
 	display: inline-block;
-	padding: 0.5rem 0.75rem;
-	font-weight: 400; }
+	padding: 0.5rem 0.75rem; }
 
 .ltr .menu__sub-terms li a {
 	margin-right: 5px; }
@@ -1873,9 +1887,6 @@ img.abraham-medium, img.abraham-full {
  */
 .menu__primary {
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
-
-.menu__primary li a {
-	font-weight: 400; }
 
 .menu__secondary {
 	padding-top: 20px; }
@@ -1960,8 +1971,7 @@ img.abraham-medium, img.abraham-full {
 	.rtl .menu__primary li li li li a, .rtl .menu__secondary li li li li a {
 		padding-right: 6rem; }
 	.menu__primary .search-form input[type="search"] {
-		padding: 10px 20px;
-		opacity: 1; }
+		padding: 10px 20px; }
 	.menu__primary .search-toggle, .menu__primary .search-form input[type="submit"] {
 		display: none; } }
 
@@ -2110,9 +2120,6 @@ img.abraham-medium, img.abraham-full {
 		margin-left: 0; }
 	.rtl .menu__secondary li li {
 		margin-right: 0; }
-	.menu__primary li a, .menu__secondary li a {
-		display: block;
-		text-transform: uppercase; }
 	.menu__primary li a {
 		padding: 15px 0; }
 	.ltr .menu__primary li a {
@@ -2121,15 +2128,13 @@ img.abraham-medium, img.abraham-full {
 		margin-left: 20px; }
 	.menu__secondary li a {
 		margin: 0;
-		padding: 10px 0;
-		font-weight: 600; }
+		padding: 10px 0; }
 	.menu__primary li li a, .menu__secondary li li a {
 		display: block;
 		position: relative;
 		width: 180px;
 		padding: 18px 25px;
-		border-top: 1px solid; 
-		font-weight: 400;}
+		border-top: 1px solid; }
 	.menu__primary .search-form {
 		position: absolute;
 		top: -1px; }
@@ -2162,19 +2167,17 @@ img.abraham-medium, img.abraham-full {
 	.menu__primary .search-form .search-toggle:before {
 		padding: 0 0 1px;
 		font-size: 24px;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		line-height: 1.6666666667;
 		vertical-align: top; 
 		content: "\f400";
 		cursor: pointer;}
 	.menu__primary .search-field {
 		display: inline-block;
-		box-sizing: border-box; 
 		width: 200px;
 		height: 34px;
 		padding: 7px 8px;
-		border-width: 1px;
-		opacity: 1;}
+		border-width: 1px; }
 	.ltr .menu__primary .search-field {
 		margin-left: -2px; }
 	.rtl .menu__primary .search-field {
@@ -2563,9 +2566,8 @@ th:empty, td:empty, th.pad, td.pad {
 .plural .content .entry-byline {
 	margin: 0 0 10px; }
 
-.entry-byline, .entry-footer, .comment-meta {
-	margin: 0 0 20px;
-	font-style: normal; }
+.entry-footer, .comment-meta {
+	margin: 0 0 20px; }
 
 .entry-footer, .comment-meta {
 	clear: both; }
@@ -2602,9 +2604,6 @@ th:empty, td:empty, th.pad, td.pad {
 	margin: 0;
 	padding: 0;
 	border: none; }
-
-.format-chat cite {
-	font-style: normal; }
 
 /* === Images === */
 .format-image > img, .format-image > a img, .format-image > .wp-caption {
@@ -2669,7 +2668,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .btn {
 	outline: 0 !important; 
 	font-family: "Raleway", "Helvetica Neue", sans-serif;
 	font-size: 14px;
-	font-size: 0.9333333333rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
 	text-decoration: none;
@@ -2921,14 +2920,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 \*------------------------------------*/
 blockquote {
 	margin: 10px 10px 20px;
-	padding: 20px 20px 0;
-	font-size: 1em;
-	/* relative to parent */
-	font-style: normal; }
-
-blockquote cite {
-	font-size: 0.875em;
-	font-variant: small-caps; }
+	padding: 20px 20px 0; }
 
 .twitter-tweet {
 	box-sizing: border-box; 
@@ -3017,9 +3009,6 @@ li.comment, li.ping {
 .has-avatar.comment .comment-author {
 	margin-top: 10px; }
 
-.comment-author {
-	font-style: normal; }
-
 .ltr .comment-author, .ltr .comment-published, .ltr .comment-permalink, .ltr .comment-edit-link {
 	display: inline-block;
 	margin-right: 5px; }
@@ -3059,6 +3048,9 @@ li.ping, .comment-content {
 .comment-respond {
 	padding: 0 0 20px; }
 
+.comment-respond .required {
+	font-weight: 700; }
+
 #reply-title small a {
 	display: inline-block;
 	padding: 10px;
@@ -3082,7 +3074,6 @@ li.ping, .comment-content {
 .site-footer {
 	overflow: hidden;
 	padding: 10px 0 0;
-	font-family: "Open Sans", sans-serif;
 	text-align: center; }
 
 @media only screen and (min-width: 950px) {
@@ -3107,9 +3098,8 @@ li.ping, .comment-content {
 	opacity: 0.75; }
 
 #site-description {
-	margin: 0;
-	padding: 0;
-	opacity: 0.7; }
+	margin: 0; 
+	padding: 0;}
 
 .en #site-description {
 	font-style: italic; }
@@ -3140,7 +3130,7 @@ li.ping, .comment-content {
 
 .title-wrap h1 {
 	font-size: 24px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.6666666667;
 
@@ -3149,7 +3139,7 @@ li.ping, .comment-content {
 .title-wrap h2 {
 	opacity: 0.87; 
 	font-size: 20px;
-	font-size: 1.3333333333rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.02em;}
@@ -3169,12 +3159,12 @@ li.ping, .comment-content {
 	        justify-content: center; }
 .home .title-wrap h1 {
 	font-size: 45px;
-	font-size: 3rem;
+	font-size: 2.8125rem;
 	line-height: 1.3333333333; }
 .home .title-wrap h2 {
 	opacity: 0.54; 
 	font-size: 34px;
-	font-size: 2.2666666667rem;
+	font-size: 2.125rem;
 	line-height: 1.1764705882;}
 .home .logo img {
 	max-width: 150px; }

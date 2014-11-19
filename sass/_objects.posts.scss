@@ -24,16 +24,10 @@
 .plural .content .entry-byline {
     margin: 0 0 $base-spacing-unit-sm;
 }
-.entry-byline,
-.entry-footer {
-    //font-size: 1rem;
-}
-.entry-byline,
+
 .entry-footer,
 .comment-meta {
     margin: 0 0 $base-spacing-unit;
-    //font-weight: 400;
-    font-style: normal;
 }
 .entry-footer,
 .comment-meta {
@@ -76,11 +70,7 @@
     padding: 0;
     border: none;
 }
-.format-chat cite {
-    //font-size:   1rem;
-    font-style: normal;
-    //font-weight: 700;
-}
+
 /* === Images === */
 
 .format-image > img,
@@ -109,21 +99,17 @@
 
 .page-links {
     clear: both;
-    //font-size: 1rem;
 }
 .loop-pagination .page-numbers,
 .page-links .page-numbers,
 .page-links a {
     display: inline-block;
     margin: 0 $base-spacing-unit-sm / 2;
-    //font-size: 1.25rem;
 }
 .loop-pagination .dots {
     margin: 0;
 }
-.loop-pagination .current {
-    //font-weight: 700;
-}
+
 .page-links a {
     padding: 0 $base-spacing-unit-sm;
     border: none;
@@ -134,6 +120,5 @@
 .loop-nav {
     margin: 0 0 $base-spacing-unit-lg;
     padding: $base-spacing-unit-lg$base-spacing-unit 0 0;
-    //font-size:  1.125rem;
     border-top: 1px solid;
 }

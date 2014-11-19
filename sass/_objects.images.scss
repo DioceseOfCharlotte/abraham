@@ -46,7 +46,6 @@ img.abraham-full {
     position: absolute;
     bottom: $base-spacing-unit;
     padding: $base-spacing-unit-sm;
-    font-size: 0.9375rem;
 }
 .ltr .wp-caption .wp-caption-text {
     margin-right: 1.5rem;
@@ -66,9 +65,7 @@ img.abraham-full {
     padding: 9px;
     border: 1px solid;
 }
-.gallery .gallery-caption {
-    font-size: 0.9375rem;
-}
+
 .singular-attachment .gallery-caption {
     display: none;
 }
