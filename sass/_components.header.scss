@@ -1,108 +1,85 @@
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
-
 /**
  * Handles the output of the header content.
  */
 
+#site-title {
+    margin: 0;
+    padding: 0;
+    //font-size: 2.125rem;
+}
 
+#site-title a:hover,
+#site-title a:focus {
+    opacity: 0.75;
+}
 
+#site-description {
+    padding: 0;
+    margin: 0;
+    //font-size:    1.125rem;
+    //font-weight:  400;
+    opacity: 0.7;
+}
 
-	//      .site-branding {
-	//      	max-width: 80%; margin-top: $base-spacing-unit-sm;
-	//      }
-	// .ltr .site-branding {
-	// 	float: left;
-	// }
-	// .rtl .site-branding {
-	// 	float: right;
-	// }
-
-	// @media only screen and (min-width: 800px) {
-
-	// 	.site-branding {
-	// 		width: 42.85%; max-width: 450px;
-	// 	}
-	// }
-
-		#site-title {
-			margin:    0;
-			padding:   0;
-			//font-size: 2.125rem;
-		}
-
-			#site-title a:hover,
-			#site-title a:focus {
-				opacity:         0.75;
-			}
-
-		#site-description {
-			padding: 0;
-			margin: 0;
-			//font-size:    1.125rem;
-			//font-weight:  400;
-			opacity:      0.7;
-		}
-
-			.en #site-description {
-				font-style: italic;
-			}
+.en #site-description {
+    font-style: italic;
+}
 
 .header-image {
-opacity: 0.5;
-position: absolute;
-z-index: 1;
-width: 100%;
-margin:    0 auto;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
 }
-
 
 .content-wrap {
-z-index: 2;
-position: relative;
+    z-index: 2;
+    position: relative;
 }
 
-	.site-branding {
-	width: 100%;
-	max-width: 100%;
-	display: flex;
-	align-items: center;
-	}
+.site-branding {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
 
 .title-wrap h1 {
-	@include typo-headline;
+    @include typo-headline;
 }
 
 .title-wrap h2 {
-	@include typo-title(true);
+    @include typo-title(true);
 }
 
 .logo img {
-max-width: 80px;
+    max-width: 80px;
 }
-
 
 .home {
+    .content-wrap {
+        margin-top: 300px;
+    }
 
-	.content-wrap {
-		margin-top: 300px;
-	}
-	.site-branding {
-	position: absolute;
-	margin-top: -213px;
-	justify-content: center;
-	}
-.title-wrap h1 {
-	@include typo-display-2;
-}
+    .site-branding {
+        position: absolute;
+        margin-top: -213px;
+        justify-content: center;
+    }
 
-.title-wrap h2 {
-	@include typo-display-1(true);
-}
+    .title-wrap h1 {
+        @include typo-display-2;
+    }
 
-.logo img {
-max-width: 150px;
-}
-}
+    .title-wrap h2 {
+        @include typo-display-1(true);
+    }
 
+    .logo img {
+        max-width: 150px;
+    }
+}

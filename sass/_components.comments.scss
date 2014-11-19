@@ -2,131 +2,176 @@
     #COMMENTS
 \*------------------------------------*/
 
-.comments { padding: 0 0 $base-spacing-unit; }
+.comments {
+    padding: 0 0 $base-spacing-unit;
+}
 
-	.comments-number > .wrap::before {
-		content: '\f300';
-		padding: 0 0 1px;
-	}
+.comments-number > .wrap::before {
+    content: '\f300';
+    padding: 0 0 1px;
+}
 
-		.ltr .comments-number > .wrap::before { padding-right: 3px; }
-		.rtl .comments-number > .wrap::before { padding-left:  3px; }
+.ltr .comments-number > .wrap::before {
+    padding-right: 3px;
+}
 
-	/* === Comment list === */
+.rtl .comments-number > .wrap::before {
+    padding-left: 3px;
+}
 
-	.ltr .comment-list,
-	.rtl .comment-list {
-		list-style: none;
-		margin:     0 0 $base-spacing-unit;
-	}
+/* === Comment list === */
 
-		.comment-list li > .children,
-		.comment-list .children li > .children { list-style: none; }
+.ltr .comment-list,
+.rtl .comment-list {
+    list-style: none;
+    margin: 0 0 $base-spacing-unit;
+}
 
-		.ltr .comment-list li > .children,
-		.ltr .comment-list .children li > .children { margin: 0 0 0 $base-spacing-unit; }
+.comment-list li > .children,
+.comment-list .children li > .children {
+    list-style: none;
+}
 
-		.rtl .comment-list li > .children,
-		.rtl .comment-list .children li > .children { margin: 0 $base-spacing-unit 0 0; }
+.ltr .comment-list li > .children,
+.ltr .comment-list .children li > .children {
+    margin: 0 0 0 $base-spacing-unit;
+}
 
-		/* === Individual comments */
+.rtl .comment-list li > .children,
+.rtl .comment-list .children li > .children {
+    margin: 0 $base-spacing-unit 0 0;
+}
 
-		li.comment,
-		li.ping { clear: both;}
+/* === Individual comments */
 
-					/* === Avatars === */
+li.comment,
+li.ping {
+    clear: both;
+}
 
-			.ltr li.ping .avatar { float: right; margin-left: $base-spacing-unit;  }
-			.rtl li.ping .avatar { float: left;  margin-right: $base-spacing-unit; }
+/* === Avatars === */
 
-			/* === Meta === */
+.ltr li.ping .avatar {
+    float: right;
+    margin-left: $base-spacing-unit;
+}
 
-			.comment-meta {
-				padding:   5px 0 0;
-				//font-size: 1rem;
-			}
+.rtl li.ping .avatar {
+    float: left;
+    margin-right: $base-spacing-unit;
+}
 
-				.has-avatar.comment .comment-author { margin-top: $base-spacing-unit-sm; }
+/* === Meta === */
 
-				.comment-author {
-					//font-size:   1rem;
-					//font-weight: 700;
-					font-style:  normal;
-				}
+.comment-meta {
+    padding: 5px 0 0;
+    //font-size: 1rem;
+}
 
-				.ltr .comment-author,
-				.ltr .comment-published,
-				.ltr .comment-permalink,
-				.ltr .comment-edit-link { display: inline-block; margin-right: 5px; }
+.has-avatar.comment .comment-author {
+    margin-top: $base-spacing-unit-sm;
+}
 
-				.rtl .comment-author,
-				.rtl .comment-published,
-				.rtl .comment-permalink,
-				.rtl .comment-edit-link { display: inline-block; margin-left: 5px; }
+.comment-author {
+    //font-size:   1rem;
+    //font-weight: 700;
+    font-style: normal;
+}
 
-			/* === Comment text/content === */
+.ltr .comment-author,
+.ltr .comment-published,
+.ltr .comment-permalink,
+.ltr .comment-edit-link {
+    display: inline-block;
+    margin-right: 5px;
+}
 
-			li.ping,
-			.comment-content {
-				clear:   both;
-				margin:  0 0 $base-spacing-unit;
-				padding: $base-spacing-unit $base-spacing-unit 0;
-				border:  1px solid;
-			}
+.rtl .comment-author,
+.rtl .comment-published,
+.rtl .comment-permalink,
+.rtl .comment-edit-link {
+    display: inline-block;
+    margin-left: 5px;
+}
 
-			/* === Reply link === */
+/* === Comment text/content === */
 
-			.comment-reply-link,
-			.comment-reply-login {
-				display:        inline-block;
-				margin-top:     -$base-spacing-unit;
-				//padding:        0.5rem 1rem;
-				//font-size:      0.875rem;
-				//font-weight:    400;
-			}
+li.ping,
+.comment-content {
+    clear: both;
+    margin: 0 0 $base-spacing-unit;
+    padding: $base-spacing-unit $base-spacing-unit 0;
+    border: 1px solid;
+}
 
-			.ltr .comment-reply-link,
-			.ltr .comment-reply-login { float: right; margin-right: $base-spacing-unit-sm; }
+/* === Reply link === */
 
-			.rtl .comment-reply-link,
-			.rtl .comment-reply-login { float: left;  margin-left:  $base-spacing-unit-sm; }
+.comment-reply-link,
+.comment-reply-login {
+    display: inline-block;
+    margin-top: -$base-spacing-unit;
+    //padding:        0.5rem 1rem;
+    //font-size:      0.875rem;
+    //font-weight:    400;
+}
 
-	.comments-closed { margin: -$base-spacing-unit 0 $base-spacing-unit-lg; }
+.ltr .comment-reply-link,
+.ltr .comment-reply-login {
+    float: right;
+    margin-right: $base-spacing-unit-sm;
+}
 
-	/**
+.rtl .comment-reply-link,
+.rtl .comment-reply-login {
+    float: left;
+    margin-left: $base-spacing-unit-sm;
+}
+
+.comments-closed {
+    margin: -$base-spacing-unit 0 $base-spacing-unit-lg;
+}
+
+/**
  * Respond
  *
  * Handles the output of the comment form.
  */
 
-.comment-respond { padding: 0 0 $base-spacing-unit; }
+.comment-respond {
+    padding: 0 0 $base-spacing-unit;
+}
 
-	.comment-respond .required {
-		//font-weight: 700;
-	}
+.comment-respond .required {
+    //font-weight: 700;
+}
 
-	#reply-title small {
-		//font-size:      1em;
-		//font-weight:    400;
-	}
+#reply-title small {
+    //font-size:      1em;
+    //font-weight:    400;
+}
 
-	#reply-title small a {
-		display:        inline-block;
-		padding:        $base-spacing-unit-sm;
-		text-transform: none;
-	}
+#reply-title small a {
+    display: inline-block;
+    padding: $base-spacing-unit-sm;
+    text-transform: none;
+}
 
-	.ltr #reply-title small a { margin: -$base-spacing-unit-sm -$base-spacing-unit -0.625rem $base-spacing-unit; }
-	.rtl #reply-title small a { margin: -$base-spacing-unit-sm $base-spacing-unit -$base-spacing-unit-sm -$base-spacing-unit; }
+.ltr #reply-title small a {
+    margin: -$base-spacing-unit-sm -$base-spacing-unit -0.625rem $base-spacing-unit;
+}
 
-	.gallery-count,
-	.comments-closed,
-	.comment-notes,
-	.comment-respond .must-log-in,
-	.comment-respond .logged-in-as {
-	//font-size: 1.125rem;
-	}
+.rtl #reply-title small a {
+    margin: -$base-spacing-unit-sm $base-spacing-unit -$base-spacing-unit-sm -$base-spacing-unit;
+}
 
-	.form-allowed-tags {
-		display: none;
-	}
+.gallery-count,
+.comments-closed,
+.comment-notes,
+.comment-respond .must-log-in,
+.comment-respond .logged-in-as {
+    //font-size: 1.125rem;
+}
+
+.form-allowed-tags {
+    display: none;
+}

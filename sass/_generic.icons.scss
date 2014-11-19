@@ -1,603 +1,596 @@
 /*------------------------------------*\
     #ICONS
 \*------------------------------------*/
-
 /* ====== Adds the Genericons icon font. ====== */
 
 @font-face {
-	font-family: 'Genericons';
-	font-weight: normal;
-	font-style:  normal;
-
-	src: url('fonts/genericons/genericons-regular-webfont.eot');
-	src: url('fonts/genericons/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('fonts/genericons/genericons-regular-webfont.woff') format('woff'),
-	     url('fonts/genericons/genericons-regular-webfont.ttf') format('truetype'),
-	     url('fonts/genericons/genericons-regular-webfont.svg#genericonsregular') format('svg');
+    font-family: 'Genericons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/genericons/genericons-regular-webfont.eot');
+    src: url('fonts/genericons/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/genericons/genericons-regular-webfont.woff') format('woff'), url('fonts/genericons/genericons-regular-webfont.ttf') format('truetype'), url('fonts/genericons/genericons-regular-webfont.svg#genericonsregular') format('svg');
 }
-
-
-
-$adjust: "\f042";
-$adn: "\f170";
-$align-center: "\f037";
-$align-justify: "\f039";
-$align-left: "\f036";
-$align-right: "\f038";
-$ambulance: "\f0f9";
-$anchor: "\f13d";
-$android: "\f17b";
-$angellist: "\f209";
-$angle-double-down: "\f103";
-$angle-double-left: "\f100";
-$angle-double-right: "\f101";
-$angle-double-up: "\f102";
-$angle-down: "\f107";
-$angle-left: "\f104";
-$angle-right: "\f105";
-$angle-up: "\f106";
-$apple: "\f179";
-$archive: "\f187";
-$area-chart: "\f1fe";
-$arrow-circle-down: "\f0ab";
-$arrow-circle-left: "\f0a8";
-$arrow-circle-o-down: "\f01a";
-$arrow-circle-o-left: "\f190";
-$arrow-circle-o-right: "\f18e";
-$arrow-circle-o-up: "\f01b";
-$arrow-circle-right: "\f0a9";
-$arrow-circle-up: "\f0aa";
-$arrow-down: "\f063";
-$arrow-left: "\f060";
-$arrow-right: "\f061";
-$arrow-up: "\f062";
-$arrows: "\f047";
-$arrows-alt: "\f0b2";
-$arrows-h: "\f07e";
-$arrows-v: "\f07d";
-$asterisk: "\f069";
-$at: "\f1fa";
-$automobile: "\f1b9";
-$backward: "\f04a";
-$ban: "\f05e";
-$bank: "\f19c";
-$bar-chart: "\f080";
-$bar-chart-o: "\f080";
-$barcode: "\f02a";
-$bars: "\f0c9";
-$beer: "\f0fc";
-$behance: "\f1b4";
-$behance-square: "\f1b5";
-$bell: "\f0f3";
-$bell-o: "\f0a2";
-$bell-slash: "\f1f6";
-$bell-slash-o: "\f1f7";
-$bicycle: "\f206";
-$binoculars: "\f1e5";
-$birthday-cake: "\f1fd";
-$bitbucket: "\f171";
-$bitbucket-square: "\f172";
-$bitcoin: "\f15a";
-$bold: "\f032";
-$bolt: "\f0e7";
-$bomb: "\f1e2";
-$book: "\f02d";
-$bookmark: "\f02e";
-$bookmark-o: "\f097";
-$briefcase: "\f0b1";
-$btc: "\f15a";
-$bug: "\f188";
-$building: "\f1ad";
-$building-o: "\f0f7";
-$bullhorn: "\f0a1";
-$bullseye: "\f140";
-$bus: "\f207";
-$cab: "\f1ba";
-$calculator: "\f1ec";
-$calendar: "\f073";
-$calendar-o: "\f133";
-$camera: "\f030";
-$camera-retro: "\f083";
-$car: "\f1b9";
-$caret-down: "\f0d7";
-$caret-left: "\f0d9";
-$caret-right: "\f0da";
-$caret-square-o-down: "\f150";
-$caret-square-o-left: "\f191";
-$caret-square-o-right: "\f152";
-$caret-square-o-up: "\f151";
-$caret-up: "\f0d8";
-$cc: "\f20a";
-$cc-amex: "\f1f3";
-$cc-discover: "\f1f2";
-$cc-mastercard: "\f1f1";
-$cc-paypal: "\f1f4";
-$cc-stripe: "\f1f5";
-$cc-visa: "\f1f0";
-$certificate: "\f0a3";
-$chain: "\f0c1";
-$chain-broken: "\f127";
-$check: "\f00c";
-$check-circle: "\f058";
-$check-circle-o: "\f05d";
-$check-square: "\f14a";
-$check-square-o: "\f046";
-$chevron-circle-down: "\f13a";
-$chevron-circle-left: "\f137";
-$chevron-circle-right: "\f138";
-$chevron-circle-up: "\f139";
-$chevron-down: "\f078";
-$chevron-left: "\f053";
-$chevron-right: "\f054";
-$chevron-up: "\f077";
-$child: "\f1ae";
-$circle: "\f111";
-$circle-o: "\f10c";
-$circle-o-notch: "\f1ce";
-$circle-thin: "\f1db";
-$clipboard: "\f0ea";
-$clock-o: "\f017";
-$close: "\f00d";
-$cloud: "\f0c2";
-$cloud-download: "\f0ed";
-$cloud-upload: "\f0ee";
-$cny: "\f157";
-$code: "\f121";
-$code-fork: "\f126";
-$codepen: "\f1cb";
-$coffee: "\f0f4";
-$cog: "\f013";
-$cogs: "\f085";
-$columns: "\f0db";
-$comment: "\f075";
-$comment-o: "\f0e5";
-$comments: "\f086";
-$comments-o: "\f0e6";
-$compass: "\f14e";
-$compress: "\f066";
-$copy: "\f0c5";
-$copyright: "\f1f9";
-$credit-card: "\f09d";
-$crop: "\f125";
-$crosshairs: "\f05b";
-$css3: "\f13c";
-$cube: "\f1b2";
-$cubes: "\f1b3";
-$cut: "\f0c4";
-$cutlery: "\f0f5";
-$dashboard: "\f0e4";
-$database: "\f1c0";
-$dedent: "\f03b";
-$delicious: "\f1a5";
-$desktop: "\f108";
-$deviantart: "\f1bd";
-$digg: "\f1a6";
-$dollar: "\f155";
-$dot-circle-o: "\f192";
-$download: "\f019";
-$dribbble: "\f17d";
-$dropbox: "\f16b";
-$drupal: "\f1a9";
-$edit: "\f044";
-$eject: "\f052";
-$ellipsis-h: "\f141";
-$ellipsis-v: "\f142";
-$empire: "\f1d1";
-$envelope: "\f0e0";
-$envelope-o: "\f003";
-$envelope-square: "\f199";
-$eraser: "\f12d";
-$eur: "\f153";
-$euro: "\f153";
-$exchange: "\f0ec";
-$exclamation: "\f12a";
-$exclamation-circle: "\f06a";
-$exclamation-triangle: "\f071";
-$expand: "\f065";
-$external-link: "\f08e";
-$external-link-square: "\f14c";
-$eye: "\f06e";
-$eye-slash: "\f070";
-$eyedropper: "\f1fb";
-$facebook: "\f09a";
-$facebook-square: "\f082";
-$fast-backward: "\f049";
-$fast-forward: "\f050";
-$fax: "\f1ac";
-$female: "\f182";
-$fighter-jet: "\f0fb";
-$file: "\f15b";
-$file-archive-o: "\f1c6";
-$file-audio-o: "\f1c7";
-$file-code-o: "\f1c9";
-$file-excel-o: "\f1c3";
-$file-image-o: "\f1c5";
-$file-movie-o: "\f1c8";
-$file-o: "\f016";
-$file-pdf-o: "\f1c1";
-$file-photo-o: "\f1c5";
-$file-picture-o: "\f1c5";
-$file-powerpoint-o: "\f1c4";
-$file-sound-o: "\f1c7";
-$file-text: "\f15c";
-$file-text-o: "\f0f6";
-$file-video-o: "\f1c8";
-$file-word-o: "\f1c2";
-$file-zip-o: "\f1c6";
-$files-o: "\f0c5";
-$film: "\f008";
-$filter: "\f0b0";
-$fire: "\f06d";
-$fire-extinguisher: "\f134";
-$flag: "\f024";
-$flag-checkered: "\f11e";
-$flag-o: "\f11d";
-$flash: "\f0e7";
-$flask: "\f0c3";
-$flickr: "\f16e";
-$floppy-o: "\f0c7";
-$folder: "\f07b";
-$folder-o: "\f114";
-$folder-open: "\f07c";
-$folder-open-o: "\f115";
-$font: "\f031";
-$forward: "\f04e";
-$foursquare: "\f180";
-$frown-o: "\f119";
-$futbol-o: "\f1e3";
-$gamepad: "\f11b";
-$gavel: "\f0e3";
-$gbp: "\f154";
-$ge: "\f1d1";
-$gear: "\f013";
-$gears: "\f085";
-$gift: "\f06b";
-$git: "\f1d3";
-$git-square: "\f1d2";
-$github: "\f09b";
-$github-alt: "\f113";
-$github-square: "\f092";
-$gittip: "\f184";
-$glass: "\f000";
-$globe: "\f0ac";
-$google: "\f1a0";
-$google-plus: "\f0d5";
-$google-plus-square: "\f0d4";
-$google-wallet: "\f1ee";
-$graduation-cap: "\f19d";
-$group: "\f0c0";
-$h-square: "\f0fd";
-$hacker-news: "\f1d4";
-$hand-o-down: "\f0a7";
-$hand-o-left: "\f0a5";
-$hand-o-right: "\f0a4";
-$hand-o-up: "\f0a6";
-$hdd-o: "\f0a0";
-$header: "\f1dc";
-$headphones: "\f025";
-$heart: "\f004";
-$heart-o: "\f08a";
-$history: "\f1da";
-$home: "\f015";
-$hospital-o: "\f0f8";
-$html5: "\f13b";
-$ils: "\f20b";
-$image: "\f03e";
-$inbox: "\f01c";
-$indent: "\f03c";
-$info: "\f129";
-$info-circle: "\f05a";
-$inr: "\f156";
-$instagram: "\f16d";
-$institution: "\f19c";
-$ioxhost: "\f208";
-$italic: "\f033";
-$joomla: "\f1aa";
-$jpy: "\f157";
-$jsfiddle: "\f1cc";
-$key: "\f084";
-$keyboard-o: "\f11c";
-$krw: "\f159";
-$language: "\f1ab";
-$laptop: "\f109";
-$lastfm: "\f202";
-$lastfm-square: "\f203";
-$leaf: "\f06c";
-$legal: "\f0e3";
-$lemon-o: "\f094";
-$level-down: "\f149";
-$level-up: "\f148";
-$life-bouy: "\f1cd";
-$life-buoy: "\f1cd";
-$life-ring: "\f1cd";
-$life-saver: "\f1cd";
-$lightbulb-o: "\f0eb";
-$line-chart: "\f201";
-$link: "\f0c1";
-$linkedin: "\f0e1";
-$linkedin-square: "\f08c";
-$linux: "\f17c";
-$list: "\f03a";
-$list-alt: "\f022";
-$list-ol: "\f0cb";
-$list-ul: "\f0ca";
-$location-arrow: "\f124";
-$lock: "\f023";
-$long-arrow-down: "\f175";
-$long-arrow-left: "\f177";
-$long-arrow-right: "\f178";
-$long-arrow-up: "\f176";
-$magic: "\f0d0";
-$magnet: "\f076";
-$mail-forward: "\f064";
-$mail-reply: "\f112";
-$mail-reply-all: "\f122";
-$male: "\f183";
-$map-marker: "\f041";
-$maxcdn: "\f136";
-$meanpath: "\f20c";
-$medkit: "\f0fa";
-$meh-o: "\f11a";
-$microphone: "\f130";
-$microphone-slash: "\f131";
-$minus: "\f068";
-$minus-circle: "\f056";
-$minus-square: "\f146";
-$minus-square-o: "\f147";
-$mobile: "\f10b";
-$mobile-phone: "\f10b";
-$money: "\f0d6";
-$moon-o: "\f186";
-$mortar-board: "\f19d";
-$music: "\f001";
-$navicon: "\f0c9";
-$newspaper-o: "\f1ea";
-$openid: "\f19b";
-$outdent: "\f03b";
-$pagelines: "\f18c";
-$paint-brush: "\f1fc";
-$paper-plane: "\f1d8";
-$paper-plane-o: "\f1d9";
-$paperclip: "\f0c6";
-$paragraph: "\f1dd";
-$paste: "\f0ea";
-$pause: "\f04c";
-$paw: "\f1b0";
-$paypal: "\f1ed";
-$pencil: "\f040";
-$pencil-square: "\f14b";
-$pencil-square-o: "\f044";
-$phone: "\f095";
-$phone-square: "\f098";
-$photo: "\f03e";
-$picture-o: "\f03e";
-$pie-chart: "\f200";
-$pied-piper: "\f1a7";
-$pied-piper-alt: "\f1a8";
-$pinterest: "\f0d2";
-$pinterest-square: "\f0d3";
-$plane: "\f072";
-$play: "\f04b";
-$play-circle: "\f144";
-$play-circle-o: "\f01d";
-$plug: "\f1e6";
-$plus: "\f067";
-$plus-circle: "\f055";
-$plus-square: "\f0fe";
-$plus-square-o: "\f196";
-$power-off: "\f011";
-$print: "\f02f";
-$puzzle-piece: "\f12e";
-$qq: "\f1d6";
-$qrcode: "\f029";
-$question: "\f128";
-$question-circle: "\f059";
-$quote-left: "\f10d";
-$quote-right: "\f10e";
-$ra: "\f1d0";
-$random: "\f074";
-$rebel: "\f1d0";
-$recycle: "\f1b8";
-$reddit: "\f1a1";
-$reddit-square: "\f1a2";
-$refresh: "\f021";
-$remove: "\f00d";
-$renren: "\f18b";
-$reorder: "\f0c9";
-$repeat: "\f01e";
-$reply: "\f112";
-$reply-all: "\f122";
-$retweet: "\f079";
-$rmb: "\f157";
-$road: "\f018";
-$rocket: "\f135";
-$rotate-left: "\f0e2";
-$rotate-right: "\f01e";
-$rouble: "\f158";
-$rss: "\f09e";
-$rss-square: "\f143";
-$rub: "\f158";
-$ruble: "\f158";
-$rupee: "\f156";
-$save: "\f0c7";
-$scissors: "\f0c4";
-$search: "\f002";
-$search-minus: "\f010";
-$search-plus: "\f00e";
-$send: "\f1d8";
-$send-o: "\f1d9";
-$share: "\f064";
-$share-alt: "\f1e0";
-$share-alt-square: "\f1e1";
-$share-square: "\f14d";
-$share-square-o: "\f045";
-$shekel: "\f20b";
-$sheqel: "\f20b";
-$shield: "\f132";
-$shopping-cart: "\f07a";
-$sign-in: "\f090";
-$sign-out: "\f08b";
-$signal: "\f012";
-$sitemap: "\f0e8";
-$skype: "\f17e";
-$slack: "\f198";
-$sliders: "\f1de";
-$slideshare: "\f1e7";
-$smile-o: "\f118";
-$soccer-ball-o: "\f1e3";
-$sort: "\f0dc";
-$sort-alpha-asc: "\f15d";
-$sort-alpha-desc: "\f15e";
-$sort-amount-asc: "\f160";
-$sort-amount-desc: "\f161";
-$sort-asc: "\f0de";
-$sort-desc: "\f0dd";
-$sort-down: "\f0dd";
-$sort-numeric-asc: "\f162";
-$sort-numeric-desc: "\f163";
-$sort-up: "\f0de";
-$soundcloud: "\f1be";
-$space-shuttle: "\f197";
-$spinner: "\f110";
-$spoon: "\f1b1";
-$spotify: "\f1bc";
-$square: "\f0c8";
-$square-o: "\f096";
-$stack-exchange: "\f18d";
-$stack-overflow: "\f16c";
-$star: "\f005";
-$star-half: "\f089";
-$star-half-empty: "\f123";
-$star-half-full: "\f123";
-$star-half-o: "\f123";
-$star-o: "\f006";
-$steam: "\f1b6";
-$steam-square: "\f1b7";
-$step-backward: "\f048";
-$step-forward: "\f051";
-$stethoscope: "\f0f1";
-$stop: "\f04d";
-$strikethrough: "\f0cc";
-$stumbleupon: "\f1a4";
-$stumbleupon-circle: "\f1a3";
-$subscript: "\f12c";
-$suitcase: "\f0f2";
-$sun-o: "\f185";
-$superscript: "\f12b";
-$support: "\f1cd";
-$table: "\f0ce";
-$tablet: "\f10a";
-$tachometer: "\f0e4";
-$tag: "\f02b";
-$tags: "\f02c";
-$tasks: "\f0ae";
-$taxi: "\f1ba";
-$tencent-weibo: "\f1d5";
-$terminal: "\f120";
-$text-height: "\f034";
-$text-width: "\f035";
-$th: "\f00a";
-$th-large: "\f009";
-$th-list: "\f00b";
-$thumb-tack: "\f08d";
-$thumbs-down: "\f165";
-$thumbs-o-down: "\f088";
-$thumbs-o-up: "\f087";
-$thumbs-up: "\f164";
-$ticket: "\f145";
-$times: "\f00d";
-$times-circle: "\f057";
-$times-circle-o: "\f05c";
-$tint: "\f043";
-$toggle-down: "\f150";
-$toggle-left: "\f191";
-$toggle-off: "\f204";
-$toggle-on: "\f205";
-$toggle-right: "\f152";
-$toggle-up: "\f151";
-$trash: "\f1f8";
-$trash-o: "\f014";
-$tree: "\f1bb";
-$trello: "\f181";
-$trophy: "\f091";
-$truck: "\f0d1";
-$try: "\f195";
-$tty: "\f1e4";
-$tumblr: "\f173";
-$tumblr-square: "\f174";
-$turkish-lira: "\f195";
-$twitch: "\f1e8";
-$twitter: "\f099";
-$twitter-square: "\f081";
-$umbrella: "\f0e9";
-$underline: "\f0cd";
-$undo: "\f0e2";
-$university: "\f19c";
-$unlink: "\f127";
-$unlock: "\f09c";
-$unlock-alt: "\f13e";
-$unsorted: "\f0dc";
-$upload: "\f093";
-$usd: "\f155";
-$user: "\f007";
-$user-md: "\f0f0";
-$users: "\f0c0";
-$video-camera: "\f03d";
-$vimeo-square: "\f194";
-$vine: "\f1ca";
-$vk: "\f189";
-$volume-down: "\f027";
-$volume-off: "\f026";
-$volume-up: "\f028";
-$warning: "\f071";
-$wechat: "\f1d7";
-$weibo: "\f18a";
-$weixin: "\f1d7";
-$wheelchair: "\f193";
-$wifi: "\f1eb";
-$windows: "\f17a";
-$won: "\f159";
-$wordpress: "\f19a";
-$wrench: "\f0ad";
-$xing: "\f168";
-$xing-square: "\f169";
-$yahoo: "\f19e";
-$yelp: "\f1e9";
-$yen: "\f157";
-$youtube: "\f167";
-$youtube-play: "\f16a";
-$youtube-square: "\f166";
-
-
-
+$adjust:"\f042";
+$adn:"\f170";
+$align-center:"\f037";
+$align-justify:"\f039";
+$align-left:"\f036";
+$align-right:"\f038";
+$ambulance:"\f0f9";
+$anchor:"\f13d";
+$android:"\f17b";
+$angellist:"\f209";
+$angle-double-down:"\f103";
+$angle-double-left:"\f100";
+$angle-double-right:"\f101";
+$angle-double-up:"\f102";
+$angle-down:"\f107";
+$angle-left:"\f104";
+$angle-right:"\f105";
+$angle-up:"\f106";
+$apple:"\f179";
+$archive:"\f187";
+$area-chart:"\f1fe";
+$arrow-circle-down:"\f0ab";
+$arrow-circle-left:"\f0a8";
+$arrow-circle-o-down:"\f01a";
+$arrow-circle-o-left:"\f190";
+$arrow-circle-o-right:"\f18e";
+$arrow-circle-o-up:"\f01b";
+$arrow-circle-right:"\f0a9";
+$arrow-circle-up:"\f0aa";
+$arrow-down:"\f063";
+$arrow-left:"\f060";
+$arrow-right:"\f061";
+$arrow-up:"\f062";
+$arrows:"\f047";
+$arrows-alt:"\f0b2";
+$arrows-h:"\f07e";
+$arrows-v:"\f07d";
+$asterisk:"\f069";
+$at:"\f1fa";
+$automobile:"\f1b9";
+$backward:"\f04a";
+$ban:"\f05e";
+$bank:"\f19c";
+$bar-chart:"\f080";
+$bar-chart-o:"\f080";
+$barcode:"\f02a";
+$bars:"\f0c9";
+$beer:"\f0fc";
+$behance:"\f1b4";
+$behance-square:"\f1b5";
+$bell:"\f0f3";
+$bell-o:"\f0a2";
+$bell-slash:"\f1f6";
+$bell-slash-o:"\f1f7";
+$bicycle:"\f206";
+$binoculars:"\f1e5";
+$birthday-cake:"\f1fd";
+$bitbucket:"\f171";
+$bitbucket-square:"\f172";
+$bitcoin:"\f15a";
+$bold:"\f032";
+$bolt:"\f0e7";
+$bomb:"\f1e2";
+$book:"\f02d";
+$bookmark:"\f02e";
+$bookmark-o:"\f097";
+$briefcase:"\f0b1";
+$btc:"\f15a";
+$bug:"\f188";
+$building:"\f1ad";
+$building-o:"\f0f7";
+$bullhorn:"\f0a1";
+$bullseye:"\f140";
+$bus:"\f207";
+$cab:"\f1ba";
+$calculator:"\f1ec";
+$calendar:"\f073";
+$calendar-o:"\f133";
+$camera:"\f030";
+$camera-retro:"\f083";
+$car:"\f1b9";
+$caret-down:"\f0d7";
+$caret-left:"\f0d9";
+$caret-right:"\f0da";
+$caret-square-o-down:"\f150";
+$caret-square-o-left:"\f191";
+$caret-square-o-right:"\f152";
+$caret-square-o-up:"\f151";
+$caret-up:"\f0d8";
+$cc:"\f20a";
+$cc-amex:"\f1f3";
+$cc-discover:"\f1f2";
+$cc-mastercard:"\f1f1";
+$cc-paypal:"\f1f4";
+$cc-stripe:"\f1f5";
+$cc-visa:"\f1f0";
+$certificate:"\f0a3";
+$chain:"\f0c1";
+$chain-broken:"\f127";
+$check:"\f00c";
+$check-circle:"\f058";
+$check-circle-o:"\f05d";
+$check-square:"\f14a";
+$check-square-o:"\f046";
+$chevron-circle-down:"\f13a";
+$chevron-circle-left:"\f137";
+$chevron-circle-right:"\f138";
+$chevron-circle-up:"\f139";
+$chevron-down:"\f078";
+$chevron-left:"\f053";
+$chevron-right:"\f054";
+$chevron-up:"\f077";
+$child:"\f1ae";
+$circle:"\f111";
+$circle-o:"\f10c";
+$circle-o-notch:"\f1ce";
+$circle-thin:"\f1db";
+$clipboard:"\f0ea";
+$clock-o:"\f017";
+$close:"\f00d";
+$cloud:"\f0c2";
+$cloud-download:"\f0ed";
+$cloud-upload:"\f0ee";
+$cny:"\f157";
+$code:"\f121";
+$code-fork:"\f126";
+$codepen:"\f1cb";
+$coffee:"\f0f4";
+$cog:"\f013";
+$cogs:"\f085";
+$columns:"\f0db";
+$comment:"\f075";
+$comment-o:"\f0e5";
+$comments:"\f086";
+$comments-o:"\f0e6";
+$compass:"\f14e";
+$compress:"\f066";
+$copy:"\f0c5";
+$copyright:"\f1f9";
+$credit-card:"\f09d";
+$crop:"\f125";
+$crosshairs:"\f05b";
+$css3:"\f13c";
+$cube:"\f1b2";
+$cubes:"\f1b3";
+$cut:"\f0c4";
+$cutlery:"\f0f5";
+$dashboard:"\f0e4";
+$database:"\f1c0";
+$dedent:"\f03b";
+$delicious:"\f1a5";
+$desktop:"\f108";
+$deviantart:"\f1bd";
+$digg:"\f1a6";
+$dollar:"\f155";
+$dot-circle-o:"\f192";
+$download:"\f019";
+$dribbble:"\f17d";
+$dropbox:"\f16b";
+$drupal:"\f1a9";
+$edit:"\f044";
+$eject:"\f052";
+$ellipsis-h:"\f141";
+$ellipsis-v:"\f142";
+$empire:"\f1d1";
+$envelope:"\f0e0";
+$envelope-o:"\f003";
+$envelope-square:"\f199";
+$eraser:"\f12d";
+$eur:"\f153";
+$euro:"\f153";
+$exchange:"\f0ec";
+$exclamation:"\f12a";
+$exclamation-circle:"\f06a";
+$exclamation-triangle:"\f071";
+$expand:"\f065";
+$external-link:"\f08e";
+$external-link-square:"\f14c";
+$eye:"\f06e";
+$eye-slash:"\f070";
+$eyedropper:"\f1fb";
+$facebook:"\f09a";
+$facebook-square:"\f082";
+$fast-backward:"\f049";
+$fast-forward:"\f050";
+$fax:"\f1ac";
+$female:"\f182";
+$fighter-jet:"\f0fb";
+$file:"\f15b";
+$file-archive-o:"\f1c6";
+$file-audio-o:"\f1c7";
+$file-code-o:"\f1c9";
+$file-excel-o:"\f1c3";
+$file-image-o:"\f1c5";
+$file-movie-o:"\f1c8";
+$file-o:"\f016";
+$file-pdf-o:"\f1c1";
+$file-photo-o:"\f1c5";
+$file-picture-o:"\f1c5";
+$file-powerpoint-o:"\f1c4";
+$file-sound-o:"\f1c7";
+$file-text:"\f15c";
+$file-text-o:"\f0f6";
+$file-video-o:"\f1c8";
+$file-word-o:"\f1c2";
+$file-zip-o:"\f1c6";
+$files-o:"\f0c5";
+$film:"\f008";
+$filter:"\f0b0";
+$fire:"\f06d";
+$fire-extinguisher:"\f134";
+$flag:"\f024";
+$flag-checkered:"\f11e";
+$flag-o:"\f11d";
+$flash:"\f0e7";
+$flask:"\f0c3";
+$flickr:"\f16e";
+$floppy-o:"\f0c7";
+$folder:"\f07b";
+$folder-o:"\f114";
+$folder-open:"\f07c";
+$folder-open-o:"\f115";
+$font:"\f031";
+$forward:"\f04e";
+$foursquare:"\f180";
+$frown-o:"\f119";
+$futbol-o:"\f1e3";
+$gamepad:"\f11b";
+$gavel:"\f0e3";
+$gbp:"\f154";
+$ge:"\f1d1";
+$gear:"\f013";
+$gears:"\f085";
+$gift:"\f06b";
+$git:"\f1d3";
+$git-square:"\f1d2";
+$github:"\f09b";
+$github-alt:"\f113";
+$github-square:"\f092";
+$gittip:"\f184";
+$glass:"\f000";
+$globe:"\f0ac";
+$google:"\f1a0";
+$google-plus:"\f0d5";
+$google-plus-square:"\f0d4";
+$google-wallet:"\f1ee";
+$graduation-cap:"\f19d";
+$group:"\f0c0";
+$h-square:"\f0fd";
+$hacker-news:"\f1d4";
+$hand-o-down:"\f0a7";
+$hand-o-left:"\f0a5";
+$hand-o-right:"\f0a4";
+$hand-o-up:"\f0a6";
+$hdd-o:"\f0a0";
+$header:"\f1dc";
+$headphones:"\f025";
+$heart:"\f004";
+$heart-o:"\f08a";
+$history:"\f1da";
+$home:"\f015";
+$hospital-o:"\f0f8";
+$html5:"\f13b";
+$ils:"\f20b";
+$image:"\f03e";
+$inbox:"\f01c";
+$indent:"\f03c";
+$info:"\f129";
+$info-circle:"\f05a";
+$inr:"\f156";
+$instagram:"\f16d";
+$institution:"\f19c";
+$ioxhost:"\f208";
+$italic:"\f033";
+$joomla:"\f1aa";
+$jpy:"\f157";
+$jsfiddle:"\f1cc";
+$key:"\f084";
+$keyboard-o:"\f11c";
+$krw:"\f159";
+$language:"\f1ab";
+$laptop:"\f109";
+$lastfm:"\f202";
+$lastfm-square:"\f203";
+$leaf:"\f06c";
+$legal:"\f0e3";
+$lemon-o:"\f094";
+$level-down:"\f149";
+$level-up:"\f148";
+$life-bouy:"\f1cd";
+$life-buoy:"\f1cd";
+$life-ring:"\f1cd";
+$life-saver:"\f1cd";
+$lightbulb-o:"\f0eb";
+$line-chart:"\f201";
+$link:"\f0c1";
+$linkedin:"\f0e1";
+$linkedin-square:"\f08c";
+$linux:"\f17c";
+$list:"\f03a";
+$list-alt:"\f022";
+$list-ol:"\f0cb";
+$list-ul:"\f0ca";
+$location-arrow:"\f124";
+$lock:"\f023";
+$long-arrow-down:"\f175";
+$long-arrow-left:"\f177";
+$long-arrow-right:"\f178";
+$long-arrow-up:"\f176";
+$magic:"\f0d0";
+$magnet:"\f076";
+$mail-forward:"\f064";
+$mail-reply:"\f112";
+$mail-reply-all:"\f122";
+$male:"\f183";
+$map-marker:"\f041";
+$maxcdn:"\f136";
+$meanpath:"\f20c";
+$medkit:"\f0fa";
+$meh-o:"\f11a";
+$microphone:"\f130";
+$microphone-slash:"\f131";
+$minus:"\f068";
+$minus-circle:"\f056";
+$minus-square:"\f146";
+$minus-square-o:"\f147";
+$mobile:"\f10b";
+$mobile-phone:"\f10b";
+$money:"\f0d6";
+$moon-o:"\f186";
+$mortar-board:"\f19d";
+$music:"\f001";
+$navicon:"\f0c9";
+$newspaper-o:"\f1ea";
+$openid:"\f19b";
+$outdent:"\f03b";
+$pagelines:"\f18c";
+$paint-brush:"\f1fc";
+$paper-plane:"\f1d8";
+$paper-plane-o:"\f1d9";
+$paperclip:"\f0c6";
+$paragraph:"\f1dd";
+$paste:"\f0ea";
+$pause:"\f04c";
+$paw:"\f1b0";
+$paypal:"\f1ed";
+$pencil:"\f040";
+$pencil-square:"\f14b";
+$pencil-square-o:"\f044";
+$phone:"\f095";
+$phone-square:"\f098";
+$photo:"\f03e";
+$picture-o:"\f03e";
+$pie-chart:"\f200";
+$pied-piper:"\f1a7";
+$pied-piper-alt:"\f1a8";
+$pinterest:"\f0d2";
+$pinterest-square:"\f0d3";
+$plane:"\f072";
+$play:"\f04b";
+$play-circle:"\f144";
+$play-circle-o:"\f01d";
+$plug:"\f1e6";
+$plus:"\f067";
+$plus-circle:"\f055";
+$plus-square:"\f0fe";
+$plus-square-o:"\f196";
+$power-off:"\f011";
+$print:"\f02f";
+$puzzle-piece:"\f12e";
+$qq:"\f1d6";
+$qrcode:"\f029";
+$question:"\f128";
+$question-circle:"\f059";
+$quote-left:"\f10d";
+$quote-right:"\f10e";
+$ra:"\f1d0";
+$random:"\f074";
+$rebel:"\f1d0";
+$recycle:"\f1b8";
+$reddit:"\f1a1";
+$reddit-square:"\f1a2";
+$refresh:"\f021";
+$remove:"\f00d";
+$renren:"\f18b";
+$reorder:"\f0c9";
+$repeat:"\f01e";
+$reply:"\f112";
+$reply-all:"\f122";
+$retweet:"\f079";
+$rmb:"\f157";
+$road:"\f018";
+$rocket:"\f135";
+$rotate-left:"\f0e2";
+$rotate-right:"\f01e";
+$rouble:"\f158";
+$rss:"\f09e";
+$rss-square:"\f143";
+$rub:"\f158";
+$ruble:"\f158";
+$rupee:"\f156";
+$save:"\f0c7";
+$scissors:"\f0c4";
+$search:"\f002";
+$search-minus:"\f010";
+$search-plus:"\f00e";
+$send:"\f1d8";
+$send-o:"\f1d9";
+$share:"\f064";
+$share-alt:"\f1e0";
+$share-alt-square:"\f1e1";
+$share-square:"\f14d";
+$share-square-o:"\f045";
+$shekel:"\f20b";
+$sheqel:"\f20b";
+$shield:"\f132";
+$shopping-cart:"\f07a";
+$sign-in:"\f090";
+$sign-out:"\f08b";
+$signal:"\f012";
+$sitemap:"\f0e8";
+$skype:"\f17e";
+$slack:"\f198";
+$sliders:"\f1de";
+$slideshare:"\f1e7";
+$smile-o:"\f118";
+$soccer-ball-o:"\f1e3";
+$sort:"\f0dc";
+$sort-alpha-asc:"\f15d";
+$sort-alpha-desc:"\f15e";
+$sort-amount-asc:"\f160";
+$sort-amount-desc:"\f161";
+$sort-asc:"\f0de";
+$sort-desc:"\f0dd";
+$sort-down:"\f0dd";
+$sort-numeric-asc:"\f162";
+$sort-numeric-desc:"\f163";
+$sort-up:"\f0de";
+$soundcloud:"\f1be";
+$space-shuttle:"\f197";
+$spinner:"\f110";
+$spoon:"\f1b1";
+$spotify:"\f1bc";
+$square:"\f0c8";
+$square-o:"\f096";
+$stack-exchange:"\f18d";
+$stack-overflow:"\f16c";
+$star:"\f005";
+$star-half:"\f089";
+$star-half-empty:"\f123";
+$star-half-full:"\f123";
+$star-half-o:"\f123";
+$star-o:"\f006";
+$steam:"\f1b6";
+$steam-square:"\f1b7";
+$step-backward:"\f048";
+$step-forward:"\f051";
+$stethoscope:"\f0f1";
+$stop:"\f04d";
+$strikethrough:"\f0cc";
+$stumbleupon:"\f1a4";
+$stumbleupon-circle:"\f1a3";
+$subscript:"\f12c";
+$suitcase:"\f0f2";
+$sun-o:"\f185";
+$superscript:"\f12b";
+$support:"\f1cd";
+$table:"\f0ce";
+$tablet:"\f10a";
+$tachometer:"\f0e4";
+$tag:"\f02b";
+$tags:"\f02c";
+$tasks:"\f0ae";
+$taxi:"\f1ba";
+$tencent-weibo:"\f1d5";
+$terminal:"\f120";
+$text-height:"\f034";
+$text-width:"\f035";
+$th:"\f00a";
+$th-large:"\f009";
+$th-list:"\f00b";
+$thumb-tack:"\f08d";
+$thumbs-down:"\f165";
+$thumbs-o-down:"\f088";
+$thumbs-o-up:"\f087";
+$thumbs-up:"\f164";
+$ticket:"\f145";
+$times:"\f00d";
+$times-circle:"\f057";
+$times-circle-o:"\f05c";
+$tint:"\f043";
+$toggle-down:"\f150";
+$toggle-left:"\f191";
+$toggle-off:"\f204";
+$toggle-on:"\f205";
+$toggle-right:"\f152";
+$toggle-up:"\f151";
+$trash:"\f1f8";
+$trash-o:"\f014";
+$tree:"\f1bb";
+$trello:"\f181";
+$trophy:"\f091";
+$truck:"\f0d1";
+$try:"\f195";
+$tty:"\f1e4";
+$tumblr:"\f173";
+$tumblr-square:"\f174";
+$turkish-lira:"\f195";
+$twitch:"\f1e8";
+$twitter:"\f099";
+$twitter-square:"\f081";
+$umbrella:"\f0e9";
+$underline:"\f0cd";
+$undo:"\f0e2";
+$university:"\f19c";
+$unlink:"\f127";
+$unlock:"\f09c";
+$unlock-alt:"\f13e";
+$unsorted:"\f0dc";
+$upload:"\f093";
+$usd:"\f155";
+$user:"\f007";
+$user-md:"\f0f0";
+$users:"\f0c0";
+$video-camera:"\f03d";
+$vimeo-square:"\f194";
+$vine:"\f1ca";
+$vk:"\f189";
+$volume-down:"\f027";
+$volume-off:"\f026";
+$volume-up:"\f028";
+$warning:"\f071";
+$wechat:"\f1d7";
+$weibo:"\f18a";
+$weixin:"\f1d7";
+$wheelchair:"\f193";
+$wifi:"\f1eb";
+$windows:"\f17a";
+$won:"\f159";
+$wordpress:"\f19a";
+$wrench:"\f0ad";
+$xing:"\f168";
+$xing-square:"\f169";
+$yahoo:"\f19e";
+$yelp:"\f1e9";
+$yen:"\f157";
+$youtube:"\f167";
+$youtube-play:"\f16a";
+$youtube-square:"\f166";
 /********************************************************************************************************
  * 1.4 - Genericons
  *
  * This section defines the CSS rules for handling Genericons, the icon font used in this theme.
  ********************************************************************************************************/
-
 /* Links */
+
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 /* Breadcrumbs */
+
 .breadcrumb-trail a[rel="home"]::before,
 .breadcrumb-trail .sep::before,
 /* Quotes. */
+
 blockquote::before,
 /* Lists */
+
 .widget ul li::before,
 .entry-content ul li::before,
 .comment-content ul li::before,
 /* Media player */
+
 .mejs-controls .mejs-button button::after,
 .mejs-overlay-button::after,
 .media-info-toggle::after,
 /* Playlists */
+
 .wp-playlist-playing .wp-playlist-caption::before,
 .wp-playlist-item-meta::before,
-
-
 /* Posts */
+
 .entry-author a::before,
 .entry-published::before,
 .comments-link::before,
@@ -609,48 +602,50 @@ blockquote::before,
 .chat-author cite::before,
 .entry-views::before,
 /* Menus */
+
 .menu__social li a::before,
 /* Plugins */
+
 .whistles-toggle .whistle-title::after,
 .whistles-accordion .whistle-title::after,
 /* Comments */
+
 .comment-published::before,
 .comment-edit-link::before,
 .comment-author::before,
 .comment-permalink::before,
 .comment-reply-link::before,
 .comment-reply-login::before,
-
-
 /* Search form */
+
 .menu__primary .search-form .search-toggle::before,
 /* Sub-terms list. */
+
 .menu__sub-terms-items::before,
 /* Widgets */
+
 .widget-title > .wrap::before,
 .widget-widget_rss .widget-title > .wrap a:first-child::before,
 /* Comments */
+
 .comments-number .wrap::before,
 /* Respond */
+
 #reply-title > .wrap::before,
 #respond label[for="author"]::before,
 #respond label[for="email"]::before,
 #respond label[for="url"]::before,
 #respond label[for="comment"]::before {
-
-	display:        inline-block;
-	font-family:    'Genericons';
-	font-size:      16px;
-	font-style:     normal;
-	font-weight:    normal;
-	font-variant:   normal;
-	line-height:    1;
-	vertical-align: middle;
-
-	-webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'Genericons';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
 }
-
-
 // {
 //   display: inline-block;
 //   font: normal normal normal 14px/1 FontAwesome;
@@ -659,324 +654,521 @@ blockquote::before,
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 // }
+/* General padding. */
 
+.ltr a[href^="mailto:"]::before,
+.ltr a[href^="tel:"]::before,
+.ltr .entry-author a::before,
+.ltr .chat-author cite::before,
+.ltr .entry-published::before,
+.ltr .comments-link::before,
+.ltr .post-edit-link::before,
+.ltr .entry-permalink::before,
+.ltr .post-format-link::before,
+.ltr .entry-terms::before,
+.ltr .image-sizes::before,
+.ltr .entry-views::before,
+.ltr .comment-published::before,
+.ltr .comment-edit-link::before,
+.ltr .comment-author::before,
+.ltr .comment-permalink::before {
+    padding-right: 3px;
+    padding-bottom: 2px;
+}
+.rtl a[href^="mailto:"]::before,
+.rtl a[href^="tel:"]::before,
+.rtl .entry-author a::before,
+.rtl .chat-author cite::before,
+.rtl .entry-published::before,
+.rtl .comments-link::before,
+.rtl .post-edit-link::before,
+.rtl .entry-permalink::before,
+.rtl .post-format-link::before,
+.rtl .entry-terms::before,
+.rtl .image-sizes::before,
+.rtl .entry-views::before,
+.rtl .comment-published::before,
+.rtl .comment-edit-link::before,
+.rtl .comment-author::before,
+.rtl .comment-permalink::before {
+    padding-left: 3px;
+    padding-bottom: 2px;
+}
+/* Links */
 
-	/* General padding. */
+a[href^="mailto:"]::before {
+    content: '\f410';
+}
+a[href^="tel:"]::before {
+    content: '\f437';
+}
+/* Posts */
 
-	.ltr a[href^="mailto:"]::before,
-	.ltr a[href^="tel:"]::before,
-	.ltr .entry-author a::before,
-	.ltr .chat-author cite::before,
-	.ltr .entry-published::before,
-	.ltr .comments-link::before,
-	.ltr .post-edit-link::before,
-	.ltr .entry-permalink::before,
-	.ltr .post-format-link::before,
-	.ltr .entry-terms::before,
-	.ltr .image-sizes::before,
-	.ltr .entry-views::before,
-	.ltr .comment-published::before,
-	.ltr .comment-edit-link::before,
-	.ltr .comment-author::before,
-	.ltr .comment-permalink::before { padding-right: 3px; padding-bottom: 2px; }
+.entry-author a::before,
+.chat-author cite::before {
+    content: '\f304';
+}
+.entry-published::before {
+    content: '\f307';
+}
+.comments-link::before {
+    content: '\f300';
+}
+.post-edit-link::before {
+    content: '\f411';
+}
+.entry-permalink::before {
+    content: '\f107';
+}
+.entry-terms.post_tag::before {
+    content: '\f302';
+}
+.entry-terms.category::before {
+    content: '\f301';
+}
+.entry-terms.portfolio::before {
+    content: '\f460';
+}
+.entry-terms.literary_form::before {
+    content: '\f100';
+}
+.entry-terms.literary_technique::before {
+    content: '\f411';
+}
+.entry-terms.literary_genre::before {
+    content: '\f302';
+}
+.format-standard .post-format-link::before {
+    content: '\f100';
+}
+.format-aside .post-format-link::before {
+    content: '\f101';
+}
+.format-audio .post-format-link::before {
+    content: '\f109';
+}
+.format-chat .post-format-link::before {
+    content: '\f108';
+}
+.format-gallery .post-format-link::before {
+    content: '\f103';
+}
+.image-sizes::before,
+.format-image .post-format-link::before {
+    content: '\f102';
+}
+.format-link .post-format-link::before {
+    content: '\f107';
+}
+.format-quote .post-format-link::before {
+    content: '\f106';
+}
+.format-status .post-format-link::before {
+    content: '\f105';
+}
+.format-video .post-format-link::before {
+    content: '\f104';
+}
+// .format-standard .post-format-link::before { content: $align-left; }
+// .format-aside .post-format-link::before    { content: $asterisk; }
+// .format-audio .post-format-link::before    { content: $volume-up; }
+// .format-chat .post-format-link::before     { content: $comments; }
+// .format-gallery .post-format-link::before  { content: $camera; }
+// .image-sizes::before,
+// .format-image .post-format-link::before    { content: $image; }
+// .format-link .post-format-link::before     { content: $external-link; }
+// .format-quote .post-format-link::before    { content: $quote-left; }
+// .format-status .post-format-link::before   { content: $history; }
+// .format-video .post-format-link::before    { content: $youtube-play; }
+/* Entry Views plugin. */
 
-	.rtl a[href^="mailto:"]::before,
-	.rtl a[href^="tel:"]::before,
-	.rtl .entry-author a::before,
-	.rtl .chat-author cite::before,
-	.rtl .entry-published::before,
-	.rtl .comments-link::before,
-	.rtl .post-edit-link::before,
-	.rtl .entry-permalink::before,
-	.rtl .post-format-link::before,
-	.rtl .entry-terms::before,
-	.rtl .image-sizes::before,
-	.rtl .entry-views::before,
-	.rtl .comment-published::before,
-	.rtl .comment-edit-link::before,
-	.rtl .comment-author::before,
-	.rtl .comment-permalink::before { padding-left: 3px; padding-bottom: 2px; }
+.entry-views::before {
+    content: '\f403';
+}
+/* Comments */
 
-	/* Links */
-	a[href^="mailto:"]::before { content: '\f410'; }
-	a[href^="tel:"]::before    { content: '\f437'; }
+.comment-published::before {
+    content: '\f303';
+}
+.comment-author::before {
+    content: '\f304';
+}
+.ping .comment-author::before {
+    content: '\f107';
+}
+.comment-edit-link::before {
+    content: '\f411';
+}
+.comment-permalink::before {
+    content: '\f107';
+}
+/* Social menu */
 
-		/* Posts */
-	.entry-author a::before,
-	.chat-author cite::before                  { content: '\f304'; }
-	.entry-published::before                   { content: '\f307'; }
-	.comments-link::before                     { content: '\f300'; }
-	.post-edit-link::before                    { content: '\f411'; }
-	.entry-permalink::before                   { content: '\f107'; }
-	.entry-terms.post_tag::before              { content: '\f302'; }
-	.entry-terms.category::before              { content: '\f301'; }
-	.entry-terms.portfolio::before             { content: '\f460'; }
-	.entry-terms.literary_form::before         { content: '\f100'; }
-	.entry-terms.literary_technique::before    { content: '\f411'; }
-	.entry-terms.literary_genre::before        { content: '\f302'; }
-	.format-standard .post-format-link::before { content: '\f100'; }
-	.format-aside .post-format-link::before    { content: '\f101'; }
-	.format-audio .post-format-link::before    { content: '\f109'; }
-	.format-chat .post-format-link::before     { content: '\f108'; }
-	.format-gallery .post-format-link::before  { content: '\f103'; }
-	.image-sizes::before,
-	.format-image .post-format-link::before    { content: '\f102'; }
-	.format-link .post-format-link::before     { content: '\f107'; }
-	.format-quote .post-format-link::before    { content: '\f106'; }
-	.format-status .post-format-link::before   { content: '\f105'; }
-	.format-video .post-format-link::before    { content: '\f104'; }
+.menu__social li a::before {
+    content: '\f408';
+    padding: 0 3px;
+}
+.menu__social li a:hover::before,
+.menu__social li a:focus::befoe {
+    opacity: 0.75;
+}
+.menu__social li a[href*="codepen.io"]::before {
+    content: '\f216';
+    color: #fff;
+}
+.menu__social li a[href*="digg.com"]::before {
+    content: '\f221';
+    color: #fff;
+}
+.menu__social li a[href*="dribbble.com"]::before {
+    content: '\f201';
+    color: #ea4c89;
+}
+.menu__social li a[href*="dropbox.com"]::before {
+    content: '\f225';
+    color: #007ee5;
+}
+.menu__social li a[href*="facebook.com"]::before {
+    content: '\f203';
+    color: #3b5998;
+}
+.menu__social li a[href*="flickr.com"]::before {
+    content: '\f211';
+    color: #ff0084;
+}
+.menu__social li a[href*="plus.google.com"]::before {
+    content: '\f206';
+    color: #dd4b39;
+}
+.menu__social li a[href*="github.com"]::before {
+    content: '\f200';
+    color: #4183c4;
+}
+.menu__social li a[href*="instagram.com"]::before {
+    content: '\f215';
+    color: #3f729b;
+}
+.menu__social li a[href*="linkedin.com"]::before {
+    content: '\f208';
+    color: #0e76a8;
+}
+.menu__social li a[href*="pinterest.com"]::before {
+    content: '\f210';
+    color: #c8232c;
+}
+.menu__social li a[href*="polldaddy.com"]::before {
+    content: '\f217';
+    color: #bc0b0b;
+}
+.menu__social li a[href*="getpocket.com"]::before {
+    content: '\f224';
+    color: #ee4056;
+}
+.menu__social li a[href*="reddit.com"]::before {
+    content: '\f222';
+    color: #336699;
+}
+.menu__social li a[href*="skype.com"]::before,
+.menu__social li a[href*="skype:"]::before {
+    content: '\f220';
+    color: #00aff0;
+}
+.menu__social li a[href*="stumbleupon.com"]::before {
+    content: '\f223';
+    color: #ff2618;
+}
+.menu__social li a[href*="tumblr.com"]::before {
+    content: '\f214';
+    color: #34526f;
+}
+.menu__social li a[href*="twitter.com"]::before {
+    content: '\f202';
+    color: #33ccff;
+}
+.menu__social li a[href*="vimeo.com"]::before {
+    content: '\f212';
+    color: #1AB7EA;
+}
+.menu__social li a[href*="wordpress.org"]::before,
+.menu__social li a[href*="wordpress.com"]::before {
+    content: '\f205';
+    color: #21759b;
+}
+.menu__social li a[href*="youtube.com"]::before {
+    content: '\f213';
+    color: #c4302b;
+}
+/* Breadcrumb Trail. */
 
+.breadcrumb-trail a[rel="home"]::before {
+    content: '\f409';
+    font-size: 24px;
+    font-weight: normal;
+}
+.breadcrumb-trail .sep::before {
+    content: '\f431';
+    font-weight: normal;
+}
+.ltr .breadcrumb-trail .sep::before {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.rtl .breadcrumb-trail .sep::before {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/* Comments */
 
+#reply-title > .wrap::before {
+    content: '\f412';
+    padding: 0 3px 1px 0;
+}
+.rtl #reply-title > .wrap::before {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+.comment-reply-link::before,
+.comment-reply-login::before {
+    content: '\f412';
+    margin-bottom: 3px;
+    padding-right: 5px;
+    /* Flip below causes padding to flip. */
+}
+/* flip icons */
 
-	// .format-standard .post-format-link::before { content: $align-left; }
-	// .format-aside .post-format-link::before    { content: $asterisk; }
-	// .format-audio .post-format-link::before    { content: $volume-up; }
-	// .format-chat .post-format-link::before     { content: $comments; }
-	// .format-gallery .post-format-link::before  { content: $camera; }
-	// .image-sizes::before,
-	// .format-image .post-format-link::before    { content: $image; }
-	// .format-link .post-format-link::before     { content: $external-link; }
-	// .format-quote .post-format-link::before    { content: $quote-left; }
-	// .format-status .post-format-link::before   { content: $history; }
-	// .format-video .post-format-link::before    { content: $youtube-play; }
+.rtl #reply-title > .wrap::before .rtl .comment-reply-link::before,
+.rtl .comment-reply-login::before {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+.comment-respond label[for="author"]::before,
+.comment-respond label[for="email"]::before,
+.comment-respond label[for="url"]::before,
+.comment-respond label[for="comment"]::before {
+    margin-bottom: 3px;
+    padding: 0 5px;
+    color: #555;
+}
+.comment-respond label[for="author"]::before {
+    content: '\f304';
+}
+.comment-respond label[for="email"]::before {
+    content: '\f410';
+}
+.comment-respond label[for="url"]::before {
+    content: '\f409';
+}
+.comment-respond label[for="comment"]::before {
+    content: '\f300';
+}
+/* Media info toggle */
 
+.media-info-toggle::after {
+    content: '\f431';
+    color: #f5f5f5;
+    vertical-align: top;
+}
+.ltr .media-info-toggle::after {
+    padding-left: 5px;
+}
+.rtl .media-info-toggle::after {
+    padding-right: 5px;
+}
+.media-info-toggle.active::after {
+    content: '\f432';
+}
+/* Media player */
 
+.mejs-button button::after {
+    color: #fff;
+}
+.mejs-unmute button::after {
+    color: #454545;
+}
+.mejs-fullscreen-button button::after {
+    content: '\f474';
+}
+.mejs-play button::after {
+    content: '\f452';
+}
+.mejs-pause button::after {
+    content: '\f448';
+}
+.mejs-volume-button button::after {
+    content: '\f109';
+}
+/* Media playlist */
 
+.wp-playlist-playing .wp-playlist-caption::before {
+    content: '\f452';
+}
+.wp-playlist-current-item .wp-playlist-item-title::before {
+    content: '\f109';
+}
+.wp-playlist-current-item .wp-playlist-item-album::before {
+    content: '\f460';
+}
+.wp-playlist-current-item .wp-playlist-item-artist::before {
+    content: '\f304';
+}
+.wp-playlist-playing .wp-playlist-caption::before,
+.wp-playlist-item-meta::before {
+    padding-bottom: 2px;
+}
+.ltr .wp-playlist-item-meta::before {
+    padding-right: 3px;
+}
+.rtl .wp-playlist-item-meta::before {
+    padding-left: 3px;
+}
+/* Whistles plugin */
 
+.whistles-toggle .whistle-title::after,
+.whistles-accordion .whistle-title::after {
+    content: '\f431';
+    padding: 3px 0 0;
+}
+.ltr .whistles-toggle .whistle-title::after,
+.ltr .whistles-accordion .whistle-title::after {
+    float: right;
+}
+.rtl .whistles-toggle .whistle-title::after,
+.rtl .whistles-accordion .whistle-title::after {
+    float: left;
+}
+.whistles-toggle .whistle-title[aria-selected="true"]::after,
+.whistles-accordion .whistle-title[aria-selected="true"]::after {
+    content: '\f432';
+}
+/* Widgets */
 
-	/* Entry Views plugin. */
-	.entry-views::before { content: '\f403'; }
+.widget-title > .wrap::before {
+    content: '\f408';
+}
+.ltr .widget-title > .wrap::before {
+    padding-right: 3px;
+}
+.rtl .widget-title > .wrap::before {
+    padding-left: 3px;
+}
+/* WP RSS widget */
 
-		/* Comments */
-	.comment-published::before    { content: '\f303'; }
-	.comment-author::before       { content: '\f304'; }
-	.ping .comment-author::before { content: '\f107'; }
-	.comment-edit-link::before    { content: '\f411'; }
-	.comment-permalink::before    { content: '\f107'; }
+.widget_rss .widget-title > .wrap::before {
+    content: '';
+    padding: 0;
+}
+.widget_rss .widget-title > .wrap a:first-child::before {
+    content: '\f413';
+    padding: 0 0 1px;
+    font-size: 16px;
+}
+.ltr .widget_rss .widget-title > .wrap a:first-child::before {
+    padding-right: 3px;
+}
+.rtl .widget_rss .widget-title > .wrap a:first-child::before {
+    padding-left: 3px;
+}
+/* WP nav menu widget */
 
-	/* Social menu */
+.widget_nav_menu .widget-title > .wrap::before {
+    content: '\f419';
+    font-size: 14px;
+}
+.ltr .widget_nav_menu .widget-title > .wrap::before {
+    padding-right: 5px;
+}
+.rtl .widget_nav_menu .widget-title > .wrap::before {
+    padding-left: 5px;
+}
+/* WordPress / Widgets Reloaded widgets. */
 
-	.menu__social li a::before        { content: '\f408'; padding: 0 3px; }
-	.menu__social li a:hover::before,
-	.menu__social li a:focus::befoe  { opacity: 0.75; }
+.widget_archive .widget-title > .wrap::before {
+    content: '\f303';
+}
+.widget_calendar .widget-title > .wrap::before {
+    content: '\f307';
+}
+.widget_categories .widget-title > .wrap::before {
+    content: '\f301';
+}
+.widget_links .widget-title > .wrap::before {
+    content: '\f107';
+}
+.widget_meta .widget-title > .wrap::before {
+    content: '\f455';
+}
+.widget_pages .widget-title > .wrap::before {
+    content: '\f443';
+}
+.widget_recent_comments .widget-title > .wrap::before {
+    content: '\f300';
+}
+.widget_recent_entries .widget-title > .wrap::before {
+    content: '\f411';
+}
+.widget_search .widget-title > .wrap::before {
+    content: '\f400';
+}
+.widget_tag_cloud .widget-title > .wrap::before {
+    content: '\f302';
+}
+.widget_text .widget-title > .wrap::before {
+    content: '\f100';
+}
+/* Widgets Reloaded widgets */
 
-		.menu__social li a[href*="codepen.io"]::before      { content: '\f216'; color: #fff;    }
-	.menu__social li a[href*="digg.com"]::before        { content: '\f221'; color: #fff;    }
-	.menu__social li a[href*="dribbble.com"]::before    { content: '\f201'; color: #ea4c89; }
-	.menu__social li a[href*="dropbox.com"]::before     { content: '\f225'; color: #007ee5; }
-	.menu__social li a[href*="facebook.com"]::before    { content: '\f203'; color: #3b5998; }
-	.menu__social li a[href*="flickr.com"]::before      { content: '\f211'; color: #ff0084; }
-	.menu__social li a[href*="plus.google.com"]::before { content: '\f206'; color: #dd4b39; }
-	.menu__social li a[href*="github.com"]::before      { content: '\f200'; color: #4183c4; }
-	.menu__social li a[href*="instagram.com"]::before   { content: '\f215'; color: #3f729b; }
-	.menu__social li a[href*="linkedin.com"]::before    { content: '\f208'; color: #0e76a8; }
-	.menu__social li a[href*="pinterest.com"]::before   { content: '\f210'; color: #c8232c; }
-	.menu__social li a[href*="polldaddy.com"]::before   { content: '\f217'; color: #bc0b0b; }
-	.menu__social li a[href*="getpocket.com"]::before   { content: '\f224'; color: #ee4056; }
-	.menu__social li a[href*="reddit.com"]::before      { content: '\f222'; color: #336699; }
-	.menu__social li a[href*="skype.com"]::before,
-	.menu__social li a[href*="skype:"]::before          { content: '\f220'; color: #00aff0; }
-	.menu__social li a[href*="stumbleupon.com"]::before { content: '\f223'; color: #ff2618; }
-	.menu__social li a[href*="tumblr.com"]::before      { content: '\f214'; color: #34526f; }
-	.menu__social li a[href*="twitter.com"]::before     { content: '\f202'; color: #33ccff; }
-	.menu__social li a[href*="vimeo.com"]::before       { content: '\f212'; color: #1AB7EA; }
-	.menu__social li a[href*="wordpress.org"]::before,
-	.menu__social li a[href*="wordpress.com"]::before   { content: '\f205'; color: #21759b; }
-	.menu__social li a[href*="youtube.com"]::before     { content: '\f213'; color: #c4302b; }
+.widget-authors .widget-title > .wrap::before {
+    content: '\f304';
+}
+/* bbPress widgets */
 
-		/* Breadcrumb Trail. */
+.bbp_widget_login .widget-title > .wrap::before {
+    content: '\f427';
+}
+.widget_display_forums .widget-title > .wrap::before {
+    content: '\f301';
+}
+.widget_display_replies .widget-title > .wrap::before {
+    content: '\f412';
+}
+.widget_display_topics .widget-title > .wrap::before {
+    content: '\f425';
+}
+.widget_display_views .widget-title > .wrap::before {
+    content: '\f403';
+}
+/* Members widgets */
 
-	.breadcrumb-trail a[rel="home"]::before {
-		content:     '\f409';
-		font-size:   24px;
-		font-weight: normal;
-	}
+.widget-login .widget-title > .wrap::before,
+.widget.login .widget-title > .wrap::before {
+    content: '\f427';
+}
+.widget-users .widget-title > .wrap::before,
+.widget.users .widget-title > .wrap::before {
+    content: '\f304';
+}
+/* Series plugin. */
 
-	.breadcrumb-trail .sep::before {
-		content:     '\f431';
-		font-weight: normal;
-	}
+.widget.series-list-posts .widget-title > .wrap::before,
+.widget.series-list-related .widget-title > .wrap::before {
+    content: '\f411';
+}
+/* Entry Views plugin. */
 
-	.ltr .breadcrumb-trail .sep::before {
-		-webkit-transform: rotate(-90deg);
-		   -moz-transform: rotate(-90deg);
-		    -ms-transform: rotate(-90deg);
-		     -o-transform: rotate(-90deg);
-		        transform: rotate(-90deg);
-	}
-
-	.rtl .breadcrumb-trail .sep::before {
-		-webkit-transform: rotate(90deg);
-		   -moz-transform: rotate(90deg);
-		    -ms-transform: rotate(90deg);
-		     -o-transform: rotate(90deg);
-		        transform: rotate(90deg);
-	}
-
-		/* Comments */
-
-	#reply-title > .wrap::before {
-		content: '\f412';
-		padding: 0 3px 1px 0;
-	}
-
-		.rtl #reply-title > .wrap::before {
-			-webkit-transform: scaleX(-1);
-			   -moz-transform: scaleX(-1);
-			     -o-transform: scaleX(-1);
-			        transform: scaleX(-1);
-
-			-ms-filter: "FlipH";
-			    filter: FlipH;
-		}
-
-	.comment-reply-link::before,
-	.comment-reply-login::before {
-		content:       '\f412';
-		margin-bottom: 3px;
-		padding-right: 5px; /* Flip below causes padding to flip. */
-	}
-
-	/* flip icons */
-	.rtl #reply-title > .wrap::before
-	.rtl .comment-reply-link::before,
-	.rtl .comment-reply-login::before {
-		-webkit-transform: scaleX(-1);
-		   -moz-transform: scaleX(-1);
-		     -o-transform: scaleX(-1);
-		        transform: scaleX(-1);
-
-		-ms-filter: "FlipH";
-		    filter: FlipH;
-	}
-
-  	.comment-respond label[for="author"]::before,
-	.comment-respond label[for="email"]::before,
-	.comment-respond label[for="url"]::before,
-	.comment-respond label[for="comment"]::before {
-		margin-bottom: 3px;
-		padding:       0 5px;
-		color:         #555;
-	}
-
-	.comment-respond label[for="author"]::before  { content: '\f304'; }
-	.comment-respond label[for="email"]::before   { content: '\f410'; }
-	.comment-respond label[for="url"]::before     { content: '\f409'; }
-	.comment-respond label[for="comment"]::before { content: '\f300'; }
-
-	/* Media info toggle */
-
-	.media-info-toggle::after {
-		content:        '\f431';
-		color:          #f5f5f5;
-		vertical-align: top;
-	}
-
-		.ltr .media-info-toggle::after { padding-left: 5px;  }
-	.rtl .media-info-toggle::after { padding-right: 5px; }
-
-	.media-info-toggle.active::after { content: '\f432'; }
-
-	/* Media player */
-
-	.mejs-button button::after { color: #fff; }
-	.mejs-unmute button::after { color: #454545; }
-
-	.mejs-fullscreen-button button::after { content: '\f474'; }
-	.mejs-play button::after              { content: '\f452'; }
-	.mejs-pause button::after             { content: '\f448'; }
-	.mejs-volume-button button::after     { content: '\f109'; }
-
-	/* Media playlist */
-	.wp-playlist-playing .wp-playlist-caption::before          { content: '\f452'; }
-	.wp-playlist-current-item .wp-playlist-item-title::before  { content: '\f109'; }
-	.wp-playlist-current-item .wp-playlist-item-album::before  { content: '\f460'; }
-	.wp-playlist-current-item .wp-playlist-item-artist::before { content: '\f304'; }
-
-	.wp-playlist-playing .wp-playlist-caption::before,
-	.wp-playlist-item-meta::before                     { padding-bottom: 2px; }
-	.ltr .wp-playlist-item-meta::before                { padding-right:  3px; }
-	.rtl .wp-playlist-item-meta::before                { padding-left:   3px; }
-
-	/* Whistles plugin */
-
-	.whistles-toggle .whistle-title::after,
-	.whistles-accordion .whistle-title::after {
-		content: '\f431';
-		padding: 3px 0 0;
-	}
-
-	.ltr .whistles-toggle .whistle-title::after,
-	.ltr .whistles-accordion .whistle-title::after { float: right; }
-
-	.rtl .whistles-toggle .whistle-title::after,
-	.rtl .whistles-accordion .whistle-title::after { float: left; }
-
-	.whistles-toggle .whistle-title[aria-selected="true"]::after,
-	.whistles-accordion .whistle-title[aria-selected="true"]::after { content: '\f432'; }
-
-	/* Widgets */
-
-	.widget-title > .wrap::before { content: '\f408'; }
-
-	.ltr .widget-title > .wrap::before { padding-right: 3px; }
-	.rtl .widget-title > .wrap::before { padding-left:  3px; }
-
-	/* WP RSS widget */
-	.widget_rss .widget-title > .wrap::before {
-		content: '';
-		padding: 0;
-	}
-
-	.widget_rss .widget-title > .wrap a:first-child::before {
-		content:   '\f413';
-		padding:   0 0 1px;
-		font-size: 16px;
-	}
-
-		.ltr .widget_rss .widget-title > .wrap a:first-child::before { padding-right: 3px; }
-		.rtl .widget_rss .widget-title > .wrap a:first-child::before { padding-left:  3px; }
-
-	/* WP nav menu widget */
-	.widget_nav_menu .widget-title > .wrap::before { content: '\f419'; font-size: 14px; }
-
-	.ltr .widget_nav_menu .widget-title > .wrap::before { padding-right: 5px; }
-	.rtl .widget_nav_menu .widget-title > .wrap::before { padding-left:  5px; }
-
-	/* WordPress / Widgets Reloaded widgets. */
-	.widget_archive .widget-title > .wrap::before         { content: '\f303'; }
-	.widget_calendar .widget-title > .wrap::before        { content: '\f307'; }
-	.widget_categories .widget-title > .wrap::before      { content: '\f301'; }
-	.widget_links .widget-title > .wrap::before           { content: '\f107'; }
-	.widget_meta .widget-title > .wrap::before            { content: '\f455'; }
-	.widget_pages .widget-title > .wrap::before           { content: '\f443'; }
-	.widget_recent_comments .widget-title > .wrap::before { content: '\f300'; }
-	.widget_recent_entries .widget-title > .wrap::before  { content: '\f411'; }
-	.widget_search .widget-title > .wrap::before          { content: '\f400'; }
-	.widget_tag_cloud .widget-title > .wrap::before       { content: '\f302'; }
-	.widget_text .widget-title > .wrap::before            { content: '\f100'; }
-
-	/* Widgets Reloaded widgets */
-	.widget-authors .widget-title > .wrap::before         { content: '\f304'; }
-
-	/* bbPress widgets */
-	.bbp_widget_login .widget-title > .wrap::before       { content: '\f427'; }
-	.widget_display_forums .widget-title > .wrap::before  { content: '\f301'; }
-	.widget_display_replies .widget-title > .wrap::before { content: '\f412'; }
-	.widget_display_topics .widget-title > .wrap::before  { content: '\f425'; }
-	.widget_display_views .widget-title > .wrap::before   { content: '\f403'; }
-
-	/* Members widgets */
-	.widget-login .widget-title > .wrap::before,
-	.widget.login .widget-title > .wrap::before           { content: '\f427'; }
-
-	.widget-users .widget-title > .wrap::before,
-	.widget.users .widget-title > .wrap::before           { content: '\f304'; }
-
-	/* Series plugin. */
-	.widget.series-list-posts .widget-title > .wrap::before,
-	.widget.series-list-related .widget-title > .wrap::before { content: '\f411'; }
-
-	/* Entry Views plugin. */
-	.widget-entry-views .widget-title > .wrap::before { content: '\f403'; }
-
+.widget-entry-views .widget-title > .wrap::before {
+    content: '\f403';
+}

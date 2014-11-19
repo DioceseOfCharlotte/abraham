@@ -1,7 +1,6 @@
 /*------------------------------------*\
 		#PAGE
 \*------------------------------------*/
-
 /**
  * High-, page-level styling.
  *
@@ -12,21 +11,23 @@
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  */
+
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     color: $color-text;
-    overflow-y: scroll; /* [2] */
+    overflow-y: scroll;
+    /* [2] */
 }
 
 body {
-  position: relative;
-  background-color: #fff;
-  min-height: 100%;
+    position: relative;
+    background-color: #fff;
+    min-height: 100%;
 }

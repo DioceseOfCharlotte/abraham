@@ -1,90 +1,75 @@
 /*------------------------------------*\
     #TABLES
 \*------------------------------------*/
-
 /* === Tables === */
 
 table {
-	width:           100%;
-	border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5625em;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-
-	caption {
-		margin:       0 0 $base-spacing-unit-sm / 2;
-		font-variant: small-caps;
-	}
-
-	tr,
-	thead { border-bottom: 1px solid; }
-
-		tr:last-child { border: none; }
-
-	tfoot { border-top: 1px solid; }
-
-	th,
-	td {
-		padding:         $base-spacing-unit-sm;
-		-moz-box-sizing: border-box;
-		     box-sizing: border-box;
-	}
-
-  th {
-		font-size:      0.8125rem;
-		font-weight:    700;
-		text-transform: uppercase;
-	}
-
-		.ltr th { text-align: left;  }
-		.rtl th { text-align: right; }
-
-	td { border: 1px solid; }
-
-		th:empty,
-		td:empty,
-		th.pad,
-		td.pad { opacity: 0; }
-
-	/* wp-calendar <table> */
-
-		.wp-calendar th { font-size: 0.75rem; }
-
-		.wp-calendar td,
-		.wp-calendar th {
-			padding:        5px 2%;
-			vertical-align: middle;
-			text-align:     center;
-		}
-
-		.wp-calendar th { padding: 10px 2%; }
-
-		/* .has-posts added via jQuery. */
-
-		.wp-calendar tbody td.has-posts {
-			padding:  0;
-		}
-
-			.wp-calendar td.has-posts a {
-				display:         block;
-				padding:         5px 2%;
-				font-weight:     700;
-				-moz-box-sizing: border-box;
-				     box-sizing: border-box;
-			}
-
-
-/*
-striping:
-   even - #fff (white)
-   odd  - $color-gray-lighter
-*/
-.table td {
-    background-color: transparent;
+caption {
+    margin: 0 0 $base-spacing-unit-sm / 2;
+    font-variant: small-caps;
 }
-.table-odd td {
+th,
+td {
+    text-align: left;
+    padding: $base-spacing-unit-sm;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+td {
+    border-top: 0.0725em solid $color-gray-light;
+    vertical-align: top;
+}
+tbody tr:nth-child(even) {
     background-color: $color-gray-lighter;
 }
+.table-condensed th,
+.table-condensed td {
+    padding: 0.25em;
+}
+.ltr th {
+    text-align: left;
+}
+.rtl th {
+    text-align: right;
+}
+th:empty,
+td:empty,
+th.pad,
+td.pad {
+    opacity: 0;
+}
+/* wp-calendar <table> */
 
-/* nth-child selector for modern browsers */
-.table-striped tr:nth-child(2n-1) td {
-    background-color: $color-gray-lighter;
+.wp-calendar th {
+    font-size: 0.75rem;
+}
+.wp-calendar td,
+.wp-calendar th {
+    padding: 5px 2%;
+    vertical-align: middle;
+    text-align: center;
+}
+.wp-calendar th {
+    padding: 10px 2%;
+}
+/* .has-posts added via jQuery. */
+
+.wp-calendar tbody td.has-posts {
+    padding: 0;
+}
+.wp-calendar td.has-posts a {
+    display: block;
+    padding: 5px 2%;
+    font-weight: 700;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }

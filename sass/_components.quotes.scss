@@ -3,33 +3,37 @@
 \*------------------------------------*/
 
 blockquote {
-	margin:     $base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit;
-	padding:    $base-spacing-unit $base-spacing-unit 0;
-	font-size:  1em; /* relative to parent */
-	font-style: normal;
+    margin: $base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit;
+    padding: $base-spacing-unit $base-spacing-unit 0;
+    font-size: 1em;
+    /* relative to parent */
+
+    font-style: normal;
 }
+blockquote cite {
+    font-size: 0.875em;
+    font-variant: small-caps;
+}
+.twitter-tweet {
+    width: 100%;
+    box-sizing: border-box;
+}
+/* U.S. English quotes. */
 
-	blockquote cite {
-		font-size:    0.875em;
-		font-variant: small-caps;
-	}
-
-	.twitter-tweet {
-		width:           100%;
-		box-sizing: border-box;
-	}
-
-	/* U.S. English quotes. */
-
-	.en-us blockquote p { quotes: '\201C' '\201D'; }
-
-		.en-us blockquote p::before,
-		.en-us blockquote p:first-child::before { content: '\201C';  }
-
-		.en-us blockquote p:last-child::after,
-		.en-us blockquote p.is-last-child::after { content: '\201D'; }
-
-		.en-us blockquote p.has-cite:last-child::after,
-		.en-us blockquote p.has-cite:last-child::before,
-		.en-us blockquote p.has-cite-only:last-child::after,
-		.en-us blockquote p.has-cite-only:last-child::before { content: ''; }
+.en-us blockquote p {
+    quotes: '\201C''\201D';
+}
+.en-us blockquote p::before,
+.en-us blockquote p:first-child::before {
+    content: '\201C';
+}
+.en-us blockquote p:last-child::after,
+.en-us blockquote p.is-last-child::after {
+    content: '\201D';
+}
+.en-us blockquote p.has-cite:last-child::after,
+.en-us blockquote p.has-cite:last-child::before,
+.en-us blockquote p.has-cite-only:last-child::after,
+.en-us blockquote p.has-cite-only:last-child::before {
+    content: '';
+}

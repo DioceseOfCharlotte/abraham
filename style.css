@@ -2188,38 +2188,39 @@ img.abraham-medium, img.abraham-full {
 /* === Tables === */
 table {
 	width: 100%;
-	border-collapse: collapse; }
+	max-width: 100%;
+	margin-bottom: 1.5625em;
+	border-spacing: 0; 
+	border-collapse: collapse;}
 
 caption {
 	margin: 0 0 5px;
 	font-variant: small-caps; }
 
-tr, thead {
-	border-bottom: 1px solid; }
-
-tr:last-child {
-	border: none; }
-
-tfoot {
-	border-top: 1px solid; }
-
 th, td {
-	box-sizing: border-box; 
-	padding: 10px;}
+	padding: 10px; 
+	text-align: left;}
 
 th {
-	font-size: 0.8125rem;
-	font-weight: 700;
-	text-transform: uppercase; }
+	background-color: #f2f2f2;
+	font-weight: bold;
+	vertical-align: bottom; }
+
+td {
+	border-top: 0.0725em solid #e0e0e0;
+	vertical-align: top; }
+
+tbody tr:nth-child(even) {
+	background-color: #f5f5f5; }
+
+.table-condensed th, .table-condensed td {
+	padding: 0.25em; }
 
 .ltr th {
 	text-align: left; }
 
 .rtl th {
 	text-align: right; }
-
-td {
-	border: 1px solid; }
 
 th:empty, td:empty, th.pad, td.pad {
 	opacity: 0; }
@@ -2245,21 +2246,6 @@ th:empty, td:empty, th.pad, td.pad {
 	box-sizing: border-box; 
 	padding: 5px 2%;
 	font-weight: 700;}
-
-/*
-striping:
-   even - #fff (white)
-   odd  - $color-gray-lighter
-*/
-.table td {
-	background-color: transparent; }
-
-.table-odd td {
-	background-color: #f5f5f5; }
-
-/* nth-child selector for modern browsers */
-.table-striped tr:nth-child(2n-1) td {
-	background-color: #f5f5f5; }
 
 /*------------------------------------*\
     #MEDIA
@@ -2590,14 +2576,17 @@ striping:
 /* Elements */
 .ltr .entry-author, .ltr .entry-published, .ltr .comments-link, .ltr .post-edit-link, .ltr .entry-permalink, .ltr .entry-terms, .ltr .post-format-link, .ltr .entry-views {
 	display: inline-block; 
-	margin-right: 5px;}
+	margin-right: 1rem;}
 
 .rtl .entry-author, .rtl .entry-published, .rtl .comments-link, .rtl .post-edit-link, .rtl .entry-permalink, .rtl .entry-terms, .rtl .post-format-link, .rtl .entry-views {
 	display: inline-block; 
-	margin-left: 5px;}
+	margin-left: 1rem;}
 
 /* Output from comments_popup_link() when no comments are found or off. */
 .ltr span.comments-link, .rtl span.comments-link {
+	display: none; }
+
+.format-standard .post-format-link {
 	display: none; }
 
 /* === Chats === */
@@ -3517,10 +3506,6 @@ li.ping, .comment-content {
  * text throughout the theme.  The "secondary" font is used for handling secondary use cases.  The
  * "headlines" font is specific to h1-h6 headers (with the exception of .site-description).
  *
- * If building a child theme for public release with custom fonts, the child theme should define only the
- * font rules it needs.  Copy the specific section below that you want to overwrite into the child theme.
- * Make sure to include the `.font-*` class as this will maintain forward compatibility with future
- * changes in the parent theme.
  */
 /* ====== Secondary Font ====== */
 .font-secondary, body {
@@ -3533,12 +3518,9 @@ li.ping, .comment-content {
 /**
  * 2.2 - Color Definitions
  *
- * The following are all of the colors defined by the theme.  The only other colors are part of the theme
- * customizer options and should not be overwritten.  If needed, copy the specific sections below into
- * your child theme and make the necessary changes there.
- */
-/*
- * Fun Zone: The colors below are safe to overwrite depending on what you need to do.  Have at it!
+ * The following are all of the colors defined by the theme.
+ * The only other colors are part of the theme
+ * customizer options and should not be overwritten.
  */
 /* ====== color: $base-text-color ====== */
 body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {

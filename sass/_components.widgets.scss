@@ -3,75 +3,79 @@
 \*------------------------------------*/
 
 .sidebar {
-	//font-size: 1.0675rem;
+    //font-size: 1.0675rem;
 }
-
 .sidebar__subsidiary {
-	padding-top: $base-spacing-unit-lg;
-	border-top:  1px solid;
+    padding-top: $base-spacing-unit-lg;
+    border-top: 1px solid;
 }
+.widget {
+    margin: 0;
+    padding: 0 0 $base-spacing-unit;
+}
+.widget-title,
+.comments-number,
+#reply-title,
+.attachment-meta-title {
+    border-bottom: 2px solid;
+}
+.widget-title > .wrap,
+.comments-number > .wrap,
+#reply-title > .wrap,
+.attachment-meta-title > .wrap {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: $base-spacing-unit-sm $base-spacing-unit $base-spacing-unit-sm / 2;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+#reply-title > .wrap,
+.widget-title > .wrap {
+    border-radius: $base-radius $base-radius 0 0;
+}
+.widget-title > .wrap a {
+    text-decoration: underline;
+}
+/* Recent posts widget and Entry Views plugin. */
 
-	.widget {
-		margin:  0;
-		padding: 0 0 $base-spacing-unit;
-	}
+.widget_recent_entries .post-date,
+.widget-entry-views .entry-view-count {
+    font-size: 0.875em;
+    /* relative */
+}
+/* Tags widget (core WP wraps in a `<div>` instead of `<p>`). */
 
-		.widget-title,
-		.comments-number,
-		#reply-title,
-		.attachment-meta-title { border-bottom: 2px solid; }
+.widget .tagcloud,
+.widget select#cat.postform,
+.widget select[name="archive-dropdown"] {
+    margin-bottom: 1.5rem;
+}
+/* Search widget. */
 
-			.widget-title > .wrap,
-			.comments-number > .wrap,
-			#reply-title > .wrap,
-			.attachment-meta-title > .wrap {
-				display:        inline-block;
-				vertical-align: bottom;
-				padding:        $base-spacing-unit-sm $base-spacing-unit $base-spacing-unit-sm / 2;
-				font-size:      0.8125rem;
-				font-weight:    700;
-				line-height:    16px;
-				text-transform: uppercase;
-			}
+.widget_search > .search-form {
+    padding: 1.5rem;
+    margin: -1.5rem 0 1.5rem;
+}
+.widget_search input[type="search"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    opacity: 1;
+    box-sizing: border-box;
+}
+.widget_search input[type="submit"] {
+    display: none;
+}
+/* Members login widget */
 
-			#reply-title > .wrap, .widget-title > .wrap {
-				border-radius: $base-radius $base-radius 0 0;
-			}
-
-			.widget-title > .wrap a { text-decoration: underline; }
-
-	/* Recent posts widget and Entry Views plugin. */
-	.widget_recent_entries .post-date,
-	.widget-entry-views .entry-view-count {
-		font-size: 0.875em; /* relative */
-	}
-
-	/* Tags widget (core WP wraps in a `<div>` instead of `<p>`). */
-	.widget .tagcloud,
-	.widget select#cat.postform,
-	.widget select[name="archive-dropdown"] { margin-bottom: 1.5rem; }
-
-		/* Search widget. */
-	.widget_search > .search-form {
-		padding: 1.5rem;
-		margin:  -1.5rem 0 1.5rem;
-	}
-
-		.widget_search input[type="search"] {
-			display: block;
-			width:   100%;
-			padding: 0.5rem;
-			border:  none;
-			opacity: 1;
-			box-sizing: border-box;
-		}
-
-		.widget_search input[type="submit"] { display: none; }
-
-	/* Members login widget */
-	.widget-login form,
-	.widget.login form { clear: both; }
-
-	.widget-login img + p,
-	.widget.login img + p { padding-top: 0.75rem; }
-
+.widget-login form,
+.widget.login form {
+    clear: both;
+}
+.widget-login img + p,
+.widget.login img + p {
+    padding-top: 0.75rem;
+}

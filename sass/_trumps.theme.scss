@@ -1,7 +1,6 @@
 /*------------------------------------*\
     #THEME-EDITS
 \*------------------------------------*/
-
 /**
  * 2.1 - Font Family Definitions
  *
@@ -9,20 +8,13 @@
  * text throughout the theme.  The "secondary" font is used for handling secondary use cases.  The
  * "headlines" font is specific to h1-h6 headers (with the exception of .site-description).
  *
- * If building a child theme for public release with custom fonts, the child theme should define only the
- * font rules it needs.  Copy the specific section below that you want to overwrite into the child theme.
- * Make sure to include the `.font-*` class as this will maintain forward compatibility with future
- * changes in the parent theme.
  */
-
-
-
 /* ====== Secondary Font ====== */
 
-.font-secondary, body {
-	font-family: $font-secondary;
+.font-secondary,
+body {
+    font-family: $font-secondary;
 }
-
 /* ====== Headlines Font ====== */
 
 .font-headlines,
@@ -32,29 +24,22 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-primary;
+    font-family: $font-primary;
 }
-
 /**
  * 2.2 - Color Definitions
  *
- * The following are all of the colors defined by the theme.  The only other colors are part of the theme
- * customizer options and should not be overwritten.  If needed, copy the specific sections below into
- * your child theme and make the necessary changes there.
+ * The following are all of the colors defined by the theme.
+ * The only other colors are part of the theme
+ * customizer options and should not be overwritten.
  */
-
-/*
- * Fun Zone: The colors below are safe to overwrite depending on what you need to do.  Have at it!
- */
-
 /* ====== color: $base-text-color ====== */
 
 body,
 .media-shortcode-extend .media-info,
 .wp-playlist-dark .wp-playlist-item {
-	color: $base-text-color;
+    color: $base-text-color;
 }
-
 /* ====== border-color: $color-gray-light ====== */
 
 h1,
@@ -91,9 +76,8 @@ li.ping,
 .whistles-accordion .whistle-title,
 .whistles-toggle .whistle-content,
 .whistles-accordion .whistle-content {
-	border-color: $color-gray-light;
+    border-color: $color-gray-light;
 }
-
 /* ====== color: $color-gray-dark ====== */
 
 h6,
@@ -109,9 +93,8 @@ label:hover,
 label:focus,
 label.focus,
 .loop-pagination .current {
-	color: $color-gray-dark;
+    color: $color-gray-dark;
 }
-
 /* ====== color: $color-gray ====== */
 
 caption,
@@ -136,9 +119,8 @@ select,
 .whistles-toggle .whistle-title,
 .whistles-accordion .whistle-title,
 .wp-playlist-dark .wp-playlist-item-meta {
-	color: $color-gray;
+    color: $color-gray;
 }
-
 /* ====== background: $color-gray-darker ====== */
 
 .menu__primary,
@@ -156,9 +138,8 @@ select,
 .mejs-overlay-play .mejs-overlay-button::after,
 .mejs-time-rail .mejs-time-float,
 .wp-playlist-dark {
-	background: $color-nav-primary;
+    background: $color-nav-primary;
 }
-
 /* ====== background: transparent ====== */
 
 hr,
@@ -173,211 +154,252 @@ hr,
 .menu__primary .menu-toggle button:focus,
 .menu__primary .search-toggle,
 .menu__primary .search-toggle:hover,
-.menu__primary .search-toggle:focus  {
-	background: transparent;
+.menu__primary .search-toggle:focus {
+    background: transparent;
 }
-
 /* ====== background: $color-white ====== */
 
 html,
 .content-wrap,
 #reply-title small a,
 .whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
-	background: $color-white;
+    background: $color-white;
 }
-
 /* ====== Other colors ====== */
 
-h1 { color: #303030; }
-h2 { color: #353535; }
-h3 { color: #404040; }
-h4 { color: $color-gray-dark; }
-h5 { color: #505050; }
-
-code {
-	color:        $color-black;
-	background:   $color-gray-lighter;
+h1 {
+    color: #303030;
 }
-
+h2 {
+    color: #353535;
+}
+h3 {
+    color: #404040;
+}
+h4 {
+    color: $color-gray-dark;
+}
+h5 {
+    color: #505050;
+}
+code {
+    color: $color-black;
+    background: $color-gray-lighter;
+}
 tr,
 thead,
 tfoot,
-td { border-color: $color-gray-lighter; }
-
-td { background: $color-gray-lighter; }
-
-
-
-.wp-caption .wp-caption-text {
-	color:      $color-gray-light;
-	background: rgba( 0, 0, 0, 0.75 );
+td {
+    border-color: $color-gray-lighter;
 }
-
-.gallery .gallery-icon a img { background: $color-gray-lighter; }
-
+td {
+    background: $color-gray-lighter;
+}
+.wp-caption .wp-caption-text {
+    color: $color-gray-light;
+    background: rgba( 0, 0, 0, 0.75);
+}
+.gallery .gallery-icon a img {
+    background: $color-gray-lighter;
+}
 .gallery-icon a:hover img,
-.galley-icon a:focus img { background: $color-gray-lighter; }
-
-.menu__primary .menu-toggle button { color: rgba( 255, 255, 255, 0.75 ); }
-
+.galley-icon a:focus img {
+    background: $color-gray-lighter;
+}
+.menu__primary .menu-toggle button {
+    color: rgba( 255, 255, 255, 0.75);
+}
 .menu__primary li a,
 .menu__secondary li li a,
 .menu__primary .menu-toggle button:hover,
-.menu__primary .menu-toggle button:focus { color: rgba( 255, 255, 255, 0.75 ); }
-
-@media only screen and (max-width: 799px) {
-
-	.menu__secondary-wrap,
-	.menu__primary .search-form > div { background: $color-gray-darker; }
-
-	.menu__primary li a,
-	.menu__secondary li a,
-	.menu__secondary .menu-toggle button {
-		color:        rgba( 255, 255, 255, 0.75 );
-		background:   $color-gray-darker;
-		border-color: $color-gray-darker;
-	}
-
-	.menu__primary li a:hover,
-	.menu__secondary li a:hover,
-	.menu__primary li a:focus,
-	.menu__secondary li a:focus {
-		color: $color-white;
-		background: $color-gray-darker;
-	}
+.menu__primary .menu-toggle button:focus {
+    color: rgba( 255, 255, 255, 0.75);
 }
-
+@media only screen and (max-width: 799px) {
+    .menu__secondary-wrap,
+    .menu__primary .search-form > div {
+        background: $color-gray-darker;
+    }
+    .menu__primary li a,
+    .menu__secondary li a,
+    .menu__secondary .menu-toggle button {
+        color: rgba( 255, 255, 255, 0.75);
+        background: $color-gray-darker;
+        border-color: $color-gray-darker;
+    }
+    .menu__primary li a:hover,
+    .menu__secondary li a:hover,
+    .menu__primary li a:focus,
+    .menu__secondary li a:focus {
+        color: $color-white;
+        background: $color-gray-darker;
+    }
+}
 .site-title a:hover,
-.site-title a:focus { border-bottom-color: $color-gray; }
-
+.site-title a:focus {
+    border-bottom-color: $color-gray;
+}
 .entry-title,
-.entry-title a { color: $color-gray-darker; }
-
+.entry-title a {
+    color: $color-gray-darker;
+}
 .entry-byline,
 .entry-footer,
 .comment-meta,
-.wp-playlist-item-meta { color: rgba( 85, 85, 85, 0.75 ); }
-
-.image-sizes .sep { color: $color-gray-light; }
-
-.format-chat .chat-speaker-1 .chat-author,
-.format-chat .chat-speaker-11 .chat-author { color: #3498db; }
-.format-chat .chat-speaker-2 .chat-author,
-.format-chat .chat-speaker-12 .chat-author  { color: #f1c40f; }
-.format-chat .chat-speaker-3 .chat-author,
-.format-chat .chat-speaker-13 .chat-author  { color: #e74c3c; }
-.format-chat .chat-speaker-4 .chat-author,
-.format-chat .chat-speaker-14 .chat-author  { color: #2ecc71; }
-.format-chat .chat-speaker-5 .chat-author,
-.format-chat .chat-speaker-15 .chat-author  { color: #f39c12; }
-.format-chat .chat-speaker-6 .chat-author,
-.format-chat .chat-speaker-16 .chat-author  { color: #9b59b6; }
-.format-chat .chat-speaker-7 .chat-author,
-.format-chat .chat-speaker-17 .chat-author  { color: #95a5a6; }
-.format-chat .chat-speaker-8 .chat-author,
-.format-chat .chat-speaker-18 .chat-author  { color: #16a085; }
-.format-chat .chat-speaker-9 .chat-author,
-.format-chat .chat-speaker-19 .chat-author  { color: #e67e22; }
-.format-chat .chat-speaker-10 .chat-author,
-.format-chat .chat-speaker-20 .chat-author  { color: #1abc9c; }
-
-.loop-description {
-	color:      $color-gray;
-	background: $color-gray-lighter;
+.wp-playlist-item-meta {
+    color: rgba( 85, 85, 85, 0.75);
 }
-
+.image-sizes .sep {
+    color: $color-gray-light;
+}
+.format-chat .chat-speaker-1 .chat-author,
+.format-chat .chat-speaker-11 .chat-author {
+    color: #3498db;
+}
+.format-chat .chat-speaker-2 .chat-author,
+.format-chat .chat-speaker-12 .chat-author {
+    color: #f1c40f;
+}
+.format-chat .chat-speaker-3 .chat-author,
+.format-chat .chat-speaker-13 .chat-author {
+    color: #e74c3c;
+}
+.format-chat .chat-speaker-4 .chat-author,
+.format-chat .chat-speaker-14 .chat-author {
+    color: #2ecc71;
+}
+.format-chat .chat-speaker-5 .chat-author,
+.format-chat .chat-speaker-15 .chat-author {
+    color: #f39c12;
+}
+.format-chat .chat-speaker-6 .chat-author,
+.format-chat .chat-speaker-16 .chat-author {
+    color: #9b59b6;
+}
+.format-chat .chat-speaker-7 .chat-author,
+.format-chat .chat-speaker-17 .chat-author {
+    color: #95a5a6;
+}
+.format-chat .chat-speaker-8 .chat-author,
+.format-chat .chat-speaker-18 .chat-author {
+    color: #16a085;
+}
+.format-chat .chat-speaker-9 .chat-author,
+.format-chat .chat-speaker-19 .chat-author {
+    color: #e67e22;
+}
+.format-chat .chat-speaker-10 .chat-author,
+.format-chat .chat-speaker-20 .chat-author {
+    color: #1abc9c;
+}
+.loop-description {
+    color: $color-gray;
+    background: $color-gray-lighter;
+}
 li.ping,
-.comment-content { background: $color-gray-lighter; }
-
-.site-footer, .site-footer a { color: rgba( 255, 255, 255, 0.75 ); }
-
-.clean-my-archives .comments-number { color: $color-gray; }
-
+.comment-content {
+    background: $color-gray-lighter;
+}
+.site-footer,
+.site-footer a {
+    color: rgba( 255, 255, 255, 0.75);
+}
+.clean-my-archives .comments-number {
+    color: $color-gray;
+}
 .whistles-tabs-nav li a,
 .whistles-toggle .whistle-title,
-.whistles-accordion .whistle-title { background: $color-gray-lighter; }
-
-.whistles-tabs .whistles-tabs-nav li a:hover,
-.whistles-tabs .whistles-tabs-nav li a:focus { background: $color-gray-light; }
-
-.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
-	border-bottom-color: $color-white;
+.whistles-accordion .whistle-title {
+    background: $color-gray-lighter;
 }
-
-.media-shortcode-extend .audio-info     { border-color: #202020; }
+.whistles-tabs .whistles-tabs-nav li a:hover,
+.whistles-tabs .whistles-tabs-nav li a:focus {
+    background: $color-gray-light;
+}
+.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
+    border-bottom-color: $color-white;
+}
+.media-shortcode-extend .audio-info {
+    border-color: #202020;
+}
 .media-shortcode-extend .media-info li,
-.wp-playlist-dark .wp-playlist-item     { border-color: #353535; }
+.wp-playlist-dark .wp-playlist-item {
+    border-color: #353535;
+}
 .wp-video-shortcode .mejs-controls,
-.wp-playlist-dark .mejs-controls        { border-color: #151515; }
-.mejs-time-rail .mejs-time-float        { border-color: $color-gray-dark; }
-.mejs-time-rail .mejs-time-float-corner { border-top-color: $color-white; }
-
+.wp-playlist-dark .mejs-controls {
+    border-color: #151515;
+}
+.mejs-time-rail .mejs-time-float {
+    border-color: $color-gray-dark;
+}
+.mejs-time-rail .mejs-time-float-corner {
+    border-top-color: $color-white;
+}
 .whistles-toggle .whistle-title:hover,
 .whistles-toggle .whistle-title:focus,
 .whistles-toggle .whistle-title[aria-selected="true"],
 .whistles-accordion .whistle-title:hover,
 .whistles-accordion .whistle-title:focus,
 .whistles-accordion .whistle-title[aria-selected="true"] {
-	background: $color-gray-light;
+    background: $color-gray-light;
 }
-
 .mejs-time-rail .mejs-time-total,
 .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
 .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
-	background: $color-gray-dark;
+    background: $color-gray-dark;
 }
+.mejs-time-rail .mejs-time-current {
+    background: rgba( 255, 255, 255, 0.35);
+}
+.mejs-overlay-play .mejs-overlay-button::after {
+    text-shadow: 1px 1px 2px #151515;
+}
+.mejs-button button:focus {
+    outline-color: $color-gray-dark;
+}
+/* Menu colors */
 
-.mejs-time-rail .mejs-time-current { background: rgba( 255, 255, 255, 0.35 ); }
-
-.mejs-overlay-play .mejs-overlay-button::after { text-shadow: 1px 1px 2px #151515; }
-
-.mejs-button button:focus { outline-color: $color-gray-dark; }
-
-	/* Menu colors */
-
-	@media only screen and (min-width: 800px) {
-
-		.menu li > ul::before {
-			border-right-color:  transparent;
-			border-bottom-color: $color-nav-primary;
-			border-left-color:   transparent;
-		}
-
-		.menu li li > ul::before {
-			border-top-color:    transparent;
-			border-bottom-color: transparent;
-		}
-
-		.ltr .menu li li > ul::before { border-right-color: $color-nav-primary; }
-		.rtl .menu li li > ul::before { border-left-color:  $color-nav-primary; }
-
-		.menu__primary   li li a,
-		.menu__secondary li li a {
-			background:   $color-nav-primary;
-			border-color: $color-nav-primary;
-		}
-
-		.menu__primary   ul ul li a:hover,
-		.menu__secondary ul ul li a:hover,
-		.menu__primary   ul ul li a:focus,
-		.menu__secondary ul ul li a:focus { background: $color-nav-primary; }
-
-		.menu__primary .search-form .search-toggle::before {
-			color: rgba( 255, 255, 255, 0.75 );
-		}
-
-		.menu__primary .search-toggle:hover::before,
-		.menu__primary .search-toggle:focus::before { color: $color-white; }
-
-	}
-
+@media only screen and (min-width: 800px) {
+    .menu li > ul::before {
+        border-right-color: transparent;
+        border-bottom-color: $color-nav-primary;
+        border-left-color: transparent;
+    }
+    .menu li li > ul::before {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+    .ltr .menu li li > ul::before {
+        border-right-color: $color-nav-primary;
+    }
+    .rtl .menu li li > ul::before {
+        border-left-color: $color-nav-primary;
+    }
+    .menu__primary li li a,
+    .menu__secondary li li a {
+        background: $color-nav-primary;
+        border-color: $color-nav-primary;
+    }
+    .menu__primary ul ul li a:hover,
+    .menu__secondary ul ul li a:hover,
+    .menu__primary ul ul li a:focus,
+    .menu__secondary ul ul li a:focus {
+        background: $color-nav-primary;
+    }
+    .menu__primary .search-form .search-toggle::before {
+        color: rgba( 255, 255, 255, 0.75);
+    }
+    .menu__primary .search-toggle:hover::before,
+    .menu__primary .search-toggle:focus::before {
+        color: $color-white;
+    }
+}
 /* =/=/=/=/=/= End fun zone. =/=/=/=/=/= */
-
 /*
  * Colors Danger Zone: The white color is used in contrast to the 'primary' theme color. It's not recommended to
  * overwrite this specific color section. If overwriting, it should be a very light color.
  */
-
 
 blockquote,
 blockquote a:hover,
@@ -391,9 +413,9 @@ input[type="button"],
 button,
 .menu__primary .menu-toggle button:hover,
 .menu__primary .menu-toggle button:focus,
-.menu__primary   li.current-menu-item > a,
-.menu__primary   li a:hover,
-.menu__primary   li a:focus,
+.menu__primary li.current-menu-item > a,
+.menu__primary li a:hover,
+.menu__primary li a:focus,
 .menu__secondary li li a:hover,
 .menu__secondary li li a:focus,
 .menu__sub-terms li a,
@@ -427,32 +449,30 @@ button,
 .wp-playlist-dark .wp-playlist-playing,
 .wp-playlist-dark .wp-playlist-caption:hover,
 .wp-playlist-dark .wp-playlist-caption:focus,
-.wp-playlist-dark .wp-playlist-item:hover
-.wp-playlist-dark .wp-playlist-item:focus,
+.wp-playlist-dark .wp-playlist-item:hover .wp-playlist-dark .wp-playlist-item:focus,
 .skip-link .screen-reader-text:focus {
-	color: $color-white;
+    color: $color-white;
 }
-
 pre,
 .form-allowed-tags code {
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, 0.5)), color-stop(.5, transparent), to(transparent));
-	background-image: -webkit-linear-gradient( rgba( 255, 255, 255, 0.5 ) 50%, transparent 50%, transparent );
-	background-image:    -moz-linear-gradient( rgba( 255, 255, 255, 0.5 ) 50%, transparent 50%, transparent );
-	background-image:      -o-linear-gradient( rgba( 255, 255, 255, 0.5 ) 50%, transparent 50%, transparent );
-	background-image:         linear-gradient( rgba( 255, 255, 255, 0.5 ) 50%, transparent 50%, transparent );
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, 0.5)), color-stop(.5, transparent), to(transparent));
+    background-image: -webkit-linear-gradient( rgba( 255, 255, 255, 0.5) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient( rgba( 255, 255, 255, 0.5) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient( rgba( 255, 255, 255, 0.5) 50%, transparent 50%, transparent);
+    background-image: linear-gradient( rgba( 255, 255, 255, 0.5) 50%, transparent 50%, transparent);
 }
-
-blockquote { border-color: rgba( 255, 255, 255, 0.15 ); }
-
+blockquote {
+    border-color: rgba( 255, 255, 255, 0.15);
+}
 blockquote a,
 .entry-content blockquote a {
-	color:        rgba( 255, 255, 255, 0.75 );
-	border-color: rgba( 255, 255, 255, 0.25 );
+    color: rgba( 255, 255, 255, 0.75);
+    border-color: rgba( 255, 255, 255, 0.25);
 }
-
 blockquote a:hover,
 blockquote a:focus,
 .entry-content blockquote a:hover,
-.entry-content blockquote a:focus { border-color: $color-white; }
-
+.entry-content blockquote a:focus {
+    border-color: $color-white;
+}
 /* =/=/=/=/=/= End colors danger zone. =/=/=/=/=/= */

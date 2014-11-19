@@ -24,10 +24,11 @@ require_once( $abraham_dir . 'library/hybrid.php' );
 new Hybrid();
 
 /* Load theme-specific files. */
-require_once( $abraham_dir . 'inc/custom-background.php'     );
-require_once( $abraham_dir . 'inc/custom-header.php'         );
-require_once( $abraham_dir . 'inc/custom-colors.php'         );
-require_once( $abraham_dir . 'inc/hybrid-mods.php'         );
+require_once( $abraham_dir . 'inc/custom-background.php'     	);
+require_once( $abraham_dir . 'inc/custom-header.php'         	);
+require_once( $abraham_dir . 'inc/custom-colors.php'         	);
+require_once( $abraham_dir . 'inc/hybrid-mods.php'         		);
+require_once( $abraham_dir . 'inc/template-tags.php'       		);
 
 /* Set up the theme early. */
 add_action( 'after_setup_theme', 'abraham_theme_setup', 5 );
