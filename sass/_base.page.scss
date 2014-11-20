@@ -22,8 +22,8 @@ body {
 
 html {
     color: $color-text;
-    overflow-y: scroll;
-    /* [2] */
+    overflow-y: scroll;		/* [2] */
+    @include font-size($site-font-size);
 }
 
 body {

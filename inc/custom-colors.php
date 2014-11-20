@@ -156,7 +156,7 @@ final class Abraham_Custom_Colors {
 
 		/* Background color. */
 		$style .= "input[type='submit'], input[type='reset'], input[type='button'], button, .page-links a,
-				.comment-reply-link, .comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a
+				.comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a
 				{ background-color: rgba( {$rgb}, 0.8 ); } ";
 
 		$style .= "legend, mark, pre, .form-allowed-tags code { background-color: rgba( {$rgb}, 0.1 ); } ";
@@ -171,7 +171,6 @@ final class Abraham_Custom_Colors {
 				#comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap,
 				.widget_search > .search-form,
 				#menu-sub-terms li a:hover, #menu-sub-terms li a:focus,
-				.comment-reply-link:hover, .comment-reply-link:focus,
 				.comment-reply-login:hover, .comment-reply-login:focus,
 				.mejs-time-rail .mejs-time-loaded, .skip-link .screen-reader-text
 				{ background-color: #{$hex}; } ";

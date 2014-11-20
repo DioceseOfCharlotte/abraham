@@ -26,9 +26,6 @@
     display: inline-block;
     vertical-align: bottom;
     padding: $base-spacing-unit-sm $base-spacing-unit $base-spacing-unit-sm / 2;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    line-height: 16px;
     text-transform: uppercase;
 }
 #reply-title > .wrap,
@@ -38,13 +35,7 @@
 .widget-title > .wrap a {
     text-decoration: underline;
 }
-/* Recent posts widget and Entry Views plugin. */
 
-.widget_recent_entries .post-date,
-.widget-entry-views .entry-view-count {
-    font-size: 0.875em;
-    /* relative */
-}
 /* Tags widget (core WP wraps in a `<div>` instead of `<p>`). */
 
 .widget .tagcloud,

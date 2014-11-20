@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-		<?php kit_loop_meta(); ?>
+		<?php doc_loop_meta(); ?>
 
 	<?php endif; // End check for multi-post page. ?>
 

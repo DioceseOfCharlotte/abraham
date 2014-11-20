@@ -45,13 +45,6 @@
     align-items: center;
 }
 
-.title-wrap h1 {
-    @include typo-headline;
-}
-
-.title-wrap h2 {
-    @include typo-title(true);
-}
 
 .logo img {
     max-width: 80px;
@@ -66,14 +59,6 @@
         position: absolute;
         margin-top: -213px;
         justify-content: center;
-    }
-
-    .title-wrap h1 {
-        @include typo-display-2;
-    }
-
-    .title-wrap h2 {
-        @include typo-display-1(true);
     }
 
     .logo img {

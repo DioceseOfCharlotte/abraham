@@ -42,7 +42,7 @@ function customizer_library_doc_build_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.font-secondary, body, p',
+				'.font-secondary, body, p, .widget',
 			),
 			'declarations' => array(
 				'font-family' => $stack

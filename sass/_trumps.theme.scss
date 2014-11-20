@@ -76,7 +76,7 @@ li.ping,
 .whistles-accordion .whistle-title,
 .whistles-toggle .whistle-content,
 .whistles-accordion .whistle-content {
-    border-color: $color-gray-light;
+    border-color: $color-gray-lighter;
 }
 /* ====== color: $color-gray-dark ====== */
 
@@ -296,10 +296,6 @@ td {
     color: $color-gray;
     background: $color-gray-lighter;
 }
-li.ping,
-.comment-content {
-    background: $color-gray-lighter;
-}
 .site-footer,
 .site-footer a {
     color: rgba( 255, 255, 255, 0.75);
@@ -427,10 +423,7 @@ button,
 .comments-number > .wrap,
 #reply-title > .wrap,
 .attachment-meta-title > .wrap,
-.comment-reply-link,
 .comment-reply-login,
-.comment-reply-link:hover,
-.comment-reply-link:focus,
 .comment-reply-login:hover,
 .comment-reply-login:focus,
 .media-shortcode-extend a,

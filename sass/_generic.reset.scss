@@ -15,7 +15,7 @@ td, article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, main, summary,
 time, mark, audio, video {
     border: 0;
-    background: transparent;
+    //background: transparent;
     font-family: inherit;
     font-size: 100%;
     font-style: inherit;
@@ -25,7 +25,6 @@ time, mark, audio, video {
     padding: 0;
     vertical-align: baseline;
     text-decoration: none;
-    outline: none;
 }
 body.rtl {
     direction: rtl;
@@ -253,7 +252,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: $base-spacing-unit-sm 0;
     padding: 0;
 }
 /*

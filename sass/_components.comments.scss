@@ -92,9 +92,25 @@ li.ping {
 li.ping,
 .comment-content {
     clear: both;
-    margin: 0 0 $base-spacing-unit;
+    margin: ($base-spacing-unit + $base-spacing-unit-sm) 0 $base-spacing-unit;
     padding: $base-spacing-unit $base-spacing-unit 0;
-    border: 1px solid;
+    border: 1px solid $color-gray-lighter;
+    border-radius: 6px;
+    background: $color-gray-lighter;
+    color: darken($color-gray-dark, 10);
+    position: relative;
+
+   &:before {
+   content:"";
+   position: absolute;
+   //right: 100%;
+   top: -$base-spacing-unit;
+   width: 0;
+   height: 0;
+   border-right: 13px solid transparent;
+   border-bottom: 26px solid $color-gray-lighter;
+   border-left: 13px solid transparent;
+}
 }
 
 /* === Reply link === */
@@ -129,6 +145,7 @@ li.ping,
 
 .comment-respond {
     padding: 0 0 $base-spacing-unit;
+    position: relative;
 }
 
 .comment-respond .required {
@@ -136,23 +153,18 @@ li.ping,
 }
 
 #reply-title small {
-    //font-size:      1em;
-    //font-weight:    400;
+    position: absolute;
+    bottom: $base-spacing-unit-lg;
+    right: 0;
 }
 
 #reply-title small a {
-    display: inline-block;
-    padding: $base-spacing-unit-sm;
+    @extend .btn;
+    color: $color-links;
+    font-weight: bold;
     text-transform: none;
 }
 
-.ltr #reply-title small a {
-    margin: -$base-spacing-unit-sm -$base-spacing-unit -0.625rem $base-spacing-unit;
-}
-
-.rtl #reply-title small a {
-    margin: -$base-spacing-unit-sm $base-spacing-unit -$base-spacing-unit-sm -$base-spacing-unit;
-}
 
 .gallery-count,
 .comments-closed,
@@ -164,4 +176,8 @@ li.ping,
 
 .form-allowed-tags {
     display: none;
+}
+
+.comment.depth-1 {
+padding-bottom: $base-spacing-unit-lg;
 }

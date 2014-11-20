@@ -183,3 +183,17 @@ function doc_category_transient_flusher() {
 }
 add_action( 'edit_category', 'doc_category_transient_flusher' );
 add_action( 'save_post',     'doc_category_transient_flusher' );
+
+
+/**
+ * Logo
+ */
+if ( ! function_exists( 'doc_logo' ) ) :
+
+function doc_logo() {
+	// Don't print empty markup if there's no logo
+if ( get_theme_mod( 'logo', false ) ) {
+	echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="logo" rel="home"><img src="' . esc_url( get_theme_mod( 'logo' ) ) . '"></a>';
+}
+}
+endif; // End check for logo function.

@@ -1,12 +1,10 @@
 /*------------------------------------*\
-    #HEADINGS
+    #TYPOGRAPHY
 \*------------------------------------*/
 
 @mixin typo-display-4($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(112px);
+  @include font-size($site-font-size + 98px);
   font-weight: 300;
-  //line-height: 1;
   letter-spacing: -0.04em;
 
   @if $colorContrast {
@@ -15,11 +13,8 @@
 }
 
 @mixin typo-display-3($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(56px);
-  //font-size: 56px;
+  @include font-size($site-font-size + 42px);
   font-weight: 400;
-  //line-height: 1;
   letter-spacing: -0.02em;
 
   @if $colorContrast {
@@ -28,9 +23,7 @@
 }
 
 @mixin typo-display-2($colorContrast:false) {
-  @include font-size(45px);
-  //font-size: 45px;
-  //line-height: 48px;
+  @include font-size($site-font-size + 31px);
 
   @if $colorContrast {
     opacity: 0.54;
@@ -38,7 +31,7 @@
 }
 
 @mixin typo-display-1($colorContrast:false) {
-  @include font-size(34px);
+  @include font-size($site-font-size + 20px);
   //font-size: 34px;
   //line-height: 40px;
 
@@ -48,10 +41,8 @@
 }
 
 @mixin typo-headline($colorContrast:false) {
-  @include font-size(24px);
-  //font-size: 24px;
+  @include font-size($site-font-size + 10px);
   font-weight: 400;
-  //line-height: 32px;
   -moz-osx-font-smoothing: grayscale;
 
   @if $colorContrast {
@@ -60,10 +51,8 @@
 }
 
 @mixin typo-title($colorContrast:false) {
-  @include font-size(20px);
-  //font-size: 20px;
+  @include font-size($site-font-size + 6px);
   font-weight: 700;
-  //line-height: 1;
   letter-spacing: 0.02em;
 
   @if $colorContrast {
@@ -72,8 +61,8 @@
 }
 
 @mixin typo-subhead($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(16px);
+
+  @include font-size($site-font-size + 2px);
   //font-size: 16px;
   font-weight: 400;
   //line-height: 24px;
@@ -84,22 +73,9 @@
   }
 }
 
-@mixin typo-subhead-2($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(16px);
-  //font-size: 16px;
-  font-weight: 400;
-  //line-height: 28px;
-  letter-spacing: 0.04em;
-
-  @if $colorContrast {
-    opacity: 0.87;
-  }
-}
-
 @mixin typo-body-2($colorContrast:false) {
   //font-size: 14px;
-  @include font-size(14px);
+  @include font-size($site-font-size);
   font-weight: 700;
   //line-height: 24px;
   letter-spacing: 0.04em;
@@ -110,8 +86,7 @@
 }
 
 @mixin typo-body-1($colorContrast:false) {
-	@include font-size(14px);
-  //font-size: 14px;
+	@include font-size($site-font-size);
   font-weight: 400;
   //line-height: 24px;
   letter-spacing: 0.04em;
@@ -122,11 +97,8 @@
 }
 
 @mixin typo-caption($colorContrast:false) {
-	@include font-size(13px);
-  font-family: $base-font;
-  //font-size: 12px;
+	@include font-size($site-font-size - 2px);
   font-weight: 400;
-  //line-height: 1;
   letter-spacing: 0.08em;
 
   @if $colorContrast {
@@ -135,12 +107,9 @@
 }
 
 @mixin typo-blockquote($colorContrast:false) {
-	@include font-size(24px);
-  font-family: $base-font;
-  //font-size: 24px;
+	@include font-size($site-font-size + 10px);
   font-weight: 300;
   font-style: italic;
-  //line-height: 1;
   letter-spacing: 0.08em;
   &:before {
     content: '“';
@@ -158,8 +127,8 @@
 }
 
 @mixin typo-menu($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(14px);
+
+  @include font-size($site-font-size);
   //font-size: 14px;
   font-weight: 700;
   //line-height: 1;
@@ -171,8 +140,8 @@
 }
 
 @mixin typo-button($colorContrast:false) {
-  font-family: $base-font;
-  @include font-size(14px);
+
+  @include font-size($site-font-size);
   //font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -184,13 +153,6 @@
   }
 }
 
-html, body {
-	font-family: $base-font;
-	@include font-size($base-font-size);
-	//font-size: 14px;
-	font-weight: 400;
-	//line-height: 20px;
-}
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
@@ -207,7 +169,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 p {
-  //@include typo-body-1();
+  @include typo-body-1();
 
   margin: 0 0 16px 0;
 }
@@ -377,144 +339,3 @@ h1, h2, h3 {
 .Typography--tableStriped > tbody > tr:nth-child(odd) > th {
     background-color: $color-gray-light
 }
-
-.Typography--tableStriped > tbody > tr:nth-child(odd) > td,
-.Typography--tableStriped > tbody > tr:nth-child(odd) > th {
-    background-color: $color-gray-light
-}
-
-
-
-
-// .text-minor {
-// @include typo-caption($colorContrast:true);
-// }
-
-.loop-title {
-	@include typo-display-2;
-}
-
-.entry-title {
-	@include typo-display-1;
-}
-
-.entry-byline,
-.entry-footer {
-    //font-size: 1rem;
-}
-
-.widget-title {
-	@include typo-headline();
-}
-.format-chat cite {
-    //font-size:   1rem;
-}
-
-.page-links {
-    //font-size: 1rem;
-}
-
-.loop-pagination .page-numbers,
-.page-links .page-numbers,
-.page-links a {
-    //font-size: 1.25rem;
-}
-
-.loop-pagination .current {
-    //font-weight: 700;
-}
-
-.loop-pagination,
-.loop-nav {
-    //font-size:  1.125rem;
-}
-
-.comment-meta {
-    //font-size: 1rem;
-}
-
-.comment-author {
-    //font-size:   1rem;
-    //font-weight: 700;
-    font-style: normal;
-}
-
-.comment-reply-link,
-.comment-reply-login {
-    //padding:        0.5rem 1rem;
-    //font-size:      0.875rem;
-    //font-weight:    400;
-}
-
-.site-footer {
-    //font-size:   0.9375rem;
-}
-
-#site-title {
-    //font-size: 2.125rem;
-}
-
-#site-description {
-    //font-size:    1.125rem;
-    //font-weight:  400;
-    opacity: 0.7;
-}
-
-blockquote {
-    font-size: 1em;
-    font-style: normal;
-}
-
-blockquote cite {
-    font-size: 0.875em;
-    font-variant: small-caps;
-}
-
-.wp-caption .wp-caption-text {
-    font-size: 0.9375rem;
-}
-
-.gallery .gallery-caption {
-    font-size: 0.9375rem;
-}
-
-.menu__sub-terms li a {
-    //font-size:   0.8125rem;
-    font-weight: 400;
-}
-
-    .menu-toggle {
-//font-size:      0.8125rem;
-}
-
-    .menu__primary .search-form input[type="search"] {
-        //font-size: 1rem;
-        opacity: 1;
-    }
-
-    .menu__primary li a,
-    .menu__secondary li a {
-        display: block;
-        //font-size:       0.8125rem;
-        //line-height:     1;
-        text-transform: uppercase;
-    }
-
-    .menu__primary li li a,
-    .menu__secondary li li a {
-        //font-size:      0.75rem;
-        font-weight: 400;
-        //line-height:    1.5;
-    }
-
-    .menu__primary .search-field {
-        //font-size:   0.9375rem;
-        opacity: 1;
-    }
-
-
-
-// .loop-title {
-// 	@include scut-side-lined(0.1em, .5em, $color-gray-ui, $v-adjust: 0.1em);
-// 	margin-bottom: $base-spacing-unit;
-// }
