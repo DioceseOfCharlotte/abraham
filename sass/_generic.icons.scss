@@ -33,9 +33,9 @@
 }
 
 // Icons
-$icon-bullet: '\e001';
+$icon-bullet: '\f428';
 .icon-bullet::before {
-  content:"\e001";
+  content:"\f428";
 }
 
 $icon-chevron-down: '\e002';
@@ -781,15 +781,18 @@ blockquote::before,
 #respond label[for="email"]::before,
 #respond label[for="url"]::before,
 #respond label[for="comment"]::before {
-    display: inline-block;
-    font-family: 'Genericons';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
+  font-family: 'Genericons';
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 // {
 //   display: inline-block;

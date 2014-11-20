@@ -7,10 +7,12 @@
  */
 
 .ltr ul, .ltr ol {
-    margin-left: $base-spacing-unit-lg;
+    margin-left: $base-spacing-unit-sm;
+    margin-bottom: $base-spacing-unit-sm;
 }
 .rtl ul, .rtl ol {
-    margin-right: $base-spacing-unit-lg;
+    margin-right: $base-spacing-unit-sm;
+    margin-bottom: $base-spacing-unit-sm;
 }
 ol ol {
     list-style: upper-roman;
@@ -67,4 +69,58 @@ ul li {
 ul a {
     padding: 5px;
     display: block;
+}
+
+.entry, .sidebar {
+ul,
+ol {
+  list-style: none;
+
+  @include small-only {
+    padding-left: 0;
+  }
+}
+
+ul li {
+  position: relative;
+  padding-left: 16px;
+  @include bullet-type("", icon-bullet);
+
+  &::before {
+    color: $color-gray;
+    font-size: 1rem;
+    line-height: 26px;
+  }
+}
+
+ol {
+  counter-reset: list;
+  > li {
+    @include numbered-list;
+    position: relative;
+    padding-left: $base-spacing-unit-lg;
+    padding-bottom: $base-spacing-unit-sm;
+
+    &::before {
+	    color: $color-gray;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li::before,
+    &:nth-child(10n)::before {
+      content: counter(list);
+    }
+
+  }
+}
+
+ul ol,
+ol ul {
+  padding-top: 0;
+}
+
 }
