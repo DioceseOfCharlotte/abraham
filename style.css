@@ -2497,7 +2497,7 @@ li.ping:before,
 }
 
 @media only screen and (min-width: 64em) {
-    .layout-2c-l .sidebar__primary {
+    .layout-sidebar-right .sidebar__primary {
         display: inline-block;
         width: 30%;
         max-width: 100%;
@@ -2506,7 +2506,7 @@ li.ping:before,
         text-align: left;
         vertical-align: top;
     }
-    .layout-2c-l .content-area {
+    .layout-sidebar-right .content-area {
         display: inline-block;
         width: 70%;
         margin: 0;

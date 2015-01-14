@@ -11,12 +11,12 @@ class Doc_Attributes {
 	public $body                  	= ' ';	// get_body_class()
 	public $header                	= 'site-header'; 	// na
 	public $footer                	= 'site-footer'; 	// na
-	public $content_1c            	= '  site-content'; 	// content
-	public $content_2cl           	= '  site-content  md-18-24'; 	// content
-	public $content_2cr           	= '  site-content  md-5-8'; 	// content
-	public $sidebar_1c              = ' ';	// sidebar sidebar__{$context}
-	public $sidebar_2cl             = ' ';	// sidebar sidebar__{$context}
-	public $sidebar_2cr             = ' ';	// sidebar sidebar__{$context}
+	public $content_single_column 	= '  site-content'; 	// content
+	public $content_sidebar_right 	= '  site-content  md-18-24'; 	// content
+	public $content_sidebar_left 	= '  site-content  md-5-8'; 	// content
+	public $sidebar_single_column  	= ' ';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left 	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' wrap';	// sidebar sidebar__{$context}
 	public $menu                  	= '  navdrawer';	// menu menu__{$context}
 
@@ -108,28 +108,26 @@ class Doc_Attributes {
 	}
 
 	public function content( $attr ) {
-	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->content_1c;
-	endif;
-	if ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->content_2cl;
-	endif;
-	if ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->content_2cr;
+	if ( 'single-column' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->content_single_column;
+	elseif ( 'sidebar-right' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->content_sidebar_right;
+	elseif ( 'sidebar-left'	 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->content_sidebar_left;
 	endif;
 		return $attr;
 	}
 
 	public function sidebar( $attr, $context ) {
-	if ( '1c' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->sidebar_1c;
-		$attr['class']    .= "  sidebar__{$context}";
-	elseif ( '2c-l' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->sidebar_2cl;
-		$attr['class']    .= "  sidebar__{$context}";
-	elseif ( '2c-r' == get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    .= $this->sidebar_2cr;
-		$attr['class']    .= "  sidebar__{$context}";
+	if ( 'single-column' 		== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    		.= $this->sidebar_single_column;
+		$attr['class']    		.= "  sidebar__{$context}";
+	elseif ( 'sidebar-right' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    		.= $this->sidebar_sidebar_right;
+		$attr['class']    		.= "  sidebar__{$context}";
+	elseif ( 'sidebar-left' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    		.= $this->sidebar_sidebar_left;
+		$attr['class']    		.= "  sidebar__{$context}";
 	endif;
 
 	if ( 'footer-widgets' === $context ) :

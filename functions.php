@@ -57,11 +57,11 @@ function abraham_setup() {
 
 	/* Theme layouts. */
 	add_theme_support( 'theme-layouts', array(
-			'1c'    => __( 'Single Column', 'platform' ),
-			'2c-l'  => __( 'Sidebar Right', 'platform' ),
-			'2c-r'  => __( 'Sidebar Left', 'platform' )
+			'single-column'    => __( 'Single Column', 'platform' ),
+			'sidebar-right'  => __( 'Sidebar Right', 'platform' ),
+			'sidebar-left'  => __( 'Sidebar Left', 'platform' )
 		),
-		array( 'default' => '2c-l' )
+		array( 'default' => 'sidebar-right' )
 	);
 
 	/* Post Formats. */
