@@ -1,46 +1,47 @@
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
-/**
- * Extend `.btn` in _components.buttons.scss.
- */
-/**
- * 1. Allow us to style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Make buttons inherit font styles (often necessary when styling `input`s as
- *    buttons).
- * 4. Reset/normalize some styles.
- * 5. Force all button-styled elements to appear clickable.
- */
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+.btn,
 button,
-.btn, {
-    display: inline-block;
-    @include typo-button();
-    padding: 8px 30px;
-    border: 0;
-    border-radius: $base-radius;
-    text-transform: uppercase;
-    text-decoration: none;
-    @include material-animation-default;
-    outline: 0!important;
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  background-color: $btn-bg;
+  border: 0;
+  border-radius: $base-radius;
+  color: $btn-text;
+  cursor: pointer;
+  padding: $base-spacing-unit-sm $base-spacing-unit;
+  width: auto;
+  display: inline-block;
+  outline: 0;
+  transition: all $base-transition-speed ease-in-out;
+
+  &:hover {
+  background-color: $btn-bg-hover;
+}
+  &:focus, &:active {
+  background-color: $btn-bg-active;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover,
-.btn:hover {
-    @include shadow-z2();
 }
 
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus,
-button:focus,
-.btn:focus {
-    @include shadow-z1();
+.form-submit {
+  margin: 0;
 }
+
+
+
+
+
+
+.entry-terms a {
+  @extend .btn;
+  @include font-size($base-font-size - 2);
+  padding: 4px 12px;
+  text-transform: capitalize;
+}
+
+

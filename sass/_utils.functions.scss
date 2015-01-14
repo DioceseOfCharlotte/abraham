@@ -1,0 +1,28 @@
+// /*------------------------------------*\
+//     #FUNCTIONS
+// \*------------------------------------*/
+
+// Maths helpers.
+//
+// Half and double numbers, returning rounded integers. E.g.:
+//
+// .foo {
+//     padding: half(12px);
+// }
+//
+@function quarter($inuit-number) {
+    @return round($inuit-number / 4);
+}
+
+@function half($inuit-number) {
+    @return round($inuit-number / 2);
+}
+
+@function double($inuit-number) {
+    @return round($inuit-number * 2);
+}
+
+@function quad($inuit-number) {
+    @return round($inuit-number * 4);
+}
+

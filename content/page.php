@@ -1,32 +1,42 @@
+<?php
+/**
+ * @package Scratch
+ */
+?>
+<?php tha_entry_before(); ?>
+
 <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php if ( is_page() ) : // If viewing a single page. ?>
+<?php tha_entry_top(); ?>
 
-		<header class="entry-header">
-			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
-		</header><!-- .entry-header -->
+<?php if ( is_page() ) : ?>
 
-		<div <?php hybrid_attr( 'entry-content' ); ?>>
-			<?php the_content(); ?>
-			<?php wp_link_pages(); ?>
-		</div><!-- .entry-content -->
+	<header class="entry-header">
+		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
+	</header><!-- .entry-header -->
 
-		<footer class="entry-footer">
-			<?php edit_post_link(); ?>
-		</footer><!-- .entry-footer -->
+	<div <?php hybrid_attr( 'entry-content' ); ?>>
+		<?php get_the_image( array( 'size' => 'full', 'link_to_post' => false ) ); ?>
+		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
+	</div><!-- .entry-content -->
 
-	<?php else : // If not viewing a single page. ?>
+<?php else : // If not viewing a single page. ?>
 
-		<?php get_the_image( array( 'size' => 'abraham-full' ) ); ?>
+	<header class="entry-header">
+		<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
+	</header><!-- .entry-header -->
 
-		<header class="entry-header">
-			<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
-		</header><!-- .entry-header -->
+	<div <?php hybrid_attr( 'entry-summary' ); ?>>
+		<?php get_the_image(); ?>
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 
-		<div <?php hybrid_attr( 'entry-summary' ); ?>>
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
+<?php endif; // End single page check. ?>
 
-	<?php endif; // End single page check. ?>
+<?php tha_entry_bottom(); ?>
 
 </article><!-- .entry -->
+
+<?php
+tha_entry_after();

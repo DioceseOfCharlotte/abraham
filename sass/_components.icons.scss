@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
+
+
+  /* Links */
+  a[href^="mailto:"]::before { content: '\f410'; }
+  a[href^="tel:"]::before    { content: '\f437'; }
+
+  /* Posts */
+  .format-standard .post-format-link::before { content: $shield; }
+  .format-aside .post-format-link::before    { content: $indent; }
+  .format-audio .post-format-link::before    { content: $volume-up; }
+  .format-chat .post-format-link::before     { content: $comments; }
+  .format-gallery .post-format-link::before  { content: $file-photo-o; }
+  .image-sizes::before,
+  .format-image .post-format-link::before    { content: $photo; }
+  .format-link .post-format-link::before     { content: $link; }
+  .format-quote .post-format-link::before    { content: $quote-left; }
+  .format-status .post-format-link::before   { content: $line-chart; }
+  .format-video .post-format-link::before    { content: $youtube-play; }
+
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  color: #000000;
+  fill: currentColor;
+}
+
+[class^="icon-"] .path1, [class*=" icon-"] .path1 {
+  fill: $color-primary;
+}
+
+[class^="icon-"] .path2, [class*=" icon-"] .path2 {
+  fill: $color-secondary;
+}
+
+[class^="icon-"] .path3, [class*=" icon-"] .path3 {
+  fill: $color-grey-ui;
+}
+
+

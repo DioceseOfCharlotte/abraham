@@ -1,61 +1,42 @@
 <?php
 /**
- * The header.
- *
- *
- * @package Abraham
+ * @package Scratch
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
-	<head>
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <!-- Add to homescreen for Chrome on Android -->
-	    <meta name="mobile-web-app-capable" content="yes">
-	    <!-- Add to homescreen for Safari on iOS -->
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<?php wp_head(); ?>
-	</head>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php wp_head(); ?>
+</head>
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<div id="container" class="site-container">
+  <?php tha_body_top(); ?>
 
-		<div class="skip-link">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'abraham' ); ?></a>
-		</div><!-- .skip-link -->
+	<div id="page" class="hfeed site">
 
-		<?php hybrid_get_menu( 'primary' ); ?>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'scratch' ); ?></a>
 
-		<div class="wrap content-wrap">
+    <?php tha_header_before(); ?>
 
-			<header <?php hybrid_attr( 'header' ); ?>>
+		<header <?php hybrid_attr( 'header' ); ?>>
 
-				<?php if ( display_header_text() ) : ?>
+		<?php tha_header_top(); ?>
 
-					<div <?php hybrid_attr( 'branding' ); ?>>
+			<div class="site-branding">
+				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span></span></button>
+				<?php hybrid_site_title(); ?>
+				<?php hybrid_site_description(); ?>
+			</div><!-- .site-branding -->
 
-						<?php doc_logo(); ?>
+		<?php tha_header_bottom(); ?>
 
-						<div class="title-wrap">
-							<?php hybrid_site_title(); ?>
-							<?php hybrid_site_description(); ?>
-						</div><!-- .title-wrap -->
+		</header><!-- #header -->
 
-					</div><!-- #branding -->
+		<?php tha_header_after(); ?>
 
-				<?php endif; // End check for header text. ?>
+		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 
-				<?php hybrid_get_menu( 'secondary' ); ?>
+		<div id="container" class="site-container">
 
-			</header><!-- #header -->
-
-			<?php if ( get_header_image() ) : ?>
-
-				<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-
-			<?php endif; // End check for header image. ?>
-
-			<div id="main" class="site-main">
-
-				<?php hybrid_get_menu( 'breadcrumbs' ); ?>
+		<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>

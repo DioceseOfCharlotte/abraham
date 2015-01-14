@@ -1,35 +1,49 @@
-				<?php hybrid_get_sidebar( 'primary' ); ?>
-
-			</div><!-- #main -->
-
-			<?php hybrid_get_sidebar( 'subsidiary' ); ?>
-
-		</div><!-- .wrap -->
-
-		<footer <?php hybrid_attr( 'footer' ); ?>>
-
-			<div class="wrap footer-wrap">
-
-				<?php hybrid_get_menu( 'social' ); ?>
-
-				<p class="credit">
-								<?php if ( get_theme_mod( 'footer-textarea', false ) ) {
-								echo get_theme_mod( 'footer-textarea' );
-								} ?>
-					<?php printf(
-						/* Translators: 1 is current year, 2 is site name/link, 3 is WordPress name/link, and 4 is theme name/link. */
-						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s and %4$s.', 'abraham' ),
-						date_i18n( 'Y' ), hybrid_get_site_link(), hybrid_get_wp_link(), hybrid_get_theme_link()
-					); ?>
-				</p><!-- .credit -->
-
-			</div><!-- .wrap -->
-
-		</footer><!-- #footer -->
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package Scratch
+ */
+?>
 
 	</div><!-- #container -->
 
-	<?php wp_footer(); ?>
+	<?php tha_footer_before(); ?>
+
+	<footer <?php hybrid_attr( 'footer' ); ?>>
+
+	<?php tha_footer_top(); ?>
+
+		<?php hybrid_get_sidebar( 'footer-widgets' ); ?>
+
+		<div class="site-info">
+
+			<div class="wrap">
+			<div class="credit">
+				<?php printf(
+						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s and %4$s.', 'scratch' ),
+						date_i18n( 'Y' ), hybrid_get_site_link(), hybrid_get_wp_link(), hybrid_get_theme_link()
+							); ?>
+			</div><!-- .credit -->
+
+			<?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
+
+			</div><!-- .wrap -->
+
+		</div><!-- .site-info -->
+
+	<?php tha_footer_bottom(); ?>
+
+	</footer><!-- #footer -->
+
+	<?php tha_footer_after(); ?>
+
+</div><!-- #page -->
+
+<?php tha_body_bottom(); ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>

@@ -1,9 +1,8 @@
 {
-    "name": "meh/abraham",
+    "name": "meh/kit",
     "description": "theme library",
     "require": {
-        "justintadlock/hybrid-core": "~2.0",
-        "devinsays/customizer-library": "dev-master"
+        "justintadlock/hybrid-core": "~2.0"
     },
     "license": "GPL-2.0+",
     "authors": [

@@ -1,30 +1,50 @@
 /*------------------------------------*\
     #BREADCRUMBS
 \*------------------------------------*/
-/**
- * Breadcrumbs
- */
 
-.breadcrumb-trail {
-    margin-bottom: $base-spacing-unit;
+.breadcrumbs {
+  text-transform: uppercase;
+  overflow: hidden;
+  @include margin-space($base-spacing-unit-tiny *-.3 n $base-spacing-unit-tiny);
+  list-style: none;
+  border-radius: $base-radius;
+  cursor: default;
+  font-weight: 500;
+  @include font-size($base-font-size - 1);
 
-    .trail-end {
-        opacity: 0.5;
-    }
 
-    .sep {
-        display: inline-block;
-        padding: 0 5px;
-        opacity: 0.75;
-    }
+  &>span {
+  display: inline-block;
+  }
 
-    a {
-        display: inline-block;
-        opacity: 0.75;
+  a {
+  text-decoration: none;
+  color: $color-text;
+  font-weight: inherit;
+  opacity: .7;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
+  }
 
-        &:hover,
-        &:focus {
-            opacity: 1;
-        }
-    }
+  .sep {
+    padding: 0 5px;
+    color: $grey-700;
+  }
+
+  .trail-end {
+    font-weight: 500;
+    color: $color-text-light;
+
+  }
 }
+
+
+// .breadcrumbs {
+// height: 40px;
+// display: flex;
+// align-items: center;
+// padding: 0 16px;
+// margin-bottom: 16px;
+// }

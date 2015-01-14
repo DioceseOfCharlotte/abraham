@@ -1,126 +1,25 @@
 /*------------------------------------*\
     #LISTS
 \*------------------------------------*/
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once,here.
- */
 
-.ltr ul, .ltr ol {
-    margin-left: $base-spacing-unit-sm;
-    margin-bottom: $base-spacing-unit-sm;
-}
-.rtl ul, .rtl ol {
-    margin-right: $base-spacing-unit-sm;
-    margin-bottom: $base-spacing-unit-sm;
-}
-ol ol {
-    list-style: upper-roman;
-}
-ol ol ol {
-    list-style: lower-roman;
-}
-ol ol ol ol {
-    list-style: upper-alpha;
-}
-ol ol ol ol ol {
-    list-style: lower-alpha;
-}
-ul ul, ol ol, ul ol, ol ul {
-    margin-bottom: 0;
-}
-.comment-content li ul, .comment-content li ol {
-    margin-bottom: 0;
-}
-dl {
-    margin: 0 0 $base-spacing-unit;
-}
-dt {
-    font-weight: bold;
-}
-.ltr dt {
-    margin-left: $base-spacing-unit-sm;
-}
-.rtl dt {
-    margin-right: $base-spacing-unit-sm;
-}
-.ltr dd {
-    margin-left: $base-spacing-unit;
-}
-.rtl dd {
-    margin-right: $base-spacing-unit;
-}
-dd + dd {
-    margin-top: $base-spacing-unit-sm;
-}
-dd + dt {
-    margin-top: $base-spacing-unit;
-}
-.ltr .widget ul {
-    margin-left: $base-spacing-unit;
-}
-.rtl .widget ul {
-    margin-right: $base-spacing-unit;
-}
-ul li {
-    padding: 0;
-    margin: 0;
-}
-ul a {
-    padding: 5px;
-    display: block;
+ul { 
+  list-style: circle inside; 
 }
 
-.entry, .sidebar {
-ul,
-ol {
-  list-style: none;
-
-  @include small-only {
-    padding-left: 0;
-  }
+ol { 
+  list-style: decimal inside; 
 }
 
-ul li {
-  position: relative;
-  padding-left: 16px;
-  @include bullet-type("", icon-bullet);
-
-  &::before {
-    color: $color-gray;
-    font-size: 1rem;
-    line-height: 26px;
-  }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; 
 }
 
-ol {
-  counter-reset: list;
-  > li {
-    @include numbered-list;
-    position: relative;
-    padding-left: $base-spacing-unit-lg;
-    padding-bottom: $base-spacing-unit-sm;
-
-    &::before {
-	    color: $color-gray;
-		font-weight: bold;
-		font-size: 1.5rem;
-	}
-
-    // This selected every adjacent <li>
-    // from the 10th and overrides the
-    // content property of each
-    &:nth-child(10n) ~ li::before,
-    &:nth-child(10n)::before {
-      content: counter(list);
-    }
-
-  }
-}
-
+ul ul, 
 ul ol,
-ol ul {
-  padding-top: 0;
+ol ol, 
+ol ul { 
+  margin: $base-spacing-unit 0 $base-spacing-unit $base-spacing-unit-lg;
 }
 
-}
+

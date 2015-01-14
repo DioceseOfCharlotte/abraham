@@ -3,6 +3,25 @@
 \*------------------------------------*/
 
 a {
-	@include base-transition;
+	color: $color-links;
+	text-decoration: none;
+  font-weight: 500;
+  transition: color $base-transition-speed linear;
+
+	&:visited {
+		color: $color-links-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-links-hover;
+	}
 }
 
+.entry-content a, .entry-summary a, .comment-content a {
+border-bottom: 1px solid rgba($color-links, 0.2);
+transition: all .2s linear;
+&:hover {
+	border-bottom: 1px solid rgba($color-links-hover, 0.4);
+}
+}

@@ -1,3 +1,9 @@
+<?php
+/**
+ * @package Scratch
+ */
+?>
+
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( is_attachment() ) : // If viewing a single attachment. ?>
@@ -14,13 +20,12 @@
 
 		<footer class="entry-footer">
 			<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
-			<?php if ( function_exists( 'ev_post_views' ) ) ev_post_views( array( 'text' => '%s' ) ); ?>
 			<?php edit_post_link(); ?>
 		</footer><!-- .entry-footer -->
 
 	<?php else : // If not viewing a single attachment. ?>
 
-		<?php get_the_image( array( 'size' => 'abraham-full', 'order' => array( 'featured', 'attachment' ) ) ); ?>
+		<?php get_the_image(); ?>
 
 		<header class="entry-header">
 			<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>

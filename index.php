@@ -2,43 +2,55 @@
 /**
  * The main template file.
  *
- * @package abraham
+ * @package Scratch
  */
 
 get_header(); ?>
 
-<main <?php hybrid_attr( 'content' ); ?>>
+	<div id="primary" class="content-area">
 
-	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
+	  <?php tha_content_before(); ?>
 
-		<?php doc_loop_meta(); ?>
+		<main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php endif; // End check for multi-post page. ?>
+		<?php tha_content_top(); ?>
 
-	<?php if ( have_posts() ) : ?>
+		<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-		<?php while ( have_posts() ) : ?>
+			<?php scratch_loop_meta(); ?>
 
-			<?php the_post(); ?>
+		<?php endif; // End check for multi-post page. ?>
 
-			<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
+		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_singular() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php comments_template( '', true ); ?>
+				<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
 
-			<?php endif; // End check for single post. ?>
+				<?php get_template_part( 'partials/post', 'navigation' ); ?>
 
-		<?php endwhile; // End found posts loop. ?>
+				<?php if ( is_singular() ) :
+				  comments_template( '', true );
+				endif; // End check for single post. ?>
 
-		<?php locate_template( array( 'misc/loop-nav.php' ), true ); ?>
+			<?php endwhile; // End loop. ?>
 
-	<?php else : // If no posts were found. ?>
+			<?php get_template_part( 'partials/posts', 'pagination' ); ?>
 
-		<?php locate_template( array( 'content/error.php' ), true ); ?>
+		<?php else : //If no content found. ?>
 
-	<?php endif; // End check for posts. ?>
+			<?php get_template_part( 'content/none' ); ?>
 
-</main><!-- #content -->
+		<?php endif; // End check for posts. ?>
 
-<?php get_footer(); ?>
+		<?php tha_content_bottom(); ?>
+
+		</main><!-- #main -->
+
+		<?php tha_content_after(); ?>
+
+	</div><!-- #primary -->
+
+<?php hybrid_get_sidebar( 'primary' ); ?>
+<?php
+get_footer();

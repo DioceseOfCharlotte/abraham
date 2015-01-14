@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+.site-info {
+line-height: 50px;
+color: rgba(255, 255, 255, 0.9);
+background-color: rgba($grey-900, 0.2);
+
+a {
+    color: inherit;
+  }
+}
+
+.site-footer {
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    background-color: $footer-bg;
+      a {
+    color: inherit;
+  }
+}
+
+
+
+
+.entry-footer span, .entry-published {
+margin-right: $base-spacing-unit;
+&:before {
+  margin-right: 5px;
+}
+
+span {
+  margin-right: 0;
+}
+}
+
+
+span.entry-author:before {
+  content: $user;
+  @include font-icon();
+}
+
+.entry-published:before {
+  content: $calendar;
+  @include font-icon();
+}
+
+span.comments-link:before {
+  content: $comments;
+  @include font-icon();
+}
+
+
+
+    .sidebar.sidebar__footer-widgets {
+      display: block;
+      font-size: 0;
+      margin: 0 auto;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include padding-space($base-spacing-unit-sm n n);
+
+        > * {
+          @include font-size($base-font-size);
+        }
+        .widget {
+          background-color: $footer-widget-bg;
+          border: 0;
+          display: inline-block;
+          text-align: left;
+          vertical-align: top;
+          min-width: 320px;
+          max-width: 700px;
+        }
+    }
+
+@include md {
+  .sidebar-col-1 {
+      .widget {
+        width: 100%;
+      }
+  }
+
+  .sidebar-col-2 {
+      .widget {
+          width: 50%;
+          flex: 0 45%;
+      }
+  }
+
+  .sidebar-col-3 {
+      .widget {
+          width: 33.33%;
+          flex: 0 30%;
+      }
+  }
+}

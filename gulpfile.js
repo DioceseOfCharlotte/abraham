@@ -36,10 +36,17 @@ gulp.task('composer', function () {
 // Optimize Images
 gulp.task('images', function () {
   return gulp.src('images/**/*')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
-      interlaced: true
-    })))
+      interlaced: true,
+      removeUselessStrokeAndFill: true,
+      removeEmptyAttrs: true
+    }))
+    .pipe(gulp.dest('images'))
+    .pipe($.if('*.svg', $.rename({
+			prefix: 'svg-',
+			extname: '.php'
+		})))
     .pipe(gulp.dest('images'));
 });
 
@@ -49,14 +56,6 @@ gulp.task('hybrid', function () {
   	'vendor/justintadlock/hybrid-core/**/*'
   	])
     .pipe(gulp.dest('library'));
-});
-
-// Copy hybrid-core to extras
-gulp.task('customizer', function () {
-  return gulp.src([
-  	'vendor/devinsays/customizer-library/**/*'
-  	])
-    .pipe(gulp.dest('inc/customizer-library'));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -75,10 +74,10 @@ gulp.task('styles', function () {
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
     //Concatenate And Minify Styles
-    // .pipe(rename({ suffix: '.min' }))
-    // .pipe(gulp.dest('./'))
-    // .pipe($.if('*.css', $.csso()))
-    // .pipe(gulp.dest('./'));
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./'))
+    .pipe($.if('*.css', $.csso()))
+    .pipe(gulp.dest('./'));
 });
 
 
@@ -96,5 +95,5 @@ gulp.task('serve', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', ['hybrid'], function (cb) {
-  runSequence('composer', ['styles', 'images', 'hybrid', 'customizer'], cb);
+  runSequence('composer', ['styles', 'images', 'hybrid'], cb);
 });

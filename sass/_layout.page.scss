@@ -1,0 +1,129 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+.site  {
+  word-wrap:   break-word;
+  word-break:  normal;
+  hyphens: auto;
+}
+
+.content {
+  position: relative;
+  @include margin-space(n n $base-spacing-unit-sm);
+
+  @include md {
+    padding-top: 0;
+  }
+
+  @include lg {
+    margin-right: $base-spacing-unit-lg;
+  }
+}
+
+.wrap {
+  max-width: $site-width;
+  margin: 0 auto;
+  @include padding-space(n $base-spacing-unit-sm);
+}
+
+// ------------------------------------*\
+//     ##Layout 1 Column
+// \*------------------------------------
+
+
+
+
+
+
+// /*------------------------------------*\
+//     ##Layout 2 Column Left
+// \*------------------------------------*/
+
+.layout-2c-l {
+  @include lg {
+    .sidebar__primary {
+      width: 30%;
+      max-width: 100%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .content-area {
+      width: 70%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+
+}
+
+
+
+
+
+// /*------------------------------------*\
+//     ##Layout 2 Column Right
+// \*------------------------------------*/
+
+.layout-2c-r {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .site-container {
+        margin-top: 60px;
+        @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm 0);
+
+        @include md {
+            //padding-top: $base-spacing-unit;
+            max-width: $site-width;
+            min-height: initial;
+            display: block;
+            font-size: 0;
+            text-align: left;
+            margin: 0 auto;
+        }
+        // @include lg {
+        //   padding-top: $base-spacing-unit-lg;
+        // }
+    >* {
+      @include font-size($base-font-size, false);
+    }
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+.entry-byline {
+display: none;
+}
+
+
+.entry-footer {
+padding-top: $base-spacing-unit;
+}
+
+
+
+

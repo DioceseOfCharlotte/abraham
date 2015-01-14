@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+html {
+    color: $color-text;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    // @include sm-only {
+    //   font-size: 14px;
+    // }
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/*------------------------------------*\
+    ##Box-Sizing
+\*------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+        }
+
+}
+
+
+input[type="search"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+

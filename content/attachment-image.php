@@ -1,3 +1,9 @@
+<?php
+/**
+ * @package Scratch
+ */
+?>
+
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( is_attachment() ) : // If viewing a single attachment. ?>
@@ -19,7 +25,7 @@
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 
 			<div class="entry-byline">
-				<span class="image-sizes"><?php printf( __( 'Sizes: %s', 'abraham' ), hybrid_get_image_size_links() ); ?></span>
+				<span class="image-sizes"><?php printf( __( 'Sizes: %s', 'kit' ), hybrid_get_image_size_links() ); ?></span>
 			</div><!-- .entry-byline -->
 
 		</header><!-- .entry-header -->
@@ -31,13 +37,12 @@
 
 		<footer class="entry-footer">
 			<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
-			<?php if ( function_exists( 'ev_post_views' ) ) ev_post_views( array( 'text' => '%s' ) ); ?>
 			<?php edit_post_link(); ?>
 		</footer><!-- .entry-footer -->
 
 	<?php else : // If not viewing a single post. ?>
 
-		<?php get_the_image( array( 'size' => 'abraham-full', 'order' => array( 'featured', 'attachment' ) ) ); ?>
+		<?php get_the_image(); ?>
 
 		<header class="entry-header">
 			<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
@@ -57,7 +62,7 @@
 
 		<div class="media-info image-info">
 
-			<h3 class="attachment-meta-title"><?php _e( 'Image Info', 'abraham' ); ?></h3>
+			<h3 class="attachment-meta-title"><?php _e( 'Image Info', 'kit' ); ?></h3>
 
 			<?php hybrid_media_meta(); ?>
 
@@ -68,7 +73,7 @@
 		<?php if ( !empty( $gallery ) ) : // Check if the gallery is not empty. ?>
 
 			<div class="image-gallery">
-				<h3 class="attachment-meta-title"><?php _e( 'Gallery', 'abraham' ); ?></h3>
+				<h3 class="attachment-meta-title"><?php _e( 'Gallery', 'kit' ); ?></h3>
 				<?php echo $gallery; ?>
 			</div>
 

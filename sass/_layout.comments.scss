@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #COMMENTS
+\*------------------------------------*/
+
+#comments {
+  .depth-1 {
+    &> article > .comment-meta {
+      text-align: left;
+
+      &> .avatar {
+          float: left;
+          margin-right: 1.5rem;
+          margin-left: 0;
+        }
+      }
+  }
+}
+
+li.comment, li.ping {
+clear: both;
+}
+
+li.ping, .comment-content {
+border: 0;
+background: $grey-100;
+border-radius: 2px;
+position: relative;
+}
+
+li.ping:before, .comment-content:before {
+position: absolute;
+top: -20px;
+width: 0;
+height: 0;
+border-right: 13px solid transparent;
+border-bottom: 26px solid #f5f5f5;
+border-left: 13px solid transparent;
+content: "";
+}
+
+.comment.odd > article > .comment-content:before {
+right: 15px;
+}
+
+.comment.odd > article > .comment-meta {
+text-align: right;
+}
+
+.comment.odd > article > .comment-meta > .avatar {
+float: right;
+}
+
+.comment-reply-link, .comment-reply-login {
+  border-radius: 0 0 2px 2px;
+}
+
+.comments-area {
+  background-color: #fff;
+  //border: 1px solid $grey-300;
+  border-radius: $base-radius;
+  @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit-tiny);
+  @include margin-space(n n $base-spacing-unit-sm);
+  overflow: hidden;
+}

@@ -1,71 +1,38 @@
 <?php
-/*
-Theme Name: Abraham
-Theme URI: https://github.com/m-e-h/abraham
-Author: Marty Helmick
-Author URI: https://github.com/m-e-h
-Description: Experimental WP parent theme.
-Version: 1.0-wpcom
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: ahabraham
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-
- Abraham is based on Stargazer http://themehybrid.com/themes/stargazer, (C) 2013-2014, Justin Tadlock.
-*/
+/**
+ * Scratch functions and definitions
+ *
+ * @package Scratch
+ */
 
 /* Get the template directory and make sure it has a trailing slash. */
-$abraham_dir = trailingslashit( get_template_directory() );
+$scratch_dir = trailingslashit( get_template_directory() );
 
-/* Load the Hybrid Core framework and launch it. */
-require_once( $abraham_dir . 'library/hybrid.php' );
+/* Load the Hybrid Core framework and theme files. */
+require_once( $scratch_dir . 'library/hybrid.php'             );
+require_once( $scratch_dir . 'inc/vendor/tha-theme-hooks.php' );
+require_once( $scratch_dir . 'inc/custom-background.php'      );
+require_once( $scratch_dir . 'inc/custom-header.php'          );
+require_once( $scratch_dir . 'inc/custom-colors.php'          );
+require_once( $scratch_dir . 'inc/customizer.php'             );
+require_once( $scratch_dir . 'inc/template-tags.php'          );
+require_once( $scratch_dir . 'inc/general.php'                );
+require_once( $scratch_dir . 'inc/template-actions.php'       );
+require_once( $scratch_dir . 'inc/hybrid-mods.php'            );
+
+/* Launch the Hybrid Core framework. */
 new Hybrid();
 
-/* Load theme-specific files. */
-require_once( $abraham_dir . 'inc/custom-background.php'     	);
-require_once( $abraham_dir . 'inc/custom-header.php'         	);
-require_once( $abraham_dir . 'inc/custom-colors.php'         	);
-require_once( $abraham_dir . 'inc/hybrid-mods.php'         		);
-require_once( $abraham_dir . 'inc/template-tags.php'       		);
-
 /* Set up the theme early. */
-add_action( 'after_setup_theme', 'abraham_theme_setup', 5 );
+add_action( 'after_setup_theme', 'scratch_setup', 5 );
 
 /**
- * The theme setup function.  This function sets up support for various WordPress and framework functionality.
- *
- * @since  1.0.0
- * @access public
- * @return void
+ * Theme defaults and support for various WordPress & framework features.
  */
-function abraham_theme_setup() {
+function scratch_setup() {
 
-	/* Load files. */
-	require_once( trailingslashit( get_template_directory() ) . 'inc/abraham.php' );
-	require_once( trailingslashit( get_template_directory() ) . 'inc/customize.php' );
-
-	/* Load widgets. */
-	add_theme_support( 'hybrid-core-widgets' );
-
-	/* Theme layouts. */
-	add_theme_support(
-		'theme-layouts',
-		array(
-			'1c'        => __( '1 Column Wide',                'abraham' ),
-			'1c-narrow' => __( '1 Column Narrow',              'abraham' ),
-			'2c-l'      => __( '2 Columns: Content / Sidebar', 'abraham' ),
-			'2c-r'      => __( '2 Columns: Sidebar / Content', 'abraham' )
-		),
-		array( 'default' => is_rtl() ? '2c-r' :'2c-l' )
-	);
-
-	/* Load stylesheets. */
-	add_theme_support(
-		'hybrid-core-styles',
-		array( 'abraham-fonts', 'gallery', 'abraham-mediaelement', 'parent', 'style' )
-	);
+	/* Let WordPress manage the document title. */
+	add_theme_support( 'title-tag' );
 
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
@@ -73,34 +40,48 @@ function abraham_theme_setup() {
 	/* The best thumbnail/image script ever. */
 	add_theme_support( 'get-the-image' );
 
-	/* Breadcrumbs. Yay! */
+	/* Breadcrumbs. */
 	add_theme_support( 'breadcrumb-trail' );
-
-	/* Pagination. */
-	add_theme_support( 'loop-pagination' );
 
 	/* Nicer [gallery] shortcode implementation. */
 	add_theme_support( 'cleaner-gallery' );
 
-	/* Better captions for themes to style. */
-	add_theme_support( 'cleaner-caption' );
-
 	/* Automatically add feed links to <head>. */
 	add_theme_support( 'automatic-feed-links' );
 
-	/* Whistles plugin. */
-	add_theme_support( 'whistles', array( 'styles' => true ) );
+	/*  Post Thumbnails on posts and pages. */
+	add_theme_support( 'post-thumbnails' );
 
-	/* Post formats. */
-	add_theme_support(
-		'post-formats',
-		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
+	/* Theme layouts. */
+	add_theme_support( 'theme-layouts', array(
+			'1c'    => __( 'Single Column', 'platform' ),
+			'2c-l'  => __( 'Sidebar Right', 'platform' ),
+			'2c-r'  => __( 'Sidebar Left', 'platform' )
+		),
+		array( 'default' => '2c-l' )
 	);
 
-	/* Editor styles. */
-	add_editor_style( abraham_get_editor_styles() );
-
-	/* Handle content width for embeds and images. */
-	// Note: this is the largest size based on the theme's various layouts.
-	hybrid_set_content_width( 1025 );
+	/* Post Formats. */
+	add_theme_support( 'post-formats', array(
+		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status',
+		'video'
+	) );
 }
+
+/* Set the content width based on the theme's design and stylesheet. */
+if ( ! isset( $content_width ) ) {
+	$content_width = 1200;
+}
+
+
+/* Remove unwanted default Hybrid head elements. */
+remove_action( 'wp_head', 'hybrid_doctitle',      0 );
+remove_action( 'wp_head', 'hybrid_meta_template', 1 );
+remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
+
+
+
+	function scratch_excerpt_more( $more ) {
+		return '... <div class="read-more__fade"><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue Reading...', 'scratch') . '</a></div>';
+	}
+	add_filter( 'excerpt_more', 'scratch_excerpt_more' );
