@@ -2,75 +2,75 @@
 /**
  * Register menus, sidebars, scripts and styles.
  *
- * @package Scratch
+ * @package Abraham
  */
 
 /* Register custom image sizes. */
-add_action( 'init', 'scratch_image_sizes', 5 );
+add_action( 'init', 'abraham_image_sizes', 5 );
 /* Add a custom excerpt length. */
-add_filter( 'excerpt_length', 'scratch_excerpt_length' );
+add_filter( 'excerpt_length', 'abraham_excerpt_length' );
 
 /* Register custom menus. */
-add_action( 'init', 'scratch_menus', 5 );
+add_action( 'init', 'abraham_menus', 5 );
 
 /* Register sidebars. */
-add_action( 'widgets_init', 'scratch_sidebars', 5 );
+add_action( 'widgets_init', 'abraham_sidebars', 5 );
 
 /* Add custom scripts. */
-add_action( 'wp_enqueue_scripts', 'scratch_scripts', 5 );
+add_action( 'wp_enqueue_scripts', 'abraham_scripts', 5 );
 
 /* Add custom styles. */
-add_action( 'wp_enqueue_scripts', 'scratch_styles', 5 );
+add_action( 'wp_enqueue_scripts', 'abraham_styles', 5 );
 
 
-add_filter( 'hybrid_attr_sidebar', 'scratch_footer_widgets_class', 10, 2 );
+add_filter( 'hybrid_attr_sidebar', 'abraham_footer_widgets_class', 10, 2 );
 
 
-function scratch_image_sizes() {
+function abraham_image_sizes() {
 	// Set the 'post-thumbnail' size.
 	set_post_thumbnail_size( 175, 130, true );
 
-	// Add the 'scratch-full' image size.
-	add_image_size( 'scratch-full', 1025, 500, true );
+	// Add the 'abraham-full' image size.
+	add_image_size( 'abraham-full', 1025, 500, true );
 }
 
-function scratch_excerpt_length( $length ) {
+function abraham_excerpt_length( $length ) {
 	return 60;
 }
 
-function scratch_menus() {
-	register_nav_menu( 'primary', _x( 'Primary', 'nav menu location', 'scratch' ) );
-	register_nav_menu( 'social',  _x( 'Social',  'nav menu location', 'scratch' ) );
+function abraham_menus() {
+	register_nav_menu( 'primary', _x( 'Primary', 'nav menu location', 'abraham' ) );
+	register_nav_menu( 'social',  _x( 'Social',  'nav menu location', 'abraham' ) );
 }
 
-function scratch_sidebars() {
+function abraham_sidebars() {
 	hybrid_register_sidebar( array(
 		'id'          => 'primary',
-		'name'        => _x( 'Primary', 'sidebar', 'scratch' ),
-		'description' => __( 'The Primary sidebar.', 'scratch' )
+		'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
+		'description' => __( 'The Primary sidebar.', 'abraham' )
 	) );
 
 	hybrid_register_sidebar( array(
 			'id'          => 'footer-widgets',
-			'name'        => _x( 'Footer Widgets', 'sidebar', 'scratch' ),
-		'description' => __( 'Typically located in the footer.', 'scratch' )
+			'name'        => _x( 'Footer Widgets', 'sidebar', 'abraham' ),
+		'description' => __( 'Typically located in the footer.', 'abraham' )
 	) );
 }
 
-function scratch_scripts() {
+function abraham_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_script( 'scratch-navigation', trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', array(), null, true );
-	wp_enqueue_script( 'scratch-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', array(), null, true );
+	wp_enqueue_script( 'abraham-navigation', trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', array(), null, true );
+	wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', array(), null, true );
 }
 
-function scratch_styles() {
+function abraham_styles() {
 	$suffix = hybrid_get_min_suffix();
 
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 
-	wp_enqueue_style( 'scratch-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium' );
+	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium' );
 
 	if ( is_child_theme() )
 		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
@@ -81,11 +81,11 @@ function scratch_styles() {
 /**
  * Filter the hybrid_post_format_link to remove the text
  */
-function scratch_post_format_link() {
-	echo scratch_get_post_format_link();
+function abraham_post_format_link() {
+	echo abraham_get_post_format_link();
 }
 
-function scratch_get_post_format_link() {
+function abraham_get_post_format_link() {
 
 	$format = get_post_format();
 	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
@@ -97,8 +97,8 @@ function scratch_get_post_format_link() {
 	);
 }
 
-if ( ! function_exists( 'scratch_format_svg' ) ) :
-function scratch_format_svg() {
+if ( ! function_exists( 'abraham_format_svg' ) ) :
+function abraham_format_svg() {
 $format = get_post_format();
 get_template_part( 'images/svg/svg', $format );
 }
@@ -108,7 +108,7 @@ endif; // End check for logo function.
 
 
 
-function scratch_footer_widgets_class( $attr, $context ) {
+function abraham_footer_widgets_class( $attr, $context ) {
 	if ( 'footer-widgets' === $context ) {
 		global $sidebars_widgets;
 		if ( is_array( $sidebars_widgets ) && !empty( $sidebars_widgets[ $context ] ) ) {

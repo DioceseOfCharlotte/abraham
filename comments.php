@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package Scratch
+ * @package Abraham
  */
 
 if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! pings_open() ) ) {

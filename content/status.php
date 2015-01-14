@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 ?>
 <?php tha_entry_before(); ?>
@@ -25,8 +25,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-	  <?php scratch_entry_meta(); ?>
-	  <?php scratch_post_terms(); ?>
+	  <?php abraham_entry_meta(); ?>
+	  <?php abraham_post_terms(); ?>
 	</footer><!-- .entry-footer -->
 
 <?php else : // If not viewing a single post. ?>

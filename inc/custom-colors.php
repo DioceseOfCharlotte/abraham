@@ -4,10 +4,10 @@
  * set a custom color by default.  However the user can overwrite this default color via the theme customizer
  * to a color of their choosing.
  *
- * @package    Scratch
+ * @package    Abraham
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2014, Justin Tadlock
- * @link       http://themehybrid.com/themes/scratch
+ * @link       http://themehybrid.com/themes/abraham
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 /**
@@ -16,7 +16,7 @@
  * @since  1.0.0
  * @access public
  */
-final class Scratch_Custom_Colors {
+final class Abraham_Custom_Colors {
 	/**
 	 * Holds the instance of this class.
 	 *
@@ -49,10 +49,10 @@ final class Scratch_Custom_Colors {
 		add_action( 'update_option_theme_mods_' . get_stylesheet(), array( $this, 'cache_delete' ) );
 
 		/* Visual editor colors */
-		add_action( 'wp_ajax_scratch_editor_styles',         array( $this, 'editor_styles_callback' ) );
-		add_action( 'wp_ajax_no_priv_scratch_editor_styles', array( $this, 'editor_styles_callback' ) );
-		add_action( 'wp_ajax_scratch_media_sandbox_styles',         array( $this, 'editor_styles_callback' ) );
-		add_action( 'wp_ajax_no_priv_scratch_media_sandbox_styles', array( $this, 'editor_styles_callback' ) );
+		add_action( 'wp_ajax_abraham_editor_styles',         array( $this, 'editor_styles_callback' ) );
+		add_action( 'wp_ajax_no_priv_abraham_editor_styles', array( $this, 'editor_styles_callback' ) );
+		add_action( 'wp_ajax_abraham_media_sandbox_styles',         array( $this, 'editor_styles_callback' ) );
+		add_action( 'wp_ajax_no_priv_abraham_media_sandbox_styles', array( $this, 'editor_styles_callback' ) );
 	}
 	/**
 	 * Returns a default primary color if there is none set.  We use this instead of setting a default
@@ -210,7 +210,7 @@ final class Scratch_Custom_Colors {
 				$wp_customize,
 				'custom-colors-primary',
 				array(
-					'label'    => esc_html__( 'Primary Color', 'scratch' ),
+					'label'    => esc_html__( 'Primary Color', 'abraham' ),
 					'section'  => 'colors',
 					'settings' => 'color_primary',
 					'priority' => 10,
@@ -241,4 +241,4 @@ final class Scratch_Custom_Colors {
 		return self::$instance;
 	}
 }
-Scratch_Custom_Colors::get_instance();
+Abraham_Custom_Colors::get_instance();

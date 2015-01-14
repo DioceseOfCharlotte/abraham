@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package Scratch
+ * @package Abraham
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 
 		<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-			<?php scratch_loop_meta(); ?>
+			<?php abraham_loop_meta(); ?>
 
 		<?php endif; // End check for multi-post page. ?>
 

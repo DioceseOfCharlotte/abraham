@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 ?>
 <?php tha_entry_before(); ?>

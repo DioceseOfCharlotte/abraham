@@ -4,15 +4,15 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Scratch
+ * @package Abraham
  */
 
 
-if ( ! function_exists( 'scratch_loop_meta' ) ) :
+if ( ! function_exists( 'abraham_loop_meta' ) ) :
 /**
  * Loop Title and Description
  */
-function scratch_loop_meta() { ?>
+function abraham_loop_meta() { ?>
 <div <?php hybrid_attr( 'loop-meta' ); ?>>
 
 	<div <?php hybrid_attr( 'wrap', 'loop-meta' ); ?>>
@@ -40,27 +40,27 @@ function scratch_loop_meta() { ?>
 endif;
 
 
-if ( ! function_exists( 'scratch_loop_nav' ) ) :
+if ( ! function_exists( 'abraham_loop_nav' ) ) :
 
-function scratch_loop_nav() {
+function abraham_loop_nav() {
 
 	if ( is_singular( 'post' ) ) :
 		the_post_navigation( array(
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '&larr;', 'scratch' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous article:', 'scratch' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '&larr;', 'abraham' ) . '</span> ' .
+				'<span class="screen-reader-text">' . __( 'Previous article:', 'abraham' ) . '</span> ' .
 				'<span class="post-title">%title</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next article:', 'scratch' ) . '</span>
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next article:', 'abraham' ) . '</span>
 				<span class="post-title">%title</span>
-				<span class="meta-nav" aria-hidden="true">' . __( '&rarr;', 'scratch' ) . '</span> ',
+				<span class="meta-nav" aria-hidden="true">' . __( '&rarr;', 'abraham' ) . '</span> ',
 		) );
 
 
 
 	elseif ( is_home() || is_archive() || is_search() ) :
 		the_posts_pagination( array(
-			'prev_text'          => __( '<', 'scratch' ),
-			'next_text'          => __( '>', 'scratch' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'scratch' ) . ' </span>',
+			'prev_text'          => __( '<', 'abraham' ),
+			'next_text'          => __( '>', 'abraham' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'abraham' ) . ' </span>',
 		) );
 	endif; // End nav-loop.
 
@@ -72,11 +72,11 @@ endif;
 
 
 
-if ( ! function_exists( 'scratch_entry_meta' ) ) :
+if ( ! function_exists( 'abraham_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function scratch_entry_meta() {  ?>
+function abraham_entry_meta() {  ?>
 	<div class="entry-byline">
 	<span class="entry-format"><?php hybrid_post_format_link(); ?></span>
 	<?php hybrid_post_author(); ?>
@@ -88,16 +88,16 @@ function scratch_entry_meta() {  ?>
 	} ?>
 	</div>
 	<?php
-	edit_post_link( esc_html__( 'Edit', 'scratch' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
 
-if ( ! function_exists( 'scratch_post_terms' ) ) :
+if ( ! function_exists( 'abraham_post_terms' ) ) :
 /**
  * Loop Title and Description
  */
-function scratch_post_terms() {
+function abraham_post_terms() {
 		hybrid_post_terms( array(
 			'taxonomy'	=> 'category',
 			'sep' 		=> ' ',

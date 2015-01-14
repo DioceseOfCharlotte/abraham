@@ -1,35 +1,35 @@
 <?php
 /**
- * Scratch functions and definitions
+ * Abraham functions and definitions
  *
- * @package Scratch
+ * @package Abraham
  */
 
 /* Get the template directory and make sure it has a trailing slash. */
-$scratch_dir = trailingslashit( get_template_directory() );
+$abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
-require_once( $scratch_dir . 'library/hybrid.php'             );
-require_once( $scratch_dir . 'inc/vendor/tha-theme-hooks.php' );
-require_once( $scratch_dir . 'inc/custom-background.php'      );
-require_once( $scratch_dir . 'inc/custom-header.php'          );
-require_once( $scratch_dir . 'inc/custom-colors.php'          );
-require_once( $scratch_dir . 'inc/customizer.php'             );
-require_once( $scratch_dir . 'inc/template-tags.php'          );
-require_once( $scratch_dir . 'inc/general.php'                );
-require_once( $scratch_dir . 'inc/template-actions.php'       );
-require_once( $scratch_dir . 'inc/hybrid-mods.php'            );
+require_once( $abraham_dir . 'library/hybrid.php'             );
+require_once( $abraham_dir . 'inc/vendor/tha-theme-hooks.php' );
+require_once( $abraham_dir . 'inc/custom-background.php'      );
+require_once( $abraham_dir . 'inc/custom-header.php'          );
+require_once( $abraham_dir . 'inc/custom-colors.php'          );
+require_once( $abraham_dir . 'inc/customizer.php'             );
+require_once( $abraham_dir . 'inc/template-tags.php'          );
+require_once( $abraham_dir . 'inc/general.php'                );
+require_once( $abraham_dir . 'inc/template-actions.php'       );
+require_once( $abraham_dir . 'inc/hybrid-mods.php'            );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
 /* Set up the theme early. */
-add_action( 'after_setup_theme', 'scratch_setup', 5 );
+add_action( 'after_setup_theme', 'abraham_setup', 5 );
 
 /**
  * Theme defaults and support for various WordPress & framework features.
  */
-function scratch_setup() {
+function abraham_setup() {
 
 	/* Let WordPress manage the document title. */
 	add_theme_support( 'title-tag' );
@@ -81,7 +81,7 @@ remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
 
 
 
-	function scratch_excerpt_more( $more ) {
-		return '... <div class="read-more__fade"><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue Reading...', 'scratch') . '</a></div>';
+	function abraham_excerpt_more( $more ) {
+		return '... <div class="read-more__fade"><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue Reading...', 'abraham') . '</a></div>';
 	}
-	add_filter( 'excerpt_more', 'scratch_excerpt_more' );
+	add_filter( 'excerpt_more', 'abraham_excerpt_more' );

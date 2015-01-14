@@ -1,18 +1,18 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses scratch_header_style()
- * @uses scratch_admin_header_style()
- * @uses scratch_admin_header_image()
+ * @uses abraham_header_style()
+ * @uses abraham_admin_header_style()
+ * @uses abraham_admin_header_image()
  */
 
 /* Call late so child themes can override. */
-add_action( 'after_setup_theme', 'scratch_custom_header_setup', 15 );
+add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
 
 /**
  * Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
@@ -21,7 +21,7 @@ add_action( 'after_setup_theme', 'scratch_custom_header_setup', 15 );
  * @access public
  * @return void
  */
-function scratch_custom_header_setup() {
+function abraham_custom_header_setup() {
 
 	/* Adds support for WordPress' "custom-header" feature. */
 	add_theme_support(
@@ -36,9 +36,9 @@ function scratch_custom_header_setup() {
 			'default-text-color'     => 'fafafa',
 			'header-text'            => true,
 			'uploads'                => true,
-			'wp-head-callback'       => 'scratch_custom_header_wp_head',
-			'admin-head-callback'    => 'scratch_custom_header_admin_head',
-			'admin-preview-callback' => 'scratch_custom_header_admin_preview',
+			'wp-head-callback'       => 'abraham_custom_header_wp_head',
+			'admin-head-callback'    => 'abraham_custom_header_admin_head',
+			'admin-preview-callback' => 'abraham_custom_header_admin_preview',
 		)
 	);
 
@@ -55,7 +55,7 @@ function scratch_custom_header_setup() {
  */
 
 
-function scratch_custom_header_wp_head() {
+function abraham_custom_header_wp_head() {
 
 	if ( !display_header_text() )
 		return;
@@ -84,7 +84,7 @@ function scratch_custom_header_wp_head() {
  * @access public
  * @return void
  */
-function scratch_custom_header_admin_preview() { ?>
+function abraham_custom_header_admin_preview() { ?>
 
 		<div <?php hybrid_attr( 'body' ); // Fake <body> class. ?>>
 
@@ -122,7 +122,7 @@ function scratch_custom_header_admin_preview() { ?>
  * @access public
  * @return void
  */
-function scratch_custom_header_admin_head() {
+function abraham_custom_header_admin_head() {
 	if ( !display_header_text() )
 		return;
 	$hex = get_header_textcolor();

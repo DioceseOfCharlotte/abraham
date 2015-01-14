@@ -1,7 +1,7 @@
 /**
  * Function for turning a hex color into an RGB string.
  */
-function scratch_hex_to_rgb( hex ) {
+function abraham_hex_to_rgb( hex ) {
 	var color = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec( hex );
 
 	return parseInt( color[1], 16 ) + ", " + parseInt( color[2], 16 ) + ", " + parseInt( color[3], 16 );
@@ -52,7 +52,7 @@ jQuery( document ).ready( function() {
 				/* Makes sures both branding and menu-secondary display. */
 				jQuery( '#branding' ).css( 'display', 'block' );
 
-				var rgb = scratch_hex_to_rgb( to );
+				var rgb = abraham_hex_to_rgb( to );
 
 				/* Changes the color of the site title link. */
 				jQuery( '#site-title, #site-title a, #footer a' ).css( 'color', to );
@@ -108,7 +108,7 @@ jQuery( document ).ready( function() {
 
 		value.bind( function( to ) {
 
-			var rgb = scratch_hex_to_rgb( to );
+			var rgb = abraham_hex_to_rgb( to );
 
 			/* special case: hover */
 

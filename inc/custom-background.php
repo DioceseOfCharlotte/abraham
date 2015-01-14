@@ -1,10 +1,10 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 
 /* Call late so child themes can override. */
-add_action( 'after_setup_theme', 'scratch_custom_background_setup', 15 );
+add_action( 'after_setup_theme', 'abraham_custom_background_setup', 15 );
 
 /**
  * Adds support for the WordPress 'custom-background' theme feature.
@@ -13,7 +13,7 @@ add_action( 'after_setup_theme', 'scratch_custom_background_setup', 15 );
  * @access public
  * @return void
  */
-function scratch_custom_background_setup() {
+function abraham_custom_background_setup() {
 
 	/* Adds support for WordPress' "custom-background" feature. */
 	add_theme_support(
@@ -21,7 +21,7 @@ function scratch_custom_background_setup() {
 		array(
 			'default-color'    => 'f5f5f5',
 			'default-image'    => '',
-			'wp-head-callback' => 'scratch_custom_background_callback',
+			'wp-head-callback' => 'abraham_custom_background_callback',
 		)
 	);
 }
@@ -39,7 +39,7 @@ function scratch_custom_background_setup() {
  * @access public
  * @return void
  */
-function scratch_custom_background_callback() {
+function abraham_custom_background_callback() {
 
 	/* Get the background image. */
 	$image = get_background_image();

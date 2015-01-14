@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package Scratch
+ * @package Abraham
  */
 
 get_header(); ?>
@@ -15,37 +15,37 @@ get_header(); ?>
 
 		<?php tha_content_top(); ?>
 
-      <?php tha_entry_before(); ?>
+	  <?php tha_entry_before(); ?>
 
-        <article class="entry error-404 not-found">
+		<article class="entry error-404 not-found">
 
-        	<?php tha_entry_top(); ?>
+			<?php tha_entry_top(); ?>
 
-        	<header class="entry-header">
-        		<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'scratch' ); ?></h1>
-        	</header><!-- .page-header -->
+			<header class="entry-header">
+				<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'abraham' ); ?></h1>
+			</header><!-- .page-header -->
 
-        	<div class="entry-content">
+			<div class="entry-content">
 
-        		<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'scratch' ); ?></p>
+				<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'abraham' ); ?></p>
 
-        		<?php get_search_form(); ?>
+				<?php get_search_form(); ?>
 
-        		<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+				<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-        		<?php
-        		// Translators: %1$s: smiley
-        		$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'scratch' ), convert_smilies( ':)' ) ) . '</p>';
-        		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2> $archive_content" );
-        		?>
+				<?php
+				// Translators: %1$s: smiley
+				$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'abraham' ), convert_smilies( ':)' ) ) . '</p>';
+				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2> $archive_content" );
+				?>
 
-        		<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+				<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-        	</div><!-- .entry-content -->
+			</div><!-- .entry-content -->
 
-        	<?php tha_entry_bottom(); ?>
+			<?php tha_entry_bottom(); ?>
 
-        </article><!-- .error-404 -->
+		</article><!-- .error-404 -->
 
 <?php tha_entry_after(); ?>
 

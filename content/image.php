@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 ?>
 <?php tha_entry_before(); ?>
@@ -14,7 +14,7 @@
 		// Display a featured image if we can find something to display.
 		get_the_image(
 			array(
-				'size'          => 'scratch-full',
+				'size'          => 'abraham-full',
 				'scan'          => true,
 				'caption'       => false,
 				'order'         => array( 'featured', 'scan_raw', 'scan', 'attachment', ),
@@ -36,8 +36,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-	  <?php scratch_entry_meta(); ?>
-	  <?php scratch_post_terms(); ?>
+	  <?php abraham_entry_meta(); ?>
+	  <?php abraham_post_terms(); ?>
 	</footer><!-- .entry-footer -->
 
 <?php else : // If not viewing a single post. ?>

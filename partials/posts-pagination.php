@@ -3,7 +3,7 @@
 }
 
 		the_posts_pagination( array(
-			'prev_text'          => __( ' ', 'scratch' ),
-			'next_text'          => __( ' ', 'scratch' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'scratch' ) . ' </span>',
+			'prev_text'          => __( ' ', 'abraham' ),
+			'next_text'          => __( ' ', 'abraham' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'abraham' ) . ' </span>',
 		) );

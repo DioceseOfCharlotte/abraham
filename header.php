@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Scratch
+ * @package Abraham
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
@@ -15,7 +15,7 @@
 
 	<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'scratch' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abraham' ); ?></a>
 
     <?php tha_header_before(); ?>
 

@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Scratch
+ * @package Abraham
  */
 ?>
 
@@ -23,7 +23,7 @@
 			<div class="wrap">
 			<div class="credit">
 				<?php printf(
-						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s and %4$s.', 'scratch' ),
+						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s and %4$s.', 'abraham' ),
 						date_i18n( 'Y' ), hybrid_get_site_link(), hybrid_get_wp_link(), hybrid_get_theme_link()
 							); ?>
 			</div><!-- .credit -->
