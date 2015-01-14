@@ -66,7 +66,7 @@ function abraham_setup() {
 
 	/* Post Formats. */
 	add_theme_support( 'post-formats', array(
-		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status',
+		'aside', 'audio', 'gallery', 'image', 'link', 'quote', 'status',
 		'video'
 	) );
 }
