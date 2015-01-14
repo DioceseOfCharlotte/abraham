@@ -10,7 +10,7 @@ $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
 require_once( $abraham_dir . 'library/hybrid.php'             );
-require_once( $abraham_dir . 'inc/vendor/tha-theme-hooks.php' );
+require_once( $abraham_dir . 'inc/tha-theme-hooks.php' );
 require_once( $abraham_dir . 'inc/custom-background.php'      );
 require_once( $abraham_dir . 'inc/custom-header.php'          );
 require_once( $abraham_dir . 'inc/custom-colors.php'          );
