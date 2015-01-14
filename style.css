@@ -2442,6 +2442,10 @@ li.ping:before,
 /*------------------------------------*\
     #PAGE
 \*------------------------------------*/
+body {
+    overflow-y: scroll;
+}
+
 .site {
     word-wrap: break-word;
     word-break: normal;
@@ -2450,70 +2454,6 @@ li.ping:before,
     hyphens: auto; 
 
     -ms-hyphens: auto;
-}
-
-.content {
-    position: relative;
-    margin-bottom: 16px;
-}
-@media only screen and (min-width: 48em) {
-    .content {
-        margin-bottom: 24px;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .content {
-        margin-bottom: 40px;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .content {
-        padding-top: 0;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .content {
-        margin-right: 40px;
-    }
-}
-
-.wrap {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-right: 16px; 
-    padding-left: 16px;
-}
-@media only screen and (min-width: 48em) {
-    .wrap {
-        padding-right: 24px; 
-        padding-left: 24px;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .wrap {
-        padding-right: 40px; 
-        padding-left: 40px;
-    }
-}
-
-@media only screen and (min-width: 64em) {
-    .layout-sidebar-right .sidebar__primary {
-        display: inline-block;
-        width: 30%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        vertical-align: top;
-    }
-    .layout-sidebar-right .content-area {
-        display: inline-block;
-        width: 70%;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        vertical-align: top;
-    }
 }
 
 .site-container {
@@ -2555,6 +2495,10 @@ li.ping:before,
         padding-bottom: 0;
     }
 }
+.site-container > * {
+    font-size: 16px;
+    font-size: 1rem;
+}
 @media only screen and (min-width: 48em) {
     .site-container {
         display: block;
@@ -2565,13 +2509,104 @@ li.ping:before,
         text-align: left;
     }
 }
-.site-container > * {
-    font-size: 16px;
-    font-size: 1rem;
+
+.content {
+    position: relative;
+    margin-bottom: 16px;
+}
+@media only screen and (min-width: 48em) {
+    .content {
+        margin-bottom: 24px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .content {
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (min-width: 48em) {
+    .content {
+        padding-top: 0;
+    }
 }
 
-body {
-    overflow-y: scroll;
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-right: 16px; 
+    padding-left: 16px;
+}
+@media only screen and (min-width: 48em) {
+    .wrap {
+        padding-right: 24px; 
+        padding-left: 24px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .wrap {
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .layout-sidebar-right .sidebar__primary {
+        display: inline-block;
+        width: 30%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        vertical-align: top;
+    }
+    .layout-sidebar-right .content-area {
+        display: inline-block;
+        width: 70%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        vertical-align: top;
+    }
+    .layout-sidebar-right .content {
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .layout-sidebar-left .site-container {
+        text-align: left; 
+
+        direction: rtl;
+    }
+    .layout-sidebar-left .site-container > * {
+        direction: ltr;
+    }
+    .layout-sidebar-left .sidebar__primary {
+        display: inline-block;
+        width: 30%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        text-align: left; 
+        vertical-align: top;
+
+        direction: ltr;
+    }
+    .layout-sidebar-left .content-area {
+        display: inline-block;
+        width: 70%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        text-align: left; 
+        vertical-align: top;
+
+        direction: ltr;
+    }
+    .layout-sidebar-left .content {
+        margin-left: 40px;
+    }
 }
 
 .entry-byline {
