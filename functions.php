@@ -52,6 +52,9 @@ function abraham_setup() {
 	/*  Post Thumbnails on posts and pages. */
 	add_theme_support( 'post-thumbnails' );
 
+	/*  Per Post stylesheets. */
+	add_theme_support( 'post-stylesheets' );
+
 	/* Theme layouts. */
 	add_theme_support( 'theme-layouts', array(
 			'1c'    => __( 'Single Column', 'platform' ),
