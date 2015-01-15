@@ -53,43 +53,7 @@ body {
 //   @include padding-space(n $base-spacing-unit-sm);
 // }
 
-  .sidebar__primary {
-      display: block;
-      font-size: 0;
-      margin: 0 auto;
-      text-align: left;
-      width: 100%;
-      max-width: 95%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
-        > * {
-          @include font-size($base-font-size);
-        }
-
-        .widget {
-          display: inline-block;
-          text-align: left;
-          vertical-align: top;
-          min-width: 300px;
-          max-width: 700px;
-          width: 100%;
-          @include font-size($base-font-size);
-
-          @include md {
-            width: 48.6%;
-          }
-
-          @include lg {
-            width: 100%;
-          }
-        }
-
-      @include lg {
-        max-width: $site-width;
-      }
-  }
 
 
 
@@ -210,34 +174,4 @@ body.search, body.error-404, .layout-single-column {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.entry-byline {
-display: none;
-}
-
-
-.entry-footer {
-padding-top: $base-spacing-unit;
-}
-
-
-
 
