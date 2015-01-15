@@ -55,12 +55,15 @@ span.comments-link:before {
 
 
 
-    .sidebar.sidebar__footer-widgets {
+    .site-footer {
+
+      .sidebar__footer-widgets {
       display: block;
       font-size: 0;
       margin: 0 auto;
       text-align: left;
       width: 100%;
+      max-width: 95%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -75,9 +78,16 @@ span.comments-link:before {
           display: inline-block;
           text-align: left;
           vertical-align: top;
-          min-width: 320px;
+          min-width: 300px;
           max-width: 700px;
+          width: 100%;
         }
+
+      @include lg {
+        max-width: $site-width;
+        padding-left: $base-spacing-unit-lg;
+        padding-right: $base-spacing-unit-lg;
+      }
     }
 
 @include md {
@@ -87,17 +97,18 @@ span.comments-link:before {
       }
   }
 
-  .sidebar-col-2 {
+  .sidebar-col-3, .sidebar-col-2 {
       .widget {
-          width: 50%;
-          flex: 0 45%;
+          width: 48.6%;
       }
   }
-
+}
+@include lg {
   .sidebar-col-3 {
       .widget {
-          width: 33.33%;
-          flex: 0 30%;
+          width: 31%;
       }
   }
+}
+
 }

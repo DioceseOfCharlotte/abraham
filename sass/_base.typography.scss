@@ -75,7 +75,7 @@ p {
   @include font-size($base-font-size);
   font-weight: 400;
   letter-spacing: 0.04em;
-  margin-bottom: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit-sm;
 }
 
 blockquote, blockquote p {

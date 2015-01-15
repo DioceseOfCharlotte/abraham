@@ -14,19 +14,26 @@ body {
 
 .site-container {
   margin-top: 60px;
-  @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm 0);
+  margin-left: auto;
+  margin-right: auto;
+  @include padding-space($base-spacing-unit-sm n n);
 
   >* {
     @include font-size($base-font-size, false);
   }
 
   @include md {
-    max-width: $site-width;
     min-height: initial;
     display: block;
     font-size: 0;
     text-align: left;
-    margin: 0 auto;
+    margin-top: 0;
+  }
+
+    @include lg {
+    max-width: $site-width;
+    padding-left: $base-spacing-unit-lg;
+    padding-right: $base-spacing-unit-lg;
   }
 
 }
@@ -40,13 +47,49 @@ body {
   }
 }
 
-.wrap {
-  max-width: $site-width;
-  margin: 0 auto;
-  @include padding-space(n $base-spacing-unit-sm);
-}
+// .wrap {
+//   max-width: $site-width;
+//   margin: 0 auto;
+//   @include padding-space(n $base-spacing-unit-sm);
+// }
 
+  .sidebar__primary {
+      display: block;
+      font-size: 0;
+      margin: 0 auto;
+      text-align: left;
+      width: 100%;
+      max-width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
+        > * {
+          @include font-size($base-font-size);
+        }
+
+        .widget {
+          display: inline-block;
+          text-align: left;
+          vertical-align: top;
+          min-width: 300px;
+          max-width: 700px;
+          width: 100%;
+          @include font-size($base-font-size);
+
+          @include md {
+            width: 48.6%;
+          }
+
+          @include lg {
+            width: 100%;
+          }
+        }
+
+      @include lg {
+        max-width: $site-width;
+      }
+  }
 
 
 
@@ -54,7 +97,30 @@ body {
 //     ##Layout 1 Column
 // \*------------------------------------
 
+body.search, body.error-404, .layout-single-column {
 
+  .content-area, .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .sidebar__primary {
+    @include lg {
+      display: block;
+      display: flex;
+    }
+    .widget {
+      @include lg {
+        width: 31%;
+      }
+    }
+  }
+
+}
 
 
 

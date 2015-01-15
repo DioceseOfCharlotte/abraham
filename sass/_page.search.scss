@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #SEARCH-PAGE
+\*------------------------------------*/
+.search {
+
+  .loop-title {
+    font-weight: 300;
+      span {
+        color: $white;
+        font-weight: 500;
+      }
+  }
+
+  .entry {
+    @include margin-space(n n $base-spacing-unit-tiny);
+  }
+
+}

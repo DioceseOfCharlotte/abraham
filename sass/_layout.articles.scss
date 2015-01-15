@@ -3,14 +3,20 @@
 \*------------------------------------*/
 
 .entry {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fff;
-  //border: 1px solid $grey-300;
   border-radius: $base-radius;
   position: relative;
   @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit-tiny);
   @include margin-space(n n $base-spacing-unit-sm);
   overflow: hidden;
   //@include shadow-z1();
+
+  @include lg {
+    max-width: 100%;
+  }
   &:first-of-type {
 
 }
@@ -18,24 +24,23 @@
 
 
 .loop-meta {
-  border-radius: $base-radius;
-  @include margin-space(n n $base-spacing-unit-sm);
+  max-width: 100%;
+  border-radius: 0;
+  @include margin-space(n n $base-spacing-unit-tiny);
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
   text-align: center;
-  border: 2px solid $grey-500;
-
-  p {
-    margin: 0;
-  }
+  background-color: $color-text-light;
+  color: $white;
 }
 
 .loop-title {
-  font-weight: 400;
-  color: $grey-600;
+  color: rgba($white, .9);
+  margin: 0;
 }
 
 .loop-description p {
-  font-weight: 500;
+  margin-top: $base-spacing-unit-sm;
+  margin: 0;
 }
 
 .entry-summary {
