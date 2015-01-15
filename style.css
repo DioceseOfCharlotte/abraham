@@ -2688,6 +2688,15 @@ body.error-404 .content,
 /*------------------------------------*\
     #FORMS
 \*------------------------------------*/
+.widget_search {
+    padding: 0; 
+    border: 0;
+    background: none;
+}
+.widget_search input[type="search"] {
+    background-color: #fff;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -2840,10 +2849,6 @@ label > .label-body {
 
 .search-form {
     position: relative;
-}
-
-.widget_search {
-    padding: 11.84px;
 }
 
 input[type=search] {

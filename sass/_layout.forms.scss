@@ -2,6 +2,16 @@
     #FORMS
 \*------------------------------------*/
 
+.widget_search {
+background: none;
+border: 0;
+padding: 0;
+
+input[type="search"] {
+  background-color: $white;
+}
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -122,10 +132,6 @@ label > .label-body {
 
 .search-form {
 position: relative;
-}
-
-.widget_search {
-padding: $base-spacing-unit-tiny;
 }
 
 input[type=search] {
