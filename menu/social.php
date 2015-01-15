@@ -1,4 +1,9 @@
-<?php if ( has_nav_menu( 'social' ) ) :
+<?php
+/**
+ * @package Abraham
+ */
+
+if ( has_nav_menu( 'social' ) ) :
 
   wp_nav_menu(
 		array(

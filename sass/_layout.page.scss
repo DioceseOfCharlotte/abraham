@@ -2,6 +2,12 @@
     #PAGE
 \*------------------------------------*/
 
+.wrap {
+  max-width: $site-width;
+  margin: 0 auto;
+  @include padding-space(n $base-spacing-unit-sm);
+}
+
 body {
   overflow-y: scroll;
 }
@@ -47,12 +53,6 @@ body {
   }
 }
 
-// .wrap {
-//   max-width: $site-width;
-//   margin: 0 auto;
-//   @include padding-space(n $base-spacing-unit-sm);
-// }
-
 
 
 
@@ -77,6 +77,7 @@ body.search, body.error-404, .layout-single-column {
       display: block;
       display: flex;
     }
+
     .widget {
       @include lg {
         width: 31%;

@@ -11,14 +11,14 @@ class Doc_Attributes {
 	public $body                  	= ' ';	// get_body_class()
 	public $header                	= 'site-header'; 	// na
 	public $footer                	= 'site-footer'; 	// na
-	public $content_single_column 	= '  site-content'; 	// content
-	public $content_sidebar_right 	= '  site-content  md-18-24'; 	// content
-	public $content_sidebar_left 	= '  site-content  md-5-8'; 	// content
+	public $content_single_column 	= ' '; 	// content
+	public $content_sidebar_right 	= ' '; 	// content
+	public $content_sidebar_left 	= ' '; 	// content
 	public $sidebar_single_column  	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left 	= ' ';	// sidebar sidebar__{$context}
-	public $sidebar_footer          = ' wrap';	// sidebar sidebar__{$context}
-	public $menu                  	= '  navdrawer';	// menu menu__{$context}
+	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
+	public $menu                  	= ' ';	// menu menu__{$context}
 
 	/* Header attributes. */
 	public $branding              	= 'site-branding';	// na

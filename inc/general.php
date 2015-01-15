@@ -70,7 +70,7 @@ function abraham_styles() {
 
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 
-	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium' );
+	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=Roboto:500,400italic,300,700,500italic,300italic,400' );
 
 	if ( is_child_theme() )
 		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
@@ -123,3 +123,17 @@ function abraham_footer_widgets_class( $attr, $context ) {
 	}
 	return $attr;
 }
+
+function abraham_search_form( $form ) {
+			$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
+				<label>
+					<span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
+					<input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
+				</label>
+				<input type="submit" class="search-submit" value="'. esc_attr_x( '&#xf002;', 'submit button' ) .'" />
+			</form>';
+
+	return $form;
+}
+
+add_filter( 'get_search_form', 'abraham_search_form' );

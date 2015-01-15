@@ -2,17 +2,6 @@
     #FORMS
 \*------------------------------------*/
 
-.widget_search {
-background: none;
-border: 0;
-padding: 0;
-align-self: center;
-
-input[type="search"] {
-  background-color: $white;
-}
-}
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -152,4 +141,7 @@ position: absolute;
 top: 0;
 right: 0;
 bottom: 0;
+color: $white;
+@include font-icon();
 }
+

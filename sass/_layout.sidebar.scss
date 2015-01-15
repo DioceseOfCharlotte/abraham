@@ -72,3 +72,17 @@
         }
       }
 }
+
+.widget_search {
+  background: none;
+  border: 0;
+  padding: 0;
+  align-self: center;
+  @include sm-only {
+    @include padding-space($base-spacing-unit-sm n);
+  }
+
+  input[type="search"] {
+    background-color: $white;
+  }
+}

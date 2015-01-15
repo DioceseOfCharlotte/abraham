@@ -35,8 +35,8 @@
 
 		<?php tha_header_after(); ?>
 
-		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
+		<?php hybrid_get_menu( 'primary' ); ?>
 
 		<div id="container" class="site-container">
 
-		<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
+		<?php hybrid_get_menu( 'breadcrumbs' ); ?>

@@ -1,4 +1,9 @@
-<?php if ( has_nav_menu( 'primary' ) ) : ?>
+<?php
+/**
+ * @package Abraham
+ */
+
+if ( has_nav_menu( 'primary' ) ) : ?>
 
 	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
@@ -12,6 +17,7 @@
 			)
 		); ?>
 
-	</nav><!-- #site-navigation -->
+	</nav>
 
-<?php endif; // End check for menu. ?>
+<?php
+endif;

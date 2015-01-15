@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    #ARCHIVE-PAGE
+\*------------------------------------*/
+
+.loop-meta {
+  max-width: 100%;
+  border-radius: 0;
+  @include margin-space(n n $base-spacing-unit-tiny);
+  @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
+  text-align: center;
+  background-color: $color-text-light;
+  color: $white;
+}
+
+.loop-title {
+  color: rgba($white, .9);
+  margin: 0;
+}
+
+.loop-description p {
+  margin-top: $base-spacing-unit-sm;
+  margin: 0;
+}
+
+.entry-summary {
+  position: relative;
+}
+
+.read-more__fade {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 6rem;
+  padding-top: 6rem;
+  padding-right: 2rem;
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
+
+  a {
+    font-weight: 500;
+    text-transform: uppercase;
+    @include font-size($base-font-size - 1, false);
+    line-height: 2.5;
+    color: $color-text;
+    opacity: .6;
+    transition: opacity 0.2s ease;
+    border-bottom: 0;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: 0;
+    }
+  }
+}
+
+
+.pagination {
+  display: block;
+  text-align: center;
+
+  .nav-links {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .page-numbers {
+    background: $white;
+    border: 1px solid $grey-300;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    vertical-align: top;
+
+    &.prev,
+    &.next {
+      font-size: 2.5rem;
+      background: none;
+      border-color: transparent;
+
+    }
+
+    &.prev {
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      border-top: 20px solid transparent;
+      border-right: 40px solid $grey-500;
+      border-bottom: 20px solid transparent;
+      float: left;
+
+      &:hover {
+            border-right: 40px solid $grey-700;
+      }
+    }
+
+    &.next {
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      border-top: 20px solid transparent;
+      border-left: 40px solid $grey-500;
+      border-bottom: 20px solid transparent;
+      float: right;
+
+      &:hover {
+            border-left: 40px solid $grey-700;
+      }
+    }
+  }
+
+  .current {
+    background: none;
+    cursor: default;
+    border-color: transparent;
+    font-weight: 700;
+  }
+
+  .dots {
+    border: 0;
+    background: none;
+    cursor: default;
+    font-size: 1.5rem;
+    color: $grey-500;
+  }
+
+  a {
+    color: $grey-500;
+
+    &:hover,
+    &:focus {
+    background: $grey-50;
+    //border: 1px solid #e8e8e8;
+    }
+  }
+}

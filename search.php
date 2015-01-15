@@ -1,48 +1,50 @@
 <?php
 /**
- * The main template file.
+ * The search template file.
  *
  * @package Abraham
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div id="primary" class="content-area">
 
-	  <?php tha_content_before(); ?>
+	<?php tha_content_before(); ?>
 
-		<main <?php hybrid_attr( 'content' ); ?>>
+	<main <?php hybrid_attr( 'content' ); ?>>
 
-		<?php tha_content_top(); ?>
+	<?php tha_content_top(); ?>
 
-			<div <?php hybrid_attr( 'loop-meta' ); ?>>
-				<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</div><!-- .page-header -->
+		<header <?php hybrid_attr( 'loop-meta' ); ?>>
+			<?php get_search_form(); ?>
+			<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		</header><!-- .page-header -->
 
-		<?php if ( have_posts() ) : ?>
+	<?php
+		if ( have_posts() ) :
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			while ( have_posts() ) : the_post();
 
-				<?php get_template_part( 'content/search' ); ?>
+				get_template_part( 'content/search' );
 
-			<?php endwhile; // End loop. ?>
+			endwhile; // End loop.
 
-			<?php get_template_part( 'partials/posts', 'pagination' ); ?>
+			get_template_part( 'partials/posts', 'pagination' );
 
-		<?php else : //If no content found. ?>
+		else : //If no content found.
 
-			<?php get_template_part( 'content/none' ); ?>
+			get_template_part( 'content/none' );
 
-		<?php endif; // End check for posts. ?>
+		endif; // End check for posts.
 
-		<?php tha_content_bottom(); ?>
+		tha_content_bottom();
+	?>
 
-		</main><!-- #main -->
+	</main><!-- #main -->
 
-		<?php tha_content_after(); ?>
+	<?php tha_content_after(); ?>
 
-	</div><!-- #primary -->
+</div><!-- #primary -->
 
-<?php hybrid_get_sidebar( 'primary' ); ?>
 <?php
 get_footer();

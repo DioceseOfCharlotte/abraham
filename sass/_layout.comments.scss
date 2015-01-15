@@ -2,16 +2,21 @@
     #COMMENTS
 \*------------------------------------*/
 
-#comments {
+.comments-area {
+
+  ol {
+    list-style: none;
+  }
   .depth-1 {
     &> article > .comment-meta {
       text-align: left;
 
-      &> .avatar {
-          float: left;
-          margin-right: 1.5rem;
-          margin-left: 0;
-        }
+      .avatar {
+        float: left;
+        margin-right: 1.5rem;
+        margin-left: 0;
+        border-radius: 50%;
+      }
       }
   }
 }

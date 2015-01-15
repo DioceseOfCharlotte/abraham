@@ -14,25 +14,22 @@ if ( ! function_exists( 'abraham_loop_meta' ) ) :
  */
 function abraham_loop_meta() { ?>
 
-<div <?php hybrid_attr( 'loop-meta' ); ?>>
+<header <?php hybrid_attr( 'loop-meta' ); ?>>
 
-	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
+	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php the_archive_title(); ?></h1>
 
-	<?php if ( is_category() || is_tax() ) : ?>
+	<?php if ( is_category() || is_tax() ) :
+			hybrid_get_menu( 'sub-terms' );
+		endif; ?>
 
-		<?php hybrid_get_menu( 'sub-terms' ); ?>
-
+	<?php if ( ! is_paged() ) : ?>
+			<div <?php hybrid_attr( 'loop-description' ); ?>>
+				<?php the_archive_description(); ?>
+			</div><!-- .loop-description -->
 	<?php endif; ?>
 
-	<?php if ( ! is_paged() && $desc = hybrid_get_loop_description() ) : ?>
+</header><!-- .loop-meta -->
 
-		<div <?php hybrid_attr( 'loop-description' ); ?>>
-			<?php echo $desc; ?>
-		</div><!-- .loop-description -->
-
-	<?php endif; ?>
-
-</div><!-- .loop-meta -->
 <?php }
 endif;
 

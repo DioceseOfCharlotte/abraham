@@ -6,20 +6,18 @@
  */
 
 if ( ! is_active_sidebar( 'primary' ) ) {
-	return;
+		return;
 }
+		tha_sidebars_before();
 ?>
+		<aside <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
+<?php
+		tha_sidebar_top();
 
-<?php tha_sidebars_before(); ?>
+		dynamic_sidebar( 'primary' );
 
-<aside <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
-
-<?php tha_sidebar_top(); ?>
-
-	<?php dynamic_sidebar( 'primary' ); ?>
-
-<?php tha_sidebar_bottom(); ?>
-
-</aside><!-- #sidebar-primary -->
-
-<?php tha_sidebars_after(); ?>
+		tha_sidebar_bottom();
+?>
+		</aside><!-- #sidebar-primary -->
+<?php
+		tha_sidebars_after();
