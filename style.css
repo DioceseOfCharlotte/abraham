@@ -2689,9 +2689,13 @@ body.error-404 .content,
     #FORMS
 \*------------------------------------*/
 .widget_search {
-    padding: 0; 
+    padding: 0;
     border: 0;
     background: none;
+
+    -webkit-align-self: center;
+    align-self: center; 
+    -ms-flex-item-align: center;
 }
 .widget_search input[type="search"] {
     background-color: #fff;
