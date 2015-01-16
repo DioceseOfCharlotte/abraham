@@ -88,10 +88,10 @@ input[type="checkbox"]:focus:invalid:focus {
     outline-color: $color-error;
 }
 
-select {
-    border: 1px solid $color-grey-lighter;
-    background-color: white;
-}
+// select {
+//     border: 1px solid $color-grey-lighter;
+//     background-color: white;
+// }
 
 select[multiple] {
     height: auto;
@@ -125,23 +125,24 @@ position: relative;
 }
 
 input[type=search] {
-font-size: $base-font-size;
-margin: 0;
-padding: $base-spacing-unit-tiny;
-width: 100%;
-appearance: none;
+  background-color: $white;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: $base-spacing-unit-tiny;
+  width: 100%;
+  appearance: none;
 }
 
 input[type="submit"].search-submit {
-border-bottom-left-radius: 0;
-border-top-left-radius: 0;
-outline: 0;
-padding: 0 $base-spacing-unit-sm;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-color: $white;
-@include font-icon();
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  outline: 0;
+  padding: 0 $base-spacing-unit-sm;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: $white;
+  @include font-icon();
 }
 

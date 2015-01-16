@@ -16,9 +16,9 @@ get_header(); ?>
 	<?php
 		tha_content_top();
 
-		if ( !is_front_page() && !is_singular() && !is_404() ) :
+		if ( !is_front_page() && !is_singular() ) :
 
-			abraham_loop_meta();
+			get_template_part( 'partials/loop', 'meta' );
 
 		endif; // End check for multi-post page.
 
@@ -28,11 +28,11 @@ get_header(); ?>
 
 				hybrid_get_content_template();
 
-				get_template_part( 'partials/post', 'navigation' );
-
 				if ( is_singular() ) :
 
-				  comments_template( '', true );
+					get_template_part( 'partials/post', 'navigation' );
+
+				  	comments_template( '', true );
 
 				endif; // End check for single post.
 

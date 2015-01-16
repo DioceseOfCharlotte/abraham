@@ -3,10 +3,6 @@
  * @package Abraham
  */
 
-if ( ! is_singular( 'post' ) ) {
-			return;
-	}
-
 the_post_navigation( array(
 	'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next &rarr;', 'abraham' ) . '</span> ' .
 		'<span class="screen-reader-text">' . __( 'Next post:', 'abraham' ) . '</span> ' .

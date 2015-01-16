@@ -13,7 +13,7 @@
 		<?php get_template_part( 'partials/entry', 'title' ); ?>
 	</header><!-- .entry-header -->
 
-<?php if ( is_single( get_the_ID() ) ) : ?>
+<?php if ( is_singular( get_post_type() ) ) : ?>
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php get_the_image(); ?>

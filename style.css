@@ -2113,9 +2113,6 @@ span.comments-link:before {
         }
     }
 }
-.widget_search input[type="search"] {
-    background-color: #fff;
-}
 
 /*------------------------------------*\
     #ARTICLES
@@ -2694,11 +2691,6 @@ input[type="checkbox"]:focus:invalid:focus {
     outline-color: #ff1744;
 }
 
-select {
-    border: 1px solid #eee;
-    background-color: white;
-}
-
 select[multiple] {
     height: auto;
 }
@@ -2734,6 +2726,7 @@ input[type=search] {
     width: 100%;
     margin: 0;
     padding: 11.84px;
+    background-color: #fff;
     font-size: 16px;
 
     appearance: none;

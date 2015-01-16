@@ -7,65 +7,6 @@
  * @package Abraham
  */
 
-
-if ( ! function_exists( 'abraham_loop_meta' ) ) :
-/**
- * Loop Title and Description
- */
-function abraham_loop_meta() { ?>
-
-<header <?php hybrid_attr( 'loop-meta' ); ?>>
-
-	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php the_archive_title(); ?></h1>
-
-	<?php if ( is_category() || is_tax() ) :
-			hybrid_get_menu( 'sub-terms' );
-		endif; ?>
-
-	<?php if ( ! is_paged() ) : ?>
-			<div <?php hybrid_attr( 'loop-description' ); ?>>
-				<?php the_archive_description(); ?>
-			</div><!-- .loop-description -->
-	<?php endif; ?>
-
-</header><!-- .loop-meta -->
-
-<?php }
-endif;
-
-
-if ( ! function_exists( 'abraham_loop_nav' ) ) :
-
-function abraham_loop_nav() {
-
-	if ( is_singular( 'post' ) ) :
-		the_post_navigation( array(
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '&larr;', 'abraham' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous article:', 'abraham' ) . '</span> ' .
-				'<span class="post-title">%title</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next article:', 'abraham' ) . '</span>
-				<span class="post-title">%title</span>
-				<span class="meta-nav" aria-hidden="true">' . __( '&rarr;', 'abraham' ) . '</span> ',
-		) );
-
-
-
-	elseif ( is_home() || is_archive() || is_search() ) :
-		the_posts_pagination( array(
-			'prev_text'          => __( '<', 'abraham' ),
-			'next_text'          => __( '>', 'abraham' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'abraham' ) . ' </span>',
-		) );
-	endif; // End nav-loop.
-
-}
-endif;
-
-
-
-
-
-
 if ( ! function_exists( 'abraham_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.

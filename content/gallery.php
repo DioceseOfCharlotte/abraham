@@ -9,7 +9,7 @@
 
 <?php tha_entry_top(); ?>
 
-<?php if ( is_single( get_the_ID() ) ) : ?>
+<?php if ( is_singular( get_post_type() ) ) : ?>
 
 	<header class="entry-header">
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>

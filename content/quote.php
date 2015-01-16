@@ -9,7 +9,7 @@
 
 <?php tha_entry_top(); ?>
 
-<?php if ( is_single( get_the_ID() ) ) : ?>
+<?php if ( is_singular( get_post_type() ) ) : ?>
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php the_content(); ?>

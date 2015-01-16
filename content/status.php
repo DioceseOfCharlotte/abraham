@@ -9,7 +9,7 @@
 
 <?php tha_entry_top(); ?>
 
-<?php if ( is_single( get_the_ID() ) ) : ?>
+<?php if ( is_singular( get_post_type() ) ) : ?>
 
 	<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 

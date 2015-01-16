@@ -81,8 +81,4 @@
   @include sm-only {
     @include padding-space($base-spacing-unit-sm n);
   }
-
-  input[type="search"] {
-    background-color: $white;
-  }
 }
