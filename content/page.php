@@ -11,9 +11,7 @@
 
 <?php if ( is_page() ) : ?>
 
-	<header class="entry-header">
-		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
-	</header><!-- .entry-header -->
+	<?php get_template_part( 'partials/single', 'header' ); ?>
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php get_the_image( array( 'size' => 'full', 'link_to_post' => false ) ); ?>
@@ -23,14 +21,9 @@
 
 <?php else : // If not viewing a single page. ?>
 
-	<header class="entry-header">
-		<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
+          <?php get_template_part( 'partials/archive', 'header' ); ?>
 
-	<div <?php hybrid_attr( 'entry-summary' ); ?>>
-		<?php get_the_image(); ?>
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+          <?php get_template_part( 'partials/archive', 'content' ); ?>
 
 <?php endif; // End single page check. ?>
 

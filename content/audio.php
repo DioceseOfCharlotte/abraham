@@ -11,35 +11,23 @@
 
 	<?php echo ( $audio = hybrid_media_grabber( array( 'type' => 'audio', 'split_media' => true, 'before' => '<div class="featured-media">', 'after' => '</div>' ) ) ); ?>
 
-	<header class="entry-header">
-		<?php get_template_part( 'partials/entry', 'title' ); ?>
-	</header><!-- .entry-header -->
-
 <?php if ( is_singular( get_post_type() ) ) : ?>
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php the_content(); ?>
-		<?php wp_link_pages(); ?>
-	</div><!-- .entry-content -->
+        	<?php get_template_part( 'partials/single', 'header' ); ?>
 
-	<footer class="entry-footer">
-	  <?php abraham_entry_meta(); ?>
-	  <?php abraham_post_terms(); ?>
-	</footer><!-- .entry-footer -->
+          <?php get_template_part( 'partials/single', 'content' ); ?>
+
+          <?php get_template_part( 'partials/single', 'footer' ); ?>
 
 <?php else : // If not viewing a single post. ?>
 
 		<?php if ( has_excerpt() ) : // If the post has an excerpt. ?>
 
-			<div <?php hybrid_attr( 'entry-summary' ); ?>>
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
+			<?php get_template_part( 'partials/archive', 'content' ); ?>
 
 		<?php elseif ( empty( $audio ) ) : // Else, if the post does not have audio. ?>
 
-			<div <?php hybrid_attr( 'entry-content' ); ?>>
-				<?php the_content(); ?>
-			</div><!-- .entry-content -->
+			<?php get_template_part( 'partials/single', 'content' ); ?>
 
 		<?php endif; // End excerpt/audio checks. ?>
 

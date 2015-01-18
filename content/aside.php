@@ -3,35 +3,31 @@
  * @package Abraham
  */
 ?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+<?php
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+    <article <?php hybrid_attr( 'post' ); ?>>
 
-<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
+<?php
+tha_entry_top(); ?>
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php the_content(); ?>
-		<?php wp_link_pages(); ?>
-	</div><!-- .entry-content -->
+    <?php if ( is_singular( get_post_type() ) ) : ?>
 
-	<footer class="entry-footer">
-	  <?php abraham_entry_meta(); ?>
-	  <?php abraham_post_terms(); ?>
-	</footer><!-- .entry-footer -->
+          <?php get_template_part( 'partials/single', 'content' ); ?>
 
-<?php else : // If not viewing a single post. ?>
+      	  <?php get_template_part( 'partials/single', 'footer' ); ?>
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+    <?php else : // If not viewing a single post. ?>
 
-<?php endif; // End single post check. ?>
+      		<?php get_template_part( 'partials/archive', 'content' ); ?>
 
-<?php tha_entry_bottom(); ?>
+    <?php endif; // End single post check. ?>
 
-</article><!-- .entry -->
+<?php
+tha_entry_bottom(); ?>
 
-<?php 
+    </article><!-- .entry -->
+
+<?php
 tha_entry_after();

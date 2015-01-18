@@ -11,21 +11,13 @@
 
 <?php if ( is_singular( get_post_type() ) ) : ?>
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php the_content(); ?>
-		<?php wp_link_pages(); ?>
-	</div><!-- .entry-content -->
+          <?php get_template_part( 'partials/single', 'content' ); ?>
 
-	<footer class="entry-footer">
-	  <?php abraham_entry_meta(); ?>
-	  <?php abraham_post_terms(); ?>
-	</footer><!-- .entry-footer -->
+          <?php get_template_part( 'partials/single', 'footer' ); ?>
 
 <?php else : // If not viewing a single post. ?>
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+	<?php get_template_part( 'partials/single', 'content' ); ?>
 
 <?php endif; // End single post check. ?>
 
@@ -33,5 +25,5 @@
 
 </article><!-- .entry -->
 
-<?php 
+<?php
 tha_entry_after();
