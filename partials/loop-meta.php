@@ -2,7 +2,6 @@
 /**
  * @package Abraham
  */
-
 ?>
 
 <header <?php hybrid_attr( 'loop-meta' ); ?>>
