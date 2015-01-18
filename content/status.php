@@ -2,44 +2,48 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-<?php if ( is_singular( get_post_type() ) ) : ?>
+<?php
+tha_entry_top();
 
-	<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
+    if ( is_singular( get_post_type() ) ) :
 
-		<header class="entry-header">
-			<?php echo get_avatar( get_the_author_meta( 'email' ) ); ?>
-		</header><!-- .entry-header -->
+      if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 
-	<?php endif; // End avatars check. ?>
+        <header class="entry-header">
+          <?php echo get_avatar( get_the_author_meta( 'email' ) ); ?>
+        </header><!-- .entry-header -->
 
-          <?php get_template_part( 'partials/single', 'content' ); ?>
+      <?php
+      endif; // End avatars check.
 
-          <?php get_template_part( 'partials/single', 'footer' ); ?>
+      get_template_part( 'partials/single', 'content' );
 
-<?php else : // If not viewing a single post. ?>
+      get_template_part( 'partials/single', 'footer' );
 
-	<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
+    else : // If not viewing a single post.
 
-		<header class="entry-header">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo get_avatar( get_the_author_meta( 'email' ) ); ?></a>
-		</header><!-- .entry-header -->
+      if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 
-	<?php endif; // End avatars check. ?>
+        <header class="entry-header">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <?php echo get_avatar( get_the_author_meta( 'email' ) ); ?></a>
+        </header><!-- .entry-header -->
 
-	<?php get_template_part( 'partials/single', 'content' ); ?>
+      <?php
+      endif; // End avatars check.
 
-<?php endif; // End single post check. ?>
+      get_template_part( 'partials/single', 'content' );
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single post check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();

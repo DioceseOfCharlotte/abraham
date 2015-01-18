@@ -2,44 +2,53 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php echo ( $video = hybrid_media_grabber( array( 'width' => 1100, 'type' => 'video', 'split_media' => true, 'before' => '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>', 'after' => '</div>' ) ) ); ?>
+<?php
+tha_entry_top();
 
-<?php if ( is_singular( get_post_type() ) ) : ?>
+    echo ( $video = hybrid_media_grabber(
+      array(
+        'width'       => 1100,
+        'type'        => 'video',
+        'split_media' => true,
+        'before'      => '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>',
+        'after'       => '</div>'
+      )
+    ) );
 
-          <?php get_template_part( 'partials/single', 'header' ); ?>
+    if ( is_singular( get_post_type() ) ) :
 
-          <?php get_template_part( 'partials/single', 'content' ); ?>
+      get_template_part( 'partials/single', 'header' );
 
-          <?php get_template_part( 'partials/single', 'footer' ); ?>
+      get_template_part( 'partials/single', 'content' );
 
-<?php else : // If not viewing a single post. ?>
+      get_template_part( 'partials/single', 'footer' );
 
-          <?php get_template_part( 'partials/archive', 'header' ); ?>
+    else : // If not viewing a single post.
 
-		<?php if ( has_excerpt() ) : // If the post has an excerpt. ?>
+      get_template_part( 'partials/archive', 'header' );
 
-			<?php get_template_part( 'partials/archive', 'content' ); ?>
+      if ( has_excerpt() ) :
 
-		<?php elseif ( empty( $video ) ) : // Else, if the post does not have a video. ?>
+        get_template_part( 'partials/archive', 'content' );
 
-			<?php get_template_part( 'partials/single', 'content' ); ?>
+      elseif ( empty( $video ) ) :
 
-			<?php get_template_part( 'partials/archive', 'footer' ); ?>
+        get_template_part( 'partials/single', 'content' );
 
-		<?php endif; // End excerpt/video checks. ?>
+        get_template_part( 'partials/archive', 'footer' );
 
-<?php endif; // End single post check. ?>
+      endif; // End excerpt/video checks.
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single post check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();

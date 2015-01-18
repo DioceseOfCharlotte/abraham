@@ -2,45 +2,41 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-<?php if ( is_singular( get_post_type() ) ) : ?>
+<?php
+tha_entry_top();
 
-          <?php get_template_part( 'partials/single', 'header' ); ?>
+    if ( is_singular( get_post_type() ) ) :
 
-          <?php get_template_part( 'partials/single', 'content' ); ?>
+      get_template_part( 'partials/single', 'header' );
 
-          <?php get_template_part( 'partials/single', 'footer' ); ?>
+      get_template_part( 'partials/single', 'content' );
 
-<?php else : // If not viewing a single post. ?>
+      get_template_part( 'partials/single', 'footer' );
 
-	<?php
-	// Display a featured image if one has been set.
-	get_the_image(
-		array(
-			'size'   => 'abraham-full',
-			'before' => '<div class="featured-media image">',
-			'after'  => '</div>',
-		)
-	);
-	?>
+    else : // If not viewing a single post.
 
-          <?php get_template_part( 'partials/archive', 'header' ); ?>
+      get_the_image( array(
+      'size'   => 'abraham-full',
+      'before' => '<div class="featured-media image">',
+      'after'  => '</div>',
+      ) );
 
-          <?php get_template_part( 'partials/archive', 'content' ); ?>
+      get_template_part( 'partials/archive', 'header' );
 
-          <?php get_template_part( 'partials/archive', 'footer' ); ?>
+      get_template_part( 'partials/archive', 'content' );
 
-<?php endif; // End single post check. ?>
+      get_template_part( 'partials/archive', 'footer' );
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single post check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();

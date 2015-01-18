@@ -2,30 +2,31 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-<?php if ( is_singular( get_post_type() ) ) : ?>
+<?php
+tha_entry_top();
 
-          <?php get_template_part( 'partials/single', 'header' ); ?>
+    if ( is_singular( get_post_type() ) ) :
 
-          <?php get_template_part( 'partials/single', 'content' ); ?>
+      get_template_part( 'partials/single', 'header' );
 
-          <?php get_template_part( 'partials/single', 'footer' ); ?>
+      get_template_part( 'partials/single', 'content' );
 
-    <?php else : // If not viewing a single post. ?>
+      get_template_part( 'partials/single', 'footer' );
 
-          <?php get_template_part( 'partials/archive', 'header' ); ?>
+    else : // If not viewing a single post.
 
-<?php endif; // End single post check. ?>
+      get_template_part( 'partials/archive', 'header' );
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single post check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();

@@ -2,34 +2,31 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-<?php if ( is_page() ) : ?>
+<?php
+tha_entry_top();
 
-	<?php get_template_part( 'partials/single', 'header' ); ?>
+    if ( is_page() ) :
 
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php get_the_image( array( 'size' => 'full', 'link_to_post' => false ) ); ?>
-		<?php the_content(); ?>
-		<?php wp_link_pages(); ?>
-	</div><!-- .entry-content -->
+      get_template_part( 'partials/single', 'header' );
 
-<?php else : // If not viewing a single page. ?>
+      get_template_part( 'partials/single', 'content' );
 
-          <?php get_template_part( 'partials/archive', 'header' ); ?>
+    else : // If not viewing a single page.
 
-          <?php get_template_part( 'partials/archive', 'content' ); ?>
+      get_template_part( 'partials/archive', 'header' );
 
-<?php endif; // End single page check. ?>
+      get_template_part( 'partials/archive', 'content' );
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single page check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();

@@ -2,40 +2,48 @@
 /**
  * @package Abraham
  */
-?>
-<?php tha_entry_before(); ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+tha_entry_before(); ?>
 
-<?php tha_entry_top(); ?>
+  <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php echo ( $audio = hybrid_media_grabber( array( 'type' => 'audio', 'split_media' => true, 'before' => '<div class="featured-media">', 'after' => '</div>' ) ) ); ?>
+<?php
+tha_entry_top();
 
-<?php if ( is_singular( get_post_type() ) ) : ?>
+    echo ( $audio = hybrid_media_grabber(
+      array(
+        'type' => 'audio',
+        'split_media' => true,
+        'before' => '<div class="featured-media">',
+        'after' => '</div>'
+      )
+    ) );
 
-        	<?php get_template_part( 'partials/single', 'header' ); ?>
+    if ( is_singular( get_post_type() ) ) :
 
-          <?php get_template_part( 'partials/single', 'content' ); ?>
+      get_template_part( 'partials/single', 'header' );
 
-          <?php get_template_part( 'partials/single', 'footer' ); ?>
+      get_template_part( 'partials/single', 'content' );
 
-<?php else : // If not viewing a single post. ?>
+      get_template_part( 'partials/single', 'footer' );
 
-		<?php if ( has_excerpt() ) : // If the post has an excerpt. ?>
+    else : // If not viewing a single post.
 
-			<?php get_template_part( 'partials/archive', 'content' ); ?>
+      if ( has_excerpt() ) :
 
-		<?php elseif ( empty( $audio ) ) : // Else, if the post does not have audio. ?>
+        get_template_part( 'partials/archive', 'content' );
 
-			<?php get_template_part( 'partials/single', 'content' ); ?>
+      elseif ( empty( $audio ) ) :
 
-		<?php endif; // End excerpt/audio checks. ?>
+        get_template_part( 'partials/single', 'content' );
 
-<?php endif; // End single post check. ?>
+      endif; // End excerpt/audio checks.
 
-<?php tha_entry_bottom(); ?>
+    endif; // End single post check.
 
-</article><!-- .entry -->
+tha_entry_bottom(); ?>
+
+  </article><!-- .entry -->
 
 <?php
 tha_entry_after();
