@@ -7,53 +7,55 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+  <div id="primary" class="content-area">
 
-	<?php tha_content_before(); ?>
+<?php
+tha_content_before(); ?>
 
-	<main <?php hybrid_attr( 'content' ); ?>>
+  	<main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php
-		tha_content_top();
+<?php
+tha_content_top();
 
-		if ( !is_front_page() && !is_singular() ) :
+  		if ( !is_front_page() && !is_singular() ) :
 
-			get_template_part( 'partials/loop', 'meta' );
+  			get_template_part( 'partials/loop', 'meta' );
 
-		endif; // End check for multi-post page.
+  		endif; // End check for multi-post page.
 
-		if ( have_posts() ) :
+  		if ( have_posts() ) :
 
-			while ( have_posts() ) : the_post();
+  			while ( have_posts() ) : the_post();
 
-				hybrid_get_content_template();
+  				hybrid_get_content_template();
 
-				if ( is_singular() ) :
+  				if ( is_singular() ) :
 
-					get_template_part( 'partials/post', 'navigation' );
+  					get_template_part( 'partials/post', 'nav' );
 
-				  	comments_template( '', true );
+  				  	comments_template( '', true );
 
-				endif; // End check for single post.
+  				endif; // End check for single post.
 
-			endwhile; // End loop.
+  			endwhile; // End loop.
 
-			get_template_part( 'partials/posts', 'pagination' );
+  			get_template_part( 'partials/loop', 'nav' );
 
-		else : //If no content found.
+  		else : //If no content found.
 
-			get_template_part( 'content/none' );
+  			get_template_part( 'content/none' );
 
-		endif; // End check for posts.
+  		endif; // End check for posts.
 
-		tha_content_bottom();
-	?>
+tha_content_bottom();
+?>
 
-	</main><!-- #main -->
+  	</main><!-- #main -->
 
-	<?php tha_content_after(); ?>
+<?php
+tha_content_after(); ?>
 
-</div><!-- #primary -->
+  </div><!-- #primary -->
 
 <?php
 get_footer();
