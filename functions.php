@@ -15,7 +15,6 @@ require_once( $abraham_dir . 'inc/custom-background.php'      );
 require_once( $abraham_dir . 'inc/custom-header.php'          );
 require_once( $abraham_dir . 'inc/custom-colors.php'          );
 require_once( $abraham_dir . 'inc/customizer.php'             );
-require_once( $abraham_dir . 'inc/template-tags.php'          );
 require_once( $abraham_dir . 'inc/general.php'                );
 require_once( $abraham_dir . 'inc/template-actions.php'       );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'            );
@@ -88,3 +87,23 @@ remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
 		return '... <div class="read-more__fade"><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue Reading...', 'abraham') . '</a></div>';
 	}
 	add_filter( 'excerpt_more', 'abraham_excerpt_more' );
+
+
+
+
+
+
+
+
+
+
+
+add_filter( 'hybrid_comment_template_hierarchy', 'abe_comment_template_hierarchy' );
+
+function abe_comment_template_hierarchy( $templates ) {
+
+	
+		$templates = array_merge( array( 'partials/comment.php' ), $templates );
+
+	return $templates;
+}

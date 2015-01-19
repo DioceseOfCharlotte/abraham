@@ -39,12 +39,6 @@ class Doc_Attributes {
 	public $entry_summary         	= ' ';	// entry-summary
 	public $entry_terms           	= ' ';	// entry-terms
 
-	/* Comment specific attributes. */
-	public $comment               	= ' ';	// comment-get_comment_ID()
-	public $comment_author        	= ' ';	// comment-author
-	public $comment_published     	= ' ';	// comment-published
-	public $comment_permalink     	= ' ';	// comment-permalink
-	public $comment_content       	= ' ';	// comment-content
 
 
 
@@ -79,12 +73,6 @@ class Doc_Attributes {
 		add_filter( 'hybrid_attr_entry-summary',     array( $this, 'entry_summary' ) );
 		add_filter( 'hybrid_attr_entry-terms',       array( $this, 'entry_terms' ) );
 
-		/* Comment specific attributes. */
-		add_filter( 'hybrid_attr_comment',           array( $this, 'comment' ) );
-		add_filter( 'hybrid_attr_comment-author',    array( $this, 'comment_author' ) );
-		add_filter( 'hybrid_attr_comment-published', array( $this, 'comment_published' ) );
-		add_filter( 'hybrid_attr_comment-permalink', array( $this, 'comment_permalink' ) );
-		add_filter( 'hybrid_attr_comment-content',   array( $this, 'comment_content' ) );
 	}
 
 
@@ -209,33 +197,6 @@ class Doc_Attributes {
 
 	public function entry_terms( $attr ) {
 		$attr['class']    .= $this->entry_terms;
-		return $attr;
-	}
-
-
-	/* === COMMENTS === */
-	function comment( $attr ) {
-		$attr['class']    .= $this->comment;
-		return $attr;
-	}
-
-	function comment_author( $attr ) {
-		$attr['class']    .= $this->comment-author;
-		return $attr;
-	}
-
-	function comment_published( $attr ) {
-		$attr['class']    .= $this->comment-published;
-		return $attr;
-	}
-
-	function comment_permalink( $attr ) {
-		$attr['class']    .= $this->comment-permalink;
-		return $attr;
-	}
-
-	function comment_content( $attr ) {
-		$attr['class']    .= $this->comment-content;
 		return $attr;
 	}
 

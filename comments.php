@@ -8,57 +8,53 @@
  * @package Abraham
  */
 
-if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! pings_open() ) ) {
+if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
 	return;
-}
-?>
+ 
+tha_comments_before(); ?>
 
-<?php tha_comments_before(); ?>
-
-<section id="comments" class="comments-area">
-
-	<?php // You can start editing here -- including this comment! ?>
+<section id="comments" class="comments">
 
 	<?php if ( have_comments() ) : ?>
-		<h3 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', '_s' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h3>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', '_s' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', '_s' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', '_s' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+		<h3 id="comments-number"><?php comments_number(); ?></h3>
 
 		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
+			<?php wp_list_comments(
+				array(
+					'style'        => 'ol',
+					'type'         => 'all',
+					'avatar_size'  => 80,
+					'callback'     => 'hybrid_comments_callback',
+					'end-callback' => 'hybrid_comments_end_callback'
+				)
+			); ?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', '_s' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', '_s' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', '_s' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-	<?php endif; // have_comments() ?>
+			<nav class="comments-nav" role="navigation" aria-labelledby="comments-nav-title">
+				<h3 id="comments-nav-title" class="screen-reader-text">
+					<?php _e( 'Comments Navigation', 'abraham' ); ?>
+				</h3>
+				<span class="comments__page-count">
+					<?php printf( __( 'Comments page %1$s of %2$s', 'abraham' ), get_query_var( 'cpage' ) ? absint( get_query_var( 'cpage' ) ) : 1, get_comment_pages_count() ); ?>
+				</span>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'abraham' ) ); ?></div>
 
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', '_s' ); ?></p>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'abraham' ) ); ?></div>
+			</nav><!-- .comments-nav -->
+	
+		<?php endif; // End check for paged comments. ?>
+
+	<?php endif; // End check for comments. ?>
+
+	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+		<p class="comments-closed">
+			<?php _e( 'Comments are closed.', 'abraham' ); ?>
+		</p>
+
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
