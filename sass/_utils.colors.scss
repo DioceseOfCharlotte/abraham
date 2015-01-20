@@ -167,7 +167,7 @@ $color-header: 				$color-primary;
 
 // Buttons
 $btn-text:        			$color-text;
-$btn-bg:  					$color-grey-ui;
+$btn-bg:  					$grey-500;
 $btn-bg-hover:  			lighten($btn-bg, 5);
 $btn-bg-active:  			darken($btn-bg, 5);
 $btn-primary-bg:  			$color-primary;
@@ -215,5 +215,5 @@ $format-audio:        $green-300;
 
 // Sections
 
-$footer-bg:   $grey-500;
-$footer-widget-bg: rgba($grey-900, 0.2);
+$footer-bg:   $grey-300;
+$footer-widget-bg: rgba($grey-800, 0.2);
