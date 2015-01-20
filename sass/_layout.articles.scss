@@ -21,10 +21,6 @@
   &:first-of-type {}
 }
 
-.entry-byline {
-display: none;
-}
-
 .post-navigation {
   @include margin-space(n n $base-spacing-unit-sm);
   span {
