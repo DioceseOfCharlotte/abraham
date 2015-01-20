@@ -28,14 +28,9 @@ transform: translate(0,0);
   font-size: 0;
 
   >* {
-    @include font-size($base-font-size);
+    @include font-size($base-font-size, false);
   }
 }
-
-
-
-
-
 
 @include md{
   .menu__primary {
@@ -58,11 +53,7 @@ transform: translate(0,0);
 
 
 .menu-item {
-  padding: 0;
-
-  &:first-child {
-margin-left: 0;
-}
+  display: block;
 
   a {
     display: block;
@@ -70,7 +61,6 @@ margin-left: 0;
     color: #fff;
     background-color: transparent;
     transition: background-color .2s ease-out;
-    white-space: nowrap;
     line-height: 60px;
 
     &:hover{
@@ -78,15 +68,13 @@ margin-left: 0;
     }
   }
 
-display: block;
-width: 100%;
-margin-left: 0;
-margin-right: 0;
-box-sizing: border-box;
+
+// width: 100%;
+// margin-left: 0;
+// margin-right: 0;
 
 @include md {
 display: inline-block;
-float: none;
 width:auto;
 }
 }
@@ -194,15 +182,28 @@ width:auto;
 position: absolute;
 display: none;
 visibility: hidden;
-right: 0;
+//right: 0;
 width: 100%;
 margin: 0;
 text-align: left;
-background-color: #f4f4f4;
+background-color: $white;
 z-index: 1000;
+
+@include md {
+  width: 200px;
+  @include shadow-z1();
+}
+
+
+>.menu-item {
+width: 100%;
+}
 
 a {
   color: $color-text;
+  padding: 20px;
+  line-height: 1;
+  @include font-size($base-font-size - 1, false);
 }
 
 &.active {
@@ -213,4 +214,18 @@ visibility: visible;
 @include sm-only {
 position: relative;
 }
+}
+
+
+.menu__primary .menu-item:hover > .sub-menu {
+@include md {
+display: block;
+visibility: visible;
+}
+}
+
+.menu__primary .sub-menu .sub-menu {
+  @include md {
+    margin: -55px 0 0 199px;
+  }
 }

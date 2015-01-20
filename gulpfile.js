@@ -84,7 +84,8 @@ gulp.task('styles', function () {
 // Build and serve the output
 gulp.task('serve', ['default'], function () {
   browserSync({
-    proxy: "doc-beta.dev"
+    proxy: "local.wordpress.dev"
+    //proxy: "doc-beta.dev"
      });
 
   gulp.watch(['**/*.php'], reload);

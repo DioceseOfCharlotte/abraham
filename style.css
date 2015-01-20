@@ -1576,7 +1576,6 @@ ol ul {
 .menu__primary--items > * {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5;
 }
 
 @media only screen and (min-width: 48em) {
@@ -1628,14 +1627,6 @@ ol ul {
 
 .menu-item {
     display: block;
-    box-sizing: border-box; 
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    padding: 0;
-}
-.menu-item:first-child {
-    margin-left: 0;
 }
 .menu-item a {
     display: block;
@@ -1643,7 +1634,6 @@ ol ul {
     color: #fff;
     background-color: transparent;
     line-height: 60px; 
-    white-space: nowrap;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
 }
@@ -1653,7 +1643,6 @@ ol ul {
 @media only screen and (min-width: 48em) {
     .menu-item {
         display: inline-block;
-        float: none;
         width: auto;
     }
 }
@@ -1771,14 +1760,26 @@ ol ul {
     visibility: hidden;
     position: absolute;
     z-index: 1000; 
-    right: 0;
     width: 100%;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #fff;
     text-align: left;
 }
+@media only screen and (min-width: 48em) {
+    .sub-menu {
+        width: 200px;
+        box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    }
+}
+.sub-menu > .menu-item {
+    width: 100%;
+}
 .sub-menu a {
+    padding: 20px;
     color: #212121;
+    font-size: 15px;
+    font-size: 0.9375rem; 
+    line-height: 1;
 }
 .sub-menu.active {
     display: block;
@@ -1787,6 +1788,19 @@ ol ul {
 @media only screen and (max-width: 47em) {
     .sub-menu {
         position: relative;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .menu__primary .menu-item:hover > .sub-menu {
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .menu__primary .sub-menu .sub-menu {
+        margin: -55px 0 0 199px;
     }
 }
 
@@ -1936,7 +1950,7 @@ body.open {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #fff;
 }
 
 .site-description {
