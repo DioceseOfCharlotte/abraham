@@ -8,11 +8,11 @@
 
 <article class="entry">
 
-		<?php if ( is_search() ) : ?>
-
 		<header class="entry-header">
 			<h1 class="entry-title"><?php _e( 'Nothing found', 'abraham' ); ?></h1>
 		</header><!-- .entry-header -->
+
+		<?php if ( is_search() ) : ?>
 
 			<p><?php _e( 'Sorry, but nothing matched your search. Perhaps try some different search terms.', 'abraham' ); ?></p>
 			<?php get_search_form(); ?>
