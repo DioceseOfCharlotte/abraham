@@ -22,8 +22,11 @@ add_action( 'wp_enqueue_scripts', 'abraham_scripts', 5 );
 /* Add custom styles. */
 add_action( 'wp_enqueue_scripts', 'abraham_styles', 5 );
 
-
+/* Conditional classes based on the number of widgets. */
 add_filter( 'hybrid_attr_sidebar', 'abraham_footer_widgets_class', 10, 2 );
+
+/* Custom search form. */
+add_filter( 'get_search_form', 'abraham_search_form' );
 
 
 function abraham_image_sizes() {
@@ -136,4 +139,3 @@ function abraham_search_form( $form ) {
 	return $form;
 }
 
-add_filter( 'get_search_form', 'abraham_search_form' );

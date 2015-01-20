@@ -15,7 +15,7 @@
 		<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php printf( __( 'Search Results for %s', 'abraham' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 <?php
 	elseif (is_404() ) : ?>
-    	<h1 class="nothing-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'abraham' ); ?></h1>
+    	<h1 class="loop-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'abraham' ); ?></h1>
 <?php
 	endif; ?>
 

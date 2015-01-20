@@ -11,7 +11,7 @@
 		<?php if ( is_search() ) : ?>
 
 		<header class="entry-header">
-			<h1 class="entry-title"><?php _e( 'Nothing found', 'saga' ); ?></h1>
+			<h1 class="entry-title"><?php _e( 'Nothing found', 'abraham' ); ?></h1>
 		</header><!-- .entry-header -->
 
 			<p><?php _e( 'Sorry, but nothing matched your search. Perhaps try some different search terms.', 'abraham' ); ?></p>
@@ -19,7 +19,7 @@
 
 		<?php else : ?>
 
-<h4><?php _e('It looks like this was the result of either:', 'abraham'); ?></h4>
+<h3><?php _e('It looks like this was the result of either:', 'abraham'); ?></h3>
 <ul>
   <li><?php _e('a mistyped address', 'abraham'); ?></li>
   <li><?php _e('an out-of-date link', 'abraham'); ?></li>

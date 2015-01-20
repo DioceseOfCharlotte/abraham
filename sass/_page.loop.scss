@@ -8,12 +8,12 @@
   @include margin-space(n n $base-spacing-unit-tiny);
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
   text-align: center;
-  background-color: $color-text-light;
-  color: $white;
+  color: $color-text-light;
+  border: 2px solid $color-text-light;
 }
 
 .loop-title {
-  color: rgba($white, .9);
+  //color: rgba($white, .9);
   margin: 0;
 }
 
