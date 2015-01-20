@@ -35,6 +35,11 @@ kbd {
   box-shadow: inset 0 1px 0 #fff;
 }
 
+.form-allowed-button {
+  color: $color-text-light;
+  cursor: default;
+}
+
 .form-allowed-tags {
   color: $color-text-light;
   code {
@@ -43,4 +48,9 @@ kbd {
     background-color: $grey-50;
     @include padding-space($base-spacing-unit-sm / 2);
   }
+}
+
+
+.form-allowed-button.hint--top:after {
+left: 0;
 }

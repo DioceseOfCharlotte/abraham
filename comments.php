@@ -57,7 +57,14 @@ tha_comments_before(); ?>
 
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php comment_form(
+		array(
+			  'comment_notes_after' => '<p class="hint--top form-allowed-button" data-hint="' .
+    sprintf(
+      __( '%s' ), allowed_tags() 
+    ) . '">Using HTML in your comment <i class="fa fa-question-circle"></i></p>',
+    )
+	); ?>
 
 </section><!-- #comments -->
 
