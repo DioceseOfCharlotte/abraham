@@ -37,6 +37,6 @@
 
 		<?php hybrid_get_menu( 'primary' ); ?>
 
-		<div id="container" class="site-container">
-
 		<?php hybrid_get_menu( 'breadcrumbs' ); ?>
+
+		<div id="container" class="site-container">

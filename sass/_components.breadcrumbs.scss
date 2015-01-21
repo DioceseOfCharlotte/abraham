@@ -5,12 +5,22 @@
 .breadcrumbs {
   text-transform: uppercase;
   overflow: hidden;
-  @include margin-space($base-spacing-unit-tiny *-.3 n $base-spacing-unit-tiny);
+
+  @include sm-only {
+  margin-top: 60px + $base-spacing-unit-tiny;
+  margin-bottom: -60px;
+}
+
+  @include margin-space($base-spacing-unit-tiny n $base-spacing-unit-tiny *-.5);
   list-style: none;
-  border-radius: $base-radius;
+  //border-radius: $base-radius;
   cursor: default;
   font-weight: 500;
   @include font-size($base-font-size - 1);
+  max-width: $site-width;
+  @include padding-space(n $base-spacing-unit-sm);
+  margin-left: auto;
+  margin-right: auto;
 
 
   &>span {
@@ -40,11 +50,3 @@
   }
 }
 
-
-// .breadcrumbs {
-// height: 40px;
-// display: flex;
-// align-items: center;
-// padding: 0 16px;
-// margin-bottom: 16px;
-// }

@@ -24,6 +24,7 @@ code {
   border-radius: $base-radius;
   border: 1px solid $grey-900;
   tab-size: 4;
+  font-weight: normal;
 }
 
 kbd {
@@ -41,16 +42,12 @@ kbd {
 }
 
 .form-allowed-tags {
-  color: $color-text-light;
+  color: $color-text-light-hover;
   code {
-    color: $color-text-light;
+    color: $color-text-light-hover;
     border: 0;
     background-color: $grey-50;
     @include padding-space($base-spacing-unit-sm / 2);
   }
 }
 
-
-.form-allowed-button.hint--top:after {
-left: 0;
-}

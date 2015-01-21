@@ -10,7 +10,7 @@
 
 if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
 	return;
- 
+
 tha_comments_before(); ?>
 
 <section id="comments" class="comments">
@@ -44,7 +44,7 @@ tha_comments_before(); ?>
 
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'abraham' ) ); ?></div>
 			</nav><!-- .comments-nav -->
-	
+
 		<?php endif; // End check for paged comments. ?>
 
 	<?php endif; // End check for comments. ?>
@@ -59,10 +59,7 @@ tha_comments_before(); ?>
 
 	<?php comment_form(
 		array(
-			  'comment_notes_after' => '<p class="hint--top form-allowed-button" data-hint="' .
-    sprintf(
-      __( '%s' ), allowed_tags() 
-    ) . '">Using HTML in your comment <i class="fa fa-question-circle"></i></p>',
+			  'comment_notes_after'  => '<div class="form-allowed-tags" id="form-allowed-tags"><input type="checkbox" class="form-allowed__input" id="form-tags"><p class="form-allowed__label-wrap"><label class="form-allowed__label" for="form-tags"> Use HTML in your comment</label></p>' . sprintf( __( '<p class="form-allowed__code">You may use these tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p></div>',
     )
 	); ?>
 
