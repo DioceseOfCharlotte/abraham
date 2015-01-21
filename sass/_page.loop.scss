@@ -31,19 +31,17 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-  height: 6rem;
+  //height: 6rem;
   padding-top: 6rem;
-  padding-right: 2rem;
   text-align: center;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
 
   a {
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
-    @include font-size($base-font-size - 1, false);
-    line-height: 2.5;
+    @include font-size($base-font-size, false);
     color: $color-text;
-    opacity: .6;
+    opacity: .8;
     transition: opacity 0.2s ease;
     border-bottom: 0;
 

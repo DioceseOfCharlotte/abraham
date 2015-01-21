@@ -112,27 +112,10 @@ width: 100%;
 }
 }
 
-
 .comment-list .comment .comment {
 margin-left: 20px;
 margin-top: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .form-allowed-tags {
   position: relative;
@@ -142,7 +125,6 @@ margin-top: 20px;
    position: absolute;
    top: 0;
    left: 0;
-   width: 100%;
    height: 100%;
    opacity: 0;
 }
@@ -152,21 +134,21 @@ text-align: right;
 }
 
 .form-allowed__label {
+  display: inline-block;
   cursor: pointer;
   position: relative;
-  display: block;
   font-weight: 400;
   font-style: italic;
   font-size: 14px;
-  color: $color-text-light-hover;
   transition: color $base-transition-speed linear;
+  color: $color-text-light;
 
   &:before {
     content: $question-circle;
     @include font-icon();
     font-style: normal;
     font-size: 20px;
-    color: $color-grey-ui;
+    color: $color-text-light;
     transition: color $base-transition-speed linear;
   }
 
@@ -182,7 +164,7 @@ text-align: right;
 .form-allowed__code {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease;
+  transition: max-height 0.3s ease;
 }
 .form-allowed__input:checked ~ .form-allowed__label-wrap ~ .form-allowed__code {
   max-height: 200px;

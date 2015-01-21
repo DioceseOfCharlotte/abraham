@@ -2364,7 +2364,7 @@ body.open {
     margin-left: auto;
     padding-top: 16px;
     padding-right: 16px;
-    padding-bottom: 11.84px;
+    padding-bottom: 16px;
     padding-left: 16px;
     border-radius: 2px;
     background-color: #fff;
@@ -2372,33 +2372,17 @@ body.open {
 @media only screen and (min-width: 48em) {
     .entry {
         padding-top: 24px;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .entry {
-        padding-top: 40px;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .entry {
-        padding-right: 24px; 
+        padding-right: 24px;
+        padding-bottom: 24px;
         padding-left: 24px;
     }
 }
 @media only screen and (min-width: 64em) {
     .entry {
-        padding-right: 40px; 
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
         padding-left: 40px;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .entry {
-        padding-bottom: 17.76px;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .entry {
-        padding-bottom: 29.6px;
     }
 }
 @media only screen and (min-width: 48em) {
@@ -2507,6 +2491,9 @@ body.open {
     clear: both;
 }
 
+.entry-footer {
+    text-align: center;
+}
 .entry-footer:before,
 .entry-footer:after {
     display: table; 
@@ -2517,7 +2504,7 @@ body.open {
 }
 
 .entry-byline {
-    margin-bottom: 11.84px;
+    margin-top: 11.84px;
     color: #9e9e9e;
     font-size: 14px;
     font-size: 0.875rem;
@@ -2539,22 +2526,9 @@ body.open {
 .entry-published {
     margin-right: 11.84px;
 }
-.entry-author:before,
-.entry-published:before {
-    margin-right: 5px;
-}
 
 .comments-link {
     float: right;
-    color: #9e9e9e;
-    font-weight: 400;
-}
-.comments-link:hover,
-.comments-link:visited {
-    color: #616161;
-}
-
-.comments-link {
     position: relative;
     width: 26px;
     height: 21px;
@@ -2562,6 +2536,7 @@ body.open {
     color: #fff;
     background: #9e9e9e;
     font-size: 12px;
+    font-weight: 400;
     line-height: 22px;
     text-align: center;
     -webkit-transition: background 0.1s linear;
@@ -2594,7 +2569,10 @@ body.open {
 .entry-format {
     display: inline-block;
     float: right; 
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 48px;
     -webkit-transition: opacity 0.1s linear;
     transition: opacity 0.1s linear;
 }
@@ -2602,12 +2580,18 @@ body.open {
     opacity: 0.5;
 }
 
-a.post-format-link {
+.post-format-link {
     position: absolute;
     bottom: 0; 
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.comments-number {
+    position: absolute;
+    right: 2px; 
+    bottom: 2px;
 }
 
 /*------------------------------------*\
@@ -2830,7 +2814,6 @@ li.ping:before,
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     opacity: 0;
 }
@@ -2840,9 +2823,9 @@ li.ping:before,
 }
 
 .form-allowed__label {
-    display: block;
+    display: inline-block;
     position: relative;
-    color: #616161;
+    color: #9e9e9e; 
     font-size: 14px;
     font-weight: 400;
     font-style: italic;
@@ -2852,7 +2835,7 @@ li.ping:before,
 }
 .form-allowed__label:before {
     display: inline-block;
-    color: #bdbdbd;
+    color: #9e9e9e;
     font-family: FontAwesome;
     font-size: inherit;
     font-size: 20px;
@@ -2879,8 +2862,8 @@ li.ping:before,
 .form-allowed__code {
     overflow: hidden;
     max-height: 0;
-    -webkit-transition: max-height 0.2s ease;
-    transition: max-height 0.2s ease;
+    -webkit-transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease;
 }
 
 .form-allowed__input:checked ~ .form-allowed__label-wrap ~ .form-allowed__code {
@@ -3331,21 +3314,18 @@ input[type="submit"].search-submit {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 6rem;
     padding-top: 6rem;
-    padding-right: 2rem;
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff); 
     text-align: center;
 }
 .read-more__fade a {
     border-bottom: 0; 
-    opacity: 0.6;
+    opacity: 0.8;
     color: #212121;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: 2.5;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
     text-transform: uppercase;
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;

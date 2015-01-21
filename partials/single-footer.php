@@ -6,10 +6,9 @@
 
 <footer class="entry-footer">
 
-
 	<div class="entry-byline">
+	<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
 	<?php hybrid_post_author(); ?>
-		<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
 	<?php
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
@@ -18,22 +17,6 @@
 		}
 		edit_post_link( esc_html__( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
 	 ?>
-	</div>
-
-	<div class="entry-categories">
-	<?php
-
-		hybrid_post_terms( array(
-			'taxonomy'	=> 'category',
-			'sep' 		=> ' ',
-			'before' 	=> '<br />'
-			) );
-		hybrid_post_terms( array(
-			'taxonomy' 	=> 'post_tag',
-			'sep' 		=> ' ',
-			'before' 	=> '<br />'
-			) );
-	?>
 	</div>
 
 </footer>
