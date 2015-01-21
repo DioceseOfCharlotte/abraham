@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 .site-info {
-line-height: 50px;
-color: rgba(255, 255, 255, 0.9);
-background-color: $footer-widget-bg;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: $footer-widget-bg;
 
-a {
-    color: inherit;
+  a {
+      color: inherit;
   }
 }
 
@@ -18,97 +18,67 @@ a {
     width: 100%;
     text-align: left;
     background-color: $footer-bg;
-      a {
-    color: inherit;
-  }
+
+    a {
+      color: inherit;
+    }
 }
 
+.site-footer {
 
+  .sidebar__footer-widgets {
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include padding-space($base-spacing-unit-sm n n);
 
-
-.entry-footer span, .entry-published {
-margin-right: $base-spacing-unit;
-&:before {
-  margin-right: 5px;
-}
-
-span {
-  margin-right: 0;
-}
-}
-
-
-span.entry-author:before {
-  content: $user;
-  @include font-icon();
-}
-
-.entry-published:before {
-  content: $calendar;
-  @include font-icon();
-}
-
-span.comments-link:before {
-  content: $comments;
-  @include font-icon();
-}
-
-
-
-    .site-footer {
-
-      .sidebar__footer-widgets {
-      display: block;
-      font-size: 0;
-      margin: 0 auto;
-      text-align: left;
-      width: 100%;
-      max-width: 95%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      @include padding-space($base-spacing-unit-sm n n);
-
-        > * {
-          @include font-size($base-font-size);
-        }
-        .widget {
-          background-color: $footer-widget-bg;
-          border: 0;
-          display: inline-block;
-          text-align: left;
-          vertical-align: top;
-          min-width: 300px;
-          max-width: 700px;
-          width: 100%;
-        }
-
-      @include lg {
-        max-width: $site-width;
-        padding-left: $base-spacing-unit-lg;
-        padding-right: $base-spacing-unit-lg;
-      }
+    > * {
+      @include font-size($base-font-size);
     }
 
-@include md {
-  .sidebar-col-1 {
-      .widget {
-        width: 100%;
-      }
-  }
+    .widget {
+      background-color: $footer-widget-bg;
+      border: 0;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+      min-width: 300px;
+      max-width: 700px;
+      width: 100%;
+    }
 
-  .sidebar-col-3, .sidebar-col-2 {
-      .widget {
-          width: 48.6%;
-      }
-  }
+    @include lg {
+      max-width: $site-width;
+      padding-left: $base-spacing-unit-lg;
+      padding-right: $base-spacing-unit-lg;
+    }
 }
-@include lg {
-  .sidebar-col-3 {
-      .widget {
-          width: 31%;
-      }
+
+  @include md {
+    .sidebar-col-1 {
+        .widget {
+          width: 100%;
+        }
+    }
+
+    .sidebar-col-3, .sidebar-col-2 {
+        .widget {
+            width: 48.6%;
+        }
+    }
   }
-}
+  @include lg {
+    .sidebar-col-3 {
+        .widget {
+            width: 31%;
+        }
+    }
+  }
 
 }

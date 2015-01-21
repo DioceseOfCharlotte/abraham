@@ -50,6 +50,7 @@ text-rendering: auto;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
 
   @if $colorContrast {
     opacity: 0.54;

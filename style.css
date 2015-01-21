@@ -1256,6 +1256,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 11.84px;
+    color: #757575;
 }
 h1 a,
 h2 a,
@@ -1431,6 +1432,7 @@ input[type="submit"],
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .entry-meta {
@@ -2102,61 +2104,6 @@ body.open {
     color: inherit;
 }
 
-.entry-footer span,
-.entry-published {
-    margin-right: 24px;
-}
-.entry-footer span:before,
-.entry-published:before {
-    margin-right: 5px;
-}
-.entry-footer span span,
-.entry-published span {
-    margin-right: 0;
-}
-
-span.entry-author:before {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    text-decoration: none;
-    content: "\f007";
-    text-rendering: auto;
-
-    speak: none;
-}
-
-.entry-published:before {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    text-decoration: none;
-    content: "\f073";
-    text-rendering: auto;
-
-    speak: none;
-}
-
-span.comments-link:before {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    text-decoration: none;
-    content: "\f086";
-    text-rendering: auto;
-
-    speak: none;
-}
-
 .site-footer .sidebar__footer-widgets {
     display: block;
     display: -webkit-box;
@@ -2558,6 +2505,109 @@ span.comments-link:before {
 }
 .nav-links:after {
     clear: both;
+}
+
+.entry-footer:before,
+.entry-footer:after {
+    display: table; 
+    content: "";
+}
+.entry-footer:after {
+    clear: both;
+}
+
+.entry-byline {
+    margin-bottom: 11.84px;
+    color: #9e9e9e;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-weight: 300; 
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.entry-byline a {
+    color: inherit;
+    font-weight: inherit;
+}
+.entry-byline a:hover {
+    color: #616161;
+}
+
+.entry-author,
+.entry-published {
+    margin-right: 11.84px;
+}
+.entry-author:before,
+.entry-published:before {
+    margin-right: 5px;
+}
+
+.comments-link {
+    float: right;
+    color: #9e9e9e;
+    font-weight: 400;
+}
+.comments-link:hover,
+.comments-link:visited {
+    color: #616161;
+}
+
+.comments-link {
+    position: relative;
+    width: 26px;
+    height: 21px;
+    border-radius: 50%;
+    color: #fff;
+    background: #9e9e9e;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    -webkit-transition: background 0.1s linear;
+    transition: background 0.1s linear;
+}
+.comments-link:hover,
+.comments-link:visited {
+    color: #fff;
+    background: #616161;
+}
+.comments-link:hover:before,
+.comments-link:visited:before {
+    border-right-color: #616161;
+}
+
+.comments-link:before {
+    position: absolute;
+    top: 11px;
+    right: 21px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 10px solid #9e9e9e;
+    border-bottom: 0 solid transparent;
+    content: "";
+    -webkit-transition: border-color 0.1s linear;
+    transition: border-color 0.1s linear;
+}
+
+.entry-format {
+    display: inline-block;
+    float: right; 
+    position: relative;
+    -webkit-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+.entry-format:hover {
+    opacity: 0.5;
+}
+
+a.post-format-link {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*------------------------------------*\
@@ -3890,50 +3940,10 @@ a[href^="tel:"]::before {
 }
 
 /* Posts */
-.format-standard .post-format-link::before {
-    content: "\f132";
-}
-
-.format-aside .post-format-link::before {
-    content: "\f03c";
-}
-
-.format-audio .post-format-link::before {
-    content: "\f028";
-}
-
-.format-chat .post-format-link::before {
-    content: "\f086";
-}
-
-.format-gallery .post-format-link::before {
-    content: "\f1c5";
-}
-
-.image-sizes::before,
-.format-image .post-format-link::before {
-    content: "\f03e";
-}
-
-.format-link .post-format-link::before {
-    content: "\f0c1";
-}
-
-.format-quote .post-format-link::before {
-    content: "\f10d";
-}
-
-.format-status .post-format-link::before {
-    content: "\f201";
-}
-
-.format-video .post-format-link::before {
-    content: "\f16a";
-}
-
 [class^="icon-"],
 [class*=" icon-"] {
     display: inline-block;
+    height: 25px; 
     color: #000;
 
     fill: currentColor;
