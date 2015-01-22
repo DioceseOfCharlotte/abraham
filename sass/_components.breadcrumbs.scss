@@ -13,7 +13,6 @@
 
   @include margin-space($base-spacing-unit-tiny n $base-spacing-unit-tiny *-.5);
   list-style: none;
-  //border-radius: $base-radius;
   cursor: default;
   font-weight: 500;
   @include font-size($base-font-size - 1);
