@@ -7,6 +7,15 @@
   a[href^="mailto:"]::before { content: '\f410'; }
   a[href^="tel:"]::before    { content: '\f437'; }
 
+  a.post-edit-link {
+    font-weight: 400;
+    &::before {
+      content: $pencil;
+      @include font-icon();
+      margin-right: 3px;
+    }
+  }
+
   /* Posts */
   // .format-standard .post-format-link::before { content: $shield; }
   // .format-aside .post-format-link::before    { content: $indent; }

@@ -4003,6 +4003,24 @@ a[href^="tel:"]::before {
     content: "\f437";
 }
 
+a.post-edit-link {
+    font-weight: 400;
+}
+a.post-edit-link::before {
+    display: inline-block;
+    margin-right: 3px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f040";
+    text-rendering: auto;
+
+    speak: none;
+}
+
 /* Posts */
 [class^="icon-"],
 [class*=" icon-"] {

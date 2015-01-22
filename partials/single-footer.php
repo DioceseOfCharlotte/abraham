@@ -15,7 +15,7 @@
 			comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) );
 			echo '</span>';
 		}
-		edit_post_link( esc_html__( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
 	 ?>
 	</div>
 
