@@ -13,7 +13,6 @@
 }
 
 .loop-title {
-  //color: rgba($white, .9);
   margin: 0;
 }
 
@@ -30,8 +29,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  bottom: 0;
-  //height: 6rem;
+  bottom: -$base-spacing-unit;
   padding-top: 6rem;
   text-align: center;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
@@ -132,7 +130,6 @@
     &:hover,
     &:focus {
     background: $grey-50;
-    //border: 1px solid #e8e8e8;
     }
   }
 }

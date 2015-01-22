@@ -3312,7 +3312,7 @@ input[type="submit"].search-submit {
 .read-more__fade {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -24px;
     width: 100%;
     padding-top: 6rem;
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
