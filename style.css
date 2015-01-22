@@ -2505,6 +2505,7 @@ body.open {
 
 .entry-byline {
     margin-top: 11.84px;
+    margin-bottom: -11.84px;
     color: #9e9e9e;
     font-size: 14px;
     font-size: 0.875rem;
@@ -2566,32 +2567,36 @@ body.open {
     transition: border-color 0.1s linear;
 }
 
-.entry-format {
-    display: inline-block;
-    float: right; 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    line-height: 48px;
-    -webkit-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
+a.post-format-link {
+    display: block;
+    margin-top: 11.84px;
+    color: #9e9e9e;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-weight: 300; 
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
-.entry-format:hover {
-    opacity: 0.5;
+@media only screen and (min-width: 48em) {
+    a.post-format-link {
+        margin-top: 17.76px;
+    }
 }
-
-.post-format-link {
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
+@media only screen and (min-width: 64em) {
+    a.post-format-link {
+        margin-top: 29.6px;
+    }
+}
+a.post-format-link:hover {
+    color: #616161;
 }
 
 .comments-number {
     position: absolute;
-    right: 2px; 
-    bottom: 2px;
+    right: 10px;
+    bottom: 10px;
 }
 
 /*------------------------------------*\
@@ -3243,6 +3248,10 @@ input[type="submit"].search-submit {
 /*------------------------------------*\
     #POST-FORMAT-PAGES
 \*------------------------------------*/
+.format-audio .featured-media {
+    margin: 0;
+}
+
 /*------------------------------------*\
     #CONTACT-PAGE
 \*------------------------------------*/
@@ -4022,10 +4031,68 @@ a.post-edit-link::before {
 }
 
 /* Posts */
+.format-standard .post-format-link::before {
+    content: "\f132";
+}
+
+.format-aside .post-format-link::before {
+    content: "\f03c";
+}
+
+.format-audio .post-format-link::before {
+    content: "\f028";
+}
+
+.format-chat .post-format-link::before {
+    content: "\f086";
+}
+
+.format-gallery .post-format-link::before {
+    content: "\f1c5";
+}
+
+.image-sizes::before,
+.format-image .post-format-link::before {
+    content: "\f03e";
+}
+
+.format-link .post-format-link::before {
+    content: "\f0c1";
+}
+
+.format-quote .post-format-link::before {
+    content: "\f10d";
+}
+
+.format-status .post-format-link::before {
+    content: "\f201";
+}
+
+.format-video .post-format-link::before {
+    content: "\f16a";
+}
+
+.post-format-link::before {
+    display: inline-block;
+    margin-right: 5px;
+    color: #9e9e9e;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    -webkit-transition: color 0.1s linear;
+    transition: color 0.1s linear; 
+    text-rendering: auto;
+
+    speak: none;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
     display: inline-block;
-    height: 30px; 
+    height: 21px; 
     color: #000;
 
     fill: currentColor;

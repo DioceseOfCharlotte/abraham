@@ -2,11 +2,13 @@
 /**
  * @package Abraham
  */
-?>
 
-<span class="entry-format"><?php abe_post_format_link(); ?></span>
+if ( has_post_format() ) :
 
-<?php
+hybrid_post_format_link();
+
+endif;
+
 if ( ! is_single() && ! post_password_required() && ( comments_open() && get_comments_number() ) ) { ?>
 
 <footer class="entry-footer">

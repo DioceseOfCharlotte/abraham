@@ -1,7 +1,11 @@
 <?php
 
-//add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
+//add_action( 'tha_entry_before', 'abraham_do_format_icon' );
 
+function abraham_do_format_icon() { ?>
+<span class="entry-format"><?php abe_post_format_link(); ?></span>
+<?php
+}
 /**
  * Outputs an svg link to the post format archive.
  *

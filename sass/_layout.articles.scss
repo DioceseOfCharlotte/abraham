@@ -100,6 +100,7 @@
 
 .entry-byline {
   margin-top: $base-spacing-unit-tiny;
+  margin-bottom: -$base-spacing-unit-tiny;
   color: $color-text-light;
   @include typo-caption();
   font-weight: 300;
@@ -165,31 +166,44 @@
 
 
 
-.entry-format {
-position: absolute;
-bottom: 0;
-left: 0;
-line-height: 48px;
-display: inline-block;
-transition: opacity $base-transition-speed linear;
-float: right;
+// .entry-format {
+// position: absolute;
+// bottom: 0;
+// left: 0;
+// line-height: 48px;
+// display: inline-block;
+// transition: opacity $base-transition-speed linear;
+// float: right;
 
-&:hover {
-  opacity: .5;
+// &:hover {
+//   opacity: .5;
+// }
+// }
+
+// .post-format-link {
+// width: 100%;
+// height: 100%;
+// position: absolute;
+// left: 0;
+// bottom: 0;
+// }
+
+a.post-format-link {
+  //position: absolute;
+  // bottom: 0;
+  // left: 0;
+  @include margin-space($base-spacing-unit-tiny n n);
+  color: $color-text-light;
+  display: block;
+  @include typo-caption();
+  font-weight: 300;
+
+  &:hover {
+    color: $color-text-light-hover;
+  }
 }
-}
-
-.post-format-link {
-width: 100%;
-height: 100%;
-position: absolute;
-left: 0;
-bottom: 0;
-}
-
-
 .comments-number {
 position: absolute;
-bottom: 2px;
-right: 2px;
+right: 10px;
+bottom: 10px;
 }
