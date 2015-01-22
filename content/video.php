@@ -44,6 +44,8 @@ tha_entry_top();
 
       endif; // End excerpt/video checks.
 
+      get_template_part( 'partials/archive', 'footer' );
+
     endif; // End single post check.
 
 tha_entry_bottom(); ?>

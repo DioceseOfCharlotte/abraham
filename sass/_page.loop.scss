@@ -29,10 +29,11 @@
   display: block;
   position: absolute;
   width: 100%;
-  bottom: -$base-spacing-unit;
-  padding-top: 6rem;
+  bottom: $base-spacing-unit-sm;
+  left: 0;
+  padding-top: 4rem;
   text-align: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), #fff);
 
   a {
     font-weight: 400;

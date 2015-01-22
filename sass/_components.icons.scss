@@ -32,9 +32,9 @@
 
   .post-format-link::before {
     @include font-icon();
-    color: $color-text-light;
+    //color: $color-text-light;
     margin-right: 5px;
-    transition: color $base-transition-speed linear;
+    //transition: color $base-transition-speed linear;
   }
 
 

@@ -9,7 +9,7 @@
   background-color: #fff;
   border-radius: $base-radius;
   position: relative;
-  @include padding-space($base-spacing-unit-sm);
+  @include padding-space($base-spacing-unit-sm n n);
   @include margin-space(n n $base-spacing-unit-sm);
   overflow: hidden;
   //@include shadow-z1();
@@ -17,9 +17,38 @@
   @include lg {
     max-width: 100%;
   }
-
-  &:first-of-type {}
 }
+
+.entry-header {
+  @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
+}
+
+.entry-title {
+margin-bottom: 0;
+}
+
+.entry-content,
+.entry-summary {
+  @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
+}
+
+.entry-footer {
+  @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
+  background-color: $grey-300;
+  color: $grey-700;
+  @include typo-caption();
+  font-weight: 400;
+
+  a {
+  @include typo-caption();
+  font-weight: 400;
+    color: $grey-700;
+      &:hover {
+        color: $color-text;
+      }
+  }
+}
+
 
 .post-navigation {
   @include margin-space(n n $base-spacing-unit-sm);
@@ -93,24 +122,17 @@
   @include clearfix();
 }
 
-.entry-footer {
-  @include clearfix();
-  text-align: center;
-}
-
 .entry-byline {
-  margin-top: $base-spacing-unit-tiny;
-  margin-bottom: -$base-spacing-unit-tiny;
-  color: $color-text-light;
-  @include typo-caption();
-  font-weight: 300;
+  //color: $color-text-light;
+  //@include typo-caption();
+  //font-weight: 300;
 
   a {
-    color: inherit;
-    font-weight: inherit;
+    // color: inherit;
+    // font-weight: inherit;
 
     &:hover {
-      color: $color-text-light-hover;
+      //color: $color-text-light-hover;
     }
   }
 }
@@ -189,21 +211,11 @@
 // }
 
 a.post-format-link {
-  //position: absolute;
-  // bottom: 0;
-  // left: 0;
-  @include margin-space($base-spacing-unit-tiny n n);
-  color: $color-text-light;
-  display: block;
-  @include typo-caption();
-  font-weight: 300;
+  display: inline-block;
+}
 
-  &:hover {
-    color: $color-text-light-hover;
-  }
-}
-.comments-number {
-position: absolute;
-right: 10px;
-bottom: 10px;
-}
+// .comments-number {
+// position: absolute;
+// right: 10px;
+// bottom: 10px;
+// }
