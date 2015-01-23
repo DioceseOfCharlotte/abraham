@@ -57,9 +57,9 @@ function abraham_setup() {
 
 	/* Theme layouts. */
 	add_theme_support( 'theme-layouts', array(
-			'single-column'    => __( 'Single Column', 'platform' ),
-			'sidebar-right'  => __( 'Sidebar Right', 'platform' ),
-			'sidebar-left'  => __( 'Sidebar Left', 'platform' )
+			'single-column'    => __( 'Single Column', 'abraham' ),
+			'sidebar-right'  => __( 'Sidebar Right', 'abraham' ),
+			'sidebar-left'  => __( 'Sidebar Left', 'abraham' )
 		),
 		array( 'default' => 'sidebar-right' )
 	);
