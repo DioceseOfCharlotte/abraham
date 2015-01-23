@@ -14,6 +14,7 @@
   var appbarElement = querySelector('#header');
   var menuBtn = querySelector('.menu-toggle');
   var main = querySelector('.site-container');
+  var footer = querySelector('.site-footer');
 
   function closeMenu() {
     body.classList.remove('open');
@@ -28,6 +29,7 @@
     navdrawerContainer.classList.add('opened');
   }
 
+  footer.addEventListener('click', closeMenu);
   main.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   // navdrawerContainer.addEventListener('click', function (event) {

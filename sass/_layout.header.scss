@@ -31,6 +31,8 @@ body.open {
 }
 
 .site-header.open,
+.open .site-footer,
+.open .breadcrumbs,
 .site-header.open ~ .site-container {
   transform: translate(250px, 0);
   cursor: default;
@@ -55,6 +57,8 @@ body.open {
   z-index: 2;
 }
 
+.breadcrumbs,
+.site-footer,
 .site-header,
 .menu.opened,
 .site-container {

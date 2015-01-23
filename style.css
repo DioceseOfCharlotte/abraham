@@ -1978,6 +1978,8 @@ body.open {
 }
 
 .site-header.open,
+.open .site-footer,
+.open .breadcrumbs,
 .site-header.open ~ .site-container {
     cursor: default; 
     -webkit-transform: translate(250px, 0);
@@ -2016,6 +2018,8 @@ body.open {
     -ms-flex-direction: row;
 }
 
+.breadcrumbs,
+.site-footer,
 .site-header,
 .menu.opened,
 .site-container {
