@@ -96,24 +96,24 @@ class Doc_Attributes {
 	}
 
 	public function content( $attr ) {
-	if ( 'single-column' 	== get_theme_mod( 'theme_layout' ) ) :
+	if ( '1-c' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_single_column;
-	elseif ( 'sidebar-right' 	== get_theme_mod( 'theme_layout' ) ) :
+	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_sidebar_right;
-	elseif ( 'sidebar-left'	 	== get_theme_mod( 'theme_layout' ) ) :
+	elseif ( '2c-r'	 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_sidebar_left;
 	endif;
 		return $attr;
 	}
 
 	public function sidebar( $attr, $context ) {
-	if ( 'single-column' 		== get_theme_mod( 'theme_layout' ) ) :
+	if ( '1-c' 		== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_single_column;
 		$attr['class']    		.= "  sidebar__{$context}";
-	elseif ( 'sidebar-right' 	== get_theme_mod( 'theme_layout' ) ) :
+	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_right;
 		$attr['class']    		.= "  sidebar__{$context}";
-	elseif ( 'sidebar-left' 	== get_theme_mod( 'theme_layout' ) ) :
+	elseif ( '2c-r' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_left;
 		$attr['class']    		.= "  sidebar__{$context}";
 	endif;

@@ -2462,12 +2462,12 @@ body.open {
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
-    color: #616161;
-    background-color: #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    color: #757575;
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 400;
-    font-weight: 400; 
+    font-weight: 300; 
     line-height: 1;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -2497,11 +2497,11 @@ body.open {
     }
 }
 .entry-footer a {
-    color: #616161; 
+    color: #757575; 
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 400;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -2605,8 +2605,8 @@ body.open {
     margin-right: 11.84px;
 }
 
-.comments-link {
-    float: right;
+a.comments-link {
+    display: inline-block;
     position: relative;
     width: 26px;
     height: 21px;
@@ -2620,13 +2620,13 @@ body.open {
     -webkit-transition: background 0.1s linear;
     transition: background 0.1s linear;
 }
-.comments-link:hover,
-.comments-link:visited {
+a.comments-link:hover,
+a.comments-link:visited {
     color: #fff;
     background: #616161;
 }
-.comments-link:hover:before,
-.comments-link:visited:before {
+a.comments-link:hover:before,
+a.comments-link:visited:before {
     border-right-color: #616161;
 }
 
@@ -3021,20 +3021,20 @@ body.search .content-area,
 body.search .sidebar,
 body.error-404 .content-area,
 body.error-404 .sidebar,
-.layout-single-column .content-area,
-.layout-single-column .sidebar {
+.layout-1c .content-area,
+.layout-1c .sidebar {
     width: 100%;
 }
 body.search .content,
 body.error-404 .content,
-.layout-single-column .content {
+.layout-1c .content {
     margin-right: 0;
     margin-left: 0;
 }
 @media only screen and (min-width: 64em) {
     body.search .sidebar__primary,
     body.error-404 .sidebar__primary,
-    .layout-single-column .sidebar__primary {
+    .layout-1c .sidebar__primary {
         display: block;
         display: -webkit-box;
         display: -webkit-flex;
@@ -3045,13 +3045,13 @@ body.error-404 .content,
 @media only screen and (min-width: 64em) {
     body.search .sidebar__primary .widget,
     body.error-404 .sidebar__primary .widget,
-    .layout-single-column .sidebar__primary .widget {
+    .layout-1c .sidebar__primary .widget {
         width: 31%;
     }
 }
 
 @media only screen and (min-width: 64em) {
-    .layout-sidebar-right .sidebar__primary {
+    .layout-2c-l .sidebar__primary {
         display: inline-block;
         width: 30%;
         max-width: 100%;
@@ -3060,7 +3060,7 @@ body.error-404 .content,
         text-align: left;
         vertical-align: top;
     }
-    .layout-sidebar-right .content-area {
+    .layout-2c-l .content-area {
         display: inline-block;
         width: 70%;
         margin: 0;
@@ -3068,21 +3068,21 @@ body.error-404 .content,
         text-align: left;
         vertical-align: top;
     }
-    .layout-sidebar-right .content {
+    .layout-2c-l .content {
         margin-right: 40px;
     }
 }
 
 @media only screen and (min-width: 64em) {
-    .layout-sidebar-left .site-container {
+    .layout-2c-r .site-container {
         text-align: left; 
 
         direction: rtl;
     }
-    .layout-sidebar-left .site-container > * {
+    .layout-2c-r .site-container > * {
         direction: ltr;
     }
-    .layout-sidebar-left .sidebar__primary {
+    .layout-2c-r .sidebar__primary {
         display: inline-block;
         width: 30%;
         max-width: 100%;
@@ -3094,7 +3094,7 @@ body.error-404 .content,
 
         direction: ltr;
     }
-    .layout-sidebar-left .content-area {
+    .layout-2c-r .content-area {
         display: inline-block;
         width: 70%;
         margin: 0;
@@ -3105,7 +3105,7 @@ body.error-404 .content,
 
         direction: ltr;
     }
-    .layout-sidebar-left .content {
+    .layout-2c-r .content {
         margin-left: 40px;
     }
 }
@@ -3297,6 +3297,23 @@ input[type="submit"].search-submit {
 /*------------------------------------*\
     #POST-FORMAT-PAGES
 \*------------------------------------*/
+.entry.format-video {
+    padding-top: 0;
+}
+.entry.format-video .entry-header {
+    padding-top: 11.84px;
+}
+@media only screen and (min-width: 48em) {
+    .entry.format-video .entry-header {
+        padding-top: 17.76px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .entry.format-video .entry-header {
+        padding-top: 29.6px;
+    }
+}
+
 .format-audio .featured-media {
     margin: 0;
 }

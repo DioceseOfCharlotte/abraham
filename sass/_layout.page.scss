@@ -61,7 +61,7 @@ body {
 //     ##Layout 1 Column
 // \*------------------------------------
 
-body.search, body.error-404, .layout-single-column {
+body.search, body.error-404, .layout-1c {
 
   .content-area, .sidebar {
     width: 100%;
@@ -94,7 +94,7 @@ body.search, body.error-404, .layout-single-column {
 //     ##Layout 2 Column Left
 // \*------------------------------------*/
 
-.layout-sidebar-right {
+.layout-2c-l {
 
   @include lg {
 
@@ -133,7 +133,7 @@ body.search, body.error-404, .layout-single-column {
 //     ##Layout 2 Column Right
 // \*------------------------------------*/
 
-.layout-sidebar-left {
+.layout-2c-r {
 
   @include lg {
 

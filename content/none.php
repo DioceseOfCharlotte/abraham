@@ -12,6 +12,7 @@
 			<h1 class="entry-title"><?php _e( 'Nothing found', 'abraham' ); ?></h1>
 		</header><!-- .entry-header -->
 
+		<div class="entry-content">
 		<?php if ( is_search() ) : ?>
 
 			<p><?php _e( 'Sorry, but nothing matched your search. Perhaps try some different search terms.', 'abraham' ); ?></p>
@@ -37,4 +38,5 @@
 				<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 		<?php endif; ?>
+		</div>
 </article><!-- .no-results -->

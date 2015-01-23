@@ -13,6 +13,7 @@ if ( has_nav_menu( 'primary' ) ) : ?>
 				'container'       => '',
 				'menu_id'         => 'menu-primary-items',
 				'menu_class'      => 'menu__primary--items nav-menu',
+				'depth'           => 2,
 				'fallback_cb'     => ''
 			)
 		); ?>

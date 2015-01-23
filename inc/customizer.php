@@ -30,16 +30,27 @@ add_action( 'customize_preview_init', 'abraham_customize_preview_js' );
 function abraham_customize_css() {
 ?>
 <style type="text/css">
-#customize-control-theme-layout-control input[value=single-column]:before {
+
+#customize-control-theme-layout-control input[value="1c"]:after {
+  content: '';
+  width: 22px;
+  height: 10px;
+  background-color: #ddd;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: -6px;
+}
+
+#customize-control-theme-layout-control input[value="1c-narrow"]:before, #customize-control-theme-layout-control input[value="1c"]:before {
 	content: "\f134";
 }
-#customize-control-theme-layout-control input[value=sidebar-right]:before {
+#customize-control-theme-layout-control input[value="2c-l"]:before {
 	content: "\f135";
 }
-#customize-control-theme-layout-control input[value=sidebar-left]:before {
+#customize-control-theme-layout-control input[value="2c-r"]:before {
 	content: "\f136";
 }
-#customize-control-theme-layout-control input[type=radio] {
+#customize-control-theme-layout-control input[type="radio"] {
 	font-family: dashicons;
 	font-size: 32px;
   	margin-right: 20px;
@@ -50,7 +61,7 @@ function abraham_customize_css() {
 	width: 0;
 }
 
-#customize-control-theme-layout-control input[type=radio]:checked:before {
+#customize-control-theme-layout-control input[type="radio"]:checked:before {
 	color: #888;
 	text-indent: 0;
 	-webkit-border-radius: 0;
@@ -62,6 +73,10 @@ function abraham_customize_css() {
   line-height: 0;
   background: none;
 }
+
+#customize-control-theme-layout-control input[value="1c"]:checked:after {
+		background-color: #888;
+	}
 </style>
 <?php
 }
@@ -70,19 +85,31 @@ add_action( 'customize_controls_init', 'abraham_customize_css' );
 function abraham_admin_styles() {
 ?>
 <style type="text/css">
-#theme-layouts-post-meta-box input[value=default]:before {
+#theme-layouts-post-meta-box input[value="default"]:before {
 	content: "\f111";
 }
-#theme-layouts-post-meta-box input[value=single-column]:before {
+
+#theme-layouts-post-meta-box input[value="1c"]:after {
+  content: '';
+  width: 22px;
+  height: 10px;
+  background-color: #ddd;
+  display: inline-block;
+  position: absolute;
+  left: 17px;
+  margin-top: -6px;
+}
+
+#theme-layouts-post-meta-box input[value="1c-narrow"]:before, #theme-layouts-post-meta-box input[value="1c"]:before {
 	content: "\f134";
 }
-#theme-layouts-post-meta-box input[value=sidebar-right]:before {
+#theme-layouts-post-meta-box input[value="2c-l"]:before {
 	content: "\f135";
 }
-#theme-layouts-post-meta-box input[value=sidebar-left]:before {
+#theme-layouts-post-meta-box input[value="2c-r"]:before {
 	content: "\f136";
 }
-#theme-layouts-post-meta-box input[type=radio] {
+#theme-layouts-post-meta-box input[type="radio"] {
 	font-family: dashicons;
 	font-size: 32px;
   	margin-right: 20px;
@@ -91,6 +118,10 @@ function abraham_admin_styles() {
 	line-height: 0;
 	height: 0;
 	width: 0;
+}
+
+#theme-layouts-post-meta-box input[value="1c"]:checked:after{
+	background-color: #888;
 }
 
 #theme-layouts-post-meta-box input[type=radio]:checked:before {

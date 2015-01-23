@@ -10,15 +10,6 @@ tha_entry_before(); ?>
 <?php
 tha_entry_top();
 
-    echo ( $audio = hybrid_media_grabber(
-      array(
-        'type' => 'audio',
-        'split_media' => true,
-        'before' => '<div class="featured-media">',
-        'after' => '</div>'
-      )
-    ) );
-
     if ( is_singular( get_post_type() ) ) :
 
       get_template_part( 'partials/single', 'header' );
@@ -29,6 +20,8 @@ tha_entry_top();
 
     else : // If not viewing a single post.
 
+    	get_template_part( 'partials/archive', 'header' );
+
       if ( has_excerpt() ) :
 
         get_template_part( 'partials/archive', 'content' );
@@ -38,6 +31,8 @@ tha_entry_top();
         get_template_part( 'partials/single', 'content' );
 
       endif; // End excerpt/audio checks.
+
+    	get_template_part( 'partials/archive', 'footer' );
 
     endif; // End single post check.
 

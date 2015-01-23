@@ -2,6 +2,17 @@
     #POST-FORMAT-PAGES
 \*------------------------------------*/
 
+.entry.format-video {
+  padding-top: 0;
+
+  .entry-header {
+    @include padding-space($base-spacing-unit-tiny n n);
+  }
+}
+.format-audio .featured-media {
+margin: 0;
+}
+
 
 // .entry-format [class^="icon-"], .entry-format [class*=" icon-"] {
 // height: 45px!important;
@@ -89,7 +100,4 @@
 // }
 
 
-.format-audio .featured-media {
-margin: 0;
-}
 
