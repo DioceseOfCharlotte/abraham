@@ -13,6 +13,9 @@
   @include margin-space(n n $base-spacing-unit-sm);
   overflow: hidden;
   //@include shadow-z1();
+    border: 1px solid $grey-300;
+    border-bottom-width: 2px;
+    border-top-color: $grey-200;
 
   @include lg {
     max-width: 100%;
@@ -158,7 +161,7 @@ a.comments-link {
   line-height: 22px;
   transition: background $base-transition-speed linear;
 
-    &:hover, &:visited {
+    &:hover {
       color: #fff;
       background: $color-text-light-hover;
 
@@ -174,7 +177,7 @@ a.comments-link {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-right: 10px solid #9e9e9e;
+  border-right: 10px solid $color-text-light;
   border-bottom: 0px solid transparent;
   content: "";
   transition: border-color $base-transition-speed linear;

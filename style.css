@@ -1304,7 +1304,7 @@ h6 a:active {
  * Styles for HTML elements
  */
 body {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 p {
@@ -2184,9 +2184,12 @@ body.open {
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
+    border: 1px solid #e0e0e0;
+    border-top-color: #eee; 
+    border-bottom-width: 2px;
     border-radius: 0;
     background-color: #fff;
-    word-wrap: break-word; 
+    word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
@@ -2360,13 +2363,16 @@ body.open {
     #ARTICLES
 \*------------------------------------*/
 .entry {
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     max-width: 95%;
     margin-right: auto;
     margin-bottom: 16px;
     margin-left: auto;
     padding-top: 16px;
+    border: 1px solid #e0e0e0;
+    border-top-color: #eee; 
+    border-bottom-width: 2px;
     border-radius: 0;
     background-color: #fff;
 }
@@ -2624,13 +2630,11 @@ a.comments-link {
     -webkit-transition: background 0.1s linear;
     transition: background 0.1s linear;
 }
-a.comments-link:hover,
-a.comments-link:visited {
+a.comments-link:hover {
     color: #fff;
     background: #616161;
 }
-a.comments-link:hover:before,
-a.comments-link:visited:before {
+a.comments-link:hover:before {
     border-right-color: #616161;
 }
 
@@ -2759,7 +2763,7 @@ li.ping,
     padding-bottom: 11.84px; 
     padding-left: 16px;
     border: 0;
-    border-radius: 2px;
+    border-radius: 0;
     background: #eee;
 }
 @media only screen and (min-width: 48em) {
@@ -2851,7 +2855,7 @@ li.ping:before,
 .comment-bottom .comment-reply-login {
     margin: 0 20px; 
     padding: 8px 12px;
-    border-radius: 0 0 2px 2px;
+    border-radius: 0 0 0 0;
     color: #fff;
     font-size: 16px;
     font-size: 1rem;
@@ -3401,18 +3405,17 @@ input[type="submit"].search-submit {
 }
 .read-more__fade a {
     border-bottom: 0; 
-    opacity: 0.8;
-    color: #212121;
+    color: #9e9e9e;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
-    -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
 }
 .read-more__fade a:hover {
     border-bottom: 0; 
-    opacity: 1;
+    color: #616161;
 }
 
 .pagination {
@@ -3484,7 +3487,8 @@ input[type="submit"].search-submit {
 }
 .pagination a:hover,
 .pagination a:focus {
-    background: #fafafa;
+    color: #616161; 
+    background: #f5f5f5;
 }
 
 /*------------------------------------*\
@@ -3616,7 +3620,7 @@ blockquote {
 blockquote cite {
     display: block;
     margin-top: 16px; 
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
 }
 

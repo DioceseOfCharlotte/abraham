@@ -3,7 +3,6 @@
 
 .widget {
   background-color: #fff;
-  //border: 1px solid $grey-300;
   border-radius: $base-radius;
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm $base-spacing-unit-tiny);
   @include margin-space(n n $base-spacing-unit-sm);
@@ -11,6 +10,9 @@
   width: 100%;
   hyphens: auto;
   word-wrap: break-word;
+  border: 1px solid $grey-300;
+  border-bottom-width: 2px;
+  border-top-color: $grey-200;
 }
 
 .widget-title {

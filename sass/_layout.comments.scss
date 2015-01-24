@@ -48,7 +48,7 @@ li.ping, .comment-content {
 margin-top: 5px;
 border: 0;
 background: $grey-200;
-border-radius: 2px;
+border-radius: $base-radius;
 position: relative;
 @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit-tiny);
 }
@@ -102,7 +102,7 @@ width: 100%;
   width: 100%;
 
   .comment-reply-link, .comment-reply-login {
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 $base-radius $base-radius;
   padding: 8px 12px;
   color: $white;
   text-transform: capitalize;

@@ -39,13 +39,12 @@
     font-weight: 400;
     text-transform: uppercase;
     @include font-size($base-font-size, false);
-    color: $color-text;
-    opacity: .8;
-    transition: opacity 0.2s ease;
+    color: $color-text-light;
+    transition: color 0.2s ease;
     border-bottom: 0;
 
     &:hover {
-      opacity: 1;
+      color: $color-text-light-hover;
       border-bottom: 0;
     }
   }
@@ -100,12 +99,12 @@
       height: 0;
       border-radius: 0;
       border-top: 20px solid transparent;
-      border-left: 40px solid $grey-500;
+      border-left: 40px solid $color-text-light;
       border-bottom: 20px solid transparent;
       float: right;
 
       &:hover {
-            border-left: 40px solid $grey-700;
+            border-left: 40px solid $color-text-light-hover;
       }
     }
   }
@@ -126,11 +125,12 @@
   }
 
   a {
-    color: $grey-500;
+    color: $color-text-light;
 
     &:hover,
     &:focus {
-    background: $grey-50;
+    background: $grey-100;
+    color: $color-text-light-hover;
     }
   }
 }
