@@ -61,7 +61,7 @@ function abraham_setup() {
 			'2c-l'  => __( 'Sidebar Right', 'abraham' ),
 			'2c-r'  => __( 'Sidebar Left', 'abraham' )
 		),
-		array( 'default' => 'sidebar-right' )
+		array( 'default' => '2c-l' )
 	);
 
 	/* Post Formats. */
