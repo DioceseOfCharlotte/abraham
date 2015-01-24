@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/m-e-h/abraham.svg)](https://travis-ci.org/m-e-h/abraham)
+[![devDependency Status](https://david-dm.org/m-e-h/abraham.svg)](https://david-dm.org/m-e-h/abraham)
 # Abraham Wordpress Theme
 
 This theme is very much still a **WIP** so it **CHANGES OFTEN** and **THINGS MAY BREAK**.
