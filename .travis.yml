@@ -1,17 +1,16 @@
-# Travis CI (MIT License) configuration file for the Abraham WordPress theme
-# @link https://travis-ci.org/
-# @link https://github.com/m-e-h/abraham
-
 language: php
 
 php:
     - 5.3
     - 5.4
     - 5.5
+    - 5.6
 
 env:
     - WP_VERSION=latest WP_MULTISITE=0
     - WP_VERSION=latest WP_MULTISITE=1
+    - WP_VERSION=3.8 WP_MULTISITE=0
+    - WP_VERSION=3.8 WP_MULTISITE=1
 
 before_script:
     - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
