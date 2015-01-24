@@ -1,5 +1,7 @@
 language: php
 
+cache: npm
+
 php:
     - 5.3
     - 5.4
@@ -13,6 +15,5 @@ before_script:
     - composer install
     - npm install
 
-script: 
-- phpunit
+script:
 - gulp
