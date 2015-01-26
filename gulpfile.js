@@ -42,7 +42,7 @@ gulp.task('images', function () {
       removeUselessStrokeAndFill: true,
       removeEmptyAttrs: true
     }))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('images'))
     .pipe($.if('*.svg', $.rename({
 			prefix: 'svg-',
 			extname: '.php'
@@ -85,11 +85,11 @@ gulp.task('scripts', function() {
   var sources = ['src/scripts/**/*.js'];
   return gulp.src(sources)
     .pipe($.concat('main.js'))
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(gulp.dest('js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe($.uglify({preserveComments: 'some'}))
     // Output Files
-    .pipe(gulp.dest('dist/scripts'));
+    .pipe(gulp.dest('js'));
 });
 
 // Build and serve the output
