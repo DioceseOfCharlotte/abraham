@@ -9,18 +9,20 @@ add_action( 'init', 'abraham_menus', 5 );
 /* Register sidebars. */
 add_action( 'widgets_init', 'abraham_sidebars', 5 );
 
-/* Remove unwanted default Hybrid head elements. */
-remove_action( 'wp_head', 'hybrid_doctitle',      0 );
-remove_action( 'wp_head', 'hybrid_meta_template', 1 );
-remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
+
 
 /**
  * Theme defaults and support for various WordPress & framework features.
  */
 function abraham_setup() {
 
-	/* Let WordPress manage the document title. */
-	add_theme_support( 'title-tag' );
+	/* Remove unwanted default Hybrid head elements. */
+remove_action( 'wp_head', 'hybrid_meta_template', 1 );
+remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
+remove_action( 'wp_head', 'wlwmanifest_link');
+remove_action( 'wp_head', 'wp_generator', 1);
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0);
+remove_action( 'wp_head', 'rsd_link');
 
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
