@@ -26,7 +26,7 @@ function abe_post_format_link() {
  */
 function abe_get_post_format_link() {
 	$format = get_post_format();
-	get_template_part( 'images/svg/svg', $format );
+	get_template_part( 'partials/svg/svg', $format );
 	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
 	return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ) );
 }

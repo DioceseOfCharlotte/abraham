@@ -1649,6 +1649,18 @@ ol ul {
     }
 }
 
+.sidebar .menu-item {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.sidebar .menu-item a {
+    padding-top: 0; 
+    padding-bottom: 0;
+    color: #212121;
+    line-height: 40px;
+}
+
 .menu-item-has-children > a:after {
     display: inline-block;
     display: inline-block;
