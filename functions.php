@@ -10,8 +10,8 @@ $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
 require_once( $abraham_dir . 'hybrid/hybrid.php'               );
-require_once( $abraham_dir . 'inc/vendor/tha-theme-hooks.php'   );
-require_once( $abraham_dir . 'inc/vendor/google-analytics.php'  );
+require_once( $abraham_dir . 'inc/vendors/tha-theme-hooks.php'   );
+require_once( $abraham_dir . 'inc/vendors/google-analytics.php'  );
 
 
 require_once( $abraham_dir . 'inc/init.php'               );
