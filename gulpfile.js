@@ -75,15 +75,15 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'))
     //Concatenate And Minify Styles
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./'))
     .pipe($.if('*.css', $.csso()))
     .pipe(gulp.dest('./'));
 });
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
-  var sources = ['src/scripts/**/*.js'];
-  return gulp.src(sources)
+  return gulp.src([
+  	'src/scripts/**/*.js'
+  	])
     .pipe($.concat('main.js'))
     .pipe(gulp.dest('js'))
     .pipe(rename({ suffix: '.min' }))
