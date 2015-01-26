@@ -18,18 +18,18 @@ function abraham_custom_background_setup() {
 	/* Adds support for WordPress' "custom-background" feature. */
 	add_theme_support(
 		'custom-background',
-		array(
+		[
 			'default-color'    => 'f5f5f5',
 			'default-image'    => '',
 			'wp-head-callback' => 'abraham_custom_background_callback',
-		)
+		]
 	);
 }
 
 /**
- * This is a fix for when a user sets a custom background color with no custom background image.  What 
- * happens is the theme's background image hides the user-selected background color.  If a user selects a 
- * background image, we'll just use the WordPress custom background callback.  This also fixes WordPress 
+ * This is a fix for when a user sets a custom background color with no custom background image.  What
+ * happens is the theme's background image hides the user-selected background color.  If a user selects a
+ * background image, we'll just use the WordPress custom background callback.  This also fixes WordPress
  * not correctly handling the theme's default background color.
  *
  * @link http://core.trac.wordpress.org/ticket/16919

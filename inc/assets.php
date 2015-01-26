@@ -11,13 +11,16 @@ add_action( 'wp_enqueue_scripts', 'abraham_scripts', 5 );
 /* Add custom styles. */
 add_action( 'wp_enqueue_scripts', 'abraham_styles', 5 );
 
+/* Register custom image sizes. */
+add_action( 'init', 'abraham_image_sizes', 5 );
+
 
 function abraham_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_script( 'abraham-navigation', trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', array(), null, true );
-	wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', array(), null, true );
+	wp_enqueue_script( 'abraham-navigation', trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', [], null, true );
+	wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', [], null, true );
 }
 
 function abraham_styles() {
@@ -31,4 +34,12 @@ function abraham_styles() {
 		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
+
+function abraham_image_sizes() {
+	// Set the 'post-thumbnail' size.
+	set_post_thumbnail_size( 175, 130, true );
+
+	// Add the 'abraham-full' image size.
+	add_image_size( 'abraham-full', 1025, 500, true );
 }

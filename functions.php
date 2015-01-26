@@ -9,16 +9,16 @@
 $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
-require_once( $abraham_dir . 'library/hybrid.php'             );
-require_once( $abraham_dir . 'inc/vendor/tha-theme-hooks.php' );
+require_once( $abraham_dir . 'library/hybrid.php'               );
+require_once( $abraham_dir . 'inc/vendor/tha-theme-hooks.php'   );
+require_once( $abraham_dir . 'inc/vendor/google-analytics.php'  );
 
 
-require_once( $abraham_dir . 'inc/init.php'                   );
-require_once( $abraham_dir . 'inc/assets.php'                 );
-require_once( $abraham_dir . 'inc/general.php'                );
-require_once( $abraham_dir . 'inc/template-actions.php'       );
-require_once( $abraham_dir . 'inc/hybrid-mods.php'            );
-require_once( $abraham_dir . 'inc/google-analytics.php'       );
+require_once( $abraham_dir . 'inc/init.php'               );
+require_once( $abraham_dir . 'inc/assets.php'             );
+require_once( $abraham_dir . 'inc/general.php'            );
+require_once( $abraham_dir . 'inc/template-actions.php'   );
+require_once( $abraham_dir . 'inc/hybrid-mods.php'        );
 
 $abraham_customizer_dir = trailingslashit( $abraham_dir ) . 'inc/customizer';
 
@@ -41,7 +41,7 @@ add_filter( 'hybrid_comment_template_hierarchy', 'abe_comment_template_hierarchy
 function abe_comment_template_hierarchy( $templates ) {
 
 
-		$templates = array_merge( array( 'partials/comment.php' ), $templates );
+		$templates = array_merge( [ 'partials/comment.php' ], $templates );
 
 	return $templates;
 }

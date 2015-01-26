@@ -9,9 +9,6 @@ add_action( 'init', 'abraham_menus', 5 );
 /* Register sidebars. */
 add_action( 'widgets_init', 'abraham_sidebars', 5 );
 
-/* Register custom image sizes. */
-add_action( 'init', 'abraham_image_sizes', 5 );
-
 /* Remove unwanted default Hybrid head elements. */
 remove_action( 'wp_head', 'hybrid_doctitle',      0 );
 remove_action( 'wp_head', 'hybrid_meta_template', 1 );
@@ -47,19 +44,19 @@ function abraham_setup() {
 	add_theme_support( 'post-stylesheets' );
 
 	/* Theme layouts. */
-	add_theme_support( 'theme-layouts', array(
+	add_theme_support( 'theme-layouts', [
 			'1c'    => __( 'Single Column', 'abraham' ),
 			'2c-l'  => __( 'Sidebar Right', 'abraham' ),
 			'2c-r'  => __( 'Sidebar Left', 'abraham' )
-		),
-		array( 'default' => '2c-l' )
+		],
+		[ 'default' => '2c-l' ]
 	);
 
 	/* Post Formats. */
-	add_theme_support( 'post-formats', array(
+	add_theme_support( 'post-formats', [
 		'aside', 'audio', 'gallery', 'image', 'link', 'quote', 'status',
 		'video'
-	) );
+	] );
 }
 
 function abraham_menus() {
@@ -68,23 +65,15 @@ function abraham_menus() {
 }
 
 function abraham_sidebars() {
-	hybrid_register_sidebar( array(
+	hybrid_register_sidebar( [
 		'id'          => 'primary',
 		'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
 		'description' => __( 'The Primary sidebar.', 'abraham' )
-	) );
+	] );
 
-	hybrid_register_sidebar( array(
+	hybrid_register_sidebar( [
 		'id'          => 'footer-widgets',
 		'name'        => _x( 'Footer Widgets', 'sidebar', 'abraham' ),
 		'description' => __( 'Typically located in the footer.', 'abraham' )
-	) );
-}
-
-function abraham_image_sizes() {
-	// Set the 'post-thumbnail' size.
-	set_post_thumbnail_size( 175, 130, true );
-
-	// Add the 'abraham-full' image size.
-	add_image_size( 'abraham-full', 1025, 500, true );
+	] );
 }

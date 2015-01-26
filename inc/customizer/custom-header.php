@@ -17,14 +17,16 @@ add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
  * @uses abraham_admin_header_image()
  */
 function abraham_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'abraham_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '212121',
-		'width'                  => 1200,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'abraham_header_style'
-	) ) );
+	add_theme_support( 'custom-header', apply_filters( 'abraham_custom_header_args',
+  	[
+  		'default-image'          => '',
+  		'default-text-color'     => '212121',
+  		'width'                  => 1200,
+  		'height'                 => 250,
+  		'flex-height'            => true,
+  		'wp-head-callback'       => 'abraham_header_style'
+  	]
+	) );
 }
 
 if ( ! function_exists( 'abraham_header_style' ) ) :
