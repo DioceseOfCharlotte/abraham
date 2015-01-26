@@ -68,14 +68,22 @@ transform: translate(0,0);
     }
   }
 
+  @include md {
+    display: inline-block;
+    width:auto;
+  }
+}
 
-// width: 100%;
-// margin-left: 0;
-// margin-right: 0;
+.sidebar .menu-item {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
-@include md {
-display: inline-block;
-width:auto;
+  a {
+  color: $color-text;
+  line-height: 40px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 }
 

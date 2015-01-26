@@ -84,7 +84,9 @@ gulp.task('styles', function () {
 gulp.task('scripts', function() {
   var sources = ['src/scripts/**/*.js'];
   return gulp.src(sources)
-    .pipe($.concat('main.min.js'))
+    .pipe($.concat('main.js'))
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(rename({ suffix: '.min' }))
     .pipe($.uglify({preserveComments: 'some'}))
     // Output Files
     .pipe(gulp.dest('dist/scripts'));
