@@ -35,19 +35,19 @@ gulp.task('composer', function () {
 
 // Optimize Images
 gulp.task('images', function () {
-  return gulp.src('assets/images/**/*')
+  return gulp.src('src/images/**/*')
     .pipe($.imagemin({
       progressive: true,
       interlaced: true,
       removeUselessStrokeAndFill: true,
       removeEmptyAttrs: true
     }))
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest('dist/images'))
     .pipe($.if('*.svg', $.rename({
 			prefix: 'svg-',
 			extname: '.php'
 		})))
-    .pipe(gulp.dest('assets/images'));
+    .pipe(gulp.dest('partials/svg'));
 });
 
 // Copy hybrid-core to extras
@@ -55,15 +55,15 @@ gulp.task('hybrid', function () {
   return gulp.src([
   	'vendor/justintadlock/hybrid-core/**/*'
   	])
-    .pipe(gulp.dest('library'));
+    .pipe(gulp.dest('hybrid'));
 });
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'assets/sass/*.scss',
-    'assets/sass/**/*.css',
-    'assets/sass/style.scss'
+    'src/styles/*.scss',
+    'src/styles/**/*.css',
+    'src/styles/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.sass({
@@ -80,6 +80,15 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'));
 });
 
+// Concatenate And Minify JavaScript
+gulp.task('scripts', function() {
+  var sources = ['src/scripts/**/*.js'];
+  return gulp.src(sources)
+    .pipe($.concat('main.min.js'))
+    .pipe($.uglify({preserveComments: 'some'}))
+    // Output Files
+    .pipe(gulp.dest('dist/scripts'));
+});
 
 // Build and serve the output
 gulp.task('serve', ['default'], function () {
@@ -89,12 +98,12 @@ gulp.task('serve', ['default'], function () {
      });
 
   gulp.watch(['**/*.php'], reload);
-  gulp.watch(['assets/sass/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['assets/js/**/*.js'], reload);
-  gulp.watch(['assets/images/**/*'], reload);
+  gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['src/scripts/**/*.js'], reload);
+  gulp.watch(['src/images/**/*'], reload);
 });
 
 // Build Production Files, the Default Task
 gulp.task('default', ['hybrid'], function (cb) {
-  runSequence('composer', ['styles', 'images', 'hybrid'], cb);
+  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid'], cb);
 });
