@@ -129,8 +129,7 @@
 
 
 
-	// Get settings
-	require_once( dirname( __FILE__) . '/html5bp-google-analytics-options.php' );
+
 	function googanalytics_add_google_analytics( $query ) {
 		$google_analytics_id = googanalytics_get_google_analytics_id();
 		if ( $google_analytics_id != '' && !googanalytics_get_ignore_admin() ) {
