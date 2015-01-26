@@ -19,8 +19,8 @@ function abraham_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_script( 'abraham-navigation', trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', [], null, true );
-	wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', [], null, true );
+	wp_enqueue_script( 'abraham-navigation', trailingslashit( get_template_directory_uri() ) . 'assets/js/navigation.js', [], null, true );
+	wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'assets/js/main.js', [], null, true );
 }
 
 function abraham_styles() {

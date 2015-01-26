@@ -20,7 +20,7 @@ require_once( $abraham_dir . 'inc/general.php'            );
 require_once( $abraham_dir . 'inc/template-actions.php'   );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'        );
 
-$abraham_customizer_dir = trailingslashit( $abraham_dir ) . 'inc/customizer';
+$abraham_customizer_dir = trailingslashit( $abraham_dir . 'inc/customizer' );
 
 require_once( $abraham_customizer_dir . 'custom-background.php'      );
 require_once( $abraham_customizer_dir . 'custom-header.php'          );

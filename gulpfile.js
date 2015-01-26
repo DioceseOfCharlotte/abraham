@@ -35,7 +35,7 @@ gulp.task('composer', function () {
 
 // Optimize Images
 gulp.task('images', function () {
-  return gulp.src('images/**/*')
+  return gulp.src('assets/images/**/*')
     .pipe($.imagemin({
       progressive: true,
       interlaced: true,
@@ -47,7 +47,7 @@ gulp.task('images', function () {
 			prefix: 'svg-',
 			extname: '.php'
 		})))
-    .pipe(gulp.dest('images'));
+    .pipe(gulp.dest('assets/images'));
 });
 
 // Copy hybrid-core to extras
@@ -61,9 +61,9 @@ gulp.task('hybrid', function () {
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'sass/*.scss',
-    'sass/**/*.css',
-    'sass/style.scss'
+    'assets/sass/*.scss',
+    'assets/sass/**/*.css',
+    'assets/sass/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.sass({
@@ -89,9 +89,9 @@ gulp.task('serve', ['default'], function () {
      });
 
   gulp.watch(['**/*.php'], reload);
-  gulp.watch(['sass/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['js/**/*.js'], reload);
-  gulp.watch(['images/**/*'], reload);
+  gulp.watch(['assets/sass/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['assets/js/**/*.js'], reload);
+  gulp.watch(['assets/images/**/*'], reload);
 });
 
 // Build Production Files, the Default Task
