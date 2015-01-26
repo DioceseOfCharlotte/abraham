@@ -1,0 +1,443 @@
+// /*------------------------------------*\
+//     #MIXINS
+// \*------------------------------------*/
+
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(10px);
+// }
+//
+@mixin font-size($font-size, $line-height: true) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+}
+
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+@mixin font-icon($font-family: FontAwesome) {
+display: inline-block;
+font-family: $font-family;
+font-size: inherit;
+font-weight: normal;
+speak: none;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin typo-caption($colorContrast: false) {
+  @include font-size($base-font-size - 2px, false);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @if $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+@mixin typo-blockquote($colorContrast: false) {
+  @include font-size($base-font-size + 4px);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  &:before {
+    opacity: 0.54;
+  }
+
+  &:after {
+    opacity: 0.54;
+  }
+
+  @if $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+@mixin typo-menu($colorContrast: false) {
+  @include font-size($base-font-size, false);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  @if $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+@mixin typo-button($colorContrast: false) {
+  @include font-size($base-font-size, false);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  @if $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+@mixin typo-button-sm($colorContrast:false) {
+
+  @include font-size($base-font-size - 2px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+
+  @if $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin: 0 auto;
+}
+
+// Clearfix
+@mixin s_clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin s_clearfix-after() {
+	clear: both;
+}
+
+
+
+@mixin shadow-z1($color:$black) {
+  box-shadow: 0 1px 1.5px 0 rgba($color,0.12), 0 1px 1px 0 rgba($color,0.24);
+}
+@mixin shadow-z2($color:$black) {
+  box-shadow: 0 2px 5px 0 rgba($color,0.16), 0 2px 5px 0 rgba($color,0.23);
+}
+@mixin shadow-z3($color:$black) {
+  box-shadow: 0 10px 10px 0 rgba($color,0.19), 0 6px 3px 0 rgba($color,0.23);
+}
+@mixin shadow-z4($color:$black) {
+  box-shadow: 0 14px 14px 0 rgba($color,0.25), 0 10px 5px 0 rgba($color,0.22);
+}
+@mixin shadow-z5($color:$black) {
+  box-shadow: 0 19px 19px 0 rgba($color,0.30), 0 15px 6px 0 rgba($color,0.22);
+}
+
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
+
+$animation-curve-default: $animation-curve-fast-out-slow-in;
+
+@mixin material-animation-fast-out-slow-in($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-fast-out-slow-in;
+}
+
+@mixin material-animation-linear-out-slow-in($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-linear-out-slow-in;
+}
+
+@mixin material-animation-fast-out-linear-in($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-fast-out-linear-in;
+}
+
+@mixin material-animation-default($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-default;
+}
+
+@mixin base-transition($attr:all, $speed:$base-transition-speed) {
+  transition: $attr $speed ease-in-out;
+}
+
+
+
+
+
+
+
+@mixin padding-space($padding:$base-spacing-unit-sm) {
+
+  @if length($padding) == 1 and $padding != n {
+    padding-top: $padding;
+    padding-right: $padding;
+    padding-bottom: $padding;
+    padding-left: $padding;
+      @include md {
+        padding-top: $padding * 1.5;
+        padding-right: $padding * 1.5;
+        padding-bottom: $padding * 1.5;
+        padding-left: $padding * 1.5;
+      }
+        @include lg {
+          padding-top: $padding * 2.5;
+          padding-right: $padding * 2.5;
+          padding-bottom: $padding * 2.5;
+          padding-left: $padding * 2.5;
+        }
+  }
+
+  @if length($padding) == 2 {
+    $padding-y: nth($padding, 1);
+    $padding-x: nth($padding, 2);
+    @if $padding-y != n {
+      padding-top: $padding-y;
+      padding-bottom: $padding-y;
+      @include md {
+        padding-top: $padding-y * 1.5;
+        padding-bottom: $padding-y * 1.5;
+      }
+        @include lg {
+          padding-top: $padding-y * 2.5;
+          padding-bottom: $padding-y * 2.5;
+        }
+    }
+    @if $padding-x != n {
+      padding-left: $padding-x;
+      padding-right: $padding-x;
+      @include md {
+        padding-left: $padding-x * 1.5;
+        padding-right: $padding-x * 1.5;
+      }
+        @include lg {
+          padding-left: $padding-x * 2.5;
+          padding-right: $padding-x * 2.5;
+        }
+    }
+  }
+
+  @if length($padding) == 3 {
+    $padding-y-top: nth($padding, 1);
+    $padding-x: nth($padding, 2);
+    $padding-y-bottom: nth($padding, 3);
+    @if $padding-y-top != n {
+      padding-top: $padding-y-top;
+      @include md {
+        padding-top: $padding-y-top * 1.5;
+      }
+        @include lg {
+          padding-top: $padding-y-top * 2.5;
+        }
+    }
+    @if $padding-x != n {
+      padding-right: $padding-x;
+      padding-left: $padding-x;
+      @include md {
+        padding-left: $padding-x * 1.5;
+        padding-right: $padding-x * 1.5;
+      }
+        @include lg {
+          padding-left: $padding-x * 2.5;
+          padding-right: $padding-x * 2.5;
+        }
+    }
+    @if $padding-y-bottom != n {
+      padding-bottom: $padding-y-bottom;
+      @include md {
+        padding-bottom: $padding-y-bottom * 1.5;
+      }
+        @include lg {
+          padding-bottom: $padding-y-bottom * 2.5;
+        }
+    }
+  }
+
+  @if length($padding) == 4 {
+    $padding-top: nth($padding, 1);
+    $padding-right: nth($padding, 2);
+    $padding-bottom: nth($padding, 3);
+    $padding-left: nth($padding, 4);
+    @if $padding-top != n {
+      padding-top: $padding-top;
+      @include md {
+        padding-top: $padding-top * 1.5;
+      }
+        @include lg {
+          padding-top: $padding-top * 2.5;
+        }
+    }
+    @if $padding-right != n {
+      padding-right: $padding-right;
+      @include md {
+        padding-right: $padding-right * 1.5;
+      }
+        @include lg {
+          padding-right: $padding-right * 2.5;
+        }
+    }
+    @if $padding-bottom != n {
+      padding-bottom: $padding-bottom;
+      @include md {
+        padding-bottom: $padding-bottom * 1.5;
+      }
+        @include lg {
+          padding-bottom: $padding-bottom * 2.5;
+        }
+    }
+    @if $padding-left != n {
+      padding-left: $padding-left;
+      @include md {
+        padding-left: $padding-left * 1.5;
+      }
+        @include lg {
+          padding-left: $padding-left * 2.5;
+        }
+    }
+  }
+}
+
+
+
+@mixin margin-space($margin:$base-spacing-unit-sm) {
+
+  @if length($margin) == 1 and $margin != n {
+    margin-top: $margin;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    margin-left: $margin;
+      @include md {
+        margin-top: $margin * 1.5;
+        margin-right: $margin * 1.5;
+        margin-bottom: $margin * 1.5;
+        margin-left: $margin * 1.5;
+      }
+        @include lg {
+          margin-top: $margin * 2.5;
+          margin-right: $margin * 2.5;
+          margin-bottom: $margin * 2.5;
+          margin-left: $margin * 2.5;
+        }
+  }
+
+  @if length($margin) == 2 {
+    $margin-y: nth($margin, 1);
+    $margin-x: nth($margin, 2);
+    @if $margin-y != n {
+      margin-top: $margin-y;
+      margin-bottom: $margin-y;
+      @include md {
+        margin-top: $margin-y * 1.5;
+        margin-bottom: $margin-y * 1.5;
+      }
+        @include lg {
+          margin-top: $margin-y * 2.5;
+          margin-bottom: $margin-y * 2.5;
+        }
+    }
+    @if $margin-x != n {
+      margin-left: $margin-x;
+      margin-right: $margin-x;
+      @include md {
+        margin-left: $margin-x * 1.5;
+        margin-right: $margin-x * 1.5;
+      }
+        @include lg {
+          margin-left: $margin-x * 2.5;
+          margin-right: $margin-x * 2.5;
+        }
+    }
+  }
+
+  @if length($margin) == 3 {
+    $margin-y-top: nth($margin, 1);
+    $margin-x: nth($margin, 2);
+    $margin-y-bottom: nth($margin, 3);
+    @if $margin-y-top != n {
+      margin-top: $margin-y-top;
+      @include md {
+        margin-top: $margin-y-top * 1.5;
+      }
+        @include lg {
+          margin-top: $margin-y-top * 2.5;
+        }
+    }
+    @if $margin-x != n {
+      margin-right: $margin-x;
+      margin-left: $margin-x;
+      @include md {
+        margin-left: $margin-x * 1.5;
+        margin-right: $margin-x * 1.5;
+      }
+        @include lg {
+          margin-left: $margin-x * 2.5;
+          margin-right: $margin-x * 2.5;
+        }
+    }
+    @if $margin-y-bottom != n {
+      margin-bottom: $margin-y-bottom;
+      @include md {
+        margin-bottom: $margin-y-bottom * 1.5;
+      }
+        @include lg {
+          margin-bottom: $margin-y-bottom * 2.5;
+        }
+    }
+  }
+
+  @if length($margin) == 4 {
+    $margin-top: nth($margin, 1);
+    $margin-right: nth($margin, 2);
+    $margin-bottom: nth($margin, 3);
+    $margin-left: nth($margin, 4);
+    @if $margin-top != n {
+      margin-top: $margin-top;
+      @include md {
+        margin-top: $margin-top * 1.5;
+      }
+        @include lg {
+          margin-top: $margin-top * 2.5;
+        }
+    }
+    @if $margin-right != n {
+      margin-right: $margin-right;
+      @include md {
+        margin-right: $margin-right * 1.5;
+      }
+        @include lg {
+          margin-right: $margin-right * 2.5;
+        }
+    }
+    @if $margin-bottom != n {
+      margin-bottom: $margin-bottom;
+      @include md {
+        margin-bottom: $margin-bottom * 1.5;
+      }
+        @include lg {
+          margin-bottom: $margin-bottom * 2.5;
+        }
+    }
+    @if $margin-left != n {
+      margin-left: $margin-left;
+      @include md {
+        margin-left: $margin-left * 1.5;
+      }
+        @include lg {
+          margin-left: $margin-left * 2.5;
+        }
+    }
+  }
+}

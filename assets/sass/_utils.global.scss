@@ -1,0 +1,22 @@
+// /*------------------------------------*\
+//     #GLOBAL
+// \*------------------------------------*/
+
+$base-font-size:    16px;
+$base-line-height:  $base-font-size * 1.5;
+
+$base-radius: 0;
+
+$base-transition-speed: 0.1s;
+
+$site-width: 1280px;
+
+$base-spacing-unit-sm: $base-font-size;
+$base-spacing-unit: $base-spacing-unit-sm * 1.5;
+$base-spacing-unit-lg: $base-spacing-unit-sm * 2.5;
+$base-spacing-unit-tiny: $base-spacing-unit-sm * 0.74;
+
+$font-body: 'Roboto', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+

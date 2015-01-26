@@ -1,0 +1,534 @@
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+// /*------------------------------------*\
+//     #MEDIA-QUERIES
+// \*------------------------------------*/
+
+$small: 35.5em !default;
+$medium: 48em !default;
+$wide: 64em !default;
+$huge: 80em !default;
+
+	@mixin media-query($media-query) {
+		@if $media-query == small {
+			@media only screen and (min-width: $small) { @content; }
+		}
+
+		@if $media-query == small-only {
+			@media only screen and (max-width: $medium - 1) { @content; }
+		}
+
+		@if $media-query == medium {
+			@media only screen and (min-width: $medium) { @content; }
+		}
+
+		@if $media-query == medium-only {
+			@media only screen and (min-width: $medium) and (max-width: $wide - 1) { @content; }
+		}
+
+		@if $media-query == wide {
+			@media only screen and (min-width: $wide) { @content; }
+		}
+
+		@if $media-query == huge {
+			@media only screen and (min-width: $huge) { @content; }
+		}
+	}
+
+	// Just some helpers...
+	@mixin sm { @include media-query(small) { @content }; }
+	@mixin sm-only { @include media-query(small-only) { @content }; }
+	@mixin md { @include media-query(medium) { @content }; }
+	@mixin md-only { @include media-query(medium-only) { @content }; }
+	@mixin lg { @include media-query(wide) { @content }; }
+	@mixin xl { @include media-query(huge) { @content }; }
+
+.all-1-12 {
+    width: 8.3333%;
+    *width: 8.3023%;
+}
+
+.all-1-6,
+.all-2-12 {
+    width: 16.6667%;
+    *width: 16.6357%;
+}
+
+.all-1-4,
+.all-3-12 {
+    width: 25%;
+    *width: 24.9690%;
+}
+
+.all-1-3,
+.all-4-12 {
+    width: 33.3333%;
+    *width: 33.3023%;
+}
+
+.all-5-12 {
+    width: 41.6667%;
+    *width: 41.6357%;
+}
+
+.all-1-2,
+.all-6-12 {
+    width: 50%;
+    *width: 49.9690%;
+}
+
+.all-7-12 {
+    width: 58.3333%;
+    *width: 58.3023%;
+}
+
+.all-2-3,
+.all-8-12 {
+    width: 66.6667%;
+    *width: 66.6357%;
+}
+
+.all-3-4,
+.all-9-12 {
+    width: 75%;
+    *width: 74.9690%;
+}
+
+.all-5-6,
+.all-10-12 {
+    width: 83.3333%;
+    *width: 83.3023%;
+}
+
+.all-11-12 {
+    width: 91.6667%;
+    *width: 91.6357%;
+}
+
+.all-1,
+.all-1-1,
+.all-12-12 {
+    width: 100%;
+}
+
+@include sm {
+    .sm-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .sm-1-6,
+    .sm-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .sm-1-4,
+    .sm-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .sm-1-3,
+    .sm-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .sm-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .sm-1-2,
+    .sm-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .sm-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .sm-2-3,
+    .sm-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .sm-3-4,
+    .sm-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .sm-5-6,
+    .sm-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .sm-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .sm-1,
+    .sm-1-1,
+    .sm-12-12 {
+        width: 100%;
+    }
+}
+
+@include sm-only {
+    .so-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .so-1-6,
+    .so-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .so-1-4,
+    .so-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .so-1-3,
+    .so-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .so-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .so-1-2,
+    .so-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .so-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .so-2-3,
+    .so-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .so-3-4,
+    .so-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .so-5-6,
+    .so-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .so-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .so-1,
+    .so-1-1,
+    .so-12-12 {
+        width: 100%;
+    }
+}
+
+@include md {
+    .md-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .md-1-6,
+    .md-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .md-1-4,
+    .md-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .md-1-3,
+    .md-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .md-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .md-1-2,
+    .md-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .md-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .md-2-3,
+    .md-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .md-3-4,
+    .md-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .md-5-6,
+    .md-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .md-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .md-1,
+    .md-1-1,
+    .md-12-12 {
+        width: 100%;
+    }
+}
+
+@include md-only {
+    .mo-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .mo-1-6,
+    .mo-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .mo-1-4,
+    .mo-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .mo-1-3,
+    .mo-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .mo-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .mo-1-2,
+    .mo-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .mo-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .mo-2-3,
+    .mo-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .mo-3-4,
+    .mo-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .mo-5-6,
+    .mo-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .mo-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .mo-1,
+    .mo-1-1,
+    .mo-12-12 {
+        width: 100%;
+    }
+}
+
+@include lg {
+    .lg-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .lg-1-6,
+    .lg-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .lg-1-4,
+    .lg-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .lg-1-3,
+    .lg-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .lg-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .lg-1-2,
+    .lg-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .lg-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .lg-2-3,
+    .lg-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .lg-3-4,
+    .lg-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .lg-5-6,
+    .lg-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .lg-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .lg-1,
+    .lg-1-1,
+    .lg-12-12 {
+        width: 100%;
+    }
+}
+
+@include xl {
+    .xl-1-12 {
+        width: 8.3333%;
+        *width: 8.3023%;
+    }
+
+    .xl-1-6,
+    .xl-2-12 {
+        width: 16.6667%;
+        *width: 16.6357%;
+    }
+
+    .xl-1-4,
+    .xl-3-12 {
+        width: 25%;
+        *width: 24.9690%;
+    }
+
+    .xl-1-3,
+    .xl-4-12 {
+        width: 33.3333%;
+        *width: 33.3023%;
+    }
+
+    .xl-5-12 {
+        width: 41.6667%;
+        *width: 41.6357%;
+    }
+
+    .xl-1-2,
+    .xl-6-12 {
+        width: 50%;
+        *width: 49.9690%;
+    }
+
+    .xl-7-12 {
+        width: 58.3333%;
+        *width: 58.3023%;
+    }
+
+    .xl-2-3,
+    .xl-8-12 {
+        width: 66.6667%;
+        *width: 66.6357%;
+    }
+
+    .xl-3-4,
+    .xl-9-12 {
+        width: 75%;
+        *width: 74.9690%;
+    }
+
+    .xl-5-6,
+    .xl-10-12 {
+        width: 83.3333%;
+        *width: 83.3023%;
+    }
+
+    .xl-11-12 {
+        width: 91.6667%;
+        *width: 91.6357%;
+    }
+
+    .xl-1,
+    .xl-1-1,
+    .xl-12-12 {
+        width: 100%;
+    }
+}

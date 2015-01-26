@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  background-color: $btn-bg;
+  border: 0;
+  border-radius: $base-radius;
+  color: $btn-text;
+  cursor: pointer;
+  padding: $base-spacing-unit-sm $base-spacing-unit;
+  width: auto;
+  display: inline-block;
+  outline: 0;
+  transition: all $base-transition-speed ease-in-out;
+
+  &:hover {
+  background-color: $btn-bg-hover;
+}
+  &:focus, &:active {
+  background-color: $btn-bg-active;
+}
+
+}
+
+.form-submit {
+  margin: 0;
+}
+
+
+
+
+
+
+.entry-terms a {
+  @extend .btn;
+  @include font-size($base-font-size - 2);
+  padding: 4px 12px;
+  text-transform: capitalize;
+}
+
+

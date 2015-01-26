@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+
+.breadcrumbs {
+  text-transform: uppercase;
+  overflow: hidden;
+
+  @include sm-only {
+  margin-top: 60px + $base-spacing-unit-tiny;
+  margin-bottom: -60px;
+}
+
+  @include margin-space($base-spacing-unit-tiny n $base-spacing-unit-tiny *-.5);
+  list-style: none;
+  cursor: default;
+  font-weight: 500;
+  @include font-size($base-font-size - 1);
+  max-width: $site-width;
+  @include padding-space(n $base-spacing-unit-sm);
+  margin-left: auto;
+  margin-right: auto;
+
+
+  &>span {
+  display: inline-block;
+  }
+
+  a {
+  text-decoration: none;
+  color: $color-text;
+  font-weight: inherit;
+  opacity: .7;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
+  }
+
+  .sep {
+    padding: 0 5px;
+    color: $grey-700;
+  }
+
+  .trail-end {
+    font-weight: 500;
+    color: $color-text-light;
+
+  }
+}
+

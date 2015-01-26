@@ -1,0 +1,19 @@
+
+
+.featured-media {
+background: $grey-700;
+display: block;
+@include margin-space($base-spacing-unit-sm *-1 $base-spacing-unit-sm *-1 $base-spacing-unit-tiny);
+overflow: hidden;
+border-radius: $base-radius $base-radius 0 0
+}
+
+.featured-media > a {
+display: block;
+line-height: 0;
+}
+
+.featured-media img {
+display: block;
+margin: 0 auto;
+}

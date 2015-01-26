@@ -1,0 +1,178 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+.wrap {
+  max-width: $site-width;
+  margin: 0 auto;
+  @include padding-space(n $base-spacing-unit-sm);
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.site  {
+  word-wrap:   break-word;
+  word-break:  normal;
+  hyphens: auto;
+}
+
+.site-container {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  @include padding-space($base-spacing-unit-sm n n);
+
+  >* {
+    @include font-size($base-font-size, false);
+  }
+
+  @include md {
+    min-height: initial;
+    display: block;
+    font-size: 0;
+    text-align: left;
+    margin-top: 0;
+  }
+
+    @include lg {
+    max-width: $site-width;
+    padding-left: $base-spacing-unit-lg;
+    padding-right: $base-spacing-unit-lg;
+  }
+
+}
+
+.content {
+  position: relative;
+  @include margin-space(n n $base-spacing-unit-sm);
+
+  @include md {
+    padding-top: 0;
+  }
+}
+
+
+
+
+
+// ------------------------------------*\
+//     ##Layout 1 Column
+// \*------------------------------------
+
+body.search, body.error-404, .layout-1c {
+
+  .content-area, .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .sidebar__primary {
+    @include lg {
+      display: block;
+      display: flex;
+    }
+
+    .widget {
+      @include lg {
+        width: 31%;
+      }
+    }
+  }
+
+}
+
+
+
+
+// /*------------------------------------*\
+//     ##Layout 2 Column Left
+// \*------------------------------------*/
+
+.layout-2c-l {
+
+  @include lg {
+
+    .sidebar__primary {
+      width: 30%;
+      max-width: 100%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .content-area {
+      width: 70%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .content {
+      margin-right: $base-spacing-unit-lg;
+    }
+
+  }
+
+}
+
+
+
+
+
+// /*------------------------------------*\
+//     ##Layout 2 Column Right
+// \*------------------------------------*/
+
+.layout-2c-r {
+
+  @include lg {
+
+    .site-container {
+      direction:rtl;
+      text-align:left;
+      > * {
+        direction:ltr;
+      }
+    }
+
+    .sidebar__primary {
+      width: 30%;
+      max-width: 100%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+              direction:ltr;
+        text-align:left;
+    }
+
+    .content-area {
+      width: 70%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+              direction:ltr;
+        text-align:left;
+    }
+
+    .content {
+      margin-left: $base-spacing-unit-lg;
+    }
+
+  }
+
+}
+

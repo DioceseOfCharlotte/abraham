@@ -1,0 +1,218 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include font-size($base-font-size * 2.5);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  @include font-size($base-font-size * 2.25);
+  font-weight: 300;
+}
+
+h3 {
+  @include font-size($base-font-size * 1.667);
+  font-weight: 300;
+}
+
+h4 {
+  @include font-size($base-font-size * 1.5);
+  font-weight: 300;
+}
+
+h5 {
+  @include font-size($base-font-size * 1.111);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h6 {
+  @include font-size($base-font-size);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 $base-spacing-unit-tiny;
+  color: $color-headings;
+
+  a {
+    text-decoration: none;
+    font-weight: inherit;
+    color: inherit;
+    transition: opacity $base-transition-speed linear;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: .5;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/**
+ * Styles for HTML elements
+ */
+
+body {
+    font-family: $font-body;
+}
+
+p {
+  @include font-size($base-font-size);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: $base-spacing-unit-sm;
+}
+
+blockquote, blockquote p {
+  @include font-size($base-font-size * 1.5);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i,
+var {
+  font-style: italic;
+}
+
+address {
+  font-style: italic;
+  margin: 0 0 $base-spacing-unit;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+  font-family: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
+  @include font-size(15px);
+}
+
+abbr[title],
+abbr,
+acronym {
+  border-bottom: 1px dotted rgba(0,0,0,0.3);
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $yellow-100;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0.125em;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: 0.5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+s, strike, del {
+text-decoration: line-through;
+color: mix($color-text, $color-text-light);
+}
+
+/*------------------------------------*\
+    #Site specific Type
+\*------------------------------------*/
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  @include typo-button();
+}
+
+.wp-caption-text {
+  @include typo-caption();
+}
+
+.entry-meta {
+  @include typo-menu($colorContrast:true);
+}
+
+.menu-item {
+  @include typo-menu();
+}
+
+.site-title {
+  font-weight: 400;
+  a {
+    line-height: 60px;
+  }
+}
+
+.site-description {
+  @include font-size($base-font-size * 1.5);
+}
+
+.entry-summary p {
+@include font-size(18px);
+font-weight: 300;
+}
+
+.breadcrumbs,
+.post-title,
+.author-description,
+.type-attachment .entry-title,
+.entry-caption,
+.entry-content,
+.entry-summary,
+.page-content,
+.comment-content {
+  hyphens: auto;
+  word-wrap: break-word;
+}
