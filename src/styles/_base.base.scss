@@ -6,9 +6,9 @@ html {
     color: $color-text;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    // @include sm-only {
-    //   font-size: 14px;
-    // }
+    @include sm-only {
+      font-size: 14px;
+    }
 }
 
 ::-moz-selection {

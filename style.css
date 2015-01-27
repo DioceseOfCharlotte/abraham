@@ -1134,6 +1134,11 @@ html {
     font-size: 16px;
     line-height: 24px;
 }
+@media only screen and (max-width: 47em) {
+    html {
+        font-size: 14px;
+    }
+}
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -1961,11 +1966,12 @@ body.open {
     display: block;
     overflow: hidden;
     position: fixed;
-    z-index: 1; 
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #fff;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .site-description {
