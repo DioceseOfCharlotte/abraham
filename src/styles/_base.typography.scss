@@ -81,7 +81,7 @@ p {
 }
 
 blockquote, blockquote p {
-  @include font-size($base-font-size * 1.5);
+  @include font-size($base-font-size * 1.2);
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0.08em;

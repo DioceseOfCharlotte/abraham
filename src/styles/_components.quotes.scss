@@ -4,15 +4,22 @@
 
 
 blockquote {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  //font-family: Georgia, Times, "Times New Roman", serif;
   color: $color-text-light;
   margin: $base-spacing-unit;
+  border-left: 5px solid $color-grey-ui;
+  padding-left: 20px;
 }
 
 blockquote cite {
   display: block;
   font-family: $font-body;
   font-style: normal;
+  font-size: 80%;
+  text-align: right;
+  font-weight: 500;
+  margin-top: 12px;
+  padding-top: 13px;
 
   margin-top: $base-spacing-unit-sm;
 }
