@@ -3413,13 +3413,24 @@ input[type="submit"].search-submit {
 .read-more__fade {
     display: block;
     position: absolute;
-    bottom: 16px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    padding-top: 4rem;
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), #fff);
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), #fff); 
+    padding-top: 80px;
+    padding-bottom: 16px;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95), #fff);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95), #fff); 
     text-align: center;
+}
+@media only screen and (min-width: 48em) {
+    .read-more__fade {
+        padding-bottom: 24px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .read-more__fade {
+        padding-bottom: 40px;
+    }
 }
 .read-more__fade a {
     border-bottom: 0; 
