@@ -22,6 +22,20 @@
   }
 }
 
+.plural .content {
+    display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.plural .entry {
+  @include md {
+  width: 46%;
+  margin-right: 4%;
+}
+  display: inline-block;
+}
+
 .entry-header {
   @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
 }

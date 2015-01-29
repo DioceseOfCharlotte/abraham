@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .loop-meta {
-  max-width: 100%;
+  width: 100%;
   border-radius: 0;
   @include margin-space(n n $base-spacing-unit-tiny);
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
@@ -55,6 +55,7 @@
 .pagination {
   display: block;
   text-align: center;
+    width: 100%;
 
   .nav-links {
     max-width: 350px;

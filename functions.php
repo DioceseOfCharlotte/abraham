@@ -10,15 +10,18 @@ $abraham_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
 require_once( $abraham_dir . 'hybrid/hybrid.php'               );
+
+/* Load vendor files. */
 require_once( $abraham_dir . 'inc/vendors/tha-theme-hooks.php'   );
 require_once( $abraham_dir . 'inc/vendors/google-analytics.php'  );
 
-
+/* Load theme files. */
 require_once( $abraham_dir . 'inc/init.php'               );
 require_once( $abraham_dir . 'inc/assets.php'             );
 require_once( $abraham_dir . 'inc/general.php'            );
 require_once( $abraham_dir . 'inc/template-actions.php'   );
 require_once( $abraham_dir . 'inc/hybrid-mods.php'        );
+require_once( $abraham_dir . 'inc/html-min.php'        );
 
 $abraham_customizer_dir = trailingslashit( $abraham_dir . 'inc/customizer' );
 

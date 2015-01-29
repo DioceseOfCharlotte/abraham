@@ -2420,6 +2420,31 @@ body.open {
     }
 }
 
+.plural .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: flex-end;
+    align-items: flex-end; 
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.plural .entry {
+    display: inline-block;
+}
+@media only screen and (min-width: 48em) {
+    .plural .entry {
+        width: 46%;
+        margin-right: 4%;
+    }
+}
+
 .entry-header {
     padding-right: 16px;
     padding-bottom: 11.84px; 
@@ -3094,9 +3119,6 @@ body.error-404 .content,
         text-align: left;
         vertical-align: top;
     }
-    .layout-2c-l .content {
-        margin-right: 40px;
-    }
 }
 
 @media only screen and (min-width: 64em) {
@@ -3130,9 +3152,6 @@ body.error-404 .content,
         vertical-align: top;
 
         direction: ltr;
-    }
-    .layout-2c-r .content {
-        margin-left: 40px;
     }
 }
 
@@ -3351,7 +3370,7 @@ input[type="submit"].search-submit {
     #ARCHIVE-PAGE
 \*------------------------------------*/
 .loop-meta {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 11.84px;
     padding-top: 11.84px;
     padding-right: 16px;
@@ -3449,6 +3468,7 @@ input[type="submit"].search-submit {
 
 .pagination {
     display: block;
+    width: 100%; 
     text-align: center;
 }
 .pagination .nav-links {
