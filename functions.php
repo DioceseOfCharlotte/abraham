@@ -27,7 +27,6 @@ $abraham_customizer_dir = trailingslashit( $abraham_dir . 'inc/customizer' );
 
 require_once( $abraham_customizer_dir . 'custom-background.php'      );
 require_once( $abraham_customizer_dir . 'custom-header.php'          );
-require_once( $abraham_customizer_dir . 'custom-colors.php'          );
 require_once( $abraham_customizer_dir . 'customizer.php'             );
 
 /* Launch the Hybrid Core framework. */
