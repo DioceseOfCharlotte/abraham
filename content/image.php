@@ -10,15 +10,6 @@ tha_entry_before(); ?>
 <?php
 tha_entry_top();
 
-    get_the_image( array(
-      'size'          => 'abraham-full',
-      'scan'          => true,
-      'caption'       => false,
-      'order'         => array( 'featured', 'scan_raw', 'scan', 'attachment', ),
-      'before'        => '<div class="featured-media image">',
-      'after'         => '</div>',
-    ) );
-
     if ( is_singular( get_post_type() ) ) :
 
       get_template_part( 'partials/single', 'header' );
@@ -29,9 +20,18 @@ tha_entry_top();
 
     else : // If not viewing a single post.
 
+
+    get_the_image( array(
+      'size'          => 'abraham-md',
+      'scan'          => true,
+      'caption'       => false,
+      'order'         => array( 'featured', 'scan_raw', 'scan', 'attachment', ),
+      'before'        => '<div class="featured-media image">',
+      'after'         => '</div>',
+    ) );
+
       get_template_part( 'partials/archive', 'header' );
 
-      get_template_part( 'partials/archive', 'content' );
 
       get_template_part( 'partials/archive', 'footer' );
 

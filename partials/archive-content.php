@@ -7,7 +7,7 @@
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
 
 <?php
-  the_excerpt();
+  the_content();
 ?>
 
 </div>

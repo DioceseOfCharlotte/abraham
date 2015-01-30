@@ -3426,7 +3426,21 @@ input[type="submit"].search-submit {
 }
 
 .entry-summary {
+    overflow-y: hidden; 
     position: relative;
+    max-height: 200px;
+}
+
+.plural .format-link {
+    width: 100%;
+}
+
+.plural .format-quote {
+    width: 100%;
+}
+
+.plural .format-aside {
+    width: 100%;
 }
 
 .read-more__fade {

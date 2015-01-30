@@ -22,7 +22,7 @@
 
 		<div class="media-info">
 
-			<h3><?php _e( 'Video Info', 'kit' ); ?></h3>
+			<h3><?php _e( 'Video Info', 'abraham' ); ?></h3>
 
 			<?php hybrid_media_meta(); ?>
 

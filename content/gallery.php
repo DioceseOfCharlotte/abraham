@@ -21,7 +21,7 @@ tha_entry_top();
     else : // If not viewing a single post.
 
       get_the_image( array(
-      'size'   => 'abraham-full',
+      'size'   => 'abraham-md',
       'before' => '<div class="featured-media image">',
       'after'  => '</div>',
       ) );

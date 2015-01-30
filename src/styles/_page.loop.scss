@@ -23,6 +23,20 @@
 
 .entry-summary {
   position: relative;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
+.plural .format-link {
+  width: 100%;
+}
+
+.plural .format-quote {
+  width: 100%;
+}
+
+.plural .format-aside {
+  width: 100%;
 }
 
 .read-more__fade {

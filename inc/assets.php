@@ -52,5 +52,8 @@ function abraham_image_sizes() {
 	set_post_thumbnail_size( 175, 130, true );
 
 	// Add the 'abraham-full' image size.
-	add_image_size( 'abraham-full', 1025, 500, true );
+	add_image_size( 'abraham-lg', 1100, 619, true );
+
+		// Add the 'abraham-full' image size.
+	add_image_size( 'abraham-md', 400, 225, true );
 }

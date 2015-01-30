@@ -2,9 +2,6 @@
 /**
  * @package Abraham
  */
-
-if ( ! has_post_format() && ( ! get_comments_number() || post_password_required() ) )
-	return;
 ?>
 
 <footer class="entry-footer">
