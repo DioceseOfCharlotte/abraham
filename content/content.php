@@ -20,6 +20,16 @@ tha_entry_top();
 
     else : // If not viewing a single post.
 
+    get_the_image( array(
+      'size'          => 'abraham-md',
+      'scan'          => true,
+      'caption'       => false,
+      'order'         => array( 'featured', 'scan_raw', 'scan', 'attachment', 'default' ),
+      'default_image' => trailingslashit( get_stylesheet_directory_uri() ) . 'images/water.jpg',
+      'before'        => '<div class="featured-media image">',
+      'after'         => '</div>',
+    ) );
+
       get_template_part( 'partials/archive', 'header' );
 
       get_template_part( 'partials/archive', 'content' );

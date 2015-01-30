@@ -199,6 +199,9 @@ input[type="submit"],
   @include font-size($base-font-size * 1.5);
 }
 
+.entry-title {
+  @include font-size($base-font-size * 1.5);
+}
 .entry-summary p {
 @include font-size(18px);
 font-weight: 300;

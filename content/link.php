@@ -22,8 +22,6 @@ tha_entry_top();
 
       get_template_part( 'partials/archive', 'header' );
 
-      get_template_part( 'partials/archive', 'footer' );
-
     endif; // End single post check.
 
 tha_entry_bottom(); ?>

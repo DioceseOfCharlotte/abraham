@@ -20,8 +20,6 @@ tha_entry_top();
 
       get_template_part( 'partials/single', 'content' );
 
-      get_template_part( 'partials/archive', 'footer' );
-
     endif; // End single post check.
 
 tha_entry_bottom(); ?>
