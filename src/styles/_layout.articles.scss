@@ -206,9 +206,16 @@ a.comments-link {
 
 
 
+.featured-media a {
+  opacity: 1;
+  transition: opacity $base-transition-speed linear;
+  backface-visibility: hidden;
+}
 
-
-
+  .featured-media a:hover  {
+    opacity: .6;
+    backface-visibility: hidden;
+  }
 
 
 

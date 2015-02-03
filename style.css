@@ -2300,8 +2300,7 @@ body.open {
 }
 .sidebar li {
     margin-bottom: 10px;
-    padding-bottom: 10px; 
-    border-bottom: 1px dotted #e0e0e0;
+    padding-bottom: 10px;
 }
 @media only screen and (min-width: 64em) {
     .sidebar {
@@ -2704,6 +2703,20 @@ a.comments-link:hover:before {
     content: "";
     -webkit-transition: border-color 0.1s linear;
     transition: border-color 0.1s linear;
+}
+
+.featured-media a {
+    opacity: 1;
+    -webkit-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.featured-media a:hover {
+    opacity: 0.6;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 a.post-format-link {
