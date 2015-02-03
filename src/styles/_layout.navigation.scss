@@ -57,11 +57,11 @@ transform: translate(0,0);
 
   a {
     display: block;
-    padding: 0 20px;
+    padding: 20px 20px;
     color: #fff;
     background-color: transparent;
     transition: background-color .2s ease-out;
-    line-height: 60px;
+    line-height: $base-line-height;
 
     &:hover{
       background-color: rgba($grey-300, 0.4);

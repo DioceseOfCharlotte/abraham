@@ -32,15 +32,7 @@ tha_entry_top();
 
       get_template_part( 'partials/archive', 'header' );
 
-      if ( has_excerpt() ) :
-
-        get_template_part( 'partials/archive', 'content' );
-
-      elseif ( empty( $video ) ) :
-
-        get_template_part( 'partials/single', 'content' );
-
-      endif; // End excerpt/video checks.
+      get_template_part( 'partials/archive', 'content' );
 
       get_template_part( 'partials/archive', 'footer' );
 

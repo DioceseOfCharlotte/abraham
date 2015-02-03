@@ -7,7 +7,9 @@
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
 
 <?php
-  the_content();
+if ( ! post_password_required() ) {
+  the_excerpt();
+}
 ?>
 
 </div>

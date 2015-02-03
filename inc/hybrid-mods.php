@@ -22,7 +22,7 @@ class Doc_Attributes {
 
 	/* Header attributes. */
 	public $branding              	= 'site-branding';	// na
-	public $site_title            	= 'logo  site-title';	// na
+	public $site_title            	= 'site-title';	// na
 	public $site_description      	= 'site-description';	// na
 
 	/* Loop attributes. */

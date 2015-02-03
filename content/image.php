@@ -32,6 +32,7 @@ tha_entry_top();
 
       get_template_part( 'partials/archive', 'header' );
 
+      get_template_part( 'partials/archive', 'content' );
 
       get_template_part( 'partials/archive', 'footer' );
 

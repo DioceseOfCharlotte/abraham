@@ -46,11 +46,18 @@ body {
 
 .content {
   position: relative;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   @include margin-space(n n $base-spacing-unit-sm);
 
   @include md {
     padding-top: 0;
   }
+
+      @include lg {
+    margin-left: 0;
+    }
 }
 
 
@@ -168,11 +175,10 @@ body.search, body.error-404, .layout-1c {
         text-align:left;
     }
 
-    .content {
-      //margin-left: $base-spacing-unit-lg;
-    }
+
 
   }
+
 
 }
 

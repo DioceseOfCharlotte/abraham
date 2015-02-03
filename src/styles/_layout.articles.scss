@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .entry {
-  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
@@ -16,22 +15,30 @@
     border: 1px solid $grey-300;
     border-bottom-width: 2px;
     border-top-color: $grey-200;
-
-  @include lg {
-    max-width: 100%;
-  }
+    width: 100%;
 }
 
 .plural .content {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  //align-items: flex-end;
 }
 
 .plural .entry {
   @include md {
-  width: 46%;
-  margin-right: 4%;
+  width: 48.75%;
+}
+  @include lg {
+  width: 47.5%;
+}
+
+  &:nth-child(even) {
+    @include md {
+  margin-right: 2.5%;
+}
+    @include lg {
+  margin-right: 5%;
+}
 }
   display: inline-block;
 }
