@@ -7,7 +7,6 @@
   border-radius: $base-radius;
   @include margin-space(n n $base-spacing-unit-sm);
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
-  text-align: center;
   color: $color-text-light;
   background-color: rgba(255, 255, 255, 0.8);
   // border: 1px solid $grey-300;
@@ -17,6 +16,7 @@
 
 .loop-title {
   margin: 0;
+  text-align: center;
 }
 
 .loop-description p {
