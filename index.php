@@ -33,7 +33,7 @@ tha_content_top();
 
   					get_template_part( 'partials/post', 'nav' );
 
-  				  comments_template();
+  				  comments_template('/content/comments.php');
 
   				endif; // End check for single post.
 
