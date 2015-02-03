@@ -2,6 +2,10 @@
 /**
  * @package Abraham
  */
+
+if ( is_front_page() ) {
+		return;
+}
 ?>
 
 <header class="entry-header">
