@@ -22,7 +22,7 @@ function abraham_excerpt_more( $more ) {
 }
 
 function abraham_excerpt_length( $length ) {
-	return 80;
+	return 60;
 }
 
 function abraham_footer_widgets_class( $attr, $context ) {

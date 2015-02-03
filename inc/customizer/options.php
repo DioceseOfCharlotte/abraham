@@ -25,20 +25,33 @@ function customizer_library_abraham_options() {
 
 	// Logo
 	$section = 'logo';
-
 	$sections[] = array(
 		'id' => $section,
 		'title' => __( 'Logo', 'abraham' ),
-		'priority' => '30',
-		'description' => __( 'Your logo.', 'abraham' )
+		'priority' => '20'
 	);
-
 	$options['logo'] = array(
 		'id' => 'logo',
 		'label'   => __( 'Logo', 'abraham' ),
 		'section' => $section,
-		'type'    => 'image',
-		'default' => ''
+		'type'    => 'upload',
+		'default' => '',
+	);
+	$options['logo-favicon'] = array(
+		'id' => 'logo-favicon',
+		'label'   => __( 'Favicon', 'abraham' ),
+		'section' => $section,
+		'type'    => 'upload',
+		'default' => '',
+		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'abraham' ),
+	);
+	$options['logo-apple-touch'] = array(
+		'id' => 'logo-apple-touch',
+		'label'   => __( 'Apple Touch Icon', 'abraham' ),
+		'section' => $section,
+		'type'    => 'upload',
+		'default' => '',
+		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'abraham' ),
 	);
 
 	// Colors
@@ -66,14 +79,6 @@ function customizer_library_abraham_options() {
 		'default' => $secondary_color,
 	);
 
-	$options['border'] = array(
-		'id' => 'border',
-		'label'   => __( 'Border Color', 'abraham' ),
-		'section' => $section,
-		'type'    => 'color',
-		'default' => $primary_color,
-	);
-
 	// Typography
 	$section = 'typography';
 	$font_choices = customizer_library_get_font_choices();
@@ -86,7 +91,7 @@ function customizer_library_abraham_options() {
 
 	$options['primary-font'] = array(
 		'id' => 'primary-font',
-		'label'   => __( 'Primary Font', 'abraham' ),
+		'label'   => __( 'Body Font', 'abraham' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
@@ -95,54 +100,26 @@ function customizer_library_abraham_options() {
 
 	$options['secondary-font'] = array(
 		'id' => 'secondary-font',
-		'label'   => __( 'Secondary Font', 'abraham' ),
+		'label'   => __( 'Heading Font', 'abraham' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
 		'default' => 'Merriweather'
 	);
 
-	// Footer
+	// Footer Settings
 	$section = 'footer';
-
 	$sections[] = array(
 		'id' => $section,
 		'title' => __( 'Footer', 'abraham' ),
-		'priority' => '90'
+		'priority' => '100'
 	);
-
 	$options['footer-text'] = array(
 		'id' => 'footer-text',
 		'label'   => __( 'Footer Text', 'abraham' ),
 		'section' => $section,
 		'type'    => 'textarea',
-		'default' => __( 'Text to go in the footer.', 'abraham'),
-	);
-
-	// Panel Example
-	$panel = 'footer-panel';
-
-	$panels[] = array(
-		'id' => $panel,
-		'title' => __( 'Footer', 'abraham' ),
-		'priority' => '90'
-	);
-
-	$section = 'footer-text-section';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Text', 'abraham' ),
-		'priority' => '10',
-		'panel' => $panel
-	);
-
-	$options['footer-text'] = array(
-		'id' => 'footer-text',
-		'label'   => __( 'Footer Text', 'abraham' ),
-		'section' => $section,
-		'type'    => 'textarea',
-		'default' => __( 'Text to go in the footer.', 'abraham'),
+		'default' => abraham_get_default_footer_text(),
 	);
 
 	// Adds the sections to the $options array

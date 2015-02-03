@@ -55,9 +55,7 @@ body {
     padding-top: 0;
   }
 
-      @include lg {
-    margin-left: 0;
-    }
+
 }
 
 
@@ -75,8 +73,9 @@ body.search, body.error-404, .layout-1c {
   }
 
   .content {
-    margin-right: 0;
-    margin-left: 0;
+    @include lg {
+      max-width: 100%;
+    }
   }
 
   .sidebar__primary {
@@ -125,7 +124,7 @@ body.search, body.error-404, .layout-1c {
     }
 
     .content {
-      //margin-right: $base-spacing-unit-lg;
+      margin-left: 0;
     }
 
   }
@@ -175,7 +174,9 @@ body.search, body.error-404, .layout-1c {
         text-align:left;
     }
 
-
+    .content {
+      margin-right: 0;
+    }
 
   }
 

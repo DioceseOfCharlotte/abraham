@@ -25,6 +25,14 @@
 
 			<div class="site-branding">
 				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span></span></button>
+
+				<?php if ( get_theme_mod( 'logo', 0 ) ) {
+					$output = '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">'; ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo" rel="home">
+						<?php echo $output; ?>
+					</a>
+				<?php } ?>
+
 				<?php hybrid_site_title(); ?>
 				<?php hybrid_site_description(); ?>
 			</div><!-- .site-branding -->

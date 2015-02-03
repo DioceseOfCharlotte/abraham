@@ -5,7 +5,7 @@
  * @package abraham
  */
 
-if ( ! function_exists( 'customizer_library_abraham_build_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :
+if ( ! function_exists( 'customizer_library_abraham_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
  *
@@ -13,7 +13,7 @@ if ( ! function_exists( 'customizer_library_abraham_build_styles' ) && class_exi
  *
  * @return void
  */
-function customizer_library_abraham_build_styles() {
+function customizer_library_abraham_styles() {
 
 	// Primary Color
 	$setting = 'primary-color';
@@ -51,23 +51,6 @@ function customizer_library_abraham_build_styles() {
 		) );
 	}
 
-	// Border Color
-	$setting = 'border';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod !== customizer_library_get_default( $setting ) ) {
-
-		$color = sanitize_hex_color( $mod );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.border'
-			),
-			'declarations' => array(
-				'border-color' => $color
-			)
-		) );
-	}
 
 	// Primary Font
 	$setting = 'primary-font';
@@ -108,9 +91,9 @@ function customizer_library_abraham_build_styles() {
 }
 endif;
 
-add_action( 'customizer_library_styles', 'customizer_library_abraham_build_styles' );
+add_action( 'customizer_library_styles', 'customizer_library_abraham_styles' );
 
-if ( ! function_exists( 'customizer_library_abraham_styles' ) ) :
+if ( ! function_exists( 'abraham_display_customizations' ) ) :
 /**
  * Generates the style tag and CSS needed for the theme options.
  *
@@ -121,7 +104,7 @@ if ( ! function_exists( 'customizer_library_abraham_styles' ) ) :
  *
  * @return void
  */
-function customizer_library_abraham_styles() {
+function abraham_display_customizations() {
 
 	do_action( 'customizer_library_styles' );
 
@@ -136,4 +119,4 @@ function customizer_library_abraham_styles() {
 }
 endif;
 
-add_action( 'wp_head', 'customizer_library_abraham_styles', 11 );
+add_action( 'wp_head', 'abraham_display_customizations', 11 );

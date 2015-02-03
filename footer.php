@@ -23,12 +23,12 @@
 		<div class="site-info">
 
 			<div class="wrap wrap__footer">
+
+				<?php if ( get_theme_mod( 'footer-text', customizer_library_get_default( 'footer-text' ) ) != '' ) : ?>
 				<div class="credit">
-					<?php printf(
-							__( 'Copyright &#169; %1$s %2$s.', 'abraham' ),
-							date_i18n( 'Y' ), hybrid_get_site_link()
-								); ?>
+					<?php echo get_theme_mod( 'footer-text', customizer_library_get_default( 'footer-text' ) ); ?>
 				</div><!-- .credit -->
+				<?php endif; ?>
 
 				<?php hybrid_get_menu( 'social' ); ?>
 

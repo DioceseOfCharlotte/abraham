@@ -31,6 +31,18 @@ body.open {
   margin: 0 auto;
 }
 
+.site-logo {
+  display: none;
+  @include md {
+  display: inline-block;
+  margin-right: $base-spacing-unit-tiny;
+
+  &:hover ~ .site-title a {
+    opacity: .5;
+  }
+}
+}
+
 .site-header.open,
 .open .site-footer,
 .open .breadcrumbs,
@@ -45,6 +57,7 @@ body.open {
   float: none;
   max-width: none;
   display: initial;
+  vertical-align: middle;
 }
 
 .site-title a {

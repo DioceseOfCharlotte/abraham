@@ -30,3 +30,21 @@ function abe_get_post_format_link() {
 	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
 	return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ) );
 }
+
+
+/**
+ * Get default footer text
+ *
+ * @return string $text
+ */
+function abraham_get_default_footer_text() {
+	$text = sprintf(
+		__( 'Copyright &#169; %1$s %2$s.', 'abraham' ),
+	date_i18n( 'Y' ),
+	hybrid_get_site_link()
+	);
+	$text .= '<span class="sep"> | </span>';
+	$text .= sprintf(
+		__( ' %s', 'abraham' ), '<a href="http://www.charlottediocese.org/" rel="designer">Diocese of Charlotte</a>' );
+	return $text;
+}

@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .site-info {
-  line-height: 50px;
   color: rgba(255, 255, 255, 0.9);
   background-color: $footer-widget-bg;
 
@@ -81,4 +80,8 @@
     }
   }
 
+}
+
+.credit {
+  padding: 10px 0;
 }
