@@ -2207,8 +2207,22 @@ body.open {
     }
 }
 
-.credit {
+.wrap__footer {
     padding: 10px 0;
+}
+
+.credit {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu__social {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-items__social {
+    margin-bottom: 0;
 }
 
 .widget {
@@ -2953,6 +2967,7 @@ li.ping:before,
 }
 
 .form-allowed__label-wrap {
+    margin: 0; 
     text-align: right;
 }
 
@@ -3290,37 +3305,28 @@ input[type="checkbox"]:focus {
     outline: 1px auto #82c4f8;
 }
 
+.disabled input,
+.disabled select,
+.disabled textarea {
+    border-color: #fafafa;
+    color: #9e9e9e; 
+    background-color: #fafafa;
+    cursor: not-allowed;
+}
+.disabled input:focus,
+.disabled select:focus,
+.disabled textarea:focus {
+    border-color: #fafafa;
+    color: #9e9e9e; 
+    background-color: #fafafa;
+}
+
 input[readonly],
 select[readonly],
 textarea[readonly] {
     border-color: #eee; 
     color: #212121;
     background: #eee;
-}
-
-input:invalid,
-textarea:invalid,
-select:invalid,
-input:hover:invalid,
-textarea:hover:invalid,
-select:hover:invalid,
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-    border-color: #ff1744; 
-    color: #b94a48;
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
-    border-color: #ff1744;
-}
-
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus,
-input[type="checkbox"]:focus:invalid:focus {
-    outline-color: #ff1744;
 }
 
 select[multiple] {
@@ -3704,10 +3710,6 @@ input[type="submit"]:active,
 .button:focus,
 .button:active {
     background-color: #919191;
-}
-
-.form-submit {
-    margin: 0;
 }
 
 .entry-terms a {
@@ -4299,6 +4301,130 @@ a.post-edit-link::before {
 [class^="icon-"] .path3,
 [class*=" icon-"] .path3 {
     fill: #bdbdbd;
+}
+
+.menu-items__social li {
+    display: inline-block;
+}
+
+.menu-items__social li a::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.menu-items__social li a[href*="codepen.io"]::before {
+    color: #fff; 
+    content: "\f216";
+}
+
+.menu-items__social li a[href*="digg.com"]::before {
+    color: #fff; 
+    content: "\f221";
+}
+
+.menu-items__social li a[href*="dribbble.com"]::before {
+    color: #ea4c89; 
+    content: "\f201";
+}
+
+.menu-items__social li a[href*="dropbox.com"]::before {
+    color: #007ee5; 
+    content: "\f225";
+}
+
+.menu-items__social li a[href*="facebook.com"]::before {
+    color: #3b5998; 
+    content: "\f09a";
+}
+
+.menu-items__social li a[href*="flickr.com"]::before {
+    color: #ff0084; 
+    content: "\f211";
+}
+
+.menu-items__social li a[href*="plus.google.com"]::before {
+    color: #dd4b39; 
+    content: "\f0d5";
+}
+
+.menu-items__social li a[href*="github.com"]::before {
+    color: #4183c4; 
+    content: "\f200";
+}
+
+.menu-items__social li a[href*="instagram.com"]::before {
+    color: #3f729b; 
+    content: "\f16d";
+}
+
+.menu-items__social li a[href*="linkedin.com"]::before {
+    color: #0e76a8; 
+    content: "\f0e1";
+}
+
+.menu-items__social li a[href*="pinterest.com"]::before {
+    color: #c8232c; 
+    content: "\f0d2";
+}
+
+.menu-items__social li a[href*="polldaddy.com"]::before {
+    color: #bc0b0b; 
+    content: "\f217";
+}
+
+.menu-items__social li a[href*="getpocket.com"]::before {
+    color: #ee4056; 
+    content: "\f224";
+}
+
+.menu-items__social li a[href*="reddit.com"]::before {
+    color: #369; 
+    content: "\f222";
+}
+
+.menu-items__social li a[href*="skype.com"]::before,
+.menu-items__social li a[href*="skype:"]::before {
+    color: #00aff0; 
+    content: "\f220";
+}
+
+.menu-items__social li a[href*="stumbleupon.com"]::before {
+    color: #ff2618; 
+    content: "\f223";
+}
+
+.menu-items__social li a[href*="tumblr.com"]::before {
+    color: #34526f; 
+    content: "\f214";
+}
+
+.menu-items__social li a[href*="twitter.com"]::before {
+    color: #3cf; 
+    content: "\f099";
+}
+
+.menu-items__social li a[href*="vimeo.com"]::before {
+    color: #1ab7ea; 
+    content: "\f212";
+}
+
+.menu-items__social li a[href*="wordpress.org"]::before,
+.menu-items__social li a[href*="wordpress.com"]::before {
+    color: #21759b; 
+    content: "\f205";
+}
+
+.menu-items__social li a[href*="youtube.com"]::before {
+    color: #c4302b; 
+    content: "\f167";
 }
 
 /*------------------------------------*\

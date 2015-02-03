@@ -55,6 +55,22 @@ input[type="checkbox"]:focus {
     outline: 1px auto lighten($color-links, 20);
 }
 
+.disabled input,
+.disabled select,
+.disabled textarea{
+    cursor: not-allowed;
+    background-color: $grey-50;
+    border-color: $grey-50;
+    color: $color-gray;
+
+    &:focus {
+      background-color: $grey-50;
+      border-color: $grey-50;
+      color: $color-gray;
+    }
+
+    }
+
 input[readonly],
 select[readonly],
 textarea[readonly] {
@@ -63,35 +79,20 @@ textarea[readonly] {
     border-color: $color-grey-lighter;
 }
 
-input:invalid,
-textarea:invalid,
-select:invalid,
-input:hover:invalid,
-textarea:hover:invalid,
-select:hover:invalid,
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-    color: #b94a48;
-    border-color: $color-error;
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
-    border-color: $color-error;
-}
-
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus,
-input[type="checkbox"]:focus:invalid:focus {
-    outline-color: $color-error;
-}
-
-// select {
-//     border: 1px solid $color-grey-lighter;
-//     background-color: white;
+// input:invalid,
+// textarea:invalid,
+// select:invalid,
+// input:hover:invalid,
+// textarea:hover:invalid,
+// select:hover:invalid,
+// input:focus:invalid,
+// textarea:focus:invalid,
+// select:focus:invalid {
+//     color: #b94a48;
+//     border-color: $color-error;
 // }
+
+
 
 select[multiple] {
     height: auto;
