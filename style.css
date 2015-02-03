@@ -2155,7 +2155,6 @@ body.open {
     max-width: 95%;
     margin: 0 auto;
     padding-top: 16px; 
-    font-size: 0;
     text-align: left;
 
     -webkit-box-pack: justify;
@@ -2175,11 +2174,6 @@ body.open {
     .site-footer .sidebar__footer-widgets {
         padding-top: 40px;
     }
-}
-.site-footer .sidebar__footer-widgets > * {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
 }
 .site-footer .sidebar__footer-widgets .widget {
     display: inline-block;
@@ -3062,16 +3056,11 @@ body {
         padding-top: 40px;
     }
 }
-.site-container > * {
-    font-size: 16px;
-    font-size: 1rem;
-}
 @media only screen and (min-width: 48em) {
     .site-container {
         display: block;
         min-height: initial;
         margin-top: 0; 
-        font-size: 0;
         text-align: left;
     }
 }
@@ -3106,6 +3095,18 @@ body {
     }
 }
 
+@media only screen and (min-width: 64em) {
+    body.search.plural .entry,
+    body.error-404.plural .entry,
+    .layout-1c.plural .entry {
+        width: 48%;
+    }
+    body.search.plural .entry:nth-child(even),
+    body.error-404.plural .entry:nth-child(even),
+    .layout-1c.plural .entry:nth-child(even) {
+        margin-right: 4%;
+    }
+}
 body.search .content-area,
 body.search .sidebar,
 body.error-404 .content-area,
@@ -3130,6 +3131,7 @@ body.error-404 .sidebar,
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        max-width: 100%;
     }
 }
 @media only screen and (min-width: 64em) {
@@ -3416,7 +3418,7 @@ input[type="submit"].search-submit {
 \*------------------------------------*/
 .loop-meta {
     width: 100%;
-    margin-bottom: 11.84px;
+    margin-bottom: 16px;
     padding-top: 11.84px;
     padding-right: 16px;
     padding-bottom: 11.84px;
@@ -3428,12 +3430,12 @@ input[type="submit"].search-submit {
 }
 @media only screen and (min-width: 48em) {
     .loop-meta {
-        margin-bottom: 17.76px;
+        margin-bottom: 24px;
     }
 }
 @media only screen and (min-width: 64em) {
     .loop-meta {
-        margin-bottom: 29.6px;
+        margin-bottom: 40px;
     }
 }
 @media only screen and (min-width: 48em) {

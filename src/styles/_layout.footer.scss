@@ -27,7 +27,6 @@
 
   .sidebar__footer-widgets {
     display: block;
-    font-size: 0;
     margin: 0 auto;
     text-align: left;
     width: 100%;
@@ -36,10 +35,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     @include padding-space($base-spacing-unit-sm n n);
-
-    > * {
-      @include font-size($base-font-size);
-    }
 
     .widget {
       background-color: $footer-widget-bg;

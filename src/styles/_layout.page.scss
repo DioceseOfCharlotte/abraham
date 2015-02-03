@@ -24,14 +24,9 @@ body {
   margin-right: auto;
   @include padding-space($base-spacing-unit-sm n n);
 
-  >* {
-    @include font-size($base-font-size, false);
-  }
-
   @include md {
     min-height: initial;
     display: block;
-    font-size: 0;
     text-align: left;
     margin-top: 0;
   }
@@ -68,6 +63,16 @@ body {
 
 body.search, body.error-404, .layout-1c {
 
+  @include lg {
+    &.plural .entry {
+      width: 48%;
+
+      &:nth-child(even) {
+        margin-right: 4%;
+      }
+    }
+  }
+
   .content-area, .sidebar {
     width: 100%;
   }
@@ -82,6 +87,7 @@ body.search, body.error-404, .layout-1c {
     @include lg {
       display: block;
       display: flex;
+      max-width: 100%;
     }
 
     .widget {
