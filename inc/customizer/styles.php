@@ -54,7 +54,8 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.btn:hover,
+				'.site-header,
+				.btn:hover,
 				button:hover,
 				input[type="button"]:hover,
 				input[type="reset"]:hover,
@@ -62,16 +63,16 @@ function customizer_library_abraham_styles() {
 				.button:hover'
 			),
 			'declarations' => array(
-				'background-color' => "rgba( {$rgb}, 0.85 )"
+				'background-color' => "rgba( {$rgb}, 0.75 )"
 			)
 		) );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header'
+				'.featured-media>a'
 			),
 			'declarations' => array(
-				'background-color' => "rgba( {$rgb}, 0.75 )"
+				'background-color' => "rgba( {$rgb}, 0.30 )"
 			)
 		) );
 

@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 .entry {
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   background-color: #fff;
   border-radius: $base-radius;
   position: relative;
@@ -22,26 +22,20 @@
   display: flex;
   flex-wrap: wrap;
   //align-items: flex-end;
+    justify-content: space-between;
 }
 
 .plural .entry {
+  display: inline-block;
+
   @include md {
-  width: 48.75%;
-}
+    width: 48.75%;
+  }
   @include lg {
-  width: 47.5%;
+    width: 47.5%;
+  }
 }
 
-  &:nth-child(even) {
-    @include md {
-  margin-right: 2.5%;
-}
-    @include lg {
-  margin-right: 5%;
-}
-}
-  display: inline-block;
-}
 
 .entry-header {
   @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);

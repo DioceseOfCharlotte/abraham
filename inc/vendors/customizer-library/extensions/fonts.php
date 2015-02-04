@@ -6,28 +6,18 @@
  * @author		The Theme Foundry
  */
 
-if ( ! function_exists( 'customizer_library_get_font_choices' ) ) :
+if ( ! function_exists( 'customizer_library_get_all_fonts' ) ) :
 /**
- * Packages the font choices into value/label pairs for use with the customizer.
+ * Compile font options from different sources.
  *
  * @since  1.0.0.
  *
- * @return array    The fonts in value/label pairs.
+ * @return array    All available fonts.
  */
 function customizer_library_get_all_fonts() {
-	$heading1       = array( 1 => array( 'label' => sprintf( '--- %s ---', __( 'Standard Fonts', 'customizer-library' ) ) ) );
 	$standard_fonts = customizer_library_get_standard_fonts();
-	$heading2       = array( 2 => array( 'label' => sprintf( '--- %s ---', __( 'Google Fonts', 'customizer-library' ) ) ) );
 	$google_fonts   = customizer_library_get_google_fonts();
-
-	/**
-	 * Allow for developers to modify the full list of fonts.
-	 *
-	 * @since 1.3.0.
-	 *
-	 * @param array    $fonts    The list of all fonts.
-	 */
-	return apply_filters( 'customizer_library_all_fonts', array_merge( $heading1, $standard_fonts, $heading2, $google_fonts ) );
+	return apply_filters( 'customizer_library_all_fonts', array_merge( $standard_fonts, $google_fonts ) );
 }
 endif;
 

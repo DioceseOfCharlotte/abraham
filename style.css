@@ -2414,9 +2414,7 @@ body.open {
     overflow: hidden;
     position: relative;
     width: 100%; 
-    margin-right: auto;
     margin-bottom: 16px;
-    margin-left: auto;
     padding-top: 16px;
     border: 1px solid #e0e0e0;
     border-top-color: #eee;
@@ -2451,9 +2449,13 @@ body.open {
     display: -ms-flexbox;
     display: flex;
 
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .plural .entry {
@@ -2467,16 +2469,6 @@ body.open {
 @media only screen and (min-width: 64em) {
     .plural .entry {
         width: 47.5%;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .plural .entry:nth-child(even) {
-        margin-right: 2.5%;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .plural .entry:nth-child(even) {
-        margin-right: 5%;
     }
 }
 
@@ -3493,6 +3485,7 @@ input[type="submit"].search-submit {
 
 .plural .format-quote {
     width: 100%;
+    padding: 0;
 }
 
 .plural .format-aside {
@@ -4151,7 +4144,7 @@ img {
     margin-bottom: 11.84px;
     margin-left: -16px;
     border-radius: 2px 2px 0 0; 
-    background: #616161;
+    background: #424242;
 }
 @media only screen and (min-width: 48em) {
     .featured-media {
