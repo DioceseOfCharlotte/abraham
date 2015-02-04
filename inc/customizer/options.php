@@ -107,6 +107,45 @@ function customizer_library_abraham_options() {
 		'default' => 'Merriweather'
 	);
 
+	// Decorations
+	$section = 'decorations';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Decorations', 'abraham' ),
+		'priority' => '80'
+	);
+
+	$card_choices = array(
+	    'card-choice-1' => 'Show Cards',
+	    'card-choice-2' => 'Do Not Show Cards'
+	);
+
+	$options['cards'] = array(
+		'id' => 'cards',
+		'label'   => __( 'Content Cards', 'abraham' ),
+		'section' => $section,
+		'type'    => 'radio',
+		'choices' => $card_choices,
+    	'default' => 'card-choice-1',
+		'description'  => __( 'Displays articles and widgets as blocks of content.', 'abraham' ),
+	);
+
+	$shadow_choices = array(
+	    'shadow-choice-1' => 'Shadows',
+	    'shadow-choice-2' => 'No Shadows'
+	);
+
+	$options['shadows'] = array(
+		'id' => 'shadows',
+		'label'   => __( 'Card Shadows', 'abraham' ),
+		'section' => $section,
+		'type'    => 'radio',
+		'choices' => $shadow_choices,
+    	'default' => 'shadow-choice-1',
+		'description'  => __( 'Shows shadows behind the cards.', 'abraham' ),
+	);
+
 	// Footer Settings
 	$section = 'footer';
 	$sections[] = array(

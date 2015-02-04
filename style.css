@@ -2752,12 +2752,15 @@ a.post-format-link {
     #COMMENTS
 \*------------------------------------*/
 .comments {
-    overflow: hidden; 
+    overflow: hidden;
     margin-bottom: 16px;
     padding-top: 16px;
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
+    border: 1px solid #e0e0e0;
+    border-top-color: #eee; 
+    border-bottom-width: 2px;
     border-radius: 2px;
     background-color: #fff;
 }

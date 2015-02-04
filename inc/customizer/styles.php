@@ -5,6 +5,18 @@
  * @package abraham
  */
 
+function color_inverse($color){
+    $color = str_replace('#', '', $color);
+    if (strlen($color) != 6){ return '000000'; }
+    $rgb = '';
+    for ($x=0;$x<3;$x++){
+        $c = 255 - hexdec(substr($color,(2*$x),2));
+        $c = ($c < 0) ? 0 : dechex($c);
+        $rgb .= (strlen($c) < 2) ? '0'.$c : $c;
+    }
+    return '#'.$rgb;
+}
+
 if ( ! function_exists( 'customizer_library_abraham_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
@@ -22,15 +34,47 @@ function customizer_library_abraham_styles() {
 	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
 		$color = sanitize_hex_color( $mod );
+		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.menu__primary'
+				'.menu__primary,
+				.btn,
+				button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.button'
 			),
 			'declarations' => array(
-				'background-color' => $color
+				'background-color' => $color,
+				'color' => color_inverse($color)
 			)
 		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.btn:hover,
+				button:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				.button:hover'
+			),
+			'declarations' => array(
+				'background-color' => "rgba( {$rgb}, 0.85 )"
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-header'
+			),
+			'declarations' => array(
+				'background-color' => "rgba( {$rgb}, 0.75 )"
+			)
+		) );
+
 	}
 
 	// Secondary Color
@@ -40,6 +84,7 @@ function customizer_library_abraham_styles() {
 	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
 		$color = sanitize_hex_color( $mod );
+		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
@@ -68,6 +113,41 @@ function customizer_library_abraham_styles() {
 			)
 		) );
 
+	}
+
+	// Decorations
+	$setting = 'cards';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.entry, .widget, .comments'
+			),
+			'declarations' => array(
+				'background' => 'none',
+				'box-shadow' => 'none',
+				'border' => '0'
+			)
+		) );
+	}
+
+	// Card Shadows
+	$setting = 'shadows';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.entry, .widget, .comments'
+			),
+			'declarations' => array(
+				'box-shadow' => 'none',
+				'border' => '0'
+			)
+		) );
 	}
 
 	// Secondary Font

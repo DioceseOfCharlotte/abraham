@@ -8,6 +8,9 @@
   @include padding-space($base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit-tiny);
   @include margin-space(n n $base-spacing-unit-sm);
   overflow: hidden;
+  border: 1px solid $grey-300;
+  border-bottom-width: 2px;
+  border-top-color: $grey-200;
 
   ol {
     list-style: none;

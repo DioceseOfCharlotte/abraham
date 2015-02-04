@@ -20,7 +20,7 @@ function abraham_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'abraham_custom_header_args',
   	[
   		'default-image'          => '',
-  		'default-text-color'     => '212121',
+  		'default-text-color'     => 'FFFFFF',
   		'width'                  => 1200,
   		'height'                 => 250,
   		'flex-height'            => true,
