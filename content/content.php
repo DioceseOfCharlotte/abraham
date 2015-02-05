@@ -14,6 +14,8 @@ tha_entry_top();
 
       get_template_part( 'partials/single', 'header' );
 
+    get_the_image( array( 'size' => 'full' ) );
+
       get_template_part( 'partials/single', 'content' );
 
       get_template_part( 'partials/single', 'footer' );

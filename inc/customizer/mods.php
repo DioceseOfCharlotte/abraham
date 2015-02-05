@@ -77,7 +77,7 @@ function abraham_admin_styles() {
 	?>
 	<style type="text/css">
 		#theme-layouts-post-meta-box input[value=default]:before {
-			content: "\f111";
+			content: "\f159";
 		}
 		#theme-layouts-post-meta-box input[value="1c"]:before {
 			content: "\f134";
