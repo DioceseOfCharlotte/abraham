@@ -58,14 +58,6 @@ gulp.task('hybrid', function () {
     .pipe(gulp.dest('hybrid'));
 });
 
-// Copy cmb2 to vendors
-gulp.task('cmb', function () {
-  return gulp.src([
-  	'vendor/webdevstudios/cmb2/**/*'
-  	])
-    .pipe(gulp.dest('inc/vendors/cmb2'));
-});
-
 // Copy customizer-library to vendors
 gulp.task('customizer', function () {
   return gulp.src([
@@ -132,5 +124,5 @@ gulp.task('serve', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid', 'customizer', 'cmb', 'tha'], cb);
+  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid', 'customizer', 'tha'], cb);
 });

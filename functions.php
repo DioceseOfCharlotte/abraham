@@ -14,7 +14,6 @@ require_once( $abraham_dir . 'hybrid/hybrid.php'               );
 /* Load vendor files. */
 require_once( $abraham_dir . 'inc/vendors/tha-theme-hooks.php'   );
 require_once( $abraham_dir . 'inc/vendors/google-analytics.php'  );
-//require_once( $abraham_dir . 'inc/metaboxes/meta.php'  );
 
 /* Load theme files. */
 require_once( $abraham_dir . 'inc/init.php'               );

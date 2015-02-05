@@ -12,16 +12,7 @@ tha_entry_top();
 
     if ( is_singular( get_post_type() ) ) :
 
-    	?>
-    <blockquote>
-    <?php echo get_post_meta( get_the_ID(), 'quote', true ); ?>
-    <cite>
-    <?php echo get_post_meta( get_the_ID(), 'citation', true ); ?>
-    </cite>
-    </blockquote>
-<?php
-
-
+      get_template_part( 'partials/single', 'header' );
 
       get_template_part( 'partials/single', 'content' );
 
@@ -29,14 +20,7 @@ tha_entry_top();
 
     else : // If not viewing a single post.
 
-          	?>
-    <blockquote>
-    <?php echo get_post_meta( get_the_ID(), 'quote', true ); ?>
-    <cite>
-    <?php echo get_post_meta( get_the_ID(), 'citation', true ); ?>
-    </cite>
-    </blockquote>
-<?php
+    	get_template_part( 'partials/archive', 'content' );
 
     endif; // End single post check.
 
