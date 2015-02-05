@@ -3726,6 +3726,12 @@ blockquote {
     color: #9e9e9e;
 }
 
+blockquote blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 blockquote cite {
     display: block;
     margin-top: 12px;

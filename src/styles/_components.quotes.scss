@@ -11,6 +11,12 @@ blockquote {
   padding-left: 20px;
 }
 
+blockquote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 blockquote cite {
   display: block;
   font-family: $font-body;

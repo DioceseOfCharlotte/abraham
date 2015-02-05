@@ -20,7 +20,7 @@ tha_entry_top();
 
     else : // If not viewing a single post.
 
-    	get_template_part( 'partials/archive', 'content' );
+    	the_content();
 
     endif; // End single post check.
 
