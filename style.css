@@ -3795,7 +3795,8 @@ input.datepicker_with_icon {
 }
 
 .gform_wrapper form {
-    border: 1px solid gainsboro;
+    border: 1px solid #9e9e9e;
+    border-radius: 2px;
 }
 
 .gform_body {
@@ -4135,7 +4136,7 @@ input[type="submit"],
     border: 0;
     border-radius: 2px;
     outline: 0;
-    color: #212121;
+    color: #fff;
     background-color: #9e9e9e;
     cursor: pointer;
     -webkit-transition: all 0.1s ease-in-out;

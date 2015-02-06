@@ -169,10 +169,10 @@ $color-links-visited:     	mix($color-links, $grey-600);
 $color-header: 				$color-primary;
 
 // Buttons
-$btn-text:        			$color-text;
-$btn-bg:  					$grey-500;
-$btn-bg-hover:  			lighten($btn-bg, 5);
-$btn-bg-active:  			darken($btn-bg, 5);
+$btn-text:        			 #fff;
+$btn-bg:  					     $grey-500;
+$btn-bg-hover:  			   lighten($btn-bg, 5);
+$btn-bg-active:  			  darken($btn-bg, 5);
 $btn-primary-bg:  			$color-primary;
 $btn-primary-text:  		#fff;
 

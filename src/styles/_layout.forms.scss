@@ -520,7 +520,8 @@ input.datepicker_with_icon {
 
 
 .gform_wrapper form {
-  border: 1px solid gainsboro;
+  border: 1px solid $grey-500;
+  border-radius: $base-radius;
 }
 
 .gform_body {

@@ -47,8 +47,7 @@ function customizer_library_abraham_styles() {
 				.button'
 			),
 			'declarations' => array(
-				'background-color' => $color,
-				'color' => color_inverse($color)
+				'background-color' => $color
 			)
 		) );
 
