@@ -3844,6 +3844,11 @@ input.datepicker_with_icon {
     margin-bottom: 24px;
 }
 
+.gform_description {
+    display: block; 
+    margin: 40px;
+}
+
 /*------------------------------------*\
     #POST-FORMAT-PAGES
 \*------------------------------------*/
