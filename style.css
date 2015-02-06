@@ -3835,7 +3835,7 @@ input.datepicker_with_icon {
 }
 
 .ginput_container span {
-    display: inline-block;
+    display: block;
 }
 
 .gform_footer {

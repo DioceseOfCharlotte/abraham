@@ -53,6 +53,23 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
+				'input[type="email"]:focus,
+				input[type="number"]:focus,
+				input[type="search"]:focus,
+				input[type="text"]:focus,
+				input[type="tel"]:focus,
+				input[type="url"]:focus,
+				input[type="password"]:focus,
+				textarea:focus,
+				select:focus'
+			),
+			'declarations' => array(
+				'border-color' => $color
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
 				'.site-header,
 				.btn:hover,
 				button:hover,
