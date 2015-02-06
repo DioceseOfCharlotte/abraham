@@ -2,149 +2,111 @@
     #FORMS
 \*------------------------------------*/
 
-input[type="text"],
-input[type="password"],
 input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="week"],
 input[type="number"],
 input[type="search"],
+input[type="text"],
 input[type="tel"],
-input[type="color"],
-input:not([type]),
-select,
-textarea {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    background-color: $grey-200;
-    border: 1px solid $grey-300;
+input[type="url"],
+input[type="password"],
+textarea,
+select {
     height: $base-spacing-unit-lg;
-    padding: 7px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    padding: 6px 10px;
+    /* The 6px vertically centers text on FF, ignored by Webkit */
+
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $grey-400;
     border-radius: $base-radius;
     box-shadow: none;
-    background: #fff;
+    box-sizing: border-box;
+}
 
-    &:focus {
-    outline: thin dotted \9; /* IE6-9 */
-    border-color: lighten($color-links, 20);
-    outline: 0;
-    background-color: #fff;
-    }
-
-    &[disabled] {
-    cursor: not-allowed;
-    background-color: $color-grey-lighter;
-    color: $color-gray;
-    }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    appearance: none;
 }
 
 textarea {
-  min-height: $base-spacing-unit-lg * 3;
+    min-height: $base-spacing-unit-lg * 3;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-    outline: thin dotted $color-gray;
-    outline: 1px auto lighten($color-links, 20);
+input[type="file"] {
+  &:hover { cursor: pointer; }
 }
 
-.disabled input,
-.disabled select,
-.disabled textarea{
-    cursor: not-allowed;
-    background-color: $grey-50;
-    border-color: $grey-50;
-    color: $color-gray;
-
-    &:focus {
-      background-color: $grey-50;
-      border-color: $grey-50;
-      color: $color-gray;
-    }
-
-    }
-
-input[readonly],
-select[readonly],
-textarea[readonly] {
-    background: $color-grey-lighter;
-    color: $color-text;
-    border-color: $color-grey-lighter;
-}
-
-// input:invalid,
-// textarea:invalid,
-// select:invalid,
-// input:hover:invalid,
-// textarea:hover:invalid,
-// select:hover:invalid,
-// input:focus:invalid,
-// textarea:focus:invalid,
-// select:focus:invalid {
-//     color: #b94a48;
-//     border-color: $color-error;
-// }
-
-
-
-select[multiple] {
-    height: auto;
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid $blue-500;
+    outline: 0;
 }
 
 label,
 legend {
-  display: block;
-  font-weight: 500;
-  color: $color-text-light;
+    display: block;
+    margin: 5px 0 5px 5px;
+    font-weight: 700;
+    color: $grey-700;
+    line-height: 1;
 }
 
 fieldset {
-  border-width: 0;
-  padding: 0;
+    padding: 0;
+    border-width: 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
+    display: inline;
+    margin: 4px 0 0;
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
 }
 
 label > .label-body {
-  display: inline-block;
-  font-weight: normal;
-  margin-left: $base-spacing-unit-sm;
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
 }
 
 .search-form {
-position: relative;
+    position: relative;
 }
 
 input[type=search] {
-  background-color: $white;
-  font-size: $base-font-size;
-  margin: 0;
-  padding: $base-spacing-unit-tiny;
-  width: 100%;
-  appearance: none;
+    margin: 0;
 }
 
 input[type="submit"].search-submit {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  outline: 0;
-  padding: 0 $base-spacing-unit-sm;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  color: $white;
-  @include font-icon();
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: 0;
+    padding: 0 $base-spacing-unit-sm;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: $white;
+    @include font-icon();
 }
 
 
@@ -155,48 +117,6 @@ input[type="submit"].search-submit {
 
 
 
-
-
-
-$input-bg:           #fff !default;
-$input-color:        #999 !default;
-$input-border:       #ddd !default;
-$input-border-focus: #999 !default;
-$input-label:        #666 !default;
-$input-error:        #ca3c3c !default;
-$input-shadow:       1px 1px 2px #eee inset !default;
-$input-transition:   all .3s ease-in-out !default;
-
-$form-button-background:       #333 !default;
-$form-button-background-hover: #0078e7 !default;
-$form-button-color:            #fff !default;
-
-$form-required: #f00 !default;
-$form-muted:    #858585 !default;
-
-$form-font-size:   16px !default;
-$form-line-height: $form-font-size * 1.5 !default;
-$form-space:       $form-line-height / 2 !default;
-
-$white: #fff !default;
-$gray:  #aaa !default;
-
-
-// Form mixins - Handles the calculations and abstracted fun
-
-// Font sizing mixin
-// @link https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss [props]
-// @example
-//@include form-font-size(10px);
-@mixin form-font-size($font-size) {
-  font-size: $font-size;
-  font-size: ($font-size / $form-font-size) * 1rem;
-}
-
-// Micro clearfix mixin
-// @link http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php [props]
-// @example
-// @include form-clearfix;
 @mixin form-clearfix {
   &::after {
     clear: both;
@@ -205,34 +125,7 @@ $gray:  #aaa !default;
   }
 }
 
-// Spacing mixin
-// @link https://twitter.com/HugoGiraudel [props]
-// @example
-// @include form-spacing(padding, 0 $form-space auto);
-@mixin form-spacing($spacing-type, $args) {
-  $fallback: ();
-  $regular: ();
 
-  @each $value in $args {
-    @if type-of($value) == 'number' and unit($value) == 'px' {
-      $fallback: append($fallback, $value);
-      $regular: append($regular, $value / $form-font-size * 1rem);
-    }
-
-    @else if type-of($value) == 'number' and unit($value) == 'rem' {
-      $fallback: append($fallback, $value / 1rem * $form-font-size);
-      $regular: append($regular, $value);
-    }
-
-    @else {
-      $fallback: append($fallback, $value);
-      $regular: append($regular, $value);
-    }
-  }
-
-  #{$spacing-type}: $fallback;
-  #{$spacing-type}: $regular;
-}
 
 
 .ginput_complex,
@@ -249,26 +142,26 @@ $gray:  #aaa !default;
 }
 
 .gform_wrapper form {
-  @include form-spacing(margin-bottom, $form-space);
+  @include margin-space(n n $base-spacing-unit-sm);
 }
 
 .gform_heading {
-  @include form-spacing(margin-bottom, $form-space * 2);
+  @include margin-space(n n $base-spacing-unit-sm);
 
 }
 
 .gsection {
-  @include form-spacing(margin-bottom, $form-space);
-  @include form-spacing(padding-bottom, $form-space);
-  border-bottom: 1px solid $form-muted;
+  @include margin-space(n n $base-spacing-unit-sm);
+  @include padding-space(n n $base-spacing-unit-sm);
+  border-bottom: 1px solid $color-grey-ui;
 
   .gsection_title {
-    @include form-spacing(margin-bottom, $form-space);
+    @include margin-space(n n $base-spacing-unit-sm);
   }
 }
 
 .gfield_required {
-  color: $form-required;
+  color: $color-error;
   padding-left: 2px;
 }
 
@@ -282,11 +175,10 @@ $gray:  #aaa !default;
 }
 
 .gfield {
-  @include form-spacing(margin-bottom, $form-space);
+  @include margin-space(n n $base-spacing-unit-sm);
 }
 
 .gfield_description {
-  @include form-font-size(14px);
   font-style: italic;
   color: $grey-600;
 }
@@ -298,16 +190,17 @@ $gray:  #aaa !default;
 .gfield_checkbox,
 .gfield_radio {
   list-style: none;
-  margin: 0;
+  margin: 10px 0;
+  position: relative;
+  display: block;
 
   li {
-    display: inline-block;
     margin: 0 $base-spacing-unit;
   }
 
-  input {
-    @include form-spacing(margin-right, 4px);
-  }
+  label {
+  display: inline-block;
+}
 }
 
 .gfield_radio {
@@ -355,7 +248,7 @@ $gray:  #aaa !default;
 }
 
 input.datepicker_with_icon {
-  @include form-spacing(margin-right, $form-space);
+  @include margin-space(n $base-spacing-unit-sm n);
   display: inline-block;
   width: auto;
 }
@@ -503,7 +396,7 @@ input.datepicker_with_icon {
 
 .gfield_list > tbody > tr:nth-child(odd) > td,
 .gfield_list > tbody > tr:nth-child(odd) > th {
-  @include form-spacing(padding-right, $form-space);
+  @include padding-space(n $base-spacing-unit-sm n);
   background: none;
   line-height: normal;
   padding: 0;
@@ -538,7 +431,7 @@ input.datepicker_with_icon {
 }
 
 .gf_page_steps {
-  @include form-spacing(margin-bottom, $form-space);
+  @include margin-space(n n $base-spacing-unit-sm);
   line-height: 1;
 }
 
@@ -562,23 +455,23 @@ input.datepicker_with_icon {
 }
 
 .gfield_error {
-  padding: $form-space;
+  padding: $base-spacing-unit;
   border: 1px solid #eee;
   border-left-width: 5px;
   border-left-color: #d9534f;
 
   > label,
   .validation_message {
-    color: $input-error;
+    color: $color-error;
   }
 
   input,
   textarea,
   select {
-    border-color: $input-error;
+    border-color: $color-error;
 
     &:focus {
-      border-color: darken($input-error, 10%);
+      border-color: darken($color-error, 10%);
     }
   }
 }
@@ -592,7 +485,7 @@ input.datepicker_with_icon {
 
 .ui-datepicker {
   background: $white;
-  border: 1px solid $gray;
+  border: 1px solid $color-grey-ui;
 }
 
 .ui-datepicker-prev {
@@ -622,79 +515,6 @@ input.datepicker_with_icon {
 
 
 
-label {
-  color: $input-label;
-  font-weight: 700;
-}
-
-input[type="text"],
-input[type="search"],
-input[type="password"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="file"],
-textarea,
-select {
-  @include form-spacing(padding, $form-space);
-  background: $input-bg;
-  color: $input-color;
-  line-height: normal;
-  display: block;
-  width: 100%;
-
-}
-
-input[type="file"] {
-  &:hover { cursor: pointer; }
-}
-
-input[type="search"] {
-  width: auto;
-  display: inline-block;
-}
-
-select {
-  height: ceil($form-line-height * 1.33);
-}
-
-select[multiple],
-select[size] {
-  height: auto;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  display: inline-block;
-}
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-  @include form-spacing(padding, $form-space $form-space * 2);
-  @include form-font-size(14px);
-  background: $form-button-background;
-  color: $form-button-color;
-  display: inline-block;
-  font-weight: 400;
-  text-transform: uppercase;
-  border: 0;
-  transition: $input-transition;
-
-  &:hover {
-    background: $form-button-background-hover;
-  }
-}
-
-
-
-
-
-
-
 
 
 
@@ -713,6 +533,7 @@ button {
   margin-top: 0;
   margin-bottom: 0;
   padding: 20px;
+  line-height: 1.4;
   border-top-left-radius: $base-radius;
   border-top-right-radius: $base-radius;
   color: #fff;
