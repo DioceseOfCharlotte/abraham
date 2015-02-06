@@ -3853,6 +3853,20 @@ input.datepicker_with_icon {
     background-color: #fafafa;
 }
 
+.disabled input[type="email"],
+.disabled input[type="number"],
+.disabled input[type="search"],
+.disabled input[type="text"],
+.disabled input[type="tel"],
+.disabled input[type="url"],
+.disabled input[type="password"],
+.disabled textarea,
+.disabled select {
+    border-color: #f5f5f5; 
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
 /*------------------------------------*\
     #POST-FORMAT-PAGES
 \*------------------------------------*/
