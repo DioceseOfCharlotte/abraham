@@ -3794,8 +3794,8 @@ input.datepicker_with_icon {
     width: auto;
 }
 
-.entry .gform_wrapper form {
-    background-color: #fafafa;
+.gform_wrapper form {
+    border: 1px solid gainsboro;
 }
 
 .gform_body {
@@ -3845,8 +3845,11 @@ input.datepicker_with_icon {
 }
 
 .gform_description {
-    display: block; 
-    margin: 40px;
+    display: block;
+    margin: 16px;
+    padding: 24px;
+    border-radius: 2px;
+    background-color: #fafafa;
 }
 
 /*------------------------------------*\
