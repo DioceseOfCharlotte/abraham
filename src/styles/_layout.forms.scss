@@ -581,5 +581,10 @@ select {
 cursor: not-allowed;
   background-color: $grey-100;
   border-color: $grey-100;
+  color: $grey-300;
+
+  &:focus {
+    border-color: $grey-100;
+  }
 }
 }

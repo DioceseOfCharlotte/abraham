@@ -3862,9 +3862,21 @@ input.datepicker_with_icon {
 .disabled input[type="password"],
 .disabled textarea,
 .disabled select {
-    border-color: #f5f5f5; 
+    border-color: #f5f5f5;
+    color: #e0e0e0; 
     background-color: #f5f5f5;
     cursor: not-allowed;
+}
+.disabled input[type="email"]:focus,
+.disabled input[type="number"]:focus,
+.disabled input[type="search"]:focus,
+.disabled input[type="text"]:focus,
+.disabled input[type="tel"]:focus,
+.disabled input[type="url"]:focus,
+.disabled input[type="password"]:focus,
+.disabled textarea:focus,
+.disabled select:focus {
+    border-color: #f5f5f5;
 }
 
 /*------------------------------------*\
