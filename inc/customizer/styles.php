@@ -5,18 +5,6 @@
  * @package abraham
  */
 
-function color_inverse($color){
-    $color = str_replace('#', '', $color);
-    if (strlen($color) != 6){ return '000000'; }
-    $rgb = '';
-    for ($x=0;$x<3;$x++){
-        $c = 255 - hexdec(substr($color,(2*$x),2));
-        $c = ($c < 0) ? 0 : dechex($c);
-        $rgb .= (strlen($c) < 2) ? '0'.$c : $c;
-    }
-    return '#'.$rgb;
-}
-
 if ( ! function_exists( 'customizer_library_abraham_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
@@ -33,8 +21,12 @@ function customizer_library_abraham_styles() {
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
+		$simple_color_adjuster = new Simple_Color_Adjuster;
 		$color = sanitize_hex_color( $mod );
 		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
+		$percentage = 10;
+		$darken 	= $simple_color_adjuster->darken( $color, $percentage );
+		$lighten 	= $simple_color_adjuster->lighten( $color, $percentage );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
@@ -47,13 +39,14 @@ function customizer_library_abraham_styles() {
 				.button'
 			),
 			'declarations' => array(
-				'background-color' => $color
+				'background-color' => $darken
 			)
 		) );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'input[type="email"]:focus,
+				'blockquote,
+				input[type="email"]:focus,
 				input[type="number"]:focus,
 				input[type="search"]:focus,
 				input[type="text"]:focus,
@@ -79,7 +72,7 @@ function customizer_library_abraham_styles() {
 				.button:hover'
 			),
 			'declarations' => array(
-				'background-color' => "rgba( {$rgb}, 0.75 )"
+				'background-color' => $color
 			)
 		) );
 
@@ -88,7 +81,7 @@ function customizer_library_abraham_styles() {
 				'.featured-media>a'
 			),
 			'declarations' => array(
-				'background-color' => "rgba( {$rgb}, 0.30 )"
+				'background-color' => $darken
 			)
 		) );
 

@@ -1195,116 +1195,48 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
-/*------------------------------------*\
-    #TYPOGRAPHY
-\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre {
     margin: 0;
-    padding: 0;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
-h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+ul,
+ol,
+dd {
+    margin: 0;
+    margin-left: 32px;
+    margin-left: 2rem;
 }
 
-h2 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: 300; 
-    line-height: 1.3333333333;
-}
-
-h3 {
-    font-size: 26.672px;
-    font-size: 1.667rem;
-    font-weight: 300; 
-    line-height: 1.799640072;
-}
-
-h4 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 300; 
-    line-height: 1;
-}
-
-h5 {
-    font-size: 17.776px;
-    font-size: 1.111rem;
-    font-weight: 400;
-    line-height: 1.3501350135;
-    letter-spacing: 0.02em;
-}
-
-h6 {
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 11.84px;
-    color: #757575;
-}
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    color: inherit;
-    font-weight: inherit;
-    text-decoration: none;
-    -webkit-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
-}
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-    color: inherit;
-}
-h1 a:hover,
-h1 a:focus,
-h1 a:active,
-h2 a:hover,
-h2 a:focus,
-h2 a:active,
-h3 a:hover,
-h3 a:focus,
-h3 a:active,
-h4 a:hover,
-h4 a:focus,
-h4 a:active,
-h5 a:hover,
-h5 a:focus,
-h5 a:active,
-h6 a:hover,
-h6 a:focus,
-h6 a:active {
-    opacity: 0.5;
-    text-decoration: none;
-}
-
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
 /**
  * Styles for HTML elements
  */
@@ -1463,14 +1395,13 @@ input[type="submit"],
 .site-title a {
     line-height: 60px;
 }
-
-.site-description {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
+@media only screen and (min-width: 48em) {
+    .site-title a {
+        line-height: 24px;
+    }
 }
 
-.entry-title {
+.plural .entry-title {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1;
@@ -1498,6 +1429,114 @@ input[type="submit"],
     hyphens: auto;
 
     -ms-hyphens: auto;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 1.3333333333;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-weight: 300; 
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300; 
+    line-height: 1;
+}
+
+h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300; 
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+h6 {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.7142857143;
+    letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #757575;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    -webkit-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+    color: inherit;
+}
+h1 a:hover,
+h1 a:focus,
+h1 a:active,
+h2 a:hover,
+h2 a:focus,
+h2 a:active,
+h3 a:hover,
+h3 a:focus,
+h3 a:active,
+h4 a:hover,
+h4 a:focus,
+h4 a:active,
+h5 a:hover,
+h5 a:focus,
+h5 a:active,
+h6 a:hover,
+h6 a:focus,
+h6 a:active {
+    opacity: 0.5;
+    text-decoration: none;
 }
 
 /*------------------------------------*\
@@ -1722,7 +1761,7 @@ ol ul {
 .menu-toggle span:after {
     width: 100%;
     height: 2px;
-    background-color: #616161;
+    background-color: #fff;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
@@ -2668,7 +2707,6 @@ body.open {
 
 .nav-links {
     overflow: hidden; 
-    max-width: 700px;
     margin: 0 auto;
 }
 .nav-links:before,
@@ -4212,9 +4250,8 @@ input[type="submit"]:active,
     #BLOCKQUOTES
 \*------------------------------------*/
 blockquote {
-    margin: 24px;
-    padding-left: 20px; 
-    border-left: 5px solid #bdbdbd;
+    margin: 0;
+    border-left: 5px solid #bdbdbd; 
     color: #9e9e9e;
 }
 
@@ -4233,12 +4270,15 @@ blockquote cite {
     font-size: 80%;
     font-weight: 500;
     font-style: normal;
-    text-align: right;
 }
 
 blockquote cite::before {
     padding-right: 10px; 
     content: "\2014";
+}
+
+.pf-content {
+    padding: 16px;
 }
 
 /*------------------------------------*\

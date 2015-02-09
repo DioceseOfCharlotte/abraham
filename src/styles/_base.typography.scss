@@ -2,69 +2,6 @@
     #TYPOGRAPHY
 \*------------------------------------*/
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  @include font-size($base-font-size * 2.5);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  @include font-size($base-font-size * 2.25);
-  font-weight: 300;
-}
-
-h3 {
-  @include font-size($base-font-size * 1.667);
-  font-weight: 300;
-}
-
-h4 {
-  @include font-size($base-font-size * 1.5);
-  font-weight: 300;
-}
-
-h5 {
-  @include font-size($base-font-size * 1.111);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-h6 {
-  @include font-size($base-font-size);
-  font-weight: 300;
-  letter-spacing: 0.04em;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 $base-spacing-unit-tiny;
-  color: $color-headings;
-
-  a {
-    text-decoration: none;
-    font-weight: inherit;
-    color: inherit;
-    transition: opacity $base-transition-speed linear;
-
-    &:visited {
-      color: inherit;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: .5;
-      text-decoration: none;
-    }
-  }
-}
-
-
 /**
  * Styles for HTML elements
  */
@@ -192,16 +129,20 @@ input[type="submit"],
   font-weight: 400;
   a {
     line-height: 60px;
+    @include md {
+      line-height: $base-line-height;
+    }
   }
 }
 
-.site-description {
+// .site-description {
+//   @include font-size($base-font-size * 1.5);
+// }
+
+.plural .entry-title {
   @include font-size($base-font-size * 1.5);
 }
 
-.entry-title {
-  @include font-size($base-font-size * 1.5);
-}
 .entry-summary p {
 @include font-size(18px);
 font-weight: 300;

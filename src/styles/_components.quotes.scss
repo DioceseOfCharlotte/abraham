@@ -6,9 +6,9 @@
 blockquote {
   //font-family: Georgia, Times, "Times New Roman", serif;
   color: $color-text-light;
-  margin: $base-spacing-unit;
+  margin: 0;
   border-left: 5px solid $color-grey-ui;
-  padding-left: 20px;
+  //padding-left: 20px;
 }
 
 blockquote blockquote {
@@ -22,7 +22,6 @@ blockquote cite {
   font-family: $font-body;
   font-style: normal;
   font-size: 80%;
-  text-align: right;
   font-weight: 500;
   margin-top: 12px;
   padding-top: 13px;
@@ -33,4 +32,8 @@ blockquote cite {
 blockquote cite::before {
   content: "\2014";
   padding-right: 10px;
+}
+
+.pf-content {
+  padding: $base-spacing-unit-sm;
 }
