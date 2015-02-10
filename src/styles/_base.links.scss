@@ -8,24 +8,25 @@
 */
 
 a {
-  transition: color .4s;
+  transition: color .3s;
   color: $color-links;
+  text-decoration: none;
 }
 
-a:link, 
+a:link,
 a:visited { color: $color-links; }
 a:hover   { color: $color-links-hover; }
-a:active  { 
-  transition: color .3s;
-  color: $color-links-visited; 
+a:active  {
+  transition: color .2s;
+  color: $color-links-active;
 }
 
 .link { text-decoration: none; }
 
 .entry-content a, .entry-summary a, .comment-content a {
-border-bottom: 1px solid rgba($color-links, 0.2);
-transition: all .2s linear;
+border-bottom: 1px solid currentColor;
+transition: color .3s, border-color .3s;
 &:hover {
-	border-bottom: 1px solid rgba($color-links-hover, 0.4);
+	border-bottom: 1px solid currentColor;
 }
 }

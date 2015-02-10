@@ -43,21 +43,36 @@ $red-flat-700:      #D50000;
 
 // Blues
 
-$blue-50:           #E3F2FD;
-$blue-100:          #BBDEFB;
-$blue-200:          #90CAF9;
-$blue-300:          #64B5F6;
-$blue-400:          #42A5F5;
-$blue-500:          #2196F3;
-$blue-600:          #1E88E5;
-$blue-700:          #1976D2;
-$blue-800:          #1565C0;
-$blue-900:          #0D47A1;
+// $blue-50:           #E3F2FD;
+// $blue-100:          #BBDEFB;
+// $blue-200:          #90CAF9;
+// $blue-300:          #64B5F6;
+// $blue-400:          #42A5F5;
+// $blue-500:          #2196F3;
+// $blue-600:          #1E88E5;
+// $blue-700:          #1976D2;
+// $blue-800:          #1565C0;
+// $blue-900:          #0D47A1;
 
 $blue-flat-100:     #82B1FF;
 $blue-flat-200:     #448AFF;
 $blue-flat-400:     #2979FF;
 $blue-flat-700:     #2962FF;
+
+
+
+$blue-500:          #0074D9;
+
+$blue-50:           lighten($blue-500, 50);
+$blue-100:          lighten($blue-500, 40);
+$blue-200:          lighten($blue-500, 30);
+$blue-300:          lighten($blue-500, 20);
+$blue-400:          lighten($blue-500, 10);
+$blue-600:          darken($blue-500, 10);
+$blue-700:          darken($blue-500, 20);
+$blue-800:          darken($blue-500, 30);
+$blue-900:          darken($blue-500, 50);
+
 
 
 // Greens
@@ -157,9 +172,9 @@ $color-headings:          $grey-600;
 
 $color-text-light-hover:  $grey-700;
 
-$color-links:           	$blue-700;
-$color-links-hover:     	$blue-300;
-$color-links-visited:     $blue-500;
+$color-links:           	$blue-600;
+$color-links-hover:     	$blue-400;
+$color-links-active:     $blue-500;
 
 
 
@@ -169,12 +184,12 @@ $color-links-visited:     $blue-500;
 $color-header: 				$color-primary;
 
 // Buttons
-$btn-text:        			 #fff;
-$btn-bg:  					     $grey-500;
-$btn-bg-hover:  			   lighten($btn-bg, 5);
-$btn-bg-active:  			  darken($btn-bg, 5);
-$btn-primary-bg:  			$color-primary;
-$btn-primary-text:  		#fff;
+$btn-text:            #fff;
+$btn-bg:              $blue-500;
+$btn-bg-hover:        $blue-600;
+$btn-bg-active:       $blue-700;
+$btn-primary-bg:      $color-primary;
+$btn-primary-text:    #fff;
 
 
 $color-hr: 					$color-grey-ui;

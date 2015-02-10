@@ -1542,33 +1542,47 @@ h6 a:active {
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
+/*
+   links.css - v0.0.1 - "Smarter defaults for links"
+   License MIT
+*/
 a {
-    color: #2196f3;
-    font-weight: 500;
-    text-decoration: none;
-    -webkit-transition: color 0.1s linear;
-    transition: color 0.1s linear;
+    color: #0059a6;
+    text-decoration: none; 
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
 }
+
+a:link,
 a:visited {
-    color: #4b85b4;
+    color: #0059a6;
 }
-a:hover,
-a:focus,
+
+a:hover {
+    color: #0d8eff;
+}
+
 a:active {
-    color: #0a6ebd;
+    color: #0074d9; 
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.link {
+    text-decoration: none;
 }
 
 .entry-content a,
 .entry-summary a,
 .comment-content a {
-    border-bottom: 1px solid rgba(33, 150, 243, 0.2);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    border-bottom: 1px solid currentColor;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 .entry-content a:hover,
 .entry-summary a:hover,
 .comment-content a:hover {
-    border-bottom: 1px solid rgba(10, 110, 189, 0.4);
+    border-bottom: 1px solid currentColor;
 }
 
 /*------------------------------------*\
@@ -3304,7 +3318,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid #2196f3;
+    border: 1px solid #0074d9;
     outline: 0;
 }
 
@@ -4201,7 +4215,7 @@ input[type="submit"],
     border-radius: 2px;
     outline: 0;
     color: #fff;
-    background-color: #9e9e9e;
+    background-color: #0074d9;
     cursor: pointer;
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
@@ -4215,7 +4229,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .button:hover {
-    background-color: #ababab;
+    background-color: #0059a6;
 }
 .btn:focus,
 .comment-reply-link:focus,
@@ -4235,7 +4249,7 @@ input[type="submit"]:focus,
 input[type="submit"]:active,
 .button:focus,
 .button:active {
-    background-color: #919191;
+    background-color: #003d73;
 }
 
 .entry-terms a {
