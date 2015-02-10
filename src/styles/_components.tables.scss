@@ -5,9 +5,13 @@
 table {
 	margin: 0 0 $base-spacing-unit;
 	width: 100%;
+  table-layout: fixed;
 }
 
 th {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 	font-weight: bold;
 }
 
@@ -15,15 +19,29 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid $color-grey-ui; 
+  border: 1px solid #eaeaea;
+  border: 1px solid rgba(51, 51, 51, 0.1);
 }
 
 th:first-child,
 td:first-child {
-  padding-left: 0; 
+  padding-left: 0;
 }
 
 th:last-child,
 td:last-child {
-  padding-right: 0; 
+  padding-right: 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #eaeaea;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+td {
+  border-width: 0 1px 1px 0;
+  white-space: nowrap;
+  overflow: auto;
 }

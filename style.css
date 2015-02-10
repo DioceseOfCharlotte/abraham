@@ -4455,18 +4455,23 @@ kbd {
     #TABLES
 \*------------------------------------*/
 table {
-    width: 100%; 
+    width: 100%;
     margin: 0 0 24px;
+    table-layout: fixed;
 }
 
 th {
-    font-weight: bold;
+    overflow: hidden;
+    font-weight: bold; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 th,
 td {
     padding: 12px 15px;
-    border-bottom: 1px solid #bdbdbd; 
+    border: 1px solid #eaeaea;
+    border: 1px solid rgba(51, 51, 51, 0.1); 
     text-align: left;
 }
 
@@ -4478,6 +4483,19 @@ td:first-child {
 th:last-child,
 td:last-child {
     padding-right: 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #eaeaea;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+td {
+    overflow: auto; 
+    border-width: 0 1px 1px 0;
+    white-space: nowrap;
 }
 
 /*------------------------------------*\
