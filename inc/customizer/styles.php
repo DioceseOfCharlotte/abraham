@@ -30,8 +30,13 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.menu__primary'
-
+				'.menu__primary,
+				.btn,
+				button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.button'
 			),
 			'declarations' => array(
 				'background-color' => $darken
@@ -58,8 +63,13 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header'
-
+				'.site-header,
+				.btn:hover,
+				button:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				.button:hover'
 			),
 			'declarations' => array(
 				'background-color' => $color
