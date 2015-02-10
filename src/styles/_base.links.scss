@@ -27,6 +27,6 @@ a:active  {
 border-bottom: 1px solid currentColor;
 transition: color .3s, border-color .3s;
 &:hover {
-	border-bottom: 1px solid currentColor;
+	border-bottom-color: currentColor;
 }
 }

@@ -1582,7 +1582,7 @@ a:active {
 .entry-content a:hover,
 .entry-summary a:hover,
 .comment-content a:hover {
-    border-bottom: 1px solid currentColor;
+    border-bottom-color: currentColor;
 }
 
 /*------------------------------------*\
@@ -4203,6 +4203,10 @@ input.datepicker_with_icon {
 .comment-reply-link,
 .comment-reply-login,
 .entry-terms a,
+a.btn,
+a.comment-reply-link,
+a.comment-reply-login,
+.entry-terms a,
 button,
 input[type="button"],
 input[type="reset"],
@@ -4210,6 +4214,7 @@ input[type="submit"],
 .button {
     display: inline-block;
     width: auto;
+    margin: 0.3em;
     padding: 16px 24px;
     border: 0;
     border-radius: 2px;
@@ -4223,6 +4228,10 @@ input[type="submit"],
 .btn:hover,
 .comment-reply-link:hover,
 .comment-reply-login:hover,
+.entry-terms a:hover,
+a.btn:hover,
+a.comment-reply-link:hover,
+a.comment-reply-login:hover,
 .entry-terms a:hover,
 button:hover,
 input[type="button"]:hover,
@@ -4238,6 +4247,14 @@ input[type="submit"]:hover,
 .btn:active,
 .comment-reply-link:active,
 .comment-reply-login:active,
+.entry-terms a:active,
+a.btn:focus,
+a.comment-reply-link:focus,
+a.comment-reply-login:focus,
+.entry-terms a:focus,
+a.btn:active,
+a.comment-reply-link:active,
+a.comment-reply-login:active,
 .entry-terms a:active,
 button:focus,
 button:active,

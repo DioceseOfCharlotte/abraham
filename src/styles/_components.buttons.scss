@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .btn,
+a.btn,
 button,
 input[type="button"],
 input[type="reset"],
@@ -17,6 +18,7 @@ input[type="submit"],
   width: auto;
   display: inline-block;
   outline: 0;
+  margin: .3em;
   transition: all $base-transition-speed ease-in-out;
 
   &:hover {
