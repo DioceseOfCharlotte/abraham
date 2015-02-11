@@ -79,3 +79,12 @@ function abraham_sidebars() {
 		'description' => __( 'Typically located in the footer.', 'abraham' )
 	] );
 }
+
+
+add_action( 'init', 'abraham_theme_layouts_add_cpt' );
+
+	function abraham_theme_layouts_add_cpt() {
+	register_meta( 'gravityview', theme_layouts_get_meta_key(), 'theme_layouts_sanitize_meta' );
+
+	add_post_type_support( 'gravityview', 'theme-layouts' );
+}

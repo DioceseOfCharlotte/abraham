@@ -4,8 +4,22 @@
 
 
   /* Links */
-  a[href^="mailto:"]::before { content: '\f410'; }
-  a[href^="tel:"]::before    { content: '\f437'; }
+  a[href^="mailto:"]::before {
+    content: $envelope-o;
+    @include font-icon();
+    padding-right: 5px;
+   }
+  a[href^="tel:"]::before    {
+    content: $phone;
+    @include font-icon();
+    padding-right: 5px;
+   }
+
+a[href*="maps.google.com"]::before {
+    content: $map-marker;
+    @include font-icon();
+    padding-right: 5px;
+}
 
   a.post-edit-link {
     font-weight: 400;

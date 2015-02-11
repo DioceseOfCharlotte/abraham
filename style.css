@@ -4789,11 +4789,48 @@ img {
 \*------------------------------------*/
 /* Links */
 a[href^="mailto:"]::before {
-    content: "\f410";
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f003";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 a[href^="tel:"]::before {
-    content: "\f437";
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f095";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+a[href*="maps.google.com"]::before {
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f041";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 a.post-edit-link {
