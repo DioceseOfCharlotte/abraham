@@ -588,19 +588,10 @@ cursor: not-allowed;
   }
 }
 }
-
-.gform_drop_area {
-  border: 1px dashed #9e9e9e;
-  height: 200px;
+.gform_fileupload_multifile .gform_drop_area {
+  padding: 25px;
+  border: 2px dashed #ddd;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-
-.gform_button_select_files {
-  max-width: 160px;
-  align-self: center;
+  color: #aaa;
+  margin-bottom: 10px;
 }
