@@ -5,10 +5,11 @@
 .btn,
 a.btn,
 button,
+.button,
+a.button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.button {
+input[type="submit"] {
   background-color: $btn-bg;
   border: 0;
   border-radius: $base-radius;
