@@ -2,7 +2,7 @@
     "name": "meh/kit",
     "description": "theme library",
     "require": {
-        "justintadlock/hybrid-core": "~2.1.*",
+        "justintadlock/hybrid-core": "dev-dev",
         "devinsays/customizer-library": "dev-master",
         "zamoose/themehookalliance": "dev-master"
     },
