@@ -30,7 +30,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.menu__primary,
+				'.site-header,
 				a.btn,
 				.btn,
 				button,
@@ -64,8 +64,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header,
-				a.btn:hover,
+				'a.btn:hover,
 				.btn:hover,
 				button:hover,
 				input[type="button"]:hover,
@@ -80,7 +79,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header,
+				'.menu__primary,
 				a.btn:active,
 				.btn:active,
 				button:active,

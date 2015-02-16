@@ -1499,44 +1499,61 @@ h6 {
     color: #757575;
 }
 h1 a,
+h1 a:visited,
 h2 a,
+h2 a:visited,
 h3 a,
+h3 a:visited,
 h4 a,
+h4 a:visited,
 h5 a,
-h6 a {
+h5 a:visited,
+h6 a,
+h6 a:visited {
     color: inherit;
     font-weight: inherit;
     text-decoration: none;
-    -webkit-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
-}
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-    color: inherit;
+    -webkit-transition: opacity 0.2s ease, border-color 0.2s;
+    transition: opacity 0.2s ease, border-color 0.2s;
 }
 h1 a:hover,
 h1 a:focus,
 h1 a:active,
+h1 a:visited:hover,
+h1 a:visited:focus,
+h1 a:visited:active,
 h2 a:hover,
 h2 a:focus,
 h2 a:active,
+h2 a:visited:hover,
+h2 a:visited:focus,
+h2 a:visited:active,
 h3 a:hover,
 h3 a:focus,
 h3 a:active,
+h3 a:visited:hover,
+h3 a:visited:focus,
+h3 a:visited:active,
 h4 a:hover,
 h4 a:focus,
 h4 a:active,
+h4 a:visited:hover,
+h4 a:visited:focus,
+h4 a:visited:active,
 h5 a:hover,
 h5 a:focus,
 h5 a:active,
+h5 a:visited:hover,
+h5 a:visited:focus,
+h5 a:visited:active,
 h6 a:hover,
 h6 a:focus,
-h6 a:active {
+h6 a:active,
+h6 a:visited:hover,
+h6 a:visited:focus,
+h6 a:visited:active {
     opacity: 0.5;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -1548,42 +1565,34 @@ h6 a:active {
    License MIT
 */
 a {
+    border-bottom: 1px solid transparent; 
     color: #0059a6;
-    text-decoration: none; 
-    -webkit-transition: color 0.3s;
-    transition: color 0.3s;
+    text-decoration: none;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 
-a:link,
+a:link:not(h2 a),
 a:visited {
-    color: #0059a6;
+    color: #0059a6; 
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 a:hover {
+    border-bottom-color: currentColor; 
     color: #0d8eff;
 }
 
 a:active {
-    color: #0074d9; 
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
+    border-bottom-color: currentColor; 
+    color: #0074d9;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 .link {
     text-decoration: none;
-}
-
-.entry-content a,
-.entry-summary a,
-.comment-content a {
-    border-bottom: 1px solid currentColor;
-    -webkit-transition: color 0.3s, border-color 0.3s;
-    transition: color 0.3s, border-color 0.3s;
-}
-.entry-content a:hover,
-.entry-summary a:hover,
-.comment-content a:hover {
-    border-bottom-color: currentColor;
 }
 
 /*------------------------------------*\
@@ -2750,8 +2759,8 @@ a.comments-link {
     font-weight: 400;
     line-height: 22px;
     text-align: center;
-    -webkit-transition: background 0.1s linear;
-    transition: background 0.1s linear;
+    -webkit-transition: background 0.2s linear;
+    transition: background 0.2s linear;
 }
 a.comments-link:hover {
     color: #fff;
@@ -2771,14 +2780,14 @@ a.comments-link:hover:before {
     border-right: 10px solid #9e9e9e;
     border-bottom: 0 solid transparent;
     content: "";
-    -webkit-transition: border-color 0.1s linear;
-    transition: border-color 0.1s linear;
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
 }
 
 .featured-media a {
     opacity: 1;
-    -webkit-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -3027,8 +3036,8 @@ li.ping:before,
     font-weight: 400;
     font-style: italic;
     cursor: pointer;
-    -webkit-transition: color 0.1s linear;
-    transition: color 0.1s linear;
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear;
 }
 .form-allowed__label:before {
     display: inline-block;
@@ -3042,8 +3051,8 @@ li.ping:before,
     -moz-osx-font-smoothing: grayscale;
     text-decoration: none;
     content: "\f059";
-    -webkit-transition: color 0.1s linear;
-    transition: color 0.1s linear; 
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear; 
     text-rendering: auto;
 
     speak: none;
@@ -4224,7 +4233,6 @@ input[type="reset"],
 input[type="submit"] {
     display: inline-block;
     width: auto;
-    margin: 0.3em;
     padding: 16px 24px;
     border: 0;
     border-radius: 2px;
@@ -4232,8 +4240,24 @@ input[type="submit"] {
     color: #fff;
     background-color: #0074d9;
     cursor: pointer;
-    -webkit-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn:not(.search-submit),
+.comment-reply-link:not(.search-submit),
+.comment-reply-login:not(.search-submit),
+.entry-terms a:not(.search-submit),
+a.btn:not(.search-submit),
+a.comment-reply-link:not(.search-submit),
+a.comment-reply-login:not(.search-submit),
+.entry-terms a:not(.search-submit),
+button:not(.search-submit),
+.button:not(.search-submit),
+a.button:not(.search-submit),
+input[type="button"]:not(.search-submit),
+input[type="reset"]:not(.search-submit),
+input[type="submit"]:not(.search-submit) {
+    margin: 0.3em;
 }
 .btn:hover,
 .comment-reply-link:hover,

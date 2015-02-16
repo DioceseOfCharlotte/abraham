@@ -19,7 +19,10 @@ input[type="submit"] {
   width: auto;
   display: inline-block;
   outline: 0;
+
+  &:not(.search-submit) {
   margin: .3em;
+}
   transition: all $base-transition-speed ease-in-out;
 
   &:hover {
