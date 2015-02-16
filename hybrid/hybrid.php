@@ -24,9 +24,9 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   HybridCore
- * @version   2.0.4
+ * @version   2.1.0-dev
  * @author    Justin Tadlock <justin@justintadlock.com>
- * @copyright Copyright (c) 2008 - 2014, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2015, Justin Tadlock
  * @link      http://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -104,7 +104,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function constants() {
 
 			/* Sets the framework version number. */
-			define( 'HYBRID_VERSION', '2.0.4' );
+			define( 'HYBRID_VERSION', '2.1.0' );
 
 			/* Sets the path to the parent theme directory. */
 			define( 'THEME_DIR', get_template_directory() );
@@ -246,6 +246,9 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @return void
 		 */
 		function theme_support() {
+
+			/* Automatically add <title> to head. */
+			add_theme_support( 'title-tag' );
 
 			/* Adds core WordPress HTML5 support. */
 			add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
