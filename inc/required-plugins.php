@@ -15,13 +15,13 @@ function abraham_required_plugins() {
 	 */
 	$plugins = array(
 
-        array(
-            'name'               => 'Shortcode UI', // The plugin name.
-            'slug'               => 'Shortcake-0.1.0', // The plugin slug (typically the folder name).
-            'source'             => 'https://github.com/fusioneng/Shortcake/archive/v0.1.0.zip', // The plugin source.
-            'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-            'external_url'       => 'https://github.com/fusioneng/Shortcake', // If set, overrides default API URL and points to an external URL.
-        ),
+        // array(
+        //     'name'               => 'Shortcode UI', // The plugin name.
+        //     'slug'               => 'Shortcake-0.1.0', // The plugin slug (typically the folder name).
+        //     'source'             => 'https://github.com/fusioneng/Shortcake/archive/v0.1.0.zip', // The plugin source.
+        //     'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+        //     'external_url'       => 'https://github.com/fusioneng/Shortcake', // If set, overrides default API URL and points to an external URL.
+        // ),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
