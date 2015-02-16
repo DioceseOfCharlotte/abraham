@@ -25,7 +25,7 @@ input[type="submit"] {
   &:hover {
   background-color: $btn-bg-hover;
 }
-  &:focus, &:active {
+  &:active {
   background-color: $btn-bg-active;
 }
 

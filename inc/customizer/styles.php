@@ -31,6 +31,7 @@ function customizer_library_abraham_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.menu__primary,
+				a.btn,
 				.btn,
 				button,
 				input[type="button"],
@@ -39,7 +40,7 @@ function customizer_library_abraham_styles() {
 				.button'
 			),
 			'declarations' => array(
-				'background-color' => $darken
+				'background-color' => $color
 			)
 		) );
 
@@ -64,6 +65,7 @@ function customizer_library_abraham_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.site-header,
+				a.btn:hover,
 				.btn:hover,
 				button:hover,
 				input[type="button"]:hover,
@@ -72,7 +74,23 @@ function customizer_library_abraham_styles() {
 				.button:hover'
 			),
 			'declarations' => array(
-				'background-color' => $color
+				'background-color' => $lighten
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-header,
+				a.btn:active,
+				.btn:active,
+				button:active,
+				input[type="button"]:active,
+				input[type="reset"]:active,
+				input[type="submit"]:active,
+				.button:active'
+			),
+			'declarations' => array(
+				'background-color' => $darken
 			)
 		) );
 
