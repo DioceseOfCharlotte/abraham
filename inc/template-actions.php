@@ -43,8 +43,5 @@ function abraham_get_default_footer_text() {
 	date_i18n( 'Y' ),
 	hybrid_get_site_link()
 	);
-	$text .= '<span class="sep"> | </span>';
-	$text .= sprintf(
-		__( ' %s', 'abraham' ), '<a href="http://www.charlottediocese.org/" rel="designer">Diocese of Charlotte</a>' );
 	return $text;
 }
