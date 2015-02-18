@@ -13,11 +13,11 @@ Opinionated styles are kept to a minimum which give child themes a bit more free
 - Gulp with [BrowserSync](https://github.com/shakyShane/browser-sync)
 - SASS with BEM-like structure based on Harry Roberts' [CSS Guidelines](http://cssguidelin.es/)
 - Advanced development features and best practices borrowed from Google’s [Web Starter Kit](https://developers.google.com/web/starter-kit/) including:
-..* Multi-device responsive boilerplate
-..* Cross-device Synchronization
-..* Live Browser Reloading
-..* Performance optimization
-..* Built in HTTP Server
+⋅⋅* Multi-device responsive boilerplate
+⋅⋅* Cross-device Synchronization
+⋅⋅* Live Browser Reloading
+⋅⋅* Performance optimization
+⋅⋅* Built in HTTP Server
 
 #### Additional libraries for advanced Wordpress theming.
 - Advanced theming functions and solid child theme support via [Hybrid Core](http://themehybrid.com/hybrid-core)
