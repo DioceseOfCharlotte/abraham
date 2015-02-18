@@ -23,7 +23,7 @@
 
 		<?php tha_header_top(); ?>
 
-			<div class="site-branding">
+			<div <?php hybrid_attr( 'branding' ); ?>>
 				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span></span></button>
 
 				<?php if ( get_theme_mod( 'logo', 0 ) ) {
