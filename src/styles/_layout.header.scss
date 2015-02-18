@@ -12,13 +12,18 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $white;
+  background-color: $color-primary;
   overflow: hidden;
   z-index: 1;
   @include shadow-z1();
 }
 
+.site-title {
+  color: $white;
+}
+
 .site-description {
+  color: $white;
   opacity: .8;
 }
 

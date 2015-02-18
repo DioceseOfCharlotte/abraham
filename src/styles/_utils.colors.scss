@@ -43,24 +43,6 @@ $red-flat-700:      #D50000;
 
 // Blues
 
-// $blue-50:           #E3F2FD;
-// $blue-100:          #BBDEFB;
-// $blue-200:          #90CAF9;
-// $blue-300:          #64B5F6;
-// $blue-400:          #42A5F5;
-// $blue-500:          #2196F3;
-// $blue-600:          #1E88E5;
-// $blue-700:          #1976D2;
-// $blue-800:          #1565C0;
-// $blue-900:          #0D47A1;
-
-$blue-flat-100:     #82B1FF;
-$blue-flat-200:     #448AFF;
-$blue-flat-400:     #2979FF;
-$blue-flat-700:     #2962FF;
-
-
-
 $blue-500:          #0074D9;
 
 $blue-50:           lighten($blue-500, 50);
@@ -73,7 +55,24 @@ $blue-700:          darken($blue-500, 20);
 $blue-800:          darken($blue-500, 30);
 $blue-900:          darken($blue-500, 50);
 
+$blue-flat-100:     #82B1FF;
+$blue-flat-200:     #448AFF;
+$blue-flat-400:     #2979FF;
+$blue-flat-700:     #2962FF;
 
+// Blue Greys
+
+$blue-grey-500:          #607D8B;
+
+$blue-grey-50:           lighten($blue-grey-500, 50);
+$blue-grey-100:          lighten($blue-grey-500, 40);
+$blue-grey-200:          lighten($blue-grey-500, 30);
+$blue-grey-300:          lighten($blue-grey-500, 20);
+$blue-grey-400:          lighten($blue-grey-500, 10);
+$blue-grey-600:          darken($blue-grey-500, 10);
+$blue-grey-700:          darken($blue-grey-500, 20);
+$blue-grey-800:          darken($blue-grey-500, 30);
+$blue-grey-900:          darken($blue-grey-500, 50);
 
 // Greens
 
@@ -154,8 +153,9 @@ $black:             #000000;
 $white:             #ffffff;
 // Brand
 
-$color-primary:         	$grey-400;
-$color-primary-dark:      darken($color-primary, 50);
+$color-primary-light:      	$blue-grey-400;
+$color-primary:         	$blue-grey-500;
+$color-primary-dark:      	$blue-grey-600;
 $color-secondary:       	$green-800;
 
 
@@ -185,9 +185,9 @@ $color-header: 				$color-primary;
 
 // Buttons
 $btn-text:            #fff;
-$btn-bg:              $blue-500;
-$btn-bg-hover:        $blue-600;
-$btn-bg-active:       $blue-700;
+$btn-bg:              $color-primary;
+$btn-bg-hover:        $color-primary-light;
+$btn-bg-active:       $color-primary-dark;
 $btn-primary-bg:      $color-primary;
 $btn-primary-text:    #fff;
 

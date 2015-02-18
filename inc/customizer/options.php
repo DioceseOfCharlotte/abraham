@@ -8,7 +8,7 @@
 function customizer_library_abraham_options() {
 
 	// Theme defaults
-	$primary_color = '#455A64';
+	$primary_color = '#607D8B';
 	$secondary_color = '#9E9E9E';
 
 	// Stores all the controls that will be added

@@ -111,8 +111,8 @@ gulp.task('scripts', function() {
 // Build and serve the output
 gulp.task('serve', ['default'], function () {
   browserSync({
-    //proxy: "local.wordpress.dev"
-    proxy: "local.wordpress-trunk.dev"
+    proxy: "local.wordpress.dev"
+    //proxy: "local.wordpress-trunk.dev"
     //proxy: "doc-beta.dev"
      });
 

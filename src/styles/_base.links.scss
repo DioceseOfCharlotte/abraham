@@ -7,29 +7,27 @@
    License MIT
 */
 
-a {
-  transition: color .3s, border-color .3s;
-  color: $color-links;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-a:link:not(h2 a),
+a,
 a:visited {
   transition: color .3s, border-color .3s;
   color: $color-links;
+  text-decoration: none;
 }
+
 a:hover   {
   color: $color-links-hover;
-  border-bottom-color: currentColor;
 }
 a:active  {
   transition: color .3s, border-color .3s;
   color: $color-links-active;
-  border-bottom-color: currentColor;
 }
 
-.link { text-decoration: none; }
+li:not(.menu-item) a, p a {
+  border-bottom: 1px solid transparent;
+  &:hover, &:active {
+  border-bottom-color: currentColor;
+  }
+}
 
 // .entry-content p a, .entry-summary p a, .comment-content a {
 // border-bottom: 1px solid transparent;
