@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## In Progress
+#### Added
+-  Defined shades for the Primary and Secondary colors in the Customizer.
+
+#### Fixed
+-  Blockquote padding.
+
 ## 0.2.2 - 2015-02-16
 #### Changed
 -  Removed underline from image and header links.
