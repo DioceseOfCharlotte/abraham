@@ -8,8 +8,10 @@
 function customizer_library_abraham_options() {
 
 	// Theme defaults
-	$primary_color = '#607D8B';
-	$secondary_color = '#9E9E9E';
+	$primary_color 		= '#607D8B';
+	$secondary_color 	= '#9E9E9E';
+	$body_font			= 'Roboto';
+	$heading_font		= 'Merriweather';
 
 	// Stores all the controls that will be added
 	$options = array();
@@ -95,7 +97,7 @@ function customizer_library_abraham_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
-		'default' => 'Roboto'
+		'default' => $body_font
 	);
 
 	$options['secondary-font'] = array(
@@ -104,7 +106,7 @@ function customizer_library_abraham_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
-		'default' => 'Merriweather'
+		'default' => $heading_font
 	);
 
 	// Decorations

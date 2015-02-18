@@ -21,12 +21,20 @@ function customizer_library_abraham_styles() {
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
+	$color = sanitize_hex_color( $mod );
+	$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
+
 		$simple_color_adjuster = new Simple_Color_Adjuster;
-		$color = sanitize_hex_color( $mod );
-		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
-		$percentage = 10;
-		$darken 	= $simple_color_adjuster->darken( $color, $percentage );
-		$lighten 	= $simple_color_adjuster->lighten( $color, $percentage );
+		$color50 	= $simple_color_adjuster->lighten( $color, 50 );
+		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
+		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
+		$color300 	= $simple_color_adjuster->lighten( $color, 20 );
+		$color400 	= $simple_color_adjuster->lighten( $color, 10 );
+		$color500 	= $color;
+		$color600 	= $simple_color_adjuster->darken( $color, 10 );
+		$color700 	= $simple_color_adjuster->darken( $color, 20 );
+		$color800 	= $simple_color_adjuster->darken( $color, 30 );
+		$color900 	= $simple_color_adjuster->darken( $color, 40 );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
@@ -73,7 +81,7 @@ function customizer_library_abraham_styles() {
 				.button:hover'
 			),
 			'declarations' => array(
-				'background-color' => $lighten
+				'background-color' => $color400
 			)
 		) );
 
@@ -89,7 +97,7 @@ function customizer_library_abraham_styles() {
 				.button:active'
 			),
 			'declarations' => array(
-				'background-color' => $darken
+				'background-color' => $color600
 			)
 		) );
 
@@ -98,7 +106,7 @@ function customizer_library_abraham_styles() {
 				'.featured-media>a'
 			),
 			'declarations' => array(
-				'background-color' => $darken
+				'background-color' => $color600
 			)
 		) );
 
@@ -113,12 +121,24 @@ function customizer_library_abraham_styles() {
 		$color = sanitize_hex_color( $mod );
 		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
+		$simple_color_adjuster = new Simple_Color_Adjuster;
+		$color50 	= $simple_color_adjuster->lighten( $color, 50 );
+		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
+		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
+		$color300 	= $simple_color_adjuster->lighten( $color, 20 );
+		$color400 	= $simple_color_adjuster->lighten( $color, 10 );
+		$color500 	= $color;
+		$color600 	= $simple_color_adjuster->darken( $color, 10 );
+		$color700 	= $simple_color_adjuster->darken( $color, 20 );
+		$color800 	= $simple_color_adjuster->darken( $color, 30 );
+		$color900 	= $simple_color_adjuster->darken( $color, 40 );
+
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.site-footer'
 			),
 			'declarations' => array(
-				'background-color' => $color
+				'background-color' => $color500
 			)
 		) );
 	}

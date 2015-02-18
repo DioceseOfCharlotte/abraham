@@ -1131,7 +1131,7 @@ th {
     #BASE
 \*------------------------------------*/
 html {
-    color: #212121;
+    color: #1f1f1f;
     font-size: 16px;
     line-height: 24px;
 }
@@ -1308,7 +1308,7 @@ mark,
 ins {
     display: inline-block;
     padding: 0 0.125em; 
-    background: #fff9c4;
+    background: white;
     text-decoration: none;
 }
 
@@ -1340,7 +1340,7 @@ big {
 s,
 strike,
 del {
-    color: #5f5f5f; 
+    color: #5e5e5e; 
     text-decoration: line-through;
 }
 
@@ -1496,7 +1496,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #757575;
+    color: #858585;
 }
 h1 a,
 h1 a:visited,
@@ -1628,7 +1628,7 @@ ol ul {
     bottom: 0;
     width: 250px;
     height: 100%;
-    color: #fafafa;
+    color: white;
     background-color: #4b626d;
     -webkit-transform: translate(-250px, 0);
     -ms-transform: translate(-250px, 0);
@@ -1712,7 +1712,7 @@ ol ul {
     transition: background-color 0.2s ease-out;
 }
 .menu-item a:hover {
-    background-color: rgba(224, 224, 224, 0.4);
+    background-color: rgba(209, 209, 209, 0.4);
 }
 @media only screen and (min-width: 48em) {
     .menu-item {
@@ -1729,7 +1729,7 @@ ol ul {
 .sidebar .menu-item a {
     padding-top: 0; 
     padding-bottom: 0;
-    color: #212121;
+    color: #1f1f1f;
     line-height: 40px;
 }
 
@@ -1812,16 +1812,16 @@ ol ul {
 }
 
 .menu-toggle:hover {
-    background-color: rgba(66, 66, 66, 0.1);
+    background-color: rgba(82, 82, 82, 0.1);
 }
 
 .menu-toggle:focus:not(:active) {
     outline: 0; 
-    background-color: rgba(66, 66, 66, 0.2);
+    background-color: rgba(82, 82, 82, 0.2);
 }
 
 .menu-toggle:active {
-    background-color: rgba(66, 66, 66, 0.4);
+    background-color: rgba(82, 82, 82, 0.4);
 }
 
 /* Small menu */
@@ -1863,7 +1863,7 @@ ol ul {
 }
 .sub-menu a {
     padding: 20px;
-    color: #212121;
+    color: #1f1f1f;
     font-size: 15px;
     font-size: 0.9375rem; 
     line-height: 1;
@@ -2194,7 +2194,7 @@ body.open {
 \*------------------------------------*/
 .site-info {
     color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(66, 66, 66, 0.2);
+    background-color: rgba(82, 82, 82, 0.2);
 }
 .site-info a {
     color: inherit;
@@ -2204,7 +2204,7 @@ body.open {
     display: block;
     width: 100%;
     margin: 0;
-    background-color: #e0e0e0; 
+    background-color: #d1d1d1; 
     text-align: left;
 }
 .site-footer a {
@@ -2247,7 +2247,7 @@ body.open {
     min-width: 300px;
     max-width: 700px;
     border: 0;
-    background-color: rgba(66, 66, 66, 0.2);
+    background-color: rgba(82, 82, 82, 0.2);
     text-align: left;
     vertical-align: top;
 }
@@ -2299,8 +2299,8 @@ body.open {
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
-    border: 1px solid #e0e0e0;
-    border-top-color: #eee; 
+    border: 1px solid #d1d1d1;
+    border-top-color: #ebebeb; 
     border-bottom-width: 2px;
     border-radius: 2px;
     background-color: #fff;
@@ -2357,7 +2357,7 @@ body.open {
 .widget-title {
     margin-bottom: 5.92px;
     padding-bottom: 5.92px;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #b8b8b8;
     line-height: 1;
 }
 @media only screen and (min-width: 48em) {
@@ -2482,8 +2482,8 @@ body.open {
     width: 100%; 
     margin-bottom: 16px;
     padding-top: 16px;
-    border: 1px solid #e0e0e0;
-    border-top-color: #eee;
+    border: 1px solid #d1d1d1;
+    border-top-color: #ebebeb;
     border-bottom-width: 2px;
     border-radius: 2px;
     background-color: #fff;
@@ -2608,8 +2608,8 @@ body.open {
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
-    border-top: 1px solid #e0e0e0;
-    color: #757575;
+    border-top: 1px solid #d1d1d1;
+    color: #858585;
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 400;
@@ -2643,7 +2643,7 @@ body.open {
     }
 }
 .entry-footer a {
-    color: #757575; 
+    color: #858585; 
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 400;
@@ -2653,7 +2653,7 @@ body.open {
     text-transform: uppercase;
 }
 .entry-footer a:hover {
-    color: #212121;
+    color: #1f1f1f;
 }
 
 .post-navigation {
@@ -2683,7 +2683,7 @@ body.open {
     text-transform: uppercase;
 }
 .post-navigation .post-title {
-    color: #212121; 
+    color: #1f1f1f; 
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 400;
@@ -2767,10 +2767,10 @@ a.comments-link {
 }
 a.comments-link:hover {
     color: #fff;
-    background: #616161;
+    background: #6b6b6b;
 }
 a.comments-link:hover:before {
-    border-right-color: #616161;
+    border-right-color: #6b6b6b;
 }
 
 .comments-link:before {
@@ -2815,8 +2815,8 @@ a.post-format-link {
     padding-right: 16px;
     padding-bottom: 11.84px;
     padding-left: 16px;
-    border: 1px solid #e0e0e0;
-    border-top-color: #eee; 
+    border: 1px solid #d1d1d1;
+    border-top-color: #ebebeb; 
     border-bottom-width: 2px;
     border-radius: 2px;
     background-color: #fff;
@@ -2910,7 +2910,7 @@ li.ping,
     padding-left: 16px;
     border: 0;
     border-radius: 2px;
-    background: #eee;
+    background: #ebebeb;
 }
 @media only screen and (min-width: 48em) {
     li.ping,
@@ -2959,7 +2959,7 @@ li.ping:before,
     width: 0;
     height: 0;
     border-right: 0 solid transparent;
-    border-bottom: 20px solid #eee;
+    border-bottom: 20px solid #ebebeb;
     border-left: 15px solid transparent;
     content: "";
 }
@@ -2968,7 +2968,7 @@ li.ping:before,
     right: 10px;
     left: auto;
     border-right: 15px solid transparent; 
-    border-bottom: 20px solid #eee;
+    border-bottom: 20px solid #ebebeb;
     border-left: 0 solid transparent;
 }
 
@@ -3061,11 +3061,11 @@ li.ping:before,
     speak: none;
 }
 .form-allowed__label:hover:before {
-    color: #616161;
+    color: #6b6b6b;
 }
 
 .form-allowed__input:checked ~ .form-allowed__label-wrap .form-allowed__label:before {
-    color: #616161;
+    color: #6b6b6b;
 }
 
 .form-allowed__code {
@@ -3294,7 +3294,7 @@ select {
     width: 100%;
     height: 40px;
     padding: 6px 10px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #b8b8b8;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: none;
@@ -3339,7 +3339,7 @@ label,
 legend {
     display: block;
     margin: 5px 0 5px 5px;
-    color: #616161;
+    color: #6b6b6b;
     font-weight: 700;
     line-height: 1;
 }
@@ -3442,7 +3442,7 @@ input[type="submit"].search-submit {
 .gsection {
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #b8b8b8;
 }
 @media only screen and (min-width: 48em) {
     .gsection {
@@ -3480,7 +3480,7 @@ input[type="submit"].search-submit {
 
 .gfield_required {
     padding-left: 2px; 
-    color: #ff1744;
+    color: #f77066;
 }
 
 .ginput_complex label {
@@ -3507,7 +3507,7 @@ input[type="submit"].search-submit {
 }
 
 .gfield_description {
-    color: #757575; 
+    color: #858585; 
     font-style: italic;
 }
 
@@ -3816,17 +3816,17 @@ input.datepicker_with_icon {
 }
 .gfield_error > label,
 .gfield_error .validation_message {
-    color: #ff1744;
+    color: #f77066;
 }
 .gfield_error input,
 .gfield_error textarea,
 .gfield_error select {
-    border-color: #ff1744;
+    border-color: #f77066;
 }
 .gfield_error input:focus,
 .gfield_error textarea:focus,
 .gfield_error select:focus {
-    border-color: #e3002c;
+    border-color: #f44336;
 }
 
 .gform_validation_container {
@@ -3836,7 +3836,7 @@ input.datepicker_with_icon {
 }
 
 .ui-datepicker {
-    border: 1px solid #bdbdbd; 
+    border: 1px solid #b8b8b8; 
     background: #fff;
 }
 
@@ -3915,7 +3915,7 @@ input.datepicker_with_icon {
     margin: 16px;
     padding: 24px;
     border-radius: 2px;
-    background-color: #fafafa;
+    background-color: white;
 }
 
 .disabled input[type="email"],
@@ -3927,9 +3927,9 @@ input.datepicker_with_icon {
 .disabled input[type="password"],
 .disabled textarea,
 .disabled select {
-    border-color: #f5f5f5;
-    color: #e0e0e0; 
-    background-color: #f5f5f5;
+    border-color: white;
+    color: #d1d1d1; 
+    background-color: white;
     cursor: not-allowed;
 }
 .disabled input[type="email"]:focus,
@@ -3941,7 +3941,7 @@ input.datepicker_with_icon {
 .disabled input[type="password"]:focus,
 .disabled textarea:focus,
 .disabled select:focus {
-    border-color: #f5f5f5;
+    border-color: white;
 }
 
 .gform_fileupload_multifile .gform_drop_area {
@@ -4091,7 +4091,7 @@ input.datepicker_with_icon {
 }
 .read-more__fade a:hover {
     border-bottom: 0; 
-    color: #616161;
+    color: #6b6b6b;
 }
 
 .pagination {
@@ -4107,7 +4107,7 @@ input.datepicker_with_icon {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d1d1d1;
     border-radius: 50%;
     background: #fff;
     line-height: 40px;
@@ -4132,7 +4132,7 @@ input.datepicker_with_icon {
     border-radius: 0;
 }
 .pagination .page-numbers.prev:hover {
-    border-right: 40px solid #616161;
+    border-right: 40px solid #6b6b6b;
 }
 .pagination .page-numbers.next {
     float: right; 
@@ -4144,7 +4144,7 @@ input.datepicker_with_icon {
     border-radius: 0;
 }
 .pagination .page-numbers.next:hover {
-    border-left: 40px solid #616161;
+    border-left: 40px solid #6b6b6b;
 }
 .pagination .current {
     border-color: transparent;
@@ -4164,8 +4164,8 @@ input.datepicker_with_icon {
 }
 .pagination a:hover,
 .pagination a:focus {
-    color: #616161; 
-    background: #f5f5f5;
+    color: #6b6b6b; 
+    background: white;
 }
 
 /*------------------------------------*\
@@ -4308,7 +4308,7 @@ input[type="submit"]:active {
 \*------------------------------------*/
 blockquote {
     margin: 0;
-    border-left: 5px solid #bdbdbd; 
+    border-left: 5px solid #b8b8b8; 
     color: #9e9e9e;
 }
 
@@ -4401,7 +4401,7 @@ blockquote cite::before {
 }
 .breadcrumbs a {
     opacity: 0.7;
-    color: #212121;
+    color: #1f1f1f;
     font-weight: inherit;
     text-decoration: none;
     -webkit-transition: opacity 0.2s ease;
@@ -4412,7 +4412,7 @@ blockquote cite::before {
 }
 .breadcrumbs .sep {
     padding: 0 5px;
-    color: #616161;
+    color: #6b6b6b;
 }
 .breadcrumbs .trail-end {
     color: #9e9e9e; 
@@ -4428,10 +4428,10 @@ pre {
     max-width: 100%;
     margin-bottom: 24px;
     padding: 3% 10% 3% 5%;
-    border: 1px solid #212121;
+    border: 1px solid #1f1f1f;
     border-radius: 2px;
-    color: #fafafa;
-    background-color: #424242;
+    color: white;
+    background-color: #525252;
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 1.6;
@@ -4442,10 +4442,10 @@ pre {
 code {
     display: inline-block;
     padding: 0 2px;
-    border: 1px solid #212121;
+    border: 1px solid #1f1f1f;
     border-radius: 2px;
-    color: #fafafa;
-    background-color: #424242;
+    color: white;
+    background-color: #525252;
     font-weight: normal; 
     -moz-tab-size: 4;
     tab-size: 4;
@@ -4454,9 +4454,9 @@ code {
 kbd {
     margin: 0 0.25em;
     padding: 0.3334em 0.5em;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d1d1d1;
     border-radius: 2px;
-    background-color: #f5f5f5;
+    background-color: white;
     box-shadow: inset 0 1px 0 #fff;
 }
 
@@ -4466,7 +4466,7 @@ kbd {
 }
 
 .form-allowed-tags {
-    color: #616161;
+    color: #6b6b6b;
 }
 .form-allowed-tags code {
     padding-top: 8px;
@@ -4474,8 +4474,8 @@ kbd {
     padding-bottom: 8px;
     padding-left: 8px; 
     border: 0;
-    color: #616161;
-    background-color: #fafafa;
+    color: #6b6b6b;
+    background-color: white;
 }
 @media only screen and (min-width: 48em) {
     .form-allowed-tags code {
@@ -4757,7 +4757,7 @@ img {
     margin-bottom: 11.84px;
     margin-left: -16px;
     border-radius: 2px 2px 0 0; 
-    background: #424242;
+    background: #525252;
 }
 @media only screen and (min-width: 48em) {
     .featured-media {
@@ -4941,12 +4941,12 @@ a.post-edit-link::before {
 
 [class^="icon-"] .path2,
 [class*=" icon-"] .path2 {
-    fill: #2e7d32;
+    fill: #1e441f;
 }
 
 [class^="icon-"] .path3,
 [class*=" icon-"] .path3 {
-    fill: #bdbdbd;
+    fill: #b8b8b8;
 }
 
 .menu-items__social li {
