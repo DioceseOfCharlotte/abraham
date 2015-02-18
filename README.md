@@ -42,11 +42,11 @@ go to the theme folder in your terminal:
 ```sh
 $ cd abraham
 ```
-install the required node packages: *you may or may not need the 'sudo'*
+install the required node packages: *may need to add 'sudo' before this command*
 ```sh
 $ sudo npm install
 ```
-fetch the required projects from Composer and optimize the files:
+fetch the required projects from Composer and optimize the files: *may need to run this twice*
 ```sh
 $ gulp
 ```
