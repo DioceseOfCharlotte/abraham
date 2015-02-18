@@ -8,15 +8,21 @@ Opinionated styles are kept to a minimum which give child themes a bit more free
 
 
 ## What's included?
-1. [Hybrid Core](http://themehybrid.com/hybrid-core)
-2. Gulp with [BrowserSync](https://github.com/shakyShane/browser-sync)
-3. SASS with BEM-like structure based on Harry Roberts' [CSS Guidelines](http://cssguidelin.es/)
-4. Advanced development features and best practices borrowed from Google’s [Web Starter Kit](https://developers.google.com/web/starter-kit/) including:
-  * Multi-device responsive boilerplate
-  * Cross-device Synchronization
-  * Live Browser Reloading
-  * Performance optimization
-  * Built in HTTP Server
+
+#### Development tools and features.
+- Gulp with [BrowserSync](https://github.com/shakyShane/browser-sync)
+- SASS with BEM-like structure based on Harry Roberts' [CSS Guidelines](http://cssguidelin.es/)
+- Advanced development features and best practices borrowed from Google’s [Web Starter Kit](https://developers.google.com/web/starter-kit/) including:
+..* Multi-device responsive boilerplate
+..* Cross-device Synchronization
+..* Live Browser Reloading
+..* Performance optimization
+..* Built in HTTP Server
+
+#### Additional libraries for advanced Wordpress theming.
+- Advanced theming functions and solid child theme support via [Hybrid Core](http://themehybrid.com/hybrid-core)
+- WP Customizer options with the help of [Customizer Library](https://github.com/devinsays/customizer-library) & [Simple Color Adjuster](https://github.com/fikrirasyid/simple-color-adjuster)
+- Action hooks via [Theme Hook Alliance](https://github.com/zamoose/themehookalliance)
 
 ## Getting Started
 You'll need the following dependencies installed to take advantage of the development tools.
