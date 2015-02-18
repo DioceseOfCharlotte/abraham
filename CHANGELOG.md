@@ -9,6 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 #### Fixed
 -  Blockquote padding.
 
+#### Changed
+-  Better p and li targetting for link underline on hover.
+
 ## 0.2.2 - 2015-02-16
 #### Changed
 -  Removed underline from image and header links.

@@ -22,7 +22,7 @@ a:active  {
   color: $color-links-active;
 }
 
-li:not(.menu-item) a, p a {
+li:not(.menu-item) > a, p > a {
   border-bottom: 1px solid transparent;
   &:hover, &:active {
   border-bottom-color: currentColor;

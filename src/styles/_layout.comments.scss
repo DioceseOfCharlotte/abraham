@@ -22,8 +22,8 @@
 
     .avatar {
       float: left;
-      margin-right: 1rem;
-      margin-left: 1rem;
+      margin-right: 10px;
+      margin-left: 10px;
       border-radius: 50%;
       max-width: 50px;
     }
@@ -35,7 +35,7 @@
 }
 
 .comment-meta {
-margin-left: 15px;
+//margin-left: 15px;
 }
 
 li.comment, li.ping {
@@ -43,38 +43,38 @@ clear: both;
 }
 
 li.ping, .comment-content {
-margin-top: 5px;
+margin-top: 10px;
 border: 0;
 background: $grey-200;
 border-radius: $base-radius;
 position: relative;
-@include padding-space($base-spacing-unit-sm $base-spacing-unit-sm $base-spacing-unit-tiny);
+@include padding-space($base-spacing-unit-tiny $base-spacing-unit-tiny $base-spacing-unit-tiny * 0.24);
 }
 
 li.ping:before, .comment-content:before {
 position: absolute;
 top: -20px;
-left: 10px;
+left: 0;
 width: 0;
 height: 0;
 border-bottom: 20px solid $grey-200;
-border-left: 15px solid transparent;
-border-right: 0px solid transparent;
+border-left: 0 solid transparent;
+border-right: 15px solid transparent;
 content: "";
 }
 
 .children .comment.even > article > .comment-content:before {
 left: auto;
-right: 10px;
+right: 0;
 border-bottom: 20px solid $grey-200;
-border-left: 0px solid transparent;
-border-right: 15px solid transparent;
+border-left: 15px solid transparent;
+border-right: 0 solid transparent;
 }
 
 .children .comment.even > article > .comment-bottom, .children .comment.even > article > .comment-meta {
 text-align: right;
-margin-left: auto;
-margin-right: 15px;
+//margin-left: auto;
+//margin-right: 15px;
 }
 
 .children .comment.even > article .avatar {
