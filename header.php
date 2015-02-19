@@ -47,4 +47,4 @@
 
 		<?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-		<div id="container" class="site-container">
+		<div class="main-container">

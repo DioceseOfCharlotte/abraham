@@ -1629,7 +1629,7 @@ ol ul {
     width: 250px;
     height: 100%;
     color: white;
-    background-color: #4b626d;
+    background-color: #0059a6;
     -webkit-transform: translate(-250px, 0);
     -ms-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
@@ -2037,7 +2037,7 @@ body.open {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #607d8b;
+    background-color: #0074d9;
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -2083,7 +2083,7 @@ body.open {
 .site-header.open,
 .open .site-footer,
 .open .breadcrumbs,
-.site-header.open ~ .site-container {
+.site-header.open ~ .main-container {
     cursor: default; 
     -webkit-transform: translate(250px, 0);
     -ms-transform: translate(250px, 0);
@@ -2126,12 +2126,12 @@ body.open {
 .site-footer,
 .site-header,
 .menu.opened,
-.site-container {
+.main-container {
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
 }
 
-.site-container {
+.main-container {
     min-height: 100%;
 }
 
@@ -2141,7 +2141,7 @@ body.open {
         position: relative;
     }
     .site-header.open,
-    .site-header.open ~ .site-container {
+    .site-header.open ~ .main-container {
         -webkit-transform: translate(0px, 0);
         -ms-transform: translate(0px, 0);
         transform: translate(0px, 0);
@@ -2193,25 +2193,45 @@ body.open {
     #FOOTER
 \*------------------------------------*/
 .site-info {
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(82, 82, 82, 0.2);
+    background-color: #0059a6;
 }
 .site-info a {
-    color: inherit;
+    color: inherit; 
+    font-weight: bold;
 }
 
 .site-footer {
     display: block;
     width: 100%;
     margin: 0;
-    background-color: #d1d1d1; 
+    color: #fff; 
+    background-color: #0074d9;
     text-align: left;
 }
 .site-footer a {
     color: inherit;
+    -webkit-transition: opacity 0.3s, border-color 0.3s;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+.site-footer a:hover {
+    opacity: 0.7;
+}
+@media only screen and (min-width: 48em) {
+    .site-footer .sidebar-col-1 .widget {
+        width: 100%;
+    }
+    .site-footer .sidebar-col-3 .widget,
+    .site-footer .sidebar-col-2 .widget {
+        width: 48.6%;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .site-footer .sidebar-col-3 .widget {
+        width: 31%;
+    }
 }
 
-.site-footer .sidebar__footer-widgets {
+.sidebar__footer-widgets {
     display: block;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2232,44 +2252,33 @@ body.open {
     justify-content: space-between;
 }
 @media only screen and (min-width: 48em) {
-    .site-footer .sidebar__footer-widgets {
+    .sidebar__footer-widgets {
         padding-top: 24px;
     }
 }
 @media only screen and (min-width: 64em) {
-    .site-footer .sidebar__footer-widgets {
+    .sidebar__footer-widgets {
         padding-top: 40px;
     }
 }
-.site-footer .sidebar__footer-widgets .widget {
+.sidebar__footer-widgets .widget-title {
+    color: inherit;
+}
+.sidebar__footer-widgets .widget {
     display: inline-block;
     width: 100%; 
     min-width: 300px;
     max-width: 700px;
     border: 0;
-    background-color: rgba(82, 82, 82, 0.2);
+    background-color: #0d8eff;
     text-align: left;
     vertical-align: top;
 }
 @media only screen and (min-width: 64em) {
-    .site-footer .sidebar__footer-widgets {
+    .sidebar__footer-widgets {
         max-width: 1280px;
         padding-right: 40px; 
         padding-left: 40px;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .site-footer .sidebar-col-1 .widget {
-        width: 100%;
-    }
-    .site-footer .sidebar-col-3 .widget,
-    .site-footer .sidebar-col-2 .widget {
-        width: 48.6%;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .site-footer .sidebar-col-3 .widget {
-        width: 31%;
     }
 }
 
@@ -2314,11 +2323,13 @@ body.open {
 @media only screen and (min-width: 48em) {
     .widget {
         padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
 @media only screen and (min-width: 64em) {
     .widget {
         padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media only screen and (min-width: 48em) {
@@ -2335,16 +2346,6 @@ body.open {
 }
 @media only screen and (min-width: 48em) {
     .widget {
-        padding-bottom: 12px;
-    }
-}
-@media only screen and (min-width: 64em) {
-    .widget {
-        padding-bottom: 20px;
-    }
-}
-@media only screen and (min-width: 48em) {
-    .widget {
         margin-bottom: 24px;
     }
 }
@@ -2355,10 +2356,27 @@ body.open {
 }
 
 .widget-title {
+    margin-right: -16px;
     margin-bottom: 4px;
+    margin-left: -16px;
+    padding-right: 16px;
     padding-bottom: 4px;
-    border-bottom: 1px solid #b8b8b8;
+    padding-left: 16px;
+    border-bottom: 1px solid;
+    border-bottom-color: currentColor;
     line-height: 1;
+}
+@media only screen and (min-width: 48em) {
+    .widget-title {
+        padding-right: 24px; 
+        padding-left: 24px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .widget-title {
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
 }
 @media only screen and (min-width: 48em) {
     .widget-title {
@@ -2368,6 +2386,18 @@ body.open {
 @media only screen and (min-width: 64em) {
     .widget-title {
         padding-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 48em) {
+    .widget-title {
+        margin-right: -24px; 
+        margin-left: -24px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .widget-title {
+        margin-right: -40px; 
+        margin-left: -40px;
     }
 }
 @media only screen and (min-width: 48em) {
@@ -3111,24 +3141,24 @@ body {
     -ms-hyphens: auto;
 }
 
-.site-container {
+.main-container {
     margin-top: 60px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 16px;
 }
 @media only screen and (min-width: 48em) {
-    .site-container {
+    .main-container {
         padding-top: 24px;
     }
 }
 @media only screen and (min-width: 64em) {
-    .site-container {
+    .main-container {
         padding-top: 40px;
     }
 }
 @media only screen and (min-width: 48em) {
-    .site-container {
+    .main-container {
         display: block;
         min-height: initial;
         margin-top: 0; 
@@ -3136,7 +3166,7 @@ body {
     }
 }
 @media only screen and (min-width: 64em) {
-    .site-container {
+    .main-container {
         max-width: 1280px;
         padding-right: 40px; 
         padding-left: 40px;
@@ -3237,12 +3267,12 @@ body.error-404 .sidebar,
 }
 
 @media only screen and (min-width: 64em) {
-    .layout-2c-r .site-container {
+    .layout-2c-r .main-container {
         text-align: left; 
 
         direction: rtl;
     }
-    .layout-2c-r .site-container > * {
+    .layout-2c-r .main-container > * {
         direction: ltr;
     }
     .layout-2c-r .sidebar__primary {
@@ -3988,6 +4018,7 @@ input.datepicker_with_icon {
     border-radius: 2px;
     color: #9e9e9e;
     background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 @media only screen and (min-width: 48em) {
     .loop-meta {
@@ -4026,7 +4057,6 @@ input.datepicker_with_icon {
 
 .loop-title {
     margin: 0;
-    text-align: center;
 }
 
 .loop-description p {
@@ -4237,7 +4267,7 @@ input[type="submit"] {
     border-radius: 2px;
     outline: 0;
     color: #fff;
-    background-color: #607d8b;
+    background-color: #0074d9;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -4256,7 +4286,7 @@ a.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background-color: #7b96a3;
+    background-color: #0d8eff;
 }
 .btn:active,
 .comment-reply-link:active,
@@ -4272,7 +4302,7 @@ a.button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    background-color: #4b626d;
+    background-color: #0059a6;
 }
 
 .entry-terms a {
@@ -4291,6 +4321,9 @@ blockquote {
     padding-left: 20px; 
     border-left: 5px solid #b8b8b8;
     color: #9e9e9e;
+}
+blockquote p + p {
+    margin-bottom: 0;
 }
 
 blockquote blockquote {
@@ -4917,7 +4950,7 @@ a.post-edit-link::before {
 
 [class^="icon-"] .path1,
 [class*=" icon-"] .path1 {
-    fill: #607d8b;
+    fill: #0074d9;
 }
 
 [class^="icon-"] .path2,

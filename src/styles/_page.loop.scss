@@ -9,6 +9,7 @@
   @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
   color: $color-text-light;
   background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
   // border: 1px solid $grey-300;
   // border-bottom-width: 2px;
   // border-top-color: $grey-200;
@@ -16,7 +17,6 @@
 
 .loop-title {
   margin: 0;
-  text-align: center;
 }
 
 .loop-description p {

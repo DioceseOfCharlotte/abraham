@@ -3,56 +3,30 @@
 \*------------------------------------*/
 
 .site-info {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: $footer-widget-bg;
+  background-color: darken($footer-bg, 10);
 
   a {
-      color: inherit;
+    font-weight: bold;
+    color: inherit;
   }
 }
 
 .site-footer {
-    display: block;
-    margin: 0;
-    width: 100%;
-    text-align: left;
-    background-color: $footer-bg;
+  display: block;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  background-color: $footer-bg;
+  color: #fff;
 
-    a {
-      color: inherit;
+  a {
+    color: inherit;
+    transition: opacity .3s, border-color .3s;
+
+    &:hover {
+      opacity: 0.7;
     }
-}
-
-.site-footer {
-
-  .sidebar__footer-widgets {
-    display: block;
-    margin: 0 auto;
-    text-align: left;
-    width: 100%;
-    max-width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @include padding-space($base-spacing-unit-sm n n);
-
-    .widget {
-      background-color: $footer-widget-bg;
-      border: 0;
-      display: inline-block;
-      text-align: left;
-      vertical-align: top;
-      min-width: 300px;
-      max-width: 700px;
-      width: 100%;
-    }
-
-    @include lg {
-      max-width: $site-width;
-      padding-left: $base-spacing-unit-lg;
-      padding-right: $base-spacing-unit-lg;
-    }
-}
+  }
 
   @include md {
     .sidebar-col-1 {
@@ -75,6 +49,40 @@
     }
   }
 
+}
+
+
+.sidebar__footer-widgets {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  max-width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include padding-space($base-spacing-unit-sm n n);
+
+  .widget-title {
+    color: inherit;
+  }
+
+  .widget {
+    background-color: $footer-widget-bg;
+    border: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  @include lg {
+    max-width: $site-width;
+    padding-left: $base-spacing-unit-lg;
+    padding-right: $base-spacing-unit-lg;
+  }
 }
 
 .wrap__footer {

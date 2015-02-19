@@ -143,9 +143,9 @@ $white:             #ffffff;
 
 // Brand
 
-$color-primary-light:      	$blue-grey-400;
-$color-primary:         	$blue-grey-500;
-$color-primary-dark:      	$blue-grey-600;
+$color-primary:         	$blue-500;
+$color-primary-light:     lighten($color-primary, 10);
+$color-primary-dark:      darken($color-primary, 10);
 $color-secondary:       	$green-800;
 
 
@@ -162,9 +162,9 @@ $color-headings:          $grey-600;
 
 $color-text-light-hover:  $grey-700;
 
-$color-links:           	$blue-600;
-$color-links-hover:     	$blue-400;
-$color-links-active:     $blue-500;
+$color-links:         $color-primary-dark;
+$color-links-hover:   $color-primary-light;
+$color-links-active:  $color-primary;
 
 
 
@@ -223,5 +223,5 @@ $format-audio:        $green-300;
 
 // Sections
 
-$footer-bg:   $grey-300;
-$footer-widget-bg: rgba($grey-800, 0.2);
+$footer-bg:   $color-primary;
+$footer-widget-bg: $color-primary-light;

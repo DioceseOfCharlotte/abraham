@@ -61,7 +61,12 @@ function abraham_header_style() {
 		else :
 	?>
 		.site-title,
-		.site-description {
+		.site-footer,
+		.site-description,
+		.menu a,
+		.menu a:visited,
+		.menu a:hover,
+		.menu a:active {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>

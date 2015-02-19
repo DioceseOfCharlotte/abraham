@@ -39,6 +39,7 @@ function customizer_library_abraham_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.site-header,
+				.site-footer,
 				a.btn,
 				.btn,
 				button,
@@ -48,7 +49,62 @@ function customizer_library_abraham_styles() {
 				.button'
 			),
 			'declarations' => array(
-				'background-color' => $color
+				'background-color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-footer'
+			),
+			'declarations' => array(
+				'background-color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-info'
+			),
+			'declarations' => array(
+				'background-color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.sidebar__footer-widgets .widget'
+			),
+			'declarations' => array(
+				'background-color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.main-container a,
+				.main-container a:visited'
+			),
+			'declarations' => array(
+				'color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.main-container a:hover'
+			),
+			'declarations' => array(
+				'color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.main-container a:active'
+			),
+			'declarations' => array(
+				'color' => $color500
 			)
 		) );
 
@@ -66,7 +122,7 @@ function customizer_library_abraham_styles() {
 				select:focus'
 			),
 			'declarations' => array(
-				'border-color' => $color
+				'border-color' => $color500
 			)
 		) );
 
@@ -133,14 +189,14 @@ function customizer_library_abraham_styles() {
 		$color800 	= $simple_color_adjuster->darken( $color, 30 );
 		$color900 	= $simple_color_adjuster->darken( $color, 40 );
 
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-footer'
-			),
-			'declarations' => array(
-				'background-color' => $color500
-			)
-		) );
+		// Customizer_Library_Styles()->add( array(
+		// 	'selectors' => array(
+		// 		'.site-footer'
+		// 	),
+		// 	'declarations' => array(
+		// 		'background-color' => $color500
+		// 	)
+		// ) );
 	}
 
 

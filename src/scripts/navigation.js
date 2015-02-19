@@ -13,7 +13,7 @@
   var body = document.body;
   var appbarElement = querySelector('#header');
   var menuBtn = querySelector('.menu-toggle');
-  var main = querySelector('.site-container');
+  var main = querySelector('.main-container');
   var footer = querySelector('.site-footer');
 
   function closeMenu() {
