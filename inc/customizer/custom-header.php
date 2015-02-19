@@ -66,7 +66,15 @@ function abraham_header_style() {
 		.menu a,
 		.menu a:visited,
 		.menu a:hover,
-		.menu a:active {
+		.menu a:active,
+		.btn,
+		a.btn,
+		button,
+		.button,
+		a.button,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## In Progress
 
-## 0.2.3 - 2015-02-19
+## 0.2.4 - 2015-02-19
 #### Added
 - Defined shades for the Primary and Secondary colors in the Customizer.
 - Footer and links are now styled with the primary color.
