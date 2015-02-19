@@ -4547,10 +4547,7 @@ table {
 }
 
 th {
-    overflow: hidden;
-    font-weight: bold; 
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    font-weight: bold;
 }
 
 th,
@@ -4579,9 +4576,7 @@ td {
 }
 
 td {
-    overflow: auto; 
     border-width: 0 1px 1px 0;
-    white-space: nowrap;
 }
 
 /*------------------------------------*\
