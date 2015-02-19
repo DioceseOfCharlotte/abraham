@@ -11,6 +11,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 #### Fixed
 - Blockquote padding.
+- List missing bottom margin.
+- spacing between groups of buttons.
 
 #### Changed
 - Better p and li targetting for link underline on hover.

@@ -36,9 +36,14 @@ input[type="submit"] {
 
 
 
+.main-container a.btn,
+.main-container a.button {
+  color: #fff;
+}
 
-
-
+.btn + .btn {
+  margin-left: 10px;
+}
 
 .entry-terms a {
   @extend .btn;

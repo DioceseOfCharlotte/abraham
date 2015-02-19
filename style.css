@@ -1606,7 +1606,8 @@ ol {
 
 ol,
 ul {
-    margin-top: 0; 
+    margin-top: 0;
+    margin-bottom: 24px; 
     padding-left: 0;
 }
 
@@ -4303,6 +4304,34 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
     background-color: #0059a6;
+}
+
+.main-container a.btn,
+.main-container a.comment-reply-link,
+.main-container a.comment-reply-login,
+.main-container .entry-terms a,
+.entry-terms .main-container a,
+.main-container a.button {
+    color: #fff;
+}
+
+.btn + .btn,
+.comment-reply-link + .btn,
+.comment-reply-login + .btn,
+.entry-terms a + .btn,
+.btn + .comment-reply-link,
+.comment-reply-link + .comment-reply-link,
+.comment-reply-login + .comment-reply-link,
+.entry-terms a + .comment-reply-link,
+.btn + .comment-reply-login,
+.comment-reply-link + .comment-reply-login,
+.comment-reply-login + .comment-reply-login,
+.entry-terms a + .comment-reply-login,
+.entry-terms .btn + a,
+.entry-terms .comment-reply-link + a,
+.entry-terms .comment-reply-login + a,
+.entry-terms a + a {
+    margin-left: 10px;
 }
 
 .entry-terms a {
