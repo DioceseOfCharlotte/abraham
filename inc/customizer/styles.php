@@ -41,6 +41,7 @@ function customizer_library_abraham_styles() {
 				'.site-header,
 				.site-footer,
 				a.btn,
+				a.button,
 				.btn,
 				button,
 				input[type="button"],
@@ -129,6 +130,7 @@ function customizer_library_abraham_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'a.btn:hover,
+				a.button:hover,
 				.btn:hover,
 				button:hover,
 				input[type="button"]:hover,
@@ -145,6 +147,7 @@ function customizer_library_abraham_styles() {
 			'selectors' => array(
 				'.menu__primary,
 				a.btn:active,
+				a.button:active,
 				.btn:active,
 				button:active,
 				input[type="button"]:active,
