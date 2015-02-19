@@ -3,25 +3,28 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## In Progress
+
+## 0.2.3 - 2015-02-19
 #### Added
--  Defined shades for the Primary and Secondary colors in the Customizer.
+- Defined shades for the Primary and Secondary colors in the Customizer.
+- Footer and links are now styled with the primary color.
 
 #### Fixed
--  Blockquote padding.
+- Blockquote padding.
 
 #### Changed
--  Better p and li targetting for link underline on hover.
+- Better p and li targetting for link underline on hover.
 
 ## 0.2.2 - 2015-02-16
 #### Changed
--  Removed underline from image and header links.
+- Removed underline from image and header links.
 
 #### Fixed
--  Styles are now consistent with defaults before Customizer interaction.
+- Styles are now consistent with defaults before Customizer interaction.
 
 ## 0.2.1 - 2015-02-16
 #### Fixed
--  Button colors now work with Customizer.
+- Button colors now work with Customizer.
 
 #### Changed
 - Update Hybrid-Core to be compatible with WP 4.1 changes.
