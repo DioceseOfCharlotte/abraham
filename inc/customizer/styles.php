@@ -40,8 +40,6 @@ function customizer_library_abraham_styles() {
 			'selectors' => array(
 				'.site-header,
 				.site-footer,
-				a.btn,
-				a.button,
 				.btn,
 				button,
 				input[type="button"],
@@ -83,8 +81,8 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.main-container a,
-				.main-container a:visited'
+				'a,
+				a:visited'
 			),
 			'declarations' => array(
 				'color' => $color600
@@ -93,7 +91,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.main-container a:hover'
+				'a:hover'
 			),
 			'declarations' => array(
 				'color' => $color400
@@ -102,7 +100,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.main-container a:active'
+				'a:active'
 			),
 			'declarations' => array(
 				'color' => $color500
@@ -129,9 +127,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a.btn:hover,
-				a.button:hover,
-				.btn:hover,
+				'.btn:hover,
 				button:hover,
 				input[type="button"]:hover,
 				input[type="reset"]:hover,
@@ -146,8 +142,6 @@ function customizer_library_abraham_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.menu__primary,
-				a.btn:active,
-				a.button:active,
 				.btn:active,
 				button:active,
 				input[type="button"]:active,
