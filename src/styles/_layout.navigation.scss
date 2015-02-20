@@ -213,6 +213,9 @@ a {
   padding: 20px;
   line-height: 1;
   @include font-size($base-font-size - 1, false);
+  &:visited, &:hover, &:active {
+    color: $color-text;
+  }
 }
 
 &.active {
