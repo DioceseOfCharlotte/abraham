@@ -60,18 +60,21 @@ function abraham_header_style() {
 		// If the user has set a custom color for the text use that
 		else :
 	?>
-		.site-title,
+		.site-title a,
 		.site-footer,
+		.site-footer a,
 		.site-description,
 		.nav-menu > .menu-item > a,
 		.nav-menu > .menu-item > a:visited,
 		.nav-menu > .menu-item > a:hover,
 		.nav-menu > .menu-item > a:active,
 		.btn,
-		a.btn,
 		button,
 		.button,
+		a.btn,
 		a.button,
+		a.btn:visited,
+		a.button:visited,
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"] {

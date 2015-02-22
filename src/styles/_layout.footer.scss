@@ -4,11 +4,6 @@
 
 .site-info {
   background-color: darken($footer-bg, 10);
-
-  a {
-    font-weight: bold;
-    color: inherit;
-  }
 }
 
 .site-footer {
@@ -19,7 +14,7 @@
   background-color: $footer-bg;
   color: #fff;
 
-  a {
+  a, a:visited {
     color: inherit;
     transition: opacity .3s, border-color .3s;
 

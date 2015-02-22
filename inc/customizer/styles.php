@@ -40,6 +40,7 @@ function customizer_library_abraham_styles() {
 			'selectors' => array(
 				'.site-header,
 				.site-footer,
+				.comment-reply-link,
 				.btn,
 				button,
 				input[type="button"],
@@ -129,6 +130,7 @@ function customizer_library_abraham_styles() {
 			'selectors' => array(
 				'.btn:hover,
 				button:hover,
+				a.comment-reply-link:hover,
 				input[type="button"]:hover,
 				input[type="reset"]:hover,
 				input[type="submit"]:hover,
@@ -144,6 +146,7 @@ function customizer_library_abraham_styles() {
 				'.menu__primary,
 				.btn:active,
 				button:active,
+				a.comment-reply-link:active,
 				input[type="button"]:active,
 				input[type="reset"]:active,
 				input[type="submit"]:active,

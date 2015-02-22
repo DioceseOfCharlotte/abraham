@@ -3,10 +3,8 @@
 \*------------------------------------*/
 
 .btn,
-a.btn,
 button,
 .button,
-a.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -45,4 +43,13 @@ input[type="submit"] {
   text-transform: capitalize;
 }
 
+    a.btn,
+    a.button{
+      color: $btn-text;
 
+      &:hover, 
+      &:visited, 
+      &:active {
+        color: $btn-text
+      }
+    }

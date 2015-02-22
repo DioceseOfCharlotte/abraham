@@ -5,7 +5,7 @@ Theme URI: https://github.com/m-e-h/abraham
 Author: Marty Helmick
 Author URI: https://github.com/m-e-h
 Description: <code>Abraham</code> is a Parent theme with many children.
-Version: 0.2.6
+Version: 0.2.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: abraham
@@ -2201,10 +2201,6 @@ body.open {
 .site-info {
     background-color: #0059a6;
 }
-.site-info a {
-    color: inherit; 
-    font-weight: bold;
-}
 
 .site-footer {
     display: block;
@@ -2214,12 +2210,14 @@ body.open {
     background-color: #0074d9;
     text-align: left;
 }
-.site-footer a {
+.site-footer a,
+.site-footer a:visited {
     color: inherit;
     -webkit-transition: opacity 0.3s, border-color 0.3s;
     transition: opacity 0.3s, border-color 0.3s;
 }
-.site-footer a:hover {
+.site-footer a:hover,
+.site-footer a:visited:hover {
     opacity: 0.7;
 }
 @media only screen and (min-width: 48em) {
@@ -4256,13 +4254,8 @@ input.datepicker_with_icon {
 .comment-reply-link,
 .comment-reply-login,
 .entry-terms a,
-a.btn,
-a.comment-reply-link,
-a.comment-reply-login,
-.entry-terms a,
 button,
 .button,
-a.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -4282,13 +4275,8 @@ input[type="submit"] {
 .comment-reply-link:hover,
 .comment-reply-login:hover,
 .entry-terms a:hover,
-a.btn:hover,
-a.comment-reply-link:hover,
-a.comment-reply-login:hover,
-.entry-terms a:hover,
 button:hover,
 .button:hover,
-a.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -4298,13 +4286,8 @@ input[type="submit"]:hover {
 .comment-reply-link:active,
 .comment-reply-login:active,
 .entry-terms a:active,
-a.btn:active,
-a.comment-reply-link:active,
-a.comment-reply-login:active,
-.entry-terms a:active,
 button:active,
 .button:active,
-a.button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
@@ -4336,6 +4319,31 @@ input[type="submit"]:active {
     font-size: 0.875rem;
     line-height: 1.7142857143;
     text-transform: capitalize;
+}
+
+a.btn,
+a.comment-reply-link,
+a.comment-reply-login,
+.entry-terms a,
+a.button {
+    color: #fff;
+}
+a.btn:hover,
+a.comment-reply-link:hover,
+a.comment-reply-login:hover,
+.entry-terms a:hover,
+a.btn:visited,
+a.comment-reply-link:visited,
+a.comment-reply-login:visited,
+.entry-terms a:visited,
+a.btn:active,
+a.comment-reply-link:active,
+a.comment-reply-login:active,
+.entry-terms a:active,
+a.button:hover,
+a.button:visited,
+a.button:active {
+    color: #fff;
 }
 
 /*------------------------------------*\
