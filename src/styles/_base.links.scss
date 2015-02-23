@@ -12,6 +12,7 @@ a:visited {
   transition: color .3s, border-color .3s;
   color: $color-links;
   text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover   {
@@ -29,10 +30,31 @@ li:not(.menu-item) > a, p > a {
   }
 }
 
-// .entry-content p a, .entry-summary p a, .comment-content a {
-// border-bottom: 1px solid transparent;
-// transition: color .3s, border-color .3s;
-// &:hover {
-// 	border-bottom-color: currentColor;
-// }
-// }
+.site-footer {
+
+  a {
+    transition: opacity .3s, border-color .3s;
+
+    &:visited,
+    &:hover,
+    &:active {
+      color: inherit;
+      opacity: .6;
+    }
+  }
+}
+
+a.btn,
+a.button{
+  color: $btn-text;
+
+  &:hover,
+  &:visited,
+  &:active {
+    color: $btn-text;
+  }
+}
+
+.widget a {
+  font-weight: normal;
+}

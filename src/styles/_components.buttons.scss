@@ -21,14 +21,15 @@ input[type="submit"] {
 //   &:not(.search-submit) {
 //   margin: .3em;
 // }
-  transition: all $base-transition-speed ease-in-out;
+  transition: background-color $base-transition-speed;
 
   &:hover {
   background-color: $btn-bg-hover;
-}
+  transition: background-color $base-transition-speed;
+  }
   &:active {
   background-color: $btn-bg-active;
-}
+  }
 
 }
 
@@ -42,14 +43,3 @@ input[type="submit"] {
   padding: 4px 12px;
   text-transform: capitalize;
 }
-
-    a.btn,
-    a.button{
-      color: $btn-text;
-
-      &:hover, 
-      &:visited, 
-      &:active {
-        color: $btn-text
-      }
-    }

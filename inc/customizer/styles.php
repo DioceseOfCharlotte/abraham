@@ -25,7 +25,7 @@ function customizer_library_abraham_styles() {
 	$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
 		$simple_color_adjuster = new Simple_Color_Adjuster;
-		$color50 	= $simple_color_adjuster->lighten( $color, 50 );
+		$color50 	= $simple_color_adjuster->lighten( $color, 45 );
 		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
 		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
 		$color300 	= $simple_color_adjuster->lighten( $color, 20 );
@@ -157,15 +157,6 @@ function customizer_library_abraham_styles() {
 			)
 		) );
 
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.featured-media>a'
-			),
-			'declarations' => array(
-				'background-color' => $color600
-			)
-		) );
-
 	}
 
 	// Secondary Color
@@ -178,7 +169,7 @@ function customizer_library_abraham_styles() {
 		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
 		$simple_color_adjuster = new Simple_Color_Adjuster;
-		$color50 	= $simple_color_adjuster->lighten( $color, 50 );
+		$color50 	= $simple_color_adjuster->lighten( $color, 45 );
 		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
 		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
 		$color300 	= $simple_color_adjuster->lighten( $color, 20 );

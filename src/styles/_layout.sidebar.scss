@@ -4,7 +4,7 @@
 .widget {
   background-color: #fff;
   border-radius: $base-radius;
-  @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
+  @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
   @include margin-space(n n $base-spacing-unit-sm);
   overflow: hidden;
   width: 100%;
@@ -16,11 +16,18 @@
 }
 
 .widget-title {
-	@include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny / 2);
-	@include margin-space(n $base-spacing-unit-sm * -1 $base-spacing-unit-tiny / 2);
-	border-bottom: 1px solid;
-  border-bottom-color: currentColor;
+	padding: $base-spacing-unit-sm;
+	@include margin-space(n $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
 	line-height: 1;
+  background-color: $color-primary-dark;
+  color: #fff;
+
+  &:before {
+    @include font-icon();
+    content: $angle-double-right;
+    // margin-left: -15px;
+    padding-right: $base-spacing-unit-sm;
+  }
 }
 
 .sidebar {

@@ -8,10 +8,10 @@
 function customizer_library_abraham_options() {
 
 	// Theme defaults
-	$primary_color 		= '#607D8B';
-	$secondary_color 	= '#9E9E9E';
+	$primary_color 		= '#118EF2';
+	$secondary_color 	= '#858585';
 	$body_font			= 'Roboto';
-	$heading_font		= 'Merriweather';
+	$heading_font		= 'Raleway';
 
 	// Stores all the controls that will be added
 	$options = array();
