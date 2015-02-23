@@ -73,6 +73,20 @@ a[href*="maps.google.com"]::before {
 
 .menu-items__social li {
   display: inline-block;
+
+  a {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 3px;
+    &:hover {
+      background-color: $grey-100;
+      opacity: 1;
+    }
+  }
 }
 .menu-items__social li a::before {
 @include font-icon();

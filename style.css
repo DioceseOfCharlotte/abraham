@@ -4990,6 +4990,19 @@ a.post-edit-link::before {
 .menu-items__social li {
     display: inline-block;
 }
+.menu-items__social li a {
+    width: 30px;
+    height: 30px;
+    margin: 0 3px; 
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+}
+.menu-items__social li a:hover {
+    opacity: 1; 
+    background-color: #ebebeb;
+}
 
 .menu-items__social li a::before {
     display: inline-block;
