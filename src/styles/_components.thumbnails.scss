@@ -1,7 +1,7 @@
 
 
 .featured-media {
-background-color: lighten($color-primary, 40);
+background-color: lighten($color-primary, 45);
 display: block;
 @include margin-space($base-spacing-unit-sm *-1 $base-spacing-unit-sm *-1 $base-spacing-unit-tiny);
 overflow: hidden;

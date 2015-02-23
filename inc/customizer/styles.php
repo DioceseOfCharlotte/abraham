@@ -40,6 +40,7 @@ function customizer_library_abraham_styles() {
 			'selectors' => array(
 				'.site-header,
 				.site-footer,
+				.sidebar__footer-widgets .widget,
 				.comment-reply-link,
 				.btn,
 				button,
@@ -53,9 +54,17 @@ function customizer_library_abraham_styles() {
 			)
 		) );
 
+
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-footer'
+				'.site-footer,
+				.btn:hover,
+				button:hover,
+				a.comment-reply-link:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				.button:hover'
 			),
 			'declarations' => array(
 				'background-color' => $color400
@@ -64,19 +73,19 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-info'
+				'.menu__primary,
+				.site-info,
+				.btn:active,
+				button:active,
+				.widget-title,
+				a.comment-reply-link:active,
+				input[type="button"]:active,
+				input[type="reset"]:active,
+				input[type="submit"]:active,
+				.button:active'
 			),
 			'declarations' => array(
 				'background-color' => $color600
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.sidebar__footer-widgets .widget'
-			),
-			'declarations' => array(
-				'background-color' => $color500
 			)
 		) );
 
@@ -123,37 +132,6 @@ function customizer_library_abraham_styles() {
 			),
 			'declarations' => array(
 				'border-color' => $color500
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.btn:hover,
-				button:hover,
-				a.comment-reply-link:hover,
-				input[type="button"]:hover,
-				input[type="reset"]:hover,
-				input[type="submit"]:hover,
-				.button:hover'
-			),
-			'declarations' => array(
-				'background-color' => $color400
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.menu__primary,
-				.btn:active,
-				button:active,
-				a.comment-reply-link:active,
-				input[type="button"]:active,
-				input[type="reset"]:active,
-				input[type="submit"]:active,
-				.button:active'
-			),
-			'declarations' => array(
-				'background-color' => $color600
 			)
 		) );
 

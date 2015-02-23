@@ -60,7 +60,7 @@ function abraham_header_style() {
 		// If the user has set a custom color for the text use that
 		else :
 	?>
-		.site-title a,
+		.site-title,
 		.site-footer,
 		.site-footer a,
 		.site-description,
