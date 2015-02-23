@@ -9,8 +9,8 @@ class Doc_Attributes {
 
 	/* Attributes for major structural elements. */
 	public $body                  	= ' ';	// get_body_class()
-	public $header                	= 'site-header'; 	// na
-	public $footer                	= 'site-footer'; 	// na
+	public $header                	= ' '; 	// na
+	public $footer                	= ' '; 	// na
 	public $content_single_column 	= ' '; 	// content
 	public $content_sidebar_right 	= ' '; 	// content
 	public $content_sidebar_left 	= ' '; 	// content
@@ -21,9 +21,9 @@ class Doc_Attributes {
 	public $menu                  	= ' ';	// menu menu__{$context}
 
 	/* Header attributes. */
-	public $branding              	= 'site-branding';	// na
-	public $site_title            	= 'site-title';	// na
-	public $site_description      	= 'site-description';	// na
+	public $branding              	= ' ';	// na
+	public $site_title            	= ' ';	// na
+	public $site_description      	= ' ';	// na
 
 	/* Loop attributes. */
 	public $loop_meta             	= ' ';	// loop-meta
@@ -31,7 +31,7 @@ class Doc_Attributes {
 	public $loop_description      	= ' ';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  	= ' card grid__item';	// get_post_class()
+	public $post                  	= ' ';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
 	public $entry_author          	= ' ';	// entry-author
 	public $entry_published       	= ' ';	// entry-published updated
@@ -86,12 +86,12 @@ class Doc_Attributes {
 	}
 
 	public function header( $attr ) {
-		$attr['class']    = $this->header;
+		$attr['class']    .= $this->header;
 		return $attr;
 	}
 
 	public function footer( $attr ) {
-		$attr['class']    = $this->footer;
+		$attr['class']    .= $this->footer;
 		return $attr;
 	}
 
@@ -133,17 +133,17 @@ class Doc_Attributes {
 
 	/* === HEADER === */
 	public function branding( $attr ) {
-		$attr['class']    = $this->branding;
+		$attr['class']    .= $this->branding;
 		return $attr;
 	}
 
 	public function site_title( $attr ) {
-		$attr['class']    = $this->site_title;
+		$attr['class']    .= $this->site_title;
 		return $attr;
 	}
 
 	public function site_description( $attr ) {
-		$attr['class']    = $this->site_description;
+		$attr['class']    .= $this->site_description;
 		return $attr;
 	}
 
