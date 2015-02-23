@@ -62,6 +62,7 @@ transform: translate(0,0);
     background-color: transparent;
     transition: background-color .2s ease-out;
     line-height: $base-line-height;
+    font-weight: normal;
 
     &:hover{
       background-color: rgba($grey-300, 0.4);

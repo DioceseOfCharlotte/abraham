@@ -17,7 +17,7 @@ select {
 
     width: 100%;
     background-color: #fff;
-    border: 1px solid $grey-400;
+    border: 1px solid $grey-300;
     border-radius: $base-radius;
     box-shadow: none;
     box-sizing: border-box;
@@ -54,7 +54,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid $blue-500;
+    border: 1px solid $color-primary;
     outline: 0;
 }
 
@@ -63,7 +63,7 @@ legend {
     display: block;
     margin: 5px 0 5px 5px;
     font-weight: 700;
-    color: $grey-700;
+    color: $color-grey-dark;
     line-height: 1;
 }
 
@@ -180,7 +180,7 @@ input[type="submit"].search-submit {
 
 .gfield_description {
   font-style: italic;
-  color: $grey-600;
+  color: $color-gray;
 }
 
 .validation_message {
@@ -561,7 +561,7 @@ input[type="submit"] {
   padding: $base-spacing-unit;
   display: block;
   border-radius: 2px;
-  background-color: $grey-50;
+  background-color: $color-grey-lightest;
 }
 
 
