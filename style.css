@@ -1885,15 +1885,16 @@ ol ul {
 }
 
 .sub-menu {
-    display: none;
     visibility: hidden;
     position: absolute;
-    z-index: 1000; 
+    z-index: 1000;
     width: 100%;
     margin: 0;
     margin-left: -1px;
     background-color: #fff;
     text-align: left;
+    -webkit-transition: 0.1s 0.1s;
+    transition: 0.1s 0.1s;
 }
 @media only screen and (min-width: 48em) {
     .sub-menu {
@@ -1926,6 +1927,10 @@ ol ul {
     }
 }
 
+.menu__primary .menu-item:hover > .sub-menu {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
 @media only screen and (min-width: 48em) {
     .menu__primary .menu-item:hover > .sub-menu {
         display: block;
