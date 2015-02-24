@@ -25,7 +25,7 @@ tha_entry_top();
       'scan'          => true,
       'caption'       => false,
       'order'         => array( 'featured', 'scan_raw', 'scan', 'attachment', 'default' ),
-      'default_image' => trailingslashit( get_stylesheet_directory_uri() ) . 'images/water.jpg',
+      'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/water.jpg',
       'before'        => '<div class="featured-media image">',
       'after'         => '</div>',
     ) );

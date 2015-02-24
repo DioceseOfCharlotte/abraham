@@ -50,7 +50,7 @@ $ cd abraham
 ```
 install the required node packages: *may need to add 'sudo' before this command*
 ```sh
-$ sudo npm install
+$ npm install
 ```
 fetch the required projects from Composer and optimize the files: *may need to run this twice*
 ```sh
