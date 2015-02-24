@@ -18,7 +18,6 @@ require_once( $abraham_dir . 'inc/general.php'         	);
 require_once( $abraham_dir . 'inc/template-actions.php'	);
 require_once( $abraham_dir . 'inc/hybrid-mods.php'     	);
 require_once( $abraham_dir . 'inc/html-min.php'			);
-require_once( $abraham_dir . 'inc/required-plugins.php'	);
 
 /* Load customizer files. */
 $abraham_customizer_dir = trailingslashit( $abraham_dir . 'inc/customizer' );
@@ -32,7 +31,6 @@ $abraham_vendor_dir = trailingslashit( $abraham_dir . 'inc/vendors' );
 
 require_once( $abraham_vendor_dir . 'tha-theme-hooks.php' 				);
 require_once( $abraham_vendor_dir . 'google-analytics.php'				);
-require_once( $abraham_vendor_dir . 'class-tgm-plugin-activation.php'	);
 if( class_exists( 'Shortcode_UI' ) ) {
 	require_once( $abraham_dir . 'inc/shortcodes.php'	);
 }
