@@ -41,6 +41,7 @@ function abraham_add_editor_styles() {
 	// Set up editor styles
 	$editor_styles = array(
 		'//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic',
+		'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
 		'css/editor-style.css',
 	);
 	// Add the editor styles.

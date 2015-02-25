@@ -25,20 +25,21 @@ body.open {
 .site-description {
   color: $white;
   opacity: .8;
+  margin: 0;
 }
 
 .site-logo {
 float: left;
 }
 
-.site-branding {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  position: relative;
-  flex-direction: row;
-  margin: 0 auto;
-}
+// .site-branding {
+//   display: flex;
+//   width: 100%;
+//   height: 60px;
+//   position: relative;
+//   flex-direction: row;
+//   //margin: 0 auto;
+// }
 
 .site-logo {
   display: none;
@@ -61,12 +62,10 @@ float: left;
 }
 
 .site-title {
-  flex: 1;
   padding: 0;
   float: none;
   max-width: none;
   display: initial;
-  vertical-align: middle;
 }
 
 .site-title a {
@@ -97,6 +96,10 @@ float: left;
 @include md {
   .site-header {
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 5%;
   }
 
   .site-header.open,
@@ -107,8 +110,9 @@ float: left;
   .site-branding {
     display: block;
     height: auto;
-    max-width: $site-width;
-  @include padding-space($base-spacing-unit-sm);
+    flex: 1;
+    //max-width: $site-width;
+  //@include padding-space($base-spacing-unit-sm);
   }
 
   .app-bar-actions {
@@ -125,6 +129,10 @@ float: left;
 }
 
 @include sm-only {
+  .site-header {
+    height: 60px;
+  }
+
   .site-description {
     display: none;
   }
