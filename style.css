@@ -1513,8 +1513,8 @@ h6 a:visited {
     color: inherit;
     font-weight: inherit;
     text-decoration: none;
-    -webkit-transition: opacity 0.2s ease, border-color 0.2s;
-    transition: opacity 0.2s ease, border-color 0.2s;
+    -webkit-transition: opacity 0.3s ease, border-color 0.3s;
+    transition: opacity 0.3s ease, border-color 0.3s;
 }
 h1 a:hover,
 h1 a:focus,
@@ -2392,6 +2392,15 @@ body.open {
         margin-bottom: 40px;
     }
 }
+.widget .entry {
+    margin: 0;
+    padding: 0;
+}
+.widget .entry-content,
+.widget .entry-header {
+    padding-right: 0;
+    padding-left: 0;
+}
 
 .widget-title {
     margin-right: -16px;
@@ -2583,17 +2592,16 @@ body.open {
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
-
-.plural .entry {
+.plural .content .entry {
     display: inline-block;
 }
 @media only screen and (min-width: 48em) {
-    .plural .entry {
+    .plural .content .entry {
         width: 48.75%;
     }
 }
 @media only screen and (min-width: 64em) {
-    .plural .entry {
+    .plural .content .entry {
         width: 47.5%;
     }
 }
@@ -2822,8 +2830,8 @@ a.comments-link {
     font-weight: 400;
     line-height: 22px;
     text-align: center;
-    -webkit-transition: background 0.2s linear;
-    transition: background 0.2s linear;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
 }
 a.comments-link:hover {
     color: #fff;
@@ -2843,22 +2851,8 @@ a.comments-link:hover:before {
     border-right: 10px solid #858585;
     border-bottom: 0 solid transparent;
     content: "";
-    -webkit-transition: border-color 0.2s linear;
-    transition: border-color 0.2s linear;
-}
-
-.featured-media a {
-    opacity: 1;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.2s linear;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.featured-media a:hover {
-    opacity: 0.6;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    -webkit-transition: border-color 0.3s linear;
+    transition: border-color 0.3s linear;
 }
 
 a.post-format-link {
@@ -3093,8 +3087,8 @@ li.ping:before,
     font-weight: 400;
     font-style: italic;
     cursor: pointer;
-    -webkit-transition: color 0.2s linear;
-    transition: color 0.2s linear;
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear;
 }
 .form-allowed__label:before {
     display: inline-block;
@@ -3108,8 +3102,8 @@ li.ping:before,
     -moz-osx-font-smoothing: grayscale;
     text-decoration: none;
     content: "\f059";
-    -webkit-transition: color 0.2s linear;
-    transition: color 0.2s linear; 
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear; 
     text-rendering: auto;
 
     speak: none;
@@ -4292,8 +4286,8 @@ input[type="submit"] {
     color: #fff;
     background-color: #118ef2;
     cursor: pointer;
-    -webkit-transition: background-color 0.2s;
-    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 .btn:hover,
 .comment-reply-link:hover,
@@ -4305,8 +4299,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
     background-color: #41a5f5;
-    -webkit-transition: background-color 0.2s;
-    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 .btn:active,
 .comment-reply-link:active,
@@ -4843,6 +4837,19 @@ img {
 .featured-media img {
     display: block;
     margin: 0 auto;
+}
+
+a img {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+a img:hover {
+    opacity: 0.8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /*------------------------------------*\

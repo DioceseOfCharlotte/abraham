@@ -17,3 +17,14 @@ line-height: 0;
 display: block;
 margin: 0 auto;
 }
+
+a img {
+  opacity: 1;
+  transition: opacity $base-transition-speed linear;
+  backface-visibility: hidden;
+
+	&:hover  {
+	    opacity: .8;
+	    backface-visibility: hidden;
+	  }
+}

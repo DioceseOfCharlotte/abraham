@@ -18,24 +18,27 @@
     width: 100%;
 }
 
-.plural .content {
+.plural {
+
+  .content {
   display: flex;
   flex-wrap: wrap;
   //align-items: flex-end;
     justify-content: space-between;
-}
+  
 
-.plural .entry {
-  display: inline-block;
+    .entry {
+      display: inline-block;
 
-  @include md {
-    width: 48.75%;
+      @include md {
+        width: 48.75%;
+      }
+      @include lg {
+        width: 47.5%;
+      }
+    }
   }
-  @include lg {
-    width: 47.5%;
-  }
 }
-
 
 .entry-header {
   @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
@@ -199,16 +202,7 @@ a.comments-link {
 
 
 
-.featured-media a {
-  opacity: 1;
-  transition: opacity $base-transition-speed linear;
-  backface-visibility: hidden;
-}
 
-  .featured-media a:hover  {
-    opacity: .6;
-    backface-visibility: hidden;
-  }
 
 
 
