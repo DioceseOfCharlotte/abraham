@@ -2103,6 +2103,10 @@ body.open {
     color: #fff;
 }
 
+.site-logo {
+    float: left;
+}
+
 .site-branding {
     display: -webkit-box;
     display: -webkit-flex;
