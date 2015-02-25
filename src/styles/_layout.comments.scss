@@ -10,7 +10,7 @@
   overflow: hidden;
   border: 1px solid $grey-300;
   border-bottom-width: 2px;
-  border-top-color: $grey-200;
+  border-top-color: $grey-100;
 
   ol {
     list-style: none;
@@ -45,7 +45,7 @@ clear: both;
 li.ping, .comment-content {
 margin-top: 10px;
 border: 0;
-background: $grey-200;
+background: $grey-100;
 border-radius: $base-radius;
 position: relative;
 @include padding-space($base-spacing-unit-tiny $base-spacing-unit-tiny $base-spacing-unit-tiny * 0.24);
@@ -57,7 +57,7 @@ top: -20px;
 left: 0;
 width: 0;
 height: 0;
-border-bottom: 20px solid $grey-200;
+border-bottom: 20px solid $grey-100;
 border-left: 0 solid transparent;
 border-right: 15px solid transparent;
 content: "";
@@ -66,7 +66,7 @@ content: "";
 .children .comment.even > article > .comment-content:before {
 left: auto;
 right: 0;
-border-bottom: 20px solid $grey-200;
+border-bottom: 20px solid $grey-100;
 border-left: 15px solid transparent;
 border-right: 0 solid transparent;
 }
