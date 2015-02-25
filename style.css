@@ -4607,6 +4607,51 @@ input[type="submit"]:active {
     text-transform: capitalize;
 }
 
+.button--form:before {
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f044";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.button--info:before {
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f05a";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.button--link-ext:before {
+    display: inline-block;
+    padding-right: 5px; 
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    content: "\f08e";
+    text-rendering: auto;
+
+    speak: none;
+}
+
 /*------------------------------------*\
     #BLOCKQUOTES
 \*------------------------------------*/

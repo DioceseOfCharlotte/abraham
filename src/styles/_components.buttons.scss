@@ -43,3 +43,30 @@ input[type="submit"] {
   padding: 4px 12px;
   text-transform: capitalize;
 }
+
+.button--form {
+
+  &:before {
+    content: $pencil-square-o;
+    @include font-icon();
+    padding-right: 5px;
+  }
+}
+
+.button--info {
+
+  &:before {
+    content: $info-circle;
+    @include font-icon();
+    padding-right: 5px;
+  }
+}
+
+.button--link-ext {
+
+  &:before {
+    content: $external-link;
+    @include font-icon();
+    padding-right: 5px;
+  }
+}
