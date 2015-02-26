@@ -2,6 +2,65 @@
     #ARTICLES
 \*------------------------------------*/
 
+.panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $grey-200;
+  margin-bottom: $base-spacing-unit-sm;
+  padding: $base-spacing-unit-sm;
+  background-color: $grey-100;
+  color: $color-text;
+
+  p {
+  margin: 0;
+  }
+
+  &--info {
+    border-color: $blue-grey-200;
+    background-color: $blue-grey-100;
+
+    p:before {
+      content: $info-circle;
+      @include font-icon();
+      padding-right: $base-spacing-unit-sm;
+      font-size: 36px;
+      float: left;
+      color: $blue-grey-300;
+      line-height: 100%;
+    }
+  }
+
+  &--warning {
+    border-color: $yellow-200;
+    background-color: $yellow-100;
+
+    p:before {
+      content: $warning;
+      @include font-icon();
+      padding-right: $base-spacing-unit-sm;
+      font-size: 36px;
+      float: left;
+      color: $yellow-300;
+      line-height: 100%;
+    }
+  }
+
+  &--important {
+    border-color: $teal-200;
+    background-color: $teal-100;
+
+    p:before {
+      content: $exclamation-circle;
+      @include font-icon();
+      padding-right: $base-spacing-unit-sm;
+      font-size: 36px;
+      float: left;
+      color: $teal-300;
+      line-height: 100%;
+    }
+  }
+}
+
 .entry {
   // margin-left: auto;
   // margin-right: auto;

@@ -322,5 +322,66 @@ add_action( 'init', function() {
         )
     );
 
+	/**
+	 * Register your shortcode as you would normally.
+	 * This is a simple example for a pullquote with a citation.
+	 */
+	add_shortcode( 'attention', function( $attr, $content = '' ) {
+
+		$attr = wp_parse_args( $attr, array(
+			'type' => ''
+		) );
+
+		ob_start();
+
+		?>
+
+<div class="panel panel--<?php echo esc_html( $attr['type'] ); ?>">
+  <p><?php echo esc_html( $content ); ?></p>
+</div>
+
+		<?php
+
+		return ob_get_clean();
+	} );
+
+	/**
+	 * Register a UI for the Shortcode.
+	 * Pass the shortcode tag (string)
+	 * and an array or args.
+	 */
+	shortcode_ui_register_for_shortcode(
+		'attention',
+		array(
+
+			// Display label. String. Required.
+			'label' => 'Attention Panel',
+
+			// Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
+			'listItemImage' => 'dashicons-info',
+
+			// Available shortcode attributes and default values. Required. Array.
+			// Attribute model expects 'attr', 'type' and 'label'
+			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
+			'attrs' => array(
+				array(
+					'label' => 'Panel Type',
+					'attr'  => 'type',
+					'type'  => 'select',
+                    'options' => array(
+                    	'panel'		=> __( 'Highlight', 'abraham' ),
+						'info'		=> __( 'Information', 'abraham' ),
+						'warning'		=> __( 'Warning', 'abraham' ),
+						'important'	=> __( 'Important', 'abraham' ),
+					),
+				),
+				array(
+					'label' => 'Content',
+					'attr'  => 'content',
+					'type'  => 'textarea',
+				),
+			),
+		)
+	);
 
 } );
