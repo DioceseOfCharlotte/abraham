@@ -19,14 +19,17 @@
     border-color: $blue-grey-200;
     background-color: $blue-grey-100;
 
-    p:before {
-      content: $info-circle;
-      @include font-icon();
-      padding-right: $base-spacing-unit-sm;
-      font-size: 36px;
-      float: left;
-      color: $blue-grey-300;
-      line-height: 100%;
+    p {
+      color: $blue-grey-800;
+      &:before {
+        content: $info-circle;
+        @include font-icon();
+        padding-right: $base-spacing-unit-sm;
+        font-size: 36px;
+        float: left;
+        color: $blue-grey-300;
+        line-height: 100%;
+      }
     }
   }
 

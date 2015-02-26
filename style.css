@@ -2543,6 +2543,9 @@ body.open {
     border-color: #c6d1d6;
     background-color: #e4e9eb;
 }
+.panel--info p {
+    color: #2d383d;
+}
 .panel--info p:before {
     display: inline-block;
     float: left;
