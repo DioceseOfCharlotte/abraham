@@ -146,11 +146,11 @@ margin-bottom: 0;
     text-transform: uppercase;
     line-height: 1.5;
     font-weight: 700;
-    @include font-size(14px, false);
+    @include font-size($base-font-size * 1.5, false);
   }
 
   .post-title {
-    @include font-size($base-font-size * 1.5, false);
+    @include font-size($base-font-size, false);
     line-height: 1.2;
     font-weight: 400;
     color: $color-text;
@@ -159,9 +159,9 @@ margin-bottom: 0;
 
 .nav-previous {
   text-align: left;
-  width: 100%;
   opacity: 0.7;
   transition: opacity 0.2s ease;
+  margin-right: auto;
 
   &:hover {
     opacity: 1;
@@ -179,9 +179,9 @@ margin-bottom: 0;
 
 .nav-next {
   text-align: right;
-  width: 100%;
   opacity: 0.7;
   transition: opacity 0.2s ease;
+  margin-left: auto;
 
   &:hover {
     opacity: 1;
@@ -199,9 +199,11 @@ margin-bottom: 0;
 }
 
   .nav-links {
-  margin: 0 auto;
+  //margin: 0 auto;
   overflow: hidden;
-  @include clearfix();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .entry-byline {

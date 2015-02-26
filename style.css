@@ -2807,8 +2807,8 @@ body.open {
 .post-navigation .meta-nav {
     display: block;
     color: #858585;
-    font-size: 14px;
-    font-size: 0.875rem; 
+    font-size: 24px;
+    font-size: 1.5rem; 
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -2816,14 +2816,14 @@ body.open {
 }
 .post-navigation .post-title {
     color: #1f1f1f; 
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
 }
 
 .nav-previous {
-    width: 100%;
+    margin-right: auto; 
     opacity: 0.7;
     text-align: left;
     -webkit-transition: opacity 0.2s ease;
@@ -2844,7 +2844,7 @@ body.open {
 }
 
 .nav-next {
-    width: 100%;
+    margin-left: auto; 
     opacity: 0.7;
     text-align: right;
     -webkit-transition: opacity 0.2s ease;
@@ -2865,16 +2865,19 @@ body.open {
 }
 
 .nav-links {
-    overflow: hidden; 
-    margin: 0 auto;
-}
-.nav-links:before,
-.nav-links:after {
-    display: table; 
-    content: "";
-}
-.nav-links:after {
-    clear: both;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .entry-author,
