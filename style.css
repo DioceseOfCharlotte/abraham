@@ -1350,7 +1350,6 @@ del {
 .btn,
 .comment-reply-link,
 .comment-reply-login,
-.entry-terms a,
 button,
 input[type="button"],
 input[type="reset"],
@@ -1608,22 +1607,18 @@ p > a:active {
 a.btn,
 a.comment-reply-link,
 a.comment-reply-login,
-.entry-terms a,
 a.button {
     color: #fff;
 }
 a.btn:hover,
 a.comment-reply-link:hover,
 a.comment-reply-login:hover,
-.entry-terms a:hover,
 a.btn:visited,
 a.comment-reply-link:visited,
 a.comment-reply-login:visited,
-.entry-terms a:visited,
 a.btn:active,
 a.comment-reply-link:active,
 a.comment-reply-login:active,
-.entry-terms a:active,
 a.button:hover,
 a.button:visited,
 a.button:active {
@@ -4622,7 +4617,6 @@ a.post-edit-link::before {
 .btn,
 .comment-reply-link,
 .comment-reply-login,
-.entry-terms a,
 button,
 .button,
 input[type="button"],
@@ -4643,7 +4637,6 @@ input[type="submit"] {
 .btn:not(.search-submit),
 .comment-reply-link:not(.search-submit),
 .comment-reply-login:not(.search-submit),
-.entry-terms a:not(.search-submit),
 button:not(.search-submit),
 .button:not(.search-submit),
 input[type="button"]:not(.search-submit),
@@ -4654,7 +4647,6 @@ input[type="submit"]:not(.search-submit) {
 .btn:hover,
 .comment-reply-link:hover,
 .comment-reply-login:hover,
-.entry-terms a:hover,
 button:hover,
 .button:hover,
 input[type="button"]:hover,
@@ -4667,7 +4659,6 @@ input[type="submit"]:hover {
 .btn:active,
 .comment-reply-link:active,
 .comment-reply-login:active,
-.entry-terms a:active,
 button:active,
 .button:active,
 input[type="button"]:active,
@@ -4679,28 +4670,13 @@ input[type="submit"]:active {
 .btn + .btn,
 .comment-reply-link + .btn,
 .comment-reply-login + .btn,
-.entry-terms a + .btn,
 .btn + .comment-reply-link,
 .comment-reply-link + .comment-reply-link,
 .comment-reply-login + .comment-reply-link,
-.entry-terms a + .comment-reply-link,
 .btn + .comment-reply-login,
 .comment-reply-link + .comment-reply-login,
-.comment-reply-login + .comment-reply-login,
-.entry-terms a + .comment-reply-login,
-.entry-terms .btn + a,
-.entry-terms .comment-reply-link + a,
-.entry-terms .comment-reply-login + a,
-.entry-terms a + a {
+.comment-reply-login + .comment-reply-login {
     margin-left: 10px;
-}
-
-.entry-terms a {
-    padding: 4px 12px;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
-    text-transform: capitalize;
 }
 
 .button[class*="button--"]:before {
@@ -4710,11 +4686,31 @@ input[type="submit"]:active {
 }
 
 .button--form:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
     content: "\f044";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 .button--info:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
     content: "\f05a";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 .button--donate:before {
@@ -4732,7 +4728,17 @@ input[type="submit"]:active {
 }
 
 .button--link-ext:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
     content: "\f08e";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 /*------------------------------------*\

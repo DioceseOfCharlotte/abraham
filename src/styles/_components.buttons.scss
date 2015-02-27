@@ -39,13 +39,6 @@ input[type="submit"] {
   margin-left: 10px;
 }
 
-.entry-terms a {
-  @extend .btn;
-  @include font-size($base-font-size - 2);
-  padding: 4px 12px;
-  text-transform: capitalize;
-}
-
 
 
 
@@ -58,6 +51,7 @@ input[type="submit"] {
 
   &:before {
     content: $pencil-square-o;
+    @include font-icon();
   }
 }
 
@@ -65,6 +59,7 @@ input[type="submit"] {
 
   &:before {
     content: $info-circle;
+    @include font-icon();
   }
 }
 
@@ -80,5 +75,6 @@ input[type="submit"] {
 
   &:before {
     content: $external-link;
+    @include font-icon();
   }
 }
