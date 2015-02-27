@@ -3,63 +3,72 @@
 \*------------------------------------*/
 
 .panel {
-  border-style: solid;
-  border-width: 1px;
-  border-color: $grey-200;
+  // border-style: solid;
+  // border-width: 1px;
+  // border-color: $grey-200;
+  border-radius: $base-radius;
   margin-bottom: $base-spacing-unit-sm;
-  padding: $base-spacing-unit-sm;
+  @include padding-space($base-spacing-unit-tiny);
   background-color: $grey-100;
-  color: $color-text;
+
+  span:before {
+    color: currentColor;
+  }
+
+  h4 {
+    margin-bottom: .4rem;
+    font-weight: 500;
+    color: currentColor;
+  }
 
   p {
-  margin: 0;
+    color: currentColor;
+
+    &:last-child {
+    margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    float: left;
+    @include font-icon();
+    line-height: 1;
+    font-size: 38px;
+
+    + .panel__body {
+      margin-left: 50px;
+    }
   }
 
   &--info {
-    border-color: $blue-grey-200;
-    background-color: $blue-grey-100;
+    border-color: $blue-200;
+    background-color: $blue-100;
+    color: $blue-800;
 
-    p {
-      color: $blue-grey-800;
+    .panel__icon > span {
       &:before {
         content: $info-circle;
-        @include font-icon();
-        padding-right: $base-spacing-unit-sm;
-        font-size: 36px;
-        float: left;
-        color: $blue-grey-300;
-        line-height: 100%;
       }
     }
   }
 
   &--warning {
-    border-color: $yellow-200;
-    background-color: $yellow-100;
+    border-color: $red-200;
+    background-color: $red-100;
+    color: $red-800;
 
-    p:before {
+    .panel__icon>span:before {
       content: $warning;
-      @include font-icon();
-      padding-right: $base-spacing-unit-sm;
-      font-size: 36px;
-      float: left;
-      color: $yellow-300;
-      line-height: 100%;
     }
   }
 
   &--important {
-    border-color: $teal-200;
-    background-color: $teal-100;
+    border-color: $orange-200;
+    background-color: $orange-100;
+    color: $orange-800;
 
-    p:before {
+    .panel__icon>span:before {
       content: $exclamation-circle;
-      @include font-icon();
-      padding-right: $base-spacing-unit-sm;
-      font-size: 36px;
-      float: left;
-      color: $teal-300;
-      line-height: 100%;
     }
   }
 }

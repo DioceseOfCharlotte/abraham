@@ -329,7 +329,8 @@ add_action( 'init', function() {
 	add_shortcode( 'attention', function( $attr, $content = '' ) {
 
 		$attr = wp_parse_args( $attr, array(
-			'type' => ''
+			'heading' => '',
+			'type' => 'panel'
 		) );
 
 		ob_start();
@@ -337,7 +338,17 @@ add_action( 'init', function() {
 		?>
 
 <div class="panel panel--<?php echo esc_html( $attr['type'] ); ?>">
-  <p><?php echo esc_html( $content ); ?></p>
+	<?php if ($attr['type'] != 'panel') { ?>
+		<div class="panel__icon">
+			<span></span>
+		</div>
+	<?php } ?>
+	<div class="panel__body">
+	<?php if ($attr['heading'] != '') { ?>
+		<h4><?php echo esc_html( $attr['heading'] ); ?></h4>
+	<?php } ?>
+	  <p><?php echo esc_html( $content ); ?></p>
+	</div>
 </div>
 
 		<?php
@@ -374,6 +385,12 @@ add_action( 'init', function() {
 						'warning'		=> __( 'Warning', 'abraham' ),
 						'important'	=> __( 'Important', 'abraham' ),
 					),
+				),
+				array(
+					'label' => 'Heading',
+					'attr'  => 'heading',
+					'type'  => 'text',
+					'description' => 'Optional',
 				),
 				array(
 					'label' => 'Content',

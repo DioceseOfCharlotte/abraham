@@ -1131,7 +1131,7 @@ th {
     #BASE
 \*------------------------------------*/
 html {
-    color: #1f1f1f;
+    color: #393939;
     font-size: 16px;
     line-height: 24px;
 }
@@ -1340,7 +1340,7 @@ big {
 s,
 strike,
 del {
-    color: #525252; 
+    color: #5e5e5e; 
     text-decoration: line-through;
 }
 
@@ -1772,7 +1772,7 @@ ol ul {
 .sidebar .menu-item a {
     padding-top: 0; 
     padding-bottom: 0;
-    color: #1f1f1f;
+    color: #393939;
     line-height: 40px;
 }
 
@@ -1907,7 +1907,7 @@ ol ul {
 }
 .sub-menu a {
     padding: 20px;
-    color: #1f1f1f;
+    color: #393939;
     font-size: 15px;
     font-size: 0.9375rem; 
     line-height: 1;
@@ -1915,7 +1915,7 @@ ol ul {
 .sub-menu a:visited,
 .sub-menu a:hover,
 .sub-menu a:active {
-    color: #1f1f1f;
+    color: #393939;
 }
 .sub-menu.active {
     display: block;
@@ -2529,84 +2529,84 @@ body.open {
 \*------------------------------------*/
 .panel {
     margin-bottom: 16px;
-    padding: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #d2d2d2;
-    color: #1f1f1f; 
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    border-radius: 2px;
     background-color: #ebebeb;
 }
+@media only screen and (min-width: 48em) {
+    .panel {
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+    }
+}
+@media only screen and (min-width: 64em) {
+    .panel {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}
+.panel span:before {
+    color: currentColor;
+}
+.panel h4 {
+    margin-bottom: 0.4rem;
+    color: currentColor; 
+    font-weight: 500;
+}
 .panel p {
-    margin: 0;
+    color: currentColor;
+}
+.panel p:last-child {
+    margin-bottom: 0;
+}
+.panel__icon {
+    display: inline-block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-size: 38px; 
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    text-decoration: none;
+    text-rendering: auto;
+
+    speak: none;
+}
+.panel__icon + .panel__body {
+    margin-left: 50px;
 }
 .panel--info {
-    border-color: #c6d1d6;
-    background-color: #e4e9eb;
+    border-color: #a2d3fa;
+    color: #053a65; 
+    background-color: #d2eafd;
 }
-.panel--info p {
-    color: #2d383d;
-}
-.panel--info p:before {
-    display: inline-block;
-    float: left;
-    padding-right: 16px;
-    color: #a9b8c0;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-size: 36px;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 100%; 
-    text-decoration: none;
+.panel--info .panel__icon > span:before {
     content: "\f05a";
-    text-rendering: auto;
-
-    speak: none;
 }
 .panel--warning {
-    border-color: #fff59d;
-    background-color: #fffad0;
+    border-color: #ff9fb2;
+    color: #6c0015; 
+    background-color: #ffd2db;
 }
-.panel--warning p:before {
-    display: inline-block;
-    float: left;
-    padding-right: 16px;
-    color: #fff06a;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-size: 36px;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 100%; 
-    text-decoration: none;
+.panel--warning .panel__icon > span:before {
     content: "\f071";
-    text-rendering: auto;
-
-    speak: none;
 }
 .panel--important {
-    border-color: #bae2df;
-    background-color: #def1ef;
+    border-color: #ffd99c;
+    color: #694100; 
+    background-color: #ffedcf;
 }
-.panel--important p:before {
-    display: inline-block;
-    float: left;
-    padding-right: 16px;
-    color: #95d4ce;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-size: 36px;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 100%; 
-    text-decoration: none;
+.panel--important .panel__icon > span:before {
     content: "\f06a";
-    text-rendering: auto;
-
-    speak: none;
 }
 
 .entry {
@@ -2785,7 +2785,7 @@ body.open {
     text-transform: uppercase;
 }
 .entry-footer a:hover {
-    color: #1f1f1f;
+    color: #393939;
 }
 
 .post-navigation {
@@ -2815,7 +2815,7 @@ body.open {
     text-transform: uppercase;
 }
 .post-navigation .post-title {
-    color: #1f1f1f; 
+    color: #393939; 
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -4772,10 +4772,6 @@ blockquote cite::before {
     content: "\2014";
 }
 
-.pf-content {
-    padding: 16px;
-}
-
 /*------------------------------------*\
     #BREADCRUMBS
 \*------------------------------------*/
@@ -4839,7 +4835,7 @@ blockquote cite::before {
 }
 .breadcrumbs a {
     opacity: 0.7;
-    color: #1f1f1f;
+    color: #393939;
     font-weight: inherit;
     text-decoration: none;
     -webkit-transition: opacity 0.2s ease;
