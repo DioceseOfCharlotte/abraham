@@ -6,7 +6,7 @@ add_action( 'init', function() {
 	 * Register your shortcode as you would normally.
 	 * This is a simple example for a pullquote with a citation.
 	 */
-	add_shortcode( 'pullquote', function( $attr, $content = '' ) {
+	add_shortcode( 'pullquote', function( $attr, $quote = '' ) {
 
 		$attr = wp_parse_args( $attr, array(
 			'source' => ''
@@ -17,7 +17,7 @@ add_action( 'init', function() {
 		?>
 
 		<blockquote class="pullquote">
-			<?php echo esc_html( $content ); ?><br/>
+			<?php echo esc_html( $quote ); ?><br/>
 			<cite><?php echo esc_html( $attr['source'] ); ?></cite>
 		</blockquote>
 
@@ -47,7 +47,7 @@ add_action( 'init', function() {
 			'attrs' => array(
 				array(
 					'label' => 'Quote',
-					'attr'  => 'content',
+					'attr'  => 'quote',
 					'type'  => 'textarea',
 				),
 				array(
@@ -65,7 +65,7 @@ add_action( 'init', function() {
      * Register your shortcode as you would normally.
      * This is a simple example for a pullquote with a citation.
      */
-    add_shortcode( 'button', function( $attr, $content = '' ) {
+    add_shortcode( 'button', function( $attr, $label = '' ) {
 
         $attr = wp_parse_args( $attr, array(
             'source' => '',
@@ -76,7 +76,7 @@ add_action( 'init', function() {
 
         ?>
 
- 		<a href="<?php echo esc_html( $attr['source'] ); ?>" class="button button--<?php echo esc_html( $attr['type'] ); ?>"> <?php echo esc_html( $content ); ?></a>
+ 		<a href="<?php echo esc_html( $attr['source'] ); ?>" class="button button--<?php echo esc_html( $attr['type'] ); ?>"> <?php echo esc_html( $label ); ?></a>
 
         <?php
 
@@ -116,7 +116,7 @@ add_action( 'init', function() {
                 ),
                 array(
                     'label' => 'Label',
-                    'attr'  => 'content',
+                    'attr'  => 'label',
                     'type'  => 'text',
                 ),
                 array(
@@ -134,7 +134,7 @@ add_action( 'init', function() {
 	 * Register your shortcode as you would normally.
 	 * This is a simple example for a pullquote with a citation.
 	 */
-	add_shortcode( 'email', function( $attr, $content = '' ) {
+	add_shortcode( 'email', function( $attr, $email = '' ) {
 
 		$attr = wp_parse_args( $attr, array(
 			'source' => '',
@@ -145,7 +145,7 @@ add_action( 'init', function() {
 
 		?>
 
-		<a href="mailto:<?php echo esc_html( $attr['source'] ); ?>?subject=<?php echo esc_html( $attr['subject'] ); ?>"> <?php echo esc_html( $content ); ?></a><br>
+		<a href="mailto:<?php echo esc_html( $attr['source'] ); ?>?subject=<?php echo esc_html( $attr['subject'] ); ?>"> <?php echo esc_html( $email ); ?></a><br>
 
 		<?php
 
@@ -173,7 +173,7 @@ add_action( 'init', function() {
 			'attrs' => array(
 				array(
 					'label' => 'Display Name',
-					'attr'  => 'content',
+					'attr'  => 'email',
 					'type'  => 'text',
 					'description' => 'You can display the person\'s name or the email address.'
 				),
@@ -192,7 +192,7 @@ add_action( 'init', function() {
 		)
 	);
 
-	add_shortcode( 'phone', function( $attr, $content = '' ) {
+	add_shortcode( 'phone', function( $attr, $phone = '' ) {
 
 		$attr = wp_parse_args( $attr, array(
 			'source' => ''
@@ -202,7 +202,7 @@ add_action( 'init', function() {
 
 		?>
 
-		<a href="tel:<?php echo esc_html( $attr['source'] ); ?>-<?php echo esc_html( $content ); ?>"> (<?php echo esc_html( $attr['source'] ); ?>) <?php echo esc_html( $content ); ?></a><br>
+		<a href="tel:<?php echo esc_html( $attr['source'] ); ?>-<?php echo esc_html( $phone ); ?>"> (<?php echo esc_html( $attr['source'] ); ?>) <?php echo esc_html( $phone ); ?></a><br>
 
 		<?php
 
@@ -236,7 +236,7 @@ add_action( 'init', function() {
 				),
 				array(
 					'label' => 'Local',
-					'attr'  => 'content',
+					'attr'  => 'phone',
 					'type'  => 'text',
 					'description' => '(7 digits) ex: 555-5555',
 				),
@@ -250,7 +250,7 @@ add_action( 'init', function() {
      * Register your shortcode as you would normally.
      * This is a simple example for a pullquote with a citation.
      */
-    add_shortcode( 'address', function( $attr, $content = '' ) {
+    add_shortcode( 'address', function( $attr, $addressname = '' ) {
 
         $attr = wp_parse_args( $attr, array(
             'street' => '',
@@ -264,7 +264,7 @@ add_action( 'init', function() {
         ?>
 
 		<address>
-		    <?php echo esc_html( $content ); ?><br>
+		    <?php echo esc_html( $addressname ); ?><br>
 		    <?php echo esc_html( $attr['street'] ); ?><br>
 		    <?php echo esc_html( $attr['city'] ); ?>, <?php echo esc_html( $attr['state'] ); ?> <?php echo esc_html( $attr['zip'] ); ?><br>
 		</address>
@@ -295,7 +295,7 @@ add_action( 'init', function() {
             'attrs' => array(
                 array(
                     'label' => 'Name',
-                    'attr'  => 'content',
+                    'attr'  => 'addressname',
                     'type'  => 'text',
                     'description'  => 'name or business name',
                 ),
@@ -327,7 +327,7 @@ add_action( 'init', function() {
 	 * Register your shortcode as you would normally.
 	 * This is a simple example for a pullquote with a citation.
 	 */
-	add_shortcode( 'attention', function( $attr, $content = '' ) {
+	add_shortcode( 'attention', function( $attr, $message = '' ) {
 
 		$attr = wp_parse_args( $attr, array(
 			'heading' => '',
@@ -348,7 +348,7 @@ add_action( 'init', function() {
 	<?php if ($attr['heading'] != '') { ?>
 		<h4><?php echo esc_html( $attr['heading'] ); ?></h4>
 	<?php } ?>
-	  <p><?php echo esc_html( $content ); ?></p>
+	  <p><?php echo esc_html( $message ); ?></p>
 	</div>
 </div>
 
@@ -395,7 +395,7 @@ add_action( 'init', function() {
 				),
 				array(
 					'label' => 'Content',
-					'attr'  => 'content',
+					'attr'  => 'message',
 					'type'  => 'textarea',
 				),
 			),
