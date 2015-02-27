@@ -13,16 +13,19 @@ input[type="submit"] {
   border-radius: $base-radius;
   color: $btn-text;
   cursor: pointer;
-  padding: $base-spacing-unit-sm $base-spacing-unit;
+  padding: $base-spacing-unit-sm * 0.75 $base-spacing-unit-sm * 1.25;
   width: auto;
   display: inline-block;
   outline: 0;
+  transition: background-color $base-transition-speed;
+  margin-bottom: $base-spacing-unit-sm;
 
 //   &:not(.search-submit) {
 //   margin: .3em;
 // }
-  transition: background-color $base-transition-speed;
-
+  // &:link, &:visited {
+  //   color: inherit
+  // }
   &:hover {
   background-color: $btn-bg-hover;
   transition: background-color $base-transition-speed;
@@ -44,12 +47,18 @@ input[type="submit"] {
   text-transform: capitalize;
 }
 
+
+
+
+.button[class*="button--"]:before {
+  @include font-size($base-font-size + 3, false);
+  vertical-align: bottom;
+}
+
 .button--form {
 
   &:before {
     content: $pencil-square-o;
-    @include font-icon();
-    padding-right: 5px;
   }
 }
 
@@ -57,8 +66,14 @@ input[type="submit"] {
 
   &:before {
     content: $info-circle;
-    @include font-icon();
-    padding-right: 5px;
+  }
+}
+
+.button--donate {
+
+  &:before {
+    content: $dio-give;
+    @include font-icon('diocons');
   }
 }
 
@@ -66,7 +81,5 @@ input[type="submit"] {
 
   &:before {
     content: $external-link;
-    @include font-icon();
-    padding-right: 5px;
   }
 }

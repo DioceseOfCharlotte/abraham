@@ -75,9 +75,9 @@ add_action( 'init', function() {
         ob_start();
 
         ?>
- 
+
  		<a href="<?php echo esc_html( $attr['source'] ); ?>" class="button button--<?php echo esc_html( $attr['type'] ); ?>"> <?php echo esc_html( $content ); ?></a>
- 
+
         <?php
 
         return ob_get_clean();
@@ -110,6 +110,7 @@ add_action( 'init', function() {
                     	'btn'		=> __( 'General', 'abraham' ),
 						'info'		=> __( 'Information', 'abraham' ),
 						'form'		=> __( 'Form', 'abraham' ),
+						'donate'	=> __( 'Donate', 'abraham' ),
 						'link-ext'	=> __( 'External Link', 'abraham' ),
 					),
                 ),
@@ -261,13 +262,13 @@ add_action( 'init', function() {
         ob_start();
 
         ?>
- 
+
 		<address>
 		    <?php echo esc_html( $content ); ?><br>
 		    <?php echo esc_html( $attr['street'] ); ?><br>
 		    <?php echo esc_html( $attr['city'] ); ?>, <?php echo esc_html( $attr['state'] ); ?> <?php echo esc_html( $attr['zip'] ); ?><br>
 		</address>
- 
+
         <?php
 
         return ob_get_clean();

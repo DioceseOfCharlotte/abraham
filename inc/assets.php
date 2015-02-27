@@ -29,6 +29,8 @@ function abraham_styles() {
 
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 
+	wp_enqueue_style( 'diocons', '//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css' );
+
 	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic', array(),	null );
 
 	if ( is_child_theme() )
@@ -42,6 +44,7 @@ function abraham_add_editor_styles() {
 	$editor_styles = array(
 		'//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic',
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
+		'//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css',
 		'css/editor-style.css',
 	);
 	// Add the editor styles.
