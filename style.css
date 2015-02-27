@@ -4630,7 +4630,6 @@ input[type="reset"],
 input[type="submit"] {
     display: inline-block;
     width: auto;
-    margin-bottom: 16px; 
     padding: 12px 20px;
     border: 0;
     border-radius: 2px;
@@ -4640,6 +4639,17 @@ input[type="submit"] {
     cursor: pointer;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
+}
+.btn:not(.search-submit),
+.comment-reply-link:not(.search-submit),
+.comment-reply-login:not(.search-submit),
+.entry-terms a:not(.search-submit),
+button:not(.search-submit),
+.button:not(.search-submit),
+input[type="button"]:not(.search-submit),
+input[type="reset"]:not(.search-submit),
+input[type="submit"]:not(.search-submit) {
+    margin-bottom: 16px;
 }
 .btn:hover,
 .comment-reply-link:hover,

@@ -18,11 +18,10 @@ input[type="submit"] {
   display: inline-block;
   outline: 0;
   transition: background-color $base-transition-speed;
-  margin-bottom: $base-spacing-unit-sm;
 
-//   &:not(.search-submit) {
-//   margin: .3em;
-// }
+  &:not(.search-submit) {
+  margin-bottom: $base-spacing-unit-sm;
+}
   // &:link, &:visited {
   //   color: inherit
   // }
