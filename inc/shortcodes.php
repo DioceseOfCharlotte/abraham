@@ -1,378 +1,113 @@
 <?php
 
-add_action( 'init', function() {
+add_action( 'init', 'abraham_add_shortcodes' );
+add_action( 'init', 'abraham_add_shortcake' );
 
-	/**
-	 * Register your shortcode as you would normally.
-	 * This is a simple example for a pullquote with a citation.
-	 */
-	add_shortcode( 'pullquote', function( $attr, $quote = '' ) {
+function abraham_add_shortcodes() {
 
-		$attr = wp_parse_args( $attr, array(
-			'source' => ''
-		) );
+add_shortcode( 'panel',	'abraham_panel_shortcode' );
+add_shortcode( 'pullquote',	'abraham_pullquote_shortcode' );
+add_shortcode( 'buttons',	'abraham_buttons_shortcode' );
 
-		ob_start();
+}
 
-		?>
+/**
+ * PANEL
+ */
+function abraham_panel_shortcode( $attr ) {
 
-		<blockquote class="pullquote">
-			<?php echo esc_html( $quote ); ?><br/>
-			<cite><?php echo esc_html( $attr['source'] ); ?></cite>
-		</blockquote>
-
-		<?php
-
-		return ob_get_clean();
-	} );
-
-	/**
-	 * Register a UI for the Shortcode.
-	 * Pass the shortcode tag (string)
-	 * and an array or args.
-	 */
-	shortcode_ui_register_for_shortcode(
-		'pullquote',
+	extract( shortcode_atts(
 		array(
-
-			// Display label. String. Required.
-			'label' => 'Pullquote',
-
-			// Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
-			'listItemImage' => 'dashicons-editor-quote',
-
-			// Available shortcode attributes and default values. Required. Array.
-			// Attribute model expects 'attr', 'type' and 'label'
-			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
-			'attrs' => array(
-				array(
-					'label' => 'Quote',
-					'attr'  => 'quote',
-					'type'  => 'textarea',
-				),
-				array(
-					'label' => 'Cite',
-					'attr'  => 'source',
-					'type'  => 'text',
-				),
-			),
-		)
-	);
-
-
-
-    /**
-     * Register your shortcode as you would normally.
-     * This is a simple example for a pullquote with a citation.
-     */
-    add_shortcode( 'button', function( $attr, $label = '' ) {
-
-        $attr = wp_parse_args( $attr, array(
-            'source' => '',
-            'type' => '',
-        ) );
-
-        ob_start();
-
-        ?>
-
- 		<a href="<?php echo esc_html( $attr['source'] ); ?>" class="button button--<?php echo esc_html( $attr['type'] ); ?>"> <?php echo esc_html( $label ); ?></a>
-
-        <?php
-
-        return ob_get_clean();
-    } );
-
-    /**
-     * Register a UI for the Shortcode.
-     * Pass the shortcode tag (string)
-     * and an array or args.
-     */
-    shortcode_ui_register_for_shortcode(
-        'button',
-        array(
-
-            // Display label. String. Required.
-            'label' => 'Button',
-
-            // Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
-            'listItemImage' => 'dashicons-share-alt2',
-
-            // Available shortcode attributes and default values. Required. Array.
-            // Attribute model expects 'attr', 'type' and 'label'
-            // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
-            'attrs' => array(
-            	array(
-                    'label' => 'Button Type',
-                    'attr'  => 'type',
-                    'type'  => 'select',
-                    'options' => array(
-                    	'btn'		=> __( 'General', 'abraham' ),
-						'info'		=> __( 'Information', 'abraham' ),
-						'form'		=> __( 'Form', 'abraham' ),
-						'donate'	=> __( 'Donate', 'abraham' ),
-						'link-ext'	=> __( 'External Link', 'abraham' ),
-					),
-                ),
-                array(
-                    'label' => 'Label',
-                    'attr'  => 'label',
-                    'type'  => 'text',
-                ),
-                array(
-                    'label' => 'Link',
-                    'attr'  => 'source',
-                    'type'  => 'url',
-                ),
-            ),
-        )
-    );
-
-
-
-	/**
-	 * Register your shortcode as you would normally.
-	 * This is a simple example for a pullquote with a citation.
-	 */
-	add_shortcode( 'email', function( $attr, $email = '' ) {
-
-		$attr = wp_parse_args( $attr, array(
-			'source' => '',
-			'subject' => '',
-		) );
-
-		ob_start();
-
-		?>
-
-		<a href="mailto:<?php echo esc_html( $attr['source'] ); ?>?subject=<?php echo esc_html( $attr['subject'] ); ?>"> <?php echo esc_html( $email ); ?></a><br>
-
-		<?php
-
-		return ob_get_clean();
-	} );
-
-	/**
-	 * Register a UI for the Shortcode.
-	 * Pass the shortcode tag (string)
-	 * and an array or args.
-	 */
-	shortcode_ui_register_for_shortcode(
-		'email',
-		array(
-
-			// Display label. String. Required.
-			'label' => 'Email',
-
-			// Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
-			'listItemImage' => 'dashicons-email-alt',
-
-			// Available shortcode attributes and default values. Required. Array.
-			// Attribute model expects 'attr', 'type' and 'label'
-			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
-			'attrs' => array(
-				array(
-					'label' => 'Display Name',
-					'attr'  => 'email',
-					'type'  => 'text',
-					'description' => 'You can display the person\'s name or the email address.'
-				),
-				array(
-					'label' => 'Email Subject Line',
-					'attr'  => 'subject',
-					'type'  => 'text',
-					'description' => 'The subject line when an email is composed from this link.'
-				),
-				array(
-					'label' => 'Email Address',
-					'attr'  => 'source',
-					'type'  => 'email',
-				),
-			),
-		)
-	);
-
-	add_shortcode( 'phone', function( $attr, $phone = '' ) {
-
-		$attr = wp_parse_args( $attr, array(
-			'source' => ''
-		) );
-
-		ob_start();
-
-		?>
-
-		<a href="tel:<?php echo esc_html( $attr['source'] ); ?>-<?php echo esc_html( $phone ); ?>"> (<?php echo esc_html( $attr['source'] ); ?>) <?php echo esc_html( $phone ); ?></a><br>
-
-		<?php
-
-		return ob_get_clean();
-	} );
-
-	/**
-	 * Register a UI for the Shortcode.
-	 * Pass the shortcode tag (string)
-	 * and an array or args.
-	 */
-	shortcode_ui_register_for_shortcode(
-		'phone',
-		array(
-
-			// Display label. String. Required.
-			'label' => 'Phone',
-
-			// Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
-			'listItemImage' => 'dashicons-phone',
-
-			// Available shortcode attributes and default values. Required. Array.
-			// Attribute model expects 'attr', 'type' and 'label'
-			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
-			'attrs' => array(
-				array(
-					'label' => 'Area Code',
-					'attr'  => 'source',
-					'type'  => 'text',
-					'description' => '(3 digits) ex: 704',
-				),
-				array(
-					'label' => 'Local',
-					'attr'  => 'phone',
-					'type'  => 'text',
-					'description' => '(7 digits) ex: 555-5555',
-				),
-			),
-		)
-	);
-
-
-
-    /**
-     * Register your shortcode as you would normally.
-     * This is a simple example for a pullquote with a citation.
-     */
-    add_shortcode( 'address', function( $attr, $addressname = '' ) {
-
-        $attr = wp_parse_args( $attr, array(
-            'street' => '',
-            'city' => '',
-            'state' => '',
-            'zip' => '',
-        ) );
-
-        ob_start();
-
-        ?>
-
-		<address>
-		    <?php echo esc_html( $addressname ); ?><br>
-		    <?php echo esc_html( $attr['street'] ); ?><br>
-		    <?php echo esc_html( $attr['city'] ); ?>, <?php echo esc_html( $attr['state'] ); ?> <?php echo esc_html( $attr['zip'] ); ?><br>
-		</address>
-
-        <?php
-
-        return ob_get_clean();
-    } );
-
-    /**
-     * Register a UI for the Shortcode.
-     * Pass the shortcode tag (string)
-     * and an array or args.
-     */
-    shortcode_ui_register_for_shortcode(
-        'address',
-        array(
-
-            // Display label. String. Required.
-            'label' => 'Address',
-
-            // Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
-            'listItemImage' => 'dashicons-location-alt',
-
-            // Available shortcode attributes and default values. Required. Array.
-            // Attribute model expects 'attr', 'type' and 'label'
-            // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
-            'attrs' => array(
-                array(
-                    'label' => 'Name',
-                    'attr'  => 'addressname',
-                    'type'  => 'text',
-                    'description'  => 'name or business name',
-                ),
-            	array(
-                    'label' => 'Street',
-                    'attr'  => 'street',
-                    'type'  => 'text',
-                ),
-                array(
-                    'label' => 'City',
-                    'attr'  => 'city',
-                    'type'  => 'text',
-                ),
-                array(
-                    'label' => 'State',
-                    'attr'  => 'state',
-                    'type'  => 'text',
-                ),
-                array(
-                    'label' => 'Zip',
-                    'attr'  => 'zip',
-                    'type'  => 'text',
-                ),
-            ),
-        )
-    );
-
-	/**
-	 * Register your shortcode as you would normally.
-	 * This is a simple example for a pullquote with a citation.
-	 */
-	add_shortcode( 'attention', function( $attr, $message = '' ) {
-
-		$attr = wp_parse_args( $attr, array(
 			'heading' => '',
-			'type' => 'panel'
-		) );
+			'message' => '',
+			'type' => ''
+		), $attr )
+	);
 
-		ob_start();
+	ob_start();
 
-		?>
+	$return = '<div class="panel panel--' .$type. '">';
+	if (!empty($type)) $return .= '<div class="panel__icon"><span></span></div>';
+	$return .= '<div class="panel__body">';
+	if (!empty($heading)) $return .= '<h4>'.$heading.'</h4>';
+	$return .= '<p>'.$message.'</p></div></div>';
+	return $return;
 
-<div class="panel panel--<?php echo esc_html( $attr['type'] ); ?>">
-	<?php if ($attr['type'] != 'panel') { ?>
-		<div class="panel__icon">
-			<span></span>
-		</div>
-	<?php } ?>
-	<div class="panel__body">
-	<?php if ($attr['heading'] != '') { ?>
-		<h4><?php echo esc_html( $attr['heading'] ); ?></h4>
-	<?php } ?>
-	  <p><?php echo esc_html( $message ); ?></p>
-	</div>
-</div>
+	return ob_get_clean();
+}
 
-		<?php
 
-		return ob_get_clean();
-	} );
+
+
+/**
+ * QUOTE
+ */
+function abraham_pullquote_shortcode( $attr ) {
+
+	extract( shortcode_atts(
+		array(
+			'quote' => '',
+			'source' => ''
+		), $attr )
+	);
+
+	ob_start();
+
+	$return = '<blockquote class="pullquote">' .$quote. '<br/>';
+	$return .= '<cite>'.$source.'</cite></blockquote>';
+	return $return;
+
+	return ob_get_clean();
+}
+
+
+
+
+/**
+ * BUTTONS
+ */
+function abraham_buttons_shortcode( $attr ) {
+
+	extract( shortcode_atts(
+		array(
+			'type' => '',
+			'link' => '',
+			'label' => ''
+		), $attr )
+	);
+
+	ob_start();
+
+	$return = '<a href="' .$link. '" class="button button--'.$type.'"> ';
+	$return .= $label.'</a>';
+	return $return;
+
+	return ob_get_clean();
+}
+
+
+
+
+
+
+
+/**
+ * SHORTCAKE 
+ * https://github.com/fusioneng/Shortcake
+ */
+function abraham_add_shortcake() {
 
 	/**
-	 * Register a UI for the Shortcode.
-	 * Pass the shortcode tag (string)
-	 * and an array or args.
+	 * PANEL
 	 */
 	shortcode_ui_register_for_shortcode(
-		'attention',
+		'panel',
 		array(
 
-			// Display label. String. Required.
-			'label' => 'Attention Panel',
+			'label' => 'Panel',
 
-			// Icon/image for shortcode. Optional. src or dashicons-$icon. Defaults to carrot.
 			'listItemImage' => 'dashicons-info',
 
-			// Available shortcode attributes and default values. Required. Array.
 			// Attribute model expects 'attr', 'type' and 'label'
 			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
 			'attrs' => array(
@@ -381,7 +116,7 @@ add_action( 'init', function() {
 					'attr'  => 'type',
 					'type'  => 'select',
                     'options' => array(
-                    	'panel'		=> __( 'Highlight', 'abraham' ),
+                    	''		=> __( 'Highlight', 'abraham' ),
 						'info'		=> __( 'Information', 'abraham' ),
 						'warning'		=> __( 'Warning', 'abraham' ),
 						'important'	=> __( 'Important', 'abraham' ),
@@ -402,4 +137,75 @@ add_action( 'init', function() {
 		)
 	);
 
-} );
+
+
+
+	/**
+	 * QUOTE
+	 */
+	shortcode_ui_register_for_shortcode(
+		'pullquote',
+		array(
+
+			'label' => 'Pullquote',
+
+			'listItemImage' => 'dashicons-editor-quote',
+
+			'attrs' => array(
+				array(
+					'label' => 'Quote',
+					'attr'  => 'quote',
+					'type'  => 'textarea',
+				),
+				array(
+					'label' => 'Cite',
+					'attr'  => 'source',
+					'type'  => 'text',
+				),
+			),
+		)
+	);
+
+
+
+
+	/**
+	 * BUTTONS
+	 */
+    shortcode_ui_register_for_shortcode(
+        'buttons',
+        array(
+
+            'label' => 'Button',
+
+            'listItemImage' => 'dashicons-share-alt2',
+
+            'attrs' => array(
+            	array(
+                    'label' => 'Button Type',
+                    'attr'  => 'type',
+                    'type'  => 'select',
+                    'options' => array(
+                    	'btn'		=> __( 'General', 'abraham' ),
+						'info'		=> __( 'Information', 'abraham' ),
+						'form'		=> __( 'Form', 'abraham' ),
+						'donate'	=> __( 'Donate', 'abraham' ),
+						'link-ext'	=> __( 'External Link', 'abraham' ),
+					),
+                ),
+                array(
+                    'label' => 'Label',
+                    'attr'  => 'label',
+                    'type'  => 'text',
+                ),
+                array(
+                    'label' => 'Link',
+                    'attr'  => 'link',
+                    'type'  => 'url',
+                ),
+            ),
+        )
+    );
+
+
+}
