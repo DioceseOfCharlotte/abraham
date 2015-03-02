@@ -31,9 +31,6 @@ $abraham_vendor_dir = trailingslashit( $abraham_dir . 'inc/vendors' );
 
 require_once( $abraham_vendor_dir . 'tha-theme-hooks.php' 				);
 require_once( $abraham_vendor_dir . 'google-analytics.php'				);
-if( class_exists( 'Shortcode_UI' ) ) {
-	require_once( $abraham_dir . 'inc/shortcodes.php'	);
-}
 
 
 /* Launch the Hybrid Core framework. */

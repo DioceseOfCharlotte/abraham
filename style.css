@@ -4642,7 +4642,7 @@ button:not(.search-submit),
 input[type="button"]:not(.search-submit),
 input[type="reset"]:not(.search-submit),
 input[type="submit"]:not(.search-submit) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 .btn:hover,
 .comment-reply-link:hover,
@@ -4677,12 +4677,6 @@ input[type="submit"]:active {
 .comment-reply-link + .comment-reply-login,
 .comment-reply-login + .comment-reply-login {
     margin-left: 10px;
-}
-
-.button[class*="button--"]:before {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    vertical-align: bottom;
 }
 
 .button--form:before {
@@ -4745,7 +4739,7 @@ input[type="submit"]:active {
     #BLOCKQUOTES
 \*------------------------------------*/
 blockquote {
-    margin: 0;
+    margin-bottom: 24px;
     padding-left: 20px; 
     border-left: 5px solid #9f9f9f;
     color: #858585;

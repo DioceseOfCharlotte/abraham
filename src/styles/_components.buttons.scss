@@ -20,7 +20,7 @@ input[type="submit"] {
   transition: background-color $base-transition-speed;
 
   &:not(.search-submit) {
-  margin-bottom: $base-spacing-unit-sm;
+  margin-bottom: $base-spacing-unit;
 }
   // &:link, &:visited {
   //   color: inherit
@@ -42,10 +42,10 @@ input[type="submit"] {
 
 
 
-.button[class*="button--"]:before {
-  @include font-size($base-font-size + 3, false);
-  vertical-align: bottom;
-}
+// .button[class*="button--"]:before {
+//   @include font-size($base-font-size, false);
+//   vertical-align: bottom;
+// }
 
 .button--form {
 
