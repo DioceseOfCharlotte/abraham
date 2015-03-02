@@ -4361,6 +4361,7 @@ a[href^="tel:"]::before {
     speak: none;
 }
 
+a[href*="google.com/maps"]::before,
 a[href*="maps.google.com"]::before {
     display: inline-block;
     padding-right: 5px; 

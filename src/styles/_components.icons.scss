@@ -15,6 +15,7 @@
     padding-right: 5px;
    }
 
+a[href*="google.com/maps"]::before,
 a[href*="maps.google.com"]::before {
     content: $map-marker;
     @include font-icon();
