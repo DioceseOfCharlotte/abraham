@@ -3449,7 +3449,7 @@ label,
 legend {
     display: block;
     margin: 5px 0 5px 5px;
-    color: #6c6c6c;
+    color: #525252;
     font-weight: 700;
     line-height: 1;
 }
@@ -4025,7 +4025,7 @@ input.datepicker_with_icon {
     margin: 16px;
     padding: 24px;
     border-radius: 2px;
-    background-color: #f8f8f8;
+    background-color: #ebebeb;
 }
 
 .disabled input[type="email"],
