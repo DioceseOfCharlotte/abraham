@@ -14,6 +14,7 @@
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
     overflow-y: auto;
+    @include shadow-z1;
 }
 
 .menu__primary.open {
@@ -190,16 +191,20 @@
     visibility: hidden;
     width: 100%;
     margin: 0;
-    margin-left: -1px;
+    //margin-top: -1px;
+    margin-left: -2px;
     text-align: left;
     background-color: $white;
+    border-radius: $base-radius;
     z-index: 1000;
     transition: 0.1s 0.1s;
     color: $color-text;
+    padding-top: 4px;
+    padding-bottom: 4px;
 
     @include md {
         width: 200px;
-        @include shadow-z1;
+        @include shadow-z2;
     }
 
     > .menu-item {
