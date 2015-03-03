@@ -28,7 +28,7 @@ p > a {
     }
 }
 
-.site-footer {
+footer.site-footer {
     a {
         transition: opacity .3s, border-color .3s;
         color: currentColor;
@@ -51,3 +51,8 @@ a.button {
 .widget a {
     font-weight: normal;
 }
+
+
+.menu__primary .menu-item a {
+        color: currentColor;
+    }

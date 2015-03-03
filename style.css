@@ -1589,14 +1589,14 @@ p > a:active {
     border-bottom-color: currentColor;
 }
 
-.site-footer a {
+footer.site-footer a {
     color: currentColor; 
     -webkit-transition: opacity 0.3s, border-color 0.3s;
     transition: opacity 0.3s, border-color 0.3s;
 }
-.site-footer a:visited,
-.site-footer a:hover,
-.site-footer a:active {
+footer.site-footer a:visited,
+footer.site-footer a:hover,
+footer.site-footer a:active {
     opacity: 0.6;
 }
 
@@ -1609,6 +1609,10 @@ a.button {
 
 .widget a {
     font-weight: normal;
+}
+
+.menu__primary .menu-item a {
+    color: currentColor;
 }
 
 /*------------------------------------*\
