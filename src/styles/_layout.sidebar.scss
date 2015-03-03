@@ -84,6 +84,15 @@
     padding: 0;
     align-self: center;
 
+    label {
+        padding: 0;
+        margin: 0;
+    }
+
+    .search-field {
+        border-color: #fff;
+    }
+
     @include sm-only {
         @include padding-space($base-spacing-unit-sm n);
     }
