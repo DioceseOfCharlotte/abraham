@@ -97,7 +97,7 @@
         border-color: #fff;
     }
 
-    @include sm-only {
-        @include padding-space($base-spacing-unit-sm n);
-    }
+    // @include sm-only {
+    //     @include padding-space($base-spacing-unit-sm n);
+    // }
 }
