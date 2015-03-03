@@ -2362,6 +2362,9 @@ body.open {
     padding-right: 0;
     padding-left: 0;
 }
+.widget.widget_nav_menu {
+    overflow: visible;
+}
 
 .widget-title {
     margin-right: -16px;
