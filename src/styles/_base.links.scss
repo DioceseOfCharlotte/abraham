@@ -2,59 +2,52 @@
     #LINKS
 \*------------------------------------*/
 
-/*
-   links.css - v0.0.1 - "Smarter defaults for links"
-   License MIT
-*/
-
 a,
 a:visited {
-  transition: color .3s, border-color .3s;
-  color: $color-links;
-  text-decoration: none;
+    transition: color .3s, border-color .3s;
+    color: $color-links;
+    text-decoration: none;
     font-weight: bold;
 }
 
-a:hover   {
-  color: $color-links-hover;
-}
-a:active  {
-  transition: color .3s, border-color .3s;
-  color: $color-links-active;
+a:hover {
+    color: $color-links-hover;
 }
 
-li:not(.menu-item) > a, p > a {
-  border-bottom: 1px solid transparent;
-  &:hover, &:active {
-  border-bottom-color: currentColor;
-  }
+a:active {
+    transition: color .3s, border-color .3s;
+    color: $color-links-active;
+}
+
+li:not(.menu-item) > a,
+p > a {
+    border-bottom: 1px solid transparent;
+
+    &:hover, &:active {
+        border-bottom-color: currentColor;
+    }
 }
 
 .site-footer {
+    a {
+        transition: opacity .3s, border-color .3s;
+        color: currentColor;
 
-  a {
-    transition: opacity .3s, border-color .3s;
-
-    &:visited,
-    &:hover,
-    &:active {
-      color: inherit;
-      opacity: .6;
+        &:visited, &:hover, &:active {
+            opacity: .6;
+        }
     }
-  }
 }
 
 a.btn,
-a.button{
-  color: $btn-text;
-
-  &:hover,
-  &:visited,
-  &:active {
+a.button {
     color: $btn-text;
-  }
+
+    // &:hover, &:visited, &:active {
+    //     color: $btn-text;
+    // }
 }
 
 .widget a {
-  font-weight: normal;
+    font-weight: normal;
 }

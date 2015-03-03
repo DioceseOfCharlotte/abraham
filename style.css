@@ -1559,10 +1559,6 @@ h6 a:visited:active {
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
-/*
-   links.css - v0.0.1 - "Smarter defaults for links"
-   License MIT
-*/
 a,
 a:visited {
     color: #0b72c5;
@@ -1594,34 +1590,20 @@ p > a:active {
 }
 
 .site-footer a {
+    color: currentColor; 
     -webkit-transition: opacity 0.3s, border-color 0.3s;
     transition: opacity 0.3s, border-color 0.3s;
 }
 .site-footer a:visited,
 .site-footer a:hover,
 .site-footer a:active {
-    opacity: 0.6; 
-    color: inherit;
+    opacity: 0.6;
 }
 
 a.btn,
 a.comment-reply-link,
 a.comment-reply-login,
 a.button {
-    color: #fff;
-}
-a.btn:hover,
-a.comment-reply-link:hover,
-a.comment-reply-login:hover,
-a.btn:visited,
-a.comment-reply-link:visited,
-a.comment-reply-login:visited,
-a.btn:active,
-a.comment-reply-link:active,
-a.comment-reply-login:active,
-a.button:hover,
-a.button:visited,
-a.button:active {
     color: #fff;
 }
 
@@ -1742,14 +1724,16 @@ ol ul {
 .menu-item a {
     display: block;
     padding: 20px 20px;
-    color: #fff;
+    color: currentColor;
     background-color: transparent;
     font-weight: normal; 
     line-height: 24px;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
 }
-.menu-item a:hover {
+.menu-item a:hover,
+.menu-item a:active {
+    border: 0; 
     background-color: rgba(184, 184, 184, 0.4);
 }
 @media only screen and (min-width: 48em) {
@@ -1767,7 +1751,6 @@ ol ul {
 .sidebar .menu-item a {
     padding-top: 0; 
     padding-bottom: 0;
-    color: #393939;
     line-height: 40px;
 }
 
@@ -2233,6 +2216,16 @@ body.open {
     color: #fff; 
     background-color: #118ef2;
     text-align: left;
+}
+.site-footer a {
+    color: currentColor; 
+    -webkit-transition: opacity 0.3s, border-color 0.3s;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:active {
+    opacity: 0.6;
 }
 @media only screen and (min-width: 48em) {
     .site-footer .sidebar-col-1 .widget {
@@ -4855,7 +4848,6 @@ pre {
     padding-right: 8px;
     padding-bottom: 5px;
     padding-left: 8px;
-    border: 1px solid #e4e9eb;
     border-radius: 2px;
     color: #171d20;
     background-color: #f3f5f6;
@@ -4897,7 +4889,6 @@ pre {
 code {
     display: inline-block;
     padding: 0 2px;
-    border: 1px solid #e4e9eb;
     border-radius: 2px;
     color: #171d20;
     background-color: #f3f5f6;

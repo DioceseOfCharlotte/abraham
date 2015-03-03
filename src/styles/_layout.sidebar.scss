@@ -1,57 +1,54 @@
-
-
-
 .widget {
-  @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
-  @include margin-space(n n $base-spacing-unit-sm);
-  word-wrap: break-word;
+    @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
+    @include margin-space(n n $base-spacing-unit-sm);
+    word-wrap: break-word;
 
-  .entry {
-    margin: 0;
-    padding: 0;
-  }
+    .entry {
+        margin: 0;
+        padding: 0;
+    }
 
-  .entry-content, .entry-header {
-    padding-right: 0;
-    padding-left: 0;
-  }
+    .entry-content, .entry-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .widget-title {
-	padding: $base-spacing-unit-sm;
-	@include margin-space(n $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
-	line-height: 1;
-  background-color: $color-primary-dark;
-  color: #fff;
+    padding: $base-spacing-unit-sm;
+    @include margin-space(n $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
+    line-height: 1;
+    background-color: $color-primary-dark;
+    color: #fff;
 
-  &:before {
-    @include font-icon();
-    content: $angle-double-right;
-    // margin-left: -15px;
-    padding-right: $base-spacing-unit-sm;
-  }
+    &:before {
+        @include font-icon;
+        content: $angle-double-right;
+        // margin-left: -15px;
+        padding-right: $base-spacing-unit-sm;
+    }
 }
 
 .sidebar {
-  max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-  //border-bottom: 1px dotted $grey-300;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  @include lg {
-    max-width: $site-width;
-  }
+    li {
+        //border-bottom: 1px dotted $grey-300;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
 
+    @include lg {
+        max-width: $site-width;
+    }
 }
 
 .sidebar__primary {
@@ -64,11 +61,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-      > * {
+    > * {
         @include font-size($base-font-size);
-      }
+    }
 
-      .widget {
+    .widget {
         display: inline-block;
         text-align: left;
         vertical-align: top;
@@ -78,21 +75,22 @@
         @include font-size($base-font-size);
 
         @include md {
-          width: 48.6%;
+            width: 48.6%;
         }
 
         @include lg {
-          width: 100%;
+            width: 100%;
         }
-      }
+    }
 }
 
 .widget_search {
-  background: none;
-  border: 0;
-  padding: 0;
-  align-self: center;
-  @include sm-only {
-    @include padding-space($base-spacing-unit-sm n);
-  }
+    background: none;
+    border: 0;
+    padding: 0;
+    align-self: center;
+
+    @include sm-only {
+        @include padding-space($base-spacing-unit-sm n);
+    }
 }

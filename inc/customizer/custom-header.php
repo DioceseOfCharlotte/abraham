@@ -39,7 +39,7 @@ function abraham_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+	// get_header_textcolor() options: HEADER_TEXTCOLOR is default.
 	if ( HEADER_TEXTCOLOR == $header_text_color ) {
 		return;
 	}
@@ -61,20 +61,14 @@ function abraham_header_style() {
 		else :
 	?>
 		.site-title,
-		.site-footer,
-		.site-footer a,
 		.site-description,
-		.nav-menu > .menu-item > a,
-		.nav-menu > .menu-item > a:visited,
-		.nav-menu > .menu-item > a:hover,
-		.nav-menu > .menu-item > a:active,
+		.menu__primary,
+		.site-footer,
 		.btn,
 		button,
 		.button,
 		a.btn,
 		a.button,
-		a.btn:visited,
-		a.button:visited,
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"] {

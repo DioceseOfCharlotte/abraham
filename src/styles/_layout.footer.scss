@@ -3,88 +3,96 @@
 \*------------------------------------*/
 
 .site-info {
-  background-color: darken($footer-bg, 10);
+    background-color: darken($footer-bg, 10);
 }
 
 .site-footer {
-  display: block;
-  margin: 0;
-  width: 100%;
-  text-align: left;
-  background-color: $footer-bg;
-  color: #fff;
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    background-color: $footer-bg;
+    color: #fff;
 
-  @include md {
-    .sidebar-col-1 {
-        .widget {
-          width: 100%;
+    a {
+        transition: opacity .3s, border-color .3s;
+        color: currentColor;
+
+        &:visited, &:hover, &:active {
+            opacity: .6;
         }
     }
 
-    .sidebar-col-3, .sidebar-col-2 {
-        .widget {
-            width: 48.6%;
+    @include md {
+        .sidebar-col-1 {
+            .widget {
+                width: 100%;
+            }
         }
-    }
-  }
-  @include lg {
-    .sidebar-col-3 {
-        .widget {
-            width: 31%;
-        }
-    }
-  }
 
+        .sidebar-col-3, .sidebar-col-2 {
+            .widget {
+                width: 48.6%;
+            }
+        }
+    }
+
+    @include lg {
+        .sidebar-col-3 {
+            .widget {
+                width: 31%;
+            }
+        }
+    }
 }
 
-
 .sidebar__footer-widgets {
-  display: block;
-  margin: 0 auto;
-  text-align: left;
-  width: 100%;
-  max-width: 95%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @include padding-space($base-spacing-unit-sm n n);
-
-  .widget-title {
-    color: inherit;
-  }
-
-  .widget {
-    background-color: $footer-widget-bg;
-    border: 0;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     text-align: left;
-    vertical-align: top;
-    min-width: 300px;
-    max-width: 700px;
     width: 100%;
-  }
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include padding-space($base-spacing-unit-sm n n);
 
-  @include lg {
-    max-width: $site-width;
-    padding-left: $base-spacing-unit-lg;
-    padding-right: $base-spacing-unit-lg;
-  }
+    .widget-title {
+        color: inherit;
+    }
+
+    .widget {
+        background-color: $footer-widget-bg;
+        border: 0;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        min-width: 300px;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    @include lg {
+        max-width: $site-width;
+        padding-left: $base-spacing-unit-lg;
+        padding-right: $base-spacing-unit-lg;
+    }
 }
 
 .wrap__footer {
-  padding: 10px 0;
+    padding: 10px 0;
 }
 
 .credit {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .menu__social {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .menu-items__social {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }

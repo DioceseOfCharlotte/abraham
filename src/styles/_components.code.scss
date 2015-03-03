@@ -4,7 +4,6 @@
 
 .form-allowed-tags code, pre {
   background-color: $blue-grey-50;
-  border: 1px solid $blue-grey-100;
   @include font-size(15px);
   margin-bottom: $base-spacing-unit;
   max-width: 100%;
@@ -22,7 +21,6 @@ code {
   padding: 0 2px;
   display: inline-block;
   border-radius: $base-radius;
-  border: 1px solid $blue-grey-100;
   tab-size: 4;
   font-weight: normal;
 }
