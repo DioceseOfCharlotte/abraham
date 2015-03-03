@@ -37,6 +37,22 @@ $grey-900:              darken($base-grey, 40);
 
 
 
+// Blue Greys
+
+$blue-grey-50:          lighten($base-blue-grey, 45);
+$blue-grey-100:         lighten($base-blue-grey, 40);
+$blue-grey-200:         lighten($base-blue-grey, 30);
+$blue-grey-300:         lighten($base-blue-grey, 20);
+$blue-grey-400:         lighten($base-blue-grey, 10);
+$blue-grey-500:         $base-blue-grey;
+$blue-grey-600:         darken($base-blue-grey, 10);
+$blue-grey-700:         darken($base-blue-grey, 20);
+$blue-grey-800:         darken($base-blue-grey, 30);
+$blue-grey-900:         darken($base-blue-grey, 40);
+
+
+
+
 // Reds
 
 $red-100:               lighten($base-red, 40);
@@ -63,21 +79,6 @@ $blue-600:              darken($base-blue, 10);
 $blue-700:              darken($base-blue, 20);
 $blue-800:              darken($base-blue, 30);
 $blue-900:              darken($base-blue, 40);
-
-
-
-
-// Blue Greys
-
-$blue-grey-100:         lighten($base-blue-grey, 40);
-$blue-grey-200:         lighten($base-blue-grey, 30);
-$blue-grey-300:         lighten($base-blue-grey, 20);
-$blue-grey-400:         lighten($base-blue-grey, 10);
-$blue-grey-500:         $base-blue-grey;
-$blue-grey-600:         darken($base-blue-grey, 10);
-$blue-grey-700:         darken($base-blue-grey, 20);
-$blue-grey-800:         darken($base-blue-grey, 30);
-$blue-grey-900:         darken($base-blue-grey, 40);
 
 
 

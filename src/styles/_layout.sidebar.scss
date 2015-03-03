@@ -2,23 +2,15 @@
 
 
 .widget {
-  background-color: #fff;
-  border-radius: $base-radius;
   @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
   @include margin-space(n n $base-spacing-unit-sm);
-  overflow: hidden;
-  width: 100%;
-  hyphens: auto;
   word-wrap: break-word;
-  border: 1px solid $grey-300;
-  border-bottom-width: 2px;
-  border-top-color: $grey-200;
 
   .entry {
     margin: 0;
     padding: 0;
   }
-  
+
   .entry-content, .entry-header {
     padding-right: 0;
     padding-left: 0;

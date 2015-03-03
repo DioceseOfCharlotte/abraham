@@ -29,7 +29,7 @@ function customizer_library_abraham_options() {
 	$section = 'logo';
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Logo', 'abraham' ),
+		'title' => __( 'Brand Assets', 'abraham' ),
 		'priority' => '20'
 	);
 	$options['logo'] = array(
