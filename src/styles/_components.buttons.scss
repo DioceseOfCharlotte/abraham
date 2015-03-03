@@ -8,73 +8,59 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: $btn-bg;
-  border: 0;
-  border-radius: $base-radius;
-  color: $btn-text;
-  cursor: pointer;
-  padding: $base-spacing-unit-sm * 0.75 $base-spacing-unit-sm * 1.25;
-  width: auto;
-  display: inline-block;
-  outline: 0;
-  transition: background-color $base-transition-speed;
+    background-color: $btn-bg;
+    border: 0;
+    border-radius: $base-radius;
+    color: $btn-text;
+    cursor: pointer;
+    padding: $base-spacing-unit-sm * 0.75 $base-spacing-unit-sm * 1.25;
+    width: auto;
+    display: inline-block;
+    outline: 0;
+    transition: background-color $base-transition-speed;
 
-  &:not(.search-submit) {
-  margin-bottom: $base-spacing-unit;
-}
-  // &:link, &:visited {
-  //   color: inherit
-  // }
-  &:hover {
-  background-color: $btn-bg-hover;
-  transition: background-color $base-transition-speed;
-  }
-  &:active {
-  background-color: $btn-bg-active;
-  }
+    &:not(.search-submit) {
+        margin-bottom: $base-spacing-unit;
+    }
 
+    &:hover {
+        background-color: $btn-bg-hover;
+        transition: background-color $base-transition-speed;
+    }
+
+    &:active {
+        background-color: $btn-bg-active;
+    }
 }
 
 .btn + .btn {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
-
-
-
-// .button[class*="button--"]:before {
-//   @include font-size($base-font-size, false);
-//   vertical-align: bottom;
-// }
-
 .button--form {
-
-  &:before {
-    content: $pencil-square-o;
-    @include font-icon();
-  }
+    &:before {
+        content: $pencil-square-o;
+        @include font-icon;
+    }
 }
 
 .button--info {
-
-  &:before {
-    content: $info-circle;
-    @include font-icon();
-  }
+    &:before {
+        content: $info-circle;
+        @include font-icon;
+    }
 }
 
 .button--donate {
-
-  &:before {
-    content: $dio-give;
-    @include font-icon('diocons');
-  }
+    &:before {
+        content: $dio-give;
+        @include font-icon("diocons");
+    }
 }
 
 .button--link-ext {
-
-  &:before {
-    content: $external-link;
-    @include font-icon();
-  }
+    &:before {
+        content: $external-link;
+        @include font-icon;
+    }
 }

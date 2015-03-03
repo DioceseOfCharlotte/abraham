@@ -23,6 +23,12 @@
         }
     }
 
+    .menu-item a {
+        &:visited, &:hover, &:active {
+            opacity: 1;
+        }
+    }
+
     @include md {
         .sidebar-col-1 {
             .widget {

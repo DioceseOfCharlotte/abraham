@@ -1,5 +1,5 @@
 /*------------------------------------*\
-	#GRIDS
+    #GRIDS
 \*------------------------------------*/
 
 /**
@@ -13,16 +13,21 @@
  */
 
 .grid {
-  display: block; /* 1 */
-  font-size: 0; /* 2 */
-  margin: 0; /* 1 */
-  padding: 0; /* 1 */
-  text-align: left; /* 3 */
-  width: 100%;
+    display: block;
+    /* 1 */
+    font-size: 0;
+    /* 2 */
+    margin: 0;
+    /* 1 */
+    padding: 0;
+    /* 1 */
+    text-align: left;
+    /* 3 */
+    width: 100%;
 
-  > * {
-    @include font-size($base-font-size);
-  }
+    > * {
+        @include font-size($base-font-size);
+    }
 }
 
 /**
@@ -30,7 +35,7 @@
  */
 
 .grid--center {
-  text-align: center;
+    text-align: center;
 }
 
 /**
@@ -38,7 +43,7 @@
  */
 
 .grid--right {
-  text-align: right;
+    text-align: right;
 }
 
 /**
@@ -46,7 +51,7 @@
  */
 
 .grid--middle > .grid-item {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 /**
@@ -54,7 +59,7 @@
  */
 
 .grid--bottom > .grid-item {
-  vertical-align: bottom;
+    vertical-align: bottom;
 }
 
 /**
@@ -62,12 +67,12 @@
  * how your rendered layout will appear. Extends `.grid`.
  */
 .grid--rev {
-    direction:rtl;
-    text-align:left;
+    direction: rtl;
+    text-align: left;
 
     > .grid-item {
-        direction:ltr;
-        text-align:left;
+        direction: ltr;
+        text-align: left;
     }
 }
 
@@ -80,18 +85,15 @@
  */
 
 .grid--with-gutter {
-  margin: 0 -$base-spacing-unit-sm;
+    margin: 0 - $base-spacing-unit-sm;
 
     > .grid-item {
         padding: 0 $base-spacing-unit-sm;
     }
 }
 
-
-
-
 /*------------------------------------*\
-	##Grid-items
+    ##Grid-items
 \*------------------------------------*/
 
 /**
@@ -106,15 +108,20 @@
  */
 
 .grid-item {
-  box-sizing: border-box;
-  display: inline-block; /* 1 */
-  *display: inline; /* 2 */
-  margin: 0;
-  padding: 0;
-  text-align: left; /* 3 */
-  vertical-align: top; /* 4 */
-  width: 100%; /* 5 */
-  @include font-size($base-font-size);
+    box-sizing: border-box;
+    display: inline-block;
+    /* 1 */
+    *display: inline;
+    /* 2 */
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    /* 3 */
+    vertical-align: top;
+    /* 4 */
+    width: 100%;
+    /* 5 */
+    @include font-size($base-font-size);
 }
 
 /**
@@ -124,6 +131,6 @@
  */
 
 .grid-item--center {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }

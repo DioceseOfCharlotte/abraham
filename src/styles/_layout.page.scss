@@ -3,201 +3,180 @@
 \*------------------------------------*/
 
 .wrap {
-  max-width: $site-width;
-  margin: 0 auto;
-  @include padding-space(n $base-spacing-unit-sm);
+    max-width: $site-width;
+    margin: 0 auto;
+    @include padding-space(n $base-spacing-unit-sm);
 }
 
 body {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
-.site  {
-  word-wrap:   break-word;
-  word-break:  normal;
-  hyphens: auto;
+.site {
+    word-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .main-container {
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  @include padding-space($base-spacing-unit-sm n n);
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    @include padding-space($base-spacing-unit-sm n n);
 
-  @include md {
-    min-height: initial;
-    display: block;
-    text-align: left;
-    margin-top: 0;
-  }
+    @include md {
+        min-height: initial;
+        display: block;
+        text-align: left;
+        margin-top: 0;
+    }
 
     @include lg {
-    max-width: $site-width;
-    padding-left: $base-spacing-unit-lg;
-    padding-right: $base-spacing-unit-lg;
-  }
-
+        max-width: $site-width;
+        padding-left: $base-spacing-unit-lg;
+        padding-right: $base-spacing-unit-lg;
+    }
 }
 
 .content {
-  position: relative;
-  max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  @include margin-space(n n $base-spacing-unit-sm);
+    position: relative;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    @include margin-space(n n $base-spacing-unit-sm);
 
-  @include md {
-    padding-top: 0;
-  }
-
-
+    @include md {
+        padding-top: 0;
+    }
 }
 
-.widget, .comments, .entry {
-  // margin-left: auto;
-  // margin-right: auto;
-  background-color: #fff;
-  border-radius: $base-radius;
-  position: relative;
-  overflow: hidden;
-  @include shadow-z1();
+.widget,
+.comments,
+.entry {
+    // margin-left: auto;
+    // margin-right: auto;
+    background-color: #fff;
+    border-radius: $base-radius;
+    position: relative;
+    overflow: hidden;
+    @include shadow-z1;
     // border: 1px solid $grey-300;
     // border-bottom-width: 2px;
     // border-top-color: $grey-200;
     width: 100%;
 }
 
-
-
 // ------------------------------------*\
 //     ##Layout 1 Column
 // \*------------------------------------
 
 body.search, body.error-404, .layout-1c {
-
-  @include lg {
-    &.plural .entry {
-      width: 48%;
-
-      &:nth-child(even) {
-        margin-right: 4%;
-      }
-    }
-  }
-
-  .content-area, .sidebar {
-    width: 100%;
-  }
-
-  .content {
     @include lg {
-      max-width: 100%;
-    }
-  }
+        &.plural .entry {
+            width: 48%;
 
-  .sidebar__primary {
-    @include lg {
-      display: block;
-      display: flex;
-      max-width: 100%;
+            &:nth-child(even) {
+                margin-right: 4%;
+            }
+        }
     }
 
-    .widget {
-      @include lg {
-        width: 31%;
-      }
+    .content-area, .sidebar {
+        width: 100%;
     }
-  }
 
+    .content {
+        @include lg {
+            max-width: 100%;
+        }
+    }
+
+    .sidebar__primary {
+        @include lg {
+            display: block;
+            display: flex;
+            max-width: 100%;
+        }
+
+        .widget {
+            @include lg {
+                width: 31%;
+            }
+        }
+    }
 }
-
-
-
 
 // /*------------------------------------*\
 //     ##Layout 2 Column Left
 // \*------------------------------------*/
 
 .layout-2c-l {
+    @include lg {
+        .sidebar__primary {
+            width: 30%;
+            max-width: 100%;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            vertical-align: top;
+        }
 
-  @include lg {
+        .content-area {
+            width: 70%;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            vertical-align: top;
+        }
 
-    .sidebar__primary {
-      width: 30%;
-      max-width: 100%;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      vertical-align: top;
+        .content {
+            margin-left: 0;
+        }
     }
-
-    .content-area {
-      width: 70%;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    .content {
-      margin-left: 0;
-    }
-
-  }
-
 }
-
-
-
-
 
 // /*------------------------------------*\
 //     ##Layout 2 Column Right
 // \*------------------------------------*/
 
 .layout-2c-r {
+    @include lg {
+        .main-container {
+            direction: rtl;
+            text-align: left;
 
-  @include lg {
+            > * {
+                direction: ltr;
+            }
+        }
 
-    .main-container {
-      direction:rtl;
-      text-align:left;
-      > * {
-        direction:ltr;
-      }
+        .sidebar__primary {
+            width: 30%;
+            max-width: 100%;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            vertical-align: top;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .content-area {
+            width: 70%;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            vertical-align: top;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .content {
+            margin-right: 0;
+        }
     }
-
-    .sidebar__primary {
-      width: 30%;
-      max-width: 100%;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      vertical-align: top;
-              direction:ltr;
-        text-align:left;
-    }
-
-    .content-area {
-      width: 70%;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      vertical-align: top;
-              direction:ltr;
-        text-align:left;
-    }
-
-    .content {
-      margin-right: 0;
-    }
-
-  }
-
-
 }
-

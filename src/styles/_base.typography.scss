@@ -11,26 +11,26 @@ body {
 }
 
 p {
-  @include font-size($base-font-size);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  margin-bottom: $base-spacing-unit-sm;
+    @include font-size($base-font-size);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-bottom: $base-spacing-unit-sm;
 }
 
 blockquote, blockquote p {
-  @include font-size($base-font-size * 1.2);
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.08em;
+    @include font-size($base-font-size * 1.2);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.08em;
 }
 
 dt {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 b,
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 dfn,
@@ -38,12 +38,12 @@ cite,
 em,
 i,
 var {
-  font-style: italic;
+    font-style: italic;
 }
 
 address {
-  font-style: italic;
-  margin: 0 0 $base-spacing-unit;
+    font-style: italic;
+    margin: 0 0 $base-spacing-unit;
 }
 
 pre,
@@ -51,53 +51,53 @@ code,
 kbd,
 tt,
 var {
-  font-family: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
-  @include font-size(15px);
+    font-family: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
+    @include font-size(15px);
 }
 
 abbr[title],
 abbr,
 acronym {
-  border-bottom: 1px dotted rgba(0,0,0,0.3);
-  cursor: help;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    cursor: help;
 }
 
 mark,
 ins {
-  background: $yellow-100;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 0.125em;
+    background: $yellow-100;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.125em;
 }
 
 sup,
 sub {
-  font-size: 75%;
-  height: 0;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sup {
-  bottom: 1ex;
+    bottom: 1ex;
 }
 
 sub {
-  top: 0.5ex;
+    top: 0.5ex;
 }
 
 small {
-  font-size: 75%;
+    font-size: 75%;
 }
 
 big {
-  font-size: 125%;
+    font-size: 125%;
 }
 
 s, strike, del {
-text-decoration: line-through;
-color: mix($color-text, $color-text-light);
+    text-decoration: line-through;
+    color: mix($color-text, $color-text-light);
 }
 
 /*------------------------------------*\
@@ -110,29 +110,31 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  @include typo-button();
+    @include typo-button;
 }
 
 .wp-caption-text {
-  @include typo-caption();
+    @include typo-caption;
 }
 
 .entry-meta {
-  @include typo-menu($colorContrast:true);
+    @include typo-menu($colorContrast: true);
 }
 
 .menu-item {
-  @include typo-menu();
+    @include typo-menu;
 }
 
 .site-title {
-  font-weight: 400;
-  a {
-    line-height: 60px;
-    @include md {
-      line-height: $base-line-height;
+    font-weight: 400;
+
+    a {
+        line-height: 60px;
+
+        @include md {
+            line-height: $base-line-height;
+        }
     }
-  }
 }
 
 // .site-description {
@@ -140,12 +142,12 @@ input[type="submit"],
 // }
 
 .plural .entry-title {
-  @include font-size($base-font-size * 1.5);
+    @include font-size($base-font-size * 1.5);
 }
 
 .entry-summary p {
-@include font-size(18px);
-font-weight: 300;
+    @include font-size(18px);
+    font-weight: 300;
 }
 
 .breadcrumbs,
@@ -157,6 +159,6 @@ font-weight: 300;
 .entry-summary,
 .page-content,
 .comment-content {
-  hyphens: auto;
-  word-wrap: break-word;
+    hyphens: auto;
+    word-wrap: break-word;
 }

@@ -2,34 +2,79 @@
     #WIDGETS
 \*------------------------------------*/
 
-
 .widget_search .widget-title {
-margin-left: 0;
-margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .rsswidget > img {
-  display: none;
+    display: none;
 }
-  /* WordPress / Widgets Reloaded widgets. */
-  .widget_archive .widget-title::before         { content: $history; }
-  .widget_calendar .widget-title::before        { content: $calendar-o; }
-  .widget_categories .widget-title::before      { content: $archive; }
-  .widget_links .widget-title::before           { content: $external-link; }
-  .widget_meta .widget-title::before            { content: $info-circle; }
-  .widget_pages .widget-title::before           { content: $list-alt; }
-  .widget_recent_comments .widget-title::before { content: $comments; }
-  .widget_recent_entries .widget-title::before  { content: $newspaper-o; }
-  .widget_search .widget-title::before          { content: $search; }
-  .widget_tag_cloud .widget-title::before       { content: $tags; }
-  .widget_text .widget-title::before            { content: $align-left; }
-  .widget-authors .widget-title::before         { content: $users; }
-  .widget_nav_menu .widget-title::before        { content: $navicon; }
-  .widget_rss .widget-title::before             { content: $rss; }
 
-  /* Members widgets */
-  .widget-login .widget-title::before,
-  .widget.login .widget-title::before           { content: $sign-in; }
+/* WordPress / Widgets Reloaded widgets. */
+.widget_archive .widget-title::before {
+    content: $history;
+}
 
-  .widget-users .widget-title::before,
-  .widget.users .widget-title::before           { content: $users; }
+.widget_calendar .widget-title::before {
+    content: $calendar-o;
+}
+
+.widget_categories .widget-title::before {
+    content: $archive;
+}
+
+.widget_links .widget-title::before {
+    content: $external-link;
+}
+
+.widget_meta .widget-title::before {
+    content: $info-circle;
+}
+
+.widget_pages .widget-title::before {
+    content: $list-alt;
+}
+
+.widget_recent_comments .widget-title::before {
+    content: $comments;
+}
+
+.widget_recent_entries .widget-title::before {
+    content: $newspaper-o;
+}
+
+.widget_search .widget-title::before {
+    content: $search;
+}
+
+.widget_tag_cloud .widget-title::before {
+    content: $tags;
+}
+
+.widget_text .widget-title::before {
+    content: $align-left;
+}
+
+.widget-authors .widget-title::before {
+    content: $users;
+}
+
+.widget_nav_menu .widget-title::before {
+    content: $navicon;
+}
+
+.widget_rss .widget-title::before {
+    content: $rss;
+}
+
+/* Members widgets */
+.widget-login .widget-title::before,
+.widget.login .widget-title::before {
+    content: $sign-in;
+}
+
+.widget-users .widget-title::before,
+.widget.users .widget-title::before {
+    content: $users;
+}

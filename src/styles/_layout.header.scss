@@ -3,80 +3,72 @@
 \*------------------------------------*/
 
 body.open {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .site-header {
-  display: block;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $color-primary;
-  overflow: hidden;
-  z-index: 1;
-  @include shadow-z1();
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-primary;
+    overflow: hidden;
+    z-index: 1;
+    @include shadow-z1;
 }
 
 .site-title {
-  color: $white;
+    color: $white;
 }
 
 .site-description {
-  color: $white;
-  opacity: .8;
-  margin: 0;
+    color: $white;
+    opacity: .8;
+    margin: 0;
 }
 
 .site-logo {
-float: left;
+    float: left;
 }
-
-// .site-branding {
-//   display: flex;
-//   width: 100%;
-//   height: 60px;
-//   position: relative;
-//   flex-direction: row;
-//   //margin: 0 auto;
-// }
 
 .site-logo {
-  display: none;
-  @include md {
-  display: inline-block;
-  margin-right: $base-spacing-unit-tiny;
+    display: none;
 
-  &:hover ~ .site-title a {
-    opacity: .5;
-  }
-}
+    @include md {
+        display: inline-block;
+        margin-right: $base-spacing-unit-tiny;
+
+        &:hover ~ .site-title a {
+            opacity: .5;
+        }
+    }
 }
 
 .site-header.open,
 .open .site-footer,
 .open .breadcrumbs,
 .site-header.open ~ .main-container {
-  transform: translate(250px, 0);
-  cursor: default;
+    transform: translate(250px, 0);
+    cursor: default;
 }
 
 .site-title {
-  padding: 0;
-  float: none;
-  max-width: none;
-  display: initial;
+    padding: 0;
+    float: none;
+    max-width: none;
+    display: initial;
 }
 
 .site-title a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .app-bar-actions {
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
 }
 
 .breadcrumbs,
@@ -84,56 +76,58 @@ float: left;
 .site-header,
 .menu.opened,
 .main-container {
-  transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
 }
 
 .main-container {
-  //padding-top: 60px;
-  min-height: 100%;
+    //padding-top: 60px;
+    min-height: 100%;
 }
 
 /** Larger Screens - desktops and tablets **/
 @include md {
-  .site-header {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 5%;
-  }
+    .site-header {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 5%;
+    }
 
-  .site-header.open,
-  .site-header.open ~ .main-container {
-    transform: translate(0px, 0);
-  }
+    .site-header.open,
+    .site-header.open ~ .main-container {
+        transform: translate(0px, 0);
+    }
 
-  .site-branding {
-    display: block;
-    height: auto;
-    flex: 1;
-    //max-width: $site-width;
-  //@include padding-space($base-spacing-unit-sm);
-  }
+    .site-branding {
+        display: block;
+        height: auto;
+        flex: 1;
+        //max-width: $site-width;
+        //@include padding-space($base-spacing-unit-sm);
 
-  .app-bar-actions {
-    float: right;
-  }
+    }
 
-  .site-header::after {
-    content: ' ';
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-  }
+    .app-bar-actions {
+        float: right;
+    }
+
+    .site-header::after {
+        content: ' ';
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
 }
 
-@include sm-only {
-  .site-header {
-    height: 60px;
-  }
 
-  .site-description {
-    display: none;
-  }
+@include sm-only {
+    .site-header {
+        height: 60px;
+    }
+
+    .site-description {
+        display: none;
+    }
 }

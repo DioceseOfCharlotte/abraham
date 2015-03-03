@@ -2,33 +2,31 @@
     #SEARCH-PAGE
 \*------------------------------------*/
 .search {
+    .loop-meta {
+        .search-form {
+            @include margin-space(n n $base-spacing-unit-tiny);
 
-.loop-meta {
+            @include lg {
+                max-width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
 
-  .search-form {
-    @include margin-space(n n $base-spacing-unit-tiny);
-
-    @include lg {
-      max-width: 60%;
-      margin-left: auto;
-      margin-right: auto;
+        input[type="search"] {
+            background-color: $white;
+        }
     }
-  }
 
-  input[type="search"] {
-    background-color: $white;
-  }
-}
+    .loop-title {
+        font-weight: 300;
 
-  .loop-title {
-    font-weight: 300;
-      span {
-        font-weight: 500;
-      }
-  }
+        span {
+            font-weight: 500;
+        }
+    }
 
-  .entry {
-    @include margin-space(n n $base-spacing-unit-tiny);
-  }
-
+    .entry {
+        @include margin-space(n n $base-spacing-unit-tiny);
+    }
 }

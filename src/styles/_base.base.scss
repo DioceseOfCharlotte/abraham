@@ -6,8 +6,9 @@ html {
     color: $color-text;
     font-size: $base-font-size;
     line-height: $base-line-height;
+
     @include sm-only {
-      font-size: 14px;
+        font-size: 14px;
     }
 }
 
@@ -58,22 +59,18 @@ html {
 }
 
 * {
-
     &,
     &:before,
     &:after {
         box-sizing: inherit;
-        }
-
+    }
 }
-
 
 input[type="search"] {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 
 /**
  * Where `margin-bottom` is concerned,this value will be the same as the
@@ -88,14 +85,10 @@ table,
 fieldset, figure,
 pre,
 %margin-bottom {
-  margin:0;
+    margin: 0;
     margin-bottom: $base-spacing-unit-sm;
-    margin-bottom: ($base-spacing-unit-sm / $base-font-size) * 1rem;
+    margin-bottom: $base-spacing-unit-sm / $base-font-size * 1rem;
 }
-
-
-
-
 
 /**
  * Where `margin-left` is concerned we want to try and indent certain elements
@@ -103,7 +96,7 @@ pre,
  */
 ul, ol, dd,
 %margin-left {
-  margin:0;
+    margin: 0;
     margin-left: 2 * $base-spacing-unit-sm;
-    margin-left: (2 * $base-spacing-unit-sm / $base-font-size) * 1rem;
+    margin-left: 2 * $base-spacing-unit-sm / $base-font-size * 1rem;
 }

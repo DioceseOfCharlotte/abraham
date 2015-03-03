@@ -2,117 +2,230 @@
     #ICONS
 \*------------------------------------*/
 
-
-  /* Links */
-  a[href^="mailto:"]::before {
+/* Links */
+a[href^="mailto:"]::before {
     content: $envelope-o;
-    @include font-icon();
+    @include font-icon;
     padding-right: 5px;
-   }
-  a[href^="tel:"]::before    {
+}
+
+a[href^="tel:"]::before {
     content: $phone;
-    @include font-icon();
+    @include font-icon;
     padding-right: 5px;
-   }
+}
 
 a[href*="google.com/maps"]::before,
 a[href*="maps.google.com"]::before {
     content: $map-marker;
-    @include font-icon();
+    @include font-icon;
     padding-right: 5px;
 }
 
-  a.post-edit-link {
+a.post-edit-link {
     font-weight: 400;
+
     &::before {
-      content: $pencil;
-      @include font-icon();
-      margin-right: 3px;
+        content: $pencil;
+        @include font-icon;
+        margin-right: 3px;
     }
-  }
+}
 
-  /* Posts */
-  .format-standard .post-format-link::before { content: $shield; }
-  .format-aside .post-format-link::before    { content: $indent; }
-  .format-audio .post-format-link::before    { content: $volume-up; }
-  .format-chat .post-format-link::before     { content: $comments; }
-  .format-gallery .post-format-link::before  { content: $file-photo-o; }
-  .image-sizes::before,
-  .format-image .post-format-link::before    { content: $photo; }
-  .format-link .post-format-link::before     { content: $link; }
-  .format-quote .post-format-link::before    { content: $quote-left; }
-  .format-status .post-format-link::before   { content: $line-chart; }
-  .format-video .post-format-link::before    { content: $youtube-play; }
+/* Posts */
+.format-standard .post-format-link::before {
+    content: $shield;
+}
 
+.format-aside .post-format-link::before {
+    content: $indent;
+}
 
-  .post-format-link::before {
-    @include font-icon();
+.format-audio .post-format-link::before {
+    content: $volume-up;
+}
+
+.format-chat .post-format-link::before {
+    content: $comments;
+}
+
+.format-gallery .post-format-link::before {
+    content: $file-photo-o;
+}
+
+.image-sizes::before,
+.format-image .post-format-link::before {
+    content: $photo;
+}
+
+.format-link .post-format-link::before {
+    content: $link;
+}
+
+.format-quote .post-format-link::before {
+    content: $quote-left;
+}
+
+.format-status .post-format-link::before {
+    content: $line-chart;
+}
+
+.format-video .post-format-link::before {
+    content: $youtube-play;
+}
+
+.post-format-link::before {
+    @include font-icon;
     //color: $color-text-light;
     margin-right: 5px;
     //transition: color $base-transition-speed linear;
-  }
-
+}
 
 [class^="icon-"], [class*=" icon-"] {
-  display: inline-block;
-  color: #000000;
-  fill: currentColor;
-  height:21px;
+    display: inline-block;
+    color: #000000;
+    fill: currentColor;
+    height: 21px;
 }
 
 [class^="icon-"] .path1, [class*=" icon-"] .path1 {
-  fill: $color-primary;
+    fill: $color-primary;
 }
 
 [class^="icon-"] .path2, [class*=" icon-"] .path2 {
-  fill: $color-secondary;
+    fill: $color-secondary;
 }
 
 [class^="icon-"] .path3, [class*=" icon-"] .path3 {
-  fill: $color-grey-ui;
+    fill: $color-grey-ui;
 }
 
 .menu-items__social li {
-  display: inline-block;
+    display: inline-block;
 
-  a {
-    background-color: #fff;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    padding: 5px;
-    text-align: center;
-    margin: 0 3px;
-    &:hover {
-      background-color: $grey-100;
-      opacity: 1;
+    a {
+        background-color: #fff;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        text-align: center;
+        margin: 0 3px;
+
+        &:hover {
+            background-color: $grey-100;
+            opacity: 1;
+        }
     }
-  }
-}
-.menu-items__social li a::before {
-@include font-icon();
 }
 
-  .menu-items__social li a[href*="codepen.io"]::before      { content: '\f216'; color: #fff;    }
-  .menu-items__social li a[href*="digg.com"]::before        { content: '\f221'; color: #fff;    }
-  .menu-items__social li a[href*="dribbble.com"]::before    { content: '\f201'; color: #ea4c89; }
-  .menu-items__social li a[href*="dropbox.com"]::before     { content: '\f225'; color: #007ee5; }
-  .menu-items__social li a[href*="facebook.com"]::before    { content: $facebook; color: #3b5998; }
-  .menu-items__social li a[href*="flickr.com"]::before      { content: '\f211'; color: #ff0084; }
-  .menu-items__social li a[href*="plus.google.com"]::before { content: $google-plus; color: #dd4b39; }
-  .menu-items__social li a[href*="github.com"]::before      { content: '\f200'; color: #4183c4; }
-  .menu-items__social li a[href*="instagram.com"]::before   { content: $instagram; color: #3f729b; }
-  .menu-items__social li a[href*="linkedin.com"]::before    { content: $linkedin; color: #0e76a8; }
-  .menu-items__social li a[href*="pinterest.com"]::before   { content: $pinterest; color: #c8232c; }
-  .menu-items__social li a[href*="polldaddy.com"]::before   { content: '\f217'; color: #bc0b0b; }
-  .menu-items__social li a[href*="getpocket.com"]::before   { content: '\f224'; color: #ee4056; }
-  .menu-items__social li a[href*="reddit.com"]::before      { content: '\f222'; color: #336699; }
-  .menu-items__social li a[href*="skype.com"]::before,
-  .menu-items__social li a[href*="skype:"]::before          { content: '\f220'; color: #00aff0; }
-  .menu-items__social li a[href*="stumbleupon.com"]::before { content: '\f223'; color: #ff2618; }
-  .menu-items__social li a[href*="tumblr.com"]::before      { content: '\f214'; color: #34526f; }
-  .menu-items__social li a[href*="twitter.com"]::before     { content: $twitter; color: #33ccff; }
-  .menu-items__social li a[href*="vimeo.com"]::before       { content: '\f212'; color: #1AB7EA; }
-  .menu-items__social li a[href*="wordpress.org"]::before,
-  .menu-items__social li a[href*="wordpress.com"]::before   { content: '\f205'; color: #21759b; }
-  .menu-items__social li a[href*="youtube.com"]::before     { content: $youtube; color: #c4302b; }
+.menu-items__social li a::before {
+    @include font-icon;
+}
+
+.menu-items__social li a[href*="codepen.io"]::before {
+    content: '\f216';
+    color: #fff;
+}
+
+.menu-items__social li a[href*="digg.com"]::before {
+    content: '\f221';
+    color: #fff;
+}
+
+.menu-items__social li a[href*="dribbble.com"]::before {
+    content: '\f201';
+    color: #ea4c89;
+}
+
+.menu-items__social li a[href*="dropbox.com"]::before {
+    content: '\f225';
+    color: #007ee5;
+}
+
+.menu-items__social li a[href*="facebook.com"]::before {
+    content: $facebook;
+    color: #3b5998;
+}
+
+.menu-items__social li a[href*="flickr.com"]::before {
+    content: '\f211';
+    color: #ff0084;
+}
+
+.menu-items__social li a[href*="plus.google.com"]::before {
+    content: $google-plus;
+    color: #dd4b39;
+}
+
+.menu-items__social li a[href*="github.com"]::before {
+    content: '\f200';
+    color: #4183c4;
+}
+
+.menu-items__social li a[href*="instagram.com"]::before {
+    content: $instagram;
+    color: #3f729b;
+}
+
+.menu-items__social li a[href*="linkedin.com"]::before {
+    content: $linkedin;
+    color: #0e76a8;
+}
+
+.menu-items__social li a[href*="pinterest.com"]::before {
+    content: $pinterest;
+    color: #c8232c;
+}
+
+.menu-items__social li a[href*="polldaddy.com"]::before {
+    content: '\f217';
+    color: #bc0b0b;
+}
+
+.menu-items__social li a[href*="getpocket.com"]::before {
+    content: '\f224';
+    color: #ee4056;
+}
+
+.menu-items__social li a[href*="reddit.com"]::before {
+    content: '\f222';
+    color: #336699;
+}
+
+.menu-items__social li a[href*="skype.com"]::before,
+.menu-items__social li a[href*="skype:"]::before {
+    content: '\f220';
+    color: #00aff0;
+}
+
+.menu-items__social li a[href*="stumbleupon.com"]::before {
+    content: '\f223';
+    color: #ff2618;
+}
+
+.menu-items__social li a[href*="tumblr.com"]::before {
+    content: '\f214';
+    color: #34526f;
+}
+
+.menu-items__social li a[href*="twitter.com"]::before {
+    content: $twitter;
+    color: #33ccff;
+}
+
+.menu-items__social li a[href*="vimeo.com"]::before {
+    content: '\f212';
+    color: #1AB7EA;
+}
+
+.menu-items__social li a[href*="wordpress.org"]::before,
+.menu-items__social li a[href*="wordpress.com"]::before {
+    content: '\f205';
+    color: #21759b;
+}
+
+.menu-items__social li a[href*="youtube.com"]::before {
+    content: $youtube;
+    color: #c4302b;
+}

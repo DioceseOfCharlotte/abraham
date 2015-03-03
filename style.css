@@ -318,11 +318,11 @@ th {
     display: inline-block;
     position: relative;
     /**
-   * tooltip arrow
-   */
+     * tooltip arrow
+     */
     /**
-   * tooltip body
-   */
+     * tooltip body
+     */
 }
 
 .hint:before,
@@ -1759,8 +1759,7 @@ ol ul {
     display: inline-block;
     width: 5px; 
     padding-left: 5px;
-    color: #858585;
-    color: currentcolor;
+    color: currentColor;
     font: normal 10px/1 FontAwesome;
     font-family: FontAwesome;
     font-size: inherit;
@@ -1869,6 +1868,7 @@ ol ul {
     width: 100%;
     margin: 0;
     margin-left: -1px;
+    color: #393939; 
     background-color: #fff;
     text-align: left;
     -webkit-transition: 0.1s 0.1s;
@@ -1885,15 +1885,9 @@ ol ul {
 }
 .sub-menu a {
     padding: 20px;
-    color: #393939;
     font-size: 15px;
     font-size: 0.9375rem; 
     line-height: 1;
-}
-.sub-menu a:visited,
-.sub-menu a:hover,
-.sub-menu a:active {
-    color: #393939;
 }
 .sub-menu.active {
     display: block;
@@ -1923,7 +1917,7 @@ ol ul {
 }
 
 /*------------------------------------*\
-	#GRIDS
+    #GRIDS
 \*------------------------------------*/
 /**
  * All content must be contained within child `grid-item` elements.
@@ -2011,7 +2005,7 @@ ol ul {
 }
 
 /*------------------------------------*\
-	##Grid-items
+    ##Grid-items
 \*------------------------------------*/
 /**
  * No explicit width by default. Rely on combining `grid-item` with a dimension
@@ -2227,6 +2221,11 @@ body.open {
 .site-footer a:active {
     opacity: 0.6;
 }
+.site-footer .menu-item a:visited,
+.site-footer .menu-item a:hover,
+.site-footer .menu-item a:active {
+    opacity: 1;
+}
 @media only screen and (min-width: 48em) {
     .site-footer .sidebar-col-1 .widget {
         width: 100%;
@@ -2434,7 +2433,6 @@ body.open {
     display: flex;
     width: 100%;
     max-width: 95%;
-    font-size: 0;
     text-align: left;
 
     -webkit-box-pack: justify;
@@ -2445,19 +2443,11 @@ body.open {
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
-.sidebar__primary > * {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
 .sidebar__primary .widget {
     display: inline-block;
-    width: 100%;
+    width: 100%; 
     min-width: 290px;
     max-width: 700px;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5; 
     text-align: left;
     vertical-align: top;
 }
@@ -4189,7 +4179,8 @@ input.datepicker_with_icon {
 
 .pagination {
     display: block;
-    width: 100%; 
+    width: 100%;
+    color: #6c6c6c; 
     text-align: center;
 }
 .pagination .nav-links {
@@ -4200,7 +4191,7 @@ input.datepicker_with_icon {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 1px solid #b8b8b8;
+    border: 1px solid #9f9f9f;
     border-radius: 50%;
     background: #fff;
     line-height: 40px;
@@ -4253,11 +4244,10 @@ input.datepicker_with_icon {
     cursor: default;
 }
 .pagination a {
-    color: #858585;
+    color: currentColor;
 }
 .pagination a:hover,
 .pagination a:focus {
-    color: #525252; 
     background: #ebebeb;
 }
 
@@ -4766,6 +4756,7 @@ blockquote cite::before {
     margin-left: auto;
     padding-right: 16px;
     padding-left: 16px;
+    color: #393939;
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -4817,7 +4808,7 @@ blockquote cite::before {
 }
 .breadcrumbs a {
     opacity: 0.7;
-    color: #393939;
+    color: currentColor;
     font-weight: inherit;
     text-decoration: none;
     -webkit-transition: opacity 0.2s ease;
@@ -5162,6 +5153,9 @@ img {
     height: 100%;
 }
 
+/*------------------------------------*\
+    #THUMBNAILS
+\*------------------------------------*/
 .featured-media {
     display: block;
     overflow: hidden;
@@ -5318,7 +5312,7 @@ a img:hover {
         color: #000 !important;
         background: transparent !important;
         /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+           http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }

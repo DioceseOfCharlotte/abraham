@@ -3,154 +3,152 @@
 \*------------------------------------*/
 
 .loop-meta {
-  width: 100%;
-  border-radius: $base-radius;
-  @include margin-space(n n $base-spacing-unit-sm);
-  @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
-  color: $color-text-light;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  // border: 1px solid $grey-300;
-  // border-bottom-width: 2px;
-  // border-top-color: $grey-200;
+    width: 100%;
+    border-radius: $base-radius;
+    @include margin-space(n n $base-spacing-unit-sm);
+    @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
+    color: $color-text-light;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    // border: 1px solid $grey-300;
+    // border-bottom-width: 2px;
+    // border-top-color: $grey-200;
 }
 
 .loop-title {
-  margin: 0;
+    margin: 0;
 }
 
 .loop-description p {
-  margin-top: $base-spacing-unit-sm;
-  margin: 0;
+    margin-top: $base-spacing-unit-sm;
+    margin: 0;
 }
 
 .entry-summary {
-  position: relative;
+    position: relative;
     max-height: 140px;
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .plural .format-link {
-  width: 100%;
+    width: 100%;
 }
 
 .plural .format-quote {
-  width: 100%;
-  padding: 0;
+    width: 100%;
+    padding: 0;
 }
 
 .plural .format-aside {
-  width: 100%;
+    width: 100%;
 }
 
 .read-more__fade {
-  display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  @include padding-space(n n $base-spacing-unit-tiny);
-  left: 0;
-  padding-top: 80px;
-  text-align: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95), #fff);
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    @include padding-space(n n $base-spacing-unit-tiny);
+    left: 0;
+    padding-top: 80px;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95), #fff);
 
-  a {
-    font-weight: 400;
-    text-transform: uppercase;
-    @include font-size($base-font-size, false);
-    color: $color-text-light;
-    transition: color 0.2s ease;
-    border-bottom: 0;
+    a {
+        font-weight: 400;
+        text-transform: uppercase;
+        @include font-size($base-font-size, false);
+        color: $color-text-light;
+        transition: color 0.2s ease;
+        border-bottom: 0;
 
-    &:hover {
-      color: $color-text-light-hover;
-      border-bottom: 0;
+        &:hover {
+            color: $color-text-light-hover;
+            border-bottom: 0;
+        }
     }
-  }
 }
 
-
 .pagination {
-  display: block;
-  text-align: center;
-    width: 100%;
-
-  .nav-links {
-    max-width: 350px;
-    margin: 0 auto;
-  }
-
-  .page-numbers {
-    background: $white;
-    border: 1px solid $grey-300;
-    border-radius: 50%;
-    display: inline-block;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
+    display: block;
     text-align: center;
-    transition: all 0.2s ease-in-out;
-    vertical-align: top;
+    width: 100%;
+    color: $grey-600;
 
-    &.prev,
-    &.next {
-      font-size: 2.5rem;
-      background: none;
-      border-color: transparent;
-
+    .nav-links {
+        max-width: 350px;
+        margin: 0 auto;
     }
 
-    &.prev {
-      width: 0;
-      height: 0;
-      border-radius: 0;
-      border-top: 20px solid transparent;
-      border-right: 40px solid $grey-500;
-      border-bottom: 20px solid transparent;
-      float: left;
+    .page-numbers {
+        background: $white;
+        border: 1px solid $grey-400;
+        border-radius: 50%;
+        display: inline-block;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        vertical-align: top;
 
-      &:hover {
-            border-right: 40px solid $grey-700;
-      }
+        &.prev,
+        &.next {
+            font-size: 2.5rem;
+            background: none;
+            border-color: transparent;
+        }
+
+        &.prev {
+            width: 0;
+            height: 0;
+            border-radius: 0;
+            border-top: 20px solid transparent;
+            border-right: 40px solid $grey-500;
+            border-bottom: 20px solid transparent;
+            float: left;
+
+            &:hover {
+                border-right: 40px solid $grey-700;
+            }
+        }
+
+        &.next {
+            width: 0;
+            height: 0;
+            border-radius: 0;
+            border-top: 20px solid transparent;
+            border-left: 40px solid $color-text-light;
+            border-bottom: 20px solid transparent;
+            float: right;
+
+            &:hover {
+                border-left: 40px solid $color-text-light-hover;
+            }
+        }
     }
 
-    &.next {
-      width: 0;
-      height: 0;
-      border-radius: 0;
-      border-top: 20px solid transparent;
-      border-left: 40px solid $color-text-light;
-      border-bottom: 20px solid transparent;
-      float: right;
-
-      &:hover {
-            border-left: 40px solid $color-text-light-hover;
-      }
+    .current {
+        background: none;
+        cursor: default;
+        border-color: transparent;
+        font-weight: 700;
     }
-  }
 
-  .current {
-    background: none;
-    cursor: default;
-    border-color: transparent;
-    font-weight: 700;
-  }
-
-  .dots {
-    border: 0;
-    background: none;
-    cursor: default;
-    font-size: 1.5rem;
-    color: $grey-500;
-  }
-
-  a {
-    color: $color-text-light;
-
-    &:hover,
-    &:focus {
-    background: $grey-100;
-    color: $color-text-light-hover;
+    .dots {
+        border: 0;
+        background: none;
+        cursor: default;
+        font-size: 1.5rem;
+        color: $grey-500;
     }
-  }
+
+    a {
+        color: currentColor;
+
+        &:hover,
+        &:focus {
+            background: $grey-100;
+        }
+    }
 }

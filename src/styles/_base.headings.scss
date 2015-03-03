@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 // Predefine the variables below in order to alter and enable specific features.
-$base-heading-size-1:  36px !default;
-$base-heading-size-2:  30px !default;
-$base-heading-size-3:  24px !default;
-$base-heading-size-4:  20px !default;
-$base-heading-size-5:  16px !default;
-$base-heading-size-6:  14px !default;
+$base-heading-size-1: 36px !default;
+$base-heading-size-2: 30px !default;
+$base-heading-size-3: 24px !default;
+$base-heading-size-4: 20px !default;
+$base-heading-size-5: 16px !default;
+$base-heading-size-6: 14px !default;
 
 h1 {
     @include font-size($base-heading-size-1);
@@ -44,27 +44,26 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  // margin: 0;
-  padding: 0;
+    // margin: 0;
+    padding: 0;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
-  //margin: 0 0 $base-spacing-unit-tiny;
-  color: $color-headings;
+    //margin: 0 0 $base-spacing-unit-tiny;
+    color: $color-headings;
 
-  a, a:visited {
-    text-decoration: none;
-    font-weight: inherit;
-    color: inherit;
-    transition: opacity $base-transition-speed ease, border-color $base-transition-speed;
+    a, a:visited {
+        text-decoration: none;
+        font-weight: inherit;
+        color: inherit;
+        transition: opacity $base-transition-speed ease, border-color $base-transition-speed;
 
-    &:hover,
-    &:focus,
-    &:active {
-      color: inherit;
-      opacity: .5;
-      text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+            color: inherit;
+            opacity: .5;
+            text-decoration: none;
+        }
     }
-  }
 }
