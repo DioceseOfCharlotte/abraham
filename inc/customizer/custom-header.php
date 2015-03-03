@@ -22,7 +22,7 @@ function abraham_custom_header_setup() {
   		'default-image'          => '',
   		'default-text-color'     => 'FFFFFF',
   		'width'                  => 1200,
-  		'height'                 => 250,
+  		'height'                 => 200,
   		'flex-height'            => true,
   		'wp-head-callback'       => 'abraham_header_style'
   	]
@@ -75,6 +75,15 @@ function abraham_header_style() {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
+	<?php
+		// Is there an image?
+		if ( get_header_image() ) :
+	?>
+		.site-header {
+			background: url(<?php header_image(); ?>) no-repeat scroll center;
+			background-size: cover;
+		}
+		<?php endif; // End header image check. ?>
 	</style>
 	<?php
 }
