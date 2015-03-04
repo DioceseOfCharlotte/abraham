@@ -1613,7 +1613,7 @@ a.active.comment-reply-link,
 a.active.comment-reply-login,
 a.button:hover,
 a.button.active {
-    color: currentColor;
+    color: #fff;
 }
 
 .widget a {

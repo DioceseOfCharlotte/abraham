@@ -43,7 +43,7 @@ a.button {
     color: $btn-text;
 
     &:hover, &.active {
-        color: currentColor;
+        color: $btn-text;
     }
 }
 
