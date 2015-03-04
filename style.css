@@ -1651,7 +1651,7 @@ ol ul {
     bottom: 0;
     width: 250px;
     height: 100%;
-    color: #f8f8f8;
+    color: #fff;
     background-color: #0b72c5;
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
     -webkit-transform: translate(-250px, 0);
@@ -1749,7 +1749,7 @@ ol ul {
 .menu__primary--items > li a:hover,
 .menu__primary--items > li a:active {
     border: 0; 
-    background-color: rgba(184, 184, 184, 0.4);
+    background-color: rgba(210, 210, 210, 0.4);
 }
 
 .sidebar .menu-item {
@@ -2443,6 +2443,7 @@ body.open {
 }
 .widget_search .search-field {
     border-color: #fff;
+    background-color: #fff;
 }
 
 /*------------------------------------*\
@@ -2939,7 +2940,7 @@ li.ping,
     padding-left: 8px;
     border: 0;
     border-radius: 2px;
-    background: #ebebeb;
+    background-color: #f8f8f8;
 }
 @media only screen and (min-width: 48em) {
     li.ping,
@@ -2988,7 +2989,7 @@ li.ping:before,
     width: 0;
     height: 0;
     border-right: 15px solid transparent;
-    border-bottom: 20px solid #ebebeb;
+    border-bottom: 20px solid #f8f8f8;
     border-left: 0 solid transparent;
     content: "";
 }
@@ -2997,7 +2998,7 @@ li.ping:before,
     right: 0;
     left: auto;
     border-right: 0 solid transparent; 
-    border-bottom: 20px solid #ebebeb;
+    border-bottom: 20px solid #f8f8f8;
     border-left: 15px solid transparent;
 }
 
@@ -3332,11 +3333,13 @@ select {
     width: 100%;
     height: 40px;
     padding: 6px 10px;
-    border: 1px solid #b8b8b8;
+    border: 1px solid #ebebeb;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: #ebebeb;
     box-shadow: none;
     font-weight: normal;
+    -webkit-transition: all 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.86);
+    transition: all 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.86);
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -3372,6 +3375,7 @@ textarea:focus,
 select:focus {
     border: 1px solid #118ef2;
     outline: 0;
+    background-color: #fff;
 }
 
 label,
@@ -3988,6 +3992,10 @@ input.datepicker_with_icon {
     padding: 25px;
     border: 2px dashed #ddd;
     color: #aaa;
+    text-align: center;
+}
+
+.form-submit {
     text-align: center;
 }
 
@@ -4706,7 +4714,7 @@ blockquote cite::before {
 .breadcrumbs {
     overflow: hidden;
     max-width: 1280px;
-    margin-top: 8px;
+    margin-top: 13px;
     margin-right: auto; 
     margin-bottom: -4px;
     margin-left: auto;
@@ -4723,18 +4731,18 @@ blockquote cite::before {
 }
 @media only screen and (max-width: 47em) {
     .breadcrumbs {
-        margin-top: 68px;
+        margin-top: 76px;
         margin-bottom: -60px;
     }
 }
 @media only screen and (min-width: 48em) {
     .breadcrumbs {
-        margin-top: 12px;
+        margin-top: 19.5px;
     }
 }
 @media only screen and (min-width: 64em) {
     .breadcrumbs {
-        margin-top: 20px;
+        margin-top: 32.5px;
     }
 }
 @media only screen and (min-width: 48em) {

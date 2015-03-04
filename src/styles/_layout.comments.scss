@@ -39,7 +39,7 @@ li.comment, li.ping {
 li.ping, .comment-content {
     margin-top: 10px;
     border: 0;
-    background: $grey-100;
+    background-color: $grey-50;
     border-radius: $base-radius;
     position: relative;
     @include padding-space($base-spacing-unit-tiny $base-spacing-unit-tiny $base-spacing-unit-tiny * 0.24);
@@ -51,7 +51,7 @@ li.ping:before, .comment-content:before {
     left: 0;
     width: 0;
     height: 0;
-    border-bottom: 20px solid $grey-100;
+    border-bottom: 20px solid $grey-50;
     border-left: 0 solid transparent;
     border-right: 15px solid transparent;
     content: "";
@@ -60,7 +60,7 @@ li.ping:before, .comment-content:before {
 .children .comment.even > article > .comment-content:before {
     left: auto;
     right: 0;
-    border-bottom: 20px solid $grey-100;
+    border-bottom: 20px solid $grey-50;
     border-left: 15px solid transparent;
     border-right: 0 solid transparent;
 }

@@ -8,11 +8,11 @@
     color: $color-text;
 
     @include sm-only {
-        margin-top: 60px + $base-spacing-unit-tiny;
+        margin-top: 60px + $base-spacing-unit-sm;
         margin-bottom: -60px;
     }
 
-    @include margin-space($base-spacing-unit-tiny n $base-spacing-unit-tiny * -0.5);
+    @include margin-space($base-spacing-unit-tiny + 5px n $base-spacing-unit-tiny * -0.5);
     list-style: none;
     cursor: default;
     font-weight: 500;

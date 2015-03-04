@@ -10,7 +10,7 @@
     width: 250px;
     height: 100%;
     background-color: $color-primary-dark;
-    color: $grey-50;
+    color: #fff;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
     overflow-y: auto;
@@ -70,7 +70,7 @@
                 font-weight: normal;
 
                 &:hover, &:active {
-                    background-color: rgba($grey-300, 0.4);
+                    background-color: rgba($grey-200, 0.4);
                     border: 0;
                 }
             }
