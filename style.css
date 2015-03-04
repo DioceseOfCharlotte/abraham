@@ -1340,7 +1340,7 @@ big {
 s,
 strike,
 del {
-    color: #5e5e5e; 
+    color: #525252; 
     text-decoration: line-through;
 }
 
@@ -1611,8 +1611,9 @@ a.button {
     font-weight: normal;
 }
 
-.menu__primary .menu-item a {
+.menu-item a {
     color: currentColor;
+    font-weight: normal;
 }
 
 /*------------------------------------*\
@@ -1653,7 +1654,7 @@ ol ul {
     height: 100%;
     color: #fff;
     background-color: #0b72c5;
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); 
     -webkit-transform: translate(-250px, 0);
     -ms-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
@@ -1736,20 +1737,21 @@ ol ul {
         width: auto;
     }
 }
-.menu__primary--items > li a {
+.menu__primary--items > li > a {
     display: block;
     padding: 20px 20px;
-    color: currentColor;
     background-color: transparent;
-    font-weight: normal; 
-    line-height: 24px;
-    -webkit-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
+    line-height: 24px; 
+    -webkit-transition: background-color 0.1s ease-out;
+    transition: background-color 0.1s ease-out;
+}
+.menu__primary--items > li > a:hover,
+.menu__primary--items > li > a.active {
+    border: 0;
 }
 .menu__primary--items > li a:hover,
-.menu__primary--items > li a:active {
-    border: 0; 
-    background-color: rgba(210, 210, 210, 0.4);
+.menu__primary--items > li a.active {
+    background-color: rgba(31, 31, 31, 0.05);
 }
 
 .sidebar .menu-item {
@@ -1873,7 +1875,9 @@ ol ul {
 }
 @media only screen and (min-width: 48em) {
     .sub-menu {
-        width: 200px;
+        width: auto;
+        min-width: 200px;
+        max-width: 250px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
     }
 }
@@ -2044,7 +2048,7 @@ body.open {
     left: 0;
     width: 100%;
     background-color: #118ef2;
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 }
 @media only screen and (min-width: 48em) {
     .site-header {
@@ -2233,6 +2237,10 @@ body.open {
     .sidebar__footer-widgets {
         padding-top: 40px;
     }
+}
+.sidebar__footer-widgets .sub-menu {
+    right: 100%;
+    bottom: 0;
 }
 .sidebar__footer-widgets .widget-title {
     color: inherit;
@@ -2725,7 +2733,7 @@ body.open {
 }
 .post-navigation .meta-nav {
     display: block;
-    color: #858585;
+    color: #6c6c6c;
     font-size: 24px;
     font-size: 1.5rem; 
     font-weight: 700;
@@ -2811,7 +2819,7 @@ a.comments-link {
     height: 21px;
     border-radius: 50%;
     color: #fff;
-    background: #858585;
+    background: #6c6c6c;
     font-size: 12px;
     font-weight: 400;
     line-height: 22px;
@@ -2834,7 +2842,7 @@ a.comments-link:hover:before {
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-right: 10px solid #858585;
+    border-right: 10px solid #6c6c6c;
     border-bottom: 0 solid transparent;
     content: "";
     -webkit-transition: border-color 0.3s linear;
@@ -3062,7 +3070,7 @@ li.ping:before,
 .form-allowed__label {
     display: inline-block;
     position: relative;
-    color: #858585; 
+    color: #6c6c6c; 
     font-size: 14px;
     font-weight: 400;
     font-style: italic;
@@ -3072,7 +3080,7 @@ li.ping:before,
 }
 .form-allowed__label:before {
     display: inline-block;
-    color: #858585;
+    color: #6c6c6c;
     font-family: FontAwesome;
     font-size: inherit;
     font-size: 20px;
@@ -4037,8 +4045,8 @@ input.datepicker_with_icon {
     padding-bottom: 8px;
     padding-left: 16px;
     border-radius: 2px;
-    color: #858585;
-    background-color: rgba(255, 255, 255, 0.8);
+    color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.07);
     text-align: center;
 }
 @media only screen and (min-width: 48em) {
@@ -4078,6 +4086,7 @@ input.datepicker_with_icon {
 
 .loop-title {
     margin: 0;
+    color: currentColor;
 }
 
 .loop-description p {
@@ -4128,7 +4137,7 @@ input.datepicker_with_icon {
 }
 .read-more__fade a {
     border-bottom: 0; 
-    color: #858585;
+    color: #6c6c6c;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -4188,7 +4197,7 @@ input.datepicker_with_icon {
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 40px solid #858585;
+    border-left: 40px solid #6c6c6c;
     border-radius: 0;
 }
 .pagination .page-numbers.next:hover {
@@ -4680,7 +4689,7 @@ blockquote {
     margin-bottom: 24px;
     padding-left: 20px; 
     border-left: 5px solid #9f9f9f;
-    color: #858585;
+    color: #6c6c6c;
 }
 blockquote p + p {
     margin-bottom: 0;
@@ -4786,7 +4795,7 @@ blockquote cite::before {
     color: #525252;
 }
 .breadcrumbs .trail-end {
-    color: #858585; 
+    color: #6c6c6c; 
     font-weight: 500;
 }
 
@@ -4863,7 +4872,7 @@ kbd {
 }
 
 .form-allowed-button {
-    color: #858585;
+    color: #6c6c6c;
     cursor: default;
 }
 

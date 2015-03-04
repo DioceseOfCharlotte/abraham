@@ -63,6 +63,11 @@
     justify-content: space-between;
     @include padding-space($base-spacing-unit-sm n n);
 
+    .sub-menu {
+        right: 100%;
+        bottom: 0;
+    }
+
     .widget-title {
         color: inherit;
     }

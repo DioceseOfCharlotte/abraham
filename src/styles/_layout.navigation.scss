@@ -14,7 +14,7 @@
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
     overflow-y: auto;
-    @include shadow-z1;
+    @include shadow-z2;
 
     @include md {
         position: relative;
@@ -60,20 +60,24 @@
                 width: auto;
             }
 
-            a {
+            > a {
                 display: block;
                 padding: 20px 20px;
-                color: currentColor;
                 background-color: transparent;
-                transition: background-color .2s ease-out;
+                transition: background-color .1s ease-out;
                 line-height: $base-line-height;
-                font-weight: normal;
 
-                &:hover, &:active {
-                    background-color: rgba($grey-200, 0.4);
+                &:hover, &.active {
                     border: 0;
                 }
             }
+
+            a {
+
+                        &:hover, &.active {
+                    background-color: rgba($grey-900, 0.05);
+                }
+    }
         }
     }
 }
@@ -190,7 +194,9 @@
     list-style-type: none;
 
     @include md {
-        width: 200px;
+        width: auto;
+        min-width: 200px;
+        max-width: 250px;
         @include shadow-z2;
     }
 

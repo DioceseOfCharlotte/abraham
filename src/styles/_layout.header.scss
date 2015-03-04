@@ -15,7 +15,7 @@ body.open {
     background-color: $color-primary;
     overflow: hidden;
     z-index: 1;
-    @include shadow-z1;
+    @include shadow-z2;
 
     @include md {
         position: relative;
