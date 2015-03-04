@@ -42,9 +42,9 @@ a.btn,
 a.button {
     color: $btn-text;
 
-    // &:hover, &:visited, &:active {
-    //     color: $btn-text;
-    // }
+    &:hover, &.active {
+        color: currentColor;
+    }
 }
 
 .widget a {

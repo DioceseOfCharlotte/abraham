@@ -1605,6 +1605,16 @@ a.comment-reply-login,
 a.button {
     color: #fff;
 }
+a.btn:hover,
+a.comment-reply-link:hover,
+a.comment-reply-login:hover,
+a.btn.active,
+a.active.comment-reply-link,
+a.active.comment-reply-login,
+a.button:hover,
+a.button.active {
+    color: currentColor;
+}
 
 .widget a {
     font-weight: normal;
