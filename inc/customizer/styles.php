@@ -91,8 +91,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a,
-				a:visited'
+				'a'
 			),
 			'declarations' => array(
 				'color' => $color600

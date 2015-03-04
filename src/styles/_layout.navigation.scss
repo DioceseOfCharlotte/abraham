@@ -73,11 +73,10 @@
             }
 
             a {
-
-                        &:hover, &.active {
+                &:hover, &.active {
                     background-color: rgba($grey-900, 0.05);
                 }
-    }
+            }
         }
     }
 }

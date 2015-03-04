@@ -2,8 +2,7 @@
     #LINKS
 \*------------------------------------*/
 
-a,
-a:visited {
+a {
     transition: color .3s, border-color .3s;
     color: $color-links;
     text-decoration: none;
@@ -52,8 +51,11 @@ a.button {
     font-weight: normal;
 }
 
-
 .menu-item a {
+    color: currentColor;
+    font-weight: normal;
+
+    &:hover, &.active {
         color: currentColor;
-        font-weight: normal;
     }
+}

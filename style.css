@@ -1559,8 +1559,7 @@ h6 a:visited:active {
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
-a,
-a:visited {
+a {
     color: #0b72c5;
     font-weight: bold; 
     text-decoration: none;
@@ -1614,6 +1613,10 @@ a.button {
 .menu-item a {
     color: currentColor;
     font-weight: normal;
+}
+.menu-item a:hover,
+.menu-item a.active {
+    color: currentColor;
 }
 
 /*------------------------------------*\
