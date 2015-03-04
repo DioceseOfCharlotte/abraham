@@ -28,6 +28,16 @@ body.open {
     margin: 0;
 }
 
+
+@include sm-only {
+    .site-title {
+        font-size: 2em;
+    }
+
+    .site-description {
+        font-size: 1em;
+    }
+}
 .site-logo {
     float: left;
 }
