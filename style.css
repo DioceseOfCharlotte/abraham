@@ -1567,10 +1567,10 @@ p > a:active {
     -webkit-transition: opacity 0.3s, border-color 0.3s;
     transition: opacity 0.3s, border-color 0.3s;
 }
-.site-footer a:visited,
 .site-footer a:hover,
 .site-footer a:active {
-    opacity: 0.6;
+    opacity: 0.6; 
+    color: currentColor;
 }
 
 .widget a {
@@ -1582,7 +1582,7 @@ p > a:active {
     font-weight: normal;
 }
 .menu-item a:hover,
-.menu-item a.active {
+.menu-item a:active {
     color: currentColor;
 }
 
@@ -4546,6 +4546,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
+    color: #fff; 
     background-color: #41a5f5;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
@@ -4558,6 +4559,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
+    color: #fff; 
     background-color: #0b72c5;
 }
 

@@ -24,10 +24,12 @@ input[type="submit"] {
     &:hover {
         background-color: $btn-bg-hover;
         transition: background-color $base-transition-speed;
+        color: $btn-text;
     }
 
     &:active {
         background-color: $btn-bg-active;
+        color: $btn-text;
     }
 }
 

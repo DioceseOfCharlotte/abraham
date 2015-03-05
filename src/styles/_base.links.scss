@@ -32,7 +32,8 @@ p > a {
         transition: opacity .3s, border-color .3s;
         color: currentColor;
 
-        &:visited, &:hover, &:active {
+        &:hover, &:active {
+            color: currentColor;
             opacity: .6;
         }
     }
@@ -46,7 +47,7 @@ p > a {
     color: currentColor;
     font-weight: normal;
 
-    &:hover, &.active {
+    &:hover, &:active {
         color: currentColor;
     }
 }
