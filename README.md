@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/m-e-h/abraham.svg)](https://travis-ci.org/m-e-h/abraham)
 [![devDependency Status](https://david-dm.org/m-e-h/abraham/dev-status.svg)](https://david-dm.org/m-e-h/abraham#info=devDependencies)
 # Abraham Wordpress Theme
 

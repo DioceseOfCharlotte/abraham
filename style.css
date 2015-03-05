@@ -4068,11 +4068,6 @@ input.datepicker_with_icon {
     position: relative;
     height: 140px;
 }
-@media only screen and (min-width: 48em) {
-    .entry-summary {
-        height: 140px;
-    }
-}
 
 .plural .format-link {
     width: 100%;

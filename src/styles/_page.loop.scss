@@ -23,12 +23,9 @@
 }
 
 .entry-summary {
-    height: 140px;
     position: relative;
-    overflow-y: hidden;
-    @include md{
     height: 140px;
-    }
+    overflow-y: hidden;
 }
 
 .plural .format-link {
