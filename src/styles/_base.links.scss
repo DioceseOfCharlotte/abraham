@@ -2,7 +2,7 @@
     #LINKS
 \*------------------------------------*/
 
-a:not(.button) {
+a {
     transition: color .3s, border-color .3s;
     color: $color-links;
     text-decoration: none;
@@ -27,7 +27,7 @@ p > a {
     }
 }
 
-footer.site-footer {
+.site-footer {
     a {
         transition: opacity .3s, border-color .3s;
         color: currentColor;

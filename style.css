@@ -1498,18 +1498,12 @@ h6 {
     color: #6c6c6c;
 }
 h1 a,
-h1 a:visited,
 h2 a,
-h2 a:visited,
 h3 a,
-h3 a:visited,
 h4 a,
-h4 a:visited,
 h5 a,
-h5 a:visited,
-h6 a,
-h6 a:visited {
-    color: inherit;
+h6 a {
+    color: currentColor;
     font-weight: inherit;
     text-decoration: none;
     -webkit-transition: opacity 0.3s ease, border-color 0.3s;
@@ -1518,58 +1512,40 @@ h6 a:visited {
 h1 a:hover,
 h1 a:focus,
 h1 a:active,
-h1 a:visited:hover,
-h1 a:visited:focus,
-h1 a:visited:active,
 h2 a:hover,
 h2 a:focus,
 h2 a:active,
-h2 a:visited:hover,
-h2 a:visited:focus,
-h2 a:visited:active,
 h3 a:hover,
 h3 a:focus,
 h3 a:active,
-h3 a:visited:hover,
-h3 a:visited:focus,
-h3 a:visited:active,
 h4 a:hover,
 h4 a:focus,
 h4 a:active,
-h4 a:visited:hover,
-h4 a:visited:focus,
-h4 a:visited:active,
 h5 a:hover,
 h5 a:focus,
 h5 a:active,
-h5 a:visited:hover,
-h5 a:visited:focus,
-h5 a:visited:active,
 h6 a:hover,
 h6 a:focus,
-h6 a:active,
-h6 a:visited:hover,
-h6 a:visited:focus,
-h6 a:visited:active {
+h6 a:active {
     opacity: 0.5;
-    color: inherit;
+    color: currentColor;
     text-decoration: none;
 }
 
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
-a:not(.button) {
+a {
     color: #0b72c5;
     font-weight: bold; 
     text-decoration: none;
     -webkit-transition: color 0.3s, border-color 0.3s;
     transition: color 0.3s, border-color 0.3s;
 }
-a:not(.button):hover {
+a:hover {
     color: #41a5f5;
 }
-a:not(.button):active {
+a:active {
     color: #118ef2; 
     -webkit-transition: color 0.3s, border-color 0.3s;
     transition: color 0.3s, border-color 0.3s;
@@ -1586,14 +1562,14 @@ p > a:active {
     border-bottom-color: currentColor;
 }
 
-footer.site-footer a {
+.site-footer a {
     color: currentColor; 
     -webkit-transition: opacity 0.3s, border-color 0.3s;
     transition: opacity 0.3s, border-color 0.3s;
 }
-footer.site-footer a:visited,
-footer.site-footer a:hover,
-footer.site-footer a:active {
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:active {
     opacity: 0.6;
 }
 
@@ -2171,21 +2147,6 @@ body.open {
     color: #fff; 
     background-color: #118ef2;
     text-align: left;
-}
-.site-footer a {
-    color: currentColor; 
-    -webkit-transition: opacity 0.3s, border-color 0.3s;
-    transition: opacity 0.3s, border-color 0.3s;
-}
-.site-footer a:visited,
-.site-footer a:hover,
-.site-footer a:active {
-    opacity: 0.6;
-}
-.site-footer .menu-item a:visited,
-.site-footer .menu-item a:hover,
-.site-footer .menu-item a:active {
-    opacity: 1;
 }
 @media only screen and (min-width: 48em) {
     .site-footer .sidebar-col-1 .widget {

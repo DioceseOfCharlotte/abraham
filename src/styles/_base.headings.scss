@@ -52,16 +52,16 @@ h1, h2, h3, h4, h5, h6 {
     //margin: 0 0 $base-spacing-unit-tiny;
     color: $color-headings;
 
-    a, a:visited {
+    a {
         text-decoration: none;
         font-weight: inherit;
-        color: inherit;
+        color: currentColor;
         transition: opacity $base-transition-speed ease, border-color $base-transition-speed;
 
         &:hover,
         &:focus,
         &:active {
-            color: inherit;
+            color: currentColor;
             opacity: .5;
             text-decoration: none;
         }

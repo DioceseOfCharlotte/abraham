@@ -14,21 +14,6 @@
     background-color: $footer-bg;
     color: #fff;
 
-    a {
-        transition: opacity .3s, border-color .3s;
-        color: currentColor;
-
-        &:visited, &:hover, &:active {
-            opacity: .6;
-        }
-    }
-
-    .menu-item a {
-        &:visited, &:hover, &:active {
-            opacity: 1;
-        }
-    }
-
     @include md {
         .sidebar-col-1 {
             .widget {
