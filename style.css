@@ -1137,7 +1137,7 @@ html {
 }
 @media only screen and (max-width: 47em) {
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -4067,6 +4067,11 @@ input.datepicker_with_icon {
     overflow-y: hidden; 
     position: relative;
     height: 140px;
+}
+@media only screen and (min-width: 48em) {
+    .entry-summary {
+        height: 140px;
+    }
 }
 
 .plural .format-link {

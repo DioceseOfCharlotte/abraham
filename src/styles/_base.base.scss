@@ -8,7 +8,7 @@ html {
     line-height: $base-line-height;
 
     @include sm-only {
-        font-size: 14px;
+        font-size: $base-font-size - 1;
     }
 }
 
