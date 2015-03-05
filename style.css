@@ -4066,7 +4066,7 @@ input.datepicker_with_icon {
 .entry-summary {
     overflow-y: hidden; 
     position: relative;
-    max-height: 140px;
+    height: 140px;
 }
 
 .plural .format-link {

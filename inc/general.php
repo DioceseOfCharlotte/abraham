@@ -7,6 +7,8 @@
 
 add_filter( 'excerpt_more', 'abraham_excerpt_more' );
 
+add_filter( 'the_excerpt',    'abraham_the_excerpt', 5 );
+
 /* Add a custom excerpt length. */
 add_filter( 'excerpt_length', 'abraham_excerpt_length' );
 
@@ -18,7 +20,14 @@ add_filter( 'get_search_form', 'abraham_search_form' );
 
 
 function abraham_excerpt_more( $more ) {
-	return '... <div class="read-more__fade"><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue Reading...', 'abraham') . '</a></div>';
+	return ' &hellip; ';
+}
+
+function abraham_the_excerpt( $excerpt ) {
+	/* Translators: The %s is the post title shown to screen readers. */
+	$text = sprintf( __( 'Continue reading %s', 'saga' ), '<span class="screen-reader-text">' . get_the_title() . '</span>' );
+	$more = sprintf( '<div class="read-more__fade"><a href="%s" class="more-link">%s</a></div>', get_permalink(), $text );
+	return $excerpt . $more;
 }
 
 function abraham_excerpt_length( $length ) {
