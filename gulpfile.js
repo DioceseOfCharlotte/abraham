@@ -10,6 +10,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
+var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var composer = require('gulp-composer');
 var csscomb = require('gulp-csscomb');
@@ -91,7 +92,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'))
     //Concatenate And Minify Styles
     .pipe(rename({ suffix: '.min' }))
-    .pipe($.if('*.css', $.csso()))
+    .pipe(minifyCSS())
     .pipe(gulp.dest('./'));
 });
 
