@@ -67,8 +67,6 @@ function abraham_header_style() {
 		.btn,
 		button,
 		.button,
-		a.btn,
-		a.button,
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"] {
