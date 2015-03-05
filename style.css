@@ -5158,8 +5158,7 @@ a img:hover {
     #WIDGETS
 \*------------------------------------*/
 .widget_search .widget-title {
-    margin-right: 0; 
-    margin-left: 0;
+    margin: 0;
 }
 
 .rsswidget > img {
