@@ -8,6 +8,10 @@ a:not(.button) {
     text-decoration: none;
     font-weight: bold;
 
+    &:visited {
+        color: $color-links;
+    }
+
     &:hover {
         color: $color-links-hover;
     }

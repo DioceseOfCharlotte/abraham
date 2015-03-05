@@ -1566,6 +1566,9 @@ a:not(.button) {
     -webkit-transition: color 0.3s, border-color 0.3s;
     transition: color 0.3s, border-color 0.3s;
 }
+a:not(.button):visited {
+    color: #0b72c5;
+}
 a:not(.button):hover {
     color: #41a5f5;
 }
