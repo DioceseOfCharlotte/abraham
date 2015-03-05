@@ -11,6 +11,66 @@
     display: none;
 }
 
+.widget_calendar {
+    padding: 0;
+
+    table {
+        cursor: default;
+        margin: 0;
+        border: 0;
+        border-collapse: initial;
+    }
+
+    td {
+        padding: 5px;
+        text-align: center;
+        border-color: rgba($grey-200, 0.4);
+        color: $color-text-light;
+
+        a {
+            font-weight: bold;
+        }
+    }
+
+    caption {
+        background-color: $blue-600;
+        font-size: 18px;
+        line-height: 2;
+        color: #fff;
+    }
+
+    th {
+        padding: 5px;
+        text-align: center;
+        background-color: $blue-500;
+        color: #fff;
+        border: 0;
+    }
+
+    tfoot {
+        background-color: $blue-600;
+        color: #fff;
+
+        td {
+            border: 0;
+        }
+
+        a {
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+
+    .pad {
+        background-color: rgba($grey-200, 0.4);
+    }
+
+    #today {
+        font-weight: bold;
+        color: $color-text;
+    }
+}
+
 /* WordPress / Widgets Reloaded widgets. */
 .widget_archive .widget-title::before {
     content: $history;

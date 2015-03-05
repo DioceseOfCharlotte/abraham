@@ -1340,7 +1340,7 @@ big {
 s,
 strike,
 del {
-    color: #525252; 
+    color: #6b6b6b; 
     text-decoration: line-through;
 }
 
@@ -2688,7 +2688,7 @@ body.open {
 }
 .post-navigation .meta-nav {
     display: block;
-    color: #6c6c6c;
+    color: #9f9f9f;
     font-size: 24px;
     font-size: 1.5rem; 
     font-weight: 700;
@@ -2774,7 +2774,7 @@ a.comments-link {
     height: 21px;
     border-radius: 50%;
     color: #fff;
-    background: #6c6c6c;
+    background: #9f9f9f;
     font-size: 12px;
     font-weight: 400;
     line-height: 22px;
@@ -2797,7 +2797,7 @@ a.comments-link:hover:before {
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-right: 10px solid #6c6c6c;
+    border-right: 10px solid #9f9f9f;
     border-bottom: 0 solid transparent;
     content: "";
     -webkit-transition: border-color 0.3s linear;
@@ -3025,7 +3025,7 @@ li.ping:before,
 .form-allowed__label {
     display: inline-block;
     position: relative;
-    color: #6c6c6c; 
+    color: #9f9f9f; 
     font-size: 14px;
     font-weight: 400;
     font-style: italic;
@@ -3035,7 +3035,7 @@ li.ping:before,
 }
 .form-allowed__label:before {
     display: inline-block;
-    color: #6c6c6c;
+    color: #9f9f9f;
     font-family: FontAwesome;
     font-size: inherit;
     font-size: 20px;
@@ -4092,7 +4092,7 @@ input.datepicker_with_icon {
 }
 .read-more__fade a {
     border-bottom: 0; 
-    color: #6c6c6c;
+    color: #9f9f9f;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -4152,7 +4152,7 @@ input.datepicker_with_icon {
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 40px solid #6c6c6c;
+    border-left: 40px solid #9f9f9f;
     border-radius: 0;
 }
 .pagination .page-numbers.next:hover {
@@ -4634,7 +4634,7 @@ blockquote {
     margin-bottom: 24px;
     padding-left: 20px; 
     border-left: 5px solid #9f9f9f;
-    color: #6c6c6c;
+    color: #9f9f9f;
 }
 blockquote p + p {
     margin-bottom: 0;
@@ -4740,7 +4740,7 @@ blockquote cite::before {
     color: #525252;
 }
 .breadcrumbs .trail-end {
-    color: #6c6c6c; 
+    color: #9f9f9f; 
     font-weight: 500;
 }
 
@@ -4817,7 +4817,7 @@ kbd {
 }
 
 .form-allowed-button {
-    color: #6c6c6c;
+    color: #9f9f9f;
     cursor: default;
 }
 
@@ -5150,6 +5150,56 @@ a img:hover {
 
 .rsswidget > img {
     display: none;
+}
+
+.widget_calendar {
+    padding: 0;
+}
+.widget_calendar table {
+    margin: 0;
+    border: 0;
+    border-collapse: initial; 
+    cursor: default;
+}
+.widget_calendar td {
+    padding: 5px;
+    border-color: rgba(210, 210, 210, 0.4);
+    color: #9f9f9f; 
+    text-align: center;
+}
+.widget_calendar td a {
+    font-weight: bold;
+}
+.widget_calendar caption {
+    color: #fff; 
+    background-color: #0b72c5;
+    font-size: 18px;
+    line-height: 2;
+}
+.widget_calendar th {
+    padding: 5px;
+    border: 0; 
+    color: #fff;
+    background-color: #118ef2;
+    text-align: center;
+}
+.widget_calendar tfoot {
+    color: #fff; 
+    background-color: #0b72c5;
+}
+.widget_calendar tfoot td {
+    border: 0;
+}
+.widget_calendar tfoot a {
+    color: #fff;
+    font-weight: normal;
+}
+.widget_calendar .pad {
+    background-color: rgba(210, 210, 210, 0.4);
+}
+.widget_calendar #today {
+    color: #393939; 
+    font-weight: bold;
 }
 
 /* WordPress / Widgets Reloaded widgets. */
