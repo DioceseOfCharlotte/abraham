@@ -1,5 +1,5 @@
 .widget {
-    @include padding-space(n $base-spacing-unit-sm $base-spacing-unit-tiny);
+    @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
     @include margin-space(n n $base-spacing-unit-sm);
     word-wrap: break-word;
 
@@ -20,7 +20,7 @@
 
 .widget-title {
     padding: $base-spacing-unit-sm;
-    @include margin-space(n $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
+    @include margin-space($base-spacing-unit-tiny * -1 $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
     line-height: 1;
     background-color: $color-primary-dark;
     color: #fff;
