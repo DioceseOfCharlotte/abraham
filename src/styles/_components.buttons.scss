@@ -16,12 +16,10 @@ input[type="submit"] {
     padding: $base-spacing-unit-sm * 0.75 $base-spacing-unit-sm * 1.25;
     width: auto;
     display: inline-block;
+    text-decoration: none;
     outline: 0;
     transition: background-color $base-transition-speed;
-
-    &:not(.search-submit) {
-        margin-bottom: $base-spacing-unit;
-    }
+    margin-bottom: $base-spacing-unit-sm;
 
     &:hover {
         background-color: $btn-bg-hover;
@@ -31,6 +29,10 @@ input[type="submit"] {
     &:active {
         background-color: $btn-bg-active;
     }
+}
+
+input.search-submit {
+    margin-bottom: 0;
 }
 
 .btn + .btn {

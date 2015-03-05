@@ -1559,19 +1559,17 @@ h6 a:visited:active {
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
-a {
+a:not(.button) {
     color: #0b72c5;
     font-weight: bold; 
     text-decoration: none;
     -webkit-transition: color 0.3s, border-color 0.3s;
     transition: color 0.3s, border-color 0.3s;
 }
-
-a:hover {
+a:not(.button):hover {
     color: #41a5f5;
 }
-
-a:active {
+a:not(.button):active {
     color: #118ef2; 
     -webkit-transition: color 0.3s, border-color 0.3s;
     transition: color 0.3s, border-color 0.3s;
@@ -1597,23 +1595,6 @@ footer.site-footer a:visited,
 footer.site-footer a:hover,
 footer.site-footer a:active {
     opacity: 0.6;
-}
-
-a.btn,
-a.comment-reply-link,
-a.comment-reply-login,
-a.button {
-    color: #fff;
-}
-a.btn:hover,
-a.comment-reply-link:hover,
-a.comment-reply-login:hover,
-a.btn.active,
-a.active.comment-reply-link,
-a.active.comment-reply-login,
-a.button:hover,
-a.button.active {
-    color: #fff;
 }
 
 .widget a {
@@ -4584,25 +4565,17 @@ input[type="reset"],
 input[type="submit"] {
     display: inline-block;
     width: auto;
+    margin-bottom: 16px; 
     padding: 12px 20px;
     border: 0;
     border-radius: 2px;
     outline: 0;
     color: #fff;
     background-color: #118ef2;
+    text-decoration: none;
     cursor: pointer;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
-}
-.btn:not(.search-submit),
-.comment-reply-link:not(.search-submit),
-.comment-reply-login:not(.search-submit),
-button:not(.search-submit),
-.button:not(.search-submit),
-input[type="button"]:not(.search-submit),
-input[type="reset"]:not(.search-submit),
-input[type="submit"]:not(.search-submit) {
-    margin-bottom: 24px;
 }
 .btn:hover,
 .comment-reply-link:hover,
@@ -4625,6 +4598,10 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
     background-color: #0b72c5;
+}
+
+input.search-submit {
+    margin-bottom: 0;
 }
 
 .btn + .btn,

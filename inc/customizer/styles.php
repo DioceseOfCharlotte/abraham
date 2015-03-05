@@ -91,7 +91,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a'
+				'a:not(.button)'
 			),
 			'declarations' => array(
 				'color' => $color600
@@ -100,7 +100,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a:hover'
+				'a:not(.button):hover'
 			),
 			'declarations' => array(
 				'color' => $color400
@@ -109,7 +109,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a:active'
+				'a:not(.button):active'
 			),
 			'declarations' => array(
 				'color' => $color500
