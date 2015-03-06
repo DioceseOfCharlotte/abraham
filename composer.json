@@ -3,7 +3,6 @@
     "description": "theme library",
     "require": {
         "justintadlock/hybrid-core": "dev-dev",
-        "devinsays/customizer-library": "dev-master",
         "zamoose/themehookalliance": "dev-master"
     },
     "license": "GPL-2.0+",

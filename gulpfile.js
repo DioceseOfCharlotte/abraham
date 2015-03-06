@@ -60,12 +60,12 @@ gulp.task('hybrid', function () {
 });
 
 // Copy customizer-library to vendors
-gulp.task('customizer', function () {
-  return gulp.src([
-  	'vendor/devinsays/customizer-library/**/*'
-  	])
-    .pipe(gulp.dest('inc/vendors/customizer-library'));
-});
+// gulp.task('customizer', function () {
+//   return gulp.src([
+//   	'vendor/devinsays/customizer-library/**/*'
+//   	])
+//     .pipe(gulp.dest('inc/vendors/customizer-library'));
+// });
 
 // Copy customizer-library to vendors
 gulp.task('tha', function () {
@@ -125,5 +125,5 @@ gulp.task('serve', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid', 'customizer', 'tha'], cb);
+  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid', 'tha'], cb);
 });

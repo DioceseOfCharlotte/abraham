@@ -11,10 +11,11 @@ $base-transition-speed: 0.3s;
 
 $site-width: 1280px;
 
-$base-spacing-unit-sm: $base-font-size;
-$base-spacing-unit: $base-spacing-unit-sm * 1.5;
-$base-spacing-unit-lg: $base-spacing-unit-sm * 2.5;
-$base-spacing-unit-tiny: $base-spacing-unit-sm * 0.5;
+$base-spacing-unit: $base-line-height;
+$base-spacing-unit-tiny: round($base-spacing-unit * 0.444);
+$base-spacing-unit-sm: round($base-spacing-unit / 1.5);
+$base-spacing-unit-lg: round($base-spacing-unit * 1.5);
+$base-spacing-unit-xl: round($base-spacing-unit * 2.25);
 
 $font-body: "Roboto", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
