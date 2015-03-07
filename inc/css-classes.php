@@ -37,7 +37,7 @@ class Doc_Attributes {
 	public $post                  	= ' ';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
 	public $entry_author          	= ' ';	// entry-author
-	public $entry_published       	= ' ';	// entry-published updated
+	public $entry_published       	= ' entry__byline__date';	// entry-published updated
 	public $entry_content         	= ' ';	// entry-content
 	public $entry_summary         	= ' ';	// entry-summary
 	public $entry_terms           	= ' ';	// entry-terms

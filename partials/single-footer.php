@@ -4,18 +4,18 @@
  */
 ?>
 
-<footer class="entry-footer">
+<footer class="entry__footer">
 
-	<div class="entry-byline">
+	<div class="entry__byline">
 	<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
 	<?php hybrid_post_author(); ?>
 	<?php
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="entry__comments-link">';
 			comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) );
 			echo '</span>';
 		}
-		edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link entry__edit-link">', '</span>' );
 	 ?>
 	</div>
 

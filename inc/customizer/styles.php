@@ -38,59 +38,6 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header,
-				.site-footer,
-				.sidebar__footer-widgets .widget,
-				.comment-reply-link,
-				.btn,
-				button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"],
-				.button'
-			),
-			'declarations' => array(
-				'background-color' => $color500
-			)
-		) );
-
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-footer,
-				.btn:hover,
-				button:hover,
-				a.comment-reply-link:hover,
-				input[type="button"]:hover,
-				input[type="reset"]:hover,
-				input[type="submit"]:hover,
-				.button:hover'
-			),
-			'declarations' => array(
-				'background-color' => $color400
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.menu__primary,
-				.site-info,
-				.btn:active,
-				button:active,
-				.widget-title,
-				a.comment-reply-link:active,
-				input[type="button"]:active,
-				input[type="reset"]:active,
-				input[type="submit"]:active,
-				.button:active'
-			),
-			'declarations' => array(
-				'background-color' => $color600
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
 				'a'
 			),
 			'declarations' => array(
@@ -113,6 +60,79 @@ function customizer_library_abraham_styles() {
 			),
 			'declarations' => array(
 				'color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.t-primary-base'
+			),
+			'declarations' => array(
+				'color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.t-primary-light'
+			),
+			'declarations' => array(
+				'color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.t-primary-dark'
+			),
+			'declarations' => array(
+				'color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.sidebar__footer-widgets .widget,
+				.comment-reply-link,
+				button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.button'
+			),
+			'declarations' => array(
+				'background-color' => $color500
+			)
+		) );
+
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'button:hover,
+				.comment-reply-link:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				.button:hover'
+			),
+			'declarations' => array(
+				'background-color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-info,
+				button:active,
+				.widget-title,
+				.comment-reply-link:active,
+				input[type="button"]:active,
+				input[type="reset"]:active,
+				input[type="submit"]:active,
+				.button:active'
+			),
+			'declarations' => array(
+				'background-color' => $color600
 			)
 		) );
 
