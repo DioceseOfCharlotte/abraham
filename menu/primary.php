@@ -11,8 +11,8 @@ if ( has_nav_menu( 'primary' ) ) : ?>
 			array(
 				'theme_location'  => 'primary',
 				'container'       => '',
-				'menu_id'         => 'menu-primary-items',
-				'menu_class'      => 'menu__primary--items nav-menu',
+				'menu_id'         => 'menu-primary-list',
+				'menu_class'      => 'menu-primary__list nav-menu',
 				'depth'           => 2,
 				'fallback_cb'     => ''
 			)

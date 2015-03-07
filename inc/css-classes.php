@@ -9,8 +9,8 @@ class Doc_Attributes {
 
 	/* Attributes for major structural elements. */
 	public $body                  	= ' ';	// get_body_class()
-	public $header                	= ' '; 	// site-header
-	public $footer                	= ' '; 	// site-footer
+	public $header                	= ' t-primary-base'; 	// site-header
+	public $footer                	= ' t-primary-light'; 	// site-footer
 	public $content_single_column 	= ' '; 	// content
 	public $content_sidebar_right 	= ' '; 	// content
 	public $content_sidebar_left 	  = ' '; 	// content
@@ -18,7 +18,7 @@ class Doc_Attributes {
 	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
-	public $menu                  	= ' ';	// menu menu__{$context}
+	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
 	public $menu_li_primary         = ' ';	// menu-item
 	public $menu_li_secondary       = ' ';	// menu-item
 
@@ -127,7 +127,7 @@ class Doc_Attributes {
 
 	public function menu( $attr, $context ) {
 		$attr['class']    .= $this->menu;
-		$attr['class']    .= "  menu__{$context}";
+		$attr['class']    .= "  menu-{$context}";
 		return $attr;
 	}
 

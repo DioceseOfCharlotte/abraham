@@ -2,7 +2,7 @@
     #MENUS
 \*------------------------------------*/
 
-.menu__primary {
+.menu-primary {
     z-index: 5;
     position: fixed;
     top: 0;
@@ -26,12 +26,12 @@
         overflow-y: visible;
     }
 
-    &.open {
+    &.is-open {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
 
-    &--items {
+    &__items {
         padding: 0;
         margin: 0;
         list-style-type: none;
@@ -67,13 +67,13 @@
                 transition: background-color .1s ease-out;
                 line-height: $base-line-height;
 
-                &:hover, &.active {
+                &:hover, &.is-active {
                     border: 0;
                 }
             }
 
             a {
-                &:hover, &.active {
+                &:hover, &.is-active {
                     background-color: rgba($grey-900, 0.05);
                 }
             }
@@ -106,7 +106,7 @@
         width: 5px;
     }
 
-    > a.active:after {
+    > a.is-active:after {
         content: $caret-down;
     }
 }
@@ -164,7 +164,7 @@
     }
 }
 
-.open .menu-toggle span {
+.is-open .menu-toggle span {
     background: transparent;
 
     &:before {
@@ -210,7 +210,7 @@
         }
     }
 
-    &.active {
+    &.is-active {
         display: block;
         visibility: visible;
 
