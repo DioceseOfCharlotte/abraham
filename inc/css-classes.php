@@ -19,8 +19,9 @@ class Doc_Attributes {
 	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
 	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
-	public $menu_li_primary         = ' ';	// menu-item
-	public $menu_li_secondary       = ' ';	// menu-item
+	public $menu_li_primary         = ' menu-primary__item';	// menu-item
+	public $menu_li_secondary       = ' menu-secondary__item';	// menu-item
+	public $menu_li_social          = ' menu-social__item';	// menu-item
 
 	/* Header attributes. */
 	public $branding              	= ' ';	// site-branding
@@ -139,6 +140,8 @@ class Doc_Attributes {
         $classes[] = 'menu_li_primary';
 	  elseif ( is_nav_menu( 'secondary' ) ) :
         $classes[] = 'menu_li_secondary';
+	  elseif ( is_nav_menu( 'social' ) ) :
+        $classes[] = 'menu_li_social';
 	  endif;
 
     return $classes;

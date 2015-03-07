@@ -20,7 +20,7 @@ if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) :
 
 		<nav <?php hybrid_attr( 'menu', 'sub-terms' ); ?>>
 
-			<ul id="menu-sub-terms-items" class="menu-items">
+			<ul id="menu-sub-terms-list" class="menu-sub-terms__list">
 				<?php echo $terms; ?>
 			</ul><!-- .sub-terms -->
 
