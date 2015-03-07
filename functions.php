@@ -16,7 +16,7 @@ require_once( $abraham_dir . 'inc/init.php'            	);
 require_once( $abraham_dir . 'inc/assets.php'          	);
 require_once( $abraham_dir . 'inc/general.php'         	);
 require_once( $abraham_dir . 'inc/template-actions.php'	);
-require_once( $abraham_dir . 'inc/hybrid-mods.php'     	);
+require_once( $abraham_dir . 'inc/css-classes.php'     	);
 require_once( $abraham_dir . 'inc/html-min.php'			);
 
 /* Load customizer files. */
