@@ -19,9 +19,9 @@ class Doc_Attributes {
 	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
 	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
-	public $menu_li_primary         = ' menu-primary__item';	// menu-item
-	public $menu_li_secondary       = ' menu-secondary__item';	// menu-item
-	public $menu_li_social          = ' menu-social__item';	// menu-item
+	public $menu_li_primary         = ' c-menu-primary__item';	// menu-item
+	public $menu_li_secondary       = ' c-menu-secondary__item';	// menu-item
+	public $menu_li_social          = ' c-menu-social__item';	// menu-item
 
 	/* Header attributes. */
 	public $branding              	= ' ';	// site-branding
@@ -36,11 +36,18 @@ class Doc_Attributes {
 	/* Post-specific attributes. */
 	public $post                  	= ' ';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
-	public $entry_author          	= ' ';	// entry-author
-	public $entry_published       	= ' entry__byline__date';	// entry-published updated
+	public $entry_author          	= ' c-entry-meta__author';	// entry-author
+	public $entry_published       	= ' c-entry-meta__date';	// entry-published updated
 	public $entry_content         	= ' ';	// entry-content
 	public $entry_summary         	= ' ';	// entry-summary
 	public $entry_terms           	= ' ';	// entry-terms
+
+	/* Comment specific attributes. */
+	public $comment                  	= ' ';	// get_post_class()
+	public $comment_author          	= ' ';	// entry-title
+	public $comment_published         = ' ';	// entry-author
+	public $comment_permalink       	= ' ';	// entry-published updated
+	public $comment_content         	= ' ';	// entry-content
 
 
 
@@ -75,8 +82,14 @@ class Doc_Attributes {
 		add_filter( 'hybrid_attr_entry-summary',     array( $this, 'entry_summary' ) );
 		add_filter( 'hybrid_attr_entry-terms',       array( $this, 'entry_terms' ) );
 
-	}
+    /* Comment specific attributes. */
+		add_filter( 'hybrid_attr_comment',            array( $this, 'comment' ), 5 );
+		add_filter( 'hybrid_attr_comment-author',     array( $this, 'comment_author' ), 5 );
+		add_filter( 'hybrid_attr_comment-published',  array( $this, 'comment_published' ), 5 );
+		add_filter( 'hybrid_attr_comment-permalink',  array( $this, 'comment_permalink' ), 5 );
+		add_filter( 'hybrid_attr_comment-content',    array( $this, 'comment_content' ), 5 );
 
+	}
 
 
 
@@ -191,7 +204,7 @@ class Doc_Attributes {
 	}
 
 	public function entry_author( $attr ) {
-		$attr['class']    .= $this->loop_description;
+		$attr['class']    .= $this->entry_author;
 		return $attr;
 	}
 
@@ -212,6 +225,34 @@ class Doc_Attributes {
 
 	public function entry_terms( $attr ) {
 		$attr['class']    .= $this->entry_terms;
+		return $attr;
+	}
+
+
+
+	/* === COMMENTS === */
+	public function comment( $attr ) {
+		$attr['class']    .= $this->comment;
+		return $attr;
+	}
+
+	public function comment_author( $attr ) {
+		$attr['class']    .= $this->comment_author;
+		return $attr;
+	}
+
+	public function comment_published( $attr ) {
+		$attr['class']    .= $this->comment_published;
+		return $attr;
+	}
+
+	public function comment_permalink( $attr ) {
+		$attr['class']    .= $this->comment_permalink;
+		return $attr;
+	}
+
+	public function comment_content( $attr ) {
+		$attr['class']    .= $this->comment_content;
 		return $attr;
 	}
 
