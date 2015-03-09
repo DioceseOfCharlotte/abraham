@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    #SIDEBAR
+\*------------------------------------*/
+
 .widget {
     @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
     @include margin-space(n n $base-spacing-unit-sm);

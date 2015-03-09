@@ -38,7 +38,7 @@ Tags:
  *
  * LAYOUT               Lays out the main parts (the global wireframe).
  * =======              ===============================================
- * Buttons..............Unstyled button layout.
+ * Buttons..............Unstyled button objects.
  *
  *
  * COMPONENTS           Specific modules that, combined, make up the site.
@@ -52,7 +52,6 @@ Tags:
  */
 
 @import "vendors.normalize";
-@import "vendors.hintcss";
 
 //@import "vendors/modular-scale";
 
@@ -71,15 +70,15 @@ Tags:
 @import "base.links";
 @import "base.lists";
 
-@import "layout.navigation";
-@import "layout.grid";
-@import "layout.header";
-@import "layout.footer";
-@import "layout.sidebar";
-@import "layout.articles";
-@import "layout.comments";
-@import "layout.page";
-@import "layout.forms";
+@import "objects.navigation";
+@import "objects.grid";
+@import "objects.header";
+@import "objects.footer";
+@import "objects.sidebar";
+@import "objects.articles";
+@import "objects.comments";
+@import "objects.page";
+@import "objects.forms";
 
 @import "page.formats";
 @import "page.contact";
