@@ -189,17 +189,17 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
 			settings.callbackBefore(); // Run callbacks before drop close
 
-			// For each dropdown toggle, remove '.active' class
+			// For each dropdown toggle, remove '.is-active' class
 			forEach(dropToggle, function (toggle) {
 				toggle.classList.remove( settings.toggleActiveClass );
 			});
 
-			// For each dropdown toggle wrapper, remove '.active' class
+			// For each dropdown toggle wrapper, remove '.is-active' class
 			forEach(dropWrapper, function (wrapper) {
 				wrapper.classList.remove( settings.toggleActiveClass );
 			});
 
-			// For each dropdown content area, remove '.active' class
+			// For each dropdown content area, remove '.is-active' class
 			forEach(dropContent, function (content) {
 				content.classList.remove( settings.contentActiveClass );
 			});

@@ -124,13 +124,13 @@ class Doc_Attributes {
 	public function sidebar( $attr, $context ) {
 	if ( '1c' 		== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_single_column;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= " sidebar__{$context}";
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_right;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= " sidebar__{$context}";
 	elseif ( '2c-r' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_left;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= " sidebar__{$context}";
 	endif;
 
 	if ( 'footer-widgets' === $context ) :
@@ -140,8 +140,8 @@ class Doc_Attributes {
 	}
 
 	public function menu( $attr, $context ) {
+		$attr['class']    .= " menu-{$context}";
 		$attr['class']    .= $this->menu;
-		$attr['class']    .= "  menu-{$context}";
 		return $attr;
 	}
 
