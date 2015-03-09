@@ -9,8 +9,7 @@
     bottom: 0;
     width: 250px;
     height: 100%;
-    background-color: $color-primary-dark;
-    color: #fff;
+    background-color: currentColor;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
     overflow-y: auto;
@@ -31,51 +30,48 @@
         transform: translate(0, 0);
     }
 
-    &__items {
+    &__list {
         padding: 0;
         margin: 0;
         list-style-type: none;
-        font-size: 0;
+        color: $white;
 
         @include md {
             max-width: $site-width;
             margin: 0 auto;
             @include padding-space(0 $base-spacing-unit-sm);
         }
+    }
 
-        > li {
-            display: block;
+    &__item {
+        display: block;
 
-            &:hover > .sub-menu {
-                transition-delay: 0s;
+        @include md {
+            display: inline-block;
+            width: auto;
+        }
 
-                @include md {
-                    display: block;
-                    visibility: visible;
-                }
-            }
+        &:hover > .sub-menu {
+            transition-delay: 0s;
 
             @include md {
-                display: inline-block;
-                width: auto;
-            }
-
-            > a {
                 display: block;
-                padding: 20px 20px;
-                background-color: transparent;
-                transition: background-color .1s ease-out;
-                line-height: $base-line-height;
-
-                &:hover, &.is-active {
-                    border: 0;
-                }
+                visibility: visible;
             }
+        }
 
-            a {
-                &:hover, &.is-active {
-                    background-color: rgba($grey-900, 0.05);
-                }
+        a {
+            display: block;
+            color: currentColor;
+            font-weight: normal;
+            padding: 20px 20px;
+            background-color: transparent;
+            transition: background-color .1s ease-out;
+            line-height: $base-line-height;
+
+            &:hover, &.is-active {
+                border: 0;
+                background-color: rgba($grey-900, 0.05);
             }
         }
     }

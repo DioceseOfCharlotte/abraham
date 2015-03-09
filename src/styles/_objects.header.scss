@@ -12,7 +12,7 @@ body.is-open {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $color-primary;
+    background-color: currentColor;
     overflow: hidden;
     z-index: 1;
     @include shadow-z2;
@@ -44,7 +44,7 @@ body.is-open {
 }
 
 .site-title {
-    color: $white;
+    color: currentColor;
     padding: 0;
     float: none;
     max-width: none;
@@ -55,12 +55,12 @@ body.is-open {
     }
 
     a {
-        color: inherit;
+        color: currentColor;
     }
 }
 
 .site-description {
-    color: $white;
+    color: currentColor;
     opacity: .8;
     margin: 0;
 

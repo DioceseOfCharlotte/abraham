@@ -56,15 +56,6 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a:active'
-			),
-			'declarations' => array(
-				'color' => $color500
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
 				'.t-primary-base'
 			),
 			'declarations' => array(

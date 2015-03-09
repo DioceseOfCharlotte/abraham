@@ -70,12 +70,19 @@ function abraham_menus() {
 function abraham_sidebars() {
 	hybrid_register_sidebar( [
 		'id'          => 'primary',
+		'before_widget' => '<section id="%1$s" class="widget sidebar-primary__widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title sidebar-primary__widget-title">',
+		'after_title'   => '</h3>',
 		'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
 		'description' => __( 'The Primary sidebar.', 'abraham' )
 	] );
 
 	hybrid_register_sidebar( [
 		'id'          => 'footer-widgets',
+		'before_widget' => '<section id="%1$s" class="widget sidebar-footer__widget %2$s">',
+		'before_title'  => '<h3 class="widget-title sidebar-footer__widget-title">',
+		'after_title'   => '</h3>',
 		'name'        => _x( 'Footer Widgets', 'sidebar', 'abraham' ),
 		'description' => __( 'Typically located in the footer.', 'abraham' )
 	] );

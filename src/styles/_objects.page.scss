@@ -53,14 +53,10 @@ body {
 .widget,
 .comments,
 .entry {
-    background-color: #fff;
     border-radius: $base-radius;
     position: relative;
     overflow: hidden;
     @include shadow-z1;
-    // border: 1px solid $grey-300;
-    // border-bottom-width: 2px;
-    // border-top-color: $grey-200;
     width: 100%;
 }
 
@@ -89,17 +85,17 @@ body.search, body.error-404, .layout-1c {
         }
     }
 
-    .sidebar__primary {
+    .sidebar-primary {
         @include lg {
             display: block;
             display: flex;
             max-width: 100%;
         }
+    }
 
-        .widget {
-            @include lg {
-                width: 31%;
-            }
+    .sidebar-primary__widget {
+        @include lg {
+            width: 31%;
         }
     }
 }
@@ -110,7 +106,7 @@ body.search, body.error-404, .layout-1c {
 
 .layout-2c-l {
     @include lg {
-        .sidebar__primary {
+        .sidebar-primary {
             width: 30%;
             max-width: 100%;
             display: inline-block;
@@ -150,7 +146,7 @@ body.search, body.error-404, .layout-1c {
             }
         }
 
-        .sidebar__primary {
+        .sidebar-primary {
             width: 30%;
             max-width: 100%;
             display: inline-block;

@@ -6,6 +6,7 @@
     @include padding-space($base-spacing-unit-tiny $base-spacing-unit-sm);
     @include margin-space(n n $base-spacing-unit-sm);
     word-wrap: break-word;
+    background-color: #fff;
 
     .entry {
         margin: 0;
@@ -32,7 +33,6 @@
     &:before {
         @include font-icon;
         content: $angle-double-right;
-        // margin-left: -15px;
         padding-right: $base-spacing-unit-sm;
     }
 }
@@ -49,7 +49,6 @@
     }
 
     li {
-        //border-bottom: 1px dotted $grey-300;
         margin-bottom: 10px;
         padding-bottom: 10px;
     }
@@ -59,7 +58,7 @@
     }
 }
 
-.sidebar__primary {
+.sidebar-primary {
     display: block;
     text-align: left;
     width: 100%;
@@ -67,22 +66,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
 
-    .widget {
-        display: inline-block;
-        text-align: left;
-        vertical-align: top;
-        min-width: 290px;
-        max-width: 700px;
+.sidebar-primary__widget {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    min-width: 290px;
+    max-width: 700px;
+    width: 100%;
+
+    @include md {
+        width: 48.6%;
+    }
+
+    @include lg {
         width: 100%;
-
-        @include md {
-            width: 48.6%;
-        }
-
-        @include lg {
-            width: 100%;
-        }
     }
 }
 
@@ -101,8 +100,42 @@
         border-color: #fff;
         background-color: #fff;
     }
-
-    // @include sm-only {
-    //     @include padding-space($base-spacing-unit-sm n);
-    // }
 }
+
+.sidebar-footer-widgets {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include padding-space($base-spacing-unit-sm n n);
+
+    @include lg {
+        max-width: $site-width;
+        padding-left: $base-spacing-unit-lg;
+        padding-right: $base-spacing-unit-lg;
+    }
+
+    .sub-menu {
+        right: 100%;
+        bottom: 0;
+    }
+}
+
+    .sidebar-footer__widget-title {
+        color: inherit;
+    }
+
+    .sidebar-footer__widget {
+        background-color: $footer-widget-bg;
+        border: 0;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        min-width: 300px;
+        max-width: 700px;
+        width: 100%;
+    }

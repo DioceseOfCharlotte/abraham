@@ -1,7 +1,7 @@
 <li <?php hybrid_attr( 'comment' ); ?>>
 
 	<article>
-		<header class="o-comment-meta">
+		<header class="comment-meta">
 			<?php echo get_avatar( $comment ); ?>
 			<cite <?php hybrid_attr( 'comment-author' ); ?>><?php comment_author_link(); ?></cite><br />
 			<time <?php hybrid_attr( 'comment-published' ); ?>><?php printf( __( '%s ago', 'abraham' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time>

@@ -71,6 +71,7 @@
 }
 
 .comments, .entry {
+    background-color: #fff;
     @include padding-space($base-spacing-unit-sm n n);
     @include margin-space(n n $base-spacing-unit-sm);
 }

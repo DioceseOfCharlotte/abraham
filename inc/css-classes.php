@@ -19,12 +19,12 @@ class Doc_Attributes {
 	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
 	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
-	public $menu_li_primary         = ' c-menu-primary__item';	// menu-item
-	public $menu_li_secondary       = ' c-menu-secondary__item';	// menu-item
-	public $menu_li_social          = ' c-menu-social__item';	// menu-item
+	public $menu_li_primary         = 'menu-primary__item';	// menu-item
+	public $menu_li_secondary       = 'menu-secondary__item';	// menu-item
+	public $menu_li_social          = 'menu-social__item';	// menu-item
 
 	/* Header attributes. */
-	public $branding              	= ' ';	// site-branding
+	public $branding              	= ' t-white';	// site-branding
 	public $site_title            	= ' ';	// site-title
 	public $site_description      	= ' ';	// site-description
 
@@ -36,8 +36,8 @@ class Doc_Attributes {
 	/* Post-specific attributes. */
 	public $post                  	= ' ';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
-	public $entry_author          	= ' c-entry-meta__author';	// entry-author
-	public $entry_published       	= ' c-entry-meta__date';	// entry-published updated
+	public $entry_author          	= ' entry-meta__author';	// entry-author
+	public $entry_published       	= ' entry-meta__date';	// entry-published updated
 	public $entry_content         	= ' ';	// entry-content
 	public $entry_summary         	= ' ';	// entry-summary
 	public $entry_terms           	= ' ';	// entry-terms
@@ -45,7 +45,7 @@ class Doc_Attributes {
 	/* Comment specific attributes. */
 	public $comment                  	= ' ';	// get_post_class()
 	public $comment_author          	= ' ';	// entry-title
-	public $comment_published         = ' ';	// entry-author
+	public $comment_published         	= ' ';	// entry-author
 	public $comment_permalink       	= ' ';	// entry-published updated
 	public $comment_content         	= ' ';	// entry-content
 
@@ -124,13 +124,13 @@ class Doc_Attributes {
 	public function sidebar( $attr, $context ) {
 	if ( '1c' 		== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_single_column;
-		$attr['class']    		.= " sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_right;
-		$attr['class']    		.= " sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	elseif ( '2c-r' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_left;
-		$attr['class']    		.= " sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	endif;
 
 	if ( 'footer-widgets' === $context ) :
@@ -149,12 +149,12 @@ class Doc_Attributes {
 	/* === COMPONENTS === */
 
 	public function menu_li( $classes, $item ) {
-    if ( is_nav_menu( 'primary' ) ) :
-        $classes[] = 'menu_li_primary';
-	  elseif ( is_nav_menu( 'secondary' ) ) :
-        $classes[] = 'menu_li_secondary';
-	  elseif ( is_nav_menu( 'social' ) ) :
-        $classes[] = 'menu_li_social';
+    if ( $menu_name = 'primary' ) :
+        $classes[] = $this->menu_li_primary;
+	  elseif ( $menu_name = 'secondary' ) :
+        $classes[] = $this->menu_li_secondary;
+	  elseif ( $menu_name = 'social' ) :
+        $classes[] = $this->menu_li_social;
 	  endif;
 
     return $classes;
