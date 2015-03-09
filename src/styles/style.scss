@@ -51,19 +51,20 @@ Tags:
  * Widths...............Width helper classes.
  */
 
-@import "vendors.normalize";
 
 //@import "vendors/modular-scale";
 
-@import "utils.global";
-@import "utils.colors";
-@import "utils.icon-font";
-@import "utils.widths";
-@import "utils.functions";
-@import "utils.mixins";
-@import "utils.helpers";
+@import "settings.global";
+@import "settings.colors";
 
-@import "base.colors";
+@import "tools.functions";
+@import "tools.mixins";
+@import "tools.responsive";
+@import "tools.icon-font";
+@import "tools.aliases";
+
+@import "general.normalize";
+
 @import "base.base";
 @import "base.typography";
 @import "base.headings";
@@ -95,5 +96,8 @@ Tags:
 @import "components.media";
 @import "components.thumbnails";
 @import "components.widgets";
+
+@import "final.helpers";
+@import "final.widths";
 
 @import "shame";
