@@ -62,7 +62,6 @@ function abraham_header_style() {
 	?>
 		.t-white,
 		.menu-primary__list,
-		.site-footer,
 		button,
 		.button,
 		input[type="button"],

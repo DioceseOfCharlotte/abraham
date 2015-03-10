@@ -8,7 +8,9 @@
 $color-primary:             $base-blue;
 $color-primary-light:       lighten($color-primary, 10);
 $color-primary-dark:        darken($color-primary, 10);
-$color-secondary:           $green-800;
+$color-secondary:           $green-600;
+$color-secondary-light:     lighten($color-secondary, 10);
+$color-secondary-dark:      darken($color-secondary, 10);
 
 
 

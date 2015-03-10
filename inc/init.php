@@ -79,7 +79,7 @@ function abraham_sidebars() {
 	] );
 
 	hybrid_register_sidebar( [
-		'id'          => 'footer-widgets',
+		'id'          => 'footer',
 		'before_widget' => '<section id="%1$s" class="widget sidebar-footer__widget %2$s">',
 		'before_title'  => '<h3 class="widget-title sidebar-footer__widget-title">',
 		'after_title'   => '</h3>',

@@ -83,8 +83,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.sidebar__footer-widgets .widget,
-				.comment-reply-link,
+				'.comment-reply-link,
 				button,
 				input[type="button"],
 				input[type="reset"],
@@ -113,9 +112,8 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-info,
-				button:active,
-				.widget-title,
+				'button:active,
+				.sidebar-primary__widget-title,
 				.comment-reply-link:active,
 				input[type="button"]:active,
 				input[type="reset"]:active,
@@ -168,14 +166,36 @@ function customizer_library_abraham_styles() {
 		$color800 	= $simple_color_adjuster->darken( $color, 30 );
 		$color900 	= $simple_color_adjuster->darken( $color, 40 );
 
-		// Customizer_Library_Styles()->add( array(
-		// 	'selectors' => array(
-		// 		'.site-footer'
-		// 	),
-		// 	'declarations' => array(
-		// 		'background-color' => $color500
-		// 	)
-		// ) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'blockquote,
+				.t-secondary-base,
+				.dropcap:first-letter'
+			),
+			'declarations' => array(
+				'color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.sidebar-footer__widget'
+			),
+			'declarations' => array(
+				'background-color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-info,
+				.sidebar-footer__widget-title'
+			),
+			'declarations' => array(
+				'background-color' => $color700
+			)
+		) );
+
 	}
 
 
@@ -241,7 +261,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'h1, h2, h3, h4, h5, h6'
+				'h1, h2, h3, h4, h5, h6, .dropcap:first-letter'
 			),
 			'declarations' => array(
 				'font-family' => $stack

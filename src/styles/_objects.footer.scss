@@ -3,16 +3,17 @@
 \*------------------------------------*/
 
 .site-info {
-    background-color: darken($footer-bg, 10);
+    background-color: darken($color-secondary, 20);
+    color: $white;
 }
 
 .site-footer {
     display: block;
+    color: darken($color-secondary, 10);
     margin: 0;
     width: 100%;
     text-align: left;
-    background-color: $footer-bg;
-    color: #fff;
+    background-color: currentColor;
 
     @include md {
         .sidebar-col-1 {
@@ -36,8 +37,6 @@
         }
     }
 }
-
-
 
 .wrap__footer {
     padding: 10px 0;
