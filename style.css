@@ -2594,11 +2594,37 @@ label > .label-body {
 }
 
 .search-form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; 
     position: relative;
 }
-
-input[type=search] {
+.search-form input[type=search] {
+    height: 36px;
     margin: 0;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #fff;
+}
+.search-form button {
+    height: 36px;
+    margin: 0;
+    border-radius: 0;
+}
+.search-form button::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    content: "\f002";
+    text-rendering: auto;
+
+    speak: none;
 }
 
 input[type="submit"].search-submit {

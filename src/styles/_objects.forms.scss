@@ -95,10 +95,30 @@ label > .label-body {
 
 .search-form {
     position: relative;
-}
+    display: flex;
 
 input[type=search] {
     margin: 0;
+    height: $base-spacing-unit-lg;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-width: 0;
+    background-color: $white;
+
+
+}
+
+button {
+    height: $base-spacing-unit-lg;
+    margin: 0;
+    border-radius: 0;
+&::before {
+  content: $search;
+  @include font-icon();
+}
+
+}
+
 }
 
 input[type="submit"].search-submit {
@@ -112,7 +132,6 @@ input[type="submit"].search-submit {
     color: $white;
     @include font-icon;
 }
-
 
 
 .form-submit {
