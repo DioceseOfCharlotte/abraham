@@ -874,6 +874,7 @@ ol ul {
 .menu-primary__item a:hover,
 .menu-primary__item a.is-active {
     border: 0;
+    color: currentColor; 
     background-color: rgba(31, 31, 31, 0.05);
 }
 
@@ -1600,6 +1601,7 @@ body.is-open {
     background: transparent;
     font-family: "Raleway", sans-serif;
     font-size: 4em;
+    font-weight: 500;
     line-height: 1;
     text-indent: 0;
 }

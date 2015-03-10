@@ -35,7 +35,7 @@ function abraham_excerpt_length( $length ) {
 }
 
 function abraham_footer_widgets_class( $attr, $context ) {
-	if ( 'footer-widgets' === $context ) {
+	if ( 'footer' === $context ) {
 		global $sidebars_widgets;
 		if ( is_array( $sidebars_widgets ) && !empty( $sidebars_widgets[ $context ] ) ) {
 			$count = count( $sidebars_widgets[ $context ] );

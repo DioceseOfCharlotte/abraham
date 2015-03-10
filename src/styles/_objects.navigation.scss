@@ -72,6 +72,7 @@
             &:hover, &.is-active {
                 border: 0;
                 background-color: rgba($grey-900, 0.05);
+                color: currentColor;
             }
         }
     }
