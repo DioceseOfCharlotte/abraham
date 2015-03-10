@@ -155,12 +155,12 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
 		settings.callbackBefore( toggle ); // Run callbacks before drop toggle
 
-		// Add/remove '.is-active' class from dropdown item
+		// Add/remove '.active' class from dropdown item
 		toggle.classList.toggle( settings.toggleActiveClass );
 		toggleMenu.classList.toggle( settings.contentActiveClass );
 		toggleParent.classList.toggle( settings.toggleActiveClass );
 
-		// For each toggle, remove the is-active class
+		// For each toggle, remove the active class
 		forEach(toggleSiblings, function (sibling) {
 			var siblingContent = sibling.children;
 			sibling.classList.remove( settings.toggleActiveClass );
@@ -189,17 +189,17 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
 			settings.callbackBefore(); // Run callbacks before drop close
 
-			// For each dropdown toggle, remove '.is-active' class
+			// For each dropdown toggle, remove '.active' class
 			forEach(dropToggle, function (toggle) {
 				toggle.classList.remove( settings.toggleActiveClass );
 			});
 
-			// For each dropdown toggle wrapper, remove '.is-active' class
+			// For each dropdown toggle wrapper, remove '.active' class
 			forEach(dropWrapper, function (wrapper) {
 				wrapper.classList.remove( settings.toggleActiveClass );
 			});
 
-			// For each dropdown content area, remove '.is-active' class
+			// For each dropdown content area, remove '.active' class
 			forEach(dropContent, function (content) {
 				content.classList.remove( settings.contentActiveClass );
 			});

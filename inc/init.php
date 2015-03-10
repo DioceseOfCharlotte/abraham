@@ -25,6 +25,8 @@ remove_action( 'wp_head', 'wp_generator', 1);
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action( 'wp_head', 'rsd_link');
 
+remove_filter( 'hybrid_content_template_hierarchy', 'flagship_content_template_hierarchy' );
+
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
@@ -86,6 +88,17 @@ function abraham_sidebars() {
 		'name'        => _x( 'Footer Widgets', 'sidebar', 'abraham' ),
 		'description' => __( 'Typically located in the footer.', 'abraham' )
 	] );
+
+	hybrid_register_sidebar( [
+			'id'            => 'header-right',
+			'name'          => _x( 'Header Right', 'sidebar', 'compass' ),
+			'description'   => __( 'The header right sidebar area. It is displayed to the right of the site title area.', 'compass' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<span class="widget-title">',
+			'after_title'   => '</span>',
+		] );
+
 }
 
 

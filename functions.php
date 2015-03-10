@@ -19,6 +19,8 @@ require_once( $abraham_dir . 'inc/template-actions.php'	);
 require_once( $abraham_dir . 'inc/css-classes.php'     	);
 require_once( $abraham_dir . 'inc/html-min.php'			);
 
+require_once( $abraham_dir . 'inc/vendors/flagship-library/flagship-library.php'			);
+
 /* Load customizer files. */
 $abraham_customizer_dir = trailingslashit( $abraham_dir . 'inc/customizer' );
 

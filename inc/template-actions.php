@@ -55,10 +55,10 @@ function abraham_get_default_footer_text() {
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
+ * @link        https://abrahamwp.com/
  * @since       1.4.0
  */
-add_filter( 'mce_buttons', 'flagship_add_styleselect', 99 );
+add_filter( 'mce_buttons', 'abraham_add_styleselect', 99 );
 /**
  * Add styleselect button to the end of the first row of TinyMCE buttons.
  *
@@ -67,7 +67,7 @@ add_filter( 'mce_buttons', 'flagship_add_styleselect', 99 );
  * @param  $buttons array existing TinyMCE buttons
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_add_styleselect( $buttons ) {
+function abraham_add_styleselect( $buttons ) {
 	// Get rid of styleselect if it's been added somewhere else.
 	if ( in_array( 'styleselect', $buttons ) ) {
 		unset( $buttons['styleselect'] );
@@ -75,7 +75,7 @@ function flagship_add_styleselect( $buttons ) {
 	array_push( $buttons, 'styleselect' );
 	return $buttons;
 }
-add_filter( 'mce_buttons_2', 'flagship_disable_styleselect', 99 );
+add_filter( 'mce_buttons_2', 'abraham_disable_styleselect', 99 );
 /**
  * Remove styleselect button if it's been added to the second row of TinyMCE
  * buttons.
@@ -85,13 +85,13 @@ add_filter( 'mce_buttons_2', 'flagship_disable_styleselect', 99 );
  * @param  $buttons array existing TinyMCE buttons
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_disable_styleselect( $buttons ) {
+function abraham_disable_styleselect( $buttons ) {
 	if ( in_array( 'styleselect', $buttons ) ) {
 		unset( $buttons['styleselect'] );
 	}
 	return $buttons;
 }
-add_filter( 'tiny_mce_before_init', 'flagship_tiny_mce_formats', 99 );
+add_filter( 'tiny_mce_before_init', 'abraham_tiny_mce_formats', 99 );
 /**
  * Add our custom Flagship styles to the styleselect dropdown button.
  *
@@ -101,50 +101,50 @@ add_filter( 'tiny_mce_before_init', 'flagship_tiny_mce_formats', 99 );
  * @return $args array modified TinyMCE arguments
  * @see    http://wordpress.stackexchange.com/a/128950/9844
  */
-function flagship_tiny_mce_formats( $args ) {
-	$flagship_formats = apply_filters( 'flagship_tiny_mce_formats',
+function abraham_tiny_mce_formats( $args ) {
+	$abraham_formats = apply_filters( 'abraham_tiny_mce_formats',
 		array(
 			array(
-				'title'    => __( 'Intro Paragraph', 'flagship-library' ),
+				'title'    => __( 'Intro Paragraph', 'abraham-library' ),
 				'selector' => 'p',
 				'classes'  => 'intro-pagragraph dropcap',
 				'wrapper'  => true,
 			),
 			array(
-				'title'    => __( 'Citation', 'flagship-library' ),
+				'title'    => __( 'Citation', 'abraham-library' ),
 				'block'    => 'cite',
 				'classes'  => 'cite',
 			),
 			array(
-				'title'    => __( 'Code Block', 'flagship-library' ),
+				'title'    => __( 'Code Block', 'abraham-library' ),
 				'format'   => 'pre',
 			),
 			array(
-				'title'    => __( 'Feature Box', 'flagship-library' ),
+				'title'    => __( 'Feature Box', 'abraham-library' ),
 				'items'    => array(
 				array(
-					'title'    => __( 'General', 'flagship-library' ),
+					'title'    => __( 'General', 'abraham-library' ),
 					'block'    => 'div',
 					'classes'  => 'panel',
 					'wrapper'  => true,
 					'exact'    => true,
 				),
 				array(
-					'title'    => __( 'Information', 'flagship-library' ),
+					'title'    => __( 'Information', 'abraham-library' ),
 					'block'    => 'div',
 					'classes'  => 'panel panel--info',
 					'wrapper'  => true,
 					'exact'    => true,
 				),
 				array(
-					'title'    => __( 'Warning', 'flagship-library' ),
+					'title'    => __( 'Warning', 'abraham-library' ),
 					'block'    => 'div',
 					'classes'  => 'panel panel--warning',
 					'wrapper'  => true,
 					'exact'    => true,
 				),
 				array(
-					'title'    => __( 'Important', 'flagship-library' ),
+					'title'    => __( 'Important', 'abraham-library' ),
 					'block'    => 'div',
 					'classes'  => 'panel panel--important',
 					'wrapper'  => true,
@@ -157,8 +157,8 @@ function flagship_tiny_mce_formats( $args ) {
 	// Merge with any existing formats which have been added by plugins.
 	if ( ! empty( $args['style_formats'] ) ) {
 		$existing_formats = json_decode( $args['style_formats'] );
-		$flagship_formats = array_merge( $flagship_formats, $existing_formats );
+		$abraham_formats = array_merge( $abraham_formats, $existing_formats );
 	}
-	$args['style_formats'] = json_encode( $flagship_formats );
+	$args['style_formats'] = json_encode( $abraham_formats );
 	return $args;
 }

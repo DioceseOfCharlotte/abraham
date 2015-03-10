@@ -37,6 +37,8 @@
 				<?php hybrid_site_description(); ?>
 			</div><!-- .site-branding -->
 
+			<?php hybrid_get_sidebar( 'header-right' ); ?>
+
 		<?php tha_header_bottom(); ?>
 
 		</header><!-- #header -->

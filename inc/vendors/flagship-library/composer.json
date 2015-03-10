@@ -1,0 +1,18 @@
+{
+  "name"       : "flagshipwp/flagship-library",
+  "description": "A helpful libray of functions and classes for Flagship themes.",
+  "keywords"   : ["wordpress"],
+  "homepage"   : "https://github.com/FlagshipWP/flagship-library",
+  "license"    : "GPL-2.0+",
+  "authors"    : [
+    {
+      "name"    : "Robert Neu",
+      "email"   : "rob@flagshipwp.com",
+      "homepage": "https://flagshipwp.com"
+    }
+  ],
+  "support"    : {
+    "issues": "https://github.com/FlagshipWP/flagship-library/issues",
+    "forum" : "http://community.flagshipwp.com/"
+  }
+}
