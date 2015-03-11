@@ -31,7 +31,7 @@ function abraham_the_excerpt( $excerpt ) {
 }
 
 function abraham_excerpt_length( $length ) {
-	return 60;
+	return 40;
 }
 
 function abraham_footer_widgets_class( $attr, $context ) {
