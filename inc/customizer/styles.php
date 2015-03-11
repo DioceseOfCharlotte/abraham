@@ -179,16 +179,25 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.sidebar-footer__widget'
+				'input[type=search] button,
+				.sidebar-footer__widget'
 			),
 			'declarations' => array(
 				'background-color' => $color500
 			)
 		) );
-
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-info,
+				'input[type=search] button:hover'
+			),
+			'declarations' => array(
+				'background-color' => $color400
+			)
+		) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'input[type=search] button:active,
+				.site-info,
 				.sidebar-footer__widget-title'
 			),
 			'declarations' => array(
