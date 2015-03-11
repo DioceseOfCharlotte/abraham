@@ -2,7 +2,7 @@
     #SITE-HEADER
 \*------------------------------------*/
 
-body.open {
+body.is-open {
     overflow: hidden;
 }
 
@@ -12,7 +12,7 @@ body.open {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $color-primary;
+    background-color: currentColor;
     overflow: hidden;
     z-index: 1;
     @include shadow-z2;
@@ -24,8 +24,8 @@ body.open {
         align-items: center;
         padding: 40px 5%;
 
-        &.open,
-        &.open ~ .main-container {
+        &.is-open,
+        &.is-open ~ .main-container {
             transform: translate(0px, 0);
         }
 
@@ -44,23 +44,23 @@ body.open {
 }
 
 .site-title {
-    color: $white;
+    color: currentColor;
     padding: 0;
     float: none;
     max-width: none;
     display: initial;
 
     @include sm-only {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     a {
-        color: inherit;
+        color: currentColor;
     }
 }
 
 .site-description {
-    color: $white;
+    color: currentColor;
     opacity: .8;
     margin: 0;
 
@@ -83,10 +83,10 @@ body.open {
     }
 }
 
-.site-header.open,
-.open .site-footer,
-.open .breadcrumbs,
-.open .main-container {
+.site-header.is-open,
+.is-open .site-footer,
+.is-open .breadcrumbs,
+.is-open .main-container {
     transform: translate(250px, 0);
     cursor: default;
 }
@@ -94,7 +94,7 @@ body.open {
 .breadcrumbs,
 .site-footer,
 .site-header,
-.menu.opened,
+.menu.has-opened,
 .main-container {
     transition: transform 0.3s ease-out;
 }

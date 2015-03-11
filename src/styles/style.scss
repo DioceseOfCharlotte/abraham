@@ -38,7 +38,7 @@ Tags:
  *
  * LAYOUT               Lays out the main parts (the global wireframe).
  * =======              ===============================================
- * Buttons..............Unstyled button layout.
+ * Buttons..............Unstyled button objects.
  *
  *
  * COMPONENTS           Specific modules that, combined, make up the site.
@@ -51,35 +51,36 @@ Tags:
  * Widths...............Width helper classes.
  */
 
-@import "vendors.normalize";
-@import "vendors.hintcss";
 
 //@import "vendors/modular-scale";
 
-@import "utils.global";
-@import "utils.colors";
-@import "utils.icon-font";
-@import "utils.widths";
-@import "utils.functions";
-@import "utils.mixins";
-@import "utils.helpers";
+@import "settings.global";
+@import "settings.colors";
 
-@import "base.colors";
+@import "tools.functions";
+@import "tools.mixins";
+@import "tools.responsive";
+@import "tools.icon-font";
+@import "tools.aliases";
+
+@import "general.normalize";
+@import "general.scut";
+
 @import "base.base";
 @import "base.typography";
 @import "base.headings";
 @import "base.links";
 @import "base.lists";
 
-@import "layout.navigation";
-@import "layout.grid";
-@import "layout.header";
-@import "layout.footer";
-@import "layout.sidebar";
-@import "layout.articles";
-@import "layout.comments";
-@import "layout.page";
-@import "layout.forms";
+@import "objects.navigation";
+@import "objects.grid";
+@import "objects.header";
+@import "objects.footer";
+@import "objects.sidebar";
+@import "objects.articles";
+@import "objects.comments";
+@import "objects.page";
+@import "objects.forms";
 
 @import "page.formats";
 @import "page.contact";
@@ -96,5 +97,10 @@ Tags:
 @import "components.media";
 @import "components.thumbnails";
 @import "components.widgets";
+
+@import "theme.colors";
+
+@import "final.helpers";
+@import "final.widths";
 
 @import "shame";

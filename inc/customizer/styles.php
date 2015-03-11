@@ -38,59 +38,6 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-header,
-				.site-footer,
-				.sidebar__footer-widgets .widget,
-				.comment-reply-link,
-				.btn,
-				button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"],
-				.button'
-			),
-			'declarations' => array(
-				'background-color' => $color500
-			)
-		) );
-
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-footer,
-				.btn:hover,
-				button:hover,
-				a.comment-reply-link:hover,
-				input[type="button"]:hover,
-				input[type="reset"]:hover,
-				input[type="submit"]:hover,
-				.button:hover'
-			),
-			'declarations' => array(
-				'background-color' => $color400
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.menu__primary,
-				.site-info,
-				.btn:active,
-				button:active,
-				.widget-title,
-				a.comment-reply-link:active,
-				input[type="button"]:active,
-				input[type="reset"]:active,
-				input[type="submit"]:active,
-				.button:active'
-			),
-			'declarations' => array(
-				'background-color' => $color600
-			)
-		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
 				'a'
 			),
 			'declarations' => array(
@@ -109,7 +56,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a:active'
+				'.t-primary-base'
 			),
 			'declarations' => array(
 				'color' => $color500
@@ -118,8 +65,69 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'blockquote,
-				input[type="email"]:focus,
+				'.t-primary-light'
+			),
+			'declarations' => array(
+				'color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.t-primary-dark'
+			),
+			'declarations' => array(
+				'color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.comment-reply-link,
+				button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.button'
+			),
+			'declarations' => array(
+				'background-color' => $color500
+			)
+		) );
+
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'button:hover,
+				.comment-reply-link:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				.button:hover'
+			),
+			'declarations' => array(
+				'background-color' => $color400
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'button:active,
+				.sidebar-primary__widget-title,
+				.comment-reply-link:active,
+				input[type="button"]:active,
+				input[type="reset"]:active,
+				input[type="submit"]:active,
+				.button:active'
+			),
+			'declarations' => array(
+				'background-color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'input[type="email"]:focus,
 				input[type="number"]:focus,
 				input[type="search"]:focus,
 				input[type="text"]:focus,
@@ -157,14 +165,37 @@ function customizer_library_abraham_styles() {
 		$color800 	= $simple_color_adjuster->darken( $color, 30 );
 		$color900 	= $simple_color_adjuster->darken( $color, 40 );
 
-		// Customizer_Library_Styles()->add( array(
-		// 	'selectors' => array(
-		// 		'.site-footer'
-		// 	),
-		// 	'declarations' => array(
-		// 		'background-color' => $color500
-		// 	)
-		// ) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.text-highlight,
+				blockquote,
+				.t-secondary-base,
+				.dropcap:first-letter'
+			),
+			'declarations' => array(
+				'color' => $color600
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.sidebar-footer__widget'
+			),
+			'declarations' => array(
+				'background-color' => $color500
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-info,
+				.sidebar-footer__widget-title'
+			),
+			'declarations' => array(
+				'background-color' => $color700
+			)
+		) );
+
 	}
 
 
@@ -230,7 +261,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'h1, h2, h3, h4, h5, h6'
+				'h1, h2, h3, h4, h5, h6, .dropcap:first-letter'
 			),
 			'declarations' => array(
 				'font-family' => $stack

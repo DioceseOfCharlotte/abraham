@@ -33,38 +33,72 @@ input[type="submit"] {
     }
 }
 
-input.search-submit {
-    margin-bottom: 0;
-}
-
-.button + .button {
-    margin-left: 10px;
-}
-
-.button--form {
-    &:before {
-        content: $pencil-square-o;
-        @include font-icon;
+.button {
+    + .button {
+        margin-left: 10px;
     }
-}
 
-.button--info {
-    &:before {
-        content: $info-circle;
-        @include font-icon;
+    &.secondary {
+        background-color: $btn-secondary-bg;
+
+        &:hover {
+            background-color: $btn-secondary-hover;
+        }
+
+        &:active {
+            background-color: $btn-secondary-active;
+        }
     }
-}
 
-.button--donate {
-    &:before {
-        content: $dio-give;
-        @include font-icon("diocons");
+    &.block {
+        margin-left: 0;
+        margin-right: 0;
+
+        &:first-child {
+            border-radius: $base-radius 0 0 $base-radius;
+        }
+
+        &:last-child {
+            border-radius: 0 $base-radius $base-radius 0;
+        }
     }
-}
 
-.button--link-ext {
-    &:before {
-        content: $external-link;
-        @include font-icon;
+    &::before {
+        margin-right: .3rem;
+    }
+
+    &--form {
+        &:before {
+            content: $pencil-square-o;
+            @include font-icon;
+        }
+    }
+
+    &--download {
+        &:before {
+            content: $download;
+            @include font-icon;
+        }
+    }
+
+    &--info {
+        &:before {
+            content: $info-circle;
+            @include font-icon;
+        }
+    }
+
+    &--donate {
+        &:before {
+            content: $dio-give;
+            @include font-icon("diocons");
+        }
+    }
+
+    &--link-ext {
+        &:before {
+            content: $external-link;
+            @include font-icon;
+        }
     }
 }

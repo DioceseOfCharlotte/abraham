@@ -9,21 +9,24 @@ class Doc_Attributes {
 
 	/* Attributes for major structural elements. */
 	public $body                  	= ' ';	// get_body_class()
-	public $header                	= ' '; 	// na
-	public $footer                	= ' '; 	// na
+	public $header                	= ' t-primary-base'; 	// site-header
+	public $footer                	= ' t-secondary-base'; 	// site-footer
 	public $content_single_column 	= ' '; 	// content
 	public $content_sidebar_right 	= ' '; 	// content
-	public $content_sidebar_left 	= ' '; 	// content
+	public $content_sidebar_left 	  = ' '; 	// content
 	public $sidebar_single_column  	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_left 	= ' ';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
-	public $menu                  	= ' ';	// menu menu__{$context}
+	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
+	public $menu_li_primary         = 'menu-primary__item';	// menu-item
+	public $menu_li_secondary       = 'menu-secondary__item';	// menu-item
+	public $menu_li_social          = 'menu-social__item';	// menu-item
 
 	/* Header attributes. */
-	public $branding              	= ' ';	// na
-	public $site_title            	= ' ';	// na
-	public $site_description      	= ' ';	// na
+	public $branding              	= ' t-white';	// site-branding
+	public $site_title            	= ' ';	// site-title
+	public $site_description      	= ' ';	// site-description
 
 	/* Loop attributes. */
 	public $loop_meta             	= ' ';	// loop-meta
@@ -33,8 +36,8 @@ class Doc_Attributes {
 	/* Post-specific attributes. */
 	public $post                  	= ' ';	// get_post_class()
 	public $entry_title           	= ' ';	// entry-title
-	public $entry_author          	= ' ';	// entry-author
-	public $entry_published       	= ' ';	// entry-published updated
+	public $entry_author          	= ' entry-meta__author';	// entry-author
+	public $entry_published       	= ' entry-meta__date';	// entry-published updated
 	public $entry_content         	= ' ';	// entry-content
 	public $entry_summary         	= ' ';	// entry-summary
 	public $entry_terms           	= ' ';	// entry-terms
@@ -46,25 +49,24 @@ class Doc_Attributes {
 
 	public function __construct() {
 
-		/* Attributes for major structural elements. */
+		/* Objects. */
 		add_filter( 'hybrid_attr_body',              array( $this, 'body' ) );
 		add_filter( 'hybrid_attr_header',            array( $this, 'header' ) );
 		add_filter( 'hybrid_attr_footer',            array( $this, 'footer' ) );
 		add_filter( 'hybrid_attr_content',           array( $this, 'content' ) );
 		add_filter( 'hybrid_attr_sidebar',           array( $this, 'sidebar' ), 10, 2 );
 		add_filter( 'hybrid_attr_menu',              array( $this, 'menu' ), 10, 2 );
+		add_filter( 'hybrid_attr_loop-meta',         array( $this, 'loop_meta' ) );
 
-		/* Header attributes. */
+		/* Components. */
+		add_filter( 'nav_menu_css_class',            array( $this, 'menu_li' ), 10, 2 );
 		add_filter( 'hybrid_attr_branding',          array( $this, 'branding' ) );
 		add_filter( 'hybrid_attr_site-title',        array( $this, 'site_title' ) );
 		add_filter( 'hybrid_attr_site-description',  array( $this, 'site_description' ) );
-
-		/* Loop attributes. */
-		add_filter( 'hybrid_attr_loop-meta',         array( $this, 'loop_meta' ) );
 		add_filter( 'hybrid_attr_loop-title',        array( $this, 'loop_title' ) );
 		add_filter( 'hybrid_attr_loop-description',  array( $this, 'loop_description' ) );
 
-		/* Post-specific attributes. */
+		/* Post-specific. */
 		add_filter( 'hybrid_attr_post',              array( $this, 'post' ) );
 		add_filter( 'hybrid_attr_entry-title',       array( $this, 'entry_title' ) );
 		add_filter( 'hybrid_attr_entry-author',      array( $this, 'entry_author' ) );
@@ -78,8 +80,7 @@ class Doc_Attributes {
 
 
 
-
-	/* === STRUCTURAL === */
+	/* === OBJECTS === */
 	public function body( $attr ) {
 		$attr['class']    .= $this->body;
 		return $attr;
@@ -109,13 +110,13 @@ class Doc_Attributes {
 	public function sidebar( $attr, $context ) {
 	if ( '1c' 		== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_single_column;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_right;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	elseif ( '2c-r' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    		.= $this->sidebar_sidebar_left;
-		$attr['class']    		.= "  sidebar__{$context}";
+		$attr['class']    		.= "  sidebar-{$context}";
 	endif;
 
 	if ( 'footer-widgets' === $context ) :
@@ -125,13 +126,26 @@ class Doc_Attributes {
 	}
 
 	public function menu( $attr, $context ) {
+		$attr['class']    .= " menu-{$context}";
 		$attr['class']    .= $this->menu;
-		$attr['class']    .= "  menu__{$context}";
 		return $attr;
 	}
 
 
-	/* === HEADER === */
+	/* === COMPONENTS === */
+
+	public function menu_li( $classes, $item ) {
+    if ( $menu_name = 'primary' ) :
+        $classes[] = $this->menu_li_primary;
+	  elseif ( $menu_name = 'secondary' ) :
+        $classes[] = $this->menu_li_secondary;
+	  elseif ( $menu_name = 'social' ) :
+        $classes[] = $this->menu_li_social;
+	  endif;
+
+    return $classes;
+	}
+
 	public function branding( $attr ) {
 		$attr['class']    .= $this->branding;
 		return $attr;
@@ -176,7 +190,7 @@ class Doc_Attributes {
 	}
 
 	public function entry_author( $attr ) {
-		$attr['class']    .= $this->loop_description;
+		$attr['class']    .= $this->entry_author;
 		return $attr;
 	}
 

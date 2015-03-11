@@ -22,7 +22,7 @@ a[href*="maps.google.com"]::before {
     padding-right: 5px;
 }
 
-a.post-edit-link {
+.post-edit-link {
     font-weight: 400;
 
     &::before {
@@ -100,7 +100,7 @@ a.post-edit-link {
     fill: $color-grey-ui;
 }
 
-.menu-items__social li {
+.menu-social__item {
     display: inline-block;
 
     a {
@@ -116,116 +116,116 @@ a.post-edit-link {
             background-color: $grey-100;
             opacity: 1;
         }
+
+        &::before {
+            @include font-icon;
+        }
+
+        &[href*="codepen.io"]::before {
+            content: '\f216';
+            color: #fff;
+        }
+
+        &[href*="digg.com"]::before {
+            content: '\f221';
+            color: #fff;
+        }
+
+        &[href*="dribbble.com"]::before {
+            content: '\f201';
+            color: #ea4c89;
+        }
+
+        &[href*="dropbox.com"]::before {
+            content: '\f225';
+            color: #007ee5;
+        }
+
+        &[href*="facebook.com"]::before {
+            content: $facebook;
+            color: #3b5998;
+        }
+
+        &[href*="flickr.com"]::before {
+            content: '\f211';
+            color: #ff0084;
+        }
+
+        &[href*="plus.google.com"]::before {
+            content: $google-plus;
+            color: #dd4b39;
+        }
+
+        &[href*="github.com"]::before {
+            content: '\f200';
+            color: #4183c4;
+        }
+
+        &[href*="instagram.com"]::before {
+            content: $instagram;
+            color: #3f729b;
+        }
+
+        &[href*="linkedin.com"]::before {
+            content: $linkedin;
+            color: #0e76a8;
+        }
+
+        &[href*="pinterest.com"]::before {
+            content: $pinterest;
+            color: #c8232c;
+        }
+
+        &[href*="polldaddy.com"]::before {
+            content: '\f217';
+            color: #bc0b0b;
+        }
+
+        &[href*="getpocket.com"]::before {
+            content: '\f224';
+            color: #ee4056;
+        }
+
+        &[href*="reddit.com"]::before {
+            content: '\f222';
+            color: #336699;
+        }
+
+        &[href*="skype.com"]::before,
+        &[href*="skype:"]::before {
+            content: '\f220';
+            color: #00aff0;
+        }
+
+        &[href*="stumbleupon.com"]::before {
+            content: '\f223';
+            color: #ff2618;
+        }
+
+        &[href*="tumblr.com"]::before {
+            content: '\f214';
+            color: #34526f;
+        }
+
+        &[href*="twitter.com"]::before {
+            content: $twitter;
+            color: #33ccff;
+        }
+
+        &[href*="vimeo.com"]::before {
+            content: '\f212';
+            color: #1AB7EA;
+        }
+
+        &[href*="wordpress.org"]::before,
+        &[href*="wordpress.com"]::before {
+            content: '\f205';
+            color: #21759b;
+        }
+
+        &[href*="youtube.com"]::before {
+            content: $youtube;
+            color: #c4302b;
+        }
     }
-}
-
-.menu-items__social li a::before {
-    @include font-icon;
-}
-
-.menu-items__social li a[href*="codepen.io"]::before {
-    content: '\f216';
-    color: #fff;
-}
-
-.menu-items__social li a[href*="digg.com"]::before {
-    content: '\f221';
-    color: #fff;
-}
-
-.menu-items__social li a[href*="dribbble.com"]::before {
-    content: '\f201';
-    color: #ea4c89;
-}
-
-.menu-items__social li a[href*="dropbox.com"]::before {
-    content: '\f225';
-    color: #007ee5;
-}
-
-.menu-items__social li a[href*="facebook.com"]::before {
-    content: $facebook;
-    color: #3b5998;
-}
-
-.menu-items__social li a[href*="flickr.com"]::before {
-    content: '\f211';
-    color: #ff0084;
-}
-
-.menu-items__social li a[href*="plus.google.com"]::before {
-    content: $google-plus;
-    color: #dd4b39;
-}
-
-.menu-items__social li a[href*="github.com"]::before {
-    content: '\f200';
-    color: #4183c4;
-}
-
-.menu-items__social li a[href*="instagram.com"]::before {
-    content: $instagram;
-    color: #3f729b;
-}
-
-.menu-items__social li a[href*="linkedin.com"]::before {
-    content: $linkedin;
-    color: #0e76a8;
-}
-
-.menu-items__social li a[href*="pinterest.com"]::before {
-    content: $pinterest;
-    color: #c8232c;
-}
-
-.menu-items__social li a[href*="polldaddy.com"]::before {
-    content: '\f217';
-    color: #bc0b0b;
-}
-
-.menu-items__social li a[href*="getpocket.com"]::before {
-    content: '\f224';
-    color: #ee4056;
-}
-
-.menu-items__social li a[href*="reddit.com"]::before {
-    content: '\f222';
-    color: #336699;
-}
-
-.menu-items__social li a[href*="skype.com"]::before,
-.menu-items__social li a[href*="skype:"]::before {
-    content: '\f220';
-    color: #00aff0;
-}
-
-.menu-items__social li a[href*="stumbleupon.com"]::before {
-    content: '\f223';
-    color: #ff2618;
-}
-
-.menu-items__social li a[href*="tumblr.com"]::before {
-    content: '\f214';
-    color: #34526f;
-}
-
-.menu-items__social li a[href*="twitter.com"]::before {
-    content: $twitter;
-    color: #33ccff;
-}
-
-.menu-items__social li a[href*="vimeo.com"]::before {
-    content: '\f212';
-    color: #1AB7EA;
-}
-
-.menu-items__social li a[href*="wordpress.org"]::before,
-.menu-items__social li a[href*="wordpress.com"]::before {
-    content: '\f205';
-    color: #21759b;
-}
-
-.menu-items__social li a[href*="youtube.com"]::before {
-    content: $youtube;
-    color: #c4302b;
 }

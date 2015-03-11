@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    height: $base-spacing-unit-lg;
+    padding: 6px 10px;
+    /* The 6px vertically centers text on FF, ignored by Webkit */
+    width: 100%;
+    background-color: $grey-100;
+    border: 1px solid transparent;
+    border-radius: $base-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    transition: all 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.86);
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    appearance: none;
+}
+
+textarea {
+    min-height: $base-spacing-unit-lg * 3;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+input[type="file"] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid $color-primary;
+    outline: 0;
+    background-color: $white;
+}
+
+label,
+legend {
+    display: block;
+    margin: 5px 0 5px 5px;
+    font-weight: 700;
+    color: $color-grey-dark;
+    line-height: 1;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+    margin: 4px 0 0;
+
+    &:focus {
+        outline: 0;
+        border: 0;
+    }
+}
+
+label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+
+input[type=search] {
+    margin: 0;
+    height: $base-spacing-unit-lg;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-width: 0;
+    background-color: rgba($white, 0.85);
+
+    &:focus {
+        border-color: transparent;
+        background-color: $white;
+    }
+
+}
+
+button {
+    @extend .button.secondary;
+    height: $base-spacing-unit-lg;
+    margin: 0;
+    border-radius: 0 $base-radius $base-radius 0;
+&::before {
+  content: $search;
+  @include font-icon();
+}
+
+}
+
+}
+
+input[type="submit"].search-submit {
+    border-radius: 0;
+    outline: 0;
+    padding: 0 $base-spacing-unit-sm;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: $white;
+    @include font-icon;
+}
+
+
+.form-submit {
+  text-align: center;
+}

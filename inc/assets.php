@@ -31,7 +31,7 @@ function abraham_styles() {
 
 	wp_enqueue_style( 'diocons', '//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css' );
 
-	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic', array(),	null );
+	wp_enqueue_style( 'abraham-fonts', '//fonts.googleapis.com/css?family=Raleway:200,500,700,300|Roboto:500,400italic,300,700,300italic,400', array(),	null );
 
 	if ( is_child_theme() )
 		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
@@ -42,7 +42,7 @@ function abraham_styles() {
 function abraham_add_editor_styles() {
 	// Set up editor styles
 	$editor_styles = array(
-		'//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic',
+		'//fonts.googleapis.com/css?family=Raleway:200,500,700,300|Roboto:500,400italic,300,700,300italic,400',
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
 		'//fontastic.s3.amazonaws.com/fPqC5US3TztqZdfynZTmYQ/icons.css',
 		'css/editor-style.css',

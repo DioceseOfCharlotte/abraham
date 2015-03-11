@@ -25,6 +25,8 @@ remove_action( 'wp_head', 'wp_generator', 1);
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action( 'wp_head', 'rsd_link');
 
+remove_filter( 'hybrid_content_template_hierarchy', 'flagship_content_template_hierarchy' );
+
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
@@ -70,15 +72,33 @@ function abraham_menus() {
 function abraham_sidebars() {
 	hybrid_register_sidebar( [
 		'id'          => 'primary',
+		'before_widget' => '<section id="%1$s" class="widget sidebar-primary__widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title sidebar-primary__widget-title">',
+		'after_title'   => '</h3>',
 		'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
 		'description' => __( 'The Primary sidebar.', 'abraham' )
 	] );
 
 	hybrid_register_sidebar( [
-		'id'          => 'footer-widgets',
+		'id'          => 'footer',
+		'before_widget' => '<section id="%1$s" class="widget sidebar-footer__widget %2$s">',
+		'before_title'  => '<h3 class="widget-title sidebar-footer__widget-title">',
+		'after_title'   => '</h3>',
 		'name'        => _x( 'Footer Widgets', 'sidebar', 'abraham' ),
 		'description' => __( 'Typically located in the footer.', 'abraham' )
 	] );
+
+	hybrid_register_sidebar( [
+			'id'            => 'header-right',
+			'name'          => _x( 'Header Right', 'sidebar', 'compass' ),
+			'description'   => __( 'The header right sidebar area. It is displayed to the right of the site title area.', 'compass' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<span class="widget-title">',
+			'after_title'   => '</span>',
+		] );
+
 }
 
 

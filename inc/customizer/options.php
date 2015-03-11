@@ -8,8 +8,8 @@
 function customizer_library_abraham_options() {
 
 	// Theme defaults
-	$primary_color 		= '#118EF2';
-	$secondary_color 	= '#1CE884';
+	$primary_color 		= '#476FBA';
+	$secondary_color 	= '#3DC273';
 	$body_font			= 'Roboto';
 	$heading_font		= 'Raleway';
 

@@ -2,7 +2,7 @@
     #HELPERS
 \*------------------------------------*/
 
-%clearfix {
+.clearfix {
     &:after {
         content: "";
         display: table;
@@ -41,14 +41,30 @@
 }
 
 .clearfix:before,
-.clearfix:after {
-    content: " ";
-    /* 1 */
+.clearfix:after,
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
     display: table;
-    /* 2 */
 }
 
-.clearfix:after {
+.clearfix:after,
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
     clear: both;
 }
 

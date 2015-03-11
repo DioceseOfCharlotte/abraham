@@ -16,7 +16,7 @@ h1 {
     letter-spacing: -0.02em;
 }
 
-h2 {
+h2, .site-title {
     @include font-size($base-heading-size-2);
     font-weight: 300;
 }
@@ -33,7 +33,7 @@ h4 {
 
 h5 {
     @include font-size($base-heading-size-5);
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.02em;
 }
 
@@ -51,9 +51,9 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 {
     //margin: 0 0 $base-spacing-unit-tiny;
     color: $color-headings;
+    font-family: $font-heading;
 
     a {
-        text-decoration: none;
         font-weight: inherit;
         color: currentColor;
         transition: opacity $base-transition-speed ease, border-color $base-transition-speed;

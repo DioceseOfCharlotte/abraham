@@ -11,11 +11,11 @@
 	<?php hybrid_post_author(); ?>
 	<?php
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="entry-comments-link">';
 			comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) );
 			echo '</span>';
 		}
-		edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'abraham' ), '<span class="edit-link entry__edit-link">', '</span>' );
 	 ?>
 	</div>
 

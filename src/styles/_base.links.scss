@@ -43,11 +43,3 @@ p > a {
     font-weight: normal;
 }
 
-.menu-item a {
-    color: currentColor;
-    font-weight: normal;
-
-    &:hover, &:active {
-        color: currentColor;
-    }
-}

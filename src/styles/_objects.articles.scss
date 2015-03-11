@@ -2,24 +2,72 @@
     #ARTICLES
 \*------------------------------------*/
 
-.panel {
+.intro-pagragraph {
+    @extend .dropcap;
+    @include font-size(20px, false);
+    color: lighten($color-text, 15);
+    display: inline-block;
+}
+
+.dropcap:first-letter, .intro-pagragraph:first-letter {
+  float: left;
+  margin: 5px 5px 0 0;
+  padding: 0 20px;
+  font-size: 4em;
+  font-family: $font-heading;
+  line-height: 1;
+  text-indent: 0;
+  font-weight: 500;
+  background: transparent;
+  color: $color-secondary-dark;
+}
+
+p + .dropcap {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+.call-to-action {
     border-radius: $base-radius;
     margin-bottom: $base-spacing-unit-sm;
     @include padding-space($base-spacing-unit-tiny);
-    background-color: $grey-100;
+    border: 2px solid $color-grey-ui;
+    display: inline-block;
+    width: 100%;
+}
 
-    span:before {
-        color: currentColor;
-    }
+.feature-box {
+    @extend .call-to-action;
+    background-color: $color-grey-ui;
+    color: $white;
+}
 
-    h4 {
+.panel {
+    @extend .call-to-action;
+    border: 0;
+    @include padding-space($base-spacing-unit-tiny / 2 $base-spacing-unit-tiny);
+
+    h1, h2, h3, h4 {
         margin-bottom: .4rem;
+        @include font-size(20px, false);
+        line-height: 1;
         font-weight: 500;
         color: currentColor;
+        text-align: center;
     }
 
     p {
         color: currentColor;
+        display: inline-block;
+
+        &:first-of-type:before {
+            color: currentColor;
+            display: inline-block;
+            @include font-icon;
+            line-height: 1;
+            font-size: 38px;
+            margin-right: 10px;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -42,11 +90,9 @@
         background-color: $blue-100;
         color: $blue-800;
 
-        .panel__icon > span {
-            &:before {
+        p:first-of-type:before {
                 content: $info-circle;
             }
-        }
     }
 
     &--warning {
@@ -54,7 +100,7 @@
         background-color: $red-100;
         color: $red-800;
 
-        .panel__icon > span:before {
+        p:first-of-type:before {
             content: $warning;
         }
     }
@@ -64,13 +110,14 @@
         background-color: $orange-100;
         color: $orange-800;
 
-        .panel__icon > span:before {
+        p:first-of-type:before {
             content: $exclamation-circle;
         }
     }
 }
 
 .comments, .entry {
+    background-color: #fff;
     @include padding-space($base-spacing-unit-sm n n);
     @include margin-space(n n $base-spacing-unit-sm);
 }

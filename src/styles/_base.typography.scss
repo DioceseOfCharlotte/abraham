@@ -126,10 +126,16 @@ input[type="submit"],
 }
 
 .site-title {
-    font-weight: 400;
 
     a {
         line-height: 60px;
+        font-weight: inherit;
+        border-bottom: 0;
+        transition: opacity $base-transition-speed ease, border-color $base-transition-speed;
+        &:hover {
+        color: currentColor;
+        opacity: 0.5;
+    }
 
         @include md {
             line-height: $base-line-height;
