@@ -655,11 +655,16 @@ input[type="submit"],
     letter-spacing: 0.04em;
 }
 
-.site-title {
-    font-weight: 400;
-}
 .site-title a {
+    border-bottom: 0;
+    font-weight: inherit;
     line-height: 60px;
+    -webkit-transition: opacity 0.3s ease, border-color 0.3s;
+    transition: opacity 0.3s ease, border-color 0.3s;
+}
+.site-title a:hover {
+    opacity: 0.5; 
+    color: currentColor;
 }
 @media only screen and (min-width: 48em) {
     .site-title a {
@@ -708,7 +713,8 @@ h1 {
     letter-spacing: -0.02em;
 }
 
-h2 {
+h2,
+.site-title {
     font-size: 30px;
     font-size: 1.875rem;
     font-weight: 300; 
@@ -772,7 +778,6 @@ h5 a,
 h6 a {
     color: currentColor;
     font-weight: inherit;
-    text-decoration: none;
     -webkit-transition: opacity 0.3s ease, border-color 0.3s;
     transition: opacity 0.3s ease, border-color 0.3s;
 }
@@ -1323,7 +1328,7 @@ body.is-open {
 }
 @media only screen and (max-width: 47em) {
     .site-title {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 .site-title a {
@@ -1620,8 +1625,9 @@ body.is-open {
     margin-bottom: 11px;
     margin-left: -16px;
     padding: 16px;
-    color: #fff; 
+    color: #fff;
     line-height: 1;
+    text-transform: capitalize;
 }
 @media only screen and (min-width: 48em) {
     .widget-title {

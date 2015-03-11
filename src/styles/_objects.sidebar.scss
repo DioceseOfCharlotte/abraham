@@ -118,6 +118,7 @@
         @include margin-space($base-spacing-unit-tiny * -1 $base-spacing-unit-sm * -1 $base-spacing-unit-tiny);
         line-height: 1;
         color: #fff;
+          text-transform: capitalize;
 
         &:before {
             @include font-icon;
