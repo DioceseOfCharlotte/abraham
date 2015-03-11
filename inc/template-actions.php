@@ -101,12 +101,6 @@ function abraham_tiny_mce_formats( $args ) {
 					),
 				),
 			),
-
-			array(
-				'title'    => __( 'Citation', 'abraham-library' ),
-				'block'    => 'cite',
-				'classes'  => 'cite',
-			),
 			array(
 				'title'    => __( 'Alert', 'abraham-library' ),
 				'items'    => array(
@@ -132,6 +126,23 @@ function abraham_tiny_mce_formats( $args ) {
 					'exact'    => true,
 				),
 				),
+			),
+			array(
+				'title'    => __( 'Citation', 'abraham-library' ),
+				'block'    => 'cite',
+				'classes'  => 'cite',
+			),
+			array(
+				'title'    => __( 'Text Highlight', 'abraham-library' ),
+				'inline' => 'span',
+				'classes'  => 'text-highlight',
+				'exact'    => true,
+			),
+			array(
+				'title'    => __( 'Text Grey', 'abraham-library' ),
+				'inline' => 'span',
+				'classes'  => 'text-grey',
+				'exact'    => true,
 			),
 		)
 	);

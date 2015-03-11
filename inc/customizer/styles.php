@@ -127,8 +127,7 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'blockquote,
-				input[type="email"]:focus,
+				'input[type="email"]:focus,
 				input[type="number"]:focus,
 				input[type="search"]:focus,
 				input[type="text"]:focus,
@@ -168,7 +167,8 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'blockquote,
+				'.text-highlight,
+				blockquote,
 				.t-secondary-base,
 				.dropcap:first-letter'
 			),

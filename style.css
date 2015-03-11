@@ -4159,12 +4159,29 @@ a img:hover {
     color: #385996;
 }
 
+.t-secondary-base,
+.text-highlight {
+    color: #319b5c;
+}
+
+.t-secondary-light {
+    color: #3dc273;
+}
+
+.t-secondary-dark {
+    color: #257445;
+}
+
 .t-white {
     color: #fff;
 }
 
 .t-black {
     color: #000;
+}
+
+.text-grey {
+    color: #9f9f9f;
 }
 
 /*------------------------------------*\
