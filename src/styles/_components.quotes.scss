@@ -12,10 +12,11 @@ blockquote {
     p {
         color: $color-text-light;
         font-weight: 500;
-     + p {
-        margin-bottom: 0;
+
+        + p {
+            margin-bottom: 0;
+        }
     }
-}
 }
 
 blockquote blockquote {
@@ -38,4 +39,14 @@ blockquote cite {
 blockquote cite::before {
     content: "\2014";
     padding-right: 10px;
+}
+
+@include md {
+    .pullquote.alignright {
+        max-width: 50%;
+    }
+
+    .pullquote.alignleft {
+        max-width: 50%;
+    }
 }

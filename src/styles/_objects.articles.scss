@@ -3,11 +3,13 @@
 \*------------------------------------*/
 
 .intro-pagragraph {
+    @extend .dropcap;
     @include font-size(20px, false);
     color: lighten($color-text, 15);
+    display: inline-block;
 }
 
-.dropcap:first-letter {
+.dropcap:first-letter, .intro-pagragraph:first-letter {
   float: left;
   margin: 5px 5px 0 0;
   padding: 0 20px;
@@ -25,11 +27,25 @@ p + .dropcap {
   margin-top: 0;
 }
 
-.panel {
+.call-to-action {
     border-radius: $base-radius;
     margin-bottom: $base-spacing-unit-sm;
     @include padding-space($base-spacing-unit-tiny);
-    background-color: $grey-100;
+    border: 2px solid $color-grey-ui;
+    display: inline-block;
+    width: 100%;
+}
+
+.feature-box {
+    @extend .call-to-action;
+    background-color: $color-grey-ui;
+    color: $white;
+}
+
+.panel {
+    @extend .call-to-action;
+    border: 0;
+    @include padding-space($base-spacing-unit-tiny / 2 $base-spacing-unit-tiny);
 
     h1, h2, h3, h4 {
         margin-bottom: .4rem;

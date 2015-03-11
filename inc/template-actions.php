@@ -48,54 +48,22 @@ function abraham_get_default_footer_text() {
 
 
 
-/**
- * Modifications to TinyMCE, the default WordPress editor.
- *
- * @package     FlagshipLibrary
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://abrahamwp.com/
- * @since       1.4.0
- */
-add_filter( 'mce_buttons', 'abraham_add_styleselect', 99 );
-/**
- * Add styleselect button to the end of the first row of TinyMCE buttons.
- *
- * @since  1.4.0
- * @access public
- * @param  $buttons array existing TinyMCE buttons
- * @return $buttons array modified TinyMCE buttons
- */
-function abraham_add_styleselect( $buttons ) {
-	// Get rid of styleselect if it's been added somewhere else.
-	if ( in_array( 'styleselect', $buttons ) ) {
-		unset( $buttons['styleselect'] );
-	}
-	array_push( $buttons, 'styleselect' );
-	return $buttons;
-}
-add_filter( 'mce_buttons_2', 'abraham_disable_styleselect', 99 );
-/**
- * Remove styleselect button if it's been added to the second row of TinyMCE
- * buttons.
- *
- * @since  1.4.0
- * @access public
- * @param  $buttons array existing TinyMCE buttons
- * @return $buttons array modified TinyMCE buttons
- */
-function abraham_disable_styleselect( $buttons ) {
-	if ( in_array( 'styleselect', $buttons ) ) {
-		unset( $buttons['styleselect'] );
-	}
-	return $buttons;
-}
+
+
+
+
+
+
+
+
+
+
+
 add_filter( 'tiny_mce_before_init', 'abraham_tiny_mce_formats', 99 );
 /**
- * Add our custom Flagship styles to the styleselect dropdown button.
+ * Add our custom styles to the Flagship styleselect dropdown button.
  *
- * @since  1.4.0
+ * @since  0.2.0
  * @access public
  * @param  $args array existing TinyMCE arguments
  * @return $args array modified TinyMCE arguments
@@ -105,30 +73,43 @@ function abraham_tiny_mce_formats( $args ) {
 	$abraham_formats = apply_filters( 'abraham_tiny_mce_formats',
 		array(
 			array(
-				'title'    => __( 'Intro Paragraph', 'abraham-library' ),
-				'selector' => 'p',
-				'classes'  => 'intro-pagragraph dropcap',
-				'wrapper'  => true,
+				'title'    => __( 'Icon Buttons', 'abraham-library' ),
+				'items'    => array(
+					array(
+						'title'    => __( 'Download', 'abraham-library' ),
+						'selector' => 'a',
+						'classes'  => 'button button--download',
+						'exact'    => true,
+					),
+					array(
+						'title'    => __( 'Information', 'abraham-library' ),
+						'selector' => 'a',
+						'classes'  => 'button button--info',
+						'exact'    => true,
+					),
+					array(
+						'title'    => __( 'External Link', 'abraham-library' ),
+						'selector' => 'a',
+						'classes'  => 'button button--link-ext',
+						'exact'    => true,
+					),
+					array(
+						'title'    => __( 'Donate', 'abraham-library' ),
+						'selector' => 'a',
+						'classes'  => 'button button--donate',
+						'exact'    => true,
+					),
+				),
 			),
+
 			array(
 				'title'    => __( 'Citation', 'abraham-library' ),
 				'block'    => 'cite',
 				'classes'  => 'cite',
 			),
 			array(
-				'title'    => __( 'Code Block', 'abraham-library' ),
-				'format'   => 'pre',
-			),
-			array(
-				'title'    => __( 'Feature Box', 'abraham-library' ),
+				'title'    => __( 'Alert', 'abraham-library' ),
 				'items'    => array(
-				array(
-					'title'    => __( 'General', 'abraham-library' ),
-					'block'    => 'div',
-					'classes'  => 'panel',
-					'wrapper'  => true,
-					'exact'    => true,
-				),
 				array(
 					'title'    => __( 'Information', 'abraham-library' ),
 					'block'    => 'div',

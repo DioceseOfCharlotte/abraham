@@ -16,7 +16,7 @@ select {
     /* The 6px vertically centers text on FF, ignored by Webkit */
     width: 100%;
     background-color: $grey-100;
-    border: 1px solid $grey-100;
+    border: 1px solid transparent;
     border-radius: $base-radius;
     box-shadow: none;
     box-sizing: border-box;
@@ -103,15 +103,20 @@ input[type=search] {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-right-width: 0;
-    background-color: $white;
+    background-color: rgba($white, 0.85);
 
+    &:focus {
+        border-color: transparent;
+        background-color: $white;
+    }
 
 }
 
 button {
+    @extend .button.secondary;
     height: $base-spacing-unit-lg;
     margin: 0;
-    border-radius: 0;
+    border-radius: 0 $base-radius $base-radius 0;
 &::before {
   content: $search;
   @include font-icon();
