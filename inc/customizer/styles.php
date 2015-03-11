@@ -179,7 +179,8 @@ function customizer_library_abraham_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'input[type=search] button,
+				'.button.secondary,
+				.search-form button,
 				.sidebar-footer__widget'
 			),
 			'declarations' => array(
@@ -188,7 +189,8 @@ function customizer_library_abraham_styles() {
 		) );
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'input[type=search] button:hover'
+				'.button.secondary:hover,
+				.search-form button:hover'
 			),
 			'declarations' => array(
 				'background-color' => $color400
@@ -196,7 +198,8 @@ function customizer_library_abraham_styles() {
 		) );
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'input[type=search] button:active,
+				'.button.secondary:active,
+				.search-form button:active,
 				.site-info,
 				.sidebar-footer__widget-title'
 			),
