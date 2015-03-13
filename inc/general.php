@@ -62,3 +62,14 @@ function abraham_search_form( $form ) {
 	return $form;
 }
 
+
+
+add_filter( 'hybrid_comment_template_hierarchy', 'abe_comment_template_hierarchy' );
+
+function abe_comment_template_hierarchy( $templates ) {
+
+
+		$templates = array_merge( [ 'partials/comment.php' ], $templates );
+
+	return $templates;
+}

@@ -253,12 +253,12 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 					'customizer/classes/customizer-base.php',
 					'classes/search-form.php',
 					'classes/style-builder.php',
-					'functions/attr.php',
+					// 'functions/attr.php',
 					'functions/seo.php',
 					'functions/template-entry.php',
 					'functions/template-general.php',
-					'functions/template.php',
-					'functions/deprecated.php',
+					// 'functions/template.php',
+					// 'functions/deprecated.php',
 				)
 			);
 			// Include our library files.
@@ -278,9 +278,9 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 			if ( current_theme_supports( 'flagship-author-box' ) ) {
 				require_once $this->dir . 'classes/author-box.php';
 			}
-			if ( current_theme_supports( 'breadcrumb-trail' ) ) {
-				require_once $this->dir . 'customizer/classes/breadcrumb-display.php';
-			}
+			// if ( current_theme_supports( 'breadcrumb-trail' ) ) {
+			// 	require_once $this->dir . 'customizer/classes/breadcrumb-display.php';
+			// }
 			if ( current_theme_supports( 'flagship-footer-widgets' ) ) {
 				require_once $this->dir . 'classes/footer-widgets.php';
 			}

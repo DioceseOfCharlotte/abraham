@@ -11,13 +11,13 @@ class Doc_Attributes {
 	public $body                  	= ' ';	// get_body_class()
 	public $header                	= ' t-primary-base'; 	// site-header
 	public $footer                	= ' t-secondary-base'; 	// site-footer
-	public $content_single_column 	= ' '; 	// content
-	public $content_sidebar_right 	= ' '; 	// content
-	public $content_sidebar_left 	  = ' '; 	// content
-	public $sidebar_single_column  	= ' ';	// sidebar sidebar__{$context}
+	public $content_single_column 	= ''; 	// content
+	public $content_sidebar_right 	= ''; 	// content
+	public $content_sidebar_left 	= ''; 	// content
+	public $sidebar_single_column  	= '';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left 	  = ' ';	// sidebar sidebar__{$context}
-	public $sidebar_footer          = ' ';	// sidebar sidebar__{$context}
+	public $sidebar_footer          = '';	// sidebar sidebar__{$context}
 	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
 	public $menu_li_primary         = 'menu-primary__item';	// menu-item
 	public $menu_li_secondary       = 'menu-secondary__item';	// menu-item
@@ -108,24 +108,32 @@ class Doc_Attributes {
 	}
 
 	public function sidebar( $attr, $context ) {
-	if ( '1c' 		== get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    		.= $this->sidebar_single_column;
-		$attr['class']    		.= "  sidebar-{$context}";
-	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    		.= $this->sidebar_sidebar_right;
-		$attr['class']    		.= "  sidebar-{$context}";
-	elseif ( '2c-r' 	== get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    		.= $this->sidebar_sidebar_left;
-		$attr['class']    		.= "  sidebar-{$context}";
-	endif;
+		if ( empty( $context ) ) {
+			return $attr;
+		}
 
-	if ( 'footer-widgets' === $context ) :
+		$attr['class']    		.= " sidebar-{$context}";
+
+	if ( 'primary' === $context ) {
+		if ( '1c'		== get_theme_mod( 'theme_layout' ) ) :
+			$attr['class']	.= $this->sidebar_single_column;
+		elseif ( '2c-l'	== get_theme_mod( 'theme_layout' ) ) :
+			$attr['class']	.= $this->sidebar_sidebar_right;
+		elseif ( '2c-r'	== get_theme_mod( 'theme_layout' ) ) :
+			$attr['class']	.= $this->sidebar_sidebar_left;
+		endif;
+	}
+
+	if ( 'footer' === $context ) {
 		$attr['class']    .= $this->sidebar_footer;
-	endif;
+	}
 		return $attr;
 	}
 
 	public function menu( $attr, $context ) {
+		if ( empty( $context ) ) {
+			return $attr;
+		}
 		$attr['class']    .= " menu-{$context}";
 		$attr['class']    .= $this->menu;
 		return $attr;

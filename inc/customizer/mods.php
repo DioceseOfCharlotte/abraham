@@ -8,8 +8,6 @@
 
 add_action( 'wp_enqueue_scripts', 'abraham_custom_fonts' );
 
-add_action('wp_head','abraham_touch_icon');
-
 add_action( 'customize_controls_init', 'abraham_customize_css' );
 
 add_action( 'admin_print_styles', 'abraham_admin_styles' );
@@ -34,24 +32,6 @@ function abraham_custom_fonts() {
 
 
 
-
-/**
- * Apple touch icon.
- */
-function abraham_touch_icon() {
-
-	if ( get_theme_mod( 'logo-apple-touch', 0 ) ) {
-		$output = '<link rel="apple-touch-icon" href="' . esc_url( get_theme_mod( 'logo-apple-touch' ) ) . '">';
-
-	echo $output;
-	}
-
-	if ( get_theme_mod( 'logo-favicon', 0 ) ) {
-		$output = '<link rel="Shortcut Icon" href="' . esc_url( get_theme_mod( 'logo-favicon' ) ) . '">';
-
-	echo $output;
-	}
-}
 
 /**
  * Adds visual selectors for the layout option in the Theme Customizer.

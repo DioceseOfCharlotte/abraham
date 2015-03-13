@@ -39,8 +39,8 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
 	// Default settings
 	var defaults = {
-		toggleActiveClass: 'is-active',
-		contentActiveClass: 'is-active',
+		toggleActiveClass: 'active',
+		contentActiveClass: 'active',
 		initClass: 'js-drop',
 		callbackBefore: function () {},
 		callbackAfter: function () {}
@@ -301,16 +301,16 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
   var footer = querySelector('.site-footer');
 
   function closeMenu() {
-    body.classList.remove('is-open');
-    appbarElement.classList.remove('is-open');
-    navdrawerContainer.classList.remove('is-open');
+    body.classList.remove('open');
+    appbarElement.classList.remove('open');
+    navdrawerContainer.classList.remove('open');
   }
 
   function toggleMenu() {
-    body.classList.toggle('is-open');
-    appbarElement.classList.toggle('is-open');
-    navdrawerContainer.classList.toggle('is-open');
-    navdrawerContainer.classList.add('has-opened');
+    body.classList.toggle('open');
+    appbarElement.classList.toggle('open');
+    navdrawerContainer.classList.toggle('open');
+    navdrawerContainer.classList.add('opened');
   }
 
   footer.addEventListener('click', closeMenu);

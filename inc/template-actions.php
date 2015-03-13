@@ -77,27 +77,35 @@ function abraham_tiny_mce_formats( $args ) {
 				'items'    => array(
 					array(
 						'title'    => __( 'Download', 'abraham-library' ),
-						'selector' => 'a',
+						'inline' => 'a',
 						'classes'  => 'button button--download',
-						'exact'    => true,
+						'attributes' => array(
+					    	'href' => '#',
+						),
 					),
 					array(
 						'title'    => __( 'Information', 'abraham-library' ),
-						'selector' => 'a',
+						'inline' => 'a',
 						'classes'  => 'button button--info',
-						'exact'    => true,
+						'attributes' => array(
+					    	'href' => '#',
+						),
 					),
 					array(
 						'title'    => __( 'External Link', 'abraham-library' ),
-						'selector' => 'a',
+						'inline' => 'a',
 						'classes'  => 'button button--link-ext',
-						'exact'    => true,
+						'attributes' => array(
+					    	'href' => '#',
+						),
 					),
 					array(
 						'title'    => __( 'Donate', 'abraham-library' ),
-						'selector' => 'a',
+						'inline' => 'a',
 						'classes'  => 'button button--donate',
-						'exact'    => true,
+						'attributes' => array(
+					    	'href' => '#',
+						),
 					),
 				),
 			),

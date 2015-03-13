@@ -17,16 +17,16 @@
   var footer = querySelector('.site-footer');
 
   function closeMenu() {
-    body.classList.remove('open');
-    appbarElement.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
+    body.classList.remove('is-open');
+    appbarElement.classList.remove('is-open');
+    navdrawerContainer.classList.remove('is-open');
   }
 
   function toggleMenu() {
-    body.classList.toggle('open');
-    appbarElement.classList.toggle('open');
-    navdrawerContainer.classList.toggle('open');
-    navdrawerContainer.classList.add('opened');
+    body.classList.toggle('is-open');
+    appbarElement.classList.toggle('is-open');
+    navdrawerContainer.classList.toggle('is-open');
+    navdrawerContainer.classList.add('has-opened');
   }
 
   footer.addEventListener('click', closeMenu);

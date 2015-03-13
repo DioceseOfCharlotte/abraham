@@ -26,35 +26,35 @@ function customizer_library_abraham_options() {
 	$options['sections'] = $sections;
 
 	// Logo
-	$section = 'logo';
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Brand Assets', 'abraham' ),
-		'priority' => '20'
-	);
-	$options['logo'] = array(
-		'id' => 'logo',
-		'label'   => __( 'Logo', 'abraham' ),
-		'section' => $section,
-		'type'    => 'upload',
-		'default' => '',
-	);
-	$options['logo-favicon'] = array(
-		'id' => 'logo-favicon',
-		'label'   => __( 'Favicon', 'abraham' ),
-		'section' => $section,
-		'type'    => 'upload',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'abraham' ),
-	);
-	$options['logo-apple-touch'] = array(
-		'id' => 'logo-apple-touch',
-		'label'   => __( 'Apple Touch Icon', 'abraham' ),
-		'section' => $section,
-		'type'    => 'upload',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'abraham' ),
-	);
+	// $section = 'logo';
+	// $sections[] = array(
+	// 	'id' => $section,
+	// 	'title' => __( 'Brand Assets', 'abraham' ),
+	// 	'priority' => '20'
+	// );
+	// $options['logo'] = array(
+	// 	'id' => 'logo',
+	// 	'label'   => __( 'Logo', 'abraham' ),
+	// 	'section' => $section,
+	// 	'type'    => 'upload',
+	// 	'default' => '',
+	// );
+	// $options['logo-favicon'] = array(
+	// 	'id' => 'logo-favicon',
+	// 	'label'   => __( 'Favicon', 'abraham' ),
+	// 	'section' => $section,
+	// 	'type'    => 'upload',
+	// 	'default' => '',
+	// 	'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'abraham' ),
+	// );
+	// $options['logo-apple-touch'] = array(
+	// 	'id' => 'logo-apple-touch',
+	// 	'label'   => __( 'Apple Touch Icon', 'abraham' ),
+	// 	'section' => $section,
+	// 	'type'    => 'upload',
+	// 	'default' => '',
+	// 	'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'abraham' ),
+	// );
 
 	// Colors
 	$section = 'colors';
