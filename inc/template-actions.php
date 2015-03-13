@@ -1,11 +1,26 @@
 <?php
+/**
+ * Some random stuff.
+ *
+ * @package Abraham
+ */
+
+// Add additional styles to the Flagship styleselect dropdown button.
+add_filter( 'tiny_mce_before_init', 'abraham_tiny_mce_formats', 99 );
 
 //add_action( 'tha_entry_before', 'abraham_do_format_icon' );
+
+
+
 
 function abraham_do_format_icon() { ?>
 <span class="entry-format"><?php abe_post_format_link(); ?></span>
 <?php
 }
+
+
+
+
 /**
  * Outputs an svg link to the post format archive.
  *
@@ -16,6 +31,10 @@ function abraham_do_format_icon() { ?>
 function abe_post_format_link() {
 	echo abe_get_post_format_link();
 }
+
+
+
+
 /**
  * Generates a link to the current post format's archive.  If the post doesn't have a post format, the link
  * will go to the post permalink.
@@ -30,6 +49,8 @@ function abe_get_post_format_link() {
 	$url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
 	return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ) );
 }
+
+
 
 
 /**
@@ -49,19 +70,8 @@ function abraham_get_default_footer_text() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-add_filter( 'tiny_mce_before_init', 'abraham_tiny_mce_formats', 99 );
 /**
- * Add our custom styles to the Flagship styleselect dropdown button.
+ * Add some custom styles to the Flagship styleselect dropdown button.
  *
  * @since  0.2.0
  * @access public
@@ -71,89 +81,90 @@ add_filter( 'tiny_mce_before_init', 'abraham_tiny_mce_formats', 99 );
  */
 function abraham_tiny_mce_formats( $args ) {
 	$abraham_formats = apply_filters( 'abraham_tiny_mce_formats',
-		array(
-			array(
-				'title'    => __( 'Icon Buttons', 'abraham-library' ),
-				'items'    => array(
-					array(
-						'title'    => __( 'Download', 'abraham-library' ),
-						'inline' => 'a',
-						'classes'  => 'button button--download',
-						'attributes' => array(
-					    	'href' => '#',
-						),
-					),
-					array(
-						'title'    => __( 'Information', 'abraham-library' ),
-						'inline' => 'a',
-						'classes'  => 'button button--info',
-						'attributes' => array(
-					    	'href' => '#',
-						),
-					),
-					array(
-						'title'    => __( 'External Link', 'abraham-library' ),
-						'inline' => 'a',
-						'classes'  => 'button button--link-ext',
-						'attributes' => array(
-					    	'href' => '#',
-						),
-					),
-					array(
-						'title'    => __( 'Donate', 'abraham-library' ),
-						'inline' => 'a',
-						'classes'  => 'button button--donate',
-						'attributes' => array(
-					    	'href' => '#',
-						),
-					),
-				),
-			),
-			array(
-				'title'    => __( 'Alert', 'abraham-library' ),
-				'items'    => array(
-				array(
-					'title'    => __( 'Information', 'abraham-library' ),
-					'block'    => 'div',
-					'classes'  => 'panel panel--info',
-					'wrapper'  => true,
-					'exact'    => true,
-				),
-				array(
-					'title'    => __( 'Warning', 'abraham-library' ),
-					'block'    => 'div',
-					'classes'  => 'panel panel--warning',
-					'wrapper'  => true,
-					'exact'    => true,
-				),
-				array(
-					'title'    => __( 'Important', 'abraham-library' ),
-					'block'    => 'div',
-					'classes'  => 'panel panel--important',
-					'wrapper'  => true,
-					'exact'    => true,
-				),
-				),
-			),
-			array(
-				'title'    => __( 'Citation', 'abraham-library' ),
-				'block'    => 'cite',
-				'classes'  => 'cite',
-			),
-			array(
-				'title'    => __( 'Text Highlight', 'abraham-library' ),
-				'inline' => 'span',
-				'classes'  => 'text-highlight',
-				'exact'    => true,
-			),
-			array(
-				'title'    => __( 'Text Grey', 'abraham-library' ),
-				'inline' => 'span',
-				'classes'  => 'text-grey',
-				'exact'    => true,
-			),
-		)
+		[
+			[
+				'title'	=> __( 'Icon Buttons', 'abraham-library' ),
+				'items'	=> [
+					[
+						'title'			=> __( 'Download', 'abraham-library' ),
+						'inline'		=> 'a',
+						'classes'  		=> 'button button--download',
+						'attributes'	=> [
+					    	'href'	=> '#',
+						],
+					],
+					[
+						'title'			=> __( 'Information', 'abraham-library' ),
+						'inline' 		=> 'a',
+						'classes'		=> 'button button--info',
+						'attributes'	=> [
+					    	'href'	=> '#',
+						],
+					],
+					[
+						'title'    		=> __( 'External Link', 'abraham-library' ),
+						'inline' 		=> 'a',
+						'classes'  		=> 'button button--link-ext',
+						'attributes'	=> [
+					    	'href'	=> '#',
+						],
+					],
+					[
+						'title'    		=> __( 'Donate', 'abraham-library' ),
+						'inline' 		=> 'a',
+						'classes'  		=> 'button button--donate',
+						'attributes'	=> [
+					    	'href'	=> '#',
+						],
+					],
+				],
+			],
+			[
+				'title'	=> __( 'Alert', 'abraham-library' ),
+				'items'	=> [
+					[
+						'title'		=> __( 'Information', 'abraham-library' ),
+						'block'		=> 'div',
+						'classes'	=> 'panel panel--info',
+						'wrapper'	=> true,
+						'exact'		=> true,
+					],
+					[
+						'title'		=> __( 'Warning', 'abraham-library' ),
+						'block'		=> 'div',
+						'classes'	=> 'panel panel--warning',
+						'wrapper'	=> true,
+						'exact'		=> true,
+					],
+					[
+						'title'		=> __( 'Important', 'abraham-library' ),
+						'block'		=> 'div',
+						'classes'	=> 'panel panel--important',
+						'wrapper'	=> true,
+						'exact'		=> true,
+					],
+				],
+			],
+			[
+				'title'		=> __( 'Citation', 'abraham-library' ),
+				'block'		=> 'cite',
+				'classes'	=> 'cite',
+			],
+			[
+				'title'		=> __( 'Text Highlight', 'abraham-library' ),
+				'inline'	=> 'span',
+				'classes'	=> 'text-highlight',
+				'exact'		=> true,
+			],
+			[
+				'title'		=> __( 'Text Grey', 'abraham-library' ),
+				'inline'	=> 'span',
+				'classes'	=> 'text-grey',
+				'exact'		=> true,
+			],
+		]
 	);
+
 	// Merge with any existing formats which have been added by plugins.
 	if ( ! empty( $args['style_formats'] ) ) {
 		$existing_formats = json_decode( $args['style_formats'] );

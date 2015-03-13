@@ -34,7 +34,15 @@
 
 	<article <?php hybrid_attr( 'post' ); ?>>
 
-		<?php get_the_image( array( 'size' => 'full', 'order' => array( 'featured', 'attachment' ) ) ); ?>
+		<?php
+			get_the_image( [
+				'size' => 'full',
+				'order' => [
+					'featured',
+					'attachment'
+				]
+			] );
+		?>
 
 		<?php get_template_part( 'partials/archive', 'header' ); ?>
 

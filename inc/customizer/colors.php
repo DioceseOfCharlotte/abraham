@@ -5,6 +5,7 @@
  * @package abraham
  */
 
+
 function color_inverse($color){
     $color = str_replace('#', '', $color);
     if (strlen($color) != 6){ return '000000'; }
@@ -16,6 +17,8 @@ function color_inverse($color){
     }
     return '#'.$rgb;
 }
+
+
 
 
 /**
@@ -40,6 +43,7 @@ function color_inverse($color){
  * License: Distributed under the terms of GNU General Public License
  * Copyright: Fikri Rasyid, http://fikrirasy.id
  */
+
 class Simple_Color_Adjuster{
 	/**
 	 * Method for lightening

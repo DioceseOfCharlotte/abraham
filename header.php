@@ -25,9 +25,7 @@
 
 			<div <?php hybrid_attr( 'branding' ); ?>>
 				<button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false"><span></span></button>
-
 				<?php flagship_the_logo(); ?>
-
 				<?php hybrid_site_title(); ?>
 				<?php hybrid_site_description(); ?>
 			</div><!-- .site-branding -->

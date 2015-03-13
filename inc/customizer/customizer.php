@@ -24,12 +24,12 @@ require get_template_directory() . '/inc/customizer/mods.php';
 
 else :
 
-add_action( 'customizer-library-notices', 'demo_customizer_library_notice' );
+add_action( 'customizer-library-notices', 'abraham_customizer_library_notice' );
 
 endif;
 
-function demo_customizer_library_notice() {
+function abraham_customizer_library_notice() {
 
-	_e( '<p>Notice: The "customizer-library" sub-module is not loaded.</p><p>Please add it to the "inc" directory: <a href="https://github.com/devinsays/customizer-library">https://github.com/devinsays/customizer-library</a>.</p><p>The demo, including submodules, can also be installed via Git: "git clone --recursive git@github.com:devinsays/customizer-library-demo".</p>', 'demo' );
+	_e( '<p>Notice: The "customizer-library" sub-module is not loaded.</p><p>Please add it to the "inc" directory: <a href="https://github.com/devinsays/customizer-library">https://github.com/devinsays/customizer-library</a>.</p>', 'abraham' );
 
 }

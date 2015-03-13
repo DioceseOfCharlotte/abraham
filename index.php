@@ -7,12 +7,12 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area">
+	<div id="primary" class="content-area">
 
 <?php
 tha_content_before(); ?>
 
-  	<main <?php hybrid_attr( 'content' ); ?>>
+  		<main <?php hybrid_attr( 'content' ); ?>>
 
 <?php
 tha_content_top();
@@ -33,7 +33,7 @@ tha_content_top();
 
   					get_template_part( 'partials/post', 'nav' );
 
-  				  comments_template('/content/comments.php');
+					comments_template('/content/comments.php');
 
   				endif; // End check for single post.
 
@@ -50,12 +50,12 @@ tha_content_top();
 tha_content_bottom();
 ?>
 
-  	</main><!-- #main -->
+  		</main><!-- #main -->
 
 <?php
 tha_content_after(); ?>
 
-  </div><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php
 get_footer();

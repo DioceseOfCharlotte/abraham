@@ -3,8 +3,12 @@
  * @package Abraham
  */
 
+
 /* Call late so child themes can override. */
 add_action( 'after_setup_theme', 'abraham_custom_background_setup', 15 );
+
+
+
 
 /**
  * Adds support for the WordPress 'custom-background' theme feature.
@@ -25,6 +29,9 @@ function abraham_custom_background_setup() {
 		]
 	);
 }
+
+
+
 
 /**
  * This is a fix for when a user sets a custom background color with no custom background image.  What
@@ -59,9 +66,8 @@ function abraham_custom_background_callback() {
 
 	/* Use 'background' instead of 'background-color'. */
 	$style = "background: #{$color};";
-
 ?>
+
 <style type="text/css" id="custom-background-css">body.custom-background { <?php echo trim( $style ); ?> }</style>
 <?php
-
 }

@@ -20,15 +20,17 @@ tha_comments_before(); ?>
 		<h3 id="comments-number"><?php comments_number(); ?></h3>
 
 		<ol class="comment-list">
-			<?php wp_list_comments(
-				array(
-					'style'        => 'ol',
-					'type'         => 'all',
-					'avatar_size'  => 80,
-					'callback'     => 'hybrid_comments_callback',
-					'end-callback' => 'hybrid_comments_end_callback'
-				)
-			); ?>
+			<?php
+				wp_list_comments(
+					[
+						'style'        => 'ol',
+						'type'         => 'all',
+						'avatar_size'  => 80,
+						'callback'     => 'hybrid_comments_callback',
+						'end-callback' => 'hybrid_comments_end_callback'
+					]
+				);
+			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -57,11 +59,11 @@ tha_comments_before(); ?>
 
 	<?php endif; ?>
 
-	<?php comment_form(
-		array(
-			  'comment_notes_after'  => '<div class="form-allowed-tags" id="form-allowed-tags"><input type="checkbox" class="form-allowed__input" id="form-tags"><p class="form-allowed__label-wrap"><label class="form-allowed__label" for="form-tags"> Use HTML in your comment</label></p>' . sprintf( __( '<p class="form-allowed__code">You may use these tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p></div>',
-    )
-	); ?>
+	<?php
+		comment_form( [
+			'comment_notes_after'  => '<div class="form-allowed-tags" id="form-allowed-tags"><input type="checkbox" class="form-allowed__input" id="form-tags"><p class="form-allowed__label-wrap"><label class="form-allowed__label" for="form-tags"> Use HTML in your comment</label></p>' . sprintf( __( '<p class="form-allowed__code">You may use these tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p></div>',
+	    ] );
+	?>
 
 </section><!-- #comments -->
 

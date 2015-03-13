@@ -6,8 +6,12 @@
  * @package Abraham
  */
 
+
 /* Call late so child themes can override. */
 add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
+
+
+
 
 /**
  * Set up the WordPress core custom header feature.
@@ -28,6 +32,9 @@ function abraham_custom_header_setup() {
   	]
 	) );
 }
+
+
+
 
 if ( ! function_exists( 'abraham_header_style' ) ) :
 /**

@@ -5,6 +5,9 @@
  * @package abraham
  */
 
+add_action( 'init', 'customizer_library_abraham_options' );
+
+
 function customizer_library_abraham_options() {
 
 	// Theme defaults
@@ -14,116 +17,85 @@ function customizer_library_abraham_options() {
 	$heading_font		= 'Raleway';
 
 	// Stores all the controls that will be added
-	$options = array();
+	$options = [];
 
 	// Stores all the sections to be added
-	$sections = array();
+	$sections = [];
 
 	// Stores all the panels to be added
-	$panels = array();
+	$panels = [];
 
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
 
-	// Logo
-	// $section = 'logo';
-	// $sections[] = array(
-	// 	'id' => $section,
-	// 	'title' => __( 'Brand Assets', 'abraham' ),
-	// 	'priority' => '20'
-	// );
-	// $options['logo'] = array(
-	// 	'id' => 'logo',
-	// 	'label'   => __( 'Logo', 'abraham' ),
-	// 	'section' => $section,
-	// 	'type'    => 'upload',
-	// 	'default' => '',
-	// );
-	// $options['logo-favicon'] = array(
-	// 	'id' => 'logo-favicon',
-	// 	'label'   => __( 'Favicon', 'abraham' ),
-	// 	'section' => $section,
-	// 	'type'    => 'upload',
-	// 	'default' => '',
-	// 	'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'abraham' ),
-	// );
-	// $options['logo-apple-touch'] = array(
-	// 	'id' => 'logo-apple-touch',
-	// 	'label'   => __( 'Apple Touch Icon', 'abraham' ),
-	// 	'section' => $section,
-	// 	'type'    => 'upload',
-	// 	'default' => '',
-	// 	'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'abraham' ),
-	// );
-
 	// Colors
 	$section = 'colors';
 
-	$sections[] = array(
+	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Colors', 'abraham' ),
 		'priority' => '80'
-	);
+	];
 
-	$options['primary-color'] = array(
+	$options['primary-color'] = [
 		'id' => 'primary-color',
 		'label'   => __( 'Primary Color', 'abraham' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $primary_color,
-	);
+	];
 
-	$options['secondary-color'] = array(
+	$options['secondary-color'] = [
 		'id' => 'secondary-color',
 		'label'   => __( 'Secondary Color', 'abraham' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $secondary_color,
-	);
+	];
 
 	// Typography
 	$section = 'typography';
 	$font_choices = customizer_library_get_font_choices();
 
-	$sections[] = array(
+	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Typography', 'abraham' ),
 		'priority' => '80'
-	);
+	];
 
-	$options['primary-font'] = array(
+	$options['primary-font'] = [
 		'id' => 'primary-font',
 		'label'   => __( 'Body Font', 'abraham' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
 		'default' => $body_font
-	);
+	];
 
-	$options['secondary-font'] = array(
+	$options['secondary-font'] = [
 		'id' => 'secondary-font',
 		'label'   => __( 'Heading Font', 'abraham' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
 		'default' => $heading_font
-	);
+	];
 
 	// Decorations
 	$section = 'decorations';
 
-	$sections[] = array(
+	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Decorations', 'abraham' ),
 		'priority' => '80'
-	);
+	];
 
-	$card_choices = array(
+	$card_choices = [
 	    'card-choice-1' => 'Show Cards',
 	    'card-choice-2' => 'Do Not Show Cards'
-	);
+	];
 
-	$options['cards'] = array(
+	$options['cards'] = [
 		'id' => 'cards',
 		'label'   => __( 'Content Cards', 'abraham' ),
 		'section' => $section,
@@ -131,14 +103,14 @@ function customizer_library_abraham_options() {
 		'choices' => $card_choices,
     	'default' => 'card-choice-1',
 		'description'  => __( 'Displays articles and widgets as blocks of content.', 'abraham' ),
-	);
+	];
 
-	$shadow_choices = array(
+	$shadow_choices = [
 	    'shadow-choice-1' => 'Shadows',
 	    'shadow-choice-2' => 'No Shadows'
-	);
+	];
 
-	$options['shadows'] = array(
+	$options['shadows'] = [
 		'id' => 'shadows',
 		'label'   => __( 'Card Shadows', 'abraham' ),
 		'section' => $section,
@@ -146,22 +118,22 @@ function customizer_library_abraham_options() {
 		'choices' => $shadow_choices,
     	'default' => 'shadow-choice-1',
 		'description'  => __( 'Shows shadows behind the cards.', 'abraham' ),
-	);
+	];
 
 	// Footer Settings
 	$section = 'footer';
-	$sections[] = array(
+	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Footer', 'abraham' ),
 		'priority' => '100'
-	);
-	$options['footer-text'] = array(
+	];
+	$options['footer-text'] = [
 		'id' => 'footer-text',
 		'label'   => __( 'Footer Text', 'abraham' ),
 		'section' => $section,
 		'type'    => 'textarea',
 		'default' => abraham_get_default_footer_text(),
-	);
+	];
 
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
@@ -175,4 +147,3 @@ function customizer_library_abraham_options() {
 	// To delete custom mods use: customizer_library_remove_theme_mods();
 
 }
-add_action( 'init', 'customizer_library_abraham_options' );

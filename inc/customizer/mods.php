@@ -2,7 +2,7 @@
 /**
  * Functions used to implement options
  *
- * @package Customizer Library Demo
+ * @package Abraham
  */
 
 
@@ -12,21 +12,24 @@ add_action( 'customize_controls_init', 'abraham_customize_css' );
 
 add_action( 'admin_print_styles', 'abraham_admin_styles' );
 
+
+
+
 /**
- * Enqueue Google Fonts Example.
+ * Enqueue Google Fonts.
  */
 function abraham_custom_fonts() {
 
 	// Font options
-	$fonts = array(
+	$fonts = [
 		get_theme_mod( 'primary-font', customizer_library_get_default( 'primary-font' ) ),
 		get_theme_mod( 'secondary-font', customizer_library_get_default( 'secondary-font' ) )
-	);
+	];
 
 	$font_uri = customizer_library_get_google_font_uri( $fonts );
 
 	// Load Google Fonts
-	wp_enqueue_style( 'abraham_custom_fonts', $font_uri, array(), null, 'screen' );
+	wp_enqueue_style( 'abraham_custom_fonts', $font_uri, [], null, 'screen' );
 
 }
 
@@ -72,6 +75,9 @@ function abraham_customize_css() { ?>
 		}
 	</style>
 <?php }
+
+
+
 
 /**
  * Adds visual selectors for the layout option in the Post Admin.

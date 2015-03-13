@@ -6,14 +6,17 @@
  */
 
 
-
-
-// Include Hybrid Core.
+/* Include Hybrid Core. */
 require_once( trailingslashit( get_template_directory() ) . 'hybrid/hybrid.php' );
 new Hybrid();
 
 /* Set up the theme early. */
 add_action( 'after_setup_theme', 'abraham_setup', 5 );
+
+/* Require included files early too. */
+add_action( 'after_setup_theme', 'abraham_includes', 10 );
+
+
 
 
 /**
@@ -22,12 +25,11 @@ add_action( 'after_setup_theme', 'abraham_setup', 5 );
 function abraham_setup() {
 
 	/* Remove unwanted default Hybrid head elements. */
-remove_action( 'wp_head', 'hybrid_meta_template', 1 );
-remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
-remove_action( 'wp_head', 'wlwmanifest_link');
-remove_action( 'wp_head', 'wp_generator', 1);
-remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0);
-remove_action( 'wp_head', 'rsd_link');
+	remove_action( 'wp_head', 'hybrid_link_pingback', 3 );
+	remove_action( 'wp_head', 'wlwmanifest_link');
+	remove_action( 'wp_head', 'wp_generator', 1);
+	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0);
+	remove_action( 'wp_head', 'rsd_link');
 
 	// http://themehybrid.com/docs/hybrid_set_content_width
 	hybrid_set_content_width( 1140 );
@@ -38,6 +40,7 @@ remove_action( 'wp_head', 'rsd_link');
 	/* The best thumbnail/image script ever. */
 	add_theme_support( 'get-the-image' );
 
+	/* Display a logo in the header. */
 	add_theme_support( 'site-logo' );
 
 	/* Breadcrumbs. */
@@ -53,24 +56,36 @@ remove_action( 'wp_head', 'rsd_link');
 	add_theme_support( 'post-stylesheets' );
 
 	/* Theme layouts. */
-	add_theme_support( 'theme-layouts', [
-			'1c'    => __( 'Single Column', 'abraham' ),
-			'2c-l'  => __( 'Sidebar Right', 'abraham' ),
-			'2c-r'  => __( 'Sidebar Left', 'abraham' )
+	add_theme_support(
+		'theme-layouts',
+		[
+			'1c-narrow' => __( 'Single Column', 'abraham' ),
+			'1c'    	=> __( 'Single Wide', 'abraham' ),
+			'2c-l'  	=> __( 'Sidebar Right', 'abraham' ),
+			'2c-r'  	=> __( 'Sidebar Left', 'abraham' )
 		],
 		[ 'default' => '2c-l' ]
 	);
 
 	/* Post Formats. */
-	add_theme_support( 'post-formats', [
-		'aside', 'audio', 'gallery', 'image', 'link', 'quote', 'status',
-		'video'
-	] );
+	add_theme_support(
+		'post-formats',
+		[
+			'aside',
+			'audio',
+			'gallery',
+			'image',
+			'link',
+			'quote',
+			'status',
+			'video',
+		]
+	);
 }
 
 
 
-add_action( 'after_setup_theme', 'abraham_includes', 10 );
+
 /**
  * Load all required theme files.
  *
@@ -78,10 +93,10 @@ add_action( 'after_setup_theme', 'abraham_includes', 10 );
  * @return  void
  */
 function abraham_includes() {
-/* Get the template directory and make sure it has a trailing slash. */
-$includes_dir = trailingslashit( get_template_directory() ) . 'inc/';
 
 /* Load theme files. */
+$includes_dir = trailingslashit( get_template_directory() ) . 'inc/';
+
 require_once $includes_dir . 'init.php';
 require_once $includes_dir . 'assets.php';
 require_once $includes_dir . 'general.php';
