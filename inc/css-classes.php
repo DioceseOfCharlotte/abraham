@@ -12,12 +12,14 @@ class Doc_Attributes {
 	public $body                  	= '';	// get_body_class()
 	public $header                	= ' t-primary-base'; 	// site-header
 	public $footer                	= ' t-secondary-base'; 	// site-footer
+	public $content_full_width	= ''; 	// content
 	public $content_single_column 	= ''; 	// content
 	public $content_sidebar_right 	= ''; 	// content
 	public $content_sidebar_left 	= ''; 	// content
+	public $sidebar_full_width  	= '';	// sidebar sidebar__{$context}
 	public $sidebar_single_column  	= '';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_right 	= ' ';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_left	= ' ';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_right 	= '';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left	= '';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = '';	// sidebar sidebar__{$context}
 	public $menu                  	= ' t-primary-dark';	// menu menu-{$context}
 	public $menu_li_primary         = 'menu-primary__item';	// menu-item
@@ -100,6 +102,9 @@ class Doc_Attributes {
 
 	public function content( $attr ) {
 	if ( '1-c' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->content_full_width;
+
+	elseif ( '1c-narrow' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_single_column;
 
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
@@ -121,7 +126,10 @@ class Doc_Attributes {
 		$attr['class']		.= " sidebar-{$context}";
 
 		if ( 'primary' === $context ) {
-			if ( '1c'		== get_theme_mod( 'theme_layout' ) ) :
+			if ( '1c'	== get_theme_mod( 'theme_layout' ) ) :
+				$attr['class']	.= $this->sidebar_full_width;
+
+			elseif ( '1c-narrow'	== get_theme_mod( 'theme_layout' ) ) :
 				$attr['class']	.= $this->sidebar_single_column;
 
 			elseif ( '2c-l'	== get_theme_mod( 'theme_layout' ) ) :
