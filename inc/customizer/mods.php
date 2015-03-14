@@ -42,8 +42,20 @@ function abraham_custom_fonts() {
 function abraham_customize_css() { ?>
 
 	<style type="text/css">
+		#customize-control-theme-layout-control input[value="1c-narrow"]:before {
+			content: "\f134";
+		}
 		#customize-control-theme-layout-control input[value="1c"]:before {
 			content: "\f134";
+		}
+		#customize-control-theme-layout-control input[value="1c"]:after {
+			  content: " ";
+			  width: 22px;
+			  height: 10px;
+			  background: #ddd;
+			  position: absolute;
+			  top: -6px;
+			  left: 5px;
 		}
 		#customize-control-theme-layout-control input[value="2c-l"]:before {
 			content: "\f135";
@@ -60,6 +72,7 @@ function abraham_customize_css() { ?>
 			line-height: 0;
 			height: 0;
 			width: 0;
+			position: relative;
 		}
 		#customize-control-theme-layout-control input[type=radio]:checked:before {
 			color: #888;
@@ -88,8 +101,20 @@ function abraham_admin_styles() {
 		#theme-layouts-post-meta-box input[value=default]:before {
 			content: "\f159";
 		}
+		#theme-layouts-post-meta-box input[value="1c-narrow"]:before {
+			content: "\f134";
+		}
 		#theme-layouts-post-meta-box input[value="1c"]:before {
 			content: "\f134";
+		}
+		#theme-layouts-post-meta-box input[value="1c"]:after {
+			  content: " ";
+			  width: 22px;
+			  height: 10px;
+			  background: #ddd;
+			  position: absolute;
+			  top: -6px;
+			  left: 5px;
 		}
 		#theme-layouts-post-meta-box input[value="2c-l"]:before {
 			content: "\f135";
@@ -106,6 +131,7 @@ function abraham_admin_styles() {
 			line-height: 0;
 			height: 0;
 			width: 0;
+			position: relative;
 		}
 		#theme-layouts-post-meta-box input[type=radio]:checked:before {
 			color: #888;
