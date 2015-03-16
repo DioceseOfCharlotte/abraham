@@ -77,7 +77,7 @@ class Flagship_Author_Box_Admin {
 		if ( '' === $single_box ) {
 			$single_box = 1;
 		}
-		require_once flagship_library()->get_library_directory() . '/templates/admin/settings-author-box.php';
+		require_once flagship_library()->dir . 'templates/admin/settings-author-box.php';
 	}
 
 	/**

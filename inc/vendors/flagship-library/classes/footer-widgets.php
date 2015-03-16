@@ -117,6 +117,6 @@ class Flagship_Footer_Widgets {
 		if ( '' !== locate_template( 'flagship/footer-widgets.php' ) ) {
 			return require_once locate_template( 'flagship/footer-widgets.php' );
 		}
-		require_once flagship_library()->get_library_directory() . '/templates/footer-widgets.php';
+		require_once flagship_library()->dir . 'templates/footer-widgets.php';
 	}
 }

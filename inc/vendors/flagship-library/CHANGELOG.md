@@ -1,5 +1,26 @@
 # Changelog for Flagship Library
 
+## 1.4.1
+
+- Fixed a fatal error by making Flagship_Library::$dir public rather than protected.
+- Fixed an undefined variable in the author box admin settings.
+
+## 1.4.0
+
+This is a fairly significant update. The entire library structure was rewritten, primarily to reduce the overall memory footprint of the library. Backwards compatibility has been maintained, but quite a few functions have been deprecated and replaced. You'll find them in the `functions/deprecated.php` file and you can expect them to be removed sometime in the near future. Many of these functions were deprecated because of internal refactoring, but some were removed because new functions in Hybrid Core 2.1.0 will be replacing them. You shouldn't notice any significant changes in functionality for existing features and extensions. It should be noted that it's no longer necessary to `add_theme_support( 'title-tag' )` as Hybrid Core 2.1.0 will add it by default.
+
+In addition to cleanup and refactoring, this release also added a custom format selector for the WordPress editor, a new Author Box extension and improved the way our template files are handled in existing extensions. Moving forward, any part of the library which handles front-end output will use a default template which can be overridden by moving it into your theme or child theme within a `flagship` directory. For more specific instructions about this, see the template files themselves in the `templates` directory. We've also added a few new helper functions which are as follows:
+
+- flagship_customizer_link
+- flagship_get_customizer_link
+- flagship_credit_link
+- flagship_add_menu_atts
+- flagship_add_styleselect
+- flagship_disable_styleselect
+- flagship_tiny_mce_formats
+
+If you would like to use the new Author Box extension, you can `add_theme_support( 'flagship-author-box' )` in your theme's setup function. This will enable the display of author boxes on single posts by default but you can also have more granular control of the display of individual author's posts by editing their user profile from within the WordPress admin panel. For more information on the individual features and extensions, check the [Flagship Library wiki](https://github.com/FlagshipWP/flagship-library/wiki/).
+
 ## 1.3.0
 
 This is mostly a maintenance release, but it does add a few new features and improve some of our existing functions within the library. The following functions were added:

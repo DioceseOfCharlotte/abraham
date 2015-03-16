@@ -25,13 +25,13 @@ function flagship_load_favicon() {
 	$favicon = '';
 	$path    = 'images/favicon.ico';
 
-	// Use the child theme favicon if it exists.
-	if ( file_exists( trailingslashit( get_stylesheet_directory() ) . $path ) ) {
-		$favicon = trailingslashit( get_stylesheet_directory_uri() ) . $path;
-	}
 	// Fall back to the parent favicon if it exists.
 	if ( file_exists( trailingslashit( get_template_directory() ) . $path ) ) {
 		$favicon = trailingslashit( get_template_directory_uri() ) . $path;
+	}
+	// Use the child theme favicon if it exists.
+	if ( file_exists( trailingslashit( get_stylesheet_directory() ) . $path ) ) {
+		$favicon = trailingslashit( get_stylesheet_directory_uri() ) . $path;
 	}
 
 	// Allow developers to set a custom favicon file.

@@ -17,8 +17,6 @@
  */
 class Flagship_Author_Box {
 
-	protected $lib_dir;
-
 	/**
 	 * Get our class up and running!
 	 *
@@ -28,7 +26,6 @@ class Flagship_Author_Box {
 	 * @return void
 	 */
 	public function run() {
-		$this->lib_dir = flagship_library()->get_library_directory();
 		self::wp_hooks();
 	}
 
@@ -95,7 +92,7 @@ class Flagship_Author_Box {
 		if ( '' !== locate_template( 'flagship/author-box-single.php' ) ) {
 			return require_once locate_template( 'flagship/author-box-single.php' );
 		}
-		require_once $this->lib_dir . '/templates/author-box-single.php';
+		require_once flagship_library()->dir . 'templates/author-box-single.php';
 	}
 
 	/**
@@ -117,17 +114,11 @@ class Flagship_Author_Box {
 			return;
 		}
 
-		$types = apply_filters( 'flagship_author_box_types', array( 'post' ) );
-
-		if ( ! in_array( get_post_type(), (array) $types ) ) {
-			return;
-		}
-
 		// Use the theme's archive author box template if it exists.
 		if ( '' !== locate_template( 'flagship/author-box-archive.php' ) ) {
 			return require_once locate_template( 'flagship/author-box-archive.php' );
 		}
-		require_once $this->lib_dir . '/templates/author-box-archive.php';
+		require_once flagship_library()->dir . 'templates/author-box-archive.php';
 	}
 
 }

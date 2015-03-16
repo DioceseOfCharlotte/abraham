@@ -24,7 +24,7 @@
 				</label><br />
 
 				<label for="meta[flagship_author_box_archive]">
-					<input id="meta[flagship_author_box_archive]" name="meta[flagship_author_box_archive]" type="checkbox" value="1" <?php checked( $author_box ); ?> />
+					<input id="meta[flagship_author_box_archive]" name="meta[flagship_author_box_archive]" type="checkbox" value="1" <?php checked( $archive_box ); ?> />
 					<?php _e( 'Enable Author Box on this User\'s Archives?', 'flagship-library' ); ?>
 				</label>
 			</td>

@@ -108,7 +108,7 @@ function flagship_attr_menu_class( $attr, $context ) {
 /**
  * Add URL itemprop to WordPress menu items.
  *
- * @since  1.3.1
+ * @since  1.4.0
  * @access public
  * @param  $atts array Existing link attributes.
  * @return $atts array Amended comment attributes.
@@ -139,7 +139,7 @@ function flagship_attr_entry_summary_class( $attr ) {
  * Attributes for nav elements which aren't necessarily site navigation menus.
  * One example use case for this would be pagination and page link blocks.
  *
- * @since  2.0.0
+ * @since  1.3.0
  * @access public
  * @param  array   $attr
  * @param  string  $context

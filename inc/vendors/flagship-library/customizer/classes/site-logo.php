@@ -11,16 +11,19 @@
  * @link        https://flagshipwp.com/
  * @since       1.1.0
  */
+
 /**
  * Our Site Logo class for managing a theme-agnostic logo through the Customizer.
  *
  * @package FlagshipLibrary
  */
 class Flagship_Site_Logo extends Flagship_Customizer_Base {
+
 	/**
 	 * Stores our current logo settings.
 	 */
 	public $logo;
+
 	/**
 	 * Get our current logo settings stored in options.
 	 *
@@ -29,6 +32,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	public function __construct() {
 		$this->logo = get_option( 'site_logo', null );
 	}
+
 	/**
 	 * Return our instance, creating a new one if necessary.
 	 *
@@ -38,6 +42,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		parent::customizer_hooks();
 		self::wp_hooks();
 	}
+
 	/**
 	 * Register our actions and filters.
 	 *
@@ -55,6 +60,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		add_filter( 'display_media_states',    array( $this, 'add_media_state' ) );
 		add_filter( 'upload_mimes',            array( $this, 'add_svg_mime_type' ) );
 	}
+
 	/**
 	 * Add our logo uploader to the Customizer.
 	 *
@@ -66,12 +72,15 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	 * @uses Flagship_Site_Logo::sanitize_checkbox()
 	 */
 	public function register( $wp_customize ) {
+
 		//Update the Customizer section title for discoverability.
 		$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Tagline, and Logo', 'flagship-library' );
+
 		// Disable the display header text control from the custom header feature.
 		if ( current_theme_supports( 'custom-header' ) ) {
 			$wp_customize->remove_control( 'display_header_text' );
 		}
+
 		// Add a setting to hide header text.
 		$wp_customize->add_setting(
 			'site_logo_header_text',
@@ -81,6 +90,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 				'transport'         => 'postMessage',
 			)
 		);
+
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
@@ -93,6 +103,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 				)
 			)
 		);
+
 		// Add the setting for our logo value.
 		$wp_customize->add_setting(
 			'site_logo',
@@ -108,6 +119,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 				'type'              => 'option',
 			)
 		);
+
 		// Add our image uploader.
 		$wp_customize->add_control(
 			new Flagship_Site_Logo_Image_Control(
@@ -121,6 +133,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 			)
 		);
 	}
+
 	/**
 	 * Enqueue scripts for the Customizer live preview.
 	 *
@@ -132,6 +145,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	 */
 	public function scripts() {
 		$assets_uri = trailingslashit( flagship_library()->get_library_uri() ) . 'assets/';
+
 		wp_enqueue_script(
 			'site-logo-preview',
 			esc_url( $assets_uri ) . 'js/site-logo/preview.js',
@@ -147,6 +161,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 			true
 		);
 	}
+
 	/**
 	 * Hide header text on front-end if necessary.
 	 *
@@ -164,6 +179,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		add_filter( 'hybrid_attr_site-title',       array( $this, 'hide_text' ) );
 		add_filter( 'hybrid_attr_site-description', array( $this, 'hide_text' ) );
 	}
+
 	/**
 	 * Filter the attributes of our site title and description to hide them.
 	 *
@@ -176,6 +192,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		$attr['class'] = isset( $attr['class'] ) ? $attr['class'] .= ' screen-reader-text' : 'screen-reader-text';
 		return $attr;
 	}
+
 	/**
 	 * Reset the site logo if the current logo is deleted in the media manager.
 	 *
@@ -189,6 +206,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		}
 		$this->remove_site_logo();
 	}
+
 	/**
 	 * Adds custom classes to the array of body classes.
 	 *
@@ -200,8 +218,10 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		if ( $this->has_site_logo() ) {
 			$classes[] = 'has-site-logo';
 		}
+
 		return $classes;
 	}
+
 	/**
 	 * Make custom image sizes available to the media manager.
 	 *
@@ -212,6 +232,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	public function media_manager_image_sizes( $sizes ) {
 		// Get an array of all registered image sizes.
 		$intermediate = get_intermediate_image_sizes();
+
 		// Bail if we don't have any image sizes to work with.
 		if ( empty( $intermediate ) ) {
 			return;
@@ -222,8 +243,10 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 				$sizes[ $size ] = $size;
 			}
 		}
+
 		return $sizes;
 	}
+
 	/**
 	 * Add site logos to media states in the Media Manager.
 	 *
@@ -235,12 +258,14 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 			return $media_states;
 		}
 		global $post;
+
 		// If our attachment ID and the site logo ID match, this image is the site logo.
 		if ( $post->ID == $this->logo['id'] ) {
 			$media_states[] = __( 'Site Logo', 'flagship-library' );
 		}
 		return $media_states;
 	}
+
 	/**
 	 * Determine if a site logo is assigned or not.
 	 *
@@ -250,6 +275,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	public function has_site_logo() {
 		return ( isset( $this->logo['id'] ) && 0 !== $this->logo['id'] ) ? true : false;
 	}
+
 	/**
 	 * Reset the site logo option to zero (empty).
 	 *
@@ -264,6 +290,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 			)
 		);
 	}
+
 	/**
 	 * Retrieve the site logo URL or ID (URL by default). Pass in the string 'id' for ID.
 	 *
@@ -275,16 +302,20 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	 */
 	function get_site_logo( $format = 'url' ) {
 		$logo = $this->logo;
+
 		// Return false if no logo is set
 		if ( ! isset( $logo['id'] ) || 0 === absint( $logo['id'] ) ) {
 			return false;
 		}
+
 		// Return the ID if specified, otherwise return the URL by default
 		if ( 'id' === $format ) {
 			return $logo['id'];
 		}
+
 		return esc_url_raw( set_url_scheme( $logo['url'] ) );
 	}
+
 	/**
 	 * Output an <img> tag of the site logo, at the size specified
 	 * in the theme's add_theme_support() declaration.
@@ -303,6 +334,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	function the_site_logo() {
 		$logo = $this->logo;
 		$size = $this->theme_size();
+
 		// Bail if no logo is set. Leave a placeholder if we're in the Customizer, though (needed for the live preview).
 		if ( ! $this->has_site_logo() ) {
 			if ( flagship_library()->is_customizer_preview() ) {
@@ -313,6 +345,7 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 			}
 			return;
 		}
+
 		// We have a logo. Logo is go.
 		$html = sprintf( '<a href="%1$s" class="site-logo-link" rel="home">%2$s</a>',
 			esc_url( home_url( '/' ) ),
@@ -326,8 +359,10 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 				)
 			)
 		);
+
 		echo apply_filters( 'the_site_logo', $html, $logo, $size );
 	}
+
 	/**
 	 * Determine image size to use for the logo.
 	 *
@@ -337,12 +372,16 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	public function theme_size() {
 		$args        = get_theme_support( 'site-logo' );
 		$valid_sizes = get_intermediate_image_sizes();
+
 		// Add 'full' to the list of accepted values.
 		$valid_sizes[] = 'full';
+
 		// If the size declared in add_theme_support is valid, use it; otherwise, just go with 'thumbnail'.
 		$size = ( isset( $args[0]['size'] ) && in_array( $args[0]['size'], $valid_sizes ) ) ? $args[0]['size'] : 'thumbnail';
+
 		return $size;
 	}
+
 	/**
 	 * Validate and sanitize a new site logo setting.
 	 *
@@ -352,13 +391,16 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 	public function sanitize_logo_setting( $input ) {
 		$input['id']  = absint( $input['id'] );
 		$input['url'] = esc_url_raw( $input['url'] );
+
 		// End here if we have an image to display.
 		if ( wp_get_attachment_image_src( $input['id'] ) ) {
 			return $input;
 		}
+
 		// If the new setting doesn't point to a valid attachment, reset it.
 		return array( 'id' => 0, 'sizes' => array(), 'url' => '', );
 	}
+
 	/**
 	 * Enable support for administrators to add SVG uploads.
 	 *
@@ -372,4 +414,5 @@ class Flagship_Site_Logo extends Flagship_Customizer_Base {
 		$mimes['svg'] = 'image/svg+xml';
 		return $mimes;
 	}
+
 }

@@ -15,7 +15,7 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 	/**
 	 * Class for common Flagship theme functionality.
 	 *
-	 * @version 1.3.0
+	 * @version 1.4.1
 	 */
 	class Flagship_Library {
 
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 		 * @since 1.1.0
 		 * @type  string
 		 */
-		protected $version = '1.3.0';
+		protected $version = '1.4.1';
 
 		/**
 		 * Prefix to prevent conflicts.
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 		 * @since 1.4.0
 		 * @type  string
 		 */
-		protected $dir;
+		public $dir;
 
 		/**
 		 * Placeholder for our style builder class instance.
@@ -253,12 +253,12 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 					'customizer/classes/customizer-base.php',
 					'classes/search-form.php',
 					'classes/style-builder.php',
-					// 'functions/attr.php',
+					'functions/attr.php',
 					'functions/seo.php',
 					'functions/template-entry.php',
 					'functions/template-general.php',
-					// 'functions/template.php',
-					// 'functions/deprecated.php',
+					//'functions/template.php',
+					'functions/deprecated.php',
 				)
 			);
 			// Include our library files.
@@ -278,9 +278,9 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 			if ( current_theme_supports( 'flagship-author-box' ) ) {
 				require_once $this->dir . 'classes/author-box.php';
 			}
-			// if ( current_theme_supports( 'breadcrumb-trail' ) ) {
-			// 	require_once $this->dir . 'customizer/classes/breadcrumb-display.php';
-			// }
+			if ( current_theme_supports( 'breadcrumb-trail' ) ) {
+				require_once $this->dir . 'customizer/classes/breadcrumb-display.php';
+			}
 			if ( current_theme_supports( 'flagship-footer-widgets' ) ) {
 				require_once $this->dir . 'classes/footer-widgets.php';
 			}
@@ -400,7 +400,6 @@ if ( ! function_exists( 'flagship_library' ) ) {
 	 * <?php flagship_library()->is_customizer_preview(); ?>
 	 *
 	 * @since   1.2.1
-	 * @version 1.3.0
 	 * @return  object Flagship_Library
 	 */
 	function flagship_library() {

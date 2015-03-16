@@ -7,17 +7,14 @@
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
  * @link        https://flagshipwp.com/
- * @since       1.1.1
+ * @since       1.4.0
  */
 
 /**
  * A helper function to simplify the process of building complicated styles
  * based on user input within the WordPress customizer.
  *
- * Example:
- *
- * <?php flagship_style_builder()->add( $data ); ?>
- *
+ * @deprecated 1.4.0
  * @since   1.1.1
  * @access  public
  * @uses    Flagship_Style_Builder
