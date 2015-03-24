@@ -40,6 +40,7 @@ function abraham_sidebars() {
 		'name'			=> _x( 'Footer Widgets', 'sidebar', 'abraham' ),
 		'description'	=> __( 'Typically located in the footer.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget sidebar-footer__widget %2$s">',
+		'after_widget'	=> '</section>',
 		'before_title'  => '<h3 class="widget-title sidebar-footer__widget-title">',
 		'after_title'   => '</h3>',
 	] );
