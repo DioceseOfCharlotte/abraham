@@ -1,0 +1,144 @@
+///* #RESET
+//\*------------------------------------*/
+:root {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    cursor: default;
+    font: 16px/1.5 sans-serif;
+    min-height: 100%;
+    background-color: #fff;
+    @include sm {
+        font: 14px/1.7 sans-serif;
+    }
+
+}
+
+body {
+    color: $body-color;
+    background-color: $body-background-color;
+    @include font-size($base-font-size);
+}
+
+* {
+    // font-size: inherit;
+    // line-height: inherit;
+    // color: inherit;
+    margin: 0;
+    padding: 0;
+    flex: 0 1 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 0;
+    word-wrap: break-word;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+hr {
+    border: 0;
+    border-bottom-style: $rule-border-style;
+    border-bottom-width: $rule-border-width;
+    border-bottom-color: $rule-border-color;
+}
+
+pre,
+code {
+    background-color: $pre-background-color;
+    border-radius: $pre-border-radius;
+}
+
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+span,
+a {
+    vertical-align: baseline;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    max-height: 100%;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+
+[hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0)!important;
+        position: absolute!important;
+    }
+
+}
+
+p:empty {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+
+p:last-child,
+ul:last-child {
+        margin-bottom: 0;
+    }

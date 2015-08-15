@@ -1,61 +1,31 @@
 <?php
-/**
- * The main template file.
- *
- * @package Abraham
- */
-
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<?php get_template_part('components/page', 'header'); ?>
 
-<?php
-tha_content_before(); ?>
+<div <?php hybrid_attr('container', 'content'); ?>>
 
-  		<main <?php hybrid_attr( 'content' ); ?>>
+    <div <?php hybrid_attr('row', 'layout'); ?>>
 
-<?php
-tha_content_top();
+        <?php tha_content_before(); ?>
 
-  		if ( !is_front_page() && !is_singular() ) :
+        <main <?php hybrid_attr('content'); ?>>
 
-  			get_template_part( 'partials/loop', 'meta' );
+            <?php tha_content_top(); ?>
 
-  		endif; // End check for multi-post page.
+            <?php hybrid_get_content_template(); ?>
 
-  		if ( have_posts() ) :
+            <?php tha_content_bottom(); ?>
 
-  			while ( have_posts() ) : the_post();
+        </main><!-- /.main -->
 
-  				hybrid_get_content_template();
+        <?php tha_content_after(); ?>
 
-  				if ( is_singular() ) :
+        <?php hybrid_get_sidebar('primary'); ?>
 
-  					get_template_part( 'partials/post', 'nav' );
+    </div><!-- /.row -->
 
-					comments_template('/content/comments.php');
-
-  				endif; // End check for single post.
-
-  			endwhile; // End loop.
-
-  			get_template_part( 'partials/loop', 'nav' );
-
-  		else : //If no content found.
-
-  			get_template_part( 'content/none' );
-
-  		endif; // End check for posts.
-
-tha_content_bottom();
-?>
-
-  		</main><!-- #main -->
-
-<?php
-tha_content_after(); ?>
-
-	</div><!-- #primary -->
+</div><!-- /.content -->
 
 <?php
 get_footer();

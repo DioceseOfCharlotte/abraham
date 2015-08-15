@@ -1,32 +1,28 @@
-<?php
-/**
- * @package Abraham
- */
+<?php while (have_posts()) : the_post(); ?>
 
-tha_entry_before(); ?>
+    <?php tha_entry_before(); ?>
 
-  <article <?php hybrid_attr( 'post' ); ?>>
+    <article <?php hybrid_attr('post'); ?>>
 
-<?php
-tha_entry_top();
+        <?php tha_entry_top(); ?>
 
-    if ( is_page() ) :
+        <div <?php hybrid_attr('entry-content'); ?>>
+            <?php tha_entry_content_before(); ?>
+            <?php the_content(); ?>
+            <?php tha_entry_content_after(); ?>
+        </div>
 
-      get_template_part( 'partials/single', 'header' );
+        <footer <?php hybrid_attr('entry-footer'); ?>>
+            <?php wp_link_pages(array(
+                'before' => '<nav class="page-nav"><p>'.__('Pages:', 'abraham'),
+                'after'  => '</p></nav>',
+            )); ?>
+        </footer>
 
-      get_template_part( 'partials/single', 'content' );
+        <?php tha_entry_bottom(); ?>
 
-    else : // If not viewing a single page.
+    </article>
 
-      get_template_part( 'partials/archive', 'header' );
+    <?php tha_entry_after(); ?>
 
-      get_template_part( 'partials/archive', 'content' );
-
-    endif; // End single page check.
-
-tha_entry_bottom(); ?>
-
-  </article><!-- .entry -->
-
-<?php
-tha_entry_after();
+<?php endwhile; ?>

@@ -1,0 +1,82 @@
+///* #SETTINGS-RESPONSIVE
+//\*------------------------------------*/
+
+
+$breakpoints: (
+    "sm"        "screen and (max-width: 51em)",
+    "md"        "screen and (min-width: 52em)",
+    "lg"        "screen and (min-width: 64em)",
+    "xl"        "screen and (min-width: 80em)",
+    "retina"    "print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)"
+) !default;
+
+
+
+
+// /*------------------------------------*\
+//     #MEDIA-QUERIES
+// \*------------------------------------*/
+
+@mixin media-query($mq) {
+
+    $breakpoint-found: false;
+
+    // Loop through the list of breakpoints we’ve provided above.
+    @each $breakpoint in $breakpoints {
+
+        // Grab the alias and the condition from the the list.
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $condition {
+
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true;
+
+            // ...and spit it out here.
+            @media #{$condition} {
+                @content;
+            }
+
+        }
+
+    }
+
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+
+}
+
+
+@mixin sm {
+    @include media-query(sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @include media-query(md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @include media-query(lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @include media-query(xl) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @include media-query(retina) {
+        @content;
+    }
+}

@@ -1,50 +1,18 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package Abraham
- */
-?>
+<footer <?php hybrid_attr('footer'); ?>>
 
-		<?php hybrid_get_sidebar( 'primary' ); ?>
+    <div <?php hybrid_attr('container', 'footer'); ?>>
+        <?php hybrid_get_sidebar('footer'); ?>
+    </div>
 
-	</div><!-- #container -->
+        <p class="credit bg-darken-1 center py2">
+            <?php printf(
+                __('&#169; %1$s %2$s', 'abraham'),
+                date_i18n('Y'), hybrid_get_site_link()
+           ); ?>
+        </p><!-- .credit -->
 
-	<?php tha_footer_before(); ?>
+</footer>
 
-	<footer <?php hybrid_attr( 'footer' ); ?>>
-
-	<?php tha_footer_top(); ?>
-
-		<?php hybrid_get_sidebar( 'footer-widgets' ); ?>
-
-		<div class="site-info">
-
-			<div class="wrap wrap__footer">
-
-				<?php if ( get_theme_mod( 'footer-text', customizer_library_get_default( 'footer-text' ) ) != '' ) : ?>
-				<div class="credit">
-					<?php echo get_theme_mod( 'footer-text', customizer_library_get_default( 'footer-text' ) ); ?>
-				</div><!-- .credit -->
-				<?php endif; ?>
-
-				<?php hybrid_get_menu( 'social' ); ?>
-
-			</div><!-- .wrap -->
-
-		</div><!-- .site-info -->
-
-	<?php tha_footer_bottom(); ?>
-
-	</footer><!-- #footer -->
-
-	<?php tha_footer_after(); ?>
-
-</div><!-- #page -->
-
-<?php tha_body_bottom(); ?>
 <?php wp_footer(); ?>
 
 </body>

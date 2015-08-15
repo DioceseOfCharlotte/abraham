@@ -1,0 +1,162 @@
+body.custom-background {
+    background-size: cover;
+}
+
+.posts-navigation {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: $space-2;
+    @include md {
+        margin-bottom: $space-3;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    a {
+        @extend .btn;
+    }
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Sets dropdown link to relative positioning
+ */
+.has-dropdown {
+  position: relative;
+}
+
+
+/**
+ * Styling for the dropdown content.
+ * Hides the content by default.
+ */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  display: none;
+  visibility: hidden;
+  float: left;
+  min-width: 10em;
+  margin-top: 0.5em;
+  margin-left: 0;
+  text-align: left;
+  z-index: 1000;
+  background-color: $white;
+  border-radius: 2px;
+  color: $color-text;
+  @include shadow-6dp();
+
+  li {
+      width: 100%;
+      a {
+          width: 100%;
+      }
+  }
+}
+
+/**
+ * Remove list-style and margin-left from dropdown menu lists
+ */
+.dropdown ul,
+.dropdown ol {
+  margin-left: 0;
+  list-style: none;
+}
+
+/**
+ * When a dropdown is active, display it.
+ */
+.dropdown.is-active {
+  display: block;
+  visibility: visible;
+}
+
+/**
+ * If dropdown link is near the right edge of the screen, shift the dropdown menu position to avoid content clipping.
+ */
+.dropdown.dropdown-right {
+  right: 0;
+  left: auto;
+  min-width: 300px;
+}
+
+/**
+ * Optional small screen styling for use with collapse-and-toggle navigation menus.
+ * @link http://cferdinandi.github.com/astro/
+ */
+@media (max-width: 40em) {
+  /**
+   * Switch dropdown content to relative positioning.
+   * Remove styling.
+   */
+  .js-drop .dropdown {
+    position: relative;
+    float: none;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,58 @@
+/* #BUTTONS
+\*------------------------------------*/
+
+// Raised buttons
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn--default {
+  background: $button-primary-color;
+  //@include shadow-2dp();
+
+  &:active,
+  &:hover {
+    //@include shadow-4dp();
+    background-color: $button-active-color;
+  }
+
+  &:focus:not(:active) {
+    //@include focus-shadow();
+    background-color: $button-active-color;
+  }
+
+  &.button--colored {
+    background: $button-primary-color-alt;
+    color: $button-secondary-color-alt;
+
+    &:hover {
+      background-color: $button-hover-color-alt;
+    }
+
+    &:active, &.active {
+      background-color: $button-active-color-alt;
+    }
+
+    &:focus:not(:active) {
+      background-color: $button-active-color-alt;
+    }
+
+    & .ripple {
+      background: $button-ripple-color-alt;
+    }
+  }
+
+  // Bump up specificity by using [disabled] twice.
+  &[disabled][disabled] {
+    background-color: $button-primary-color-disabled;
+    color: $button-secondary-color-disabled;
+    @include shadow-2dp();
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @extend .button;
+    width: auto;
+    margin-bottom: .5em;
+}

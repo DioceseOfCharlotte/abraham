@@ -1,15 +1,21 @@
 {
-    "name": "meh/kit",
-    "description": "theme library",
+    "name": "m-e-h/abraham",
+    "description": "WordPress Starter theme.",
+    "keywords": ["wordpress", "theme", "abraham"],
+    "type": "wordpress-theme",
+    "license": "GPL-2.0+",
+    "authors": [{
+        "name": "Marty Helmick",
+        "email": "info@martyhelmick.com"
+    }],
+    "support": {
+        "issues": "https://github.com/m-e-h/abraham/issues"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
     "require": {
         "justintadlock/hybrid-core": "dev-dev",
-        "zamoose/themehookalliance": "dev-master"
-    },
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "m-e-h",
-            "email": "info@martyhelmick.com"
-        }
-    ]
+        "composer/installers": "~1.0"
+    }
 }

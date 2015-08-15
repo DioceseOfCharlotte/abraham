@@ -1,28 +1,29 @@
 {
-  "devDependencies": {
-    "browser-sync": "^2.2.5",
-    "del": "^1.1.1",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-cache": "^0.2.8",
-    "gulp-changed": "^1.2.1",
-    "gulp-concat": "^2.5.2",
-    "gulp-csscomb": "^3.0.3",
-    "gulp-minify-css": "^1.0.0",
-    "gulp-flatten": "^0.0.4",
-    "gulp-if": "^1.2.5",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-load-plugins": "^0.8.1",
-    "gulp-rename": "^1.2.0",
-    "gulp-replace": "^0.5.3",
-    "gulp-sass": "^1.3.3",
-    "gulp-uglify": "^1.1.0",
-    "gulp-composer": "^0.1.0",
-    "opn": "^1.0.1",
-    "run-sequence": "^1.0.2"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "private": true
+    "name": "abraham",
+    "version": "0.1.0",
+    "description": "Starter Theme focused on OOCSS and such.",
+    "repository": "https://github.com/m-e-h/abraham",
+    "license": "GNU General Public License v2 or later",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.8.0",
+        "del": "^1.2.0",
+        "gulp": "^3.9.0",
+        "gulp-sass": "^2.0.4",
+        "gulp-autoprefixer": "^2.3.1",
+        "gulp-cache": "^0.2.10",
+        "gulp-changed": "^1.2.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-csscomb": "^3.0.6",
+        "gulp-flatten": "^0.1.0",
+        "gulp-if": "^1.2.5",
+        "gulp-imagemin": "^2.3.0",
+        "gulp-minify-css": "^1.2.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^1.2.0",
+        "run-sequence": "^1.1.2"
+    },
+    "private": true
 }

@@ -1,0 +1,40 @@
+/* #GRID
+\*------------------------------------*/
+
+// container
+.container {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--wide {
+  max-width: $container-wide;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--full {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.grid__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+// Reverse grid items’ direction.
+.grid--rev {
+    direction: rtl;
+    > .grid__item {
+        direction: ltr;
+    }
+}

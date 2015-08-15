@@ -1,0 +1,27 @@
+/* #TABLES
+\*------------------------------------*/
+
+  // $table-header-font-weight: $bold-font-weight;
+  // $table-cell-padding-x: $space-2;
+  // $table-cell-padding-y: .25rem;
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: $table-header-font-weight;
+}
+
+th,
+td {
+  padding: $table-cell-padding-y $table-cell-padding-x;
+  line-height: inherit;
+}
+
+th { vertical-align: bottom }
+td { vertical-align: top }
