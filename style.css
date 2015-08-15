@@ -2034,8 +2034,6 @@ input.mdl-button[type="submit"] {
     min-height: 200px;
     border-radius: 2px;
     background: rgb(255,255,255);
-    font-size: 16px;
-    font-weight: 400;
 
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
@@ -2044,10 +2042,9 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-card__media {
-    box-sizing: border-box; 
     background-color: rgb(255,64,129);
     background-repeat: repeat;
-    background-attachment: scroll;
+    background-attachment: scroll; 
     background-position: 50% 50%;
     background-origin: padding-box;
     background-size: cover;
@@ -2091,8 +2088,6 @@ input.mdl-button[type="submit"] {
     overflow: hidden;
     margin: 0; 
     color: inherit;
-    font-size: 24px;
-    font-weight: 300;
     line-height: normal;
     -webkit-transform-origin: 149px 48px;
     -ms-transform-origin: 149px 48px;
@@ -2106,7 +2101,6 @@ input.mdl-button[type="submit"] {
 .mdl-card__subtitle-text {
     margin: 0; 
     color: grey;
-    font-size: 14px;
 }
 
 .mdl-card__supporting-text {
@@ -2114,7 +2108,6 @@ input.mdl-button[type="submit"] {
     width: 90%; 
     padding: 16px 16px;
     color: rgba(0,0,0, 0.54);
-    font-size: 13px;
     line-height: 18px;
 }
 
@@ -2123,7 +2116,6 @@ input.mdl-button[type="submit"] {
     width: 100%;
     padding: 8px;
     background-color: transparent;
-    font-size: 16px;
     line-height: normal;
 }
 .mdl-card__actions.mdl-card--border {

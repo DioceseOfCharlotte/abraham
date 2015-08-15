@@ -19,8 +19,8 @@
 .mdl-card {
   display: flex;
   flex-direction: column;
-  font-size: $card-font-size;
-  font-weight: 400;
+  //font-size: $card-font-size;
+  //font-weight: 400;
   min-height: $card-height;
   overflow: hidden;
   width: $card-width;
@@ -38,7 +38,7 @@
   background-size: cover;
   background-origin: padding-box;
   background-attachment: scroll;
-  box-sizing: border-box;
+  //box-sizing: border-box;
 }
 
 .mdl-card__title {
@@ -63,8 +63,8 @@
   color: inherit;
   display: block;
   display: flex;
-  font-size: $card-title-font-size;
-  font-weight: $card-title-text-font-weight;
+  //font-size: $card-title-font-size;
+  //font-weight: $card-title-text-font-weight;
   line-height: normal;
   overflow: hidden;
   transform-origin: $card-title-text-transform-origin-x $card-title-text-transform-origin-y;
@@ -72,14 +72,14 @@
 }
 
 .mdl-card__subtitle-text {
-  font-size: $card-subtitle-font-size;
+  //font-size: $card-subtitle-font-size;
   color: grey;
   margin: 0;
 }
 
 .mdl-card__supporting-text {
   color: $card-supporting-text-text-color;
-  font-size: $card-supporting-text-font-size;
+  //font-size: $card-supporting-text-font-size;
   line-height: $card-supporting-text-line-height;
   overflow: hidden;
   padding: $card-vertical-padding $card-horizontal-padding;
@@ -87,7 +87,7 @@
 }
 
 .mdl-card__actions {
-  font-size: $card-actions-font-size;
+  //font-size: $card-actions-font-size;
   line-height: normal;
   width: 100%;
   background-color: rgba(0,0,0,0);

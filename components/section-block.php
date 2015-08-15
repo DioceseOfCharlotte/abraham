@@ -30,7 +30,7 @@ global $mehsc_atts;
 
 
             <div class="mdl-card__title mdl-card--expand">
-            <?php the_title(sprintf('<a class="u-h3 mdl-card__title-text" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>'); ?>
+            <?php the_title(sprintf('<a class="h2 mdl-card__title-text" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>'); ?>
             </div>
             <?php if ('excerpt' === $mehsc_atts['show_content']) : ?>
 
@@ -46,9 +46,9 @@ global $mehsc_atts;
 
             <?php endif; ?>
 
-                <div class="mdl-card__actions mdl-card--border">
+<!--                 <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo get_permalink(); ?>"><i class="material-icons">more_horiz</i></a>
-                </div>
+                </div> -->
 
     </div><!-- .mdl-card -->
 </div><!-- .block -->

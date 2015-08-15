@@ -22,7 +22,7 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-    $output = '<section class="' . $mehsc_atts['row_color'] . ' row pt3 pt4@md pb4@md pages-highlight"><div class="card-row container"><div class="h1 u-1/1 center mb3">' . $mehsc_atts['row_intro'] . '</div>';
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="card-row container"><div class="h1 u-1/1 center mb3">' . $mehsc_atts['row_intro'] . '</div>';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
