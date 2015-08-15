@@ -5,31 +5,22 @@
 global $mehsc_atts;
 ?>
 
-<div class="<?php echo esc_attr($mehsc_atts['width']); ?> grid__item flex flexed--auto u-ph- u-pb">
+<div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['width']); ?> grid__item px1@md pb2 <?php echo esc_attr($mehsc_atts['block_type']); ?>">
 
-    <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['block_type']); ?> block__content shadow--z1 flexed--auto t-bg--white u-br flex">
-
-    <?php if (!empty($mehsc_atts['icon'])) : ?>
-
-    <div class="block__figure">
-            <?php get_template_part('images/vector/svg', esc_attr($mehsc_atts['icon'])); ?>
-    </div>
-
-    <?php endif; ?>
-
+    <div class="mdl-card shadow2 u-1/1">
     <?php if ('show_img' === $mehsc_atts['show_image']) : ?>
 
     <?php
-    if ('block' === $mehsc_atts['block_type']) {
+    if ('card-block' === $mehsc_atts['block_type']) {
         get_the_image(array(
             'size'   => 'abraham-sm',
-            'before' => '<div class="block__figure">',
+            'before' => '<div class="card-img">',
             'after'  => '</div>',
         ));
-    } elseif ('flag' === $mehsc_atts['block_type']) {
+    } elseif ('flag-block' === $mehsc_atts['block_type']) {
         get_the_image(array(
             'size'   => 'thumbnail',
-            'before' => '<div class="block__figure u-left flag-image u-round u-p-">',
+            'before' => '<div class="u-left">',
             'after'  => '</div>',
         ));
     }
@@ -38,30 +29,28 @@ global $mehsc_atts;
     <?php endif; ?>
 
 
-            <div class="block__title u-p- t-bg--2">
-            <?php the_title(sprintf('<a class="u-h3 block__title--link" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>'); ?>
+            <div class="mdl-card__title mdl-card--expand">
+            <?php the_title(sprintf('<a class="u-h3 mdl-card__title-text" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>'); ?>
             </div>
             <?php if ('excerpt' === $mehsc_atts['show_content']) : ?>
 
-                <div class="block__body u-p-">
+                <div class="mdl-card__supporting-text">
                 <?php the_excerpt(); ?>
                 </div>
 
             <?php elseif ('content' === $mehsc_atts['show_content']) : ?>
 
-                <div class="block__body u-p-">
+                <div class="mdl-card__supporting-text">
                 <?php the_content(); ?>
                 </div>
 
             <?php endif; ?>
 
-                <div class="block__footer">
-                <a class="btn btn--full t-color--grey" href="<?php echo get_permalink(); ?>"><i class="material-icons">&#xE5C8;</i></a>
+                <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo get_permalink(); ?>"><i class="material-icons">more_horiz</i></a>
                 </div>
 
-
-    </div><!-- .block__content -->
-
+    </div><!-- .mdl-card -->
 </div><!-- .block -->
 
 <?php

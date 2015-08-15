@@ -6,9 +6,9 @@
 
 // Theme Colors
 
-$color-1: $blue;
-$color-2: $olive;
-$color-3: $yellow;
+$color-1: #004899;
+$color-2: #ffd870;
+$color-3: $olive;
 
 $color1-light:  lighten($color-1, 10);
 $color2-light:  lighten($color-2, 10);
@@ -92,9 +92,152 @@ $body-color: $color-text;
 $body-background-color: $white;
 $link-color: $blue;
 $link-text-decoration: none;
-$link-hover-text-decoration: underline;
+$link-hover-text-decoration: none;
 $pre-background-color: transparent;
 $pre-border-radius: $border-radius;
 $rule-border-style: solid;
 $rule-border-width: $border-width;
 $rule-border-color: $border-color;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-uabraham {
+//   @include rem(padding, 10px);
+// }
+
+@mixin rem($property, $value) {
+    @if not $supports-rem {
+        #{$property}: $value;
+    }
+    #{$property}: $value / $base-font-size * 1rem;
+}
+
+
+
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+
+$supports-rem: false;
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(10px);
+// }
+@mixin font-size($font-size, $line-height: auto) {
+    @if not $supports-rem {
+        font-size: $font-size;
+    }
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        }
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+
+
+
+@mixin font-size-sm {
+    @include font-size($base-font-size - 2);
+}
+
+@mixin font-size-md {
+    @include font-size($base-font-size);
+}
+
+@mixin font-size-lg {
+    @include font-size($base-font-size + 2);
+}
+
+@mixin font-size-xl {
+    @include font-size($heading-size-1);
+}
+
+
+
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+
+@mixin truncate($limit: 100%) {
+    max-width: $limit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+// Clearfix
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+
+@mixin bg-text($bg-color) {
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+}

@@ -104,7 +104,7 @@ function swallowError(error) {
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
 	return gulp.src([
-			'assets/src/scripts/**/*.js'
+			'assets/src/scripts/main/**/*.js'
 		])
 		//.pipe(concat('main.js'))
 		.pipe(gulp.dest('assets/js'))
@@ -117,6 +117,22 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('assets/js'));
 });
 
+// Concatenate And Minify JavaScript
+gulp.task('mdlscripts', function() {
+  return gulp.src([
+      'assets/src/scripts/mdl/**/*.js'
+    ])
+    .pipe(concat('mdl.js'))
+    .pipe(gulp.dest('assets/js'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(uglify({
+      preserveComments: 'some'
+    }))
+    .pipe(gulp.dest('assets/js'));
+});
+
 // Build and serve the output
 gulp.task('serve', ['styles'], function() {
 	browserSync.init({
@@ -124,7 +140,8 @@ gulp.task('serve', ['styles'], function() {
 		//proxy: "local.wordpress-trunk.dev"
 		//proxy: "june.dev"
     //proxy: "july.dev"
-			proxy: "stmark.dev"
+		//proxy: "stmark.dev"
+      proxy: "smcs.dev"
 			//proxy: "127.0.0.1:8080/wordpress/"
 	});
 
@@ -136,5 +153,5 @@ gulp.task('serve', ['styles'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('default', function(cb) {
-	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'images'], cb);
+	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'mdlscripts', 'images'], cb);
 });

@@ -44,9 +44,15 @@ function assets() {
         false, null, true
     );
 
-    wp_register_script(
-        'meh_tabs',
-        trailingslashit(get_template_directory_uri())."assets/js/tabs{$suffix}.js",
+    wp_enqueue_script(
+        'meh_mdl',
+        trailingslashit(get_template_directory_uri())."assets/js/mdl{$suffix}.js",
+        false, null, true
+    );
+
+    wp_enqueue_script(
+        'meh_ripple',
+        trailingslashit(get_template_directory_uri())."assets/js/ripple{$suffix}.js",
         false, null, true
     );
 

@@ -160,3 +160,147 @@ body.custom-background {
     box-shadow: none;
   }
 }
+
+
+// .mdl-tabs__panel:first-of-type {
+//     display: block!important;
+// }
+
+// .mdl-tabs__panel.active ~ .mdl-tabs__panel:first-of-type {
+//     display: none!important;
+// }
+
+
+
+.meh__tab {
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    //background-color: transparent;
+
+        &:hover,
+        &:active,
+        &.is-active,
+        &:focus {
+            //background-color: transparent;
+        }
+}
+.meh__tab:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: $color-2;
+  height: 4px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.meh__tab:hover:before,
+.meh__tab:focus:before,
+.meh__tab.is-active:before,
+.meh__tab:active:before {
+  left: 0;
+  right: 0;
+}
+
+.meh__tab:hover:before {
+    background: rgba($color-2, $opacity);
+}
+
+.meh__tab:focus:before,
+.meh__tab.is-active:before,
+.meh__tab:active:before {
+    background: $color-2;
+}
+
+.meh__tab {
+    background-color: transparent;
+
+    &:hover, &.is-active {
+        background-color: transparent!important;
+    }
+}
+
+
+
+
+
+
+.pages-highlight .pages-highlight {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flickity-slider {
+    transition: none;
+}
+
+button.flickity-prev-next-button {
+    padding: 0;
+}
+
+.meh-slider {
+.flickity-page-dots {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.meh-slider__cell {
+  background: $color1-dark;
+}
+
+.meh-slider__text {
+  text-shadow: 0 2px rgba($color1-dark,0.4);
+}
+
+.flickity-page-dots .dot {
+  flex: 1;
+  border-radius: 0;
+  margin: 0;
+  background: $color1-light;
+}
+
+.flickity-prev-next-button {
+    background: $color-2;
+    opacity: .5;
+
+    &:hover {
+        background: $color-2;
+        opacity: 1;
+    }
+}
+
+.meh-slider__image {
+    opacity: .8;
+}
+}
+
+
+
+.meh-slider .meh-slider__text {
+    display: none;
+}
