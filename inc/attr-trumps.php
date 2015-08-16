@@ -86,7 +86,7 @@ class Attr_Trumps {
 
 			'widgets'                 => 'widget br mb2 mb3@md p2 ml2@md mr2@md list-reset flex-auto',
 			'primary_widgets'         => 'bg-white',
-			'footer_widgets'          => 'bg-darken-1',
+			'footer_widgets'          => 'bg-darken-1 u-1/4@md',
 
             // COMMENTS
             'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
