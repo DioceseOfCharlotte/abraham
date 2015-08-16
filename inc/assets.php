@@ -26,41 +26,41 @@ function assets() {
         get_stylesheet_uri()
     );
 
-    wp_enqueue_script(
-        'meh_component-handler',
-        trailingslashit(get_template_directory_uri())."assets/js/mdlComponentHandler{$suffix}.js",
-        false, null, true
-    );
-
-    wp_enqueue_script(
-        'meh_classlist',
-        trailingslashit(get_template_directory_uri())."assets/js/classList{$suffix}.js",
-        false, null, true
-    );
-
-    wp_enqueue_script(
-        'meh_dropdowns',
-        trailingslashit(get_template_directory_uri())."assets/js/dropdowns{$suffix}.js",
-        false, null, true
-    );
-
-    wp_enqueue_script(
-        'meh_mdl',
-        trailingslashit(get_template_directory_uri())."assets/js/mdl{$suffix}.js",
-        false, null, true
-    );
-
-    wp_enqueue_script(
-        'meh_ripple',
-        trailingslashit(get_template_directory_uri())."assets/js/ripple{$suffix}.js",
-        false, null, true
-    );
-
-    wp_register_script(
-        'meh_toggles',
-        trailingslashit(get_template_directory_uri())."assets/js/toggles{$suffix}.js",
-        false, null, true
-    );
+    // wp_enqueue_script(
+    //     'meh_component-handler',
+    //     trailingslashit(get_template_directory_uri())."assets/js/mdlComponentHandler{$suffix}.js",
+    //     false, null, true
+    // );
+    //
+    // wp_enqueue_script(
+    //     'meh_classlist',
+    //     trailingslashit(get_template_directory_uri())."assets/js/classList{$suffix}.js",
+    //     false, null, true
+    // );
+    //
+    // wp_enqueue_script(
+    //     'meh_dropdowns',
+    //     trailingslashit(get_template_directory_uri())."assets/js/dropdowns{$suffix}.js",
+    //     false, null, true
+    // );
+    //
+    // wp_enqueue_script(
+    //     'meh_mdl',
+    //     trailingslashit(get_template_directory_uri())."assets/js/mdl{$suffix}.js",
+    //     false, null, true
+    // );
+    //
+    // wp_enqueue_script(
+    //     'meh_ripple',
+    //     trailingslashit(get_template_directory_uri())."assets/js/ripple{$suffix}.js",
+    //     false, null, true
+    // );
+    //
+    // wp_register_script(
+    //     'meh_toggles',
+    //     trailingslashit(get_template_directory_uri())."assets/js/toggles{$suffix}.js",
+    //     false, null, true
+    // );
 
     wp_enqueue_script(
         'abraham_js',

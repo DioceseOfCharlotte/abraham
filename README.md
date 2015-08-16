@@ -51,7 +51,11 @@ install the required node packages: *may need to add 'sudo' before this command*
 ```sh
 $ npm install
 ```
-fetch the required projects from Composer and optimize the files: *may need to run this twice*
+fetch the required projects from Composer:
+```sh
+$ composer install
+```
+Compile and optimize the files:
 ```sh
 $ gulp
 ```

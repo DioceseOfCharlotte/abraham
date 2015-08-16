@@ -100,7 +100,7 @@ class Attr_Trumps {
             'current_page_ancestor'     => 'is-active',
             'current-menu-item'         => 'is-active',
             'menu-item-has-children'    => 'has-dropdown js-dropdown',
-            'sub-menu'                  => 'dropdown',
+            'sub-menu'                  => 'dropdown animated slideInUp',
         );
 
         $this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));

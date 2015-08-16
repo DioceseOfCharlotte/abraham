@@ -108,7 +108,8 @@ body.custom-background {
   background-color: $white;
   border-radius: 2px;
   color: $color-text;
-  @include shadow-6dp();
+  transition: 0.2s;
+  box-shadow: none;
 
   li {
       width: 100%;
@@ -133,6 +134,7 @@ body.custom-background {
 .dropdown.is-active {
   display: block;
   visibility: visible;
+  @include shadow-6dp();
 }
 
 /**
@@ -243,7 +245,38 @@ body.custom-background {
 
 
 
+.has-dropdown > .menu-link:after {
+    content: "\E5C5";
 
+    font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;  /* Preferred icon size */
+display: inline-block;
+width: 1em;
+height: 1em;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+    transition: 0.2s;
+
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
+
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
+
+/* Support for IE. */
+font-feature-settings: 'liga';
+
+}
+
+.has-dropdown > .menu-link.is-active:after {
+        transform: rotate(180deg);
+}
 
 
 
@@ -300,7 +333,128 @@ button.flickity-prev-next-button {
 }
 
 
-
+tab
 .meh-slider .meh-slider__text {
     display: none;
+}
+
+
+
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+  animation-duration: .2s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut{
+  animation-duration: .2s;
+}
+
+
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 25%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+
+
+
+
+
+
+
+.card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
+    bottom: 50px;
+    top: auto!important;
+}
+
+
+
+.mdl-menu__item--ripple-container, .mdl-menu > .page_item > a {
+    display: block;
+    border: none;
+    color: $default-item-text-color;
+    background-color: transparent;
+    text-align: left;
+    margin: 0;
+    padding: 0 16px;
+    outline-color: $default-item-outline-color;
+    position: relative;
+    overflow: hidden;
+    @include typo-body-1();
+    text-decoration: none;
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity $menu-fade-duration $animation-curve-default;
+    user-select: none;
+
+    .mdl-menu__container.is-visible & {
+      opacity: 1;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    &[disabled] {
+      color: $disabled-item-text-color;
+      background-color: transparent;
+      cursor: auto;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+
+      & .mdl-ripple {
+        background: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: $default-item-hover-bg-color;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $default-item-focus-bg-color;
+    }
+
+    &:active {
+      background-color: $default-item-active-bg-color;
+    }
 }

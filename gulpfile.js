@@ -103,10 +103,35 @@ function swallowError(error) {
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
-	return gulp.src([
-			'assets/src/scripts/main/**/*.js'
-		])
-		//.pipe(concat('main.js'))
+	var sources = [
+    // Component handler
+    'assets/src/scripts/mdlComponentHandler.js',
+    // Polyfills/dependencies
+		'assets/src/scripts/classList.js',
+    //'src/third_party/**/*.js',
+		// My scripts
+		'assets/src/scripts/main/**/*.js',
+    // Base components
+    'assets/src/scripts/mdl/button.js',
+    //'assets/src/scripts/mdl/checkbox.js',
+    //'assets/src/scripts/mdl/icon-toggle.js',
+    'assets/src/scripts/mdl/menu.js',
+    //'assets/src/scripts/mdl/progress.js',
+    //'assets/src/scripts/mdl/radio.js',
+    //'assets/src/scripts/mdl/slider.js',
+    //'assets/src/scripts/mdl/spinner.js',
+    //'assets/src/scripts/mdl/switch.js',
+    'assets/src/scripts/mdl/tabs.js',
+    //'assets/src/scripts/mdl/textfield.js',
+    'assets/src/scripts/mdl/tooltip.js',
+    // Complex components (which reuse base components)
+    //'assets/src/scripts/mdl/layout.js',
+    //'assets/src/scripts/mdl/data-table.js',
+    // And finally, the ripples
+    'assets/src/scripts/mdl/ripple.js'
+  ];
+  return gulp.src(sources)
+		.pipe(concat('main.js'))
 		.pipe(gulp.dest('assets/js'))
 		.pipe(rename({
 			suffix: '.min'
@@ -117,22 +142,6 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('assets/js'));
 });
 
-// Concatenate And Minify JavaScript
-gulp.task('mdlscripts', function() {
-  return gulp.src([
-      'assets/src/scripts/mdl/**/*.js'
-    ])
-    .pipe(concat('mdl.js'))
-    .pipe(gulp.dest('assets/js'))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(uglify({
-      preserveComments: 'some'
-    }))
-    .pipe(gulp.dest('assets/js'));
-});
-
 // Build and serve the output
 gulp.task('serve', ['styles'], function() {
 	browserSync.init({
@@ -141,7 +150,7 @@ gulp.task('serve', ['styles'], function() {
 		//proxy: "june.dev"
     //proxy: "july.dev"
 		//proxy: "stmark.dev"
-      proxy: "smcs.dev"
+      proxy: "bed.dev"
 			//proxy: "127.0.0.1:8080/wordpress/"
 	});
 
@@ -153,5 +162,5 @@ gulp.task('serve', ['styles'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('default', function(cb) {
-	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'mdlscripts', 'images'], cb);
+	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'images'], cb);
 });

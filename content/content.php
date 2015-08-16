@@ -30,7 +30,7 @@
             <header <?php hybrid_attr('entry-header'); ?>>
                 <?php
     get_the_image(array(
-        'size'         => 'abraham-lg',
+        'size' => 'abraham-lg',
     ));
 ?>
                 <h2 <?php hybrid_attr('entry-title'); ?>>

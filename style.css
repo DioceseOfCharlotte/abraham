@@ -579,6 +579,167 @@ h6 > a:hover {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*------------------------------------*    $CONTENTS
+\*------------------------------------*/
+/**
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
+ * -----Typography
+ * -----Colors
+ * -----Textfield
+ * -----Switch
+ * -----Spinner
+ * -----Radio
+ * -----Menu
+ * -----List
+ * -----Layout
+ * -----Icon toggles
+ * -----Footer
+ * -----Column
+ * -----Checkbox
+ * -----Card
+ * -----Button
+ * -----Animation
+ * -----Progress
+ * -----Badge
+ * -----Shadows
+ * -----Grid
+ * -----Data table
+ */
+/* ==========  TYPOGRAPHY  ========== */
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+/* ==========  COLORS  ========== */
+/**
+*
+* Material design color palettes.
+* @see http://www.google.com/design/spec/style/color.html
+*
+**/
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  Color & Themes  ========== */
+/* ==========  Typography  ========== */
+/* ==========  Components  ========== */
+/* ==========  Standard Buttons  ========== */
+/* ==========  Icon Toggles  ========== */
+/* ==========  Radio Buttons  ========== */
+/* ==========  Ripple effect  ========== */
+/* ==========  Layout  ========== */
+/* ==========  Content Tabs  ========== */
+/* ==========  Checkboxes  ========== */
+/* ==========  Switches  ========== */
+/* ==========  Spinner  ========== */
+/* ==========  Text fields  ========== */
+/* ==========  Card  ========== */
+/* ==========  Sliders ========== */
+/* ========== Progress ========== */
+/* ==========  List ========== */
+/* ==========  Item ========== */
+/* ==========  Dropdown menu ========== */
+/* ==========  Tooltips  ========== */
+/* ==========  Footer  ========== */
+/* TEXTFIELD */
+/* SWITCH */
+/* SPINNER */
+/* RADIO */
+/* MENU */
+/* LIST */
+/* LAYOUT */
+/* ICON TOGGLE */
+/* FOOTER */
+/*mega-footer*/
+/*mini-footer*/
+/* CHECKBOX */
+/* CARD */
+/* Card dimensions */
+/* Cover image */
+/* BUTTON */
+/**
+ *
+ * Dimensions
+ *
+ */
+/* ANIMATION */
+/* PROGRESS */
+/* BADGE */
+/* SHADOWS */
+/* GRID */
+/* DATA TABLE */
+/* TOOLTIP */
+.mdl-ripple {
+    overflow: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    background: rgb(0,0,0);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.mdl-ripple.is-animating {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1), opacity 0.6s cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1), opacity 0.6s cubic-bezier(0, 0, 0.2, 1);
+}
+.mdl-ripple.is-visible {
+    opacity: 0.3;
+}
+
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 .mdl-animation--default {
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -737,27 +898,268 @@ h6 > a:hover {
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.mdl-ripple {
-    overflow: hidden; 
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
+.mdl-button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    min-width: 64px;
+    height: 36px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    color: rgb(0,0,0);
+    background: transparent;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle; 
+    text-decoration: none;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    will-change: box-shadow, transform;
+}
+.mdl-button::-moz-focus-inner {
+    border: 0;
+}
+.mdl-button:hover {
+    background-color: rgba(158,158,158, 0.20);
+}
+.mdl-button:focus:not(:active) {
+    background-color: rgba(0,0,0, 0.12);
+}
+.mdl-button:active {
+    background-color: rgba(158,158,158, 0.40);
+}
+.mdl-button.mdl-button--colored {
+    color: rgb(63,81,181);
+}
+.mdl-button.mdl-button--colored:focus:not(:active) {
+    background-color: rgba(0,0,0, 0.12);
+}
+
+input.mdl-button[type="submit"] {
+    -webkit-appearance: none;
+}
+
+.mdl-button--raised {
+    background: rgba(158,158,158, 0.20);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.mdl-button--raised:active {
+    background-color: rgba(158,158,158, 0.40); 
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.mdl-button--raised:focus:not(:active) {
+    background-color: rgba(158,158,158, 0.40); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+}
+.mdl-button--raised.mdl-button--colored {
+    color: rgb(255,255,255); 
+    background: rgb(63,81,181);
+}
+.mdl-button--raised.mdl-button--colored:hover {
+    background-color: rgb(63,81,181);
+}
+.mdl-button--raised.mdl-button--colored:active {
+    background-color: rgb(63,81,181);
+}
+.mdl-button--raised.mdl-button--colored:focus:not(:active) {
+    background-color: rgb(63,81,181);
+}
+.mdl-button--raised.mdl-button--colored .mdl-ripple {
+    background: rgb(255,255,255);
+}
+
+.mdl-button--fab {
+    overflow: hidden;
+    position: relative;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    margin: auto;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(158,158,158, 0.20);
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    font-size: 24px;
+    line-height: normal;
+}
+.mdl-button--fab .material-icons {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px; 
+    line-height: 24px;
+    -webkit-transform: translate(-12px, -12px);
+    -ms-transform: translate(-12px, -12px);
+    transform: translate(-12px, -12px);
+}
+.mdl-button--fab.mdl-button--mini-fab {
+    width: 40px; 
+    min-width: 40px;
+    height: 40px;
+}
+.mdl-button--fab .mdl-button__ripple-container {
+    border-radius: 50%;
+
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+}
+.mdl-button--fab:active {
+    background-color: rgba(158,158,158, 0.40); 
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.mdl-button--fab:focus:not(:active) {
+    background-color: rgba(158,158,158, 0.40); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+}
+.mdl-button--fab.mdl-button--colored {
+    color: rgb(255,255,255); 
+    background: rgb(255,64,129);
+}
+.mdl-button--fab.mdl-button--colored:hover {
+    background-color: rgb(255,64,129);
+}
+.mdl-button--fab.mdl-button--colored:focus:not(:active) {
+    background-color: rgb(255,64,129);
+}
+.mdl-button--fab.mdl-button--colored:active {
+    background-color: rgb(255,64,129);
+}
+.mdl-button--fab.mdl-button--colored .mdl-ripple {
+    background: rgb(255,255,255);
+}
+
+.mdl-button--icon {
+    overflow: hidden;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    border-radius: 50%;
+    color: inherit;
+    font-size: 24px;
+    line-height: normal;
+}
+.mdl-button--icon .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px; 
+    line-height: 24px;
+    -webkit-transform: translate(-12px, -12px);
+    -ms-transform: translate(-12px, -12px);
+    transform: translate(-12px, -12px);
+}
+.mdl-button--icon.mdl-button--mini-icon {
+    width: 24px; 
+    min-width: 24px;
+    height: 24px;
+}
+.mdl-button--icon.mdl-button--mini-icon .material-icons {
     top: 0;
     left: 0;
-    width: 50px;
-    height: 50px;
+}
+.mdl-button--icon .mdl-button__ripple-container {
     border-radius: 50%;
-    opacity: 0;
-    background: rgb(0,0,0);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
 }
-.mdl-ripple.is-animating {
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1), opacity 0.6s cubic-bezier(0, 0, 0.2, 1);
-    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1), opacity 0.6s cubic-bezier(0, 0, 0.2, 1);
+
+.mdl-button__ripple-container {
+    display: block;
+    overflow: hidden; 
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.mdl-ripple.is-visible {
-    opacity: 0.3;
+.mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple,
+.mdl-button.mdl-button--disabled .mdl-button__ripple-container .mdl-ripple {
+    background-color: transparent;
+}
+
+.mdl-button--primary.mdl-button--primary {
+    color: rgb(63,81,181);
+}
+.mdl-button--primary.mdl-button--primary .mdl-ripple {
+    background: rgb(255,255,255);
+}
+.mdl-button--primary.mdl-button--primary.mdl-button--raised,
+.mdl-button--primary.mdl-button--primary.mdl-button--fab {
+    color: rgb(255,255,255);
+    background-color: rgb(63,81,181);
+}
+
+.mdl-button--accent.mdl-button--accent {
+    color: rgb(255,64,129);
+}
+.mdl-button--accent.mdl-button--accent .mdl-ripple {
+    background: rgb(255,255,255);
+}
+.mdl-button--accent.mdl-button--accent.mdl-button--raised,
+.mdl-button--accent.mdl-button--accent.mdl-button--fab {
+    color: rgb(255,255,255);
+    background-color: rgb(255,64,129);
+}
+
+.mdl-button[disabled][disabled],
+.mdl-button.mdl-button--disabled.mdl-button--disabled {
+    color: rgba(0,0,0, 0.26);
+    background-color: transparent; 
+    cursor: auto;
+}
+
+.mdl-button--fab[disabled][disabled],
+.mdl-button--fab.mdl-button--disabled.mdl-button--disabled {
+    color: rgba(0,0,0, 0.26);
+    background-color: rgba(0,0,0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mdl-button--raised[disabled][disabled],
+.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
+    color: rgba(0,0,0, 0.26);
+    background-color: rgba(0,0,0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mdl-button--colored[disabled][disabled],
+.mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
+    color: rgba(0,0,0, 0.26);
+}
+
+.mdl-button .material-icons {
+    vertical-align: middle;
 }
 
 /**
@@ -1478,660 +1880,6 @@ h6 > a:hover {
 
 .mdl-shadow--16dp {
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/*------------------------------------*    $CONTENTS
-\*------------------------------------*/
-/**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
- * -----Typography
- * -----Colors
- * -----Textfield
- * -----Switch
- * -----Spinner
- * -----Radio
- * -----Menu
- * -----List
- * -----Layout
- * -----Icon toggles
- * -----Footer
- * -----Column
- * -----Checkbox
- * -----Card
- * -----Button
- * -----Animation
- * -----Progress
- * -----Badge
- * -----Shadows
- * -----Grid
- * -----Data table
- */
-/* ==========  TYPOGRAPHY  ========== */
-/* We're splitting fonts into "preferred" and "performance" in order to optimize
-   page loading. For important text, such as the body, we want it to load
-   immediately and not wait for the web font load, whereas for other sections,
-   such as headers and titles, we're OK with things taking a bit longer to load.
-   We do have some optional classes and parameters in the mixins, in case you
-   definitely want to make sure you're using the preferred font and don't mind
-   the performance hit.
-   We should be able to improve on this once CSS Font Loading L3 becomes more
-   widely available.
-*/
-/* ==========  COLORS  ========== */
-/**
-*
-* Material design color palettes.
-* @see http://www.google.com/design/spec/style/color.html
-*
-**/
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* ==========  Color & Themes  ========== */
-/* ==========  Typography  ========== */
-/* ==========  Components  ========== */
-/* ==========  Standard Buttons  ========== */
-/* ==========  Icon Toggles  ========== */
-/* ==========  Radio Buttons  ========== */
-/* ==========  Ripple effect  ========== */
-/* ==========  Layout  ========== */
-/* ==========  Content Tabs  ========== */
-/* ==========  Checkboxes  ========== */
-/* ==========  Switches  ========== */
-/* ==========  Spinner  ========== */
-/* ==========  Text fields  ========== */
-/* ==========  Card  ========== */
-/* ==========  Sliders ========== */
-/* ========== Progress ========== */
-/* ==========  List ========== */
-/* ==========  Item ========== */
-/* ==========  Dropdown menu ========== */
-/* ==========  Tooltips  ========== */
-/* ==========  Footer  ========== */
-/* TEXTFIELD */
-/* SWITCH */
-/* SPINNER */
-/* RADIO */
-/* MENU */
-/* LIST */
-/* LAYOUT */
-/* ICON TOGGLE */
-/* FOOTER */
-/*mega-footer*/
-/*mini-footer*/
-/* CHECKBOX */
-/* CARD */
-/* Card dimensions */
-/* Cover image */
-/* BUTTON */
-/**
- *
- * Dimensions
- *
- */
-/* ANIMATION */
-/* PROGRESS */
-/* BADGE */
-/* SHADOWS */
-/* GRID */
-/* DATA TABLE */
-/* TOOLTIP */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* Typography */
-/* Shadows */
-/* Animations */
-.mdl-button {
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    min-width: 64px;
-    height: 36px;
-    padding: 0 8px;
-    border: none;
-    border-radius: 2px;
-    outline: none;
-    color: rgb(0,0,0);
-    background: transparent;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    line-height: 36px;
-    text-align: center;
-    vertical-align: middle; 
-    text-decoration: none;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-    will-change: box-shadow, transform;
-}
-.mdl-button::-moz-focus-inner {
-    border: 0;
-}
-.mdl-button:hover {
-    background-color: rgba(158,158,158, 0.20);
-}
-.mdl-button:focus:not(:active) {
-    background-color: rgba(0,0,0, 0.12);
-}
-.mdl-button:active {
-    background-color: rgba(158,158,158, 0.40);
-}
-.mdl-button.mdl-button--colored {
-    color: rgb(63,81,181);
-}
-.mdl-button.mdl-button--colored:focus:not(:active) {
-    background-color: rgba(0,0,0, 0.12);
-}
-
-input.mdl-button[type="submit"] {
-    -webkit-appearance: none;
-}
-
-.mdl-button--raised {
-    background: rgba(158,158,158, 0.20);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-.mdl-button--raised:active {
-    background-color: rgba(158,158,158, 0.40); 
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-}
-.mdl-button--raised:focus:not(:active) {
-    background-color: rgba(158,158,158, 0.40); 
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
-}
-.mdl-button--raised.mdl-button--colored {
-    color: rgb(255,255,255); 
-    background: rgb(63,81,181);
-}
-.mdl-button--raised.mdl-button--colored:hover {
-    background-color: rgb(63,81,181);
-}
-.mdl-button--raised.mdl-button--colored:active {
-    background-color: rgb(63,81,181);
-}
-.mdl-button--raised.mdl-button--colored:focus:not(:active) {
-    background-color: rgb(63,81,181);
-}
-.mdl-button--raised.mdl-button--colored .mdl-ripple {
-    background: rgb(255,255,255);
-}
-
-.mdl-button--fab {
-    overflow: hidden;
-    position: relative;
-    width: 56px;
-    min-width: 56px;
-    height: 56px;
-    margin: auto;
-    padding: 0;
-    border-radius: 50%;
-    background: rgba(158,158,158, 0.20);
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-    font-size: 24px;
-    line-height: normal;
-}
-.mdl-button--fab .material-icons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 24px; 
-    line-height: 24px;
-    -webkit-transform: translate(-12px, -12px);
-    -ms-transform: translate(-12px, -12px);
-    transform: translate(-12px, -12px);
-}
-.mdl-button--fab.mdl-button--mini-fab {
-    width: 40px; 
-    min-width: 40px;
-    height: 40px;
-}
-.mdl-button--fab .mdl-button__ripple-container {
-    border-radius: 50%;
-
-    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
-}
-.mdl-button--fab:active {
-    background-color: rgba(158,158,158, 0.40); 
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-}
-.mdl-button--fab:focus:not(:active) {
-    background-color: rgba(158,158,158, 0.40); 
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
-}
-.mdl-button--fab.mdl-button--colored {
-    color: rgb(255,255,255); 
-    background: rgb(255,64,129);
-}
-.mdl-button--fab.mdl-button--colored:hover {
-    background-color: rgb(255,64,129);
-}
-.mdl-button--fab.mdl-button--colored:focus:not(:active) {
-    background-color: rgb(255,64,129);
-}
-.mdl-button--fab.mdl-button--colored:active {
-    background-color: rgb(255,64,129);
-}
-.mdl-button--fab.mdl-button--colored .mdl-ripple {
-    background: rgb(255,255,255);
-}
-
-.mdl-button--icon {
-    overflow: hidden;
-    width: 32px;
-    min-width: 32px;
-    height: 32px;
-    margin-right: 0;
-    margin-left: 0;
-    padding: 0;
-    border-radius: 50%;
-    color: inherit;
-    font-size: 24px;
-    line-height: normal;
-}
-.mdl-button--icon .material-icons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 24px; 
-    line-height: 24px;
-    -webkit-transform: translate(-12px, -12px);
-    -ms-transform: translate(-12px, -12px);
-    transform: translate(-12px, -12px);
-}
-.mdl-button--icon.mdl-button--mini-icon {
-    width: 24px; 
-    min-width: 24px;
-    height: 24px;
-}
-.mdl-button--icon.mdl-button--mini-icon .material-icons {
-    top: 0;
-    left: 0;
-}
-.mdl-button--icon .mdl-button__ripple-container {
-    border-radius: 50%;
-
-    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
-}
-
-.mdl-button__ripple-container {
-    display: block;
-    overflow: hidden; 
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple,
-.mdl-button.mdl-button--disabled .mdl-button__ripple-container .mdl-ripple {
-    background-color: transparent;
-}
-
-.mdl-button--primary.mdl-button--primary {
-    color: rgb(63,81,181);
-}
-.mdl-button--primary.mdl-button--primary .mdl-ripple {
-    background: rgb(255,255,255);
-}
-.mdl-button--primary.mdl-button--primary.mdl-button--raised,
-.mdl-button--primary.mdl-button--primary.mdl-button--fab {
-    color: rgb(255,255,255);
-    background-color: rgb(63,81,181);
-}
-
-.mdl-button--accent.mdl-button--accent {
-    color: rgb(255,64,129);
-}
-.mdl-button--accent.mdl-button--accent .mdl-ripple {
-    background: rgb(255,255,255);
-}
-.mdl-button--accent.mdl-button--accent.mdl-button--raised,
-.mdl-button--accent.mdl-button--accent.mdl-button--fab {
-    color: rgb(255,255,255);
-    background-color: rgb(255,64,129);
-}
-
-.mdl-button[disabled][disabled],
-.mdl-button.mdl-button--disabled.mdl-button--disabled {
-    color: rgba(0,0,0, 0.26);
-    background-color: transparent; 
-    cursor: auto;
-}
-
-.mdl-button--fab[disabled][disabled],
-.mdl-button--fab.mdl-button--disabled.mdl-button--disabled {
-    color: rgba(0,0,0, 0.26);
-    background-color: rgba(0,0,0, 0.12);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.mdl-button--raised[disabled][disabled],
-.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
-    color: rgba(0,0,0, 0.26);
-    background-color: rgba(0,0,0, 0.12);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.mdl-button--colored[disabled][disabled],
-.mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
-    color: rgba(0,0,0, 0.26);
-}
-
-.mdl-button .material-icons {
-    vertical-align: middle;
-}
-
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/*------------------------------------*    $CONTENTS
-\*------------------------------------*/
-/**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
- * -----Typography
- * -----Colors
- * -----Textfield
- * -----Switch
- * -----Spinner
- * -----Radio
- * -----Menu
- * -----List
- * -----Layout
- * -----Icon toggles
- * -----Footer
- * -----Column
- * -----Checkbox
- * -----Card
- * -----Button
- * -----Animation
- * -----Progress
- * -----Badge
- * -----Shadows
- * -----Grid
- * -----Data table
- */
-/* ==========  TYPOGRAPHY  ========== */
-/* We're splitting fonts into "preferred" and "performance" in order to optimize
-   page loading. For important text, such as the body, we want it to load
-   immediately and not wait for the web font load, whereas for other sections,
-   such as headers and titles, we're OK with things taking a bit longer to load.
-   We do have some optional classes and parameters in the mixins, in case you
-   definitely want to make sure you're using the preferred font and don't mind
-   the performance hit.
-   We should be able to improve on this once CSS Font Loading L3 becomes more
-   widely available.
-*/
-/* ==========  COLORS  ========== */
-/**
-*
-* Material design color palettes.
-* @see http://www.google.com/design/spec/style/color.html
-*
-**/
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* ==========  Color & Themes  ========== */
-/* ==========  Typography  ========== */
-/* ==========  Components  ========== */
-/* ==========  Standard Buttons  ========== */
-/* ==========  Icon Toggles  ========== */
-/* ==========  Radio Buttons  ========== */
-/* ==========  Ripple effect  ========== */
-/* ==========  Layout  ========== */
-/* ==========  Content Tabs  ========== */
-/* ==========  Checkboxes  ========== */
-/* ==========  Switches  ========== */
-/* ==========  Spinner  ========== */
-/* ==========  Text fields  ========== */
-/* ==========  Card  ========== */
-/* ==========  Sliders ========== */
-/* ========== Progress ========== */
-/* ==========  List ========== */
-/* ==========  Item ========== */
-/* ==========  Dropdown menu ========== */
-/* ==========  Tooltips  ========== */
-/* ==========  Footer  ========== */
-/* TEXTFIELD */
-/* SWITCH */
-/* SPINNER */
-/* RADIO */
-/* MENU */
-/* LIST */
-/* LAYOUT */
-/* ICON TOGGLE */
-/* FOOTER */
-/*mega-footer*/
-/*mini-footer*/
-/* CHECKBOX */
-/* CARD */
-/* Card dimensions */
-/* Cover image */
-/* BUTTON */
-/**
- *
- * Dimensions
- *
- */
-/* ANIMATION */
-/* PROGRESS */
-/* BADGE */
-/* SHADOWS */
-/* GRID */
-/* DATA TABLE */
-/* TOOLTIP */
-.mdl-card {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box; 
-    width: 330px;
-    min-height: 200px;
-    border-radius: 2px;
-    background: rgb(255,255,255);
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-}
-
-.mdl-card__media {
-    background-color: rgb(255,64,129);
-    background-repeat: repeat;
-    background-attachment: scroll; 
-    background-position: 50% 50%;
-    background-origin: padding-box;
-    background-size: cover;
-}
-
-.mdl-card__title {
-    display: block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    box-sizing: border-box; 
-    padding: 16px 16px;
-    color: rgb(0,0,0);
-    line-height: normal;
-    -webkit-transform-origin: 165px 56px;
-    -ms-transform-origin: 165px 56px;
-    transform-origin: 165px 56px;
-
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-align: center;
-    -webkit-box-pack: stretch;
-    -ms-flex-align: center;
-    -ms-flex-pack: stretch;
-    -webkit-justify-content: stretch;
-    justify-content: stretch;
-    -webkit-perspective-origin: 165px 56px;
-    perspective-origin: 165px 56px;
-}
-.mdl-card__title.mdl-card--border {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mdl-card__title-text {
-    display: block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    margin: 0; 
-    color: inherit;
-    line-height: normal;
-    -webkit-transform-origin: 149px 48px;
-    -ms-transform-origin: 149px 48px;
-    transform-origin: 149px 48px;
-
-    -webkit-align-self: flex-end;
-    align-self: flex-end;
-    -ms-flex-item-align: end;
-}
-
-.mdl-card__subtitle-text {
-    margin: 0; 
-    color: grey;
-}
-
-.mdl-card__supporting-text {
-    overflow: hidden;
-    padding: 16px 16px; 
-    color: rgba(0,0,0, 0.54);
-    line-height: 18px;
-}
-
-.mdl-card__actions {
-    box-sizing: border-box; 
-    width: 100%;
-    padding: 8px;
-    background-color: transparent;
-    line-height: normal;
-}
-.mdl-card__actions.mdl-card--border {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mdl-card--expand {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1; 
-    -ms-flex-positive: 1;
-}
-
-.mdl-card__menu {
-    position: absolute;
-    top: 16px; 
-    right: 16px;
 }
 
 /**
@@ -3846,8 +3594,10 @@ body.custom-background {
     border-radius: 2px;
     color: #4d4d4d;
     background-color: #fff;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); 
+    box-shadow: none; 
     text-align: left;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
 }
 .dropdown li {
     width: 100%;
@@ -3871,6 +3621,7 @@ body.custom-background {
 .dropdown.is-active {
     display: block;
     visibility: visible;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
 /**
@@ -3957,6 +3708,41 @@ body.custom-background {
     padding: 0;
 }
 
+.has-dropdown > .menu-link:after {
+    /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    word-wrap: normal;
+    content: "\E5C5";
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for IE. */
+
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+}
+
+.has-dropdown > .menu-link.is-active:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 .flickity-slider {
     -webkit-transition: none;
     transition: none;
@@ -4016,6 +3802,141 @@ button.flickity-prev-next-button {
     opacity: 0.8;
 }
 
+tab
 .meh-slider .meh-slider__text {
     display: none;
+}
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+.animated {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes slideInUp {
+    from {
+        visibility: visible; 
+        -webkit-transform: translate3d(0, 25%, 0);
+        transform: translate3d(0, 25%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        visibility: visible; 
+        -webkit-transform: translate3d(0, 25%, 0);
+        transform: translate3d(0, 25%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+
+.card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
+    top: auto !important; 
+    bottom: 50px;
+}
+
+.mdl-menu__item--ripple-container,
+.mdl-menu > .page_item > a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 48px;
+    margin: 0;
+    padding: 0 16px;
+    border: none;
+    outline-color: rgb(189,189,189);
+    opacity: 0;
+    color: rgba(0,0,0, 0.87);
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    line-height: 48px;
+    text-align: left;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mdl-menu__container.is-visible .mdl-menu__item--ripple-container,
+.mdl-menu__container.is-visible .mdl-menu > .page_item > a {
+    opacity: 1;
+}
+.mdl-menu__item--ripple-container::-moz-focus-inner,
+.mdl-menu > .page_item > a::-moz-focus-inner {
+    border: 0;
+}
+.mdl-menu__item--ripple-container[disabled],
+.mdl-menu > .page_item > a[disabled] {
+    color: rgb(189,189,189);
+    background-color: transparent;
+    cursor: auto;
+}
+.mdl-menu__item--ripple-container[disabled]:hover,
+.mdl-menu > .page_item > a[disabled]:hover {
+    background-color: transparent;
+}
+.mdl-menu__item--ripple-container[disabled]:focus,
+.mdl-menu > .page_item > a[disabled]:focus {
+    background-color: transparent;
+}
+.mdl-menu__item--ripple-container[disabled] .mdl-ripple,
+.mdl-menu > .page_item > a[disabled] .mdl-ripple {
+    background: transparent;
+}
+.mdl-menu__item--ripple-container:hover,
+.mdl-menu > .page_item > a:hover {
+    background-color: rgb(238,238,238);
+}
+.mdl-menu__item--ripple-container:focus,
+.mdl-menu > .page_item > a:focus {
+    outline: none;
+    background-color: rgb(238,238,238);
+}
+.mdl-menu__item--ripple-container:active,
+.mdl-menu > .page_item > a:active {
+    background-color: rgb(224,224,224);
 }

@@ -18,6 +18,9 @@ add_action( 'load-post-new.php', 'hybrid_admin_load_post_meta_boxes' );
 # Register scripts and styles.
 add_action( 'admin_enqueue_scripts', 'hybrid_admin_register_styles',  0 );
 
+# Allow posts page to be edited.
+add_action( 'edit_form_after_title', 'hybrid_enable_posts_page_editor', 0 );
+
 /**
  * Loads the core post meta box files on the 'load-post.php' action hook.  Each meta box file is only loaded if
  * the theme declares support for the feature.
@@ -50,6 +53,24 @@ function hybrid_admin_register_styles() {
 }
 
 /**
+ * Fix for users who want to display content on the posts page above the posts list, which is a
+ * theme feature common to themes built from the framework.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  object  $post
+ * @return void
+ */
+function hybrid_enable_posts_page_editor( $post ) {
+
+	if ( get_option( 'page_for_posts' ) != $post->ID )
+		return;
+
+	remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
+	add_post_type_support( $post->post_type, 'editor' );
+}
+
+/**
  * Function for getting an array of available custom templates with a specific header. Ideally, this function
  * would be used to grab custom singular post (any post type) templates.  It is a recreation of the WordPress
  * page templates function because it doesn't allow for other types of templates.
@@ -64,7 +85,7 @@ function hybrid_get_post_templates( $post_type = 'post' ) {
 	global $hybrid;
 
 	// If templates have already been called, just return them.
-	if ( !empty( $hybrid->post_templates ) && isset( $hybrid->post_templates[ $post_type ] ) )
+	if ( ! empty( $hybrid->post_templates ) && isset( $hybrid->post_templates[ $post_type ] ) )
 		return $hybrid->post_templates[ $post_type ];
 
 	// Set up an empty array to house the templates.
@@ -84,7 +105,7 @@ function hybrid_get_post_templates( $post_type = 'post' ) {
 		$headers = get_file_data( $path, array( "{$post_type} Template" => "{$post_type} Template" ) );
 
 		// Add the PHP filename and template name to the array.
-		if ( !empty( $headers["{$post_type} Template"] ) )
+		if ( ! empty( $headers["{$post_type} Template"] ) )
 			$post_templates[ $file ] = $headers["{$post_type} Template"];
 	}
 
@@ -108,7 +129,7 @@ function hybrid_get_post_styles( $post_type = 'post' ) {
 	global $hybrid;
 
 	// If stylesheets have already been loaded, return them.
-	if ( !empty( $hybrid->post_styles ) && isset( $hybrid->post_styles[ $post_type ] ) )
+	if ( ! empty( $hybrid->post_styles ) && isset( $hybrid->post_styles[ $post_type ] ) )
 		return $hybrid->post_styles[ $post_type ];
 
 	// Set up an empty styles array.
@@ -134,10 +155,10 @@ function hybrid_get_post_styles( $post_type = 'post' ) {
 		);
 
 		// Add the CSS filename and template name to the array.
-		if ( !empty( $headers['Style Name'] ) )
+		if ( ! empty( $headers['Style Name'] ) )
 			$hybrid->post_styles[ $post_type ][ $file ] = $headers['Style Name'];
 
-		elseif ( !empty( $headers["{$post_type} Style"] ) )
+		elseif ( ! empty( $headers["{$post_type} Style"] ) )
 			$hybrid->post_styles[ $post_type ][ $file ] = $headers["{$post_type} Style"];
 	}
 

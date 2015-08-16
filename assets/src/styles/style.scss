@@ -29,13 +29,13 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import 'elements.typography';
 @import 'elements.links';
 
-@import "mdl/animation";
 @import "mdl/ripple";
+@import "mdl/animation";
+@import "mdl/button";
+//@import "mdl/card";
 @import "mdl/menu";
 @import "mdl/tooltip";
 @import "mdl/shadow";
-@import "mdl/button";
-@import "mdl/card";
 @import "mdl/tabs";
 
 @import 'objects.button';
