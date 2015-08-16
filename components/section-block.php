@@ -34,16 +34,6 @@ global $mehsc_atts;
 
                 <a class="h2 entry-title inline-block card__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-<!-- <button id="menu-<?php the_ID(); ?>" class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
-</button> -->
-
-<!-- <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul> -->
 
 <?php
   $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
@@ -70,10 +60,6 @@ global $mehsc_atts;
                 </div>
 
             <?php endif; ?>
-
-<!--                 <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo get_permalink(); ?>"><i class="material-icons">more_horiz</i></a>
-                </div> -->
                 </div><!-- .block-body -->
     </div><!-- .mdl-card -->
 </div><!-- .block -->

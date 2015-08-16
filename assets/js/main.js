@@ -1,391 +1,3 @@
-/**
- * @license
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * A component handler interface using the revealing module design pattern.
- * More details on this design pattern here:
- * https://github.com/jasonmayes/mdl-component-design-pattern
- *
- * @author Jason Mayes.
- */
-/* exported componentHandler */
-window.componentHandler = (function() {
-  'use strict';
-
-  /** @type {!Array<componentHandler.ComponentConfig>} */
-  var registeredComponents_ = [];
-
-  /** @type {!Array<componentHandler.Component>} */
-  var createdComponents_ = [];
-
-  var downgradeMethod_ = 'mdlDowngrade_';
-  var componentConfigProperty_ = 'mdlComponentConfigInternal_';
-
-  /**
-   * Searches registered components for a class we are interested in using.
-   * Optionally replaces a match with passed object if specified.
-   *
-   * @param {String} name The name of a class we want to use.
-   * @param {componentHandler.ComponentConfig=} optReplace Optional object to replace match with.
-   * @return {!Object|Boolean}
-   * @private
-   */
-  function findRegisteredClass_(name, optReplace) {
-    for (var i = 0; i < registeredComponents_.length; i++) {
-      if (registeredComponents_[i].className === name) {
-        if (optReplace !== undefined) {
-          registeredComponents_[i] = optReplace;
-        }
-        return registeredComponents_[i];
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Returns an array of the classNames of the upgraded classes on the element.
-   *
-   * @param {!HTMLElement} element The element to fetch data from.
-   * @return {!Array<String>}
-   * @private
-   */
-  function getUpgradedListOfElement_(element) {
-    var dataUpgraded = element.getAttribute('data-upgraded');
-    // Use `['']` as default value to conform the `,name,name...` style.
-    return dataUpgraded === null ? [''] : dataUpgraded.split(',');
-  }
-
-  /**
-   * Returns true if the given element has already been upgraded for the given
-   * class.
-   *
-   * @param {!HTMLElement} element The element we want to check.
-   * @param {String} jsClass The class to check for.
-   * @returns {Boolean}
-   * @private
-   */
-  function isElementUpgraded_(element, jsClass) {
-    var upgradedList = getUpgradedListOfElement_(element);
-    return upgradedList.indexOf(jsClass) !== -1;
-  }
-
-  /**
-   * Searches existing DOM for elements of our component type and upgrades them
-   * if they have not already been upgraded.
-   *
-   * @param {String=} optJsClass the programatic name of the element class we
-   * need to create a new instance of.
-   * @param {String=} optCssClass the name of the CSS class elements of this
-   * type will have.
-   */
-  function upgradeDomInternal(optJsClass, optCssClass) {
-    if (optJsClass === undefined && optCssClass === undefined) {
-      for (var i = 0; i < registeredComponents_.length; i++) {
-        upgradeDomInternal(registeredComponents_[i].className,
-            registeredComponents_[i].cssClass);
-      }
-    } else {
-      var jsClass = /** @type {String} */ (optJsClass);
-      if (optCssClass === undefined) {
-        var registeredClass = findRegisteredClass_(jsClass);
-        if (registeredClass) {
-          optCssClass = registeredClass.cssClass;
-        }
-      }
-
-      var elements = document.querySelectorAll('.' + optCssClass);
-      for (var n = 0; n < elements.length; n++) {
-        upgradeElementInternal(elements[n], jsClass);
-      }
-    }
-  }
-
-  /**
-   * Upgrades a specific element rather than all in the DOM.
-   *
-   * @param {!HTMLElement} element The element we wish to upgrade.
-   * @param {String=} optJsClass Optional name of the class we want to upgrade
-   * the element to.
-   */
-  function upgradeElementInternal(element, optJsClass) {
-    // Verify argument type.
-    if (!(typeof element === 'object' && element instanceof Element)) {
-      throw new Error('Invalid argument provided to upgrade MDL element.');
-    }
-    var upgradedList = getUpgradedListOfElement_(element);
-    var classesToUpgrade = [];
-    // If jsClass is not provided scan the registered components to find the
-    // ones matching the element's CSS classList.
-    if (!optJsClass) {
-      var classList = element.classList;
-      registeredComponents_.forEach(function(component) {
-        // Match CSS & Not to be upgraded & Not upgraded.
-        if (classList.contains(component.cssClass) &&
-            classesToUpgrade.indexOf(component) === -1 &&
-            !isElementUpgraded_(element, component.className)) {
-          classesToUpgrade.push(component);
-        }
-      });
-    } else if (!isElementUpgraded_(element, optJsClass)) {
-      classesToUpgrade.push(findRegisteredClass_(optJsClass));
-    }
-
-    // Upgrade the element for each classes.
-    for (var i = 0, n = classesToUpgrade.length, registeredClass; i < n; i++) {
-      registeredClass = classesToUpgrade[i];
-      if (registeredClass) {
-        // Mark element as upgraded.
-        upgradedList.push(registeredClass.className);
-        element.setAttribute('data-upgraded', upgradedList.join(','));
-        var instance = new registeredClass.classConstructor(element);
-        instance[componentConfigProperty_] = registeredClass;
-        createdComponents_.push(instance);
-        // Call any callbacks the user has registered with this component type.
-        for (var j = 0, m = registeredClass.callbacks.length; j < m; j++) {
-          registeredClass.callbacks[j](element);
-        }
-
-        if (registeredClass.widget) {
-          // Assign per element instance for control over API
-          element[registeredClass.className] = instance;
-        }
-      } else {
-        throw new Error(
-          'Unable to find a registered component for the given class.');
-      }
-
-      var ev = document.createEvent('Events');
-      ev.initEvent('mdl-componentupgraded', true, true);
-      element.dispatchEvent(ev);
-    }
-  }
-
-  /**
-   * Upgrades a specific list of elements rather than all in the DOM.
-   *
-   * @param {!HTMLElement|!Array<!HTMLElement>|!NodeList|!HTMLCollection} elements
-   * The elements we wish to upgrade.
-   */
-  function upgradeElementsInternal(elements) {
-    if (!Array.isArray(elements)) {
-      if (typeof elements.item === 'function') {
-        elements = Array.prototype.slice.call(/** @type {Array} */ (elements));
-      } else {
-        elements = [elements];
-      }
-    }
-    for (var i = 0, n = elements.length, element; i < n; i++) {
-      element = elements[i];
-      if (element instanceof HTMLElement) {
-        if (element.children.length > 0) {
-          upgradeElementsInternal(element.children);
-        }
-        upgradeElementInternal(element);
-      }
-    }
-  }
-
-  /**
-   * Registers a class for future use and attempts to upgrade existing DOM.
-   *
-   * @param {{constructor: !Function, classAsString: String, cssClass: String, widget: String}} config
-   */
-  function registerInternal(config) {
-    var newConfig = /** @type {componentHandler.ComponentConfig} */ ({
-      'classConstructor': config.constructor,
-      'className': config.classAsString,
-      'cssClass': config.cssClass,
-      'widget': config.widget === undefined ? true : config.widget,
-      'callbacks': []
-    });
-
-    registeredComponents_.forEach(function(item) {
-      if (item.cssClass === newConfig.cssClass) {
-        throw new Error('The provided cssClass has already been registered.');
-      }
-      if (item.className === newConfig.className) {
-        throw new Error('The provided className has already been registered');
-      }
-    });
-
-    if (config.constructor.prototype
-        .hasOwnProperty(componentConfigProperty_)) {
-      throw new Error(
-          'MDL component classes must not have ' + componentConfigProperty_ +
-          ' defined as a property.');
-    }
-
-    var found = findRegisteredClass_(config.classAsString, newConfig);
-
-    if (!found) {
-      registeredComponents_.push(newConfig);
-    }
-  }
-
-  /**
-   * Allows user to be alerted to any upgrades that are performed for a given
-   * component type
-   *
-   * @param {String} jsClass The class name of the MDL component we wish
-   * to hook into for any upgrades performed.
-   * @param {function(!HTMLElement)} callback The function to call upon an
-   * upgrade. This function should expect 1 parameter - the HTMLElement which
-   * got upgraded.
-   */
-  function registerUpgradedCallbackInternal(jsClass, callback) {
-    var regClass = findRegisteredClass_(jsClass);
-    if (regClass) {
-      regClass.callbacks.push(callback);
-    }
-  }
-
-  /**
-   * Upgrades all registered components found in the current DOM. This is
-   * automatically called on window load.
-   */
-  function upgradeAllRegisteredInternal() {
-    for (var n = 0; n < registeredComponents_.length; n++) {
-      upgradeDomInternal(registeredComponents_[n].className);
-    }
-  }
-
-  /**
-   * Finds a created component by a given DOM node.
-   *
-   * @param {!Node} node
-   * @return {*}
-   */
-  function findCreatedComponentByNodeInternal(node) {
-    for (var n = 0; n < createdComponents_.length; n++) {
-      var component = createdComponents_[n];
-      if (component.element_ === node) {
-        return component;
-      }
-    }
-  }
-
-  /**
-   * Check the component for the downgrade method.
-   * Execute if found.
-   * Remove component from createdComponents list.
-   *
-   * @param {*} component
-   */
-  function deconstructComponentInternal(component) {
-    if (component &&
-        component[componentConfigProperty_]
-          .classConstructor.prototype
-          .hasOwnProperty(downgradeMethod_)) {
-      component[downgradeMethod_]();
-      var componentIndex = createdComponents_.indexOf(component);
-      createdComponents_.splice(componentIndex, 1);
-
-      var upgrades = component.element_.getAttribute('data-upgraded').split(',');
-      var componentPlace = upgrades.indexOf(
-          component[componentConfigProperty_].classAsString);
-      upgrades.splice(componentPlace, 1);
-      component.element_.setAttribute('data-upgraded', upgrades.join(','));
-
-      var ev = document.createEvent('Events');
-      ev.initEvent('mdl-componentdowngraded', true, true);
-      component.element_.dispatchEvent(ev);
-    }
-  }
-
-  /**
-   * Downgrade either a given node, an array of nodes, or a NodeList.
-   *
-   * @param {!Node|!Array<!Node>|!NodeList} nodes
-   */
-  function downgradeNodesInternal(nodes) {
-    var downgradeNode = function(node) {
-      deconstructComponentInternal(findCreatedComponentByNodeInternal(node));
-    };
-    if (nodes instanceof Array || nodes instanceof NodeList) {
-      for (var n = 0; n < nodes.length; n++) {
-        downgradeNode(nodes[n]);
-      }
-    } else if (nodes instanceof Node) {
-      downgradeNode(nodes);
-    } else {
-      throw new Error('Invalid argument provided to downgrade MDL nodes.');
-    }
-  }
-
-  // Now return the functions that should be made public with their publicly
-  // facing names...
-  return {
-    upgradeDom: upgradeDomInternal,
-    upgradeElement: upgradeElementInternal,
-    upgradeElements: upgradeElementsInternal,
-    upgradeAllRegistered: upgradeAllRegisteredInternal,
-    registerUpgradedCallback: registerUpgradedCallbackInternal,
-    register: registerInternal,
-    downgradeElements: downgradeNodesInternal
-  };
-})();
-
-window.addEventListener('load', function() {
-  'use strict';
-
-  /**
-   * Performs a "Cutting the mustard" test. If the browser supports the features
-   * tested, adds a mdl-js class to the <html> element. It then upgrades all MDL
-   * components requiring JavaScript.
-   */
-  if ('classList' in document.createElement('div') &&
-      'querySelector' in document &&
-      'addEventListener' in window && Array.prototype.forEach) {
-    document.documentElement.classList.add('mdl-js');
-    componentHandler.upgradeAllRegistered();
-  } else {
-    componentHandler.upgradeElement =
-        componentHandler.register = function() {};
-  }
-});
-
-/**
- * Describes the type of a registered component type managed by
- * componentHandler. Provided for benefit of the Closure compiler.
- *
- * @typedef {{
- *   constructor: !Function,
- *   className: String,
- *   cssClass: String,
- *   widget: String,
- *   callbacks: !Array<function(!HTMLElement)>
- * }}
- */
-componentHandler.ComponentConfig;  // jshint ignore:line
-
-/**
- * Created component (i.e., upgraded element) type as managed by
- * componentHandler. Provided for benefit of the Closure compiler.
- *
- * @typedef {{
- *   element_: !HTMLElement,
- *   className: String,
- *   classAsString: String,
- *   cssClass: String,
- *   widget: String
- * }}
- */
-componentHandler.Component;  // jshint ignore:line
-
 /*
  * classList.js: Cross-browser full element.classList implementation.
  * 1.1.20150312
@@ -944,863 +556,6 @@ componentHandler.register({
 
 
 /**
- * Houdini v6.5.0
- * A simple collapse-and-expand script., by Chris Ferdinandi.
- * http://github.com/cferdinandi/houdini
- *
- * Free to use under the MIT License.
- * http://gomakethings.com/mit/
- */
-
-(function (root, factory) {
-	if ( typeof define === 'function' && define.amd ) {
-		define([], factory(root));
-	} else if ( typeof exports === 'object' ) {
-		module.exports = factory(root);
-	} else {
-		root.houdini = factory(root);
-	}
-})(typeof global !== "undefined" ? global : this.window || this.global, function (root) {
-
-	'use strict';
-
-	//
-	// Variables
-	//
-
-	var houdini = {}; // Object for public APIs
-	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
-	var settings;
-
-	// Default settings
-	var defaults = {
-		toggleActiveClass: 'active',
-		contentActiveClass: 'active',
-		initClass: 'js-houdini',
-		callbackBefore: function () {},
-		callbackAfter: function () {}
-	};
-
-
-	//
-	// Methods
-	//
-
-	/**
-	 * A simple forEach() implementation for Arrays, Objects and NodeLists
-	 * @private
-	 * @param {Array|Object|NodeList} collection Collection of items to iterate
-	 * @param {Function} callback Callback function for each iteration
-	 * @param {Array|Object|NodeList} scope Object/NodeList/Array that forEach is iterating over (aka `this`)
-	 */
-	var forEach = function (collection, callback, scope) {
-		if (Object.prototype.toString.call(collection) === '[object Object]') {
-			for (var prop in collection) {
-				if (Object.prototype.hasOwnProperty.call(collection, prop)) {
-					callback.call(scope, collection[prop], prop, collection);
-				}
-			}
-		} else {
-			for (var i = 0, len = collection.length; i < len; i++) {
-				callback.call(scope, collection[i], i, collection);
-			}
-		}
-	};
-
-	/**
-	 * Merge defaults with user options
-	 * @private
-	 * @param {Object} defaults Default settings
-	 * @param {Object} options User options
-	 * @returns {Object} Merged values of defaults and options
-	 */
-	var extend = function ( defaults, options ) {
-		var extended = {};
-		forEach(defaults, function (value, prop) {
-			extended[prop] = defaults[prop];
-		});
-		forEach(options, function (value, prop) {
-			extended[prop] = options[prop];
-		});
-		return extended;
-	};
-
-	/**
-	 * Get the closest matching element up the DOM tree
-	 * @param {Element} elem Starting element
-	 * @param {String} selector Selector to match against (class, ID, or data attribute)
-	 * @return {Boolean|Element} Returns false if not match found
-	 */
-	var getClosest = function (elem, selector) {
-		var firstChar = selector.charAt(0);
-		for ( ; elem && elem !== document; elem = elem.parentNode ) {
-			if ( firstChar === '.' ) {
-				if ( elem.classList.contains( selector.substr(1) ) ) {
-					return elem;
-				}
-			} else if ( firstChar === '#' ) {
-				if ( elem.id === selector.substr(1) ) {
-					return elem;
-				}
-			} else if ( firstChar === '[' ) {
-				if ( elem.hasAttribute( selector.substr(1, selector.length - 2) ) ) {
-					return elem;
-				}
-			}
-		}
-		return false;
-	};
-
-	/**
-	 * Stop YouTube, Vimeo, and HTML5 videos from playing when leaving the slide
-	 * @private
-	 * @param  {Element} content The content container the video is in
-	 * @param  {String} activeClass The class asigned to expanded content areas
-	 */
-	var stopVideos = function ( content, activeClass ) {
-		if ( !content.classList.contains( activeClass ) ) {
-			var iframe = content.querySelector( 'iframe');
-			var video = content.querySelector( 'video' );
-			if ( iframe ) {
-				var iframeSrc = iframe.src;
-				iframe.src = iframeSrc;
-			}
-			if ( video ) {
-				video.pause();
-			}
-		}
-	};
-
-	/**
-	 * Close all content areas in an expand/collapse group
-	 * @private
-	 * @param  {Element} toggle The element that toggled the expand or collapse
-	 * @param  {Object} settings
-	 */
-	var closeCollapseGroup = function ( toggle, settings ) {
-		if ( !toggle.classList.contains( settings.toggleActiveClass ) && toggle.hasAttribute('data-group') ) {
-
-			// Get all toggles in the group
-			var groupName = toggle.getAttribute('data-group');
-			var group = document.querySelectorAll('[data-group="' + groupName + '"]');
-
-			// Deactivate each toggle and it's content area
-			forEach(group, function (item) {
-				var content = document.querySelector( item.getAttribute('data-collapse') );
-				item.classList.remove( settings.toggleActiveClass );
-				content.classList.remove( settings.contentActiveClass );
-			});
-
-		}
-	};
-
-	/**
-	 * Toggle the collapse/expand widget
-	 * @public
-	 * @param  {Element} toggle The element that toggled the expand or collapse
-	 * @param  {String} contentID The ID of the content area to expand or collapse
-	 * @param  {Object} options
-	 * @param  {Event} event
-	 */
-	houdini.toggleContent = function (toggle, contentID, options) {
-
-		var settings = extend( settings || defaults, options || {} );  // Merge user options with defaults
-		var content = document.querySelector(contentID); // Get content area
-
-		settings.callbackBefore( toggle, contentID ); // Run callbacks before toggling content
-
-		// Toggle collapse element
-		closeCollapseGroup(toggle, settings); // Close collapse group items
-		toggle.classList.toggle( settings.toggleActiveClass );// Change text on collapse toggle
-		content.classList.toggle( settings.contentActiveClass ); // Collapse or expand content area
-		stopVideos( content, settings.contentActiveClass ); // If content area is closed, stop playing any videos
-
-		settings.callbackAfter( toggle, contentID ); // Run callbacks after toggling content
-
-	};
-
-	/**
-	 * Handle toggle click events
-	 * @private
-	 */
-	var eventHandler = function (event) {
-		var toggle = getClosest(event.target, '[data-collapse]');
-		if ( toggle ) {
-			if ( toggle.tagName.toLowerCase() === 'a' || toggle.tagName.toLowerCase() === 'button' ) {
-				event.preventDefault();
-			}
-			var contentID = toggle.hasAttribute('data-collapse') ? toggle.getAttribute('data-collapse') : toggle.parentNode.getAttribute('data-collapse');
-			houdini.toggleContent( toggle, contentID, settings );
-		}
-	};
-
-	/**
-	 * Destroy the current initialization.
-	 * @public
-	 */
-	houdini.destroy = function () {
-		if ( !settings ) return;
-		document.documentElement.classList.remove( settings.initClass );
-		document.removeEventListener('click', eventHandler, false);
-		settings = null;
-	};
-
-	/**
-	 * Initialize Houdini
-	 * @public
-	 * @param {Object} options User settings
-	 */
-	houdini.init = function ( options ) {
-
-		// feature test
-		if ( !supports ) return;
-
-		// Destroy any existing initializations
-		houdini.destroy();
-
-		// Merge user options with defaults
-		settings = extend( defaults, options || {} );
-
-		// Add class to HTML element to activate conditional CSS
-		document.documentElement.classList.add( settings.initClass );
-
-		// Listen for all click events
-		document.addEventListener('click', eventHandler, false);
-
-	};
-
-
-	//
-	// Public APIs
-	//
-
-	return houdini;
-
-});
-
-houdini.init();
-
-/**
- * @license
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-(function() {
-  'use strict';
-
-  /**
-   * Class constructor for Button MDL component.
-   * Implements MDL component design pattern defined at:
-   * https://github.com/jasonmayes/mdl-component-design-pattern
-   *
-   * @param {HTMLElement} element The element that will be upgraded.
-   */
-  var MaterialButton = function MaterialButton(element) {
-    this.element_ = element;
-
-    // Initialize instance.
-    this.init();
-  };
-  window.MaterialButton = MaterialButton;
-
-  /**
-   * Store constants in one place so they can be updated easily.
-   *
-   * @enum {String | Number}
-   * @private
-   */
-  MaterialButton.prototype.Constant_ = {
-    // None for now.
-  };
-
-  /**
-   * Store strings for class names defined by this component that are used in
-   * JavaScript. This allows us to simply change it in one place should we
-   * decide to modify at a later date.
-   *
-   * @enum {String}
-   * @private
-   */
-  MaterialButton.prototype.CssClasses_ = {
-    RIPPLE_EFFECT: 'mdl-js-ripple-effect',
-    RIPPLE_CONTAINER: 'mdl-button__ripple-container',
-    RIPPLE: 'mdl-ripple'
-  };
-
-  /**
-   * Handle blur of element.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialButton.prototype.blurHandler_ = function(event) {
-    if (event) {
-      this.element_.blur();
-    }
-  };
-
-  // Public methods.
-
-  /**
-   * Disable button.
-   *
-   * @public
-   */
-  MaterialButton.prototype.disable = function() {
-    this.element_.disabled = true;
-  };
-
-  /**
-   * Enable button.
-   *
-   * @public
-   */
-  MaterialButton.prototype.enable = function() {
-    this.element_.disabled = false;
-  };
-
-  /**
-   * Initialize element.
-   */
-  MaterialButton.prototype.init = function() {
-    if (this.element_) {
-      if (this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)) {
-        var rippleContainer = document.createElement('span');
-        rippleContainer.classList.add(this.CssClasses_.RIPPLE_CONTAINER);
-        this.rippleElement_ = document.createElement('span');
-        this.rippleElement_.classList.add(this.CssClasses_.RIPPLE);
-        rippleContainer.appendChild(this.rippleElement_);
-        this.boundRippleBlurHandler = this.blurHandler_.bind(this);
-        this.rippleElement_.addEventListener('mouseup', this.boundRippleBlurHandler);
-        this.element_.appendChild(rippleContainer);
-      }
-      this.boundButtonBlurHandler = this.blurHandler_.bind(this);
-      this.element_.addEventListener('mouseup', this.boundButtonBlurHandler);
-      this.element_.addEventListener('mouseleave', this.boundButtonBlurHandler);
-    }
-  };
-
-  /**
-   * Downgrade the element.
-   *
-   * @private
-   */
-  MaterialButton.prototype.mdlDowngrade_ = function() {
-    if (this.rippleElement_) {
-      this.rippleElement_.removeEventListener('mouseup', this.boundRippleBlurHandler);
-    }
-    this.element_.removeEventListener('mouseup', this.boundButtonBlurHandler);
-    this.element_.removeEventListener('mouseleave', this.boundButtonBlurHandler);
-  };
-
-  // The component registers itself. It can assume componentHandler is available
-  // in the global scope.
-  componentHandler.register({
-    constructor: MaterialButton,
-    classAsString: 'MaterialButton',
-    cssClass: 'mdl-js-button',
-    widget: true
-  });
-})();
-
-/**
- * @license
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-(function() {
-  'use strict';
-
-  /**
-   * Class constructor for dropdown MDL component.
-   * Implements MDL component design pattern defined at:
-   * https://github.com/jasonmayes/mdl-component-design-pattern
-   *
-   * @param {HTMLElement} element The element that will be upgraded.
-   */
-  var MaterialMenu = function MaterialMenu(element) {
-    this.element_ = element;
-
-    // Initialize instance.
-    this.init();
-  };
-  window.MaterialMenu = MaterialMenu;
-
-  /**
-   * Store constants in one place so they can be updated easily.
-   *
-   * @enum {String | Number}
-   * @private
-   */
-  MaterialMenu.prototype.Constant_ = {
-    // Total duration of the menu animation.
-    TRANSITION_DURATION_SECONDS: 0.3,
-    // The fraction of the total duration we want to use for menu item animations.
-    TRANSITION_DURATION_FRACTION: 0.8,
-    // How long the menu stays open after choosing an option (so the user can see
-    // the ripple).
-    CLOSE_TIMEOUT: 150
-  };
-
-  /**
-   * Keycodes, for code readability.
-   *
-   * @enum {Number}
-   * @private
-   */
-  MaterialMenu.prototype.Keycodes_ = {
-    ENTER: 13,
-    ESCAPE: 27,
-    SPACE: 32,
-    UP_ARROW: 38,
-    DOWN_ARROW: 40
-  };
-
-  /**
-   * Store strings for class names defined by this component that are used in
-   * JavaScript. This allows us to simply change it in one place should we
-   * decide to modify at a later date.
-   *
-   * @enum {String}
-   * @private
-   */
-  MaterialMenu.prototype.CssClasses_ = {
-    CONTAINER: 'mdl-menu__container',
-    OUTLINE: 'mdl-menu__outline',
-    ITEM: 'mdl-menu__item',
-    ITEM_RIPPLE_CONTAINER: 'mdl-menu__item-ripple-container',
-    RIPPLE_EFFECT: 'mdl-js-ripple-effect',
-    RIPPLE_IGNORE_EVENTS: 'mdl-js-ripple-effect--ignore-events',
-    RIPPLE: 'mdl-ripple',
-    // Statuses
-    IS_UPGRADED: 'is-upgraded',
-    IS_VISIBLE: 'is-visible',
-    IS_ANIMATING: 'is-animating',
-    // Alignment options
-    BOTTOM_LEFT: 'mdl-menu--bottom-left',  // This is the default.
-    BOTTOM_RIGHT: 'mdl-menu--bottom-right',
-    TOP_LEFT: 'mdl-menu--top-left',
-    TOP_RIGHT: 'mdl-menu--top-right',
-    UNALIGNED: 'mdl-menu--unaligned'
-  };
-
-  /**
-   * Initialize element.
-   */
-  MaterialMenu.prototype.init = function() {
-    if (this.element_) {
-      // Create container for the menu.
-      var container = document.createElement('div');
-      container.classList.add(this.CssClasses_.CONTAINER);
-      this.element_.parentElement.insertBefore(container, this.element_);
-      this.element_.parentElement.removeChild(this.element_);
-      container.appendChild(this.element_);
-      this.container_ = container;
-
-      // Create outline for the menu (shadow and background).
-      var outline = document.createElement('div');
-      outline.classList.add(this.CssClasses_.OUTLINE);
-      this.outline_ = outline;
-      container.insertBefore(outline, this.element_);
-
-      // Find the "for" element and bind events to it.
-      var forElId = this.element_.getAttribute('for');
-      var forEl = null;
-      if (forElId) {
-        forEl = document.getElementById(forElId);
-        if (forEl) {
-          this.forElement_ = forEl;
-          forEl.addEventListener('click', this.handleForClick_.bind(this));
-          forEl.addEventListener('keydown',
-              this.handleForKeyboardEvent_.bind(this));
-        }
-      }
-
-      var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-      this.boundItemKeydown = this.handleItemKeyboardEvent_.bind(this);
-      this.boundItemClick = this.handleItemClick_.bind(this);
-      for (var i = 0; i < items.length; i++) {
-        // Add a listener to each menu item.
-        items[i].addEventListener('click', this.boundItemClick);
-        // Add a tab index to each menu item.
-        items[i].tabIndex = '-1';
-        // Add a keyboard listener to each menu item.
-        items[i].addEventListener('keydown', this.boundItemKeydown);
-      }
-
-      // Add ripple classes to each item, if the user has enabled ripples.
-      if (this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)) {
-        this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS);
-
-        for (i = 0; i < items.length; i++) {
-          var item = items[i];
-
-          var rippleContainer = document.createElement('span');
-          rippleContainer.classList.add(this.CssClasses_.ITEM_RIPPLE_CONTAINER);
-
-          var ripple = document.createElement('span');
-          ripple.classList.add(this.CssClasses_.RIPPLE);
-          rippleContainer.appendChild(ripple);
-
-          item.appendChild(rippleContainer);
-          item.classList.add(this.CssClasses_.RIPPLE_EFFECT);
-        }
-      }
-
-      // Copy alignment classes to the container, so the outline can use them.
-      if (this.element_.classList.contains(this.CssClasses_.BOTTOM_LEFT)) {
-        this.outline_.classList.add(this.CssClasses_.BOTTOM_LEFT);
-      }
-      if (this.element_.classList.contains(this.CssClasses_.BOTTOM_RIGHT)) {
-        this.outline_.classList.add(this.CssClasses_.BOTTOM_RIGHT);
-      }
-      if (this.element_.classList.contains(this.CssClasses_.TOP_LEFT)) {
-        this.outline_.classList.add(this.CssClasses_.TOP_LEFT);
-      }
-      if (this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)) {
-        this.outline_.classList.add(this.CssClasses_.TOP_RIGHT);
-      }
-      if (this.element_.classList.contains(this.CssClasses_.UNALIGNED)) {
-        this.outline_.classList.add(this.CssClasses_.UNALIGNED);
-      }
-
-      container.classList.add(this.CssClasses_.IS_UPGRADED);
-    }
-  };
-
-  /**
-   * Handles a click on the "for" element, by positioning the menu and then
-   * toggling it.
-   *
-   * @param {Event} evt The event that fired.
-   * @private
-   */
-  MaterialMenu.prototype.handleForClick_ = function(evt) {
-    if (this.element_ && this.forElement_) {
-      var rect = this.forElement_.getBoundingClientRect();
-      var forRect = this.forElement_.parentElement.getBoundingClientRect();
-
-      if (this.element_.classList.contains(this.CssClasses_.UNALIGNED)) {
-        // Do not position the menu automatically. Requires the developer to
-        // manually specify position.
-      } else if (this.element_.classList.contains(
-          this.CssClasses_.BOTTOM_RIGHT)) {
-        // Position below the "for" element, aligned to its right.
-        this.container_.style.right = (forRect.right - rect.right) + 'px';
-        this.container_.style.top =
-            this.forElement_.offsetTop + this.forElement_.offsetHeight + 'px';
-      } else if (this.element_.classList.contains(this.CssClasses_.TOP_LEFT)) {
-        // Position above the "for" element, aligned to its left.
-        this.container_.style.left = this.forElement_.offsetLeft + 'px';
-        this.container_.style.bottom = (forRect.bottom - rect.top) + 'px';
-      } else if (this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)) {
-        // Position above the "for" element, aligned to its right.
-        this.container_.style.right = (forRect.right - rect.right) + 'px';
-        this.container_.style.bottom = (forRect.bottom - rect.top) + 'px';
-      } else {
-        // Default: position below the "for" element, aligned to its left.
-        this.container_.style.left = this.forElement_.offsetLeft + 'px';
-        this.container_.style.top =
-            this.forElement_.offsetTop + this.forElement_.offsetHeight + 'px';
-      }
-    }
-
-    this.toggle(evt);
-  };
-
-  /**
-   * Handles a keyboard event on the "for" element.
-   *
-   * @param {Event} evt The event that fired.
-   * @private
-   */
-  MaterialMenu.prototype.handleForKeyboardEvent_ = function(evt) {
-    if (this.element_ && this.container_ && this.forElement_) {
-      var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM +
-        ':not([disabled])');
-
-      if (items && items.length > 0 &&
-          this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)) {
-        if (evt.keyCode === this.Keycodes_.UP_ARROW) {
-          evt.preventDefault();
-          items[items.length - 1].focus();
-        } else if (evt.keyCode === this.Keycodes_.DOWN_ARROW) {
-          evt.preventDefault();
-          items[0].focus();
-        }
-      }
-    }
-  };
-
-  /**
-   * Handles a keyboard event on an item.
-   *
-   * @param {Event} evt The event that fired.
-   * @private
-   */
-  MaterialMenu.prototype.handleItemKeyboardEvent_ = function(evt) {
-    if (this.element_ && this.container_) {
-      var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM +
-        ':not([disabled])');
-
-      if (items && items.length > 0 &&
-          this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)) {
-        var currentIndex = Array.prototype.slice.call(items).indexOf(evt.target);
-
-        if (evt.keyCode === this.Keycodes_.UP_ARROW) {
-          evt.preventDefault();
-          if (currentIndex > 0) {
-            items[currentIndex - 1].focus();
-          } else {
-            items[items.length - 1].focus();
-          }
-        } else if (evt.keyCode === this.Keycodes_.DOWN_ARROW) {
-          evt.preventDefault();
-          if (items.length > currentIndex + 1) {
-            items[currentIndex + 1].focus();
-          } else {
-            items[0].focus();
-          }
-        } else if (evt.keyCode === this.Keycodes_.SPACE ||
-              evt.keyCode === this.Keycodes_.ENTER) {
-          evt.preventDefault();
-          // Send mousedown and mouseup to trigger ripple.
-          var e = new MouseEvent('mousedown');
-          evt.target.dispatchEvent(e);
-          e = new MouseEvent('mouseup');
-          evt.target.dispatchEvent(e);
-          // Send click.
-          evt.target.click();
-        } else if (evt.keyCode === this.Keycodes_.ESCAPE) {
-          evt.preventDefault();
-          this.hide();
-        }
-      }
-    }
-  };
-
-  /**
-   * Handles a click event on an item.
-   *
-   * @param {Event} evt The event that fired.
-   * @private
-   */
-  MaterialMenu.prototype.handleItemClick_ = function(evt) {
-    if (evt.target.getAttribute('disabled') !== null) {
-      evt.stopPropagation();
-    } else {
-      // Wait some time before closing menu, so the user can see the ripple.
-      this.closing_ = true;
-      window.setTimeout(function(evt) {
-        this.hide();
-        this.closing_ = false;
-      }.bind(this), this.Constant_.CLOSE_TIMEOUT);
-    }
-  };
-
-  /**
-   * Calculates the initial clip (for opening the menu) or final clip (for closing
-   * it), and applies it. This allows us to animate from or to the correct point,
-   * that is, the point it's aligned to in the "for" element.
-   *
-   * @param {Number} height Height of the clip rectangle
-   * @param {Number} width Width of the clip rectangle
-   * @private
-   */
-  MaterialMenu.prototype.applyClip_ = function(height, width) {
-    if (this.element_.classList.contains(this.CssClasses_.UNALIGNED)) {
-      // Do not clip.
-      this.element_.style.clip = null;
-    } else if (this.element_.classList.contains(this.CssClasses_.BOTTOM_RIGHT)) {
-      // Clip to the top right corner of the menu.
-      this.element_.style.clip =
-          'rect(0 ' + width + 'px ' + '0 ' + width + 'px)';
-    } else if (this.element_.classList.contains(this.CssClasses_.TOP_LEFT)) {
-      // Clip to the bottom left corner of the menu.
-      this.element_.style.clip =
-          'rect(' + height + 'px 0 ' + height + 'px 0)';
-    } else if (this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)) {
-      // Clip to the bottom right corner of the menu.
-      this.element_.style.clip = 'rect(' + height + 'px ' + width + 'px ' +
-          height + 'px ' + width + 'px)';
-    } else {
-      // Default: do not clip (same as clipping to the top left corner).
-      this.element_.style.clip = null;
-    }
-  };
-
-  /**
-   * Adds an event listener to clean up after the animation ends.
-   *
-   * @private
-   */
-  MaterialMenu.prototype.addAnimationEndListener_ = function() {
-    var cleanup = function() {
-      this.element_.removeEventListener('transitionend', cleanup);
-      this.element_.removeEventListener('webkitTransitionEnd', cleanup);
-      this.element_.classList.remove(this.CssClasses_.IS_ANIMATING);
-    }.bind(this);
-
-    // Remove animation class once the transition is done.
-    this.element_.addEventListener('transitionend', cleanup);
-    this.element_.addEventListener('webkitTransitionEnd', cleanup);
-  };
-
-  /**
-   * Displays the menu.
-   *
-   * @public
-   */
-  MaterialMenu.prototype.show = function(evt) {
-    if (this.element_ && this.container_ && this.outline_) {
-      // Measure the inner element.
-      var height = this.element_.getBoundingClientRect().height;
-      var width = this.element_.getBoundingClientRect().width;
-
-      // Apply the inner element's size to the container and outline.
-      this.container_.style.width = width + 'px';
-      this.container_.style.height = height + 'px';
-      this.outline_.style.width = width + 'px';
-      this.outline_.style.height = height + 'px';
-
-      var transitionDuration = this.Constant_.TRANSITION_DURATION_SECONDS *
-          this.Constant_.TRANSITION_DURATION_FRACTION;
-
-      // Calculate transition delays for individual menu items, so that they fade
-      // in one at a time.
-      var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-      for (var i = 0; i < items.length; i++) {
-        var itemDelay = null;
-        if (this.element_.classList.contains(this.CssClasses_.TOP_LEFT) ||
-            this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)) {
-          itemDelay = ((height - items[i].offsetTop - items[i].offsetHeight) /
-              height * transitionDuration) + 's';
-        } else {
-          itemDelay = (items[i].offsetTop / height * transitionDuration) + 's';
-        }
-        items[i].style.transitionDelay = itemDelay;
-      }
-
-      // Apply the initial clip to the text before we start animating.
-      this.applyClip_(height, width);
-
-      // Wait for the next frame, turn on animation, and apply the final clip.
-      // Also make it visible. This triggers the transitions.
-      window.requestAnimationFrame(function() {
-        this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
-        this.element_.style.clip = 'rect(0 ' + width + 'px ' + height + 'px 0)';
-        this.container_.classList.add(this.CssClasses_.IS_VISIBLE);
-      }.bind(this));
-
-      // Clean up after the animation is complete.
-      this.addAnimationEndListener_();
-
-      // Add a click listener to the document, to close the menu.
-      var callback = function(e) {
-        // Check to see if the document is processing the same event that
-        // displayed the menu in the first place. If so, do nothing.
-        // Also check to see if the menu is in the process of closing itself, and
-        // do nothing in that case.
-        if (e !== evt && !this.closing_) {
-          document.removeEventListener('click', callback);
-          this.hide();
-        }
-      }.bind(this);
-      document.addEventListener('click', callback);
-    }
-  };
-
-  /**
-   * Hides the menu.
-   *
-   * @public
-   */
-  MaterialMenu.prototype.hide = function() {
-    if (this.element_ && this.container_ && this.outline_) {
-      var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-
-      // Remove all transition delays; menu items fade out concurrently.
-      for (var i = 0; i < items.length; i++) {
-        items[i].style.transitionDelay = null;
-      }
-
-      // Measure the inner element.
-      var height = this.element_.getBoundingClientRect().height;
-      var width = this.element_.getBoundingClientRect().width;
-
-      // Turn on animation, and apply the final clip. Also make invisible.
-      // This triggers the transitions.
-      this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
-      this.applyClip_(height, width);
-      this.container_.classList.remove(this.CssClasses_.IS_VISIBLE);
-
-      // Clean up after the animation is complete.
-      this.addAnimationEndListener_();
-    }
-  };
-
-  /**
-   * Displays or hides the menu, depending on current state.
-   *
-   * @public
-   */
-  MaterialMenu.prototype.toggle = function(evt) {
-    if (this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)) {
-      this.hide();
-    } else {
-      this.show(evt);
-    }
-  };
-
-  /**
-   * Downgrade the component.
-   *
-   * @private
-   */
-  MaterialMenu.prototype.mdlDowngrade_ = function() {
-    var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-
-    for (var i = 0; i < items.length; i++) {
-      items[i].removeEventListener('click', this.boundItemClick);
-      items[i].removeEventListener('keydown', this.boundItemKeydown);
-    }
-  };
-
-  // The component registers itself. It can assume componentHandler is available
-  // in the global scope.
-  componentHandler.register({
-    constructor: MaterialMenu,
-    classAsString: 'MaterialMenu',
-    cssClass: 'mdl-js-menu',
-    widget: true
-  });
-})();
-
-/**
  * Tabby v7.4.6
  * Simple, mobile-first toggle tabs., by Chris Ferdinandi.
  * http://github.com/cferdinandi/tabby
@@ -2082,406 +837,238 @@ tabby.toggleTab( toggle, '#tab156' );
 tabby.init();
 
 /**
- * @license
- * Copyright 2015 Google Inc. All Rights Reserved.
+ * Houdini v6.5.0
+ * A simple collapse-and-expand script., by Chris Ferdinandi.
+ * http://github.com/cferdinandi/houdini
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
  */
 
-(function() {
-  'use strict';
+(function (root, factory) {
+	if ( typeof define === 'function' && define.amd ) {
+		define([], factory(root));
+	} else if ( typeof exports === 'object' ) {
+		module.exports = factory(root);
+	} else {
+		root.houdini = factory(root);
+	}
+})(typeof global !== "undefined" ? global : this.window || this.global, function (root) {
 
-  /**
-   * Class constructor for Tooltip MDL component.
-   * Implements MDL component design pattern defined at:
-   * https://github.com/jasonmayes/mdl-component-design-pattern
-   *
-   * @param {HTMLElement} element The element that will be upgraded.
-   */
-  var MaterialTooltip = function MaterialTooltip(element) {
-    this.element_ = element;
+	'use strict';
 
-    // Initialize instance.
-    this.init();
-  };
-  window.MaterialTooltip = MaterialTooltip;
+	//
+	// Variables
+	//
 
-  /**
-   * Store constants in one place so they can be updated easily.
-   *
-   * @enum {String | Number}
-   * @private
-   */
-  MaterialTooltip.prototype.Constant_ = {
-    // None for now.
-  };
+	var houdini = {}; // Object for public APIs
+	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
+	var settings;
 
-  /**
-   * Store strings for class names defined by this component that are used in
-   * JavaScript. This allows us to simply change it in one place should we
-   * decide to modify at a later date.
-   *
-   * @enum {String}
-   * @private
-   */
-  MaterialTooltip.prototype.CssClasses_ = {
-    IS_ACTIVE: 'is-active'
-  };
+	// Default settings
+	var defaults = {
+		toggleActiveClass: 'active',
+		contentActiveClass: 'active',
+		initClass: 'js-houdini',
+		callbackBefore: function () {},
+		callbackAfter: function () {}
+	};
 
-  /**
-   * Handle mouseenter for tooltip.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialTooltip.prototype.handleMouseEnter_ = function(event) {
-    event.stopPropagation();
-    var props = event.target.getBoundingClientRect();
-    var left = props.left + (props.width / 2);
-    var marginLeft = -1 * (this.element_.offsetWidth / 2);
 
-    if (left + marginLeft < 0) {
-      this.element_.style.left = 0;
-      this.element_.style.marginLeft = 0;
-    } else {
-      this.element_.style.left = left + 'px';
-      this.element_.style.marginLeft = marginLeft + 'px';
-    }
+	//
+	// Methods
+	//
 
-    this.element_.style.top = props.top + props.height + 10 + 'px';
-    this.element_.classList.add(this.CssClasses_.IS_ACTIVE);
-    window.addEventListener('scroll', this.boundMouseLeaveHandler, false);
-    window.addEventListener('touchmove', this.boundMouseLeaveHandler, false);
-  };
+	/**
+	 * A simple forEach() implementation for Arrays, Objects and NodeLists
+	 * @private
+	 * @param {Array|Object|NodeList} collection Collection of items to iterate
+	 * @param {Function} callback Callback function for each iteration
+	 * @param {Array|Object|NodeList} scope Object/NodeList/Array that forEach is iterating over (aka `this`)
+	 */
+	var forEach = function (collection, callback, scope) {
+		if (Object.prototype.toString.call(collection) === '[object Object]') {
+			for (var prop in collection) {
+				if (Object.prototype.hasOwnProperty.call(collection, prop)) {
+					callback.call(scope, collection[prop], prop, collection);
+				}
+			}
+		} else {
+			for (var i = 0, len = collection.length; i < len; i++) {
+				callback.call(scope, collection[i], i, collection);
+			}
+		}
+	};
 
-  /**
-   * Handle mouseleave for tooltip.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialTooltip.prototype.handleMouseLeave_ = function(event) {
-    event.stopPropagation();
-    this.element_.classList.remove(this.CssClasses_.IS_ACTIVE);
-    window.removeEventListener('scroll', this.boundMouseLeaveHandler);
-    window.removeEventListener('touchmove', this.boundMouseLeaveHandler, false);
-  };
+	/**
+	 * Merge defaults with user options
+	 * @private
+	 * @param {Object} defaults Default settings
+	 * @param {Object} options User options
+	 * @returns {Object} Merged values of defaults and options
+	 */
+	var extend = function ( defaults, options ) {
+		var extended = {};
+		forEach(defaults, function (value, prop) {
+			extended[prop] = defaults[prop];
+		});
+		forEach(options, function (value, prop) {
+			extended[prop] = options[prop];
+		});
+		return extended;
+	};
 
-  /**
-   * Initialize element.
-   */
-  MaterialTooltip.prototype.init = function() {
+	/**
+	 * Get the closest matching element up the DOM tree
+	 * @param {Element} elem Starting element
+	 * @param {String} selector Selector to match against (class, ID, or data attribute)
+	 * @return {Boolean|Element} Returns false if not match found
+	 */
+	var getClosest = function (elem, selector) {
+		var firstChar = selector.charAt(0);
+		for ( ; elem && elem !== document; elem = elem.parentNode ) {
+			if ( firstChar === '.' ) {
+				if ( elem.classList.contains( selector.substr(1) ) ) {
+					return elem;
+				}
+			} else if ( firstChar === '#' ) {
+				if ( elem.id === selector.substr(1) ) {
+					return elem;
+				}
+			} else if ( firstChar === '[' ) {
+				if ( elem.hasAttribute( selector.substr(1, selector.length - 2) ) ) {
+					return elem;
+				}
+			}
+		}
+		return false;
+	};
 
-    if (this.element_) {
-      var forElId = this.element_.getAttribute('for');
+	/**
+	 * Stop YouTube, Vimeo, and HTML5 videos from playing when leaving the slide
+	 * @private
+	 * @param  {Element} content The content container the video is in
+	 * @param  {String} activeClass The class asigned to expanded content areas
+	 */
+	var stopVideos = function ( content, activeClass ) {
+		if ( !content.classList.contains( activeClass ) ) {
+			var iframe = content.querySelector( 'iframe');
+			var video = content.querySelector( 'video' );
+			if ( iframe ) {
+				var iframeSrc = iframe.src;
+				iframe.src = iframeSrc;
+			}
+			if ( video ) {
+				video.pause();
+			}
+		}
+	};
 
-      if (forElId) {
-        this.forElement_ = document.getElementById(forElId);
-      }
+	/**
+	 * Close all content areas in an expand/collapse group
+	 * @private
+	 * @param  {Element} toggle The element that toggled the expand or collapse
+	 * @param  {Object} settings
+	 */
+	var closeCollapseGroup = function ( toggle, settings ) {
+		if ( !toggle.classList.contains( settings.toggleActiveClass ) && toggle.hasAttribute('data-group') ) {
 
-      if (this.forElement_) {
-        // Tabindex needs to be set for `blur` events to be emitted
-        if (!this.forElement_.getAttribute('tabindex')) {
-          this.forElement_.setAttribute('tabindex', '0');
-        }
+			// Get all toggles in the group
+			var groupName = toggle.getAttribute('data-group');
+			var group = document.querySelectorAll('[data-group="' + groupName + '"]');
 
-        this.boundMouseEnterHandler = this.handleMouseEnter_.bind(this);
-        this.boundMouseLeaveHandler = this.handleMouseLeave_.bind(this);
-        this.forElement_.addEventListener('mouseenter', this.boundMouseEnterHandler,
-            false);
-        this.forElement_.addEventListener('click', this.boundMouseEnterHandler,
-            false);
-        this.forElement_.addEventListener('blur', this.boundMouseLeaveHandler);
-        this.forElement_.addEventListener('touchstart', this.boundMouseEnterHandler,
-            false);
-        this.forElement_.addEventListener('mouseleave', this.boundMouseLeaveHandler);
-      }
-    }
-  };
+			// Deactivate each toggle and it's content area
+			forEach(group, function (item) {
+				var content = document.querySelector( item.getAttribute('data-collapse') );
+				item.classList.remove( settings.toggleActiveClass );
+				content.classList.remove( settings.contentActiveClass );
+			});
 
-  /**
-   * Downgrade the component
-   *
-   * @private
-   */
-  MaterialTooltip.prototype.mdlDowngrade_ = function() {
-    if (this.forElement_) {
-      this.forElement_.removeEventListener('mouseenter', this.boundMouseEnterHandler, false);
-      this.forElement_.removeEventListener('click', this.boundMouseEnterHandler, false);
-      this.forElement_.removeEventListener('touchstart', this.boundMouseEnterHandler, false);
-      this.forElement_.removeEventListener('mouseleave', this.boundMouseLeaveHandler);
-    }
-  };
+		}
+	};
 
-  // The component registers itself. It can assume componentHandler is available
-  // in the global scope.
-  componentHandler.register({
-    constructor: MaterialTooltip,
-    classAsString: 'MaterialTooltip',
-    cssClass: 'mdl-tooltip'
-  });
-})();
+	/**
+	 * Toggle the collapse/expand widget
+	 * @public
+	 * @param  {Element} toggle The element that toggled the expand or collapse
+	 * @param  {String} contentID The ID of the content area to expand or collapse
+	 * @param  {Object} options
+	 * @param  {Event} event
+	 */
+	houdini.toggleContent = function (toggle, contentID, options) {
 
-/**
- * @license
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+		var settings = extend( settings || defaults, options || {} );  // Merge user options with defaults
+		var content = document.querySelector(contentID); // Get content area
 
-(function() {
-  'use strict';
+		settings.callbackBefore( toggle, contentID ); // Run callbacks before toggling content
 
-  /**
-   * Class constructor for Ripple MDL component.
-   * Implements MDL component design pattern defined at:
-   * https://github.com/jasonmayes/mdl-component-design-pattern
-   *
-   * @param {HTMLElement} element The element that will be upgraded.
-   */
-  var MaterialRipple = function MaterialRipple(element) {
-    this.element_ = element;
+		// Toggle collapse element
+		closeCollapseGroup(toggle, settings); // Close collapse group items
+		toggle.classList.toggle( settings.toggleActiveClass );// Change text on collapse toggle
+		content.classList.toggle( settings.contentActiveClass ); // Collapse or expand content area
+		stopVideos( content, settings.contentActiveClass ); // If content area is closed, stop playing any videos
 
-    // Initialize instance.
-    this.init();
-  };
-  window.MaterialRipple = MaterialRipple;
+		settings.callbackAfter( toggle, contentID ); // Run callbacks after toggling content
 
-  /**
-   * Store constants in one place so they can be updated easily.
-   *
-   * @enum {String | Number}
-   * @private
-   */
-  MaterialRipple.prototype.Constant_ = {
-    INITIAL_SCALE: 'scale(0.0001, 0.0001)',
-    INITIAL_SIZE: '1px',
-    INITIAL_OPACITY: '0.4',
-    FINAL_OPACITY: '0',
-    FINAL_SCALE: ''
-  };
+	};
 
-  /**
-   * Store strings for class names defined by this component that are used in
-   * JavaScript. This allows us to simply change it in one place should we
-   * decide to modify at a later date.
-   *
-   * @enum {String}
-   * @private
-   */
-  MaterialRipple.prototype.CssClasses_ = {
-    RIPPLE_CENTER: 'mdl-ripple--center',
-    RIPPLE_EFFECT_IGNORE_EVENTS: 'mdl-js-ripple-effect--ignore-events',
-    RIPPLE: 'mdl-ripple',
-    IS_ANIMATING: 'is-animating',
-    IS_VISIBLE: 'is-visible'
-  };
+	/**
+	 * Handle toggle click events
+	 * @private
+	 */
+	var eventHandler = function (event) {
+		var toggle = getClosest(event.target, '[data-collapse]');
+		if ( toggle ) {
+			if ( toggle.tagName.toLowerCase() === 'a' || toggle.tagName.toLowerCase() === 'button' ) {
+				event.preventDefault();
+			}
+			var contentID = toggle.hasAttribute('data-collapse') ? toggle.getAttribute('data-collapse') : toggle.parentNode.getAttribute('data-collapse');
+			houdini.toggleContent( toggle, contentID, settings );
+		}
+	};
 
-  /**
-   * Handle mouse / finger down on element.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialRipple.prototype.downHandler_ = function(event) {
-    if (!this.rippleElement_.style.width && !this.rippleElement_.style.height) {
-      var rect = this.element_.getBoundingClientRect();
-      this.boundHeight = rect.height;
-      this.boundWidth = rect.width;
-      this.rippleSize_ = Math.sqrt(rect.width * rect.width +
-          rect.height * rect.height) * 2 + 2;
-      this.rippleElement_.style.width = this.rippleSize_ + 'px';
-      this.rippleElement_.style.height = this.rippleSize_ + 'px';
-    }
+	/**
+	 * Destroy the current initialization.
+	 * @public
+	 */
+	houdini.destroy = function () {
+		if ( !settings ) return;
+		document.documentElement.classList.remove( settings.initClass );
+		document.removeEventListener('click', eventHandler, false);
+		settings = null;
+	};
 
-    this.rippleElement_.classList.add(this.CssClasses_.IS_VISIBLE);
+	/**
+	 * Initialize Houdini
+	 * @public
+	 * @param {Object} options User settings
+	 */
+	houdini.init = function ( options ) {
 
-    if (event.type === 'mousedown' && this.ignoringMouseDown_) {
-      this.ignoringMouseDown_ = false;
-    } else {
-      if (event.type === 'touchstart') {
-        this.ignoringMouseDown_ = true;
-      }
-      var frameCount = this.getFrameCount();
-      if (frameCount > 0) {
-        return;
-      }
-      this.setFrameCount(1);
-      var bound = event.currentTarget.getBoundingClientRect();
-      var x;
-      var y;
-      // Check if we are handling a keyboard click.
-      if (event.clientX === 0 && event.clientY === 0) {
-        x = Math.round(bound.width / 2);
-        y = Math.round(bound.height / 2);
-      } else {
-        var clientX = event.clientX ? event.clientX : event.touches[0].clientX;
-        var clientY = event.clientY ? event.clientY : event.touches[0].clientY;
-        x = Math.round(clientX - bound.left);
-        y = Math.round(clientY - bound.top);
-      }
-      this.setRippleXY(x, y);
-      this.setRippleStyles(true);
-      window.requestAnimationFrame(this.animFrameHandler.bind(this));
-    }
-  };
+		// feature test
+		if ( !supports ) return;
 
-  /**
-   * Handle mouse / finger up on element.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialRipple.prototype.upHandler_ = function(event) {
-    // Don't fire for the artificial "mouseup" generated by a double-click.
-    if (event && event.detail !== 2) {
-      this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
-    }
-    // Allow a repaint to occur before removing this class, so the animation
-    // shows for tap events, which seem to trigger a mouseup too soon after
-    // mousedown.
-    window.setTimeout(function() {
-      this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
-    }.bind(this), 0);
-  };
+		// Destroy any existing initializations
+		houdini.destroy();
 
-  /**
-   * Initialize element.
-   */
-  MaterialRipple.prototype.init = function() {
-    if (this.element_) {
-      var recentering =
-          this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
-      if (!this.element_.classList.contains(
-          this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {
-        this.rippleElement_ = this.element_.querySelector('.' +
-            this.CssClasses_.RIPPLE);
-        this.frameCount_ = 0;
-        this.rippleSize_ = 0;
-        this.x_ = 0;
-        this.y_ = 0;
+		// Merge user options with defaults
+		settings = extend( defaults, options || {} );
 
-        // Touch start produces a compat mouse down event, which would cause a
-        // second ripples. To avoid that, we use this property to ignore the first
-        // mouse down after a touch start.
-        this.ignoringMouseDown_ = false;
+		// Add class to HTML element to activate conditional CSS
+		document.documentElement.classList.add( settings.initClass );
 
-        this.boundDownHandler = this.downHandler_.bind(this);
-        this.element_.addEventListener('mousedown',
-          this.boundDownHandler);
-        this.element_.addEventListener('touchstart',
-            this.boundDownHandler);
+		// Listen for all click events
+		document.addEventListener('click', eventHandler, false);
 
-        this.boundUpHandler = this.upHandler_.bind(this);
-        this.element_.addEventListener('mouseup', this.boundUpHandler);
-        this.element_.addEventListener('mouseleave', this.boundUpHandler);
-        this.element_.addEventListener('touchend', this.boundUpHandler);
-        this.element_.addEventListener('blur', this.boundUpHandler);
+	};
 
-        this.getFrameCount = function() {
-          return this.frameCount_;
-        };
 
-        this.setFrameCount = function(fC) {
-          this.frameCount_ = fC;
-        };
+	//
+	// Public APIs
+	//
 
-        this.getRippleElement = function() {
-          return this.rippleElement_;
-        };
+	return houdini;
 
-        this.setRippleXY = function(newX, newY) {
-          this.x_ = newX;
-          this.y_ = newY;
-        };
+});
 
-        this.setRippleStyles = function(start) {
-          if (this.rippleElement_ !== null) {
-            var transformString;
-            var scale;
-            var size;
-            var offset = 'translate(' + this.x_ + 'px, ' + this.y_ + 'px)';
-
-            if (start) {
-              scale = this.Constant_.INITIAL_SCALE;
-              size = this.Constant_.INITIAL_SIZE;
-            } else {
-              scale = this.Constant_.FINAL_SCALE;
-              size = this.rippleSize_ + 'px';
-              if (recentering) {
-                offset = 'translate(' + this.boundWidth / 2 + 'px, ' +
-                  this.boundHeight / 2 + 'px)';
-              }
-            }
-
-            transformString = 'translate(-50%, -50%) ' + offset + scale;
-
-            this.rippleElement_.style.webkitTransform = transformString;
-            this.rippleElement_.style.msTransform = transformString;
-            this.rippleElement_.style.transform = transformString;
-
-            if (start) {
-              this.rippleElement_.classList.remove(this.CssClasses_.IS_ANIMATING);
-            } else {
-              this.rippleElement_.classList.add(this.CssClasses_.IS_ANIMATING);
-            }
-          }
-        };
-
-        this.animFrameHandler = function() {
-          if (this.frameCount_-- > 0) {
-            window.requestAnimationFrame(this.animFrameHandler.bind(this));
-          } else {
-            this.setRippleStyles(false);
-          }
-        };
-      }
-    }
-  };
-
-  /**
-   * Downgrade the component
-   *
-   * @private
-   */
-  MaterialRipple.prototype.mdlDowngrade_ = function() {
-    this.element_.removeEventListener('mousedown',
-    this.boundDownHandler);
-    this.element_.removeEventListener('touchstart',
-        this.boundDownHandler);
-
-    this.element_.removeEventListener('mouseup', this.boundUpHandler);
-    this.element_.removeEventListener('mouseleave', this.boundUpHandler);
-    this.element_.removeEventListener('touchend', this.boundUpHandler);
-    this.element_.removeEventListener('blur', this.boundUpHandler);
-  };
-
-  // The component registers itself. It can assume componentHandler is available
-  // in the global scope.
-  componentHandler.register({
-    constructor: MaterialRipple,
-    classAsString: 'MaterialRipple',
-    cssClass: 'mdl-js-ripple-effect',
-    widget: false
-  });
-})();
+houdini.init();
