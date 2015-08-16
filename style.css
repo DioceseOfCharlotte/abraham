@@ -2105,8 +2105,7 @@ input.mdl-button[type="submit"] {
 
 .mdl-card__supporting-text {
     overflow: hidden;
-    width: 90%; 
-    padding: 16px 16px;
+    padding: 16px 16px; 
     color: rgba(0,0,0, 0.54);
     line-height: 18px;
 }
@@ -2489,6 +2488,10 @@ button.button--colored:focus:not(:active) {
 
 /* #WIDTHS
 \*------------------------------------*/
+.u-width-auto {
+    width: auto;
+}
+
 .u-1\/1 {
     width: 100%;
 }
@@ -3542,6 +3545,15 @@ input[type="submit"] {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row; 
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
 }
 
 .flex-wrap {

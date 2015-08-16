@@ -91,7 +91,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'value'   => 'block',
                     'options' => array(
                         'card-block' => 'Card',
-                        'flag-block'  => 'Panel',
+                        'flag-block flex-row'  => 'Panel',
                    ),
                     'multiple'    => false,
                     'description' => '*Block = Large image on top. *Panel = Small image to the left.',
