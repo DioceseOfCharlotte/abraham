@@ -3896,7 +3896,7 @@ Copyright (c) 2015 Daniel Eden
     width: 1em;
     height: 1em;
     padding-left: 4px; 
-    opacity: 0.4;
+    opacity: 0.5;
     font-family: "Material Icons";
     font-size: 22px;
     font-weight: normal;
@@ -3905,7 +3905,7 @@ Copyright (c) 2015 Daniel Eden
     letter-spacing: normal;
     text-transform: none;
     word-wrap: normal;
-    content: "\E897";
+    content: "\E899";
 }
 .page_item.is-protected > a:hover {
     background: none;
