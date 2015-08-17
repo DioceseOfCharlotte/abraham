@@ -174,60 +174,60 @@ body.custom-background {
 
 
 
-.meh__tab {
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    overflow: hidden;
-    //background-color: transparent;
-
-        &:hover,
-        &:active,
-        &.is-active,
-        &:focus {
-            //background-color: transparent;
-        }
-}
-.meh__tab:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: $color-2;
-  height: 4px;
-  transition-property: left, right;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.meh__tab:hover:before,
-.meh__tab:focus:before,
-.meh__tab.is-active:before,
-.meh__tab:active:before {
-  left: 0;
-  right: 0;
-}
-
-.meh__tab:hover:before {
-    background: rgba($color-2, $opacity);
-}
-
-.meh__tab:focus:before,
-.meh__tab.is-active:before,
-.meh__tab:active:before {
-    background: $color-2;
-}
-
-.meh__tab {
-    background-color: transparent;
-
-    &:hover, &.is-active {
-        background-color: transparent!important;
-    }
-}
+// .meh__tab {
+//     transform: translateZ(0);
+//     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+//     backface-visibility: hidden;
+//     -moz-osx-font-smoothing: grayscale;
+//     position: relative;
+//     overflow: hidden;
+//     //background-color: transparent;
+//
+//         &:hover,
+//         &:active,
+//         &.is-active,
+//         &:focus {
+//             //background-color: transparent;
+//         }
+// }
+// .meh__tab:before {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   left: 50%;
+//   right: 50%;
+//   bottom: 0;
+//   background: $color-2;
+//   height: 4px;
+//   transition-property: left, right;
+//   transition-duration: 0.3s;
+//   transition-timing-function: ease-out;
+// }
+// .meh__tab:hover:before,
+// .meh__tab:focus:before,
+// .meh__tab.is-active:before,
+// .meh__tab:active:before {
+//   left: 0;
+//   right: 0;
+// }
+//
+// .meh__tab:hover:before {
+//     background: rgba($color-2, $opacity);
+// }
+//
+// .meh__tab:focus:before,
+// .meh__tab.is-active:before,
+// .meh__tab:active:before {
+//     background: $color-2;
+// }
+//
+// .meh__tab {
+//     background-color: transparent;
+//
+//     &:hover, &.is-active {
+//         background-color: transparent!important;
+//     }
+// }
 
 
 
@@ -333,7 +333,6 @@ button.flickity-prev-next-button {
 }
 
 
-tab
 .meh-slider .meh-slider__text {
     display: none;
 }
@@ -456,5 +455,33 @@ Copyright (c) 2015 Daniel Eden
 
     &:active {
       background-color: $default-item-active-bg-color;
+    }
+}
+
+
+
+.page_item.is-protected > a {
+    color: $grey;
+    cursor: default;
+
+    &:after {
+        content: '\E897';
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 22px;  /* Preferred icon size */
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        opacity: .4;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        padding-left: 4px;
+    }
+
+    &:hover {
+        background: none;
     }
 }

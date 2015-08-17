@@ -3650,60 +3650,6 @@ body.custom-background {
     }
 }
 
-.meh__tab {
-    overflow: hidden; 
-    position: relative;
-    box-shadow: 0 0 1px transparent;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.meh__tab:before {
-    position: absolute;
-    z-index: -1;
-    right: 50%;
-    bottom: 0;
-    left: 50%;
-    height: 4px;
-    background: #ffd870;
-    content: "";
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; 
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: left, right;
-    transition-property: left, right;
-}
-
-.meh__tab:hover:before,
-.meh__tab:focus:before,
-.meh__tab.is-active:before,
-.meh__tab:active:before {
-    right: 0; 
-    left: 0;
-}
-
-.meh__tab:hover:before {
-    background: rgba(255, 216, 112, 0.8);
-}
-
-.meh__tab:focus:before,
-.meh__tab.is-active:before,
-.meh__tab:active:before {
-    background: #ffd870;
-}
-
-.meh__tab {
-    background-color: transparent;
-}
-.meh__tab:hover,
-.meh__tab.is-active {
-    background-color: transparent !important;
-}
-
 .pages-highlight .pages-highlight {
     padding: 0;
 }
@@ -3802,7 +3748,6 @@ button.flickity-prev-next-button {
     opacity: 0.8;
 }
 
-tab
 .meh-slider .meh-slider__text {
     display: none;
 }
@@ -3939,4 +3884,29 @@ Copyright (c) 2015 Daniel Eden
 .mdl-menu__item--ripple-container:active,
 .mdl-menu > .page_item > a:active {
     background-color: rgb(224,224,224);
+}
+
+.page_item.is-protected > a {
+    color: #808080;
+    cursor: default;
+}
+.page_item.is-protected > a:after {
+    /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 4px; 
+    opacity: 0.4;
+    font-family: "Material Icons";
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    word-wrap: normal;
+    content: "\E897";
+}
+.page_item.is-protected > a:hover {
+    background: none;
 }
