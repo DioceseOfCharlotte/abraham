@@ -63,7 +63,7 @@ global $mehsc_atts;
                     <button id="menu-<?php the_ID(); ?>" class="mdl-button mdl-js-button mdl-button--icon">
                         <i class="material-icons">more_vert</i>
                     </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">
+                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">
                         <?php echo $children; ?>
                     </ul>
                 <?php } ?>
