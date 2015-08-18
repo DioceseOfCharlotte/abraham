@@ -2670,6 +2670,10 @@ input[type="submit"] {
     padding: 0 !important;
 }
 
+.p1\/2 {
+    padding: 0.25rem;
+}
+
 .p1 {
     padding: 0.5rem;
 }

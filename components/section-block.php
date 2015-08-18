@@ -52,8 +52,8 @@ global $mehsc_atts;
 
             <?php endif; ?>
 
-            <div class="mdl-card__actions mdl-card--border flex border-top flex-center p1">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect small">
+            <div class="mdl-card__actions mdl-card--border flex border-top flex-center p1/2 px1">
+                <a href="<?php the_permalink(); ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect small">
                 Go to section
                 </a>
                 <div class="mdl-layout-spacer flex-grow"></div>
