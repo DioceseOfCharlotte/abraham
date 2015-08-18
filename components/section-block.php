@@ -30,21 +30,12 @@ global $mehsc_atts;
     <?php endif; ?>
 
             <div class="block-body">
-            <div class="card__title flex-justify flex-center flex p2">
+            <div class="card__title flex-justify flex-center flex p2 color-inherit">
 
                 <a class="h2 entry-title inline-block card__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
 
-<?php
-  $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
-  if ($children) { ?>
-      <button id="menu-<?php the_ID(); ?>" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">more_vert</i>
-      </button>
-  <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">
-  <?php echo $children; ?>
-  </ul>
-<?php } ?>
+
 
             </div>
             <?php if ('excerpt' === $mehsc_atts['show_content']) : ?>
@@ -60,6 +51,24 @@ global $mehsc_atts;
                 </div>
 
             <?php endif; ?>
+
+            <div class="mdl-card__actions mdl-card--border flex border-top flex-center p1">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect small">
+                Go to section
+                </a>
+                <div class="mdl-layout-spacer flex-grow"></div>
+              <?php
+                $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
+                if ($children) { ?>
+                    <button id="menu-<?php the_ID(); ?>" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">
+                        <?php echo $children; ?>
+                    </ul>
+                <?php } ?>
+            </div>
+
                 </div><!-- .block-body -->
     </div><!-- .mdl-card -->
 </div><!-- .block -->
