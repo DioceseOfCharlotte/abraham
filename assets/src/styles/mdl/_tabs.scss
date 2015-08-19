@@ -32,6 +32,7 @@
     height          : 48px;
     padding         : 0 0 0 0;
     margin          : 0;
+    border-bottom   : 1px solid $tab-border-color;
 }
 
 .mdl-tabs__tab {
@@ -52,48 +53,50 @@
   font-size: $layout-tab-font-size;
   text-transform: uppercase;
 
+  color: $tab-text-color;
   overflow: hidden;
 
-  // .mdl-tabs &.is-active {
-  // }
+  .mdl-tabs.is-upgraded &.is-active {
+    color: $tab-active-text-color;
+  }
 
-  // .mdl-tabs &.is-active:after {
-  //   height: 2px;
-  //   width: 100%;
-  //   display: block;
-  //   content: " ";
-  //   bottom: 0px;
-  //   left: 0px;
-  //   position: absolute;
-  //   background: $tab-highlight-color;
-  //   animation: border-expand 0.2s cubic-bezier(0.4, 0.0, 0.4, 1) 0.01s alternate forwards;
-  //   transition: all 1s cubic-bezier(0.4, 0.0, 1, 1);
-  // }
+  .mdl-tabs.is-upgraded &.is-active:after {
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    background: $tab-highlight-color;
+    animation: border-expand 0.2s cubic-bezier(0.4, 0.0, 0.4, 1) 0.01s alternate forwards;
+    transition: all 1s cubic-bezier(0.4, 0.0, 1, 1);
+  }
 
-  // & .mdl-tabs__ripple-container {
-  //   display: block;
-  //   position: absolute;
-  //   height: 100%;
-  //   width: 100%;
-  //   left: 0px;
-  //   top: 0px;
-  //   z-index: 1;
-  //   overflow: hidden;
+  & .mdl-tabs__ripple-container {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
 
-  //   & .mdl-ripple {
-  //     background: $tab-highlight-color;
-  //   }
-  //}
+    & .mdl-ripple {
+      background: $tab-highlight-color;
+    }
+  }
 }
 
 .mdl-tabs__panel {
   display: block;
 
-  .mdl-tabs & {
+  .mdl-tabs.is-upgraded & {
     display: none;
   }
 
-  .mdl-tabs &.is-active {
+  .mdl-tabs.is-upgraded &.is-active {
     display: block;
   }
 }
