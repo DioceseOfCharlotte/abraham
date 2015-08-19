@@ -71,14 +71,14 @@ $pages = $mehsc_atts['page'];
 
     $query3 = new WP_Query($args);
 
-    $output = '<section class="' . $mehsc_atts['row_color'] . ' row pt3 pt4@md pb4@md pages-highlight"><div class="container mdl-tabs">';
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row pt3 pt4@md pb4@md pages-highlight"><div class="container mdl-tabs mdl-js-tabs mdl-js-ripple-effect">';
     ob_start(); ?>
-    <div class="tabs mdl-tabs__tab-bar bg-1--dark white">
+    <div class="mdl-tabs__tab-bar bg-1--dark white color-inherit">
     <?php
         while ($query3->have_posts()) {
         $query3->the_post();
         ?>
-        <button data-tab="#tab<?php the_ID(); ?>" class="mdl-tabs__tab meh__tab br0"><?php the_title(); ?></a>
+        <a href="#tab<?php the_ID(); ?>" class="mdl-tabs__tab meh__tab br0"><?php the_title(); ?></a>
     <?php
         } ?>
     </div>
