@@ -5,6 +5,7 @@
 <?php tha_head_top(); ?>
 <?php wp_head(); ?>
 <?php tha_head_bottom(); ?>
+<?php get_template_part( 'assets/css/critical', 'css' ); ?>
 </head>
 <body <?php hybrid_attr('body'); ?>>
 

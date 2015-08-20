@@ -4069,18 +4069,10 @@ button.flickity-prev-next-button {
     opacity: 0.8;
 }
 
-.meh-slider__cell:not(.is-selected) {
-    opacity: 0;
-}
-
 @media screen and (min-width: 52em) {
     .meh-slider__cell {
         min-height: 30vh;
     }
-}
-
-.mdl-js .meh-slider__cell {
-    opacity: 1;
 }
 
 .meh-slider .meh-slider__text {

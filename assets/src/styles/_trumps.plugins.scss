@@ -332,18 +332,13 @@ button.flickity-prev-next-button {
 }
 }
 
-.meh-slider__cell:not(.is-selected) {
-  opacity: 0;
-  }
-
 .meh-slider__cell {
   @include md {
   min-height: 30vh;
 }
 }
-.mdl-js .meh-slider__cell {
-  opacity: 1;
-}
+
+
 
 
 .meh-slider .meh-slider__text {
