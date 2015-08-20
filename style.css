@@ -2660,6 +2660,12 @@ button.button--colored:focus:not(:active) {
     }
 }
 
+@media screen and (max-width: 51em) {
+    .u-1\/1\@sm {
+        width: 100%;
+    }
+}
+
 /* #BUTTONS
 \*------------------------------------*/
 input[type="button"],
@@ -4224,4 +4230,10 @@ Copyright (c) 2015 Daniel Eden
 }
 .page_item.is-protected > a:hover {
     background: none;
+}
+
+@media screen and (max-width: 51em) {
+    .mdl-tabs__tab-bar {
+        height: auto;
+    }
 }

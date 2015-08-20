@@ -485,3 +485,11 @@ Copyright (c) 2015 Daniel Eden
         background: none;
     }
 }
+
+
+
+@include sm {
+    .mdl-tabs__tab-bar {
+        height: auto;
+    }
+}
