@@ -2416,6 +2416,7 @@ input.mdl-button[type="submit"] {
 \*------------------------------------*/
 .btn,
 .nav-links a,
+.gde-link,
 .button,
 input[type="button"],
 input[type="reset"],
@@ -2445,6 +2446,7 @@ button {
 }
 .btn::-moz-focus-inner,
 .nav-links a::-moz-focus-inner,
+.gde-link::-moz-focus-inner,
 .button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -2454,6 +2456,7 @@ button::-moz-focus-inner {
 }
 .btn:hover,
 .nav-links a:hover,
+.gde-link:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -2464,6 +2467,7 @@ button:hover {
 }
 .btn:focus:not(:active),
 .nav-links a:focus:not(:active),
+.gde-link:focus:not(:active),
 .button:focus:not(:active),
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
@@ -2473,8 +2477,10 @@ button:focus:not(:active) {
 }
 .btn:active,
 .nav-links a:active,
+.gde-link:active,
 .btn.active,
 .nav-links a.active,
+.active.gde-link,
 .button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
@@ -2489,6 +2495,7 @@ button.active {
 }
 .btn.button--colored,
 .nav-links a.button--colored,
+.button--colored.gde-link,
 .button.button--colored,
 input.button--colored[type="button"],
 input.button--colored[type="reset"],
@@ -2498,6 +2505,7 @@ button.button--colored {
 }
 .btn.button--colored:focus:not(:active),
 .nav-links a.button--colored:focus:not(:active),
+.button--colored.gde-link:focus:not(:active),
 .button.button--colored:focus:not(:active),
 input.button--colored[type="button"]:focus:not(:active),
 input.button--colored[type="reset"]:focus:not(:active),
@@ -2671,7 +2679,8 @@ button.button--colored:focus:not(:active) {
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.btn--default {
+.btn--default,
+.gde-link {
     background: rgba(158,158,158, 0.20);
 }
 input[type="button"]:active,
@@ -2681,26 +2690,31 @@ input[type="reset"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:hover,
 .btn--default:active,
-.btn--default:hover {
+.gde-link:active,
+.btn--default:hover,
+.gde-link:hover {
     background-color: rgba(158,158,158, 0.40);
 }
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
 input[type="submit"]:focus:not(:active),
-.btn--default:focus:not(:active) {
+.btn--default:focus:not(:active),
+.gde-link:focus:not(:active) {
     background-color: rgba(158,158,158, 0.40);
 }
 input[type="button"].button--colored,
 input[type="reset"].button--colored,
 input[type="submit"].button--colored,
-.btn--default.button--colored {
+.btn--default.button--colored,
+.button--colored.gde-link {
     color: rgb(255,255,255); 
     background: rgb(63,81,181);
 }
 input[type="button"].button--colored:hover,
 input[type="reset"].button--colored:hover,
 input[type="submit"].button--colored:hover,
-.btn--default.button--colored:hover {
+.btn--default.button--colored:hover,
+.button--colored.gde-link:hover {
     background-color: rgb(63,81,181);
 }
 input[type="button"].button--colored:active,
@@ -2710,25 +2724,30 @@ input[type="reset"].button--colored.active,
 input[type="submit"].button--colored:active,
 input[type="submit"].button--colored.active,
 .btn--default.button--colored:active,
-.btn--default.button--colored.active {
+.button--colored.gde-link:active,
+.btn--default.button--colored.active,
+.button--colored.active.gde-link {
     background-color: rgb(63,81,181);
 }
 input[type="button"].button--colored:focus:not(:active),
 input[type="reset"].button--colored:focus:not(:active),
 input[type="submit"].button--colored:focus:not(:active),
-.btn--default.button--colored:focus:not(:active) {
+.btn--default.button--colored:focus:not(:active),
+.button--colored.gde-link:focus:not(:active) {
     background-color: rgb(63,81,181);
 }
 input[type="button"].button--colored .ripple,
 input[type="reset"].button--colored .ripple,
 input[type="submit"].button--colored .ripple,
-.btn--default.button--colored .ripple {
+.btn--default.button--colored .ripple,
+.button--colored.gde-link .ripple {
     background: rgb(255,255,255);
 }
 input[type="button"][disabled][disabled],
 input[type="reset"][disabled][disabled],
 input[type="submit"][disabled][disabled],
-.btn--default[disabled][disabled] {
+.btn--default[disabled][disabled],
+[disabled][disabled].gde-link {
     color: rgba(0,0,0, 0.26);
     background-color: rgba(0,0,0, 0.12);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -4242,4 +4261,35 @@ Copyright (c) 2015 Daniel Eden
     .mdl-tabs__tab-bar {
         height: auto;
     }
+}
+
+.gde-link::after {
+    /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    word-wrap: normal;
+    content: "\E2C4";
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for IE. */
+
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+}
+
+.gde-frame {
+    margin-bottom: 1rem;
 }

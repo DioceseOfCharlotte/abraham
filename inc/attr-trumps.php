@@ -52,7 +52,7 @@ class Attr_Trumps {
             'content_archive'         => 'flex flex-wrap flex-justify',
             // ENTRY
             'post'                    => '',
-			'post_archive'            => 'br bg-white mb2 mb3@md pb2 pb3@md flex-auto u-1/3@md',
+			'post_archive'            => 'br bg-white mb2 mb3@md pb2 pb3@md flex-auto u-1/2@md',
 
             'page_header'             => 'u-1/1 center',
 
