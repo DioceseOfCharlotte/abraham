@@ -4069,9 +4069,10 @@ button.flickity-prev-next-button {
     opacity: 0.8;
 }
 
-.meh-slider__cell {
+.meh-slider__cell:not(.is-selected) {
     opacity: 0;
 }
+
 @media screen and (min-width: 52em) {
     .meh-slider__cell {
         min-height: 30vh;
