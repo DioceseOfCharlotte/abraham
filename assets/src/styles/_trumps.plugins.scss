@@ -303,7 +303,7 @@ button.flickity-prev-next-button {
 }
 
 .meh-slider__cell {
-  background: $color1-dark;
+  background: $blue-grey-50;
 }
 
 .meh-slider__text {
@@ -330,6 +330,16 @@ button.flickity-prev-next-button {
 .meh-slider__image {
     opacity: .8;
 }
+}
+
+.meh-slider__cell {
+  opacity: 0;
+  @include md {
+  min-height: 30vh;
+}
+}
+.mdl-js .meh-slider__cell {
+  opacity: 1;
 }
 
 
