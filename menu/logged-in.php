@@ -9,7 +9,7 @@ if (has_nav_menu('logged-in')) : ?>
                 'container'      => '',
                 'depth'          => 2,
                 'menu_id'        => 'menu-logged-in__list',
-                'menu_class'     => 'menu__list mt3 menu-logged-in__list inline-block',
+                'menu_class'     => 'menu__list menu-logged-in__list inline-block',
                 'fallback_cb'    => '',
                 'items_wrap'     => '<ul id="%s" class="%s">%s</ul>'
             ));

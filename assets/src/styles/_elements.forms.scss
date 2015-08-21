@@ -121,3 +121,34 @@ input.is-error:focus,
 input.is-error.is-focused {
     box-shadow: 0 0 0 2px color($field-error-color, .5);
 }
+
+
+
+label {
+	display: block;
+	font-size: .9rem;
+	margin-bottom: .5rem;
+	color: #333;
+}
+
+label > input, label > textarea {
+	margin-top: .5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+}
+
+label > input[type="checkbox"], label > input[type="radio"] {
+	margin-right: .25rem;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display: inline-block;
+	margin-left: .5rem;
+	margin-right: 1rem;
+	margin-bottom: 0;
+	vertical-align: baseline;
+}

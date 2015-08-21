@@ -464,6 +464,39 @@ input.is-error.is-focused {
     box-shadow: 0 0 0 2px color(#ff4136, 0.5);
 }
 
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333; 
+    font-size: 0.9rem;
+}
+
+label > input,
+label > textarea {
+    margin-top: 0.5rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block; 
+    width: 1rem;
+    height: 1rem;
+}
+
+label > input[type="checkbox"],
+label > input[type="radio"] {
+    margin-right: 0.25rem;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    vertical-align: baseline;
+}
+
 /* #TABLES
 \*------------------------------------*/
 table {
@@ -486,10 +519,6 @@ td {
 
 th {
     vertical-align: bottom;
-}
-
-td {
-    vertical-align: top;
 }
 
 /* #TYPOGRAPHY
@@ -3914,7 +3943,7 @@ body.custom-background {
  * Sets dropdown link to relative positioning
  */
 .has-dropdown {
-    position: relative;
+    position: static;
 }
 
 /**
@@ -3928,13 +3957,15 @@ body.custom-background {
     position: absolute;
     z-index: 1000;
     top: 100%;
+    width: 100%;
     min-width: 10em;
+    max-width: 200px; 
     margin-top: 0.5em;
     margin-left: 0;
     border-radius: 2px;
     color: #4d4d4d;
     background-color: #fff;
-    box-shadow: none; 
+    box-shadow: none;
     text-align: left;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -4179,9 +4210,7 @@ Copyright (c) 2015 Daniel Eden
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    line-height: 48px;
     text-align: left;
-    white-space: nowrap;
     text-decoration: none;
     letter-spacing: 0;
     cursor: pointer;
@@ -4292,4 +4321,39 @@ Copyright (c) 2015 Daniel Eden
 
 .gde-frame {
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 52em) {
+    .logged-in .panel {
+        visibility: visible;
+        position: relative;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .logged-in .panel-btn {
+        display: none;
+    }
+}
+
+[href^="mailto"]:before {
+    padding-right: 3px;
+    opacity: 0.7;
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: bottom; 
+    content: "\E0BE";
+
+    speak: none;
+}
+
+#notification-area {
+    width: 98%;
+    margin: 1%;
+}
+
+.login-remember label {
+    color: white;
 }

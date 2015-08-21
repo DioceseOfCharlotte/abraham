@@ -86,7 +86,7 @@ body.custom-background {
  * Sets dropdown link to relative positioning
  */
 .has-dropdown {
-  position: relative;
+  position: static;
 }
 
 
@@ -110,6 +110,8 @@ body.custom-background {
   color: $color-text;
   transition: 0.2s;
   box-shadow: none;
+  width: 100%;
+  max-width: 200px;
 
   li {
       width: 100%;
@@ -246,9 +248,8 @@ body.custom-background {
 
 
 .has-dropdown > .menu-link:after {
-    content: "\E5C5";
-
-    font-family: 'Material Icons';
+content: "\E5C5";
+font-family: 'Material Icons';
 font-weight: normal;
 font-style: normal;
 font-size: 24px;  /* Preferred icon size */
@@ -277,14 +278,6 @@ font-feature-settings: 'liga';
 .has-dropdown > .menu-link.is-active:after {
         transform: rotate(180deg);
 }
-
-
-
-
-
-
-
-
 
 .flickity-slider {
     transition: none;
@@ -420,8 +413,6 @@ Copyright (c) 2015 Daniel Eden
     text-decoration: none;
     cursor: pointer;
     height: 48px;
-    line-height: 48px;
-    white-space: nowrap;
     opacity: 0;
     transition: opacity $menu-fade-duration $animation-curve-default;
     user-select: none;
@@ -536,4 +527,40 @@ Copyright (c) 2015 Daniel Eden
 
 .gde-frame {
     margin-bottom: $space-2;
+}
+
+
+@media screen and (min-width: 52em) {
+	.logged-in .panel {
+		visibility: visible;
+		position: relative;
+		box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.2), 0 1px 8px 0 rgba(0,0,0,0.12);
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	.logged-in .panel-btn {
+		display: none;
+	}
+}
+
+[href^="mailto"]:before {
+	content: "\E0BE";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-family: 'Material Icons';
+	padding-right: 3px;
+	opacity: .7;
+	vertical-align: bottom;
+}
+
+#notification-area {
+	width: 98%;
+	margin: 1%;
+}
+
+.login-remember label {
+	color: white;
 }
