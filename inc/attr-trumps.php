@@ -41,7 +41,7 @@ class Attr_Trumps {
             'row_layout_sidebar_r'    => 'grid mxn2@md flex',
 
             // SITE HEADER
-            'header'                  => 'bg-1 bg-cover bg-fixed bg-no-repeat bg-center white',
+            'header'                  => 'bg-1--dark bg-cover bg-fixed bg-no-repeat bg-center white',
             'branding'                => 'mr3 px3 px1@md py2 inline-block color-inherit',
             'site_title'              => 'm0 color-inherit',
             'site_description'        => 'h3 bold m0 muted',
