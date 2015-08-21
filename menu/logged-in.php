@@ -7,7 +7,7 @@ if (has_nav_menu('logged-in')) : ?>
             wp_nav_menu(array(
                 'theme_location' => 'logged-in',
                 'container'      => '',
-                'depth'          => 1,
+                'depth'          => 2,
                 'menu_id'        => 'menu-logged-in__list',
                 'menu_class'     => 'menu__list mt3 menu-logged-in__list inline-block',
                 'fallback_cb'    => '',
