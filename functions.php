@@ -69,7 +69,7 @@ add_filter('wp_nav_menu', 'wpwebapp_menu_logout_url');
 // Username Shortcode
 function wpwebapp_display_username() {
 	$current_user = wp_get_current_user();
-	$username = $current_user->user_login;
+	$username = $current_user->last_name;
 	return $username;
 }
 add_shortcode( 'wpwebapp_display_username', 'wpwebapp_display_username' );
