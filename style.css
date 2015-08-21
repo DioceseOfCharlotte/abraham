@@ -521,6 +521,10 @@ th {
     vertical-align: bottom;
 }
 
+td > ul {
+    list-style: none;
+}
+
 /* #TYPOGRAPHY
 \*------------------------------------*/
 body {
@@ -4356,4 +4360,9 @@ Copyright (c) 2015 Daniel Eden
 
 .login-remember label {
     color: white;
+}
+
+.content div.DTTT_container {
+    float: none;
+    text-align: right;
 }

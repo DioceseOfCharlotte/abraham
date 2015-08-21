@@ -25,3 +25,7 @@ td {
 
 th { vertical-align: bottom }
 //td { vertical-align: top }
+
+td>ul {
+    list-style: none;
+}
