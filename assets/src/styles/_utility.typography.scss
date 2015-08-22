@@ -53,15 +53,15 @@
     text-shadow: 1px 1px 5px rgba($black, 0.6);
 }
 
-.left-align {
+.text-left, .left-align {
     text-align: left;
 }
 
-.center {
+.text-center, .center {
     text-align: center;
 }
 
-.right-align {
+.text-right, .right-align {
     text-align: right;
 }
 

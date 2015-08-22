@@ -8,7 +8,7 @@ a {
     transition-property: opacity;
 }
 
-a:hover {
+a:hover:not(.btn) {
     text-decoration: $link-hover-text-decoration;
     opacity: $opacity;
 }

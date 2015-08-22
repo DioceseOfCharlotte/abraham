@@ -606,7 +606,7 @@ a {
     transition-property: opacity;
 }
 
-a:hover {
+a:hover:not(.btn) {
     opacity: 0.8; 
     text-decoration: none;
 }
@@ -2867,14 +2867,17 @@ input[type="submit"] {
     text-shadow: 1px 1px 5px rgba(17, 17, 17, 0.6);
 }
 
+.text-left,
 .left-align {
     text-align: left;
 }
 
+.text-center,
 .center {
     text-align: center;
 }
 
+.text-right,
 .right-align {
     text-align: right;
 }
@@ -4193,12 +4196,6 @@ Copyright (c) 2015 Daniel Eden
     animation-name: slideInUp;
 }
 
-.card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
-    top: auto !important; 
-    bottom: 50px;
-}
-
-.mdl-menu__item--ripple-container,
 .mdl-menu > .page_item > a {
     display: block;
     overflow: hidden;
@@ -4214,7 +4211,9 @@ Copyright (c) 2015 Daniel Eden
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    line-height: 48px;
     text-align: left;
+    white-space: nowrap;
     text-decoration: none;
     letter-spacing: 0;
     cursor: pointer;
@@ -4225,42 +4224,33 @@ Copyright (c) 2015 Daniel Eden
     -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mdl-menu__container.is-visible .mdl-menu__item--ripple-container,
 .mdl-menu__container.is-visible .mdl-menu > .page_item > a {
     opacity: 1;
 }
-.mdl-menu__item--ripple-container::-moz-focus-inner,
 .mdl-menu > .page_item > a::-moz-focus-inner {
     border: 0;
 }
-.mdl-menu__item--ripple-container[disabled],
 .mdl-menu > .page_item > a[disabled] {
     color: rgb(189,189,189);
     background-color: transparent;
     cursor: auto;
 }
-.mdl-menu__item--ripple-container[disabled]:hover,
 .mdl-menu > .page_item > a[disabled]:hover {
     background-color: transparent;
 }
-.mdl-menu__item--ripple-container[disabled]:focus,
 .mdl-menu > .page_item > a[disabled]:focus {
     background-color: transparent;
 }
-.mdl-menu__item--ripple-container[disabled] .mdl-ripple,
 .mdl-menu > .page_item > a[disabled] .mdl-ripple {
     background: transparent;
 }
-.mdl-menu__item--ripple-container:hover,
 .mdl-menu > .page_item > a:hover {
     background-color: rgb(238,238,238);
 }
-.mdl-menu__item--ripple-container:focus,
 .mdl-menu > .page_item > a:focus {
     outline: none;
     background-color: rgb(238,238,238);
 }
-.mdl-menu__item--ripple-container:active,
 .mdl-menu > .page_item > a:active {
     background-color: rgb(224,224,224);
 }

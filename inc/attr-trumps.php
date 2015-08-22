@@ -94,7 +94,8 @@ class Attr_Trumps {
             // FOOTER
             'footer'                  => 'bg-2 color-inherit',
 
-            'menu_link'                 => 'btn menu-link',
+            'menu_item'                 => '',
+            'menu_link'                 => 'btn menu-link text-left',
             'current_page_item'         => 'is-active',
             'current_page_parent'       => 'is-active',
             'current_page_ancestor'     => 'is-active',
@@ -152,6 +153,7 @@ class Attr_Trumps {
         add_filter('nav_menu_link_attributes',          array($this, 'menu_link'), 10, 3);
 
         add_filter ('wp_nav_menu',                      array($this, 'nav_menu_filters'));
+        add_filter('nav_menu_css_class' ,               array($this, 'menu_item') , 10 , 2);
     }
 
 
@@ -439,6 +441,12 @@ class Attr_Trumps {
     }
 
 
+
+    public function menu_item($attr, $item){
+
+        $attr[] .= $this->args['menu_item'];
+        return $attr;
+    }
 
     public function menu_link($attr, $item, $args) {
         $attr['class'] = $this->args['menu_link'];

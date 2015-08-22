@@ -12,8 +12,8 @@
     <?php tha_body_top(); ?>
 
     <div class="skip-link">
-        <a href="#content" class="button screen-reader-text">
-            <?php _e( 'Skip to content (Press enter)', 'compass' ); ?>
+        <a href="#content" class="btn screen-reader-text">
+            <?php _e( 'Skip to content', 'abraham' ); ?>
         </a>
     </div><!-- .skip-link -->
 

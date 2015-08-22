@@ -391,70 +391,72 @@ Copyright (c) 2015 Daniel Eden
 
 
 
-.card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
-    bottom: 50px;
-    top: auto!important;
-}
+// .card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
+//     bottom: 50px;
+//     top: auto!important;
+// }
 
 
 
-.mdl-menu__item--ripple-container, .mdl-menu > .page_item > a {
-    display: block;
-    border: none;
-    color: $default-item-text-color;
+.mdl-menu > .page_item > a {
+  display: block;
+  border: none;
+  color: $default-item-text-color;
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+  outline-color: $default-item-outline-color;
+  position: relative;
+  overflow: hidden;
+  @include typo-body-1();
+  text-decoration: none;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity $menu-fade-duration $animation-curve-default;
+  user-select: none;
+
+  .mdl-menu__container.is-visible & {
+    opacity: 1;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &[disabled] {
+    color: $disabled-item-text-color;
     background-color: transparent;
-    text-align: left;
-    margin: 0;
-    padding: 0 16px;
-    outline-color: $default-item-outline-color;
-    position: relative;
-    overflow: hidden;
-    @include typo-body-1();
-    text-decoration: none;
-    cursor: pointer;
-    height: 48px;
-    opacity: 0;
-    transition: opacity $menu-fade-duration $animation-curve-default;
-    user-select: none;
-
-    .mdl-menu__container.is-visible & {
-      opacity: 1;
-    }
-
-    &::-moz-focus-inner {
-      border: 0;
-    }
-
-    &[disabled] {
-      color: $disabled-item-text-color;
-      background-color: transparent;
-      cursor: auto;
-
-      &:hover {
-        background-color: transparent;
-      }
-
-      &:focus {
-        background-color: transparent;
-      }
-
-      & .mdl-ripple {
-        background: transparent;
-      }
-    }
+    cursor: auto;
 
     &:hover {
-      background-color: $default-item-hover-bg-color;
+      background-color: transparent;
     }
 
     &:focus {
-      outline: none;
-      background-color: $default-item-focus-bg-color;
+      background-color: transparent;
     }
 
-    &:active {
-      background-color: $default-item-active-bg-color;
+    & .mdl-ripple {
+      background: transparent;
     }
+  }
+
+  &:hover {
+    background-color: $default-item-hover-bg-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $default-item-focus-bg-color;
+  }
+
+  &:active {
+    background-color: $default-item-active-bg-color;
+  }
 }
 
 

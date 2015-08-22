@@ -149,8 +149,8 @@ gulp.task('serve', ['styles'], function() {
 		//proxy: "local.wordpress-trunk.dev"
 		//proxy: "june.dev"
     //proxy: "july.dev"
-		proxy: "stmark.dev"
-      //proxy: "bed.dev"
+		//proxy: "stmark.dev"
+      proxy: "bed.dev"
 			//proxy: "127.0.0.1:8080/wordpress/"
 	});
 
