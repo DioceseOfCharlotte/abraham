@@ -1,0 +1,52 @@
+/* #BUTTONS
+\*------------------------------------*/
+
+.btn,
+.button,
+button {
+  background: transparent;
+  border: none;
+  border-radius: $button-border-radius;
+  font-family: inherit;
+  @include font-size(15px);
+  color: inherit;
+  height: $button-height;
+  //min-width: $button-min-width;
+  padding: 0 $button-padding;
+  display: inline-block;
+  overflow: hidden;
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+              background-color 0.2s $animation-curve-default,
+              color 0.2s $animation-curve-default;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: $button-height;
+  vertical-align: middle;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover {
+    background-color: $button-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus:not(:active) {
+    background-color: $button-focus-color;
+  }
+
+  &:active, &.active {
+    background-color: $button-active-color;
+  }
+
+  &.button--colored {
+    color: $button-primary-color-alt;
+
+    &:focus:not(:active) {
+      background-color: $button-focus-color-alt;
+    }
+  }
+}

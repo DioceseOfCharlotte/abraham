@@ -1,45 +1,46 @@
-<?php
-/**
- * @package Abraham
- */
-?><!doctype html>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head <?php hybrid_attr('head'); ?>>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<?php tha_head_top(); ?>
 <?php wp_head(); ?>
+<?php tha_head_bottom(); ?>
+<?php get_template_part( 'assets/css/critical', 'css' ); ?>
 </head>
+<body <?php hybrid_attr('body'); ?>>
 
-<body <?php hybrid_attr( 'body' ); ?>>
+    <?php tha_body_top(); ?>
 
-  <?php tha_body_top(); ?>
-
-	<div id="page" class="hfeed site">
-
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abraham' ); ?></a>
+    <div class="skip-link">
+        <a href="#content" class="btn screen-reader-text">
+            <?php _e( 'Skip to content', 'abraham' ); ?>
+        </a>
+    </div><!-- .skip-link -->
 
     <?php tha_header_before(); ?>
 
-		<header <?php hybrid_attr( 'header' ); ?>>
+    <header <?php hybrid_attr('header'); ?>>
 
-		<?php tha_header_top(); ?>
+        <?php tha_header_top(); ?>
 
-			<div <?php hybrid_attr( 'branding' ); ?>>
-				<button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false"><span></span></button>
-				<?php flagship_the_logo(); ?>
-				<?php hybrid_site_title(); ?>
-				<?php hybrid_site_description(); ?>
-			</div><!-- .site-branding -->
+        <div class="header-wrap container--wide px2 flex flex-column@sm flex-justify flex-center">
+            <div <?php hybrid_attr('branding'); ?>>
 
-			<?php hybrid_get_sidebar( 'header-right' ); ?>
+                <?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
+                    <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <?php get_template_part( 'images/svg', 'logo' ); ?>
+                    </a>
+                <?php } ?>
 
-		<?php tha_header_bottom(); ?>
+                <?php hybrid_site_title(); ?>
+                <?php hybrid_site_description(); ?>
+            </div>
 
-		</header><!-- #header -->
+            <?php hybrid_get_menu('primary'); ?>
+        </div>
 
-		<?php tha_header_after(); ?>
+        <?php tha_header_bottom(); ?>
 
-		<?php hybrid_get_menu( 'primary' ); ?>
+    </header>
 
-		<?php hybrid_get_menu( 'breadcrumbs' ); ?>
-
-		<div class="main-container">
+    <?php tha_header_after(); ?>

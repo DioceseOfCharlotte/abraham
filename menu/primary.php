@@ -1,24 +1,20 @@
 <?php
-/**
- * @package Abraham
- */
+if (has_nav_menu('primary')) : ?>
 
-if ( has_nav_menu( 'primary' ) ) : ?>
+    <nav <?php hybrid_attr('menu', 'primary'); ?>>
 
-	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
-
-		<?php
-			wp_nav_menu( [
-				'theme_location'  => 'primary',
-				'container'       => '',
-				'menu_id'         => 'menu-primary-list',
-				'menu_class'      => 'menu-primary__list nav-menu',
-				'depth'           => 2,
-				'fallback_cb'     => ''
-			] );
-		?>
-
-	</nav>
+        <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container'      => '',
+                'depth'          => 2,
+                'menu_id'        => 'menu-primary__list',
+                'menu_class'     => 'menu__list menu-primary__list inline-block',
+                'fallback_cb'    => '',
+                'items_wrap'     => '<ul id="%s" class="%s">%s</ul>'
+            ));
+        ?>
+    </nav>
 
 <?php
 endif;

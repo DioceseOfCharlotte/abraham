@@ -1,0 +1,46 @@
+/* #FLEX OBJECT
+\*------------------------------------*/
+
+.flex { display: flex }
+
+.flex-rev  { flex-direction: row-reverse }
+.flex-column  { flex-direction: column }
+.flex-row  { flex-direction: row }
+.flex-wrap    { flex-wrap: wrap }
+
+.flex-center   { align-items: center }
+.flex-baseline { align-items: baseline }
+.flex-stretch  { align-items: stretch }
+.flex-start    { align-items: flex-start }
+.flex-end      { align-items: flex-end }
+
+.flex-justify  { justify-content: space-between }
+.flex-justify-end  { justify-content: flex-end; }
+
+.flex-auto { flex: 1 1 auto }
+.flex-grow { flex: 1 0 auto }
+.flex-none { flex: none }
+
+.flex-first { order: -1 }
+.flex-last  { order: 99999 }
+
+
+// small
+@include sm {
+  .flex\@sm { display: flex }
+  .flex-column\@sm  { flex-direction: column }
+}
+
+
+// medium
+@include md {
+  .flex\@md { display: flex }
+  .flex-row\@md  { flex-direction: row }
+}
+
+
+// large
+@include lg {
+  .flex\@lg { display: flex }
+  .flex-row\@lg  { flex-direction: row }
+}

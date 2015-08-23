@@ -1,0 +1,25 @@
+/* #BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+
+    //text-transform: uppercase;
+    li {
+        + li:before {
+            content: "\E5CC";
+            opacity: $opacity;
+            padding: $space-1;
+            font-family: 'Material Icons';
+            @include font-size(24px, false);
+        }
+
+    }
+
+a {
+        color: inherit;
+    }
+
+}
+
+.trail-end span {
+    display: none;
+}

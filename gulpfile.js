@@ -1,129 +1,166 @@
 /**
- *
- *  Abraham
- *
+ * MEH gulp
  */
 
-'use strict';
-
-// Include Gulp & Tools We'll Use
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var del = require('del');
-var minifyCSS = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var composer = require('gulp-composer');
-var csscomb = require('gulp-csscomb');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-
-var AUTOPREFIXER_BROWSERS = [
-  'ie >= 9',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 6',
-  'android >= 4.3',
-  'bb >= 10'
-];
-
-gulp.task('composer', function () {
-    composer({ cwd: './', bin: 'composer' });
-});
+var gulp = require('gulp'),
+	del = require('del'),
+	imagemin = require('gulp-imagemin'),
+	sass = require('gulp-sass'),
+	gulpif = require('gulp-if'),
+	minifyCSS = require('gulp-minify-css'),
+	rename = require('gulp-rename'),
+	changed = require('gulp-changed'),
+	uglify = require('gulp-uglify'),
+	concat = require('gulp-concat'),
+	csscomb = require('gulp-csscomb'),
+	runSequence = require('run-sequence'),
+	browserSync = require('browser-sync').create('meh'),
+	reload = browserSync.reload,
+	autoprefixer = require('gulp-autoprefixer'),
+	browsers = [
+		'ie >= 8',
+		'ie_mob >= 10',
+		'ff >= 30',
+		'chrome >= 34',
+		'safari >= 7',
+		'opera >= 23',
+		'ios >= 6',
+		'android >= 4.3',
+		'bb >= 10'
+	];
 
 // Optimize Images
-gulp.task('images', function () {
-  return gulp.src('src/images/**/*')
-    .pipe($.imagemin({
-      progressive: true,
-      interlaced: true,
-      removeUselessStrokeAndFill: true,
-      removeEmptyAttrs: true
-    }))
-    .pipe(gulp.dest('images'))
-    .pipe($.if('*.svg', $.rename({
+gulp.task('images', function() {
+	return gulp.src('assets/src/images/**/*')
+		.pipe(imagemin({
+			progressive: true,
+			interlaced: true,
+			removeUselessStrokeAndFill: true,
+			removeEmptyAttrs: true,
+			svgoPlugins: [{
+				removeViewBox: false
+			}],
+		}))
+		.pipe(gulpif('*.svg', rename({
 			prefix: 'svg-',
 			extname: '.php'
 		})))
-    .pipe(gulp.dest('partials/svg'));
+		.pipe(gulp.dest('assets/images'));
 });
 
 // Copy hybrid-core to extras
-gulp.task('hybrid', function () {
-  return gulp.src([
-  	'vendor/justintadlock/hybrid-core/**/*'
-  	])
-    .pipe(gulp.dest('hybrid'));
-});
-
-// Copy customizer-library to vendors
-// gulp.task('customizer', function () {
-//   return gulp.src([
-//   	'vendor/devinsays/customizer-library/**/*'
-//   	])
-//     .pipe(gulp.dest('inc/vendors/customizer-library'));
-// });
-
-// Copy customizer-library to vendors
-gulp.task('tha', function () {
-  return gulp.src([
-  	'vendor/zamoose/themehookalliance/tha-theme-hooks.php'
-  	])
-    .pipe(gulp.dest('inc/vendors'));
+gulp.task('hybrid', function() {
+	return gulp.src([
+			'vendor/justintadlock/hybrid-core/**/*'
+		])
+		.pipe(gulp.dest('inc/hybrid-core'));
 });
 
 // Compile and Automatically Prefix Stylesheets
-gulp.task('styles', function () {
-  return gulp.src([
-    'src/styles/*.scss',
-    'src/styles/**/*.css',
-    'src/styles/style.scss'
-  ])
-    .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.sass({
-      precision: 10
-    }))
-    .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
-    .pipe(csscomb())
-    .pipe(gulp.dest('./'))
-    //Concatenate And Minify Styles
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('./'));
+gulp.task('styles', function() {
+	return gulp.src([
+			'assets/src/styles/style.scss'
+		])
+		.pipe(changed('styles', {
+			extension: '.scss'
+		}))
+		.pipe(sass())
+		.on('error', swallowError)
+		.pipe(autoprefixer(browsers))
+		.pipe(csscomb())
+		.pipe(gulp.dest('./'))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(minifyCSS())
+		.pipe(gulp.dest('./'))
+		.pipe(reload({
+			stream: true
+		}));
 });
+
+// Compile Editor Stylesheets
+gulp.task('wpeditor', function() {
+	return gulp.src([
+			'assets/src/styles/editor-style.scss'
+		])
+		.pipe(changed('styles', {
+			extension: '.scss'
+		}))
+		.pipe(sass())
+		.on('error', swallowError)
+		.pipe(autoprefixer(browsers))
+		.pipe(minifyCSS())
+		.pipe(gulp.dest('assets/css'))
+});
+
+// Allows gulp to not break after a sass error.
+// Spits error out to console
+function swallowError(error) {
+	console.log(error.toString());
+	this.emit('end');
+}
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
-  return gulp.src([
-  	'src/scripts/**/*.js'
-  	])
-    .pipe($.concat('main.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe($.uglify({preserveComments: 'some'}))
-    // Output Files
-    .pipe(gulp.dest('js'));
+	var sources = [
+    // Component handler
+    //'assets/src/scripts/mdlComponentHandler.js',
+    // Polyfills/dependencies
+		'assets/src/scripts/classList.js',
+    //'src/third_party/**/*.js',
+		// My scripts
+		'assets/src/scripts/main/**/*.js',
+    // Base components
+    //'assets/src/scripts/mdl/button.js',
+    //'assets/src/scripts/mdl/checkbox.js',
+    //'assets/src/scripts/mdl/icon-toggle.js',
+    //'assets/src/scripts/mdl/menu.js',
+    //'assets/src/scripts/mdl/progress.js',
+    //'assets/src/scripts/mdl/radio.js',
+    //'assets/src/scripts/mdl/slider.js',
+    //'assets/src/scripts/mdl/spinner.js',
+    //'assets/src/scripts/mdl/switch.js',
+    //'assets/src/scripts/mdl/tabs.js',
+    //'assets/src/scripts/mdl/textfield.js',
+    //'assets/src/scripts/mdl/tooltip.js',
+    // Complex components (which reuse base components)
+    //'assets/src/scripts/mdl/layout.js',
+    //'assets/src/scripts/mdl/data-table.js',
+    // And finally, the ripples
+    //'assets/src/scripts/mdl/ripple.js'
+  ];
+  return gulp.src(sources)
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('assets/js'))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(uglify({
+			preserveComments: 'some'
+		}))
+		.pipe(gulp.dest('assets/js'));
 });
 
 // Build and serve the output
-gulp.task('serve', ['default'], function () {
-  browserSync({
-    proxy: "local.wordpress.dev"
-    //proxy: "local.wordpress-trunk.dev"
-    //proxy: "doc-beta.dev"
-     });
+gulp.task('serve', ['styles'], function() {
+	browserSync.init({
+		//proxy: "local.wordpress.dev"
+		//proxy: "local.wordpress-trunk.dev"
+		//proxy: "june.dev"
+    //proxy: "july.dev"
+		//proxy: "stmark.dev"
+      proxy: "bed.dev"
+			//proxy: "127.0.0.1:8080/wordpress/"
+	});
 
-  gulp.watch(['**/*.php'], reload);
-  gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['src/scripts/**/*.js'], reload);
-  gulp.watch(['src/images/**/*'], reload);
+	gulp.watch(['assets/src/styles/**/*.{scss,css}'], ['styles', reload]);
+	gulp.watch(['assets/src/scripts/**/*.js'], reload);
+	gulp.watch(['assets/src/images/**/*'], reload);
+	gulp.watch(['*/**/*.php'], reload);
 });
 
 // Build Production Files, the Default Task
-gulp.task('default', function (cb) {
-  runSequence('composer', ['styles', 'scripts', 'images', 'hybrid', 'tha'], cb);
+gulp.task('default', function(cb) {
+	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'images'], cb);
 });

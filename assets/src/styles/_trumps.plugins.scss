@@ -1,0 +1,574 @@
+body.custom-background {
+    background-size: cover;
+}
+
+.posts-navigation {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: $space-2;
+    @include md {
+        margin-bottom: $space-3;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    a {
+        @extend .btn;
+    }
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Sets dropdown link to relative positioning
+ */
+.has-dropdown {
+  position: static;
+}
+
+
+/**
+ * Styling for the dropdown content.
+ * Hides the content by default.
+ */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  display: none;
+  visibility: hidden;
+  float: left;
+  min-width: 10em;
+  margin-top: 0.5em;
+  margin-left: 0;
+  text-align: left;
+  z-index: 1000;
+  background-color: $white;
+  border-radius: 2px;
+  color: $color-text;
+  transition: 0.2s;
+  box-shadow: none;
+  width: 100%;
+  max-width: 200px;
+
+  li {
+      width: 100%;
+      a {
+          width: 100%;
+      }
+  }
+}
+
+/**
+ * Remove list-style and margin-left from dropdown menu lists
+ */
+.dropdown ul,
+.dropdown ol {
+  margin-left: 0;
+  list-style: none;
+}
+
+/**
+ * When a dropdown is active, display it.
+ */
+.dropdown.is-active {
+  display: block;
+  visibility: visible;
+  @include shadow-6dp();
+}
+
+/**
+ * If dropdown link is near the right edge of the screen, shift the dropdown menu position to avoid content clipping.
+ */
+.dropdown.dropdown-right {
+  right: 0;
+  left: auto;
+  min-width: 300px;
+}
+
+/**
+ * Optional small screen styling for use with collapse-and-toggle navigation menus.
+ * @link http://cferdinandi.github.com/astro/
+ */
+@media (max-width: 40em) {
+  /**
+   * Switch dropdown content to relative positioning.
+   * Remove styling.
+   */
+  .js-drop .dropdown {
+    position: relative;
+    float: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+
+// .mdl-tabs__panel:first-of-type {
+//     display: block!important;
+// }
+
+// .mdl-tabs__panel.active ~ .mdl-tabs__panel:first-of-type {
+//     display: none!important;
+// }
+
+
+
+// .meh__tab {
+//     transform: translateZ(0);
+//     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+//     backface-visibility: hidden;
+//     -moz-osx-font-smoothing: grayscale;
+//     position: relative;
+//     overflow: hidden;
+//     //background-color: transparent;
+//
+//         &:hover,
+//         &:active,
+//         &.is-active,
+//         &:focus {
+//             //background-color: transparent;
+//         }
+// }
+// .meh__tab:before {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   left: 50%;
+//   right: 50%;
+//   bottom: 0;
+//   background: $color-2;
+//   height: 4px;
+//   transition-property: left, right;
+//   transition-duration: 0.3s;
+//   transition-timing-function: ease-out;
+// }
+// .meh__tab:hover:before,
+// .meh__tab:focus:before,
+// .meh__tab.is-active:before,
+// .meh__tab:active:before {
+//   left: 0;
+//   right: 0;
+// }
+//
+// .meh__tab:hover:before {
+//     background: rgba($color-2, $opacity);
+// }
+//
+// .meh__tab:focus:before,
+// .meh__tab.is-active:before,
+// .meh__tab:active:before {
+//     background: $color-2;
+// }
+//
+// .meh__tab {
+//     background-color: transparent;
+//
+//     &:hover, &.is-active {
+//         background-color: transparent!important;
+//     }
+// }
+
+
+
+
+
+
+.pages-highlight .pages-highlight {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+.has-dropdown > .menu-link:after {
+content: "\E5C5";
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;  /* Preferred icon size */
+display: inline-block;
+width: 1em;
+height: 1em;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+    transition: 0.2s;
+
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
+
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
+
+/* Support for IE. */
+font-feature-settings: 'liga';
+
+}
+
+.has-dropdown > .menu-link.is-active:after {
+        transform: rotate(180deg);
+}
+
+.flickity-slider {
+    transition: none;
+}
+
+button.flickity-prev-next-button {
+    padding: 0;
+}
+
+.meh-slider {
+.flickity-page-dots {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.meh-slider__cell {
+  background: $blue-grey-50;
+}
+
+.meh-slider__text {
+  text-shadow: 0 2px rgba($color1-dark,0.4);
+}
+
+.flickity-page-dots .dot {
+  flex: 1;
+  border-radius: 0;
+  margin: 0;
+  background: $color1-light;
+}
+
+.flickity-prev-next-button {
+    background: $color-2;
+    opacity: .5;
+
+    &:hover {
+        background: $color-2;
+        opacity: 1;
+    }
+}
+
+.meh-slider__image {
+    opacity: .8;
+}
+}
+
+.meh-slider__cell {
+  @include md {
+  min-height: 30vh;
+}
+}
+
+
+
+
+.meh-slider .meh-slider__text {
+    display: none;
+}
+
+
+
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+  animation-duration: .2s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut{
+  animation-duration: .2s;
+}
+
+
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 25%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+
+
+
+
+
+
+
+// .card-img ~ .block-body .mdl-menu__container.is-upgraded.is-visible {
+//     bottom: 50px;
+//     top: auto!important;
+// }
+
+
+
+.mdl-menu > .page_item > a {
+  display: block;
+  border: none;
+  color: $default-item-text-color;
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+  outline-color: $default-item-outline-color;
+  position: relative;
+  overflow: hidden;
+  @include typo-body-1();
+  text-decoration: none;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity $menu-fade-duration $animation-curve-default;
+  user-select: none;
+
+  .mdl-menu__container.is-visible & {
+    opacity: 1;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &[disabled] {
+    color: $disabled-item-text-color;
+    background-color: transparent;
+    cursor: auto;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    & .mdl-ripple {
+      background: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: $default-item-hover-bg-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $default-item-focus-bg-color;
+  }
+
+  &:active {
+    background-color: $default-item-active-bg-color;
+  }
+}
+
+
+
+.page_item.is-protected > a {
+    color: $grey;
+    cursor: default;
+
+    &:after {
+        content: '\E899';
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 22px;  /* Preferred icon size */
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        opacity: .5;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        padding-left: 4px;
+    }
+
+    &:hover {
+        background: none;
+    }
+}
+
+
+
+@include sm {
+    .mdl-tabs__tab-bar {
+        height: auto;
+    }
+}
+
+.gde-link {
+    @extend .btn;
+    @extend .btn--default;
+
+    &::after {
+	content: "\E2C4";
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+}
+
+.gde-frame {
+    margin-bottom: $space-2;
+}
+
+
+@media screen and (min-width: 52em) {
+	.logged-in .panel {
+		visibility: visible;
+		position: relative;
+		box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.2), 0 1px 8px 0 rgba(0,0,0,0.12);
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	.logged-in .panel-btn {
+		display: none;
+	}
+}
+
+[href^="mailto"]:before {
+	content: "\E0BE";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-family: 'Material Icons';
+	padding-right: 3px;
+	opacity: .7;
+	vertical-align: bottom;
+}
+
+#notification-area {
+	width: 98%;
+	margin: 1%;
+}
+
+.login-remember label {
+	color: white;
+}
+
+
+.content div.DTTT_container {
+    float: none;
+    text-align: right;
+}

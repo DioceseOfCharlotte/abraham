@@ -1,48 +1,63 @@
+<?php if (have_posts()) : ?>
+
+    <?php while (have_posts()) : the_post(); ?>
+
+    <?php tha_entry_before(); ?>
+
+    <article <?php hybrid_attr('post'); ?>>
+
+        <?php tha_entry_top(); ?>
+
+        <?php if (is_singular(get_post_type())) : ?>
+
+            <div <?php hybrid_attr('entry-content'); ?>>
+                <?php tha_entry_content_before(); ?>
+                <?php the_content(); ?>
+                <?php tha_entry_content_after(); ?>
+            </div>
+
+            <footer <?php hybrid_attr('entry-footer'); ?>>
+                <?php wp_link_pages(array(
+                    'before' => '<nav class="page-nav"><p>'.__('Pages:', 'abraham'),
+                    'after'  => '</p></nav>',
+                )); ?>
+            </footer>
+
+            <?php comments_template('', true); ?>
+
+        <?php else : // If not viewing a single post. ?>
+
+            <header <?php hybrid_attr('entry-header'); ?>>
+                <?php
+    get_the_image(array(
+        'size' => 'abraham-lg',
+    ));
+?>
+                <h2 <?php hybrid_attr('entry-title'); ?>>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+            </header>
+
+            <div <?php hybrid_attr('entry-summary'); ?>>
+                <?php tha_entry_content_before(); ?>
+                <?php the_excerpt(); ?>
+                <?php tha_entry_content_after(); ?>
+            </div>
+
+    	<?php endif; // End check for posts. ?>
+
+    <?php tha_entry_bottom(); ?>
+
+    </article>
+
+    <?php tha_entry_after(); ?>
+
+    <?php endwhile; ?>
+
+    <?php the_posts_navigation( array(
+    'prev_text'          => __( 'Previous page', 'abraham' ),
+    'next_text'          => __( 'Next page', 'abraham' ),
+) ); ?>
+
 <?php
-/**
- * @package Abraham
- */
-
-tha_entry_before(); ?>
-
-	<article <?php hybrid_attr( 'post' ); ?>>
-
-<?php
-tha_entry_top();
-
-    if ( is_singular( get_post_type() ) ) :
-
-		get_template_part( 'partials/single', 'header' );
-
-		get_template_part( 'partials/single', 'content' );
-
-		get_template_part( 'partials/single', 'footer' );
-
-    else : // If not viewing a single post.
-
-    get_the_image(
-	    [
-			'size'          => 'abraham-md',
-			'scan'          => true,
-			'caption'       => false,
-			'order'         => [ 'featured', 'scan_raw', 'scan', 'attachment', 'default' ],
-			'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/water.jpg',
-			'before'        => '<div class="featured-media image">',
-			'after'         => '</div>',
-	    ]
-    );
-
-		get_template_part( 'partials/archive', 'header' );
-
-		get_template_part( 'partials/archive', 'content' );
-
-		get_template_part( 'partials/archive', 'footer' );
-
-    endif; // End single post check.
-
-tha_entry_bottom(); ?>
-
-	</article><!-- .entry -->
-
-<?php
-tha_entry_after();
+endif;

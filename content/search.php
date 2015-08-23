@@ -1,36 +1,42 @@
-<?php
-/**
- * @package Abraham
- */
+<?php if (!have_posts()) : ?>
 
-tha_entry_before(); ?>
+<?php tha_entry_before(); ?>
 
-  <article <?php hybrid_attr( 'post' ); ?>>
+<section <?php hybrid_attr('post'); ?>>
 
-<?php
-tha_entry_top();
+    <div <?php hybrid_attr('entry-summary'); ?>>
 
-    if ( is_singular( get_post_type() ) ) :
+        <?php _e('Sorry, no results were found.', 'abraham'); ?>
+    </div>
 
-      get_template_part( 'partials/single', 'header' );
+    <?php get_search_form(); ?>
 
-      get_template_part( 'partials/single', 'content' );
+</section>
 
-      get_template_part( 'partials/single', 'footer' );
+<?php tha_entry_after(); ?>
 
-    else : // If not viewing a single post.
+<?php endif; ?>
 
-      get_template_part( 'partials/archive', 'header' );
+<?php while (have_posts()) : the_post(); ?>
 
-      get_template_part( 'partials/archive', 'content' );
+    <article <?php hybrid_attr('post'); ?>>
 
-      get_template_part( 'partials/archive', 'footer' );
+        <header <?php hybrid_attr('entry-header'); ?>>
+            <h4 <?php hybrid_attr('entry-title'); ?>>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h4>
 
-    endif; // End single post check.
+            <?php if (get_post_type() === 'post') {
+                get_template_part('components/entry-meta');
+            } ?>
+        </header>
 
-tha_entry_bottom(); ?>
+        <div <?php hybrid_attr('entry-summary'); ?>>
+        <?php the_excerpt(); ?>
+        </div>
 
-  </article><!-- .entry -->
+    </article>
 
-<?php
-tha_entry_after();
+<?php endwhile; ?>
+
+<?php the_posts_navigation(); ?>

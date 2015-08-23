@@ -1,0 +1,64 @@
+/*
+Theme Name: Abraham
+Theme URI: https://github.com/m-e-h/abraham
+Author: Marty Helmick
+Author URI: https://github.com/m-e-h
+Description: <code>Abraham</code> is a Parent theme with many children.
+Version: 0.2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: abraham
+GitHub Theme URI: https://github.com/m-e-h/abraham
+*/
+
+
+
+
+@import 'color-definitions';
+@import 'variables';
+@import 'mixins';
+
+@import "settings.colors";
+@import 'settings.variables';
+@import "settings.responsive";
+
+@import 'elements.page';
+@import 'elements.nav';
+@import 'elements.forms';
+@import 'elements.tables';
+@import 'elements.typography';
+@import 'elements.links';
+
+@import "mdl/ripple";
+@import "mdl/animation";
+@import "mdl/button";
+//@import "mdl/card";
+@import "mdl/menu";
+@import "mdl/tooltip";
+@import "mdl/shadow";
+
+$tab-border-color: $color1-dark;
+$tab-highlight-color: $color-2;
+$tab-text-color: $white;
+$tab-active-text-color: $white;
+
+@import "mdl/tabs";
+
+@import 'objects.button';
+@import 'objects.grid';
+@import 'objects.widths';
+
+@import 'components.button';
+@import "components.breadcrumbs";
+
+@import 'utility.typography';
+@import 'utility.spacing';
+@import 'utility.colors';
+@import 'utility.borders';
+@import 'utility.images';
+@import 'utility.tables';
+@import 'utility.layout-states';
+@import 'utility.flex';
+
+@import "trumps.helpers";
+@import "trumps.plugins";

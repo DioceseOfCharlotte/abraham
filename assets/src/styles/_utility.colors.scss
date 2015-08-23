@@ -1,0 +1,54 @@
+/* #COLORS
+\*------------------------------------*/
+
+.color-1 { color: $color-1 }
+.color-2 { color: $color-2 }
+.color-3 { color: $color-3 }
+
+.bg-1 { background-color: $color-1 }
+.bg-2 { background-color: $color-2 }
+.bg-3 { background-color: $color-3 }
+.bg-1--light { background-color: lighten($color-1, 10); }
+.bg-2--light { background-color: lighten($color-2, 10); }
+.bg-3--light { background-color: lighten($color-3, 10); }
+.bg-1--dark { background-color: darken($color-1, 10); }
+.bg-2--dark { background-color: darken($color-2, 10); }
+.bg-3--dark { background-color: darken($color-3, 10); }
+
+.fill-1 { fill: $color-1 }
+.fill-2 { fill: $color-2 }
+.fill-3 { fill: $color-3 }
+
+.black  { color: $black }
+.gray   { color: $gray }
+.silver { color: $silver }
+.white  { color: $white }
+
+.muted { opacity: $opacity; }
+
+.color-inherit * {
+    color: inherit;
+}
+
+.currentcolor,
+.currentcolor a {
+    color: currentColor;
+}
+
+/* Basscss Background Colors */
+
+.bg-black  { background-color: $black }
+.bg-gray   { background-color: $gray }
+.bg-silver { background-color: $silver }
+.bg-white  { background-color: $white }
+.bg-transparent  { background-color: transparent!important; }
+
+.bg-lighten-1 { background-color: $lighten-1!important; }
+.bg-lighten-2 { background-color: $lighten-2!important; }
+.bg-lighten-3 { background-color: $lighten-3!important; }
+.bg-lighten-4 { background-color: $lighten-4!important; }
+
+.bg-darken-1 { background-color: $darken-1!important; }
+.bg-darken-2 { background-color: $darken-2!important; }
+.bg-darken-3 { background-color: $darken-3!important; }
+.bg-darken-4 { background-color: $darken-4!important; }
