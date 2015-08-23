@@ -381,10 +381,6 @@ select {
     line-height: 1.75;
 }
 
-select:not([multiple]) {
-    height: 2.25rem;
-}
-
 textarea {
     padding: 0.5rem 0.5rem; 
     line-height: 1.75;
@@ -4355,4 +4351,56 @@ Copyright (c) 2015 Daniel Eden
 .content div.DTTT_container {
     float: none;
     text-align: right;
+}
+
+.menu-item-362 > .menu-link:before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 2px; 
+    font-family: "Material Icons";
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    word-wrap: normal;
+    content: "\E8D3";
+}
+
+.gform_wrapper .gf_page_steps {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 1.25em; 
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.gform_wrapper .gf_step_clear {
+    display: none;
+}
+
+.gf_step_number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    line-height: 40px; 
+    text-align: center;
+}
+
+.gf_step_active .gf_step_number {
+    border: 0; 
+    background-color: #eee;
 }

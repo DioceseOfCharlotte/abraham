@@ -572,3 +572,45 @@ Copyright (c) 2015 Daniel Eden
     float: none;
     text-align: right;
 }
+
+.menu-item-362 > .menu-link:before {
+	content: '\E8D3';
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 23px;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	margin-right: 2px;
+}
+
+.gform_wrapper .gf_page_steps {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1.25em;
+}
+
+.gform_wrapper .gf_step_clear {
+	display: none;
+}
+
+.gf_step_number {
+	width: 40px;
+	height: 40px;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	text-align: center;
+	display: inline-block;
+	line-height: 40px;
+}
+
+.gf_step_active .gf_step_number {
+	background-color: #eee;
+	border: 0;
+}

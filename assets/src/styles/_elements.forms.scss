@@ -32,10 +32,6 @@ select {
     padding: $form-field-padding-y $form-field-padding-x;
 }
 
-select:not([multiple]) {
-    height: $form-field-height;
-}
-
 textarea {
     resize: vertical;
     line-height: 1.75;
