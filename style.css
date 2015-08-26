@@ -4408,16 +4408,15 @@ Copyright (c) 2015 Daniel Eden
 .widget-checkbox {
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    padding: 32px;
+    height: 50px;
     opacity: 0; 
     cursor: pointer;
 }
 
-.widget-checkbox:checked ~ ul {
+.widget-checkbox:checked ~ .widget-body {
     display: none;
 }
 
@@ -4441,7 +4440,7 @@ Copyright (c) 2015 Daniel Eden
     .widget-checkbox {
         display: none;
     }
-    .widget-checkbox:checked ~ ul {
+    .widget-checkbox:checked ~ .widget-body {
         display: block;
     }
     .widget .widget-checkbox ~ .widget-title:after {

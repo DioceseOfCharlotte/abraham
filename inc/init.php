@@ -78,8 +78,8 @@ function widgets() {
     'id'            => 'footer',
     'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="widget-checkbox" type="checkbox" checked>',
     'after_widget'  => '</ul></section>',
-    'before_title'  => '<h3 class="h2 widget-title mt0">',
-    'after_title'   => '</h3><ul>',
+    'before_title'  => '<h3 class="h2 widget-title m0">',
+    'after_title'   => '</h3><div class="widget-body mt2">',
   ));
 }
 
