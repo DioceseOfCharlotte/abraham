@@ -603,7 +603,7 @@ a {
 }
 
 a:hover:not(.btn) {
-    opacity: 0.8; 
+    opacity: 0.7; 
     text-decoration: none;
 }
 
@@ -2710,6 +2710,7 @@ input[type="reset"],
 input[type="submit"],
 .btn--default,
 .gde-link {
+    color: white; 
     background: #004899;
 }
 input[type="button"]:active,
@@ -2791,7 +2792,7 @@ input[type="submit"] {
 \*------------------------------------*/
 .breadcrumbs li + li:before {
     padding: 0.5rem;
-    opacity: 0.8;
+    opacity: 0.7;
     font-family: "Material Icons";
     font-size: 24px;
     font-size: 1.5rem; 
@@ -3320,7 +3321,7 @@ input[type="submit"] {
 }
 
 .muted {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .color-inherit * {

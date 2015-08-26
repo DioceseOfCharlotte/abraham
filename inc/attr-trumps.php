@@ -79,20 +79,20 @@ class Attr_Trumps {
 
             // SIDEBAR
             'sidebar_primary'         => 'grid__item',
-			'sidebar_footer'          => 'py3 py4@md',
-            'sidebar_horizontal'      => 'py3 py4@md flex flex-wrap flex-justify',
+			'sidebar_footer'          => '',
+            'sidebar_horizontal'      => 'pb2 pb3@md pt3 pt4@md flex flex-wrap flex-justify',
             'sidebar_right'           => 'u-1/3@md',
             'sidebar_left'            => 'u-1/3@md',
 
 			'widgets'                 => 'widget br mb2 mb3@md p2 ml2@md mr2@md list-reset flex-auto',
 			'primary_widgets'         => 'bg-white',
-			'footer_widgets'          => 'bg-darken-1 u-1/1 u-1/4@md',
+			'footer_widgets'          => 'bg-darken-2 u-1/1 u-1/4@md',
 
             // COMMENTS
             'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
 
             // FOOTER
-            'footer'                  => 'bg-2 color-inherit',
+            'footer'                  => 'bg-1--light white color-inherit',
 
             'menu_item'                 => '',
             'menu_link'                 => 'btn menu-link text-left',
