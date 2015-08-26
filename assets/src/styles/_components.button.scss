@@ -6,34 +6,30 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .btn--default {
-  background: $button-primary-color;
+  background: $color-1;
   //@include shadow-2dp();
 
   &:active,
   &:hover {
     //@include shadow-4dp();
-    background-color: $button-active-color;
+    background-color: $color1-light;
   }
 
   &:focus:not(:active) {
     //@include focus-shadow();
-    background-color: $button-active-color;
+    background-color: $color1-light;
   }
 
   &.button--colored {
-    background: $button-primary-color-alt;
-    color: $button-secondary-color-alt;
+    background: $color-3;
+    color: white;
 
     &:hover {
-      background-color: $button-hover-color-alt;
+      background-color: $color3-light;
     }
 
-    &:active, &.active {
-      background-color: $button-active-color-alt;
-    }
-
-    &:focus:not(:active) {
-      background-color: $button-active-color-alt;
+    &:active, &.active, &:focus {
+      background-color: $color3-dark;
     }
 
     & .ripple {

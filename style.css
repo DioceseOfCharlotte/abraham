@@ -2491,7 +2491,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:hover {
-    background-color: rgba(158,158,158, 0.20);
+    background-color: rgba(255, 255, 255, 0.125);
     text-decoration: none;
 }
 .btn:focus:not(:active),
@@ -2502,7 +2502,7 @@ input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
 input[type="submit"]:focus:not(:active),
 button:focus:not(:active) {
-    background-color: rgba(0,0,0, 0.12);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 .btn:active,
 .nav-links a:active,
@@ -2520,7 +2520,7 @@ input.active[type="reset"],
 input.active[type="submit"],
 button:active,
 button.active {
-    background-color: rgba(158,158,158, 0.40);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 .btn.button--colored,
 .nav-links a.button--colored,
@@ -2710,7 +2710,7 @@ input[type="reset"],
 input[type="submit"],
 .btn--default,
 .gde-link {
-    background: rgba(158,158,158, 0.20);
+    background: #004899;
 }
 input[type="button"]:active,
 input[type="button"]:hover,
@@ -2722,48 +2722,46 @@ input[type="submit"]:hover,
 .gde-link:active,
 .btn--default:hover,
 .gde-link:hover {
-    background-color: rgba(158,158,158, 0.40);
+    background-color: #0060cc;
 }
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
 input[type="submit"]:focus:not(:active),
 .btn--default:focus:not(:active),
 .gde-link:focus:not(:active) {
-    background-color: rgba(158,158,158, 0.40);
+    background-color: #0060cc;
 }
 input[type="button"].button--colored,
 input[type="reset"].button--colored,
 input[type="submit"].button--colored,
 .btn--default.button--colored,
 .button--colored.gde-link {
-    color: rgb(255,255,255); 
-    background: rgb(63,81,181);
+    color: white; 
+    background: #3d9970;
 }
 input[type="button"].button--colored:hover,
 input[type="reset"].button--colored:hover,
 input[type="submit"].button--colored:hover,
 .btn--default.button--colored:hover,
 .button--colored.gde-link:hover {
-    background-color: rgb(63,81,181);
+    background-color: #50b98a;
 }
 input[type="button"].button--colored:active,
 input[type="button"].button--colored.active,
+input[type="button"].button--colored:focus,
 input[type="reset"].button--colored:active,
 input[type="reset"].button--colored.active,
+input[type="reset"].button--colored:focus,
 input[type="submit"].button--colored:active,
 input[type="submit"].button--colored.active,
+input[type="submit"].button--colored:focus,
 .btn--default.button--colored:active,
 .button--colored.gde-link:active,
 .btn--default.button--colored.active,
-.button--colored.active.gde-link {
-    background-color: rgb(63,81,181);
-}
-input[type="button"].button--colored:focus:not(:active),
-input[type="reset"].button--colored:focus:not(:active),
-input[type="submit"].button--colored:focus:not(:active),
-.btn--default.button--colored:focus:not(:active),
-.button--colored.gde-link:focus:not(:active) {
-    background-color: rgb(63,81,181);
+.button--colored.active.gde-link,
+.btn--default.button--colored:focus,
+.button--colored.gde-link:focus {
+    background-color: #2e7555;
 }
 input[type="button"].button--colored .ripple,
 input[type="reset"].button--colored .ripple,
@@ -2835,7 +2833,7 @@ input[type="submit"] {
 }
 
 .small {
-    font-size: 75%;
+    font-size: 80%;
 }
 
 .lh-1 {

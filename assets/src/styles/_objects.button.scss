@@ -30,16 +30,16 @@ button {
   }
 
   &:hover {
-    background-color: $button-hover-color;
+    background-color: $lighten-2;
     text-decoration: none;
   }
 
   &:focus:not(:active) {
-    background-color: $button-focus-color;
+    background-color: $lighten-3;
   }
 
   &:active, &.active {
-    background-color: $button-active-color;
+    background-color: $darken-3;
   }
 
   &.button--colored {
