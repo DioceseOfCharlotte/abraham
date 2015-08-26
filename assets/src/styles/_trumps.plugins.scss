@@ -614,3 +614,49 @@ Copyright (c) 2015 Daniel Eden
 	background-color: #eee;
 	border: 0;
 }
+
+
+.widget-checkbox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+.widget-checkbox:checked~ul {
+    display: none;
+}
+
+.widget-checkbox~.widget-title:after {
+    font-family: 'Material Icons';
+    content: '\E5CE';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 23.8px;
+    height: 23.8px;
+    background-size: cover;
+}
+
+.widget-checkbox:checked~.widget-title:after {
+    content: '\E5CF'
+}
+
+@include md {
+.widget-checkbox {
+    display: none;
+}
+
+.widget-checkbox:checked~ul {
+    display: block;
+}
+
+.widget .widget-checkbox~.widget-title:after {
+    content: '';
+}
+}
