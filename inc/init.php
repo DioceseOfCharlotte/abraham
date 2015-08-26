@@ -76,10 +76,10 @@ function widgets() {
     hybrid_register_sidebar(array(
     'name'          => __('Footer', 'abraham'),
     'id'            => 'footer',
-    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
-    'after_widget'  => '</section>',
+    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>',
+    'after_widget'  => '</ul></section>',
     'before_title'  => '<h3 class="h2 widget-title mt0">',
-    'after_title'   => '</h3>',
+    'after_title'   => '</h3><ul>',
   ));
 }
 
