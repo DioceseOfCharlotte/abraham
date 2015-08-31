@@ -71,7 +71,7 @@ function widgets() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="h2 widget-title mt0">',
     'after_title'   => '</h3>',
-  ));
+    ));
 
 hybrid_register_sidebar(array(
     'name'          => __('Footer', 'abraham'),
@@ -80,7 +80,7 @@ hybrid_register_sidebar(array(
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3 class="h2 widget-title m0">',
     'after_title'   => '</h3><div class="widget-body mt2">',
-));
+    ));
 }
 
 
@@ -102,28 +102,45 @@ function layouts() {
     hybrid_register_layout('1-column', array(
         'label'            => _x('Single Column', 'theme layout', 'abraham'),
         'is_global_layout' => true,
-        'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column.svg',
     ));
 
     hybrid_register_layout('1-column-wide', array(
         'label'            => _x('Single Column Wide', 'theme layout', 'abraham'),
         'is_global_layout' => true,
-        'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column-wide.svg',
     ));
 
     hybrid_register_layout('sidebar-right', array(
         'label'            => _x('Sidebar Right', 'theme layout', 'abraham'),
         'is_global_layout' => true,
-        'is_post_layout'   => true,
         'image'            => '%s/assets/images/sidebar-right.svg',
     ));
 
     hybrid_register_layout('sidebar-left', array(
         'label'            => _x('Sidebar Left', 'theme layout', 'abraham'),
         'is_global_layout' => true,
-        'is_post_layout'   => true,
         'image'            => '%s/assets/images/sidebar-left.svg',
+    ));
+
+    hybrid_register_layout('list', array(
+        'label'            => _x('List', 'theme layout', 'abraham'),
+        'is_global_layout' => false,
+        'post_types'       => array('gravityview'),
+        'image'            => '%s/assets/images/list.svg',
+    ));
+
+    hybrid_register_layout('2-card-row', array(
+        'label'            => _x('2-card-row', 'theme layout', 'abraham'),
+        'is_global_layout' => false,
+        'post_types'       => array('gravityview'),
+        'image'            => '%s/assets/images/2-card-row.svg',
+    ));
+
+    hybrid_register_layout('3-card-row', array(
+        'label'            => _x('2-card-row', 'theme layout', 'abraham'),
+        'is_global_layout' => false,
+        'post_types'       => array('gravityview'),
+        'image'            => '%s/assets/images/3-card-row.svg',
     ));
 }
