@@ -162,5 +162,5 @@ gulp.task('serve', ['styles'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('default', function(cb) {
-	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'images'], cb);
+	runSequence('styles', [/*'hybrid',*/ 'wpeditor', 'scripts', 'images'], cb);
 });
