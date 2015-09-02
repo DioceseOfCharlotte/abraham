@@ -102,6 +102,9 @@ class Attr_Trumps {
             'current-menu-item'         => 'is-active',
             'menu-item-has-children'    => 'has-dropdown js-dropdown',
             'sub-menu'                  => 'dropdown animated slideInUp',
+
+            'gv_container'              => 'grid',
+            'gv_entry'                  => 'inline-block u-1/3 u-1/4@md',
         );
 
         $this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
@@ -154,6 +157,9 @@ class Attr_Trumps {
 
         add_filter ('wp_nav_menu',                      array($this, 'nav_menu_filters'));
         add_filter('nav_menu_css_class' ,               array($this, 'menu_item') , 10 , 2);
+
+        add_filter('gravityview/render/container/class',  	     array($this, 'gv_container'), 10, 1);
+        add_filter('gravityview_entry_class',  			         array($this, 'gv_entry'), 10, 3);
     }
 
 
@@ -465,6 +471,18 @@ class Attr_Trumps {
       );
       $text = str_replace(array_keys($replace), $replace, $text);
         return $text;
+      }
+
+      public function gv_container($attr) {
+
+          $attr     .= " {$this->args['gv_container']}";
+          return $attr;
+      }
+
+      public function gv_entry($attr, $entry, $instance) {
+
+          $attr     .= " {$this->args['gv_entry']}";
+          return $attr;
       }
 
 }
