@@ -17,6 +17,7 @@ $abraham_includes = array(
     'inc/shortcodes-ui.php',            // Shortcake interface
     'inc/tha-theme-hooks.php',          // Template hooks
     'inc/template-actions.php',         // Action hooks
+    'inc/compatibility.php',            // 3rd party compatibilty
     'inc/customizer/customizer.php',    // Customizer
 );
 

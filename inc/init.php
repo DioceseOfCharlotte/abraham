@@ -64,23 +64,23 @@ function setup() {
  * Register sidebars.
  */
 function widgets() {
-    hybrid_register_sidebar(array(
-    'name'          => __('Primary', 'abraham'),
-    'id'            => 'primary',
-    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3 class="h2 widget-title mt0">',
-    'after_title'   => '</h3>',
-    ));
+    register_sidebar(array(
+		'id'            => 'primary',
+		'name'          => __( 'Primary', 'abraham' ),
+		'before_title'  => '<h3 class="h2 widget-title mt0">',
+		'after_title'   => '</h3>',
+		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
+		'after_widget'  => '</section>',
+	));
 
-hybrid_register_sidebar(array(
-    'name'          => __('Footer', 'abraham'),
-    'id'            => 'footer',
-    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="widget-checkbox" type="checkbox" checked>',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<h3 class="h2 widget-title m0">',
-    'after_title'   => '</h3><div class="widget-body mt2">',
-    ));
+	register_sidebar(array(
+		'id'            => 'footer',
+		'name'          => __( 'Footer', 'abraham' ),
+		'before_title'  => '<h3 class="h2 widget-title m0">',
+		'after_title'   => '</h3><div class="widget-body mt2">',
+		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="widget-checkbox" type="checkbox" checked>',
+		'after_widget'  => '</div></section>',
+	));
 }
 
 

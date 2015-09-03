@@ -3551,6 +3551,10 @@ input[type="submit"] {
     display: table-cell;
 }
 
+.none {
+    display: none;
+}
+
 .align-baseline {
     vertical-align: baseline;
 }

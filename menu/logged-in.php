@@ -14,6 +14,7 @@ if (has_nav_menu('logged-in')) : ?>
                 'items_wrap'     => '<ul id="%s" class="%s">%s</ul>'
             ));
         ?>
+        <?php get_search_form(); ?>
     </nav>
 
 <?php
