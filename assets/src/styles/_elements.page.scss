@@ -1,14 +1,7 @@
 ///* #RESET
 //\*------------------------------------*/
 :root {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-y: scroll;
-    text-size-adjust: 100%;
-    box-sizing: border-box;
-    cursor: default;
-    font: 16px/1.5 sans-serif;
     min-height: 100%;
-    background-color: #fff;
     @include sm {
         font: 14px/1.7 sans-serif;
     }
@@ -17,29 +10,25 @@
 
 body {
     color: $body-color;
-    background-color: $body-background-color;
-    @include font-size($base-font-size);
+    // background-color: $body-background-color;
+    // @include font-size($base-font-size);
 }
 
 * {
-    // font-size: inherit;
-    // line-height: inherit;
-    // color: inherit;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
     position: relative;
     background-repeat: no-repeat;
-    background-position: 50%;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: auto;
+    vertical-align: middle;
+
+    //background-position: 50%;
+    // color: inherit;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
-    vertical-align: middle;
-    border-style: solid;
-    border-width: 0;
     word-wrap: break-word;
 }
 
@@ -48,10 +37,12 @@ input[type="submit"] {
 }
 
 hr {
+    display: block;
+    height: 1px;
     border: 0;
-    border-bottom-style: $rule-border-style;
-    border-bottom-width: $rule-border-width;
-    border-bottom-color: $rule-border-color;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 pre,
@@ -67,34 +58,33 @@ code {
 article,
 aside,
 cite,
-details,
+//details,
+//summary,
 figcaption,
 figure,
 footer,
 header,
-hgroup,
-main,
+//main,
 menu,
 nav,
-section,
-summary {
+section {
     display: block;
 }
 
 span,
 a {
-    vertical-align: baseline;
+    vertical-align: initial;
 }
 
-::-moz-selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
+// ::-moz-selection {
+//     background-color: #b3d4fc;
+//     text-shadow: none;
+// }
+//
+// ::selection {
+//     background-color: #b3d4fc;
+//     text-shadow: none;
+// }
 
 img {
     max-width: 100%;
@@ -114,31 +104,19 @@ iframe[src*="google.com/maps"] {
     width: 100%;
 }
 
-[hidden],
-audio:not([controls]),
-template {
-    display: none;
-}
-
-@media screen {
-    [hidden~=screen] {
-        display: inherit;
-    }
-
-[hidden~=screen]:not(:active):not(:focus):not(:target) {
-        clip: rect(0 0 0 0)!important;
-        position: absolute!important;
-    }
-
-}
+// [hidden],
+// audio:not([controls]),
+// template {
+//     display: none;
+// }
 
 p:empty {
         margin: 0;
         padding: 0;
         line-height: 0;
-    }
+}
 
 p:last-child,
 ul:last-child {
         margin-bottom: 0;
-    }
+}

@@ -185,18 +185,229 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 /* Typography */
 /* Shadows */
 /* Animations */
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*
+ * Normalization
+ */
 :root {
     overflow-y: scroll;
-    box-sizing: border-box;
-    min-height: 100%;
-    background-color: #fff; 
-    font: 16px/1.5 sans-serif;
-    cursor: default;
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+button {
+    overflow: visible;
+}
+
+details {
+    display: block;
+}
+
+input[type="number"] {
+    width: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+main {
+    display: block;
+}
+
+summary {
+    display: block;
+}
+
+pre {
+    overflow: auto;
+}
+
+progress {
+    display: inline-block;
+}
+
+small {
+    font-size: 75%;
+}
+
+template {
+    display: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[hidden] {
+    display: none;
+}
+
+/*
+ * Universal inheritance
+ */
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+* {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+::before,
+::after {
+    vertical-align: inherit; 
+    text-decoration: inherit;
+}
+
+/*
+ * Opinionated defaults
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    box-sizing: border-box;
+    font: 16px/1.5 sans-serif; 
+    cursor: default;
+}
+
+html {
+    color: #000; 
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+    background-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit; 
+    font-style: inherit;
+}
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+    min-height: 1.5em;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Source Code Pro", Consolas, monospace, monospace;
+}
+
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+select::-ms-value {
+    color: currentColor;
+}
+
+table {
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+textarea {
+    resize: vertical;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+[aria-controls] {
+    cursor: pointer;
+}
+
+[aria-disabled] {
+    cursor: default;
+}
+
+[hidden][aria-hidden="false"] {
+    display: inherit;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+[hidden][aria-hidden="false"]:focus {
+    clip: auto;
+}
+
+:root {
+    min-height: 100%;
 }
 @media screen and (max-width: 51em) {
     :root {
@@ -206,32 +417,28 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 body {
     color: #4d4d4d;
-    background-color: #fff;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.03125;
 }
 
 * {
     position: relative;
-    margin: 0;
-    padding: 0;
     background-repeat: no-repeat;
-    background-position: 50%; 
+    vertical-align: middle; 
 
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 1;
+    -ms-flex-positive: 0;
+    -ms-flex-preferred-size: auto;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
-    border-width: 0;
-    border-style: solid;
-    vertical-align: middle;
     word-wrap: break-word;
 }
 
@@ -240,10 +447,12 @@ input[type="submit"] {
 }
 
 hr {
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0; 
     border: 0;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.125);
+    border-top: 1px solid #ccc;
 }
 
 pre,
@@ -258,33 +467,19 @@ code {
 article,
 aside,
 cite,
-details,
 figcaption,
 figure,
 footer,
 header,
-hgroup,
-main,
 menu,
 nav,
-section,
-summary {
+section {
     display: block;
 }
 
 span,
 a {
-    vertical-align: baseline;
-}
-
-::-moz-selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
+    vertical-align: initial;
 }
 
 img {
@@ -303,22 +498,6 @@ canvas {
 iframe[src*="google.com/maps"] {
     width: 100%; 
     max-width: 100%;
-}
-
-[hidden],
-audio:not([controls]),
-template {
-    display: none;
-}
-
-@media screen {
-    [hidden~=screen] {
-        display: inherit;
-    }
-    [hidden~=screen]:not(:active):not(:focus):not(:target) {
-        clip: rect(0 0 0 0) !important;
-        position: absolute !important;
-    }
 }
 
 p:empty {
@@ -352,7 +531,6 @@ input,
 select,
 textarea,
 fieldset {
-    width: 100%; 
     font-family: inherit;
     font-size: 1rem;
 }
@@ -491,6 +669,50 @@ input[type="radio"] + label {
     margin-bottom: 0;
     margin-left: 0.5rem;
     vertical-align: baseline;
+}
+
+input.search-field {
+    height: 40px; 
+    padding-left: 40px;
+    border: 0;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    font-size: 15px;
+}
+
+input.search-field:focus {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.search-icon {
+    width: 40px; 
+    line-height: 40px;
+}
+
+article.thursday_packet:first-of-type {
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
 }
 
 /* #TABLES
@@ -2807,6 +3029,143 @@ input[type="submit"] {
     display: none;
 }
 
+.sc_clearfix:after {
+    display: block;
+    visibility: hidden;
+    float: none;
+    clear: both;
+    height: 0;
+    text-indent: -9999px; 
+    content: ".";
+}
+
+#sc_calendar table {
+    float: left; 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#sc_calendar th {
+    width: 13.25%;
+    padding: 3px 4px !important;
+    border: 1px solid #ddd;
+    background: #fdfdfd;
+    font-size: 1.2rem; 
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#sc_calendar td {
+    width: 13.25%;
+    padding: 0 !important; 
+    border: 1px solid #ddd;
+    font-size: 11px;
+}
+
+#sc_calendar td.calendar-day {
+    height: 90px; 
+    background: #fbfbfb;
+}
+
+#sc_calendar td.calendar-day-np {
+    background: #f0f0f0;
+}
+
+#sc_calendar td div.sc_day_div {
+    padding: 8px;
+}
+
+#sc_events_calendar_head {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-bottom: none; 
+    background: #f0f0f0;
+}
+#sc_events_calendar_head .sc_calendar_submit {
+    margin-bottom: 1px;
+    padding: 0 10px;
+}
+
+#sc_event_select,
+#sc_event_nav_wrap,
+#sc_events_calendar_head h2 {
+    float: left;
+    clear: none; 
+    width: 33%;
+    margin: 0;
+}
+
+#sc_event_nav_wrap {
+    text-align: right;
+}
+
+#sc_event_nav_wrap form {
+    display: inline;
+    text-align: right;
+}
+
+#sc_events_calendar_head h2 {
+    font-size: 1.8rem; 
+    line-height: 26px;
+    text-align: center;
+}
+
+#sc_events_calendar_head select {
+    padding: 0.15rem 0.5rem; 
+    font-size: 15px;
+}
+
+#sc_events_calendar_head input {
+    padding: 2px 10px; 
+    font-size: 15px;
+}
+
+#sc_events_calendar select,
+#sc_events_calendar input {
+    margin: 0 5px 0 0;
+}
+
+.sc_small #sc_event_nav_wrap {
+    margin: 8px 0 0 0;
+}
+
+.sc_small #sc_event_nav_wrap,
+.sc_small #sc_event_select {
+    float: none;
+    width: 100%;
+}
+
+.sc_small #sc_calendar td div {
+    padding: 1px;
+}
+
+.sc_small #sc_event_nav_prev,
+.sc_small #sc_event_nav_next {
+    display: block;
+    float: left; 
+    width: 50%;
+}
+
+.sc_small #sc_event_nav_prev {
+    text-align: left;
+}
+
+#sc_calendar td div.day-number {
+    float: right;
+    margin: -6px -4px 0 0;
+}
+
+.sc_small #sc_calendar td div.day-number {
+    float: none;
+    margin: -3px 1px 0 0; 
+    padding: 0;
+    text-align: right;
+}
+
+.sc_event_details {
+    margin: 0 0 15px;
+}
+
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------*/
 .h1 {
@@ -3089,6 +3448,10 @@ input[type="submit"] {
     padding: 2rem;
 }
 
+.pl3 {
+    padding-left: 2rem !important;
+}
+
 .py3 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -3109,6 +3472,10 @@ input[type="submit"] {
 
 .p4 {
     padding: 4rem;
+}
+
+.pl4 {
+    padding-left: 4rem !important;
 }
 
 .py4 {
@@ -4449,4 +4816,19 @@ Copyright (c) 2015 Daniel Eden
     .widget .widget-checkbox ~ .widget-title:after {
         content: "";
     }
+}
+
+.menu-logged-in {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }

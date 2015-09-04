@@ -22,6 +22,7 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import 'settings.variables';
 @import "settings.responsive";
 
+@import 'vendor.sanitize';
 @import 'elements.page';
 @import 'elements.nav';
 @import 'elements.forms';
@@ -50,6 +51,7 @@ $tab-active-text-color: $white;
 
 @import 'components.button';
 @import "components.breadcrumbs";
+@import 'components.calendar';
 
 @import 'utility.typography';
 @import 'utility.spacing';

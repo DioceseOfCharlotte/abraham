@@ -35,3 +35,8 @@ define('HYBRID_DIR', trailingslashit( get_template_directory()) . 'inc/hybrid-co
 define('HYBRID_URI', trailingslashit( get_template_directory_uri()) . 'inc/hybrid-core/');
 
 new Hybrid();
+
+function wpdocs_dequeue_script() {
+wp_dequeue_style( 'sc-events' );
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );

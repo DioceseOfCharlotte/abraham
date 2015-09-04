@@ -6,7 +6,7 @@ textarea,
 fieldset {
     font-family: $form-field-font-family;
     font-size: $form-field-font-size;
-    width: 100%;
+    //width: 100%;
 }
 
 input[type=text],
@@ -147,4 +147,51 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 	margin-right: 1rem;
 	margin-bottom: 0;
 	vertical-align: baseline;
+}
+
+
+
+
+input.search-field {
+	background-color: rgba(255,255,255,0.18);
+	border: 0;
+	font-size: 15px;
+	color: #fff;
+    padding-left: 40px;
+    height: 40px;
+}
+
+input.search-field:focus {
+	background-color: rgba(255,255,255,0.24);
+}
+
+.search-icon {
+    line-height: 40px;
+    width: 40px;
+}
+
+article.thursday_packet:first-of-type {
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
+	font-size: 15px;
+}
+
+:-moz-placeholder {
+/* Firefox 18- */
+	color: rgba(255,255,255,0.5);
+	font-size: 15px;
+}
+
+::-moz-placeholder {
+/* Firefox 19+ */
+	color: rgba(255,255,255,0.5);
+	font-size: 15px;
+}
+
+:-ms-input-placeholder {
+	color: rgba(255,255,255,0.5);
+	font-size: 15px;
 }
