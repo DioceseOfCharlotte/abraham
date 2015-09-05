@@ -174,24 +174,24 @@ article.thursday_packet:first-of-type {
 	width: 100%;
 }
 
-::-webkit-input-placeholder {
+.search-form ::-webkit-input-placeholder {
 	color: rgba(255,255,255,0.5);
 	font-size: 15px;
 }
 
-:-moz-placeholder {
+.search-form :-moz-placeholder {
 /* Firefox 18- */
 	color: rgba(255,255,255,0.5);
 	font-size: 15px;
 }
 
-::-moz-placeholder {
+.search-form ::-moz-placeholder {
 /* Firefox 19+ */
 	color: rgba(255,255,255,0.5);
 	font-size: 15px;
 }
 
-:-ms-input-placeholder {
+.search-form :-ms-input-placeholder {
 	color: rgba(255,255,255,0.5);
 	font-size: 15px;
 }
