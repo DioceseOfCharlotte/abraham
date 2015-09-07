@@ -671,7 +671,7 @@ input[type="radio"] + label {
     vertical-align: baseline;
 }
 
-input.search-field {
+.white input.search-field {
     height: 40px; 
     padding-left: 40px;
     border: 0;
@@ -680,7 +680,7 @@ input.search-field {
     font-size: 15px;
 }
 
-input.search-field:focus {
+.white input.search-field:focus {
     background-color: rgba(255, 255, 255, 0.24);
 }
 
@@ -693,24 +693,42 @@ article.thursday_packet:first-of-type {
     width: 100%;
 }
 
-::-webkit-input-placeholder {
+.white ::-webkit-input-placeholder {
+    opacity: 1;
     color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
 }
 
-:-moz-placeholder {
+.white ::-moz-placeholder {
+    opacity: 1;
     /* Firefox 18- */
     color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
 }
 
-::-moz-placeholder {
+.white :-ms-input-placeholder {
+    opacity: 1;
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+.white ::placeholder {
+    opacity: 1;
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+.white ::-moz-placeholder {
+    opacity: 1;
     /* Firefox 19+ */
     color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
 }
 
-:-ms-input-placeholder {
+.white :-ms-input-placeholder {
+    opacity: 1;
     color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
 }

@@ -11,7 +11,6 @@ $abraham_includes = array(
     'inc/utils.php',                    // Utility functions
     'inc/init.php',                     // Initial theme setup
     'inc/assets.php',                   // Scripts and styles
-    'inc/titles.php',                   // Page titles
     'inc/tiny-mce.php',                 // Extra wysiwyg actions
     'inc/shortcodes.php',               // Shortcodes
     'inc/shortcodes-ui.php',            // Shortcake interface
@@ -35,8 +34,3 @@ define('HYBRID_DIR', trailingslashit( get_template_directory()) . 'inc/hybrid-co
 define('HYBRID_URI', trailingslashit( get_template_directory_uri()) . 'inc/hybrid-core/');
 
 new Hybrid();
-
-function wpdocs_dequeue_script() {
-wp_dequeue_style( 'sc-events' );
-}
-add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );

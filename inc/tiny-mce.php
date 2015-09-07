@@ -9,7 +9,7 @@
  * @link        https://flagshipwp.com/
  * @since       1.4.0
  */
-add_filter('mce_buttons', 'flagship_add_styleselect', 99);
+add_filter('mce_buttons', 'abraham_add_styleselect', 99);
 /**
  * Add styleselect button to the end of the first row of TinyMCE buttons.
  *
@@ -19,7 +19,7 @@ add_filter('mce_buttons', 'flagship_add_styleselect', 99);
  *
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_add_styleselect($buttons) {
+function abraham_add_styleselect($buttons) {
     // Get rid of styleselect if it's been added somewhere else.
     if (in_array('styleselect', $buttons)) {
         unset($buttons['styleselect']);
@@ -29,7 +29,7 @@ function flagship_add_styleselect($buttons) {
     return $buttons;
 }
 
-add_filter('mce_buttons_2', 'flagship_disable_styleselect', 99);
+add_filter('mce_buttons_2', 'abraham_disable_styleselect', 99);
 /**
  * Remove styleselect button if it's been added to the second row of TinyMCE
  * buttons.
@@ -40,7 +40,7 @@ add_filter('mce_buttons_2', 'flagship_disable_styleselect', 99);
  *
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_disable_styleselect($buttons) {
+function abraham_disable_styleselect($buttons) {
     if (in_array('styleselect', $buttons)) {
         unset($buttons['styleselect']);
     }
@@ -48,7 +48,7 @@ function flagship_disable_styleselect($buttons) {
     return $buttons;
 }
 
-add_filter('tiny_mce_before_init', 'flagship_tiny_mce_formats', 99);
+add_filter('tiny_mce_before_init', 'abraham_tiny_mce_formats', 99);
 /**
  * Add our custom Flagship styles to the styleselect dropdown button.
  *
@@ -60,75 +60,69 @@ add_filter('tiny_mce_before_init', 'flagship_tiny_mce_formats', 99);
  *
  * @see    http://wordpress.stackexchange.com/a/128950/9844
  */
-function flagship_tiny_mce_formats($args) {
-    $flagship_formats = apply_filters('flagship_tiny_mce_formats',
+function abraham_tiny_mce_formats($args) {
+    $abraham_formats = apply_filters('abraham_tiny_mce_formats',
         array(
             array(
-                'title'   => __('Drop Cap', 'flagship-library'),
+                'title'   => __('Drop Cap', 'abraham'),
                 'inline'  => 'span',
                 'classes' => 'dropcap',
             ),
             array(
-                'title'   => __('Pull Quote Left', 'flagship-library'),
+                'title'   => __('Pull Quote Left', 'abraham'),
                 'block'   => 'blockquote',
                 'classes' => 'pullquote alignleft',
                 'wrapper' => true,
             ),
             array(
-                'title'   => __('Pull Quote Right', 'flagship-library'),
+                'title'   => __('Pull Quote Right', 'abraham'),
                 'block'   => 'blockquote',
                 'classes' => 'pullquote alignright',
                 'wrapper' => true,
             ),
             array(
-                'title'    => __('Intro Paragraph', 'flagship-library'),
+                'title'    => __('Intro Paragraph', 'abraham'),
                 'selector' => 'p',
                 'classes'  => 'intro-paragraph',
                 'wrapper'  => true,
             ),
             array(
-                'title'   => __('Call to Action', 'flagship-library'),
+                'title'   => __('Call to Action', 'abraham'),
                 'block'   => 'div',
                 'classes' => 'call-to-action',
                 'wrapper' => true,
                 'exact'   => true,
             ),
             array(
-                'title'   => __('Feature Box', 'flagship-library'),
+                'title'   => __('Feature Box', 'abraham'),
                 'block'   => 'div',
                 'classes' => 'feature-box',
                 'wrapper' => true,
                 'exact'   => true,
             ),
             array(
-                'title'  => __('Code Block', 'flagship-library'),
+                'title'  => __('Code Block', 'abraham'),
                 'format' => 'pre',
             ),
             array(
-                'title' => __('Buttons', 'flagship-library'),
+                'title' => __('Buttons', 'abraham'),
                 'items' => array(
                     array(
-                        'title'    => __('Standard', 'flagship-library'),
+                        'title'    => __('Standard', 'abraham'),
                         'selector' => 'a',
-                        'classes'  => 'button',
+                        'classes'  => 'btn mdl-button',
                         'exact'    => true,
                     ),
                     array(
-                        'title'    => __('Standard Block', 'flagship-library'),
+                        'title'    => __('Raised Button', 'abraham'),
                         'selector' => 'a',
-                        'classes'  => 'button block',
+                        'classes'  => 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect',
                         'exact'    => true,
                     ),
                     array(
-                        'title'    => __('Call to Action', 'flagship-library'),
+                        'title'    => __('Primary Button Raised', 'abraham'),
                         'selector' => 'a',
-                        'classes'  => 'button secondary cta',
-                        'exact'    => true,
-                    ),
-                    array(
-                        'title'    => __('Call to Action Block', 'flagship-library'),
-                        'selector' => 'a',
-                        'classes'  => 'button secondary cta block',
+                        'classes'  => 'btn mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect',
                         'exact'    => true,
                     ),
                 ),
@@ -138,10 +132,10 @@ function flagship_tiny_mce_formats($args) {
     // Merge with any existing formats which have been added by plugins.
     if (!empty($args['style_formats'])) {
         $existing_formats = json_decode($args['style_formats']);
-        $flagship_formats = array_merge($flagship_formats, $existing_formats);
+        $abraham_formats = array_merge($abraham_formats, $existing_formats);
     }
 
-    $args['style_formats'] = json_encode($flagship_formats);
+    $args['style_formats'] = json_encode($abraham_formats);
 
     return $args;
 }

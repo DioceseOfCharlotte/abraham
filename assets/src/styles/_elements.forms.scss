@@ -152,7 +152,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 
 
 
-input.search-field {
+.white input.search-field {
 	background-color: rgba(255,255,255,0.18);
 	border: 0;
 	font-size: 15px;
@@ -161,7 +161,7 @@ input.search-field {
     height: 40px;
 }
 
-input.search-field:focus {
+.white input.search-field:focus {
 	background-color: rgba(255,255,255,0.24);
 }
 
@@ -174,24 +174,28 @@ article.thursday_packet:first-of-type {
 	width: 100%;
 }
 
-.search-form ::-webkit-input-placeholder {
+.white ::-webkit-input-placeholder {
 	color: rgba(255,255,255,0.5);
+    opacity: 1;
 	font-size: 15px;
 }
 
-.search-form :-moz-placeholder {
+.white ::placeholder {
 /* Firefox 18- */
 	color: rgba(255,255,255,0.5);
+    opacity: 1;
 	font-size: 15px;
 }
 
-.search-form ::-moz-placeholder {
+.white ::-moz-placeholder {
 /* Firefox 19+ */
 	color: rgba(255,255,255,0.5);
+    opacity: 1;
 	font-size: 15px;
 }
 
-.search-form :-ms-input-placeholder {
+.white :-ms-input-placeholder {
 	color: rgba(255,255,255,0.5);
+    opacity: 1;
 	font-size: 15px;
 }

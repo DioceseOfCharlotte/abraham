@@ -13,22 +13,23 @@ add_filter('show_admin_bar', '__return_false');
 add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace_merge_tag', 10, 2 );
 
 
-
+/**
+ * Add templates to hybrid_get_content_template()
+ */
 function template_hierarchy($templates) {
         $post_type = get_post_type();
     if (is_search()) {
         $templates = array_merge(array('content/search.php'), $templates);
-    }
-    if (is_404()) {
+    } if (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
-    }
-    if (is_singular()) {
-        $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
-    } else {
-        $templates = array_merge(array("content/{$post_type}-archive.php"), $templates);
+    } if (is_singular()) {
+        $templates = array_merge(array("content/single-{$post_type}.php"), $templates);
+    } elseif (hybrid_is_plural()) {
+        $templates = array_merge(array("content/archive-{$post_type}.php"), $templates);
     }
     return $templates;
 }
+
 
 /**
  * Tell WordPress to use searchform.php from the components/ directory.
