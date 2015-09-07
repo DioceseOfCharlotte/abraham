@@ -72,7 +72,7 @@ gulp.task('styles', function() {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(minifyCSS())
+		.pipe(minifyCSS({compatibility: '-units.pc,-units.pt'}))
 		.pipe(gulp.dest('./'))
 		.pipe(reload({
 			stream: true

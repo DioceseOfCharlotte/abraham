@@ -689,10 +689,6 @@ input[type="radio"] + label {
     line-height: 40px;
 }
 
-article.thursday_packet:first-of-type {
-    width: 100%;
-}
-
 .white ::-webkit-input-placeholder {
     opacity: 1;
     color: rgba(255, 255, 255, 0.5);
