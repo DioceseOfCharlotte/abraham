@@ -12,3 +12,26 @@ nav ul li {
     display: inline-block;
     padding: 0;
 }
+
+.dropdown .menu-link {
+    display: block;
+    color: rgba(0,0,0, 0.87);
+    background-color: transparent;
+    text-align: left;
+    margin: 0;
+    padding: 0 16px;
+    outline-color: rgb(189,189,189);
+    overflow: hidden;
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    white-space: nowrap;
+    user-select: none;
+    
+    &:hover, &:focus {
+    background-color: rgb(238,238,238);
+    }
+    :active {
+    background-color: rgb(224,224,224);
+    }
+}
