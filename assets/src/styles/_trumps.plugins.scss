@@ -98,23 +98,24 @@ body.custom-background {
   position: absolute;
   top: 100%;
   display: none;
-  visibility: hidden;
-  float: left;
-  min-width: 10em;
+  //visibility: hidden;
+  //float: left;
+  //min-width: 10em;
   margin-top: 0.5em;
   margin-left: 0;
   text-align: left;
-  z-index: 1000;
+  //z-index: 1000;
   background-color: $white;
   border-radius: 2px;
   color: $color-text;
-  transition: 0.2s;
+  //transition: 0.2s;
   box-shadow: none;
-  width: 100%;
-  max-width: 200px;
+  //width: 100%;
+  //max-width: 200px;
 
   li {
       width: 100%;
+      display: block;
       a {
           width: 100%;
       }
@@ -665,4 +666,5 @@ Copyright (c) 2015 Daniel Eden
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }

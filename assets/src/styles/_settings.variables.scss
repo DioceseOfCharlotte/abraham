@@ -17,7 +17,8 @@ $color1-dark:  darken($color-1, 10);
 $color2-dark:  darken($color-2, 10);
 $color3-dark:  darken($color-3, 10);
 
-$color-text: $grey-700;
+$color-text:    $grey-700;
+$text-muted:    rgba($color-text, .5);
 
 $base-font-size: 16px;
 $base-line-height: 1.5;
@@ -100,7 +101,8 @@ $rule-border-width: $border-width;
 $rule-border-color: $border-color;
 
 
-
+$form-element-background-color: transparent !default;
+$form-element-min-height: if(unitless($line-height), #{$line-height}em, if(unit($line-height) != '%', $line-height, null)) !default;
 
 
 

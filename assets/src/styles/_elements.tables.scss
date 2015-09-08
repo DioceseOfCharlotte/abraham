@@ -7,14 +7,25 @@
 
 table {
   border-collapse: separate;
+  //border-collapse: collapse;
   border-spacing: 0;
+  background-color: transparent; // Reset for parents with `background-color`.
   max-width: 100%;
   width: 100%;
+}
+
+caption {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	color: $text-muted;
+	text-align: left;
+	caption-side: bottom;
 }
 
 th {
   text-align: left;
   font-weight: $table-header-font-weight;
+  // vertical-align: bottom;
 }
 
 th,
@@ -22,9 +33,6 @@ td {
   padding: $table-cell-padding-y $table-cell-padding-x;
   line-height: inherit;
 }
-
-th { vertical-align: bottom }
-//td { vertical-align: top }
 
 td>ul {
     list-style: none;

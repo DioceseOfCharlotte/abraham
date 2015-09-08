@@ -79,8 +79,8 @@ class Attr_Trumps {
 
             // SIDEBAR
             'sidebar_primary'         => 'grid__item',
-			'sidebar_footer'          => '',
-            'sidebar_horizontal'      => 'pb2 pb3@md pt3 pt4@md flex flex-wrap flex-justify',
+			'sidebar_footer'          => 'pt3 pt4@md',
+            'sidebar_horizontal'      => 'pb2 pb3@md flex flex-wrap flex-justify',
             'sidebar_right'           => 'u-1/3@md',
             'sidebar_left'            => 'u-1/3@md',
 

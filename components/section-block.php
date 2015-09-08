@@ -60,7 +60,7 @@ global $mehsc_atts;
               <?php
                 $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
                 if ($children) { ?>
-                    <button id="menu-<?php the_ID(); ?>" class="mdl-button mdl-js-button mdl-button--icon">
+                    <button id="menu-<?php the_ID(); ?>" class="btn btn--tiny round mdl-js-button">
                         <i class="material-icons">more_vert</i>
                     </button>
                     <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="menu-<?php the_ID(); ?>">

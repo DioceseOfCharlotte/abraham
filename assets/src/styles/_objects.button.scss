@@ -4,42 +4,32 @@
 .btn,
 .button,
 button {
-  background: transparent;
-  border: none;
-  border-radius: $button-border-radius;
-  font-family: inherit;
-  @include font-size(15px);
-  color: inherit;
-  height: $button-height;
-  //min-width: $button-min-width;
-  padding: 0 $button-padding;
-  display: inline-block;
-  overflow: hidden;
-  will-change: box-shadow, transform;
-  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
-              background-color 0.2s $animation-curve-default,
-              color 0.2s $animation-curve-default;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  line-height: $button-height;
-  vertical-align: middle;
+    display: inline-block;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent;
+    color: inherit;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: .0625rem solid transparent;
+    border-radius: $border-radius;
+    outline: 0;
 
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  &:hover {
-    background-color: $lighten-2;
-    text-decoration: none;
-  }
-
-  &:focus:not(:active) {
-    background-color: $lighten-3;
+  &:hover,
+  &:focus {
+      background-color: $darken-2;
+      transition: background-color .3s;
   }
 
   &:active, &.active {
-    background-color: $darken-3;
+      background-color: $darken-3;
+      transition: background-color .3s;
   }
 
   &.button--colored {
@@ -49,4 +39,12 @@ button {
       background-color: $button-focus-color-alt;
     }
   }
+}
+
+.btn--small {
+    padding: .5rem;
+}
+
+.btn--tiny {
+    padding: .25rem;
 }

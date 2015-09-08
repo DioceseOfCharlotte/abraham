@@ -4,11 +4,11 @@
 
     <?php tha_entry_before(); ?>
 
-    <article <?php hybrid_attr('post'); ?>>
-
-        <?php tha_entry_top(); ?>
-
         <?php if (is_singular(get_post_type())) : ?>
+
+            <article <?php hybrid_attr('post'); ?>>
+
+                <?php tha_entry_top(); ?>
 
             <div <?php hybrid_attr('entry-content'); ?>>
                 <?php tha_entry_content_before(); ?>
@@ -27,12 +27,12 @@
 
         <?php else : // If not viewing a single post. ?>
 
+<article class="br mb2 bg-1 white mx2 shadow2 mb3@md py2 py3@md flex-auto u-1/4@md">
+
+    <?php tha_entry_top(); ?>
+
             <header <?php hybrid_attr('entry-header'); ?>>
-                <?php
-    get_the_image(array(
-        'size' => 'abraham-lg',
-    ));
-?>
+
                 <h2 <?php hybrid_attr('entry-title'); ?>>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
@@ -43,7 +43,13 @@
                 <?php the_excerpt(); ?>
                 <?php tha_entry_content_after(); ?>
             </div>
-
+            <?php
+            hybrid_post_terms(array(
+                'taxonomy' => 'sc_event_category',
+                'before'     => '<span class="btn white color-inherit">',
+        		'after'      => '</span>',
+            ));
+            ?>
     	<?php endif; // End check for posts. ?>
 
     <?php tha_entry_bottom(); ?>

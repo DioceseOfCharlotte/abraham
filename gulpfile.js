@@ -53,7 +53,7 @@ gulp.task('hybrid', function() {
 	return gulp.src([
 			'vendor/justintadlock/hybrid-core/**/*'
 		])
-		.pipe(gulp.dest('inc/hybrid-core'));
+		.pipe(gulp.dest('lib/hybrid-core'));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -149,9 +149,9 @@ gulp.task('serve', ['styles'], function() {
 		//proxy: "local.wordpress-trunk.dev"
 		//proxy: "june.dev"
     //proxy: "july.dev"
-		//proxy: "stmark.dev"
-      proxy: "school1.dev"
-			//proxy: "127.0.0.1:8080/wordpress/"
+		proxy: "stmark.dev"
+    //proxy: "school1.dev"
+		//proxy: "127.0.0.1:8080/wordpress/"
 	});
 
 	gulp.watch(['assets/src/styles/**/*.{scss,css}'], ['styles', reload]);

@@ -4,6 +4,7 @@ body {
     font-family: $font-family;
     line-height: $line-height;
     font-size: $body-font-size;
+    color: inherit;
 }
 
 h1,
@@ -15,23 +16,25 @@ h6 {
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
-    margin-top: $heading-margin-top;
-    margin-bottom: $heading-margin-bottom;
+    margin-bottom: $space-1;
 }
 
 p {
-    margin-top: $paragraph-margin-top;
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: $space-2;
 }
 
-dl,
-ol,
-ul {
-    margin-top: $list-margin-top;
-    margin-bottom: $list-margin-bottom;
+address {
+	margin-bottom: $space-2;
+	font-style: normal;
+	line-height: inherit;
+}
+
+blockquote {
+	margin-bottom: $space-2;
 }
 
 pre,
+kbd,
 code,
 samp {
     font-family: $monospace-font-family;
@@ -39,9 +42,36 @@ samp {
 }
 
 pre {
-    margin-top: $pre-margin-top;
-    margin-bottom: $pre-margin-bottom;
-    overflow-x: scroll;
+    margin-bottom: $space-2;
+    //overflow-x: scroll;
+    overflow: auto; // Internet Explorer 11-
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%; // All browsers
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
 }
 
 h1 {
@@ -66,4 +96,14 @@ h5 {
 
 h6 {
     font-size: $h6;
+}
+
+p:empty {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+}
+
+p:last-child {
+        margin-bottom: 0;
 }

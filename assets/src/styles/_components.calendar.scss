@@ -27,21 +27,23 @@
 #sc_calendar td {
 	width: 13.25%;
 	border: 1px solid #ddd;
-	font-size: 11px;
+	font-size: 13px;
 	padding: 0!important;
 }
 
-#sc_calendar td.calendar-day {
+.calendar-day {
 	background: #fbfbfb;
 	height: 90px;
 }
 
-#sc_calendar td.calendar-day-np {
+.calendar-day-np {
 	background: #f0f0f0;
 }
 
-#sc_calendar td div.sc_day_div {
+.sc_day_div {
 	padding: 8px;
+	height: 100%;
+	position: static;
 }
 
 #sc_events_calendar_head {
@@ -50,10 +52,10 @@
 	border: 1px solid #ddd;
 	border-bottom: none;
 
-.sc_calendar_submit {
-	margin-bottom: 1px;
-	padding: 0 10px;
-}
+// .sc_calendar_submit {
+// 	margin-bottom: 1px;
+// 	padding: 0 10px;
+// }
 }
 
 #sc_event_select, #sc_event_nav_wrap, #sc_events_calendar_head h2 {
@@ -115,16 +117,52 @@
 	text-align: left;
 }
 
-#sc_calendar td div.day-number {
-	float: right;
-	margin: -6px -4px 0 0;
+.day-number {
+	position: absolute;
+	top: 0;
+	right: 0;
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin: 5px;
 }
 
-.sc_small #sc_calendar td div.day-number {
+.sc_small .day-number {
 	float: none;
 	text-align: right;
 	padding: 0;
 	margin: -3px 1px 0 0;
+}
+
+.today {
+    font-weight: bold;
+	.day-number {
+		font-size: 1.1rem;
+	}
+}
+
+.holiday {
+
+	.day-number {
+		color: white;
+		background-color: $color-1;
+		font-weight: bold;
+	}
+}
+
+.dinner {
+
+	.day-number {
+		color: white;
+		background-color: $color2-dark;
+		font-weight: bold;
+	}
 }
 
 .sc_event_details {
