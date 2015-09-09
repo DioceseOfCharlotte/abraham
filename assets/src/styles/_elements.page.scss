@@ -81,6 +81,10 @@ a {
     word-wrap: break-word;
 }
 
+a:not(.btn), span {
+    vertical-align: initial;
+}
+
 figure {
 	margin-bottom: $space-2;
 }

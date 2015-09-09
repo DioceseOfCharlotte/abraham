@@ -83,6 +83,7 @@
 #sc_events_calendar_head select {
 	font-size: 15px;
 	padding: 0.15rem 0.5rem;
+	width: auto;
 }
 
 #sc_events_calendar_head input {
@@ -142,28 +143,13 @@
 
 .today {
     font-weight: bold;
+	background-color: white;
 	.day-number {
 		font-size: 1.1rem;
 	}
 }
 
-.holiday {
 
-	.day-number {
-		color: white;
-		background-color: $color-1;
-		font-weight: bold;
-	}
-}
-
-.dinner {
-
-	.day-number {
-		color: white;
-		background-color: $color2-dark;
-		font-weight: bold;
-	}
-}
 
 .sc_event_details {
 	margin: 0 0 15px;

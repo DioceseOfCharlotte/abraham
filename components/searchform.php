@@ -1,4 +1,4 @@
-<form role="search" method="get" class="search-form inline-block" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="mx-auto search-form inline-block" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <label class="container mb0">
         <span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'abraham' ); ?></span>
         <i class="white search-icon left-0 material-icons absolute">&#xE8B6;</i>

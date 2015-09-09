@@ -275,6 +275,11 @@ a {
     word-wrap: break-word;
 }
 
+a:not(.btn),
+span {
+    vertical-align: initial;
+}
+
 figure {
     margin-bottom: 1rem;
 }
@@ -538,13 +543,14 @@ input[type=week],
 select,
 textarea,
 .container .gform_wrapper .chosen-container-multi .chosen-choices {
+    width: 100%; 
     padding: 0.375rem 0.75rem;
-    border: 0.0625rem solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 2px;
     color: #55595c;
     background-color: #fff;
     background-image: none;
-    box-shadow: none; 
+    box-shadow: none;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -3060,7 +3066,8 @@ input[type="submit"] {
 }
 
 #sc_events_calendar_head select {
-    padding: 0.15rem 0.5rem; 
+    width: auto; 
+    padding: 0.15rem 0.5rem;
     font-size: 15px;
 }
 
@@ -3123,22 +3130,11 @@ input[type="submit"] {
 }
 
 .today {
+    background-color: white; 
     font-weight: bold;
 }
 .today .day-number {
     font-size: 1.1rem;
-}
-
-.holiday .day-number {
-    color: white;
-    background-color: #004899;
-    font-weight: bold;
-}
-
-.dinner .day-number {
-    color: white;
-    background-color: #ffca3d;
-    font-weight: bold;
 }
 
 .sc_event_details {
@@ -3755,7 +3751,7 @@ nav ul li {
 
 .currentcolor,
 .currentcolor a {
-    color: currentColor;
+    color: currentColor !important;
 }
 
 /* Basscss Background Colors */

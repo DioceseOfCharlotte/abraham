@@ -137,9 +137,10 @@ textarea,
     color: #55595c;
     background-color: #fff;
     background-image: none;
-    border: .0625rem solid #ccc;
+    border: 1px solid #ccc;
     border-radius: $border-radius;
     box-shadow: none;
+	width: 100%;
 
     &:focus {
       border-color: #66afe9;
