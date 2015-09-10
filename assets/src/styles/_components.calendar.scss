@@ -42,8 +42,6 @@
 
 .sc_day_div {
 	padding: 8px;
-	height: 100%;
-	position: static;
 }
 
 #sc_events_calendar_head {
@@ -51,11 +49,6 @@
 	background: #f0f0f0;
 	border: 1px solid #ddd;
 	border-bottom: none;
-
-// .sc_calendar_submit {
-// 	margin-bottom: 1px;
-// 	padding: 0 10px;
-// }
 }
 
 #sc_event_select, #sc_event_nav_wrap, #sc_events_calendar_head h2 {
@@ -119,19 +112,8 @@
 }
 
 .day-number {
-	position: absolute;
-	top: 0;
-	right: 0;
-	position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 25px;
-    margin: 5px;
+	float: right;
+	margin: -6px -4px 0 0;
 }
 
 .sc_small .day-number {
@@ -141,7 +123,7 @@
 	margin: -3px 1px 0 0;
 }
 
-.today {
+#sc_calendar td.calendar-day.today {
     font-weight: bold;
 	background-color: white;
 	.day-number {

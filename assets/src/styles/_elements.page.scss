@@ -34,7 +34,6 @@ body {
 * {
 	margin: 0; // remove margin of all elements
 	padding: 0; // remove padding of all elements
-	vertical-align: middle;
 	flex-shrink: 1;
 	flex-grow: 0;
 	flex-basis: auto;
@@ -45,12 +44,12 @@ body {
 *::before,
 *::after {
 	box-sizing: inherit;
+	vertical-align: middle;
 }
 
 ::before,
 ::after {
 	text-decoration: inherit;
-	vertical-align: inherit;
 }
 
 // Make viewport responsive

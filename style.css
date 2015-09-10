@@ -220,7 +220,6 @@ body {
     position: relative; 
     margin: 0;
     padding: 0;
-    vertical-align: middle;
 
     -webkit-box-flex: 0;
     -webkit-flex-basis: auto;
@@ -238,11 +237,11 @@ body {
 *::before,
 *::after {
     box-sizing: inherit;
+    vertical-align: middle;
 }
 
 ::before,
 ::after {
-    vertical-align: inherit; 
     text-decoration: inherit;
 }
 
@@ -3029,8 +3028,6 @@ input[type="submit"] {
 }
 
 .sc_day_div {
-    position: static; 
-    height: 100%;
     padding: 8px;
 }
 
@@ -3107,19 +3104,8 @@ input[type="submit"] {
 }
 
 .day-number {
-    position: absolute;
-    position: absolute;
-    top: 0;
-    top: 0;
-    right: 0;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    margin: 5px; 
-    border-radius: 50%;
-    background-color: white;
-    line-height: 25px;
-    text-align: center;
+    float: right;
+    margin: -6px -4px 0 0;
 }
 
 .sc_small .day-number {
@@ -3129,11 +3115,11 @@ input[type="submit"] {
     text-align: right;
 }
 
-.today {
+#sc_calendar td.calendar-day.today {
     background-color: white; 
     font-weight: bold;
 }
-.today .day-number {
+#sc_calendar td.calendar-day.today .day-number {
     font-size: 1.1rem;
 }
 

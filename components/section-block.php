@@ -58,7 +58,7 @@ global $mehsc_atts;
                 </a>
                 <div class="mdl-layout-spacer flex-grow"></div>
               <?php
-                $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
+                $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0&depth=1');
                 if ($children) { ?>
                     <button id="menu-<?php the_ID(); ?>" class="btn btn--tiny round mdl-js-button">
                         <i class="material-icons">more_vert</i>
