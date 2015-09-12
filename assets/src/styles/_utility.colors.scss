@@ -1,33 +1,33 @@
 /* #COLORS
 \*------------------------------------*/
 
-.color-1 { color: $color-1 }
-.color-2 { color: $color-2 }
-.color-3 { color: $color-3 }
+.color-1 { color: $color-1!important; }
+.color-2 { color: $color-2!important; }
+.color-3 { color: $color-3!important; }
 
-.bg-1 { background-color: $color-1 }
-.bg-2 { background-color: $color-2 }
-.bg-3 { background-color: $color-3 }
-.bg-1--light { background-color: lighten($color-1, 10); }
-.bg-2--light { background-color: lighten($color-2, 10); }
-.bg-3--light { background-color: lighten($color-3, 10); }
-.bg-1--dark { background-color: darken($color-1, 10); }
-.bg-2--dark { background-color: darken($color-2, 10); }
-.bg-3--dark { background-color: darken($color-3, 10); }
+.bg-1 { background-color: $color-1!important; }
+.bg-2 { background-color: $color-2!important; }
+.bg-3 { background-color: $color-3!important; }
+.bg-1--light { background-color: lighten($color-1, 10)!important; }
+.bg-2--light { background-color: lighten($color-2, 10)!important; }
+.bg-3--light { background-color: lighten($color-3, 10)!important; }
+.bg-1--dark { background-color: darken($color-1, 10)!important; }
+.bg-2--dark { background-color: darken($color-2, 10)!important; }
+.bg-3--dark { background-color: darken($color-3, 10)!important; }
 
-.fill-1 { fill: $color-1 }
-.fill-2 { fill: $color-2 }
-.fill-3 { fill: $color-3 }
+.fill-1 { fill: $color-1!important; }
+.fill-2 { fill: $color-2!important; }
+.fill-3 { fill: $color-3!important; }
 
-.black  { color: $black }
-.gray   { color: $gray }
-.silver { color: $silver }
-.white  { color: $white }
+.black  { color: $black!important; }
+.gray   { color: $gray!important; }
+.silver { color: $silver!important; }
+.white  { color: $white!important; }
 
-.muted { opacity: $opacity; }
+.muted { opacity: $opacity!important; }
 
 .color-inherit * {
-    color: inherit;
+    color: inherit!important;
 }
 
 .currentcolor,
@@ -37,10 +37,10 @@
 
 /* Basscss Background Colors */
 
-.bg-black  { background-color: $black }
-.bg-gray   { background-color: $gray }
-.bg-silver { background-color: $silver }
-.bg-white  { background-color: $white }
+.bg-black  { background-color: $black!important; }
+.bg-gray   { background-color: $gray!important; }
+.bg-silver { background-color: $silver!important; }
+.bg-white  { background-color: $white!important; }
 .bg-transparent  { background-color: transparent!important; }
 
 .bg-lighten-1 { background-color: $lighten-1!important; }

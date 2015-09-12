@@ -11,7 +11,7 @@ tha_header_before(); ?>
 
         <?php tha_header_top(); ?>
 
-        <div class="header-wrap container--wide px2 flex flex-column@sm flex-justify flex-center">
+        <div <?php hybrid_attr('container', 'header'); ?>>
 
             <div <?php hybrid_attr('branding'); ?>>
 
