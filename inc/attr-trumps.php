@@ -288,12 +288,6 @@ class Attr_Trumps {
 
         $attr['class']      .= " {$this->args['sidebar_primary']}";
         }
-
-        if ('primary' !== $context) {
-        $attr['class']      .= ' sidebar-horizontal';
-
-        $attr['class']      .= " {$this->args['sidebar_horizontal']}";
-        }
 		if ('footer' === $context) {
 		$attr['class']      .= " {$this->args['sidebar_footer']}";
         }
