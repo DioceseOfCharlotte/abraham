@@ -17,11 +17,11 @@
 
         <?php tha_body_top(); ?>
 
+        <div <?php hybrid_attr('container', 'layout'); ?>>
+
         <?php get_header(); ?>
 
         <?php get_template_part('components/page', 'header'); ?>
-
-        <div <?php hybrid_attr('container', 'content'); ?>>
 
             <div <?php hybrid_attr('row', 'layout'); ?>>
 
@@ -43,9 +43,9 @@
 
             </div><!-- /.row -->
 
-        </div><!-- /.content -->
-
         <?php get_footer(); ?>
+
+        </div><!-- /.content -->
 
         <?php tha_body_bottom(); ?>
 

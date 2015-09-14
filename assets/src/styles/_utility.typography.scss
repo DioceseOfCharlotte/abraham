@@ -63,11 +63,11 @@
 
 .u-list-reset {
     list-style: none;
-    padding-left: 0;
-    ul,
-    li {
+    > ul,
+    > li {
         list-style: none;
         padding-left: 0;
+        margin-left: 0;
     }
 
 }

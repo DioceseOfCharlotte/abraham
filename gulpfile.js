@@ -18,13 +18,13 @@ var gulp = require('gulp'),
 	reload = browserSync.reload,
 	autoprefixer = require('gulp-autoprefixer'),
 	browsers = [
-		'ie >= 8',
+		'ie >= 9',
 		'ie_mob >= 10',
 		'ff >= 30',
-		'chrome >= 34',
+		'chrome >= 42',
 		'safari >= 7',
-		'opera >= 23',
-		'ios >= 6',
+		'opera >= 30',
+		'ios >= 7.1',
 		'android >= 4.3',
 		'bb >= 10'
 	];
@@ -147,10 +147,9 @@ gulp.task('serve', ['styles'], function() {
 	browserSync.init({
 		//proxy: "local.wordpress.dev"
 		//proxy: "local.wordpress-trunk.dev"
-		//proxy: "june.dev"
-    //proxy: "july.dev"
-		proxy: "stmark.dev"
+		//proxy: "stmark.dev"
     //proxy: "school1.dev"
+		proxy: "doc.dev"
 		//proxy: "127.0.0.1:8080/wordpress/"
 	});
 
