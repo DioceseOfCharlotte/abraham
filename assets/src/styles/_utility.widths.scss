@@ -9,6 +9,10 @@
 
 $ib-whitespace: .24em;
 
+.u-max-width {
+    max-width: $container-width;
+}
+
 .u-width-auto {
     width: auto;
 }
@@ -54,7 +58,7 @@ $ib-whitespace: .24em;
 }
 
 @include md {
-    .u-1\/1\@md {
+.u-1\/1\@md {
         width: 100%;
     }
 

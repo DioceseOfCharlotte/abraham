@@ -1,26 +1,7 @@
 /* #TYPOGRAPHY
 \*------------------------------------*/
-body {
-    font-family: $font-family;
-    line-height: $line-height;
-    font-size: $body-font-size;
-    color: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
-    line-height: $heading-line-height;
-    margin-bottom: $space-1;
-}
-
 p {
-    margin-bottom: $space-2;
+	margin-bottom: $space-2;
 }
 
 address {
@@ -29,22 +10,19 @@ address {
 	line-height: inherit;
 }
 
-blockquote {
-	margin-bottom: $space-2;
-}
-
 pre,
 kbd,
 code,
 samp {
-    font-family: $monospace-font-family;
-    font-size: $pre-font-size;
+	font-family: $monospace-font-family;
+	font-size: $pre-font-size;
 }
 
 pre {
-    margin-bottom: $space-2;
-    //overflow-x: scroll;
-    overflow: auto; // Internet Explorer 11-
+	margin-bottom: $space-2;
+
+	//overflow-x: scroll;
+	overflow: auto; // Internet Explorer 11-
 }
 
 b,
@@ -74,36 +52,12 @@ sub {
 	bottom: -0.25em;
 }
 
-h1 {
-    font-size: $h1;
-}
-
-h2 {
-    font-size: $h2;
-}
-
-h3 {
-    font-size: $h3;
-}
-
-h4 {
-    font-size: $h4;
-}
-
-h5 {
-    font-size: $h5;
-}
-
-h6 {
-    font-size: $h6;
-}
-
 p:empty {
-        margin: 0;
-        padding: 0;
-        line-height: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
 }
 
 p:last-child {
-        margin-bottom: 0;
+	margin-bottom: 0;
 }

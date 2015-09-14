@@ -13,54 +13,34 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 
 
-
-@import 'color-definitions';
-@import 'variables';
-@import 'mixins';
-
 @import "settings.colors";
-@import 'settings.variables';
+@import 'settings.defaults';
 @import "settings.responsive";
 
-//@import 'vendor.sanitize';
+//@import "tools.aliases";
+@import "tools.mixins";
+
+
 @import 'elements.page';
-@import 'elements.lists';
-@import 'elements.forms';
-@import 'elements.tables';
+@import 'elements.headings';
 @import 'elements.typography';
 @import 'elements.links';
+@import 'elements.lists';
+@import 'elements.tables';
+@import 'elements.quotes';
+@import 'elements.forms';
+@import 'elements.images';
 
-// @import "mdl/ripple";
-// @import "mdl/animation";
-// @import "mdl/button";
-//@import "mdl/card";
-// @import "mdl/menu";
-// @import "mdl/tooltip";
-// @import "mdl/shadow";
-
-// $tab-border-color: $color1-dark;
-// $tab-highlight-color: $color-2;
-// $tab-text-color: $white;
-// $tab-active-text-color: $white;
-// @import "mdl/tabs";
-
-@import 'objects.button';
-@import 'objects.grid';
-@import 'objects.widths';
-
-@import 'components.button';
-@import "components.breadcrumbs";
-@import 'components.calendar';
-@import 'components.nav';
-
-@import 'utility.typography';
-@import 'utility.spacing';
 @import 'utility.colors';
-@import 'utility.borders';
-@import 'utility.images';
-@import 'utility.tables';
-@import 'utility.layout-states';
 @import 'utility.flex';
+@import 'utility.headings';
+@import 'utility.images';
+@import 'utility.layout-states';
+@import 'utility.links';
+@import 'utility.spacing';
+@import 'utility.tables';
+@import 'utility.typography';
+@import 'utility.widths';
+@import 'utility.borders';
 
 @import "trumps.helpers";
-@import "trumps.plugins";

@@ -1,13 +1,13 @@
 /* #COLOR TABLES
 \*------------------------------------*/
 
-.table-light th,
-.table-light td {
+.u-table-light th,
+.u-table-light td {
   border-bottom-width: $border-width;
   border-bottom-style: solid;
   border-bottom-color: $border-color;
 }
 
-.table-light tr:last-child td {
+.u-table-light tr:last-child td {
   border-bottom: 0;
 }

@@ -1,13 +1,12 @@
 ///* #RESET
 //\*------------------------------------*/
 
-:root {
-    box-sizing: border-box;
+ :root {
+	box-sizing: border-box;
 	width: 100%; // Make html take up the entire width of screen
 	height: 100%; // Make html take up the entire height of screen
 	cursor: default;
-
-    -ms-overflow-style: -ms-autohiding-scrollbar; // Edge, Internet Explorer 11+
+	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge, Internet Explorer 11+
 	overflow-y: scroll; // All browsers without overlaying scrollbars
 	-webkit-text-size-adjust: 100%; // iOS 8+
 	-ms-text-size-adjust: 100%;
@@ -20,15 +19,19 @@ html {
 	background-color: white;
 	color: $color-text;
 
-    @include sm {
-        font-size: 14px;
-        line-height: 1.7;
-    }
+	@include sm {
+		font-size: 14px;
+		line-height: 1.7;
+	}
 }
 
 body {
-    width: 100%; // Make html take up the entire width of screen
+	width: 100%; // Make html take up the entire width of screen
 	min-height: 100%; // Make html take up the entire height of screen
+	font-family: $font-family;
+	line-height: $line-height;
+	font-size: $body-font-size;
+	color: inherit;
 }
 
 * {
@@ -37,7 +40,7 @@ body {
 	flex-shrink: 1;
 	flex-grow: 0;
 	flex-basis: auto;
-    position: relative;
+	position: relative;
 }
 
 *,
@@ -47,7 +50,7 @@ body {
 	vertical-align: middle;
 }
 
-::before,
+ ::before,
 ::after {
 	text-decoration: inherit;
 }
@@ -55,6 +58,7 @@ body {
 // Make viewport responsive
 //
 // See http://getbootstrap.com/getting-started/#support-ie10-width.
+
 @-moz-viewport {
 	width: device-width;
 }
@@ -77,11 +81,12 @@ abbr[title] {
 }
 
 a {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
-a:not(.btn), span {
-    vertical-align: initial;
+a:not(.btn),
+span {
+	vertical-align: initial;
 }
 
 figure {
@@ -91,18 +96,19 @@ figure {
 // iOS "clickable elements" fix for role="button"
 // for traditionally non-focusable elements with role="button"
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
 [role="button"] {
 	cursor: pointer;
 }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+	padding: 0;
+	border: 0;
 }
 
 // specify the background color and drop shadow of text selections
-::selection {
+ ::selection {
 	background-color: #b3d4fc; // required when declaring ::selection
 	text-shadow: none;
 }
@@ -149,42 +155,28 @@ template {
 	clip: rect(0 0 0 0);
 	display: inherit;
 	position: absolute;
+
 	&:focus {
 		clip: auto;
 	}
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 /* Embedded content
    ========================================================================== */
-
-svg:not(:root) {
-	overflow: hidden; // Correct overflow not hidden in IE 9/10/11.
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border: 0; // Remove border when inside `a` element in IE 8/9/10.
-}
-
-svg {
-    max-height: 100%;
-}
-
 canvas {
-    -ms-touch-action: double-tap-zoom;
+	-ms-touch-action: double-tap-zoom;
 }
 
 iframe[src*="google.com/maps"] {
-    max-width: 100%;
-    width: 100%;
+	max-width: 100%;
+	width: 100%;
 }

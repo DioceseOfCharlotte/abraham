@@ -1,17 +1,13 @@
 /* #TABLES
 \*------------------------------------*/
-
-  // $table-header-font-weight: $bold-font-weight;
-  // $table-cell-padding-x: $space-2;
-  // $table-cell-padding-y: .25rem;
-
 table {
-  border-collapse: separate;
-  //border-collapse: collapse;
-  border-spacing: 0;
-  background-color: transparent; // Reset for parents with `background-color`.
-  max-width: 100%;
-  width: 100%;
+	border-collapse: separate;
+
+	//border-collapse: collapse;
+	border-spacing: 0;
+	background-color: transparent; // Reset for parents with `background-color`.
+	max-width: 100%;
+	width: 100%;
 }
 
 caption {
@@ -23,17 +19,18 @@ caption {
 }
 
 th {
-  text-align: left;
-  font-weight: $table-header-font-weight;
-  // vertical-align: bottom;
+	text-align: left;
+
+	//font-weight: $table-header-font-weight;
+	// vertical-align: bottom;
 }
 
 th,
 td {
-  padding: $table-cell-padding-y $table-cell-padding-x;
-  line-height: inherit;
+	padding: 75rem;
+	line-height: inherit;
 }
 
 td>ul {
-    list-style: none;
+	list-style: none;
 }
