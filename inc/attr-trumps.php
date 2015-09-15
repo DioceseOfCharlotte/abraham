@@ -75,7 +75,9 @@ class Attr_Trumps {
             'entry_terms'             => '',
 
             // NAVIGATION
+            'menu_all'                => '',
             'menu_primary'            => '',
+            'menu_secondary'          => '',
 
             // SIDEBAR
             'sidebar_primary'         => '',
@@ -315,6 +317,7 @@ class Attr_Trumps {
         if (empty($context)) {
         return $attr;
         }
+        $attr['class']      .= " {$this->args['menu_all']}";
 
         if ('primary' === $context) {
         $attr['class']      .= " {$this->args['menu_primary']}";

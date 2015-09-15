@@ -23,6 +23,8 @@
 
         <?php get_template_part('components/page', 'header'); ?>
 
+        <div <?php hybrid_attr('container', 'content'); ?>>
+
             <div <?php hybrid_attr('row', 'layout'); ?>>
 
                 <?php tha_content_before(); ?>
@@ -42,6 +44,8 @@
                 <?php hybrid_get_sidebar('primary'); ?>
 
             </div><!-- /.row -->
+
+        </div><!-- /.container__content -->
 
         <?php get_footer(); ?>
 
