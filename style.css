@@ -419,7 +419,6 @@ label {
 }
 
 input,
-button,
 select,
 textarea {
     line-height: inherit;
@@ -452,7 +451,6 @@ input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-button,
 input,
 select,
 textarea {
@@ -463,7 +461,6 @@ textarea {
     font-style: inherit;
 }
 
-button,
 [type="button"],
 [type="date"],
 [type="datetime"],
