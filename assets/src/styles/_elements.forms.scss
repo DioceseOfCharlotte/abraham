@@ -6,7 +6,6 @@ label {
 }
 
 input,
-button,
 select,
 textarea {
 	line-height: inherit;
@@ -41,7 +40,6 @@ input[type=search]::-webkit-search-decoration {
 
 
 // specify the inherited color and font of form elements
-button,
 input,
 select,
 textarea {
@@ -54,7 +52,6 @@ textarea {
 
 
 // specify the minimum height of form elements
-button,
 [type="button"],
 [type="date"],
 [type="datetime"],
