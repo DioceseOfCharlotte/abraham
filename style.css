@@ -12,13 +12,11 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/m-e-h/abraham
 */
 :root {
-    overflow-y: scroll;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     cursor: default;
 
-    -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-tap-highlight-color: transparent; 
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -101,7 +99,8 @@ a {
 }
 
 a:not(.btn),
-span {
+span,
+i {
     vertical-align: initial;
 }
 
@@ -1253,6 +1252,14 @@ svg:not(:root) {
 .u-mxn4 {
     margin-right: -4rem !important; 
     margin-left: -4rem !important;
+}
+
+.u-ml-auto {
+    margin-left: auto !important;
+}
+
+.u-mr-auto {
+    margin-right: auto !important;
 }
 
 .u-mx-auto {

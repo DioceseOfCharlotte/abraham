@@ -6,8 +6,8 @@
 	width: 100%; // Make html take up the entire width of screen
 	height: 100%; // Make html take up the entire height of screen
 	cursor: default;
-	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge, Internet Explorer 11+
-	overflow-y: scroll; // All browsers without overlaying scrollbars
+	//-ms-overflow-style: -ms-autohiding-scrollbar; // Edge, Internet Explorer 11+
+	//overflow-y: scroll; // All browsers without overlaying scrollbars
 	-webkit-text-size-adjust: 100%; // iOS 8+
 	-ms-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); // Tap highlight transparent iOS
@@ -85,7 +85,8 @@ a {
 }
 
 a:not(.btn),
-span {
+span,
+i {
 	vertical-align: initial;
 }
 

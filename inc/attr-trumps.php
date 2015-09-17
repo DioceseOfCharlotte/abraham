@@ -32,6 +32,7 @@ class Attr_Trumps {
         $defaults = array(
             'body'                    => '',
             'site_container'          => '',
+            'content_container'       => '',
             'container'               => '',
             'container_header'        => '',
             'container_wide'          => '',
@@ -188,6 +189,9 @@ class Attr_Trumps {
         $attr['class']      .= " {$this->args['container_header']}";
         }
 		if ('content' === $context) {
+        $attr['class']      .= " {$this->args['content_container']}";
+        }
+        if ('site' === $context) {
         $attr['class']      .= " {$this->args['site_container']}";
         }
         return $attr;
