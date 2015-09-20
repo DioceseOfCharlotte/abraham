@@ -1,6 +1,11 @@
 /* #COLORS
 \*------------------*/
 
+.u-color-inherit * { color: inherit!important; }
+
+.u-currentcolor,
+.u-currentcolor a { color: currentColor!important; }
+
 .u-text-1 { color: $color-1!important; }
 .u-text-2 { color: $color-2!important; }
 .u-text-3 { color: $color-3!important; }
@@ -26,11 +31,6 @@
 
 .u-text-muted { color: $text-muted!important; }
 
-.u-color-inherit * { color: inherit!important; }
-
-.u-currentcolor,
-.u-currentcolor a { color: currentColor!important; }
-
 /* Basscss Background Colors */
 
 .u-bg-black  { background-color: $black!important; }
@@ -48,3 +48,5 @@
 .u-bg-tint-2 { background-color: $darken-2!important; }
 .u-bg-tint-3 { background-color: $darken-3!important; }
 .u-bg-tint-4 { background-color: $darken-4!important; }
+
+.u-opacity { opacity: $opacity; }

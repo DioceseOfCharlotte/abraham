@@ -53,24 +53,14 @@ function abraham_assets() {
         '//fonts.googleapis.com/icon?family=Material+Icons'
     );
 
-    if (is_child_theme()) {
-        wp_enqueue_style(
-            'parent',
-            trailingslashit(get_template_directory_uri())."style{$suffix}.css"
-        );
-    }
-        wp_enqueue_style(
-            'style',
-            get_stylesheet_uri()
-        );
+    // Load parent theme stylesheet if child theme is active.
+    if ( is_child_theme() )
+    	wp_enqueue_style( 'hybrid-parent' );
+
+    // Load active theme stylesheet.
+    wp_enqueue_style( 'hybrid-style' );
 
     // Scripts
-    wp_enqueue_script(
-        'material_js',
-        '//storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js',
-        false, false, true
-    );
-
     wp_enqueue_script(
         'abraham_js',
         trailingslashit(get_template_directory_uri())."assets/js/main{$suffix}.js",

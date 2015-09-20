@@ -108,6 +108,11 @@ figure {
     margin-bottom: 1rem;
 }
 
+button {
+    border: transparent;
+    background-color: transparent;
+}
+
 [role="button"] {
     cursor: pointer;
 }
@@ -600,16 +605,25 @@ svg:not(:root) {
 
 /* #COLORS
 \*------------------*/
+.u-color-inherit * {
+    color: inherit !important;
+}
+
+.u-currentcolor,
+.u-currentcolor a {
+    color: currentColor !important;
+}
+
 .u-text-1 {
     color: #004899 !important;
 }
 
 .u-text-2 {
-    color: #ffd870 !important;
+    color: #3d9970 !important;
 }
 
 .u-text-3 {
-    color: #3d9970 !important;
+    color: #ffd870 !important;
 }
 
 .u-bg-1 {
@@ -617,11 +631,11 @@ svg:not(:root) {
 }
 
 .u-bg-2 {
-    background-color: #ffd870 !important;
+    background-color: #3d9970 !important;
 }
 
 .u-bg-3 {
-    background-color: #3d9970 !important;
+    background-color: #ffd870 !important;
 }
 
 .u-bg-light-1 {
@@ -629,11 +643,11 @@ svg:not(:root) {
 }
 
 .u-bg-light-2 {
-    background-color: #ffe6a3 !important;
+    background-color: #50b98a !important;
 }
 
 .u-bg-light-3 {
-    background-color: #50b98a !important;
+    background-color: #ffe6a3 !important;
 }
 
 .u-bg-dark-1 {
@@ -641,11 +655,11 @@ svg:not(:root) {
 }
 
 .u-bg-dark-2 {
-    background-color: #ffca3d !important;
+    background-color: #2e7555 !important;
 }
 
 .u-bg-dark-3 {
-    background-color: #2e7555 !important;
+    background-color: #ffca3d !important;
 }
 
 .u-fill-1 {
@@ -653,11 +667,11 @@ svg:not(:root) {
 }
 
 .u-fill-2 {
-    fill: #ffd870 !important;
+    fill: #3d9970 !important;
 }
 
 .u-fill-3 {
-    fill: #3d9970 !important;
+    fill: #ffd870 !important;
 }
 
 .u-text-black {
@@ -678,15 +692,6 @@ svg:not(:root) {
 
 .u-text-muted {
     color: rgba(77, 77, 77, 0.5) !important;
-}
-
-.u-color-inherit * {
-    color: inherit !important;
-}
-
-.u-currentcolor,
-.u-currentcolor a {
-    color: currentColor !important;
 }
 
 /* Basscss Background Colors */
@@ -742,10 +747,17 @@ svg:not(:root) {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+.u-opacity {
+    opacity: 0.7;
+}
+
 /* #u-flex OBJECT
 \*------------------------------------*/
 .u-flex {
-    display: u-flex !important;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
 }
 
 .u-flex-rev {
@@ -1037,7 +1049,7 @@ svg:not(:root) {
 }
 
 .u-relative {
-    position: relative;
+    position: relative !important;
 }
 
 .u-absolute {
@@ -1045,11 +1057,11 @@ svg:not(:root) {
 }
 
 .u-fixed {
-    position: fixed;
+    position: fixed !important;
 }
 
 .u-static {
-    position: static;
+    position: static !important;
 }
 
 .u-top {
@@ -1094,6 +1106,21 @@ svg:not(:root) {
 
 .u-fit {
     max-width: 100%;
+}
+
+@media screen and (min-width: 52em) {
+    .u-relative\@md {
+        position: relative !important;
+    }
+    .u-absolute\@md {
+        position: absolute !important;
+    }
+    .u-fixed\@md {
+        position: fixed !important;
+    }
+    .u-static\@md {
+        position: static !important;
+    }
 }
 
 .u-link-bare {
@@ -1508,7 +1535,11 @@ svg:not(:root) {
 }
 
 .u-lh-1 {
-    line-height: 1;
+    line-height: 1 !important;
+}
+
+.u-lh-2 {
+    line-height: 2 !important;
 }
 
 .u-bold {

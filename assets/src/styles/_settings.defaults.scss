@@ -27,8 +27,8 @@ $base-spacing-unit--huge: round($base-spacing-unit * 4);
 
 // Theme Colors
 $color-1: #004899;
-$color-2: #ffd870;
-$color-3: $olive;
+$color-2: $olive;
+$color-3: #ffd870;
 $color1-light: lighten($color-1, 10);
 $color2-light: lighten($color-2, 10);
 $color3-light: lighten($color-3, 10);
