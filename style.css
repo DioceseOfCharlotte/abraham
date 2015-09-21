@@ -108,11 +108,6 @@ figure {
     margin-bottom: 1rem;
 }
 
-button {
-    border: transparent;
-    background-color: transparent;
-}
-
 [role="button"] {
     cursor: pointer;
 }
@@ -321,6 +316,49 @@ h4 > a,
 h5 > a,
 h6 > a {
     color: inherit;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    border: transparent;
+    border-radius: 3px;
+    outline: none;
+    color: inherit;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1; 
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+    text-decoration: none;
+}
+button:focus,
+button:active,
+button.active,
+input[type="button"]:focus,
+input[type="button"]:active,
+input[type="button"].active,
+input[type="reset"]:focus,
+input[type="reset"]:active,
+input[type="reset"].active,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+input[type="submit"].active {
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* #LISTS
