@@ -125,3 +125,12 @@
     .u-pt4\@md { padding-top:   $space-4 }
     .u-pb4\@md { padding-bottom: $space-4 }
 }
+
+.u-strip-space {
+    margin: 0;
+    padding: 0;
+    > * {
+        margin: 0;
+        padding: 0;
+    }
+}

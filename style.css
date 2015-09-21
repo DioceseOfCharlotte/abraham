@@ -1551,6 +1551,15 @@ svg:not(:root) {
     }
 }
 
+.u-strip-space {
+    margin: 0;
+    padding: 0;
+}
+.u-strip-space > * {
+    margin: 0;
+    padding: 0;
+}
+
 /* #COLOR TABLES
 \*------------------------------------*/
 .u-table-light th,
