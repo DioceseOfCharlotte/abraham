@@ -7,7 +7,7 @@ add_filter('get_search_form', __NAMESPACE__.'\\get_search_form');
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
-add_filter( 'page_css_class', __NAMESPACE__.'\\doc_page_css_class', 10, 2 );
+//add_filter( 'page_css_class', __NAMESPACE__.'\\doc_page_css_class', 10, 2 );
 add_filter('show_admin_bar', '__return_false');
 
 add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace_merge_tag', 10, 2 );

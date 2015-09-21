@@ -18,10 +18,10 @@
 .u-overflow-scroll { overflow: scroll }
 .u-overflow-auto   { overflow: auto }
 
-.u-relative { position: relative }
+.u-relative { position: relative!important; }
 .u-absolute { position: absolute!important; }
-.u-fixed    { position: fixed }
-.u-static   { position: static }
+.u-fixed    { position: fixed!important; }
+.u-static   { position: static!important; }
 
 .u-top    { top: 0 }
 .u-right  { right: 0 }
@@ -37,3 +37,11 @@
 .u-right { float: right }
 
 .u-fit { max-width: 100% }
+
+
+@include md {
+    .u-relative\@md { position: relative!important; }
+    .u-absolute\@md { position: absolute!important; }
+    .u-fixed\@md    { position: fixed!important; }
+    .u-static\@md   { position: static!important; }
+}
