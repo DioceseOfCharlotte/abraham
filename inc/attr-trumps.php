@@ -32,6 +32,7 @@ class Attr_Trumps {
         $defaults = array(
             'body'                    => '',
             'site_container'          => '',
+            'site_container_loggedin' => '',
             'content_container'       => '',
             'container'               => '',
             'container_header'        => '',
@@ -191,8 +192,11 @@ class Attr_Trumps {
 		if ('content' === $context) {
         $attr['class']      .= " {$this->args['content_container']}";
         }
-        if ('site' === $context) {
+        if ('site' === $context && !is_user_logged_in()) {
         $attr['class']      .= " {$this->args['site_container']}";
+        }
+        if ('site' === $context && is_user_logged_in()) {
+        $attr['class']      .= " {$this->args['site_container_loggedin']}";
         }
         return $attr;
     }
