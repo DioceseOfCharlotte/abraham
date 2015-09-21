@@ -1084,6 +1084,10 @@ svg:not(:root) {
     overflow: auto;
 }
 
+.u-nowrap {
+    white-space: nowrap;
+}
+
 .u-relative {
     position: relative !important;
 }
