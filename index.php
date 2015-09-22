@@ -1,39 +1,27 @@
 <?php
 get_header(); ?>
 
-    <div <?php hybrid_attr('container', 'site'); ?>>
+    <?php get_template_part('components/page', 'header'); ?>
 
-        <?php get_template_part('components/site', 'header'); ?>
+    <div <?php hybrid_attr('row', 'layout'); ?>>
 
-        <div <?php hybrid_attr('container', 'content'); ?>>
+        <?php tha_content_before(); ?>
 
-            <?php get_template_part('components/page', 'header'); ?>
+        <main <?php hybrid_attr('content'); ?>>
 
-            <div <?php hybrid_attr('row', 'layout'); ?>>
+            <?php tha_content_top(); ?>
 
-                <?php tha_content_before(); ?>
+            <?php hybrid_get_content_template(); ?>
 
-                <main <?php hybrid_attr('content'); ?>>
+            <?php tha_content_bottom(); ?>
 
-                    <?php tha_content_top(); ?>
+        </main><!-- /.main -->
 
-                    <?php hybrid_get_content_template(); ?>
+        <?php tha_content_after(); ?>
 
-                    <?php tha_content_bottom(); ?>
+        <?php hybrid_get_sidebar('primary'); ?>
 
-                </main><!-- /.main -->
-
-                <?php tha_content_after(); ?>
-
-                <?php hybrid_get_sidebar('primary'); ?>
-
-            </div><!-- /.row -->
-
-            <?php get_template_part('components/site', 'footer'); ?>
-
-        </div><!-- /.content -->
-
-    </div><!-- /.layout -->
+    </div><!-- /.layout-row -->
 
 <?php
 get_footer();

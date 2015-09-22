@@ -14,5 +14,35 @@
 
 <body <?php hybrid_attr('body'); ?>>
 
-<?php
-tha_body_top();
+    <?php tha_body_top(); ?>
+
+    <div <?php hybrid_attr('container', 'site'); ?>>
+
+        <?php tha_header_before(); ?>
+
+        <header <?php hybrid_attr('header'); ?>>
+
+            <div <?php hybrid_attr('branding'); ?>>
+
+                <?php tha_header_top(); ?>
+
+                <?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
+                    <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <?php get_template_part( 'images/svg', 'logo' ); ?>
+                    </a>
+                <?php } ?>
+                <?php hybrid_site_title(); ?>
+                <?php hybrid_site_description(); ?>
+
+                <?php tha_header_bottom(); ?>
+
+            </div>
+
+
+            <?php hybrid_get_menu('primary'); ?>
+
+        </header>
+
+        <?php tha_header_after(); ?>
+
+            <div <?php hybrid_attr('container', 'content'); ?>>
