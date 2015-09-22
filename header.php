@@ -16,7 +16,7 @@
 
     <?php tha_body_top(); ?>
 
-    <div <?php hybrid_attr('container', 'site'); ?>>
+    <div <?php hybrid_attr('site_container'); ?>>
 
         <?php tha_header_before(); ?>
 
@@ -45,4 +45,4 @@
 
         <?php tha_header_after(); ?>
 
-            <div <?php hybrid_attr('container', 'content'); ?>>
+            <div <?php hybrid_attr('layout_container'); ?>>

@@ -3,7 +3,7 @@ get_header(); ?>
 
     <?php get_template_part('components/page', 'header'); ?>
 
-    <div <?php hybrid_attr('row', 'layout'); ?>>
+    <div <?php hybrid_attr('layout'); ?>>
 
         <?php tha_content_before(); ?>
 
@@ -21,7 +21,7 @@ get_header(); ?>
 
         <?php hybrid_get_sidebar('primary'); ?>
 
-    </div><!-- /.layout-row -->
+    </div><!-- /.layout -->
 
 <?php
 get_footer();

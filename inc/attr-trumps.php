@@ -30,17 +30,15 @@ class Attr_Trumps {
     public function __construct($args = array()) {
 
         $defaults = array(
-            'body'                    => '',
-            'site_container'          => '',
-            'site_container_loggedin' => '',
-            'content_container'       => '',
-            'container'               => '',
-            'container_header'        => '',
-            'container_wide'          => '',
-            'row'                     => '',
-            'row_layout'              => '',
-            'row_layout_sidebar_l'    => '',
-            'row_layout_sidebar_r'    => '',
+            'body'                      => '',
+            'site_container'            => '',
+            'site_container_loggedin'   => '',
+            'layout_container'          => '',
+            'layout_container_wide'     => '',
+            'layout'                    => '',
+            'layout_wide'               => '',
+            'layout_sidebar_l'          => '',
+            'layout_sidebar_r'          => '',
 
             // SITE HEADER
             'header'                  => '',
@@ -115,8 +113,9 @@ class Attr_Trumps {
 
         // CONTAINERS
         add_filter('hybrid_attr_body',                  array($this, 'body'));
-        add_filter('hybrid_attr_container',             array($this, 'container'), 10, 2);
-        add_filter('hybrid_attr_row',                   array($this, 'row'), 10, 2);
+        add_filter('hybrid_attr_site_container',        array($this, 'site_container'));
+        add_filter('hybrid_attr_layout_container',      array($this, 'layout_container'));
+        add_filter('hybrid_attr_layout',                array($this, 'layout'));
 
         // SITE HEADER
         add_filter('hybrid_attr_header',                array($this, 'header'));
@@ -167,59 +166,63 @@ class Attr_Trumps {
     }
 
 
-
+public function abe_layout() {
+    return hybrid_get_theme_layout('theme_layout');
+}
 
     /* === OBJECTS === */
 
     public function body($attr) {
+        if (!$this->args['body']) {
+            return $attr;
+        }
         $attr['class']      .= " {$this->args['body']}";
+
         return $attr;
     }
 
-    public function container($attr, $context) {
-        if (empty($context)) {
+    public function site_container($attr) {
+        if (!$this->args['site_container']) {
             return $attr;
         }
-        $attr['class']      = $this->args['container'];
-        $attr['class']      .= " container--{$context}";
 
-        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout') && 'content' === $context) {
-        $attr['class']      .= " {$this->args['container_wide']}";
-        }
-        if ('header' === $context) {
-        $attr['class']      .= " {$this->args['container_header']}";
-        }
-		if ('content' === $context) {
-        $attr['class']      .= " {$this->args['content_container']}";
-        }
-        if ('site' === $context && !is_user_logged_in()) {
-        $attr['class']      .= " {$this->args['site_container']}";
-        }
-        if ('site' === $context && is_user_logged_in()) {
-        $attr['class']      .= " {$this->args['site_container_loggedin']}";
-        }
+        if (is_user_logged_in()) :
+            $attr['class']      = $this->args['site_container_loggedin'];
+        else :
+            $attr['class']   = $this->args['site_container'];
+        endif;
+
         return $attr;
     }
 
-    public function row($attr, $context) {
-        if (empty($context)) {
+    public function layout_container($attr) {
+        if (!$this->args['layout_container']) {
             return $attr;
         }
-        $attr['class']      = $this->args['row'];
-        $attr['class']      .= " row row--{$context}";
 
-        if ('layout' === $context) {
+        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']   = $this->args['layout_container_wide'];
+        else :
+            $attr['class']   = $this->args['layout_container'];
+        endif;
+
+        return $attr;
+    }
+
+    public function layout($attr) {
+        if (!$this->args['layout']) {
+            return $attr;
+        }
 
         if ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['row_layout_sidebar_r']}";
-
-        elseif ('sidebar-left'     ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['row_layout_sidebar_l']}";
-
-        else : $attr['class']      .= " {$this->args['row_layout']}";
-
+            $attr['class']      = $this->args['layout_sidebar_r'];
+        elseif ('sidebar-left'  ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['layout_sidebar_l'];
+        elseif ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['layout_wide'];
+        else :
+            $attr['class']      = $this->args['layout'];
         endif;
-        }
 
         return $attr;
     }
@@ -236,39 +239,51 @@ class Attr_Trumps {
     }
 
     public function comments_area($attr) {
-        if ($this->args['comments_area']) {
+        if (!$this->args['comments_area']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['comments_area'];
-    }
+
         return $attr;
     }
 
     public function header($attr) {
-        if ($this->args['header']) {
+        if (!$this->args['header']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['header'];
-    }
+
         return $attr;
     }
 
     public function footer($attr) {
-        if ($this->args['footer']) {
+        if (!$this->args['footer']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['footer'];
-    }
-    return $attr;
+
+        return $attr;
     }
 
     public function content($attr) {
+        if (!$this->args['content']) {
+            return $attr;
+        }
 
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      = $this->args['content'];
+            $attr['class']      = $this->args['content'];
 
         elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      = $this->args['content'];
+            $attr['class']      = $this->args['content'];
 
         elseif ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      = $this->args['content_with_sidebar'];
+            $attr['class']      = $this->args['content_with_sidebar'];
 
         elseif ('sidebar-left'     ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      = $this->args['content_with_sidebar'];
+            $attr['class']      = $this->args['content_with_sidebar'];
         endif;
 
         if (hybrid_is_plural()) {
@@ -282,24 +297,23 @@ class Attr_Trumps {
         if (empty($context)) {
             return $attr;
         }
+
         if ('primary' === $context) {
 
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['sidebar_horizontal']}";
+            $attr['class']      = $this->args['sidebar_horizontal'];
         elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['sidebar_horizontal']}";
-
+            $attr['class']      = $this->args['sidebar_horizontal'];
         elseif ('sidebar-right' ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['sidebar_right']}";
+            $attr['class']      = $this->args['sidebar_right'];
         elseif ('sidebar-left' ==  hybrid_get_theme_layout('theme_layout')) :
-        $attr['class']      .= " {$this->args['sidebar_left']}";
+            $attr['class']      = $this->args['sidebar_left'];
         endif;
+            $attr['class']      .= " {$this->args['sidebar_primary']}";
 
-
-        $attr['class']      .= " {$this->args['sidebar_primary']}";
         }
 		if ('footer' === $context) {
-		$attr['class']      .= " {$this->args['sidebar_footer']}";
+		          $attr['class']      = $this->args['sidebar_footer'];
         }
         return $attr;
     }
@@ -309,14 +323,15 @@ class Attr_Trumps {
             return $attr;
         }
         if ($this->args['widgets']) {
-        $attr['class']      = $this->args['widgets'];
+            $attr['class']      = $this->args['widgets'];
 
 		if ('footer' === $context) {
-		$attr['class']      .= " {$this->args['footer_widgets']}";
+            $attr['class']      .= " {$this->args['footer_widgets']}";
 		}
 		if ('primary' === $context) {
-		$attr['class']      .= " {$this->args['primary_widgets']}";
+            $attr['class']      .= " {$this->args['primary_widgets']}";
 		}
+
         return $attr;
     }
     }
@@ -325,6 +340,7 @@ class Attr_Trumps {
         if (empty($context)) {
         return $attr;
         }
+
         $attr['class']      .= " {$this->args['menu_all']}";
 
         if ('primary' === $context) {
@@ -342,46 +358,62 @@ class Attr_Trumps {
         if (!$this->args['branding']) {
         return $attr;
         }
+
         $attr['class']      = $this->args['branding'];
-    return $attr;
+
+        return $attr;
     }
 
 
     public function site_title($attr) {
-        if ($this->args['site_title']) {
-        $attr['class']      = " {$this->args['site_title']}";
+        if (!$this->args['site_title']) {
+            return $attr;
+        }
+
+        $attr['class']      = $this->args['site_title'];
+
         return $attr;
-    }
     }
 
     public function site_description($attr) {
-        if ($this->args['site_description']) {
+        if (!$this->args['site_description']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['site_description'];
+
         return $attr;
-    }
     }
 
     /* === LOOP === */
 
     public function page_header($attr) {
-        $attr['class']      = 'page-header';
-        if ($this->args['page_header']) {
-        $attr['class']      .= " {$this->args['page_header']}";
-    }
+        if (!$this->args['page_header']) {
+            return $attr;
+        }
+
+        $attr['class']      = $this->args['page_header'];
+
         return $attr;
     }
 
     public function page_title($attr) {
-    if ($this->args['page_title']) {
+        if (!$this->args['page_title']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['page_title'];
-    }
+
         return $attr;
     }
 
     public function archive_description($attr) {
-    if ($this->args['archive_description']) {
+        if (!$this->args['archive_description']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['archive_description'];
-    }
+
         return $attr;
     }
 
@@ -389,73 +421,105 @@ class Attr_Trumps {
 
     public function post($attr) {
         $attr['class']      .= " {$this->args['post']}";
-	if (hybrid_is_plural()) {
-		$attr['class']      .= " {$this->args['post_archive']}";
-	}
+    	if (hybrid_is_plural()) {
+    		$attr['class']      .= " {$this->args['post_archive']}";
+    	}
         return $attr;
     }
 
     public function entry_title($attr) {
-    if ($this->args['entry_title']) {
+        if (!$this->args['entry_title']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['entry_title'];
-    }
+
         return $attr;
     }
 
     public function entry_author($attr) {
-    if ($this->args['entry_author']) {
+        if (!$this->args['entry_author']) {
+            return $attr;
+        }
+
         $attr['class']      = $this->args['entry_author'];
-    }
+
         return $attr;
     }
 
 
     public function entry_published($attr) {
+        if (!$this->args['entry_published']) {
+            return $attr;
+        }
 
-        $attr['class']      .= " {$this->args['entry_published']}";
+        $attr['class']      = $this->args['entry_published'];
+
         return $attr;
     }
 
     public function entry_header($attr) {
-        $attr['class']      = "entry-header";
+        if (!$this->args['entry_header']) {
+            return $attr;
+        }
 
-        $attr['class']      .= " {$this->args['entry_header']}";
+        $attr['class']      = $this->args['entry_header'];
+
         return $attr;
     }
 
     public function entry_content($attr) {
-    if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) {
-        $attr['class']      .= " {$this->args['entry_content_wide']}";
-    } else {
-        $attr['class']      .= " {$this->args['entry_content']}";
-    }
+        if (!$this->args['entry_content']) {
+            return $attr;
+        }
+
+        if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['entry_content_wide'];
+        else :
+            $attr['class']      = $this->args['entry_content'];
+        endif;
+
         return $attr;
     }
 
     public function entry_summary($attr) {
+        if (!$this->args['entry_summary']) {
+            return $attr;
+        }
 
-        $attr['class']      .= " {$this->args['entry_summary']}";
+        $attr['class']      = $this->args['entry_summary'];
+
         return $attr;
     }
 
     public function entry_footer($attr) {
-        $attr['class']      = "entry-footer";
+        if (!$this->args['entry_footer']) {
+            return $attr;
+        }
 
-        $attr['class']      .= " {$this->args['entry_footer']}";
+        $attr['class']      = $this->args['entry_footer'];
         return $attr;
     }
 
     public function entry_terms($attr) {
+        if (!$this->args['entry_terms']) {
+            return $attr;
+        }
 
-        $attr['class']      .= " {$this->args['entry_terms']}";
+        $attr['class']      = $this->args['entry_terms'];
+
         return $attr;
     }
 
 
 
     public function menu_item($attr, $item){
+        if (!$this->args['content']) {
+            return $attr;
+        }
 
         $attr[] .= $this->args['menu_item'];
+
         return $attr;
     }
 
@@ -465,30 +529,38 @@ class Attr_Trumps {
     }
 
     public function nav_menu_filters($text){
-      $replace = array(
-        //List of menu item classes that should be changed to "active"
-        'current_page_item' => $this->args['current_page_item'],
-        'current_page_parent' => $this->args['current_page_parent'],
-        'current_page_ancestor' => $this->args['current_page_ancestor'],
-        'current-menu-item' => $this->args['current-menu-item'],
-        'menu-item-has-children' => $this->args['menu-item-has-children'],
-        'sub-menu' => $this->args['sub-menu'],
-      );
-      $text = str_replace(array_keys($replace), $replace, $text);
-        return $text;
-      }
+        $replace = array(
+            //List of menu item classes that should be changed to "active"
+            'current_page_item' => $this->args['current_page_item'],
+            'current_page_parent' => $this->args['current_page_parent'],
+            'current_page_ancestor' => $this->args['current_page_ancestor'],
+            'current-menu-item' => $this->args['current-menu-item'],
+            'menu-item-has-children' => $this->args['menu-item-has-children'],
+            'sub-menu' => $this->args['sub-menu'],
+        );
+        $text = str_replace(array_keys($replace), $replace, $text);
+            return $text;
+        }
 
-      public function gv_container($attr) {
+        public function gv_container($attr) {
+            if (!$this->args['gv_container']) {
+                return $attr;
+            }
 
-          $attr     .= " {$this->args['gv_container']}";
-          return $attr;
-      }
+            $attr     .= " {$this->args['gv_container']}";
 
-      public function gv_entry($attr, $entry, $instance) {
+            return $attr;
+        }
 
-          $attr     .= " {$this->args['gv_entry']}";
-          return $attr;
-      }
+        public function gv_entry($attr, $entry, $instance) {
+            if (!$this->args['gv_entry']) {
+                return $attr;
+            }
+
+            $attr     .= " {$this->args['gv_entry']}";
+
+            return $attr;
+        }
 
 }
 
