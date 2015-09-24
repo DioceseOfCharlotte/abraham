@@ -1107,19 +1107,19 @@ svg:not(:root) {
 }
 
 .u-overflow-hidden {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .u-overflow-visible {
-    overflow: visible;
+    overflow: visible !important;
 }
 
 .u-overflow-scroll {
-    overflow: scroll;
+    overflow: scroll !important;
 }
 
 .u-overflow-auto {
-    overflow: auto;
+    overflow: auto !important;
 }
 
 .u-nowrap {

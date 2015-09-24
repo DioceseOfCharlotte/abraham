@@ -13,10 +13,10 @@
 .u-align-middle   { vertical-align: middle }
 .u-align-bottom   { vertical-align: bottom }
 
-.u-overflow-hidden { overflow: hidden }
-.u-overflow-visible { overflow: visible }
-.u-overflow-scroll { overflow: scroll }
-.u-overflow-auto   { overflow: auto }
+.u-overflow-hidden { overflow: hidden!important; }
+.u-overflow-visible { overflow: visible!important; }
+.u-overflow-scroll { overflow: scroll!important; }
+.u-overflow-auto   { overflow: auto!important; }
 
 .u-nowrap { white-space: nowrap; }
 
