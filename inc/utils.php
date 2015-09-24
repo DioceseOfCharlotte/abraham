@@ -23,9 +23,10 @@ function template_hierarchy($templates) {
     } if (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     } if (is_singular()) {
-        $templates = array_merge(array("content/single-{$post_type}.php"), $templates);
+        $templates = array_merge(array("content/content-single.php"), $templates);
+        $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
     } elseif (hybrid_is_plural()) {
-        $templates = array_merge(array("content/archive-{$post_type}.php"), $templates);
+        $templates = array_merge(array("content/{$post_type}-archive.php"), $templates);
     }
     return $templates;
 }

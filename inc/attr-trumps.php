@@ -420,10 +420,12 @@ public function abe_layout() {
     /* === POSTS === */
 
     public function post($attr) {
-        $attr['class']      .= " {$this->args['post']}";
-    	if (hybrid_is_plural()) {
-    		$attr['class']      .= " {$this->args['post_archive']}";
-    	}
+
+    	if (is_singular()) :
+    		$attr['class']      .= " {$this->args['post']}";
+        else :
+            $attr['class']      .= " {$this->args['post_archive']}";
+        endif;
         return $attr;
     }
 

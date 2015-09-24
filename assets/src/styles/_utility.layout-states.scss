@@ -30,10 +30,11 @@
 .u-bottom { bottom: 0 }
 .u-left   { left: 0 }
 
-.u-z1 { z-index: 1 }
-.u-z2 { z-index: 2 }
-.u-z3 { z-index: 3 }
-.u-z4 { z-index: 4 }
+.u-z0 { z-index: 0!important; }
+.u-z1 { z-index: 1!important; }
+.u-z2 { z-index: 2!important; }
+.u-z3 { z-index: 3!important; }
+.u-z4 { z-index: 4!important; }
 
 .u-left  { float: left }
 .u-right { float: right }

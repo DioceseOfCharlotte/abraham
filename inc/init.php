@@ -45,7 +45,7 @@ function abraham_setup() {
 
     add_theme_support('soil-clean-up');
 
-    add_theme_support('soil-disable-asset-versioning');
+    //add_theme_support('soil-disable-asset-versioning');
 
     add_theme_support('soil-disable-trackbacks');
 
@@ -74,9 +74,9 @@ function abraham_widgets() {
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
 		'before_title'  => '<h3 class="h2 widget-title m0">',
-		'after_title'   => '</h3><div class="widget-body mt2">',
-		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="widget-checkbox" type="checkbox" checked>',
-		'after_widget'  => '</div></section>',
+		'after_title'   => '</h3>',
+		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
+		'after_widget'  => '</section>',
 	));
 }
 add_action('widgets_init', 'abraham_widgets', 5);

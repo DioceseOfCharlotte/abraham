@@ -1158,20 +1158,24 @@ svg:not(:root) {
     left: 0;
 }
 
+.u-z0 {
+    z-index: 0 !important;
+}
+
 .u-z1 {
-    z-index: 1;
+    z-index: 1 !important;
 }
 
 .u-z2 {
-    z-index: 2;
+    z-index: 2 !important;
 }
 
 .u-z3 {
-    z-index: 3;
+    z-index: 3 !important;
 }
 
 .u-z4 {
-    z-index: 4;
+    z-index: 4 !important;
 }
 
 .u-left {
@@ -1365,6 +1369,14 @@ svg:not(:root) {
 
 .u-mr-auto {
     margin-right: auto !important;
+}
+
+.u-mt-auto {
+    margin-top: auto !important;
+}
+
+.u-mb-auto {
+    margin-bottom: auto !important;
 }
 
 .u-mx-auto {
