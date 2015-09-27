@@ -45,4 +45,4 @@
 
         <?php tha_header_after(); ?>
 
-            <div <?php hybrid_attr('layout_container'); ?>>
+            <div <?php hybrid_attr('layout'); ?>>

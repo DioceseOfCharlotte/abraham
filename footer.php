@@ -4,9 +4,7 @@
 
             <?php tha_footer_top(); ?>
 
-            <div <?php hybrid_attr('container', 'footer'); ?>>
-                <?php hybrid_get_sidebar('footer'); ?>
-            </div>
+            <?php hybrid_get_sidebar('footer'); ?>
 
             <p class="credit mdl-mega-footer--bottom-section">
                 <?php printf(__('&#169; %1$s %2$s', 'abraham'), date_i18n('Y'), hybrid_get_site_link()); ?>
@@ -18,7 +16,7 @@
 
         <?php tha_footer_after(); ?>
 
-    </div><!-- /.content-container -->
+    </div><!-- /.layout -->
 
 </div><!-- /.site-container -->
 

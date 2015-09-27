@@ -33,12 +33,12 @@ class Attr_Trumps {
             'body'                      => '',
             'site_container'            => '',
             'site_container_loggedin'   => '',
-            'layout_container'          => '',
-            'layout_container_wide'     => '',
             'layout'                    => '',
             'layout_wide'               => '',
-            'layout_sidebar_l'          => '',
-            'layout_sidebar_r'          => '',
+            'grid'                      => '',
+            'grid_1-wide'               => '',
+            'grid_2c-r'                 => '',
+            'grid_2c-l'                 => '',
 
             // SITE HEADER
             'header'                  => '',
@@ -53,6 +53,7 @@ class Attr_Trumps {
             // ENTRY
             'post'                    => '',
 			'post_archive'            => '',
+            'post_featured'           => '',
 
             'page_header'             => '',
 
@@ -114,8 +115,8 @@ class Attr_Trumps {
         // CONTAINERS
         add_filter('hybrid_attr_body',                  array($this, 'body'));
         add_filter('hybrid_attr_site_container',        array($this, 'site_container'));
-        add_filter('hybrid_attr_layout_container',      array($this, 'layout_container'));
-        add_filter('hybrid_attr_layout',                array($this, 'layout'));
+        add_filter('hybrid_attr_layout',        array($this, 'layout'));
+        add_filter('hybrid_attr_grid',                  array($this, 'grid'));
 
         // SITE HEADER
         add_filter('hybrid_attr_header',                array($this, 'header'));
@@ -195,33 +196,33 @@ public function abe_layout() {
         return $attr;
     }
 
-    public function layout_container($attr) {
-        if (!$this->args['layout_container']) {
-            return $attr;
-        }
-
-        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']   = $this->args['layout_container_wide'];
-        else :
-            $attr['class']   = $this->args['layout_container'];
-        endif;
-
-        return $attr;
-    }
-
     public function layout($attr) {
         if (!$this->args['layout']) {
             return $attr;
         }
 
-        if ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['layout_sidebar_r'];
-        elseif ('sidebar-left'  ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['layout_sidebar_l'];
-        elseif ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['layout_wide'];
+        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']   = $this->args['layout_wide'];
         else :
-            $attr['class']      = $this->args['layout'];
+            $attr['class']   = $this->args['layout'];
+        endif;
+
+        return $attr;
+    }
+
+    public function grid($attr) {
+        if (!$this->args['grid']) {
+            return $attr;
+        }
+
+        if ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['grid_2c-l'];
+        elseif ('sidebar-left'  ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['grid_2c-r'];
+        elseif ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
+            $attr['class']      = $this->args['grid_1-wide'];
+        else :
+            $attr['class']      = $this->args['grid'];
         endif;
 
         return $attr;
@@ -420,12 +421,18 @@ public function abe_layout() {
     /* === POSTS === */
 
     public function post($attr) {
+        global $post;
+        $featured_post = get_post_meta( $post->ID, '_featured', true );
 
     	if (is_singular()) :
     		$attr['class']      .= " {$this->args['post']}";
         else :
             $attr['class']      .= " {$this->args['post_archive']}";
         endif;
+
+        if ('yes' === $featured_post) {
+            $attr['class']      .= " {$this->args['post_featured']}";
+        }
         return $attr;
     }
 

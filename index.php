@@ -3,7 +3,7 @@ get_header(); ?>
 
     <?php get_template_part('components/page', 'header'); ?>
 
-    <div <?php hybrid_attr('layout'); ?>>
+    <div <?php hybrid_attr('grid'); ?>>
 
         <?php tha_content_before(); ?>
 
@@ -15,13 +15,13 @@ get_header(); ?>
 
             <?php tha_content_bottom(); ?>
 
-        </main><!-- /.main -->
+        </main><!-- /.content -->
 
         <?php tha_content_after(); ?>
 
         <?php hybrid_get_sidebar('primary'); ?>
 
-    </div><!-- /.layout -->
+    </div><!-- /.grid -->
 
 <?php
 get_footer();
