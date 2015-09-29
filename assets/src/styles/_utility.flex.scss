@@ -48,6 +48,18 @@
 	justify-content: flex-end!important;
 }
 
+.u-flexed-start {
+	align-self: flex-start!important;
+}
+
+.u-flexed-end {
+	align-self: flex-end!important;
+}
+
+.u-flexed-center {
+	align-self: center!important;
+}
+
 .u-flexed-auto {
 	flex: 1 1 auto!important;
 }
