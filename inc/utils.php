@@ -18,16 +18,17 @@ add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace
  */
 function template_hierarchy($templates) {
         $post_type = get_post_type();
+        $post_slug = get_the_slug();
     if (is_search()) {
         $templates = array_merge(array('content/search.php'), $templates);
-    } if (is_404()) {
+    } elseif (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
-    } if (is_singular()) {
+    } elseif (is_singular()) {
         $templates = array_merge(array("content/content-single.php"), $templates);
         $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
-    } elseif (hybrid_is_plural()) {
-        $templates = array_merge(array("content/{$post_type}-archive.php"), $templates);
+        $templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
     }
+
     return $templates;
 }
 
@@ -106,4 +107,17 @@ function doc_page_css_class( $css_class, $page ) {
 		$css_class[] = 'is-protected muted';
 
 	return $css_class;
+}
+
+
+function get_the_slug( $id=null ){
+    if( empty($id) ):
+        global $post;
+    if( empty($post) )
+        return ''; // No global $post var available.
+        $id = $post->ID;
+    endif;
+
+    $slug = basename( get_permalink($id) );
+    return $slug;
 }

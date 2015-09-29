@@ -7,7 +7,7 @@
 //  *
 //  */
 
-$ib-whitespace: .24em;
+$gutter: 16px;
 
 .u-max-width {
     max-width: $container-wide;
@@ -22,39 +22,39 @@ $ib-whitespace: .24em;
 }
 
 .u-1\/2 {
-    width: calc(1/2 * 100% - #{$ib-whitespace})!important;
+    width: calc(1/2 * 100% - #{$gutter})!important;
 }
 
 .u-1\/3 {
-    width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+    width: calc(1/3 * 100% - #{$gutter})!important;
 }
 
 .u-2\/3 {
-    width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+    width: calc(2/3 * 100% - #{$gutter})!important;
 }
 
 .u-1\/4 {
-    width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+    width: calc(1/4 * 100% - #{$gutter})!important;
 }
 
 .u-3\/4 {
-    width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+    width: calc(3/4 * 100% - #{$gutter})!important;
 }
 
 .u-1\/5 {
-    width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+    width: calc(1/5 * 100% - #{$gutter})!important;
 }
 
 .u-2\/5 {
-    width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+    width: calc(2/5 * 100% - #{$gutter})!important;
 }
 
 .u-3\/5 {
-    width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+    width: calc(3/5 * 100% - #{$gutter})!important;
 }
 
 .u-4\/5 {
-    width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+    width: calc(4/5 * 100% - #{$gutter})!important;
 }
 
 @include md {
@@ -63,39 +63,39 @@ $ib-whitespace: .24em;
     }
 
 .u-1\/2\@md {
-        width: calc(50% - .24em)!important;
+        width: calc(50% - #{$gutter})!important;
     }
 
 .u-1\/3\@md {
-        width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/3 * 100% - #{$gutter})!important;
     }
 
 .u-2\/3\@md {
-        width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+        width: calc(2/3 * 100% - #{$gutter})!important;
     }
 
 .u-1\/4\@md {
-        width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/4 * 100% - #{$gutter})!important;
     }
 
 .u-3\/4\@md {
-        width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+        width: calc(3/4 * 100% - #{$gutter})!important;
     }
 
 .u-1\/5\@md {
-        width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/5 * 100% - #{$gutter})!important;
     }
 
 .u-2\/5\@md {
-        width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(2/5 * 100% - #{$gutter})!important;
     }
 
 .u-3\/5\@md {
-        width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(3/5 * 100% - #{$gutter})!important;
     }
 
 .u-4\/5\@md {
-        width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(4/5 * 100% - #{$gutter})!important;
     }
 
     .u-width-auto\@md {
@@ -109,39 +109,39 @@ $ib-whitespace: .24em;
     }
 
 .u-1\/2\@lg {
-        width: calc(50% - .24em)!important;
+        width: calc(50% - #{$gutter})!important;
     }
 
 .u-1\/3\@lg {
-        width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/3 * 100% - #{$gutter})!important;
     }
 
 .u-2\/3\@lg {
-        width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+        width: calc(2/3 * 100% - #{$gutter})!important;
     }
 
 .u-1\/4\@lg {
-        width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/4 * 100% - #{$gutter})!important;
     }
 
 .u-3\/4\@lg {
-        width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+        width: calc(3/4 * 100% - #{$gutter})!important;
     }
 
 .u-1\/5\@lg {
-        width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(1/5 * 100% - #{$gutter})!important;
     }
 
 .u-2\/5\@lg {
-        width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(2/5 * 100% - #{$gutter})!important;
     }
 
 .u-3\/5\@lg {
-        width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(3/5 * 100% - #{$gutter})!important;
     }
 
 .u-4\/5\@lg {
-        width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+        width: calc(4/5 * 100% - #{$gutter})!important;
     }
 }
 

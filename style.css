@@ -1235,6 +1235,11 @@ svg:not(:root) {
     margin-left: 0 !important;
 }
 
+.u-mx0 {
+    margin-right: 0 !important; 
+    margin-left: 0 !important;
+}
+
 .u-m1 {
     margin: 0.5rem !important;
 }
@@ -1718,39 +1723,39 @@ svg:not(:root) {
 }
 
 .u-1\/2 {
-    width: calc(1/2 * 100% - 0.24em) !important;
+    width: calc(1/2 * 100% - 16px) !important;
 }
 
 .u-1\/3 {
-    width: calc(1/3 * 100% - 0.24em) !important;
+    width: calc(1/3 * 100% - 16px) !important;
 }
 
 .u-2\/3 {
-    width: calc(2/3 * 100% - 0.24em) !important;
+    width: calc(2/3 * 100% - 16px) !important;
 }
 
 .u-1\/4 {
-    width: calc(1/4 * 100% - 0.24em) !important;
+    width: calc(1/4 * 100% - 16px) !important;
 }
 
 .u-3\/4 {
-    width: calc(3/4 * 100% - 0.24em) !important;
+    width: calc(3/4 * 100% - 16px) !important;
 }
 
 .u-1\/5 {
-    width: calc(1/5 * 100% - 0.24em) !important;
+    width: calc(1/5 * 100% - 16px) !important;
 }
 
 .u-2\/5 {
-    width: calc(2/5 * 100% - 0.24em) !important;
+    width: calc(2/5 * 100% - 16px) !important;
 }
 
 .u-3\/5 {
-    width: calc(3/5 * 100% - 0.24em) !important;
+    width: calc(3/5 * 100% - 16px) !important;
 }
 
 .u-4\/5 {
-    width: calc(4/5 * 100% - 0.24em) !important;
+    width: calc(4/5 * 100% - 16px) !important;
 }
 
 @media screen and (min-width: 52em) {
@@ -1758,31 +1763,31 @@ svg:not(:root) {
         width: 100% !important;
     }
     .u-1\/2\@md {
-        width: calc(50% - 0.24em) !important;
+        width: calc(50% - 16px) !important;
     }
     .u-1\/3\@md {
-        width: calc(1/3 * 100% - 0.24em) !important;
+        width: calc(1/3 * 100% - 16px) !important;
     }
     .u-2\/3\@md {
-        width: calc(2/3 * 100% - 0.24em) !important;
+        width: calc(2/3 * 100% - 16px) !important;
     }
     .u-1\/4\@md {
-        width: calc(1/4 * 100% - 0.24em) !important;
+        width: calc(1/4 * 100% - 16px) !important;
     }
     .u-3\/4\@md {
-        width: calc(3/4 * 100% - 0.24em) !important;
+        width: calc(3/4 * 100% - 16px) !important;
     }
     .u-1\/5\@md {
-        width: calc(1/5 * 100% - 0.24em) !important;
+        width: calc(1/5 * 100% - 16px) !important;
     }
     .u-2\/5\@md {
-        width: calc(2/5 * 100% - 0.24em) !important;
+        width: calc(2/5 * 100% - 16px) !important;
     }
     .u-3\/5\@md {
-        width: calc(3/5 * 100% - 0.24em) !important;
+        width: calc(3/5 * 100% - 16px) !important;
     }
     .u-4\/5\@md {
-        width: calc(4/5 * 100% - 0.24em) !important;
+        width: calc(4/5 * 100% - 16px) !important;
     }
     .u-width-auto\@md {
         width: auto !important;
@@ -1794,31 +1799,31 @@ svg:not(:root) {
         width: 100% !important;
     }
     .u-1\/2\@lg {
-        width: calc(50% - 0.24em) !important;
+        width: calc(50% - 16px) !important;
     }
     .u-1\/3\@lg {
-        width: calc(1/3 * 100% - 0.24em) !important;
+        width: calc(1/3 * 100% - 16px) !important;
     }
     .u-2\/3\@lg {
-        width: calc(2/3 * 100% - 0.24em) !important;
+        width: calc(2/3 * 100% - 16px) !important;
     }
     .u-1\/4\@lg {
-        width: calc(1/4 * 100% - 0.24em) !important;
+        width: calc(1/4 * 100% - 16px) !important;
     }
     .u-3\/4\@lg {
-        width: calc(3/4 * 100% - 0.24em) !important;
+        width: calc(3/4 * 100% - 16px) !important;
     }
     .u-1\/5\@lg {
-        width: calc(1/5 * 100% - 0.24em) !important;
+        width: calc(1/5 * 100% - 16px) !important;
     }
     .u-2\/5\@lg {
-        width: calc(2/5 * 100% - 0.24em) !important;
+        width: calc(2/5 * 100% - 16px) !important;
     }
     .u-3\/5\@lg {
-        width: calc(3/5 * 100% - 0.24em) !important;
+        width: calc(3/5 * 100% - 16px) !important;
     }
     .u-4\/5\@lg {
-        width: calc(4/5 * 100% - 0.24em) !important;
+        width: calc(4/5 * 100% - 16px) !important;
     }
 }
 
