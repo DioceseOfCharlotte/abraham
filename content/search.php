@@ -19,7 +19,11 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
+    <?php tha_entry_before(); ?>
+
     <article <?php hybrid_attr('post'); ?>>
+
+    <?php tha_entry_top(); ?>
 
         <header <?php hybrid_attr('entry-header'); ?>>
             <h4 <?php hybrid_attr('entry-title'); ?>>
@@ -35,7 +39,11 @@
         <?php the_excerpt(); ?>
         </div>
 
+    <?php tha_entry_bottom(); ?>
+
     </article>
+
+    <?php tha_entry_after(); ?>
 
 <?php endwhile; ?>
 

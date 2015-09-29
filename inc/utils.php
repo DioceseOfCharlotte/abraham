@@ -7,7 +7,7 @@ add_filter('get_search_form', __NAMESPACE__.'\\get_search_form');
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
-add_filter( 'page_css_class', __NAMESPACE__.'\\doc_page_css_class', 10, 2 );
+//add_filter( 'page_css_class', __NAMESPACE__.'\\doc_page_css_class', 10, 2 );
 add_filter('show_admin_bar', '__return_false');
 
 add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace_merge_tag', 10, 2 );
@@ -23,9 +23,10 @@ function template_hierarchy($templates) {
     } if (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     } if (is_singular()) {
-        $templates = array_merge(array("content/single-{$post_type}.php"), $templates);
+        $templates = array_merge(array("content/content-single.php"), $templates);
+        $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
     } elseif (hybrid_is_plural()) {
-        $templates = array_merge(array("content/archive-{$post_type}.php"), $templates);
+        $templates = array_merge(array("content/{$post_type}-archive.php"), $templates);
     }
     return $templates;
 }

@@ -1,39 +1,50 @@
 /* #UTILITY LAYOUT
 \*------------------------------------*/
 
-.inline       { display: inline }
-.block        { display: block!important; }
-.inline-block { display: inline-block }
-.table        { display: table }
-.table-cell   { display: table-cell }
-.none         { display: none; }
+.u-inline       { display: inline }
+.u-block        { display: block!important; }
+.u-inline-block { display: inline-block }
+.u-table        { display: table }
+.u-table-cell   { display: table-cell }
+.u-none         { display: none; }
 
-.align-baseline { vertical-align: baseline }
-.align-top      { vertical-align: top }
-.align-middle   { vertical-align: middle }
-.align-bottom   { vertical-align: bottom }
+.u-align-baseline { vertical-align: baseline }
+.u-align-top      { vertical-align: top }
+.u-align-middle   { vertical-align: middle }
+.u-align-bottom   { vertical-align: bottom }
 
-.overflow-hidden { overflow: hidden }
-.overflow-visible { overflow: visible }
-.overflow-scroll { overflow: scroll }
-.overflow-auto   { overflow: auto }
+.u-overflow-hidden { overflow: hidden!important; }
+.u-overflow-visible { overflow: visible!important; }
+.u-overflow-scroll { overflow: scroll!important; }
+.u-overflow-auto   { overflow: auto!important; }
 
-.relative { position: relative }
-.absolute { position: absolute!important; }
-.fixed    { position: fixed }
-.static   { position: static }
+.u-nowrap { white-space: nowrap; }
 
-.top-0    { top: 0 }
-.right-0  { right: 0 }
-.bottom-0 { bottom: 0 }
-.left-0   { left: 0 }
+.u-relative { position: relative!important; }
+.u-absolute { position: absolute!important; }
+.u-fixed    { position: fixed!important; }
+.u-static   { position: static!important; }
 
-.z1 { z-index: 1 }
-.z2 { z-index: 2 }
-.z3 { z-index: 3 }
-.z4 { z-index: 4 }
+.u-top    { top: 0 }
+.u-right  { right: 0 }
+.u-bottom { bottom: 0 }
+.u-left   { left: 0 }
 
-.left  { float: left }
-.right { float: right }
+.u-z0 { z-index: 0!important; }
+.u-z1 { z-index: 1!important; }
+.u-z2 { z-index: 2!important; }
+.u-z3 { z-index: 3!important; }
+.u-z4 { z-index: 4!important; }
 
-.fit { max-width: 100% }
+.u-left  { float: left }
+.u-right { float: right }
+
+.u-fit { max-width: 100% }
+
+
+@include md {
+    .u-relative\@md { position: relative!important; }
+    .u-absolute\@md { position: absolute!important; }
+    .u-fixed\@md    { position: fixed!important; }
+    .u-static\@md   { position: static!important; }
+}

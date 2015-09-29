@@ -1,19 +1,30 @@
 <?php
-tha_header_before(); ?>
+/**
+ * Main template file.
+ *
+ * @package abraham
+ */
 
-    <div class="skip-link">
-        <a href="#content" class="btn screen-reader-text">
-            <?php _e( 'Skip to content', 'abraham' ); ?>
-        </a>
-    </div><!-- .skip-link -->
+?><!doctype html>
+<html <?php language_attributes(); ?>>
+<head <?php hybrid_attr('head'); ?>>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<?php wp_head(); ?>
+</head>
 
-    <header <?php hybrid_attr('header'); ?>>
+<body <?php hybrid_attr('body'); ?>>
 
-        <?php tha_header_top(); ?>
+    <?php tha_body_top(); ?>
 
-        <div class="header-wrap container--wide px2 flex flex-column@sm flex-justify flex-center">
+    <div <?php hybrid_attr('site_container'); ?>>
+
+        <?php tha_header_before(); ?>
+
+        <header <?php hybrid_attr('header'); ?>>
 
             <div <?php hybrid_attr('branding'); ?>>
+
+                <?php tha_header_top(); ?>
 
                 <?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
                     <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -23,14 +34,15 @@ tha_header_before(); ?>
                 <?php hybrid_site_title(); ?>
                 <?php hybrid_site_description(); ?>
 
+                <?php tha_header_bottom(); ?>
+
             </div>
 
+
             <?php hybrid_get_menu('primary'); ?>
-        </div>
 
-        <?php tha_header_bottom(); ?>
+        </header>
 
-    </header>
+        <?php tha_header_after(); ?>
 
-<?php
-tha_header_after();
+            <div <?php hybrid_attr('layout'); ?>>

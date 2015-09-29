@@ -1,0 +1,29 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: transparent;
+    border: transparent;
+    border-radius: $base-radius;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    white-space: nowrap;
+    padding: $space-1 $space-2;
+    display: inline-block;
+    overflow: hidden;
+    transition: background-color 0.2s $animation-curve-default;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+
+    &:hover {
+        background-color: $darken-2;
+        text-decoration: none;
+    }
+
+    &:focus, &:active, &.active {
+        background-color: $darken-3;
+    }
+}

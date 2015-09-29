@@ -1,23 +1,27 @@
-<?php
-tha_footer_before(); ?>
+        <?php tha_footer_before(); ?>
 
-<footer <?php hybrid_attr('footer'); ?>>
+        <footer <?php hybrid_attr('footer'); ?>>
 
-    <?php tha_footer_top(); ?>
+            <?php tha_footer_top(); ?>
 
-    <div <?php hybrid_attr('container', 'footer'); ?>>
-        <?php hybrid_get_sidebar('footer'); ?>
-    </div>
+            <?php hybrid_get_sidebar('footer'); ?>
 
-    <p class="credit bg-darken-2 text-center py2">
-        <?php printf(__('&#169; %1$s %2$s', 'abraham'), date_i18n('Y'), hybrid_get_site_link()); ?>
-    </p><!-- .credit -->
+            <p class="credit mdl-mega-footer--bottom-section">
+                <?php printf(__('&#169; %1$s %2$s', 'abraham'), date_i18n('Y'), hybrid_get_site_link()); ?>
+            </p><!-- .credit -->
 
-    <?php tha_footer_bottom(); ?>
+            <?php tha_footer_bottom(); ?>
 
-</footer>
+        </footer>
 
-<?php tha_footer_after(); ?>
+        <?php tha_footer_after(); ?>
 
-<?php
-wp_footer();
+    </div><!-- /.layout -->
+
+</div><!-- /.site-container -->
+
+    <?php tha_body_bottom(); ?>
+    <?php wp_footer(); ?>
+
+</body>
+</html>

@@ -1,25 +1,26 @@
 ///* #LINKS
 //\*------------------------------------*/
+
 a {
-    color: $link-color;
-    text-decoration: $link-text-decoration;
-    transition-duration: .28s;
-    transition-timing-function: $animation-curve-default;
-    transition-property: opacity;
+	color: $link-color;
+	text-decoration: none;
+	transition-duration: 0.28s;
+	transition-timing-function: $animation-curve-default;
+	transition-property: opacity;
 }
 
 a:hover:not(.btn) {
-    text-decoration: none;
-    opacity: $opacity;
+	text-decoration: none;
+	opacity: $opacity;
 }
 
-h1, h2, h3, h4, h5, h6 {
- > a {
-    border-bottom: 1px solid transparent;
-    transition-property: all;
-
- &:hover {
-    border-bottom-color: currentColor;
-}
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	> a {
+		color: inherit;
+	}
 }

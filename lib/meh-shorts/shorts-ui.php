@@ -20,7 +20,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
         'meh_block',
         array(
             'label'         => 'Block',
-            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($abraham_dir.'images/sidebar-left.svg').'" />',
+            'listItemImage' => 'dashicons-schedule',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(

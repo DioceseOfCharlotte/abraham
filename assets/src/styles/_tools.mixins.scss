@@ -1,20 +1,128 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
-/* Typography */
+// Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-uabraham {
+//   @include rem(padding, 10px);
+// }
+
+@mixin rem($property, $value) {
+    @if not $supports-rem {
+        #{$property}: $value;
+    }
+    #{$property}: $value / $base-font-size * 1rem;
+}
+
+
+
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+
+$supports-rem: false;
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(10px);
+// }
+@mixin font-size($font-size, $line-height: auto) {
+    @if not $supports-rem {
+        font-size: $font-size;
+    }
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        }
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+
+
+
+@mixin font-size-sm {
+    @include font-size($base-font-size - 2);
+}
+
+@mixin font-size-md {
+    @include font-size($base-font-size);
+}
+
+@mixin font-size-lg {
+    @include font-size($base-font-size + 2);
+}
+
+@mixin font-size-xl {
+    @include font-size($heading-size-1);
+}
+
+
+
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+
+@mixin truncate($limit: 100%) {
+    max-width: $limit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+// Clearfix
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+
+@mixin bg-text($bg-color) {
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+}
+
+
+
+// Typography
 
 @mixin typo-preferred-font($usePreferred: true) {
   @if $usePreferred {
@@ -206,7 +314,7 @@
   }
 }
 
-/* Shadows */
+// Shadows
 
 // Focus shadow mixin.
 @mixin focus-shadow() {
@@ -245,7 +353,7 @@
               0  8px 10px -5px rgba(0, 0, 0, $shadow-key-umbra-opacity);
 }
 
-/* Animations */
+// Animations 
 
 @mixin material-animation-fast-out-slow-in($duration:0.2s) {
   transition-duration: $duration;

@@ -1,5 +1,5 @@
 <?php
-if (has_nav_menu('logged-in')) : ?>
+if (has_nav_menu('logged-in') && is_user_logged_in()) : ?>
 
     <nav <?php hybrid_attr('menu', 'logged-in'); ?>>
 

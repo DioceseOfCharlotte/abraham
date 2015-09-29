@@ -1,10 +1,15 @@
 /* #LISTS
 \*------------------------------------*/
-
 ol,
 ul,
 dl {
 	margin-bottom: $space-2;
+}
+
+ul,
+ol,
+dd {
+	margin-left: $space-1;
 }
 
 li > ul,
@@ -23,12 +28,12 @@ dd {
 
 nav ol,
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 0;
+	display: inline-block;
+	padding: 0;
 }

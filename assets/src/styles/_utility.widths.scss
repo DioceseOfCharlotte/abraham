@@ -1,0 +1,153 @@
+/* #WIDTHS
+\*------------------------------------*/
+// /**
+//  * Use these in your markup, e.g.:
+//  *
+//  * <div class="u-7/12">
+//  *
+//  */
+
+$ib-whitespace: .24em;
+
+.u-max-width {
+    max-width: $container-wide;
+}
+
+.u-width-auto {
+    width: auto!important;
+}
+
+.u-1\/1 {
+    width: 100%!important;
+}
+
+.u-1\/2 {
+    width: calc(1/2 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-1\/3 {
+    width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-2\/3 {
+    width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-1\/4 {
+    width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-3\/4 {
+    width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-1\/5 {
+    width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-2\/5 {
+    width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-3\/5 {
+    width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+}
+
+.u-4\/5 {
+    width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+}
+
+@include md {
+.u-1\/1\@md {
+        width: 100%!important;
+    }
+
+.u-1\/2\@md {
+        width: calc(50% - .24em)!important;
+    }
+
+.u-1\/3\@md {
+        width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-2\/3\@md {
+        width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-1\/4\@md {
+        width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-3\/4\@md {
+        width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-1\/5\@md {
+        width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-2\/5\@md {
+        width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-3\/5\@md {
+        width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-4\/5\@md {
+        width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+    .u-width-auto\@md {
+            width: auto!important;
+        }
+}
+
+@include lg {
+    .u-1\/1\@lg {
+        width: 100%!important;
+    }
+
+.u-1\/2\@lg {
+        width: calc(50% - .24em)!important;
+    }
+
+.u-1\/3\@lg {
+        width: calc(1/3 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-2\/3\@lg {
+        width: calc(2/3 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-1\/4\@lg {
+        width: calc(1/4 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-3\/4\@lg {
+        width: calc(3/4 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-1\/5\@lg {
+        width: calc(1/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-2\/5\@lg {
+        width: calc(2/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-3\/5\@lg {
+        width: calc(3/5 * 100% - #{$ib-whitespace})!important;
+    }
+
+.u-4\/5\@lg {
+        width: calc(4/5 * 100% - #{$ib-whitespace})!important;
+    }
+}
+
+
+@include sm {
+    .u-1\/1\@sm {
+        width: 100%!important;
+    }
+}

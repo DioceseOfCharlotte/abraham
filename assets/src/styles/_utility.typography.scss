@@ -1,96 +1,77 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------*/
-.h1 {
-    font-size: $h1;
-}
 
-.h2 {
-    font-size: $h2;
-}
-
-.h3 {
-    font-size: $h3;
-}
-
-.h4 {
-    font-size: $h4;
-}
-
-.h5 {
-    font-size: $h5;
-}
-
-.h6 {
-    font-size: $h6;
-}
-
-.small {
+.u-small {
     font-size: 80%;
 }
 
-.lh-1 {
-    line-height: 1;
+.u-lh-1 {
+    line-height: 1!important;
 }
 
-.bold {
+.u-lh-2 {
+    line-height: 2!important;
+}
+
+.u-bold {
     font-weight: $bold-font-weight;
 }
 
-.regular {
+.u-regular {
     font-weight: normal;
 }
 
-.italic {
+.u-italic {
     font-style: italic;
 }
 
-.caps {
+.u-caps {
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
 
-.text-shadow {
+.u-text-shadow {
     text-shadow: 1px 1px 5px rgba($black, 0.6);
 }
 
-.text-left, .left-align {
+.u-text-left {
     text-align: left;
 }
 
-.text-center, .center {
+.u-text-center {
     text-align: center;
 }
 
-.text-right, .right-align {
+.u-text-right {
     text-align: right;
 }
 
-.justify {
+.u-text-justify {
     text-align: justify;
 }
 
-.nowrap {
+.u-nowrap {
     white-space: nowrap;
 }
 
-.break-word {
+.u-break-word {
     word-wrap: break-word;
 }
 
-.truncate {
+.u-truncate {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.list-reset {
+.u-list-reset {
     list-style: none;
-    padding-left: 0;
-    ul,
-    li {
+    > ul,
+    > li {
         list-style: none;
         padding-left: 0;
+        margin-left: 0;
     }
 
 }

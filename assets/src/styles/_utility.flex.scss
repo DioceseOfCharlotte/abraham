@@ -1,46 +1,102 @@
-/* #FLEX OBJECT
+/* #u-flex OBJECT
 \*------------------------------------*/
+.u-flex {
+	display: flex!important;
+}
 
-.flex { display: flex }
+.u-flex-rev {
+	flex-direction: row-reverse!important;
+}
 
-.flex-rev  { flex-direction: row-reverse }
-.flex-column  { flex-direction: column }
-.flex-row  { flex-direction: row }
-.flex-wrap    { flex-wrap: wrap }
+.u-flex-column {
+	flex-direction: column!important;
+}
 
-.flex-center   { align-items: center }
-.flex-baseline { align-items: baseline }
-.flex-stretch  { align-items: stretch }
-.flex-start    { align-items: flex-start }
-.flex-end      { align-items: flex-end }
+.u-flex-row {
+	flex-direction: row!important;
+}
 
-.flex-justify  { justify-content: space-between }
-.flex-justify-end  { justify-content: flex-end; }
+.u-flex-wrap {
+	flex-wrap: wrap!important;
+}
 
-.flex-auto { flex: 1 1 auto }
-.flex-grow { flex: 1 0 auto }
-.flex-none { flex: none }
+.u-flex-center {
+	align-items: center!important;
+}
 
-.flex-first { order: -1 }
-.flex-last  { order: 99999 }
+.u-flex-baseline {
+	align-items: baseline!important;
+}
 
+.u-flex-stretch {
+	align-items: stretch!important;
+}
+
+.u-flex-start {
+	align-items: flex-start!important;
+}
+
+.u-flex-end {
+	align-items: flex-end!important;
+}
+
+.u-flex-justify {
+	justify-content: space-between!important;
+}
+
+.u-flex-justify-end {
+	justify-content: flex-end!important;
+}
+
+.u-flexed-auto {
+	flex: 1 1 auto!important;
+}
+
+.u-flexed-grow {
+	flex: 1 0 auto!important;
+}
+
+.u-flexed-none {
+	flex: none!important;
+}
+
+.u-flexed-first {
+	order: -1!important;
+}
+
+.u-flexed-last {
+	order: 99999!important;
+}
 
 // small
 @include sm {
-  .flex\@sm { display: flex }
-  .flex-column\@sm  { flex-direction: column }
-}
+	.u-flex\@sm {
+		display: flex!important;
+	}
 
+	.u-flex-column\@sm {
+		flex-direction: column!important;
+	}
+}
 
 // medium
 @include md {
-  .flex\@md { display: flex }
-  .flex-row\@md  { flex-direction: row }
-}
+	.u-flex\@md {
+		display: flex!important;
+	}
 
+	.u-flex-row\@md {
+		flex-direction: row!important;
+	}
+}
 
 // large
 @include lg {
-  .flex\@lg { display: flex }
-  .flex-row\@lg  { flex-direction: row }
+	.u-flex\@lg {
+		display: flex!important;
+	}
+
+	.u-flex-row\@lg {
+		flex-direction: row!important;
+	}
 }

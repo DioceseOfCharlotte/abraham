@@ -1,19 +1,14 @@
 <?php
 
-namespace Abraham\Init;
-
-//use Abraham\Assets;
-
 /*
  * Theme setup
  */
 
-add_action('after_setup_theme', __NAMESPACE__.'\\setup', 5);
-add_action('widgets_init', __NAMESPACE__.'\\widgets', 5);
-add_action('init', __NAMESPACE__.'\\image_sizes', 5);
-add_action('hybrid_register_layouts', __NAMESPACE__.'\\layouts');
+add_action('after_setup_theme', 'abraham_setup', 5);
+add_action('init', 'abraham_image_sizes', 5);
+add_action('hybrid_register_layouts', 'abraham_layouts');
 
-function setup() {
+function abraham_setup() {
 
     // http://codex.wordpress.org/Automatic_Feed_Links
     add_theme_support('automatic-feed-links');
@@ -50,7 +45,7 @@ function setup() {
 
     add_theme_support('soil-clean-up');
 
-    add_theme_support('soil-disable-asset-versioning');
+    //add_theme_support('soil-disable-asset-versioning');
 
     add_theme_support('soil-disable-trackbacks');
 
@@ -63,7 +58,9 @@ function setup() {
 /**
  * Register sidebars.
  */
-function widgets() {
+if ( ! function_exists( 'abraham_widgets' ) ) {
+
+function abraham_widgets() {
     register_sidebar(array(
 		'id'            => 'primary',
 		'name'          => __( 'Primary', 'abraham' ),
@@ -77,15 +74,17 @@ function widgets() {
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
 		'before_title'  => '<h3 class="h2 widget-title m0">',
-		'after_title'   => '</h3><div class="widget-body mt2">',
-		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'><input class="widget-checkbox" type="checkbox" checked>',
-		'after_widget'  => '</div></section>',
+		'after_title'   => '</h3>',
+		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
+		'after_widget'  => '</section>',
 	));
+}
+add_action('widgets_init', 'abraham_widgets', 5);
+
 }
 
 
-
-function image_sizes() {
+function abraham_image_sizes() {
     // Set the 'post-thumbnail' size.
     set_post_thumbnail_size(150, 150, true);
     // Add the 'abraham-full' image size.
@@ -97,7 +96,7 @@ function image_sizes() {
     add_image_size('abraham-sm', 640, 360, true);
 }
 
-function layouts() {
+function abraham_layouts() {
 
     hybrid_register_layout('1-column', array(
         'label'            => _x('Single Column', 'theme layout', 'abraham'),

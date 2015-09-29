@@ -1,72 +1,47 @@
 /* #BORDERS
 \*------------------------------------*/
-
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+.u-border {
+	border-style: solid;
+	border-width: $border-width;
+	border-color: $border-color;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+.u-border-t {
+	border-top-style: solid;
+	border-top-width: $border-width;
+	border-top-color: $border-color;
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+.u-border-r {
+	border-right-style: solid;
+	border-right-width: $border-width;
+	border-right-color: $border-color;
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+.u-border-b {
+	border-bottom-style: solid;
+	border-bottom-width: $border-width;
+	border-bottom-color: $border-color;
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+.u-border-l {
+	border-left-style: solid;
+	border-left-width: $border-width;
+	border-left-color: $border-color;
 }
 
-.border-none { border: 0!important }
+.u-border0 { border: 0!important; }
 
-.u-br, .br { border-radius: $border-radius }
-.u-round, .round  { border-radius: 50% }
+.u-br { border-radius: $border-radius; }
 
-.br-top    { border-radius: $border-radius $border-radius 0 0 }
-.br-right  { border-radius: 0 $border-radius $border-radius 0 }
-.br-bottom { border-radius: 0 0 $border-radius $border-radius }
-.br-left   { border-radius: $border-radius 0 0 $border-radius }
+.u-br0 { border-radius: 0; }
 
-.br0 { border-radius: 0 }
+.u-round { border-radius: 50%; }
 
-.shadow0 {
-    box-shadow: none!important;
-}
+.u-br-t { border-radius: $border-radius $border-radius 0 0; }
 
-.shadow1 {
-  @include focus-shadow();
-}
+.u-br-r { border-radius: 0 $border-radius $border-radius 0; }
 
-.shadow2 {
-  @include shadow-2dp();
-}
+.u-br-b { border-radius: 0 0 $border-radius $border-radius; }
 
-.shadow3 {
-  @include shadow-3dp();
-}
-
-.shadow4 {
-  @include shadow-4dp();
-}
-
-.shadow6 {
-  @include shadow-6dp();
-}
-
-.shadow8 {
-  @include shadow-8dp();
-}
+.u-br-l { border-radius: $border-radius 0 0 $border-radius; }

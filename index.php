@@ -1,53 +1,27 @@
 <?php
-/**
- * Main template file.
- *
- * @package abraham
- */
+get_header(); ?>
 
-?><!doctype html>
-<html <?php language_attributes(); ?>>
-<head <?php hybrid_attr('head'); ?>>
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<?php wp_head(); ?>
-<?php get_template_part( 'assets/css/critical', 'css' ); ?>
-</head>
+    <?php get_template_part('components/page', 'header'); ?>
 
-    <body <?php hybrid_attr('body'); ?>>
+    <div <?php hybrid_attr('grid'); ?>>
 
-        <?php tha_body_top(); ?>
+        <?php tha_content_before(); ?>
 
-        <?php get_header(); ?>
+        <main <?php hybrid_attr('content'); ?>>
 
-        <?php get_template_part('components/page', 'header'); ?>
+            <?php tha_content_top(); ?>
 
-        <div <?php hybrid_attr('container', 'content'); ?>>
+            <?php hybrid_get_content_template(); ?>
 
-            <div <?php hybrid_attr('row', 'layout'); ?>>
+            <?php tha_content_bottom(); ?>
 
-                <?php tha_content_before(); ?>
+        </main><!-- /.content -->
 
-                <main <?php hybrid_attr('content'); ?>>
+        <?php tha_content_after(); ?>
 
-                    <?php tha_content_top(); ?>
+        <?php hybrid_get_sidebar('primary'); ?>
 
-                    <?php hybrid_get_content_template(); ?>
+    </div><!-- /.grid -->
 
-                    <?php tha_content_bottom(); ?>
-
-                </main><!-- /.main -->
-
-                <?php tha_content_after(); ?>
-
-                <?php hybrid_get_sidebar('primary'); ?>
-
-            </div><!-- /.row -->
-
-        </div><!-- /.content -->
-
-        <?php get_footer(); ?>
-
-        <?php tha_body_bottom(); ?>
-
-    </body>
-</html>
+<?php
+get_footer();
