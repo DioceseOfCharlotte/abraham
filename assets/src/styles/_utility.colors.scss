@@ -52,6 +52,12 @@
 .u-bg-1-glass { background-color: rgba($color-1, 0.96)!important; }
 .u-bg-2-glass { background-color: rgba($color-2, 0.96)!important; }
 .u-bg-3-glass { background-color: rgba($color-3, 0.96)!important; }
+.u-bg-light-1-glass { background-color: rgba(lighten($color-1, 10), 0.96)!important; }
+.u-bg-light-2-glass { background-color: rgba(lighten($color-2, 10), 0.96)!important; }
+.u-bg-light-3-glass { background-color: rgba(lighten($color-3, 10), 0.96)!important; }
+.u-bg-dark-1-glass { background-color: rgba(darken($color-1, 10), 0.96)!important; }
+.u-bg-dark-2-glass { background-color: rgba(darken($color-2, 10), 0.96)!important; }
+.u-bg-dark-3-glass { background-color: rgba(darken($color-3, 10), 0.96)!important; }
 
 .u-hover-frost-1:hover { background-color: $lighten-1!important; }
 .u-hover-frost-2:hover { background-color: $lighten-2!important; }

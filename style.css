@@ -797,6 +797,30 @@ svg:not(:root) {
     background-color: rgba(255, 216, 112, 0.96) !important;
 }
 
+.u-bg-light-1-glass {
+    background-color: rgba(0, 96, 204, 0.96) !important;
+}
+
+.u-bg-light-2-glass {
+    background-color: rgba(80, 185, 138, 0.96) !important;
+}
+
+.u-bg-light-3-glass {
+    background-color: rgba(255, 230, 163, 0.96) !important;
+}
+
+.u-bg-dark-1-glass {
+    background-color: rgba(0, 48, 102, 0.96) !important;
+}
+
+.u-bg-dark-2-glass {
+    background-color: rgba(46, 117, 85, 0.96) !important;
+}
+
+.u-bg-dark-3-glass {
+    background-color: rgba(255, 202, 61, 0.96) !important;
+}
+
 .u-hover-frost-1:hover {
     background-color: rgba(255, 255, 255, 0.0625) !important;
 }
