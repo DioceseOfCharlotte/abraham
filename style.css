@@ -343,7 +343,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background-color: rgba(0, 0, 0, 0.125);
+    background-color: rgba(13, 16, 18, 0.25);
     text-decoration: none;
 }
 button:focus,
@@ -358,7 +358,7 @@ input[type="reset"].active,
 input[type="submit"]:focus,
 input[type="submit"]:active,
 input[type="submit"].active {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(13, 16, 18, 0.5);
 }
 
 /* #LISTS
@@ -754,35 +754,35 @@ svg:not(:root) {
 }
 
 .u-bg-frost-1 {
-    background-color: rgba(255, 255, 255, 0.0625) !important;
+    background-color: rgba(228, 234, 236, 0.0625) !important;
 }
 
 .u-bg-frost-2 {
-    background-color: rgba(255, 255, 255, 0.125) !important;
+    background-color: rgba(228, 234, 236, 0.25) !important;
 }
 
 .u-bg-frost-3 {
-    background-color: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(228, 234, 236, 0.5) !important;
 }
 
 .u-bg-frost-4 {
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(228, 234, 236, 0.8) !important;
 }
 
 .u-bg-tint-1 {
-    background-color: rgba(0, 0, 0, 0.0625) !important;
+    background-color: rgba(13, 16, 18, 0.0625) !important;
 }
 
 .u-bg-tint-2 {
-    background-color: rgba(0, 0, 0, 0.125) !important;
+    background-color: rgba(13, 16, 18, 0.25) !important;
 }
 
 .u-bg-tint-3 {
-    background-color: rgba(0, 0, 0, 0.25) !important;
+    background-color: rgba(13, 16, 18, 0.5) !important;
 }
 
 .u-bg-tint-4 {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-bg-1-glass {
@@ -822,35 +822,35 @@ svg:not(:root) {
 }
 
 .u-hover-frost-1:hover {
-    background-color: rgba(255, 255, 255, 0.0625) !important;
+    background-color: rgba(228, 234, 236, 0.0625) !important;
 }
 
 .u-hover-frost-2:hover {
-    background-color: rgba(255, 255, 255, 0.125) !important;
+    background-color: rgba(228, 234, 236, 0.25) !important;
 }
 
 .u-hover-frost-3:hover {
-    background-color: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(228, 234, 236, 0.5) !important;
 }
 
 .u-hover-frost-4:hover {
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(228, 234, 236, 0.8) !important;
 }
 
 .u-hover-tint-1:hover {
-    background-color: rgba(0, 0, 0, 0.0625) !important;
+    background-color: rgba(13, 16, 18, 0.0625) !important;
 }
 
 .u-hover-tint-2:hover {
-    background-color: rgba(0, 0, 0, 0.125) !important;
+    background-color: rgba(13, 16, 18, 0.25) !important;
 }
 
 .u-hover-tint-3:hover {
-    background-color: rgba(0, 0, 0, 0.25) !important;
+    background-color: rgba(13, 16, 18, 0.5) !important;
 }
 
 .u-hover-tint-4:hover {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-opacity {
@@ -1080,6 +1080,25 @@ svg:not(:root) {
 
 .u-h6 {
     font-size: 0.75rem;
+}
+
+.u-display-1 {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.u-display-2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.u-display-3 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
 }
 
 .u-bg-cover {
@@ -1679,7 +1698,7 @@ svg:not(:root) {
 .u-table-light td {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.125);
+    border-bottom-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-table-light tr:last-child td {
@@ -1892,31 +1911,31 @@ svg:not(:root) {
 .u-border {
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.125);
+    border-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-border-t {
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: rgba(0, 0, 0, 0.125);
+    border-top-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-border-r {
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: rgba(0, 0, 0, 0.125);
+    border-right-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-border-b {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.125);
+    border-bottom-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-border-l {
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: rgba(0, 0, 0, 0.125);
+    border-left-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-border0 {
