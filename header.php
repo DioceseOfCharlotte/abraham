@@ -27,11 +27,11 @@
                 <?php tha_header_top(); ?>
 
                 <?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
-                    <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <a class="logo-image u-z4 u-p1" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <?php get_template_part( 'images/svg', 'logo' ); ?>
                     </a>
                 <?php } ?>
-                <div class="title-text u-flex u-flexed-start u-flex-column-rev">
+                <div class="title-text u-flex u-flexed-start u-flex-column-rev u-p1">
                     <?php hybrid_site_title(); ?>
                     <?php hybrid_site_description(); ?>
                 </div>
