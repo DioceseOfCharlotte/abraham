@@ -26,6 +26,28 @@
      font-size: $h6;
  }
 
+@include sm {
+ .u-h1 {
+      font-size: $h2;
+  }
+
+  .u-h2 {
+      font-size: $h3;
+  }
+
+  .u-h3 {
+      font-size: $h4;
+  }
+
+  .u-h4 {
+      font-size: $h5;
+  }
+
+  .u-h5 {
+      font-size: $h6;
+  }
+}
+
  .u-display-1 {
      font-size: 34px;
      font-weight: 400;

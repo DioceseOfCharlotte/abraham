@@ -6,6 +6,27 @@
 	visibility: hidden;
 }
 
+@include sm {
+	.hidden\@sm {
+		display: none !important;
+		visibility: hidden;
+	}
+}
+
+@include md {
+	.hidden\@md {
+		display: none !important;
+		visibility: hidden;
+	}
+}
+
+@include lg {
+	.hidden\@lg {
+		display: none !important;
+		visibility: hidden;
+	}
+}
+
 .screen-reader-text,
 .visuallyhidden {
 	border: 0;

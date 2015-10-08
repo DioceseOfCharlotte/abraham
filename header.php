@@ -31,9 +31,10 @@
                         <?php get_template_part( 'images/svg', 'logo' ); ?>
                     </a>
                 <?php } ?>
-                <?php hybrid_site_title(); ?>
-                <?php hybrid_site_description(); ?>
-
+                <div class="title-text u-flex u-flexed-start u-flex-column-rev">
+                    <?php hybrid_site_title(); ?>
+                    <?php hybrid_site_description(); ?>
+                </div>
                 <?php tha_header_bottom(); ?>
 
             </div>

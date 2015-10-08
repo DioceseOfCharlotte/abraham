@@ -879,6 +879,24 @@ svg:not(:root) {
     -ms-flex-direction: row-reverse !important;
 }
 
+.u-flex-row-rev {
+    flex-direction: row-reverse !important; 
+
+    -webkit-box-direction: reverse !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-flex-direction: row-reverse !important;
+    -ms-flex-direction: row-reverse !important;
+}
+
+.u-flex-column-rev {
+    flex-direction: column-reverse !important; 
+
+    -webkit-box-direction: reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-flex-direction: column-reverse !important;
+    -ms-flex-direction: column-reverse !important;
+}
+
 .u-flex-column {
     flex-direction: column !important; 
 
@@ -1082,6 +1100,24 @@ svg:not(:root) {
     font-size: 0.75rem;
 }
 
+@media screen and (max-width: 51em) {
+    .u-h1 {
+        font-size: 1.5rem;
+    }
+    .u-h2 {
+        font-size: 1.25rem;
+    }
+    .u-h3 {
+        font-size: 1rem;
+    }
+    .u-h4 {
+        font-size: 0.875rem;
+    }
+    .u-h5 {
+        font-size: 0.75rem;
+    }
+}
+
 .u-display-1 {
     font-size: 34px;
     font-weight: 400;
@@ -1215,19 +1251,19 @@ svg:not(:root) {
     position: static !important;
 }
 
-.u-top {
+.u-top0 {
     top: 0;
 }
 
-.u-right {
+.u-right0 {
     right: 0;
 }
 
-.u-bottom {
+.u-bottom0 {
     bottom: 0;
 }
 
-.u-left {
+.u-left0 {
     left: 0;
 }
 
@@ -1975,6 +2011,27 @@ svg:not(:root) {
 .hidden {
     display: none !important;
     visibility: hidden;
+}
+
+@media screen and (max-width: 51em) {
+    .hidden\@sm {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 52em) {
+    .hidden\@md {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .hidden\@lg {
+        display: none !important;
+        visibility: hidden;
+    }
 }
 
 .screen-reader-text,
