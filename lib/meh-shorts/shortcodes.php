@@ -10,6 +10,49 @@ function meh_add_shortcodes() {
 /**
  * BLOCK.
  */
+function meh_tile_shortcode($atts, $content = null) {
+    global $mehsc_atts;
+    $mehsc_atts = shortcode_atts(array(
+        'row_color'    => '',
+        'row_intro'    => '',
+        'block_type'   => '',
+        'width'        => '',
+        'page'         => '',
+        'show_image'   => '',
+        'show_content' => '',
+   ), $atts, 'meh_block');
+
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row mdl-grid">';
+
+// Get pages set (if any)
+$pages = $mehsc_atts['page'];
+
+    $args = array(
+        'post_type' => 'page',
+        'post__in'  => explode(',', $pages),
+        'orderby'   => 'post__in',
+    );
+
+    $query2 = new WP_Query($args);
+    while ($query2->have_posts()) : $query2->the_post();
+
+    ob_start();
+    get_template_part('components/section', 'block');
+    $output .= ob_get_clean();
+
+    endwhile;
+
+    $output .= '</div></section>';
+
+    return $output;
+}
+
+
+
+
+/**
+ * BLOCK.
+ */
 function meh_block_shortcode($atts, $content = null) {
     global $mehsc_atts;
     $mehsc_atts = shortcode_atts(array(
@@ -22,7 +65,7 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row container mdl-grid">';
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row card-columns">';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];

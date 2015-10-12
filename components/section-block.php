@@ -5,9 +5,9 @@
 global $mehsc_atts;
 ?>
 
-<div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['width']); ?> grid__item px1 px2@md">
+<div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['width']); ?> mdl-cell mdl-card mdl-shadow--3dp">
 
-    <div class="<?php echo esc_attr($mehsc_atts['block_type']); ?> mb1 mb3@md bg-white u-br shadow2 u-1/1">
+
     <?php if ('show_img' === $mehsc_atts['show_image']) : ?>
 
     <?php
@@ -18,7 +18,7 @@ global $mehsc_atts;
             'after'  => '</div>',
         ));
     }
-    if ('flag-block flex-row' === $mehsc_atts['block_type']) {
+    if ('flag-block' === $mehsc_atts['block_type']) {
         get_the_image(array(
             'size'   => 'thumbnail',
             'before' => '<div class="flag-img u-1/3">',
@@ -70,7 +70,7 @@ global $mehsc_atts;
             </div>
 
                 </div><!-- .block-body -->
-    </div><!-- .mdl-card -->
+
 </div><!-- .block -->
 
 <?php
