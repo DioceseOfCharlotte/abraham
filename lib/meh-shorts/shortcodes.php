@@ -3,6 +3,7 @@ add_action('init', 'meh_add_shortcodes');
 
 function meh_add_shortcodes() {
     add_shortcode('meh_block', 'meh_block_shortcode');
+    add_shortcode('meh_tile', 'meh_tile_shortcode');
     add_shortcode('meh_tabs', 'meh_tabs_shortcode');
     add_shortcode('meh_toggles', 'meh_toggles_shortcode');
 }
@@ -15,12 +16,9 @@ function meh_tile_shortcode($atts, $content = null) {
     $mehsc_atts = shortcode_atts(array(
         'row_color'    => '',
         'row_intro'    => '',
-        'block_type'   => '',
         'width'        => '',
         'page'         => '',
-        'show_image'   => '',
-        'show_content' => '',
-   ), $atts, 'meh_block');
+   ), $atts, 'meh_tile');
 
     $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row mdl-grid">';
 
@@ -33,11 +31,11 @@ $pages = $mehsc_atts['page'];
         'orderby'   => 'post__in',
     );
 
-    $query2 = new WP_Query($args);
-    while ($query2->have_posts()) : $query2->the_post();
+    $queryTile = new WP_Query($args);
+    while ($queryTile->have_posts()) : $queryTile->the_post();
 
     ob_start();
-    get_template_part('components/section', 'block');
+    get_template_part('components/section', 'tile');
     $output .= ob_get_clean();
 
     endwhile;
