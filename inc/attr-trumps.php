@@ -1,7 +1,5 @@
 <?php
 
-//namespace Abraham\Attr_Trumps;
-
 function attr_trumps($args = array()) {
     $trump = apply_filters('attr_trumps_object', null, $args);
     if (!is_object($trump))
@@ -54,6 +52,7 @@ class Attr_Trumps {
             'post'                    => '',
 			'post_archive'            => '',
             'post_featured'           => '',
+            'post_wide'               => '',
 
             'page_header'             => '',
 
@@ -432,6 +431,10 @@ public function abe_layout() {
 
         if ('yes' === $featured_post) {
             $attr['class']      .= " {$this->args['post_featured']}";
+        }
+
+        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) {
+            $attr['class']      .= " {$this->args['post_wide']}";
         }
         return $attr;
     }

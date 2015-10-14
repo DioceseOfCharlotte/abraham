@@ -12,11 +12,10 @@ $abraham_includes = array(
     'lib/meh-shorts/shorts-ui.php',     // Shortcake interface
     'lib/tha-theme-hooks.php',          // Template hooks
     // Theme specific includes
+    'inc/setup.php',                     // Initial theme setup
     'inc/attr-trumps.php',              // Css class selectors
     'inc/utils.php',                    // Utility functions
-    'inc/init.php',                     // Initial theme setup
     'inc/tiny-mce.php',                 // Extra wysiwyg actions
-    'inc/template-actions.php',         // Action hooks
     'inc/compatibility.php',            // 3rd party compatibilty
     'inc/customizer/customizer.php',    // Customizer
 );

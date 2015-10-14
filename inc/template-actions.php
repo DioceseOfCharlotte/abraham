@@ -1,4 +1,0 @@
-<?php
-/**
- * Action Hooks.
- */

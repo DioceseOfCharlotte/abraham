@@ -20,7 +20,11 @@ function meh_tile_shortcode($atts, $content = null) {
         'page'         => '',
    ), $atts, 'meh_tile');
 
-    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row mdl-grid">';
+    $output = '
+    <section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight">
+        <div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div>
+        <div class="card-row mdl-grid">
+    ';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
@@ -40,7 +44,10 @@ $pages = $mehsc_atts['page'];
 
     endwhile;
 
-    $output .= '</div></section>';
+    $output .= '
+        </div>
+    </section>
+    ';
 
     return $output;
 }

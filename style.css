@@ -643,6 +643,7 @@ svg:not(:root) {
 
 /* #COLORS
 \*------------------*/
+/* Text Colors */
 .u-color-inherit * {
     color: inherit !important;
 }
@@ -662,54 +663,6 @@ svg:not(:root) {
 
 .u-text-3 {
     color: #ffd870 !important;
-}
-
-.u-bg-1 {
-    background-color: #004899 !important;
-}
-
-.u-bg-2 {
-    background-color: #3d9970 !important;
-}
-
-.u-bg-3 {
-    background-color: #ffd870 !important;
-}
-
-.u-bg-light-1 {
-    background-color: #0060cc !important;
-}
-
-.u-bg-light-2 {
-    background-color: #50b98a !important;
-}
-
-.u-bg-light-3 {
-    background-color: #ffe6a3 !important;
-}
-
-.u-bg-dark-1 {
-    background-color: #003066 !important;
-}
-
-.u-bg-dark-2 {
-    background-color: #2e7555 !important;
-}
-
-.u-bg-dark-3 {
-    background-color: #ffca3d !important;
-}
-
-.u-fill-1 {
-    fill: #004899 !important;
-}
-
-.u-fill-2 {
-    fill: #3d9970 !important;
-}
-
-.u-fill-3 {
-    fill: #ffd870 !important;
 }
 
 .u-text-black {
@@ -732,7 +685,43 @@ svg:not(:root) {
     color: rgba(77, 77, 77, 0.5) !important;
 }
 
-/* Basscss Background Colors */
+/* Background Colors */
+.u-bg-1 {
+    background-color: #004899 !important;
+}
+
+.u-bg-2 {
+    background-color: #3d9970 !important;
+}
+
+.u-bg-3 {
+    background-color: #ffd870 !important;
+}
+
+.u-bg-1-light {
+    background-color: #0060cc !important;
+}
+
+.u-bg-2-light {
+    background-color: #50b98a !important;
+}
+
+.u-bg-3-light {
+    background-color: #ffe6a3 !important;
+}
+
+.u-bg-1-dark {
+    background-color: #003066 !important;
+}
+
+.u-bg-2-dark {
+    background-color: #2e7555 !important;
+}
+
+.u-bg-3-dark {
+    background-color: #ffca3d !important;
+}
+
 .u-bg-black {
     background-color: #111 !important;
 }
@@ -797,27 +786,27 @@ svg:not(:root) {
     background-color: rgba(255, 216, 112, 0.96) !important;
 }
 
-.u-bg-light-1-glass {
+.u-bg-1-glass-light {
     background-color: rgba(0, 96, 204, 0.96) !important;
 }
 
-.u-bg-light-2-glass {
+.u-bg-2-glass-light {
     background-color: rgba(80, 185, 138, 0.96) !important;
 }
 
-.u-bg-light-3-glass {
+.u-bg-3-glass-light {
     background-color: rgba(255, 230, 163, 0.96) !important;
 }
 
-.u-bg-dark-1-glass {
+.u-bg-1-glass-dark {
     background-color: rgba(0, 48, 102, 0.96) !important;
 }
 
-.u-bg-dark-2-glass {
+.u-bg-2-glass-dark {
     background-color: rgba(46, 117, 85, 0.96) !important;
 }
 
-.u-bg-dark-3-glass {
+.u-bg-3-glass-dark {
     background-color: rgba(255, 202, 61, 0.96) !important;
 }
 
@@ -853,6 +842,44 @@ svg:not(:root) {
     background-color: rgba(13, 16, 18, 0.8) !important;
 }
 
+/* Fill Colors */
+.u-fill-1 {
+    fill: #004899 !important;
+}
+
+.u-fill-2 {
+    fill: #3d9970 !important;
+}
+
+.u-fill-3 {
+    fill: #ffd870 !important;
+}
+
+.u-fill-1-light {
+    background-color: #0060cc !important;
+}
+
+.u-fill-2-light {
+    background-color: #50b98a !important;
+}
+
+.u-fill-3-light {
+    background-color: #ffe6a3 !important;
+}
+
+.u-fill-1-dark {
+    background-color: #003066 !important;
+}
+
+.u-fill-2-dark {
+    background-color: #2e7555 !important;
+}
+
+.u-fill-3-dark {
+    background-color: #ffca3d !important;
+}
+
+/* Opacity */
 .u-opacity {
     opacity: 0.7;
 }
@@ -961,6 +988,13 @@ svg:not(:root) {
     -ms-flex-pack: justify !important;
     -webkit-justify-content: space-between !important;
     justify-content: space-between !important;
+}
+
+.u-flex-justify-center {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
 }
 
 .u-flex-justify-end {

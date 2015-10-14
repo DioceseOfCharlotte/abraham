@@ -1,22 +1,18 @@
 <?php
 
-namespace Abraham\Utils;
-
-add_filter('hybrid_content_template_hierarchy', __NAMESPACE__.'\\template_hierarchy');
-add_filter('get_search_form', __NAMESPACE__.'\\get_search_form');
-add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
-add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
-add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
-//add_filter( 'page_css_class', __NAMESPACE__.'\\doc_page_css_class', 10, 2 );
+add_filter('hybrid_content_template_hierarchy', 'meh_template_hierarchy');
+add_filter('excerpt_more', 'meh_excerpt_more');
+add_filter('excerpt_length', 'meh_excerpt_length');
+add_action('after_setup_theme', 'meh_responsive_videos', 99);
+//add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
 add_filter('show_admin_bar', '__return_false');
 
-add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace_merge_tag', 10, 2 );
 
 
 /**
  * Add templates to hybrid_get_content_template()
  */
-function template_hierarchy($templates) {
+function meh_template_hierarchy($templates) {
         $post_type = get_post_type();
         $post_slug = get_the_slug();
     if (is_search()) {
@@ -34,33 +30,23 @@ function template_hierarchy($templates) {
 
 
 /**
- * Tell WordPress to use searchform.php from the components/ directory.
- */
-function get_search_form() {
-    $form = '';
-    locate_template('/components/searchform.php', true, false);
-
-    return $form;
-}
-
-/**
  * Clean up the_excerpt().
  */
-function excerpt_more() {
+function meh_excerpt_more() {
     return '<a class="absolute btn-readmore z1 right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
 }
 
-function excerpt_length($length) {
+function meh_excerpt_length($length) {
     return 40;
 }
 
-function responsive_videos() {
-    add_filter('wp_video_shortcode', __NAMESPACE__.'\\responsive_videos_embed_html');
-    add_filter('embed_oembed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
-    add_filter('video_embed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
+function meh_responsive_videos() {
+    add_filter('wp_video_shortcode', 'meh_responsive_videos_embed_html');
+    add_filter('embed_oembed_html', 'meh_responsive_videos_embed_html');
+    add_filter('video_embed_html', 'meh_responsive_videos_embed_html');
 
     /* Wrap videos in Buddypress */
-    add_filter('bp_embed_oembed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
+    add_filter('bp_embed_oembed_html', 'meh_responsive_videos_embed_html');
 }
 
 /**
@@ -68,7 +54,7 @@ function responsive_videos() {
  *
  * @return string
  */
-function responsive_videos_embed_html($html) {
+function meh_responsive_videos_embed_html($html) {
     if (empty($html) || !is_string($html)) {
         return $html;
     }
@@ -78,25 +64,7 @@ function responsive_videos_embed_html($html) {
 
 
 
-// function autologin($user_id, $config, $entry, $password) {
-//         wp_set_auth_cookie($user_id, false, '');
-// }
 
-
-function meh_reload_form_replace_merge_tag($text, $form) {
-
-    preg_match_all('/{(reload_form):?([\s\w.,!?\'"]*)}/mi', $text, $matches, PREG_SET_ORDER);
-
-    if(empty($matches))
-        return $text;
-
-    $link_text = rgar($matches[0], 2) ? rgar($matches[0], 2) : 'Reload Form';
-    $reload_link = '<a href="" class="btn btn--default button--colored gws-reload-form">' . $link_text . ' <i class="material-icons">&#xE147;</i></a>';
-    $text = str_replace(rgar($matches[0], 0), $reload_link, $text);
-
-    return $text;
-
-}
 
 
 

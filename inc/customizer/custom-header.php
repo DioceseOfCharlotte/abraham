@@ -27,7 +27,7 @@ function abraham_header_style() {
         return;
     } ?>
 
-	<style type="text/css">
+	<style id="custom-header-css">
 	<?php if (!display_header_text()) : ?>
 
 		#site-title,#site-description{position:absolute;clip:rect(1px,1px,1px,1px)}

@@ -1,8 +1,8 @@
 <?php
-
 /**
  * Handles the custom colors feature for the theme.
  */
+
 use Mexitek\PHPColors\Color;
 
 /**
@@ -34,17 +34,17 @@ final class Abraham_Custom_Styles {
         add_filter('body_class', array($this, 'body_class'));
 
         /* Filter the default colors late. */
-        add_filter('theme_mod_primary_color',      array($this, 'primary_color_default'), 95);
-        add_filter('theme_mod_secondary_color',    array($this, 'secondary_color_default'), 95);
-        add_filter('theme_mod_accent_color',       array($this, 'accent_color_default'), 95);
+        add_filter('theme_mod_primary_color', array($this, 'primary_color_default'), 95);
+        add_filter('theme_mod_secondary_color', array($this, 'secondary_color_default'), 95);
+        add_filter('theme_mod_accent_color', array($this, 'accent_color_default'), 95);
 
         /* Delete the cached data for this feature. */
         add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
     }
 
     /**
-     * Returns a default colors if there is none set.  We use this instead of setting a default
-     * so that child themes can overwrite the default early.
+     * Returns a default colors if there is none set.  We use this instead of
+     * setting a default so that child themes can overwrite the default early.
      *
      * @since  1.0.0
      *
@@ -98,7 +98,7 @@ final class Abraham_Custom_Styles {
         $style .= $this->get_secondary_styles();
         $style .= $this->get_accent_styles();
         /* Put the final style output together. */
-        $style = "\n".'<style type="text/css" id="custom-colors-css">'.trim($style).'</style>'."\n";
+        $style = "\n".'<style id="custom-colors-css">'.trim($style).'</style>'."\n";
         /* Cache the style, so we don't have to process this on each page load. */
         wp_cache_set("{$stylesheet}_custom_colors", $style);
         /* Output the custom style. */
@@ -133,46 +133,17 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= "
-                a, .color-1
-                { color: #{$color500}; }
-            ";
-        $style .= "
-            .bg-1
-                { background-color: #{$color500}; }
-            ";
-        $style .= "
-            .bg-1--light
-                { background-color: #{$color400}; }
-            ";
-        $style .= "
-                .bg-1--dark
-                { background-color: #{$color600}; }
-            ";
-        $style .= "
-                .bg-1--glass
-                { background-color: #{$color100}; }
-            ";
-        $style .= "
-                .fill-1
-                { fill: #{$color500}; }
-            ";
-        $style .= "
-                .fill-1--light
-                { fill: #{$color400}; }
-            ";
-        $style .= "
-                .fill-1--dark
-                { fill: #{$color600}; }
-            ";
-        $style .= "
-                h1, h2, h3, h4
-                { font-family: '$hfont'; }
-            ";
-        $style .= "
-                body
-                { font-family: '$bfont'; }
-            ";
+        $style .= ".u-text-1{color:#{$color500}}";
+        $style .= ".u-bg-1{background-color:#{$color500}}";
+        $style .= ".u-bg-1-light{background-color:#{$color400}}";
+        $style .= ".u-bg-1-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-1-glass{background-color:#{$color100}}";
+        $style .= ".u-fill-1{fill:#{$color500}}";
+        $style .= ".u-fill-1-light{fill:#{$color400}}";
+        $style .= ".u-fill-1-dark{fill:#{$color600}}";
+
+        $style .= "h1,h2,h3,h4{font-family:'$hfont'}";
+        $style .= "body{font-family:'$bfont'}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -203,38 +174,14 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= "
-                .color-2
-                { color: #{$color500}; }
-            ";
-        $style .= "
-                .bg-2
-                { background-color: #{$color500}; }
-            ";
-        $style .= "
-                .custom-styles .bg-2--light
-                { background-color: #{$color400}; }
-            ";
-        $style .= "
-                .bg-2--dark
-                { background-color: #{$color600}; }
-            ";
-        $style .= "
-                .bg-2--glass
-                { background-color: #{$color100}; }
-            ";
-        $style .= "
-                .fill-2
-                { fill: #{$color500}; }
-            ";
-        $style .= "
-                .fill-2--light
-                { fill: #{$color400}; }
-            ";
-        $style .= "
-                .fill-2--dark
-                { fill: #{$color600}; }
-                ";
+        $style .= ".u-text-2{color:#{$color500}}";
+        $style .= ".u-bg-2{background-color:#{$color500}}";
+        $style .= ".u-bg-2-light{background-color:#{$color400}}";
+        $style .= ".u-bg-2-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-2-glass{background-color:#{$color100}}";
+        $style .= ".u-fill-2{fill:#{$color500}}";
+        $style .= ".u-fill-2-light{fill:#{$color400}}";
+        $style .= ".u-fill-2-dark{fill:#{$color600}}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -265,38 +212,14 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= "
-                .color-3
-                { color: #{$color500}; }
-            ";
-        $style .= "
-                .bg-3
-                { background-color: #{$color500}; }
-            ";
-        $style .= "
-                .bg-3--light
-                { background-color: #{$color400}; }
-            ";
-        $style .= "
-                .bg-3--dark
-                { background-color: #{$color600}; }
-            ";
-        $style .= "
-                .bg-3--glass
-                { background-color: #{$color100}; }
-            ";
-        $style .= "
-                .fill-3
-                { fill: #{$color500}; }
-            ";
-        $style .= "
-                .fill-3--light
-                { fill: #{$color400}; }
-            ";
-        $style .= "
-                .fill-3--dark
-                { fill: #{$color600}; }
-                ";
+        $style .= ".u-text-3{color:#{$color500};}";
+        $style .= ".u-bg-3{background-color:#{$color500};}";
+        $style .= ".u-bg-3-light{background-color:#{$color400};}";
+        $style .= ".u-bg-3-dark{background-color:#{$color600};}";
+        $style .= ".u-bg-3-glass{background-color:#{$color100};}";
+        $style .= ".u-fill-3{fill:#{$color500};}";
+        $style .= ".u-fill-3-light{fill:#{$color400};}";
+        $style .= ".u-fill-3-dark{fill:#{$color600};}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
