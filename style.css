@@ -983,7 +983,8 @@ svg:not(:root) {
     -ms-flex-align: end !important;
 }
 
-.u-flex-justify {
+.u-flex-justify,
+.u-flex-justify-around {
     -webkit-box-pack: justify !important;
     -ms-flex-pack: justify !important;
     -webkit-justify-content: space-between !important;

@@ -23,7 +23,7 @@ function meh_tile_shortcode($atts, $content = null) {
     $output = '
     <section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight">
         <div class="mdl-typography--display-1-color-contrast">' . $mehsc_atts['row_intro'] . '</div>
-        <div class="card-row mdl-grid">
+        <div class="card-row mdl-grid u-flex-justify-around">
     ';
 
 // Get pages set (if any)
