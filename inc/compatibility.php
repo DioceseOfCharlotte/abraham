@@ -12,6 +12,7 @@ function meh_post_type_layouts_supports() {
     add_post_type_support('thursday_packet', 'theme-layouts');
     add_post_type_support('gravityview', 'theme-layouts');
     add_post_type_support('sc_event', 'theme-layouts');
+    add_post_type_support('cpt_archive', 'theme-layouts');
 }
 
 function wpdocs_dequeue_script() {
