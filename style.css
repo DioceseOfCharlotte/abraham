@@ -776,39 +776,39 @@ svg:not(:root) {
 }
 
 .u-bg-1-glass {
-    background-color: rgba(0, 72, 153, 0.96) !important;
+    background-color: rgba(0, 72, 153, 0.9) !important;
 }
 
 .u-bg-2-glass {
-    background-color: rgba(61, 153, 112, 0.96) !important;
+    background-color: rgba(61, 153, 112, 0.9) !important;
 }
 
 .u-bg-3-glass {
-    background-color: rgba(255, 216, 112, 0.96) !important;
+    background-color: rgba(255, 216, 112, 0.9) !important;
 }
 
 .u-bg-1-glass-light {
-    background-color: rgba(0, 96, 204, 0.96) !important;
+    background-color: rgba(0, 96, 204, 0.9) !important;
 }
 
 .u-bg-2-glass-light {
-    background-color: rgba(80, 185, 138, 0.96) !important;
+    background-color: rgba(80, 185, 138, 0.9) !important;
 }
 
 .u-bg-3-glass-light {
-    background-color: rgba(255, 230, 163, 0.96) !important;
+    background-color: rgba(255, 230, 163, 0.9) !important;
 }
 
 .u-bg-1-glass-dark {
-    background-color: rgba(0, 48, 102, 0.96) !important;
+    background-color: rgba(0, 48, 102, 0.9) !important;
 }
 
 .u-bg-2-glass-dark {
-    background-color: rgba(46, 117, 85, 0.96) !important;
+    background-color: rgba(46, 117, 85, 0.9) !important;
 }
 
 .u-bg-3-glass-dark {
-    background-color: rgba(255, 202, 61, 0.96) !important;
+    background-color: rgba(255, 202, 61, 0.9) !important;
 }
 
 .u-hover-frost-1:hover {
