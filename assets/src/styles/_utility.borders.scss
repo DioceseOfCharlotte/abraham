@@ -1,33 +1,33 @@
 /* #BORDERS
 \*------------------------------------*/
 .u-border {
-	border-style: solid;
-	border-width: $border-width;
-	border-color: $border-color;
+	border-style: solid!important;
+	border-width: $border-width!important;
+	border-color: $border-color!important;
 }
 
 .u-border-t {
-	border-top-style: solid;
-	border-top-width: $border-width;
-	border-top-color: $border-color;
+	border-top-style: solid!important;
+	border-top-width: $border-width!important;
+	border-top-color: $border-color!important;
 }
 
 .u-border-r {
-	border-right-style: solid;
-	border-right-width: $border-width;
-	border-right-color: $border-color;
+	border-right-style: solid!important;
+	border-right-width: $border-width!important;
+	border-right-color: $border-color!important;
 }
 
 .u-border-b {
-	border-bottom-style: solid;
-	border-bottom-width: $border-width;
-	border-bottom-color: $border-color;
+	border-bottom-style: solid!important;
+	border-bottom-width: $border-width!important;
+	border-bottom-color: $border-color!important;
 }
 
 .u-border-l {
-	border-left-style: solid;
-	border-left-width: $border-width;
-	border-left-color: $border-color;
+	border-left-style: solid!important;
+	border-left-width: $border-width!important;
+	border-left-color: $border-color!important;
 }
 
 .u-border0 { border: 0!important; }

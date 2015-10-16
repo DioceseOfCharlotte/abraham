@@ -456,7 +456,6 @@ blockquote p:last-of-type:after {
 /* #FORMS
 \*------------------------------------*/
 label {
-    display: inline-block;
     margin-bottom: 0.5rem;
 }
 
@@ -1774,9 +1773,9 @@ svg:not(:root) {
 \*------------------------------------*/
 .u-table-light th,
 .u-table-light td {
-    border-bottom-width: 1px;
+    border-bottom-width: 4px;
     border-bottom-style: solid;
-    border-bottom-color: rgba(13, 16, 18, 0.25);
+    border-bottom-color: rgba(13, 16, 18, 0.8);
 }
 
 .u-table-light tr:last-child td {
@@ -1987,33 +1986,33 @@ svg:not(:root) {
 /* #BORDERS
 \*------------------------------------*/
 .u-border {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(13, 16, 18, 0.25);
+    border-width: 4px !important;
+    border-style: solid !important;
+    border-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-border-t {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: rgba(13, 16, 18, 0.25);
+    border-top-width: 4px !important;
+    border-top-style: solid !important;
+    border-top-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-border-r {
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: rgba(13, 16, 18, 0.25);
+    border-right-width: 4px !important;
+    border-right-style: solid !important;
+    border-right-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-border-b {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(13, 16, 18, 0.25);
+    border-bottom-width: 4px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-border-l {
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: rgba(13, 16, 18, 0.25);
+    border-left-width: 4px !important;
+    border-left-style: solid !important;
+    border-left-color: rgba(13, 16, 18, 0.8) !important;
 }
 
 .u-border0 {
