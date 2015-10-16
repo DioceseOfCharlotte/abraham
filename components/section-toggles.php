@@ -19,5 +19,3 @@ global $mehsc_atts;
     }
     ?>
 </div>
-
-<?php

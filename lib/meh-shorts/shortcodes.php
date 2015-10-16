@@ -30,7 +30,7 @@ function meh_tile_shortcode($atts, $content = null) {
 $pages = $mehsc_atts['page'];
 
     $args = array(
-        'post_type' => 'cpt_archive',
+        'post_type' => array( 'page', 'cpt_archive', 'department' ),
         'post__in'  => explode(',', $pages),
         'orderby'   => 'post__in',
     );
@@ -76,7 +76,7 @@ function meh_cards_shortcode($atts, $content = null) {
 $pages = $mehsc_atts['page'];
 
     $args = array(
-    'post_type' => 'page',
+    'post_type' => array( 'page', 'cpt_archive', 'department' ),
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
 );
@@ -121,7 +121,7 @@ function meh_block_shortcode($atts, $content = null) {
 $pages = $mehsc_atts['page'];
 
     $args = array(
-        'post_type' => 'page',
+        'post_type' => array( 'page', 'cpt_archive', 'department' ),
         'post__in'  => explode(',', $pages),
         'orderby'   => 'post__in',
     );
@@ -138,6 +138,8 @@ $pages = $mehsc_atts['page'];
     $output .= '</div></section>';
 
     return $output;
+
+    wp_reset_postdata();
 }
 
 
@@ -164,7 +166,7 @@ function meh_toggles_shortcode($atts, $content = null) {
 $pages = $mehsc_atts['page'];
 
     $args = array(
-    'post_type' => 'department',
+    'post_type' => array( 'page', 'cpt_archive', 'department' ),
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
 );

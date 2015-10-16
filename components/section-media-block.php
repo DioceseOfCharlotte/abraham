@@ -24,6 +24,3 @@ global $mehsc_atts;
     </div>
 </div>
 </div>
-
-<?php
-wp_reset_postdata();

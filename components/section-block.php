@@ -72,6 +72,3 @@ global $mehsc_atts;
                 </div><!-- .block-body -->
 
 </div><!-- .block -->
-
-<?php
-wp_reset_postdata();
