@@ -20,9 +20,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
         'meh_tile',
         array(
             'label'         => 'Tile',
-            'listItemImage' => 'dashicons-schedule',
-            // Attribute model expects 'attr', 'type' and 'label'
-            // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
+            'listItemImage' => 'dashicons-screenoptions',
             'attrs' => array(
 
                 array(
@@ -169,13 +167,13 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
    );
 
     /*
-     * Tabs
+     * Toggles
      */
     shortcode_ui_register_for_shortcode(
-        'meh_tabs',
+        'meh_toggles',
         array(
-            'label'         => 'Tabs',
-            'listItemImage' => 'dashicons-images-alt2',
+            'label'         => 'Toggles',
+            'listItemImage' => 'dashicons-sort',
             'attrs'         => array(
 
                 array(
@@ -193,6 +191,13 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'description' => 'Background color of your row',
                 ),
 
+               array(
+                   'label'   => 'Intro Text',
+                   'attr'    => 'row_intro',
+                   'type'    => 'text',
+                   'description' => 'Introduce your row with a heading',
+                ),
+                
                 array(
                     'label'   => 'Content to Show',
                     'attr'    => 'show_content',
@@ -208,39 +213,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'    => 'Select Page',
                     'attr'     => 'page',
                     'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
-                    'multiple' => true,
-               ),
-           ),
-       )
-   );
-
-    /*
-     * Toggles
-     */
-    shortcode_ui_register_for_shortcode(
-        'meh_toggles',
-        array(
-            'label'         => 'Toggles',
-            'listItemImage' => 'dashicons-menu',
-            'attrs'         => array(
-
-                array(
-                    'label'   => 'Content to Show',
-                    'attr'    => 'show_content',
-                    'type'    => 'select',
-                    'value'   => 'excerpt',
-                    'options' => array(
-                        'excerpt' => 'Excerpt',
-                        'content' => 'Content',
-                   ),
-               ),
-
-                array(
-                    'label'    => 'Select Page',
-                    'attr'     => 'page',
-                    'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'query'    => array('post_type' => 'department'),
                     'multiple' => true,
                ),
            ),

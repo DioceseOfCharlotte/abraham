@@ -1,12 +1,6 @@
 /* #WHITE SPACE
 \*------------------------------------*/
 
-.u-m0  { margin:        0!important; }
-.u-mt0 { margin-top:    0!important; }
-.u-mr0 { margin-right:  0!important; }
-.u-mb0 { margin-bottom: 0!important; }
-.u-ml0 { margin-left:   0!important; }
-.u-mx0 { margin-left:   0!important; margin-right:  0!important; }
 
 .u-m1  { margin:        $space-1!important; }
 .u-mt1 { margin-top:    $space-1!important; }
@@ -50,9 +44,12 @@
 .u-mb-auto { margin-bottom: auto!important; }
 .u-mx-auto { margin-left: auto!important; margin-right: auto!important; }
 
-
-.u-p0 { padding: 0!important; }
-.u-pt0 { padding-top: 0!important; }
+.u-m0  { margin:        0!important; }
+.u-mt0 { margin-top:    0!important; }
+.u-mr0 { margin-right:  0!important; }
+.u-mb0 { margin-bottom: 0!important; }
+.u-ml0 { margin-left:   0!important; }
+.u-mx0 { margin-left:   0!important; margin-right:  0!important; }
 
 .u-p1\/2  { padding:       $space-1 / 2!important; }
 .u-p1  { padding:       $space-1!important }
@@ -81,52 +78,53 @@
 .u-pt4 { padding-top:   $space-4!important; }
 .u-pb4 { padding-bottom: $space-4!important; }
 
-
+.u-p0 { padding: 0!important; }
+.u-pt0 { padding-top: 0!important; }
 
 
 @include md {
-    .u-m2\@md  { margin:        $space-2 }
-    .u-mt2\@md { margin-top:    $space-2 }
-    .u-mr2\@md { margin-right:  $space-2 }
-    .u-mb2\@md { margin-bottom: $space-2 }
-    .u-ml2\@md { margin-left:   $space-2 }
+    .u-m2\@md  { margin:        $space-2!important; }
+    .u-mt2\@md { margin-top:    $space-2!important; }
+    .u-mr2\@md { margin-right:  $space-2!important; }
+    .u-mb2\@md { margin-bottom: $space-2!important; }
+    .u-ml2\@md { margin-left:   $space-2!important; }
 
-    .u-m3\@md  { margin:        $space-3 }
-    .u-mt3\@md { margin-top:    $space-3 }
-    .u-mr3\@md { margin-right:  $space-3 }
-    .u-mb3\@md { margin-bottom: $space-3 }
-    .u-ml3\@md { margin-left:   $space-3 }
+    .u-m3\@md  { margin:        $space-3!important; }
+    .u-mt3\@md { margin-top:    $space-3!important; }
+    .u-mr3\@md { margin-right:  $space-3!important; }
+    .u-mb3\@md { margin-bottom: $space-3!important; }
+    .u-ml3\@md { margin-left:   $space-3!important; }
 
-    .u-m4\@md  { margin:        $space-4 }
-    .u-mt4\@md { margin-top:    $space-4 }
-    .u-mr4\@md { margin-right:  $space-4 }
-    .u-mb4\@md { margin-bottom: $space-4 }
-    .u-ml4\@md { margin-left:   $space-4 }
+    .u-m4\@md  { margin:        $space-4!important; }
+    .u-mt4\@md { margin-top:    $space-4!important; }
+    .u-mr4\@md { margin-right:  $space-4!important; }
+    .u-mb4\@md { margin-bottom: $space-4!important; }
+    .u-ml4\@md { margin-left:   $space-4!important; }
 
-    .u-mxn2\@md { margin-left: -$space-2; margin-right: -$space-2; }
-    .u-mxn3\@md { margin-left: -$space-3; margin-right: -$space-3; }
-    .u-mxn4\@md { margin-left: -$space-4; margin-right: -$space-4; }
+    .u-mxn2\@md { margin-left: -$space-2!important; margin-right: -$space-2!important; }
+    .u-mxn3\@md { margin-left: -$space-3!important; margin-right: -$space-3!important; }
+    .u-mxn4\@md { margin-left: -$space-4!important; margin-right: -$space-4!important; }
 
-    .u-mx-auto\@md { margin-left: auto; margin-right: auto; }
+    .u-mx-auto\@md { margin-left: auto!important; margin-right: auto!important; }
 
-    .u-px1\@md { padding-left:  $space-1; padding-right:  $space-1!important }
+    .u-px1\@md { padding-left:  $space-1!important; padding-right:  $space-1!important }
 
 
-    .u-p2\@md  { padding:       $space-2 }
-    .u-py2\@md { padding-top:   $space-2; padding-bottom: $space-2 }
-    .u-px2\@md { padding-left:  $space-2; padding-right:  $space-2 }
+    .u-p2\@md  { padding:       $space-2!important; }
+    .u-py2\@md { padding-top:   $space-2!important; padding-bottom: $space-2!important; }
+    .u-px2\@md { padding-left:  $space-2!important; padding-right:  $space-2!important; }
 
-    .u-p3\@md  { padding:       $space-3 }
-    .u-py3\@md { padding-top:   $space-3; padding-bottom: $space-3 }
-    .u-px3\@md { padding-left:  $space-3; padding-right:  $space-3 }
-    .u-pt3\@md { padding-top:   $space-3 }
-    .u-pb3\@md { padding-bottom: $space-3 }
+    .u-p3\@md  { padding:       $space-3!important; }
+    .u-py3\@md { padding-top:   $space-3!important; padding-bottom: $space-3!important; }
+    .u-px3\@md { padding-left:  $space-3!important; padding-right:  $space-3!important; }
+    .u-pt3\@md { padding-top:   $space-3!important; }
+    .u-pb3\@md { padding-bottom: $space-3!important; }
 
-    .u-p4\@md  { padding:       $space-4 }
-    .u-py4\@md { padding-top:   $space-4; padding-bottom: $space-4 }
-    .u-px4\@md { padding-left:  $space-4; padding-right:  $space-4 }
-    .u-pt4\@md { padding-top:   $space-4 }
-    .u-pb4\@md { padding-bottom: $space-4 }
+    .u-p4\@md  { padding:       $space-4!important; }
+    .u-py4\@md { padding-top:   $space-4!important; padding-bottom: $space-4!important; }
+    .u-px4\@md { padding-left:  $space-4!important; padding-right:  $space-4!important; }
+    .u-pt4\@md { padding-top:   $space-4!important; }
+    .u-pb4\@md { padding-bottom: $space-4!important; }
 }
 
 .u-strip-space {

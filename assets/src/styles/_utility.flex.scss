@@ -49,8 +49,12 @@
 }
 
 .u-flex-justify,
-.u-flex-justify-around {
+.u-flex-justify-between {
 	justify-content: space-between!important;
+}
+
+.u-flex-justify-around {
+	justify-content: space-around!important;
 }
 
 .u-flex-justify-center {

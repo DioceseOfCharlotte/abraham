@@ -984,11 +984,17 @@ svg:not(:root) {
 }
 
 .u-flex-justify,
-.u-flex-justify-around {
+.u-flex-justify-between {
     -webkit-box-pack: justify !important;
     -ms-flex-pack: justify !important;
     -webkit-justify-content: space-between !important;
     justify-content: space-between !important;
+}
+
+.u-flex-justify-around {
+    -ms-flex-pack: distribute !important;
+    -webkit-justify-content: space-around !important;
+    justify-content: space-around !important;
 }
 
 .u-flex-justify-center {
@@ -1359,31 +1365,6 @@ svg:not(:root) {
 
 /* #WHITE SPACE
 \*------------------------------------*/
-.u-m0 {
-    margin: 0 !important;
-}
-
-.u-mt0 {
-    margin-top: 0 !important;
-}
-
-.u-mr0 {
-    margin-right: 0 !important;
-}
-
-.u-mb0 {
-    margin-bottom: 0 !important;
-}
-
-.u-ml0 {
-    margin-left: 0 !important;
-}
-
-.u-mx0 {
-    margin-right: 0 !important; 
-    margin-left: 0 !important;
-}
-
 .u-m1 {
     margin: 0.5rem !important;
 }
@@ -1533,12 +1514,29 @@ svg:not(:root) {
     margin-left: auto !important;
 }
 
-.u-p0 {
-    padding: 0 !important;
+.u-m0 {
+    margin: 0 !important;
 }
 
-.u-pt0 {
-    padding-top: 0 !important;
+.u-mt0 {
+    margin-top: 0 !important;
+}
+
+.u-mr0 {
+    margin-right: 0 !important;
+}
+
+.u-mb0 {
+    margin-bottom: 0 !important;
+}
+
+.u-ml0 {
+    margin-left: 0 !important;
+}
+
+.u-mx0 {
+    margin-right: 0 !important; 
+    margin-left: 0 !important;
 }
 
 .u-p1\/2 {
@@ -1641,116 +1639,124 @@ svg:not(:root) {
     padding-bottom: 4rem !important;
 }
 
+.u-p0 {
+    padding: 0 !important;
+}
+
+.u-pt0 {
+    padding-top: 0 !important;
+}
+
 @media screen and (min-width: 52em) {
     .u-m2\@md {
-        margin: 1rem;
+        margin: 1rem !important;
     }
     .u-mt2\@md {
-        margin-top: 1rem;
+        margin-top: 1rem !important;
     }
     .u-mr2\@md {
-        margin-right: 1rem;
+        margin-right: 1rem !important;
     }
     .u-mb2\@md {
-        margin-bottom: 1rem;
+        margin-bottom: 1rem !important;
     }
     .u-ml2\@md {
-        margin-left: 1rem;
+        margin-left: 1rem !important;
     }
     .u-m3\@md {
-        margin: 2rem;
+        margin: 2rem !important;
     }
     .u-mt3\@md {
-        margin-top: 2rem;
+        margin-top: 2rem !important;
     }
     .u-mr3\@md {
-        margin-right: 2rem;
+        margin-right: 2rem !important;
     }
     .u-mb3\@md {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem !important;
     }
     .u-ml3\@md {
-        margin-left: 2rem;
+        margin-left: 2rem !important;
     }
     .u-m4\@md {
-        margin: 4rem;
+        margin: 4rem !important;
     }
     .u-mt4\@md {
-        margin-top: 4rem;
+        margin-top: 4rem !important;
     }
     .u-mr4\@md {
-        margin-right: 4rem;
+        margin-right: 4rem !important;
     }
     .u-mb4\@md {
-        margin-bottom: 4rem;
+        margin-bottom: 4rem !important;
     }
     .u-ml4\@md {
-        margin-left: 4rem;
+        margin-left: 4rem !important;
     }
     .u-mxn2\@md {
-        margin-right: -1rem; 
-        margin-left: -1rem;
+        margin-right: -1rem !important; 
+        margin-left: -1rem !important;
     }
     .u-mxn3\@md {
-        margin-right: -2rem; 
-        margin-left: -2rem;
+        margin-right: -2rem !important; 
+        margin-left: -2rem !important;
     }
     .u-mxn4\@md {
-        margin-right: -4rem; 
-        margin-left: -4rem;
+        margin-right: -4rem !important; 
+        margin-left: -4rem !important;
     }
     .u-mx-auto\@md {
-        margin-right: auto; 
-        margin-left: auto;
+        margin-right: auto !important; 
+        margin-left: auto !important;
     }
     .u-px1\@md {
         padding-right: 0.5rem !important; 
-        padding-left: 0.5rem;
+        padding-left: 0.5rem !important;
     }
     .u-p2\@md {
-        padding: 1rem;
+        padding: 1rem !important;
     }
     .u-py2\@md {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
     }
     .u-px2\@md {
-        padding-right: 1rem; 
-        padding-left: 1rem;
+        padding-right: 1rem !important; 
+        padding-left: 1rem !important;
     }
     .u-p3\@md {
-        padding: 2rem;
+        padding: 2rem !important;
     }
     .u-py3\@md {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
     .u-px3\@md {
-        padding-right: 2rem; 
-        padding-left: 2rem;
+        padding-right: 2rem !important; 
+        padding-left: 2rem !important;
     }
     .u-pt3\@md {
-        padding-top: 2rem;
+        padding-top: 2rem !important;
     }
     .u-pb3\@md {
-        padding-bottom: 2rem;
+        padding-bottom: 2rem !important;
     }
     .u-p4\@md {
-        padding: 4rem;
+        padding: 4rem !important;
     }
     .u-py4\@md {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
     }
     .u-px4\@md {
-        padding-right: 4rem; 
-        padding-left: 4rem;
+        padding-right: 4rem !important; 
+        padding-left: 4rem !important;
     }
     .u-pt4\@md {
-        padding-top: 4rem;
+        padding-top: 4rem !important;
     }
     .u-pb4\@md {
-        padding-bottom: 4rem;
+        padding-bottom: 4rem !important;
     }
 }
 
