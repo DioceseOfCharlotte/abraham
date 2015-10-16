@@ -644,6 +644,7 @@ svg:not(:root) {
 /* #COLORS
 \*------------------*/
 /* Text Colors */
+.u-color-inherit,
 .u-color-inherit * {
     color: inherit !important;
 }

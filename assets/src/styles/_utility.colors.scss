@@ -2,7 +2,7 @@
 \*------------------*/
 
 /* Text Colors */
-.u-color-inherit * { color: inherit!important; }
+.u-color-inherit, .u-color-inherit * { color: inherit!important; }
 
 .u-currentcolor,
 .u-currentcolor a { color: currentColor!important; }
