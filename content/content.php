@@ -10,25 +10,6 @@
 
         <?php tha_entry_top(); ?>
 
-        <?php if (is_singular(get_post_type())) : ?>
-
-            <div <?php hybrid_attr('entry-content'); ?>>
-                <?php tha_entry_content_before(); ?>
-                <?php the_content(); ?>
-                <?php tha_entry_content_after(); ?>
-            </div>
-
-            <footer <?php hybrid_attr('entry-footer'); ?>>
-                <?php wp_link_pages(array(
-                    'before' => '<nav class="page-nav"><p>'.__('Pages:', 'abraham'),
-                    'after'  => '</p></nav>',
-                )); ?>
-            </footer>
-
-            <?php comments_template('', true); ?>
-
-        <?php else : // If not viewing a single post. ?>
-
             <header <?php hybrid_attr('entry-header'); ?>>
                 <?php
                     get_the_image(array(
@@ -46,7 +27,10 @@
                 <?php tha_entry_content_after(); ?>
             </div>
 
-    	<?php endif; // End check for posts. ?>
+            <footer <?php hybrid_attr('entry-footer'); ?>>
+                <a href="<?php the_permalink(); ?>" class="mdl-button mdl-js-button mdl-js-ripple-effect"><?php esc_html_e( 'More', 'abraham' ); ?></a>
+                <?php get_template_part('components/child', 'links'); ?>
+            </footer>
 
     <?php tha_entry_bottom(); ?>
 
@@ -58,10 +42,8 @@
 
     <?php tha_content_while_after(); ?>
 
-    <?php the_posts_navigation( array(
-    'prev_text'          => __( 'Previous', 'abraham' ),
-    'next_text'          => __( 'Next', 'abraham' ),
-    ) ); ?>
-
+<div class="u-1/1 u-text-center">
+    <?php get_template_part('components/posts', 'pagination'); ?>
+</div>
 <?php
 endif;
