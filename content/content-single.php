@@ -13,16 +13,11 @@
                 <div <?php hybrid_attr('entry-content'); ?>>
                     <?php tha_entry_content_before(); ?>
                     <?php the_content(); ?>
+                    <?php wp_link_pages(); ?>
                     <?php tha_entry_content_after(); ?>
                 </div>
 
-                <footer <?php hybrid_attr('entry-footer'); ?>>
-                    <?php get_template_part('components/child', 'links'); ?>
-                    <?php wp_link_pages(array(
-                        'before' => '<nav class="page-nav"><p>'.__('Pages:', 'abraham'),
-                        'after'  => '</p></nav>',
-                    )); ?>
-                </footer>
+                <?php get_template_part('components/entry', 'footer'); ?>
 
                 <?php comments_template('', true); ?>
 
@@ -36,7 +31,7 @@
 
     <?php tha_content_while_after(); ?>
 
-            <?php get_template_part('components/loop', get_the_slug() ); ?>
+        <?php get_template_part('components/loop', get_the_slug() ); ?>
 
 <?php
 endif;
