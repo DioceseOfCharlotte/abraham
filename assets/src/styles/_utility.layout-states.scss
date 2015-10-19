@@ -48,3 +48,7 @@
     .u-fixed\@md    { position: fixed!important; }
     .u-static\@md   { position: static!important; }
 }
+
+.shadow-hover:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
+}
