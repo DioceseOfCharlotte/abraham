@@ -39,8 +39,7 @@
 
     <?php tha_content_while_after(); ?>
 
-<div class="u-1/1 u-text-center">
     <?php get_template_part('components/posts', 'pagination'); ?>
-</div>
+    
 <?php
 endif;
