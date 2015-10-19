@@ -1760,6 +1760,13 @@ svg:not(:root) {
     }
 }
 
+@media screen and (min-width: 64em) {
+    .u-mx4\@lg {
+        margin-right: -4rem !important; 
+        margin-left: -4rem !important;
+    }
+}
+
 .u-strip-space {
     margin: 0;
     padding: 0;
