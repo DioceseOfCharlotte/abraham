@@ -34,43 +34,21 @@ function abraham_customize_register($wp_customize) {
     $wp_customize->add_setting(
       'abraham_logo',
       array(
+          'type' => 'theme_mod', // or 'option'
           'default' => '',
-        //'transport'   => 'postMessage'
+          'transport' => 'refresh', // or postMessage
       )
     );
+
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
-           $wp_customize,
-           'custom_logo',
-           array(
-               'label'    => esc_html__('Your Logo', 'abraham'),
-               'section'  => 'title_tagline',
-               'settings' => 'abraham_logo',
-               'context'  => 'abraham-custom-logo',
-           )
-        )
-    );
-
-    $wp_customize->add_setting(
-        'svg_logo',
-        array(
-            'default'    => 1,
-            'capability' => 'edit_theme_options',
-            //'transport'  => 'postMessage',
-        )
-    );
-
-    $wp_customize->add_control(
-        'svg_logo',
-        array(
-            'label'       => __('SVG Logo', 'abraham'),
-            'section'     => 'title_tagline',
-            'settings'    => 'svg_logo',
-            'type'        => 'checkbox',
-            'priority'    => 20,
-            'description' => __('Add an svg file to your "image" folder and rename it "svg-logo.php".', 'abraham'),
-        )
-    );
+            $wp_customize,
+            'custom-logo',
+            array(
+                'section'  => 'title_tagline',
+                'settings' => 'abraham_logo',
+                'label'       => esc_html__('Your Logo', 'abraham'),
+    ) ) );
 
     /* Add the primary color setting. */
     $wp_customize->add_setting(
