@@ -42,14 +42,6 @@ function abraham_setup() {
         ))
     );
 
-    add_theme_support('soil-clean-up');
-
-    //add_theme_support('soil-disable-asset-versioning');
-
-    add_theme_support('soil-disable-trackbacks');
-
-    add_theme_support('soil-nice-search');
-
   // Tell the TinyMCE editor to use a custom stylesheet
     add_editor_style(trailingslashit(get_template_directory_uri()).'assets/css/editor-style.css');
 }
