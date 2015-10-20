@@ -1,5 +1,5 @@
 <?php
-
+add_filter('upload_mimes', 'meh_mime_types');
 add_action('init', 'meh_post_type_layouts_supports');
 add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );
 
@@ -7,6 +7,10 @@ add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );
 add_filter( 'gform_replace_merge_tags', 'meh_reload_form_replace_merge_tag', 10, 2 );
 
 
+function meh_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
 
 function meh_post_type_layouts_supports() {
     add_post_type_support('thursday_packet', 'theme-layouts');
