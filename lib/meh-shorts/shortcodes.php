@@ -21,7 +21,7 @@ function meh_tile_shortcode($atts, $content = null) {
    ), $atts, 'meh_tile');
 
     $output = '
-    <section class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
+    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
         <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
         <div class="card-row mdl-grid u-flex-justify-around">
     ';
