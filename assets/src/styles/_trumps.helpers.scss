@@ -2,27 +2,27 @@
     #HELPERS
 \*------------------------------------*/
 .hidden {
-	display: none !important;
+	display: none ;
 	visibility: hidden;
 }
 
 @include sm {
 	.hidden\@sm {
-		display: none !important;
+		display: none ;
 		visibility: hidden;
 	}
 }
 
 @include md {
 	.hidden\@md {
-		display: none !important;
+		display: none ;
 		visibility: hidden;
 	}
 }
 
 @include lg {
 	.hidden\@lg {
-		display: none !important;
+		display: none ;
 		visibility: hidden;
 	}
 }

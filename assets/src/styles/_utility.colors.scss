@@ -1,85 +1,86 @@
 /* #COLORS
 \*------------------*/
 
+
 /* Text Colors */
-.u-color-inherit, .u-color-inherit * { color: inherit!important; }
+.u-color-inherit, .u-color-inherit * { color: inherit; }
 
 .u-currentcolor,
-.u-currentcolor a { color: currentColor!important; }
+.u-currentcolor a { color: currentColor; }
 
-.u-text-1 { color: $color-1!important; }
-.u-text-2 { color: $color-2!important; }
-.u-text-3 { color: $color-3!important; }
+.u-text-1 { color: $color-1; }
+.u-text-2 { color: $color-2; }
+.u-text-3 { color: $color-3; }
 
-.u-text-black  { color: $black!important; }
-.u-text-gray   { color: $gray!important; }
-.u-text-silver { color: $silver!important; }
-.u-text-white  { color: $white!important; }
+.u-text-black  { color: $black; }
+.u-text-gray   { color: $gray; }
+.u-text-silver { color: $silver; }
+.u-text-white  { color: $white; }
 
-.u-text-muted { color: $text-muted!important; }
+.u-text-muted { color: $text-muted; }
 
 /* Background Colors */
-.u-bg-1 { background-color: $color-1!important; }
-.u-bg-2 { background-color: $color-2!important; }
-.u-bg-3 { background-color: $color-3!important; }
-.u-bg-1-light { background-color: lighten($color-1, 10)!important; }
-.u-bg-2-light { background-color: lighten($color-2, 10)!important; }
-.u-bg-3-light { background-color: lighten($color-3, 10)!important; }
-.u-bg-1-dark { background-color: darken($color-1, 10)!important; }
-.u-bg-2-dark { background-color: darken($color-2, 10)!important; }
-.u-bg-3-dark { background-color: darken($color-3, 10)!important; }
+.u-bg-1 { background-color: $color-1; }
+.u-bg-2 { background-color: $color-2; }
+.u-bg-3 { background-color: $color-3; }
+.u-bg-1-light { background-color: lighten($color-1, 10); }
+.u-bg-2-light { background-color: lighten($color-2, 10); }
+.u-bg-3-light { background-color: lighten($color-3, 10); }
+.u-bg-1-dark { background-color: darken($color-1, 10); }
+.u-bg-2-dark { background-color: darken($color-2, 10); }
+.u-bg-3-dark { background-color: darken($color-3, 10); }
 
-.u-bg-black  { background-color: $black!important; }
-.u-bg-gray   { background-color: $gray!important; }
-.u-bg-silver { background-color: $silver!important; }
-.u-bg-white  { background-color: $white!important; }
-.u-bg-transparent  { background-color: transparent!important; }
+.u-bg-black  { background-color: $black; }
+.u-bg-gray   { background-color: $gray; }
+.u-bg-silver { background-color: $silver; }
+.u-bg-white  { background-color: $white; }
+.u-bg-transparent  { background-color: transparent; }
 
-.u-bg-frost-1 { background-color: $lighten-1!important; }
-.u-bg-frost-2 { background-color: $lighten-2!important; }
-.u-bg-frost-3 { background-color: $lighten-3!important; }
-.u-bg-frost-4 { background-color: $lighten-4!important; }
+.u-bg-frost-1 { background-color: $lighten-1; }
+.u-bg-frost-2 { background-color: $lighten-2; }
+.u-bg-frost-3 { background-color: $lighten-3; }
+.u-bg-frost-4 { background-color: $lighten-4; }
 
-.u-bg-tint-1 { background-color: $darken-1!important; }
-.u-bg-tint-2 { background-color: $darken-2!important; }
-.u-bg-tint-3 { background-color: $darken-3!important; }
-.u-bg-tint-4 { background-color: $darken-4!important; }
+.u-bg-tint-1 { background-color: $darken-1; }
+.u-bg-tint-2 { background-color: $darken-2; }
+.u-bg-tint-3 { background-color: $darken-3; }
+.u-bg-tint-4 { background-color: $darken-4; }
 
-.u-bg-1-glass { background-color: rgba($color-1, 0.90)!important; }
-.u-bg-2-glass { background-color: rgba($color-2, 0.90)!important; }
-.u-bg-3-glass { background-color: rgba($color-3, 0.90)!important; }
+.u-bg-1-glass { background-color: rgba($color-1, 0.90); }
+.u-bg-2-glass { background-color: rgba($color-2, 0.90); }
+.u-bg-3-glass { background-color: rgba($color-3, 0.90); }
 
-.u-bg-1-glass-light { background-color: rgba(lighten($color-1, 10), 0.90)!important; }
-.u-bg-2-glass-light { background-color: rgba(lighten($color-2, 10), 0.90)!important; }
-.u-bg-3-glass-light { background-color: rgba(lighten($color-3, 10), 0.90)!important; }
+.u-bg-1-glass-light { background-color: rgba(lighten($color-1, 10), 0.90); }
+.u-bg-2-glass-light { background-color: rgba(lighten($color-2, 10), 0.90); }
+.u-bg-3-glass-light { background-color: rgba(lighten($color-3, 10), 0.90); }
 
-.u-bg-1-glass-dark { background-color: rgba(darken($color-1, 10), 0.90)!important; }
-.u-bg-2-glass-dark { background-color: rgba(darken($color-2, 10), 0.90)!important; }
-.u-bg-3-glass-dark { background-color: rgba(darken($color-3, 10), 0.90)!important; }
+.u-bg-1-glass-dark { background-color: rgba(darken($color-1, 10), 0.90); }
+.u-bg-2-glass-dark { background-color: rgba(darken($color-2, 10), 0.90); }
+.u-bg-3-glass-dark { background-color: rgba(darken($color-3, 10), 0.90); }
 
-.u-hover-frost-1:hover { background-color: $lighten-1!important; }
-.u-hover-frost-2:hover { background-color: $lighten-2!important; }
-.u-hover-frost-3:hover { background-color: $lighten-3!important; }
-.u-hover-frost-4:hover { background-color: $lighten-4!important; }
+.u-hover-frost-1:hover { background-color: $lighten-1; }
+.u-hover-frost-2:hover { background-color: $lighten-2; }
+.u-hover-frost-3:hover { background-color: $lighten-3; }
+.u-hover-frost-4:hover { background-color: $lighten-4; }
 
-.u-hover-tint-1:hover { background-color: $darken-1!important; }
-.u-hover-tint-2:hover { background-color: $darken-2!important; }
-.u-hover-tint-3:hover { background-color: $darken-3!important; }
-.u-hover-tint-4:hover { background-color: $darken-4!important; }
+.u-hover-tint-1:hover { background-color: $darken-1; }
+.u-hover-tint-2:hover { background-color: $darken-2; }
+.u-hover-tint-3:hover { background-color: $darken-3; }
+.u-hover-tint-4:hover { background-color: $darken-4; }
 
 /* Fill Colors */
-.u-fill-1 { fill: $color-1!important; }
-.u-fill-2 { fill: $color-2!important; }
-.u-fill-3 { fill: $color-3!important; }
+.u-fill-1 { fill: $color-1; }
+.u-fill-2 { fill: $color-2; }
+.u-fill-3 { fill: $color-3; }
 
-.u-fill-1-light { background-color: lighten($color-1, 10)!important; }
-.u-fill-2-light { background-color: lighten($color-2, 10)!important; }
-.u-fill-3-light { background-color: lighten($color-3, 10)!important; }
+.u-fill-1-light { background-color: lighten($color-1, 10); }
+.u-fill-2-light { background-color: lighten($color-2, 10); }
+.u-fill-3-light { background-color: lighten($color-3, 10); }
 
-.u-fill-1-dark { background-color: darken($color-1, 10)!important; }
-.u-fill-2-dark { background-color: darken($color-2, 10)!important; }
-.u-fill-3-dark { background-color: darken($color-3, 10)!important; }
+.u-fill-1-dark { background-color: darken($color-1, 10); }
+.u-fill-2-dark { background-color: darken($color-2, 10); }
+.u-fill-3-dark { background-color: darken($color-3, 10); }
 
 /* Opacity */
 .u-opacity { opacity: $opacity; }
-.u-opacity1 { opacity: 1!important; }
+.u-opacity1 { opacity: 1; }

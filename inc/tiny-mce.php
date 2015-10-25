@@ -122,7 +122,7 @@ function abraham_tiny_mce_formats($args) {
                     array(
                         'title'    => __('Primary Button Raised', 'abraham'),
                         'selector' => 'a',
-                        'classes'  => 'btn mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect',
+                        'classes'  => 'btn u-bg-1 u-text-white mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect',
                         'exact'    => true,
                     ),
                 ),

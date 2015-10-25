@@ -1,131 +1,131 @@
 /* #u-flex OBJECT
 \*------------------------------------*/
 .u-flex {
-	display: flex!important;
+	display: flex;
 }
 
 .u-flex-rev {
-	flex-direction: row-reverse!important;
+	flex-direction: row-reverse;
 }
 
 .u-flex-row-rev {
-	flex-direction: row-reverse!important;
+	flex-direction: row-reverse;
 }
 
 .u-flex-column-rev {
-	flex-direction: column-reverse!important;
+	flex-direction: column-reverse;
 }
 
 .u-flex-column {
-	flex-direction: column!important;
+	flex-direction: column;
 }
 
 .u-flex-row {
-	flex-direction: row!important;
+	flex-direction: row;
 }
 
 .u-flex-wrap {
-	flex-wrap: wrap!important;
+	flex-wrap: wrap;
 }
 
 .u-flex-center {
-	align-items: center!important;
+	align-items: center;
 }
 
 .u-flex-baseline {
-	align-items: baseline!important;
+	align-items: baseline;
 }
 
 .u-flex-stretch {
-	align-items: stretch!important;
+	align-items: stretch;
 }
 
 .u-flex-start {
-	align-items: flex-start!important;
+	align-items: flex-start;
 }
 
 .u-flex-end {
-	align-items: flex-end!important;
+	align-items: flex-end;
 }
 
 .u-flex-justify,
 .u-flex-justify-between {
-	justify-content: space-between!important;
+	justify-content: space-between;
 }
 
 .u-flex-justify-around {
-	justify-content: space-around!important;
+	justify-content: space-around;
 }
 
 .u-flex-justify-center {
-	justify-content: center!important;
+	justify-content: center;
 }
 
 .u-flex-justify-end {
-	justify-content: flex-end!important;
+	justify-content: flex-end;
 }
 
 .u-flexed-start {
-	align-self: flex-start!important;
+	align-self: flex-start;
 }
 
 .u-flexed-end {
-	align-self: flex-end!important;
+	align-self: flex-end;
 }
 
 .u-flexed-center {
-	align-self: center!important;
+	align-self: center;
 }
 
 .u-flexed-auto {
-	flex: 1 1 auto!important;
+	flex: 1 1 auto;
 }
 
 .u-flexed-grow {
-	flex: 1 0 auto!important;
+	flex: 1 0 auto;
 }
 
 .u-flexed-none {
-	flex: none!important;
+	flex: none;
 }
 
 .u-flexed-first {
-	order: -1!important;
+	order: -1;
 }
 
 .u-flexed-last {
-	order: 99999!important;
+	order: 99999;
 }
 
 // small
 @include sm {
 	.u-flex\@sm {
-		display: flex!important;
+		display: flex;
 	}
 
 	.u-flex-column\@sm {
-		flex-direction: column!important;
+		flex-direction: column;
 	}
 }
 
 // medium
 @include md {
 	.u-flex\@md {
-		display: flex!important;
+		display: flex;
 	}
 
 	.u-flex-row\@md {
-		flex-direction: row!important;
+		flex-direction: row;
 	}
 }
 
 // large
 @include lg {
 	.u-flex\@lg {
-		display: flex!important;
+		display: flex;
 	}
 
 	.u-flex-row\@lg {
-		flex-direction: row!important;
+		flex-direction: row;
 	}
 }

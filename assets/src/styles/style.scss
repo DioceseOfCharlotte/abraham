@@ -34,10 +34,11 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 @import 'components.breadcrumbs';
 
+#site {
 @import 'utility.colors';
+@import 'utility.images';
 @import 'utility.flex';
 @import 'utility.headings';
-@import 'utility.images';
 @import 'utility.layout-states';
 @import 'utility.links';
 @import 'utility.spacing';
@@ -47,3 +48,4 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import 'utility.borders';
 
 @import "trumps.helpers";
+}

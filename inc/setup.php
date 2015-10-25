@@ -43,7 +43,7 @@ function abraham_setup() {
     );
 
   // Tell the TinyMCE editor to use a custom stylesheet
-    add_editor_style(trailingslashit(get_template_directory_uri()).'assets/css/editor-style.css');
+    add_editor_style( abraham_get_editor_styles() );
 }
 
 /**
@@ -133,4 +133,20 @@ function abraham_layouts() {
         'post_types'       => array('gravityview'),
         'image'            => '%s/assets/images/3-card-row.svg',
     ));
+}
+
+
+
+function abraham_get_editor_styles() {
+	/* Set up an array for the styles. */
+	$editor_styles = array();
+	/* Add the theme's editor styles. */
+	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'style.css';
+	/* If a child theme, add its editor styles. */
+	if ( is_child_theme() )
+	$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
+	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
+	$editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
+	/* Return the styles. */
+	return $editor_styles;
 }
