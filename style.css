@@ -1453,6 +1453,10 @@ svg:not(:root) {
 #site .u-p0 {
     padding: 0;
 }
+#site .u-px0 {
+    padding-right: 0; 
+    padding-left: 0;
+}
 #site .u-pt0 {
     padding-top: 0;
 }
