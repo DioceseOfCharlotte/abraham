@@ -9,7 +9,6 @@ add_filter( 'gform_replace_merge_tags', 'meh_reload_form_replace_merge_tag', 10,
 
 
 function meh_post_type_layouts_supports() {
-    add_post_type_support('thursday_packet', 'theme-layouts');
     add_post_type_support('gravityview', 'theme-layouts');
     add_post_type_support('sc_event', 'theme-layouts');
     add_post_type_support('cpt_archive', 'theme-layouts');

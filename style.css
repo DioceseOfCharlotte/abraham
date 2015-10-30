@@ -525,9 +525,6 @@ textarea {
 
 select {
     text-transform: none;
-
-    -webkit-appearance: none; 
-    -moz-appearance: none;
 }
 
 select::-ms-expand {
