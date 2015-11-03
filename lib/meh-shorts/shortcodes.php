@@ -21,7 +21,7 @@ function meh_tile_shortcode($atts, $content = null) {
    ), $atts, 'meh_tile');
 
     $output = '
-    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
+    <section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
         <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
         <div class="card-row mdl-grid u-flex-justify-around">
     ';
@@ -68,7 +68,7 @@ function meh_cards_shortcode($atts, $content = null) {
    ), $atts, 'meh_cards');
 
    $output = '
-   <section class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
+   <section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
        <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
        <div class="mdl-grid">';
 
@@ -115,7 +115,7 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row card-columns">';
+    $output = '<section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row card-columns">';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
@@ -157,11 +157,14 @@ function meh_toggles_shortcode($atts, $content = null) {
         'row_intro'    => '',
    ), $atts, 'meh_toggles');
 
-   $output = '
-   <section class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
-       <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
-       <div class="container toggles u-flex u-flex-wrap u-flex-justify-around">';
+$row = 'row-'. get_the_ID();
 
+   ob_start(); ?>
+   <section id="<?php echo $row ?>" class="<?php echo wp_kses_post( $mehsc_atts['row_color'] ); ?> section-row u-p3 u-py4@md">
+       <div id="trigger<?php get_the_ID() ?>" class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center"><?php echo wp_kses_post( $mehsc_atts['row_intro'] ); ?></div>
+       <div class="container toggles u-flex u-flex-wrap u-flex-justify-around">
+
+<?php
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
@@ -174,15 +177,17 @@ $pages = $mehsc_atts['page'];
 $queryToggle = new WP_Query($args);
 while ($queryToggle->have_posts()) : $queryToggle->the_post();
 
-    ob_start();
+
     get_template_part('components/section', 'toggles');
-    $output .= ob_get_clean();
+
 
 endwhile;
+     ?>
 
-    $output .= '</div></section>';
+    </div></section>
 
-    return $output;
-
+<?php
+    return ob_get_clean();
     wp_reset_postdata();
+
 }
