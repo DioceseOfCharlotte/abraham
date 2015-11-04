@@ -115,8 +115,9 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-    $output = '<section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row card-columns">';
-
+ob_start(); ?>
+    <section id="row-' . get_the_ID() . '" class="<?php echo wp_kses_post( $mehsc_atts['row_color'] ); ?> row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast"><?php echo wp_kses_post( $mehsc_atts['row_intro'] ); ?></div><div class="card-row card-columns">';
+<?php
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
@@ -129,15 +130,14 @@ $pages = $mehsc_atts['page'];
     $query2 = new WP_Query($args);
     while ($query2->have_posts()) : $query2->the_post();
 
-    ob_start();
     get_template_part('components/section', 'block');
-    $output .= ob_get_clean();
 
-    endwhile;
+    endwhile; ?>
 
-    $output .= '</div></section>';
+    </div></section>
+    <?php
 
-    return $output;
+    return ob_get_clean();
 
     wp_reset_postdata();
 }
