@@ -5,12 +5,17 @@
 /* Text Colors */
 .u-color-inherit, .u-color-inherit * { color: inherit; }
 
-.u-currentcolor,
-.u-currentcolor a { color: currentColor; }
+.u-currentcolor_a a { color: currentColor; }
+
+.u-currentcolor { color: currentColor; }
 
 .u-text-1 { color: $color-1; }
 .u-text-2 { color: $color-2; }
 .u-text-3 { color: $color-3; }
+
+.u-text-1-dark { color: darken($color-1, 10); }
+.u-text-2-dark { color: darken($color-2, 10); }
+.u-text-3-dark { color: darken($color-3, 10); }
 
 .u-text-black  { color: $black; }
 .u-text-gray   { color: $gray; }
