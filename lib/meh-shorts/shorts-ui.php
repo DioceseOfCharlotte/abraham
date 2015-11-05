@@ -14,7 +14,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
     $abraham_dir = trailingslashit(get_template_directory_uri());
 
     /*
-     * PANEL
+     * TILES
      */
     shortcode_ui_register_for_shortcode(
         'meh_tile',
@@ -27,47 +27,32 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'   => 'Row Color',
                     'attr'    => 'row_color',
                     'type'    => 'select',
-                    'value'   => 'u-bg-white',
-                    'options' => array(
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1 u-text-white'       => 'Primary color',
-                        'u-bg-2 u-text-black'       => 'Secondary color',
-                        'u-bg-silver u-text-black'  => 'Neutral Gray',
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1-glass u-text-white'       => 'Primary glass',
-                        'u-bg-2-glass u-text-black'       => 'Secondary glass',
-                        'u-bg-1-glass-light u-text-white' => 'Primary glass light',
-                        'u-bg-2-glass-light u-text-black' => 'Secondary glass light',
-                        'u-bg-1-glass-dark u-text-white'  => 'Primary glass dark',
-                        'u-bg-2-glass-dark u-text-black'  => 'Secondary glass dark',
-                        'u-bg-frost-4 u-text-black'       => 'Frosted',
-                        'u-bg-tint-4 u-text-white'       => 'Tinted',
-                        'u-bg-transparent'          => 'None',
-                        'u-bg-silver u-text-black' => 'Neutral Gray',
-                    ),
-                    'description' => 'Background color of your row',
-                ),
-
-               array(
-                   'label'   => 'Intro Text',
-                   'attr'    => 'row_intro',
-                   'type'    => 'text',
-                   'description' => 'Introduce your row with a heading',
-                ),
-
-                array(
-                    'label'   => 'Tiles Per Row',
-                    'attr'    => 'width',
-                    'type'    => 'select',
-                    'value'   => 'u-1/1@md',
-                    'options' => array(
-                        'u-1/1@md' => 'One',
-                        'u-1/2@md' => 'Two',
-                        'u-1/3@md' => 'Three',
-                        'u-1/4@md' => 'Four',
-                    ),
-                    'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
-                ),
+                    'options'     => array(
+        					                ''      => esc_html__( 'None', 'abraham' ),
+        	            'u-bg-white u-text-black'   => esc_html__( 'White', 'abraham' ),
+        	            'u-bg-1 u-text-white'       => esc_html__( 'Primary color', 'abraham' ),
+        	            'u-bg-2 u-text-black'       => esc_html__( 'Secondary color', 'abraham' ),
+        	            'u-bg-1-glass u-text-white'       => esc_html__( 'Glass 1', 'abraham' ),
+        	            'u-bg-2-glass u-text-black'       => esc_html__( 'Glass 2', 'abraham' ),
+        	            'u-bg-1-glass-light u-text-white' => esc_html__( 'Glass 1 light', 'abraham' ),
+        	            'u-bg-2-glass-light u-text-black' => esc_html__( 'Glass 2 light', 'abraham' ),
+        	            'u-bg-1-glass-dark u-text-white'  => esc_html__( 'Glass 1 dark', 'abraham' ),
+        	            'u-bg-2-glass-dark u-text-black'  => esc_html__( 'Glass 2 dark', 'abraham' ),
+        	            'u-bg-frost-4 u-text-black'       => esc_html__( 'Frosted', 'abraham' ),
+        	            'u-bg-tint-4 u-text-white'        => esc_html__( 'Tinted', 'abraham' ),
+        	            'u-bg-silver u-text-black'        => esc_html__( 'Neutral Gray', 'abraham' ),
+        			),
+        		),
+        		array(
+        			'label'  => esc_html__( 'Intro Text', 'abraham' ),
+        			'attr'   => 'row_intro',
+        			'type'   => 'text',
+        			'encode' => true,
+        			'meta'   => array(
+        				'placeholder' => esc_html__( 'Introduce your row with a heading!', 'abraham' ),
+        				'data-test'   => 1,
+        			),
+        		),
 
                 array(
                     'label'    => 'Select Page',
@@ -81,62 +66,45 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
    );
 
    /*
-    * PANEL
+    * CARDS
     */
    shortcode_ui_register_for_shortcode(
        'meh_cards',
        array(
            'label'         => 'Cards',
            'listItemImage' => 'dashicons-schedule',
-           // Attribute model expects 'attr', 'type' and 'label'
-           // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
            'attrs' => array(
 
                array(
                    'label'   => 'Row Color',
                    'attr'    => 'row_color',
                    'type'    => 'select',
-                   'value'   => 'u-bg-white',
-                   'options' => array(
-                       'u-bg-white u-text-black'   => 'White',
-                       'u-bg-1 u-text-white'       => 'Primary color',
-                       'u-bg-2 u-text-black'       => 'Secondary color',
-                       'u-bg-silver u-text-black'  => 'Neutral Gray',
-                       'u-bg-white u-text-black'   => 'White',
-                       'u-bg-1-glass u-text-white'       => 'Primary glass',
-                       'u-bg-2-glass u-text-black'       => 'Secondary glass',
-                       'u-bg-1-glass-light u-text-white' => 'Primary glass light',
-                       'u-bg-2-glass-light u-text-black' => 'Secondary glass light',
-                       'u-bg-1-glass-dark u-text-white'  => 'Primary glass dark',
-                       'u-bg-2-glass-dark u-text-black'  => 'Secondary glass dark',
-                       'u-bg-frost-4 u-text-black'       => 'Frosted',
-                       'u-bg-tint-4 u-text-white'       => 'Tinted',
-                       'u-bg-transparent'          => 'None',
-                       'u-bg-silver u-text-black' => 'Neutral Gray',
-                   ),
-                   'description' => 'Background color of your row',
-               ),
-
-              array(
-                  'label'   => 'Intro Text',
-                  'attr'    => 'row_intro',
-                  'type'    => 'text',
-                  'description' => 'Introduce your row with a heading',
-               ),
-
-               array(
-                   'label'   => 'Cards Per Row',
-                   'attr'    => 'width',
-                   'type'    => 'select',
-                   'value'   => 'u-1/1@md',
-                   'options' => array(
-                       'u-1/1@md' => 'One',
-                       'u-1/2@md' => 'Two',
-                       'u-1/3@md' => 'Three',
-                       'u-1/4@md' => 'Four',
-                   ),
-                   'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
-               ),
+                   'options'     => array(
+       					                ''      => esc_html__( 'None', 'abraham' ),
+       	            'u-bg-white u-text-black'   => esc_html__( 'White', 'abraham' ),
+       	            'u-bg-1 u-text-white'       => esc_html__( 'Primary color', 'abraham' ),
+       	            'u-bg-2 u-text-black'       => esc_html__( 'Secondary color', 'abraham' ),
+       	            'u-bg-1-glass u-text-white'       => esc_html__( 'Glass 1', 'abraham' ),
+       	            'u-bg-2-glass u-text-black'       => esc_html__( 'Glass 2', 'abraham' ),
+       	            'u-bg-1-glass-light u-text-white' => esc_html__( 'Glass 1 light', 'abraham' ),
+       	            'u-bg-2-glass-light u-text-black' => esc_html__( 'Glass 2 light', 'abraham' ),
+       	            'u-bg-1-glass-dark u-text-white'  => esc_html__( 'Glass 1 dark', 'abraham' ),
+       	            'u-bg-2-glass-dark u-text-black'  => esc_html__( 'Glass 2 dark', 'abraham' ),
+       	            'u-bg-frost-4 u-text-black'       => esc_html__( 'Frosted', 'abraham' ),
+       	            'u-bg-tint-4 u-text-white'        => esc_html__( 'Tinted', 'abraham' ),
+       	            'u-bg-silver u-text-black'        => esc_html__( 'Neutral Gray', 'abraham' ),
+       			),
+       		),
+       		array(
+       			'label'  => esc_html__( 'Intro Text', 'abraham' ),
+       			'attr'   => 'row_intro',
+       			'type'   => 'text',
+       			'encode' => true,
+       			'meta'   => array(
+       				'placeholder' => esc_html__( 'Introduce your row with a heading!', 'abraham' ),
+       				'data-test'   => 1,
+       			),
+       		),
 
                array(
                    'label'   => 'Content to Show',
@@ -182,56 +150,39 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
         'meh_block',
         array(
             'label'         => 'Block',
-            'listItemImage' => 'dashicons-schedule',
-            // Attribute model expects 'attr', 'type' and 'label'
-            // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
+            'listItemImage' => 'dashicons-align-center',
             'attrs' => array(
 
                 array(
                     'label'   => 'Row Color',
                     'attr'    => 'row_color',
                     'type'    => 'select',
-                    'value'   => 'u-bg-white',
-                    'options' => array(
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1 u-text-white'       => 'Primary color',
-                        'u-bg-2 u-text-black'       => 'Secondary color',
-                        'u-bg-silver u-text-black'  => 'Neutral Gray',
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1-glass u-text-white'       => 'Primary glass',
-                        'u-bg-2-glass u-text-black'       => 'Secondary glass',
-                        'u-bg-1-glass-light u-text-white' => 'Primary glass light',
-                        'u-bg-2-glass-light u-text-black' => 'Secondary glass light',
-                        'u-bg-1-glass-dark u-text-white'  => 'Primary glass dark',
-                        'u-bg-2-glass-dark u-text-black'  => 'Secondary glass dark',
-                        'u-bg-frost-4 u-text-black'       => 'Frosted',
-                        'u-bg-tint-4 u-text-white'       => 'Tinted',
-                        'u-bg-transparent'          => 'None',
-                        'u-bg-silver u-text-black' => 'Neutral Gray',
-                    ),
-                    'description' => 'Background color of your row',
-                ),
-
-               array(
-                   'label'   => 'Intro Text',
-                   'attr'    => 'row_intro',
-                   'type'    => 'text',
-                   'description' => 'Introduce your row with a heading',
-                ),
-
-                array(
-                    'label'   => 'Blocks Per Row',
-                    'attr'    => 'width',
-                    'type'    => 'select',
-                    'value'   => 'u-1/1@md',
-                    'options' => array(
-                        'u-1/1@md' => 'One',
-                        'u-1/2@md' => 'Two',
-                        'u-1/3@md' => 'Three',
-                        'u-1/4@md' => 'Four',
-                    ),
-                    'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
-                ),
+                    'options'     => array(
+        					                ''      => esc_html__( 'None', 'abraham' ),
+        	            'u-bg-white u-text-black'   => esc_html__( 'White', 'abraham' ),
+        	            'u-bg-1 u-text-white'       => esc_html__( 'Primary color', 'abraham' ),
+        	            'u-bg-2 u-text-black'       => esc_html__( 'Secondary color', 'abraham' ),
+        	            'u-bg-1-glass u-text-white'       => esc_html__( 'Glass 1', 'abraham' ),
+        	            'u-bg-2-glass u-text-black'       => esc_html__( 'Glass 2', 'abraham' ),
+        	            'u-bg-1-glass-light u-text-white' => esc_html__( 'Glass 1 light', 'abraham' ),
+        	            'u-bg-2-glass-light u-text-black' => esc_html__( 'Glass 2 light', 'abraham' ),
+        	            'u-bg-1-glass-dark u-text-white'  => esc_html__( 'Glass 1 dark', 'abraham' ),
+        	            'u-bg-2-glass-dark u-text-black'  => esc_html__( 'Glass 2 dark', 'abraham' ),
+        	            'u-bg-frost-4 u-text-black'       => esc_html__( 'Frosted', 'abraham' ),
+        	            'u-bg-tint-4 u-text-white'        => esc_html__( 'Tinted', 'abraham' ),
+        	            'u-bg-silver u-text-black'        => esc_html__( 'Neutral Gray', 'abraham' ),
+        			),
+        		),
+        		array(
+        			'label'  => esc_html__( 'Intro Text', 'abraham' ),
+        			'attr'   => 'row_intro',
+        			'type'   => 'text',
+        			'encode' => true,
+        			'meta'   => array(
+        				'placeholder' => esc_html__( 'Introduce your row with a heading!', 'abraham' ),
+        				'data-test'   => 1,
+        			),
+        		),
 
                 array(
                     'label'   => 'Content to Show',
@@ -254,19 +205,6 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                         'show_img' => 'Show Image',
                         'hide_img' => 'Hide Image',
                    ),
-               ),
-
-                array(
-                    'label'   => 'Block Type',
-                    'attr'    => 'block_type',
-                    'type'    => 'select',
-                    'value'   => 'block',
-                    'options' => array(
-                        'card-block' => 'Card',
-                        'flag-block'  => 'Panel',
-                   ),
-                    'multiple'    => false,
-                    'description' => '*Block = Large image on top. *Panel = Small image to the left.',
                ),
 
                 array(
@@ -294,33 +232,32 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'   => 'Row Color',
                     'attr'    => 'row_color',
                     'type'    => 'select',
-                    'value'   => 'u-bg-white',
-                    'options' => array(
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1 u-text-white'       => 'Primary color',
-                        'u-bg-2 u-text-black'       => 'Secondary color',
-                        'u-bg-silver u-text-black'  => 'Neutral Gray',
-                        'u-bg-white u-text-black'   => 'White',
-                        'u-bg-1-glass u-text-white'       => 'Primary glass',
-                        'u-bg-2-glass u-text-black'       => 'Secondary glass',
-                        'u-bg-1-glass-light u-text-white' => 'Primary glass light',
-                        'u-bg-2-glass-light u-text-black' => 'Secondary glass light',
-                        'u-bg-1-glass-dark u-text-white'  => 'Primary glass dark',
-                        'u-bg-2-glass-dark u-text-black'  => 'Secondary glass dark',
-                        'u-bg-frost-4 u-text-black'       => 'Frosted',
-                        'u-bg-tint-4 u-text-white'       => 'Tinted',
-                        'u-bg-transparent'          => 'None',
-                        'u-bg-silver u-text-black' => 'Neutral Gray',
-                    ),
-                    'description' => 'Background color of your row',
-                ),
-
-               array(
-                   'label'   => 'Intro Text',
-                   'attr'    => 'row_intro',
-                   'type'    => 'text',
-                   'description' => 'Introduce your row with a heading',
-                ),
+                    'options'     => array(
+        					                ''      => esc_html__( 'None', 'abraham' ),
+        	            'u-bg-white u-text-black'   => esc_html__( 'White', 'abraham' ),
+        	            'u-bg-1 u-text-white'       => esc_html__( 'Primary color', 'abraham' ),
+        	            'u-bg-2 u-text-black'       => esc_html__( 'Secondary color', 'abraham' ),
+        	            'u-bg-1-glass u-text-white'       => esc_html__( 'Glass 1', 'abraham' ),
+        	            'u-bg-2-glass u-text-black'       => esc_html__( 'Glass 2', 'abraham' ),
+        	            'u-bg-1-glass-light u-text-white' => esc_html__( 'Glass 1 light', 'abraham' ),
+        	            'u-bg-2-glass-light u-text-black' => esc_html__( 'Glass 2 light', 'abraham' ),
+        	            'u-bg-1-glass-dark u-text-white'  => esc_html__( 'Glass 1 dark', 'abraham' ),
+        	            'u-bg-2-glass-dark u-text-black'  => esc_html__( 'Glass 2 dark', 'abraham' ),
+        	            'u-bg-frost-4 u-text-black'       => esc_html__( 'Frosted', 'abraham' ),
+        	            'u-bg-tint-4 u-text-white'        => esc_html__( 'Tinted', 'abraham' ),
+        	            'u-bg-silver u-text-black'        => esc_html__( 'Neutral Gray', 'abraham' ),
+        			),
+        		),
+        		array(
+        			'label'  => esc_html__( 'Intro Text', 'abraham' ),
+        			'attr'   => 'row_intro',
+        			'type'   => 'text',
+        			'encode' => true,
+        			'meta'   => array(
+        				'placeholder' => esc_html__( 'Introduce your row with a heading!', 'abraham' ),
+        				'data-test'   => 1,
+        			),
+        		),
 
                 array(
                     'label'   => 'Content to Show',
@@ -344,3 +281,56 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
        )
    );
 }
+
+
+/*
+ * SLIDES
+ */
+shortcode_ui_register_for_shortcode(
+    'meh_slides',
+    array(
+        'label'         => 'Slides',
+        'listItemImage' => 'dashicons-editor-insertmore',
+        'attrs' => array(
+
+            array(
+                'label'   => 'Row Color',
+                'attr'    => 'row_color',
+                'type'    => 'select',
+                'options'     => array(
+                                        ''      => esc_html__( 'None', 'abraham' ),
+                    'u-bg-white u-text-black'   => esc_html__( 'White', 'abraham' ),
+                    'u-bg-1 u-text-white'       => esc_html__( 'Primary color', 'abraham' ),
+                    'u-bg-2 u-text-black'       => esc_html__( 'Secondary color', 'abraham' ),
+                    'u-bg-1-glass u-text-white'       => esc_html__( 'Glass 1', 'abraham' ),
+                    'u-bg-2-glass u-text-black'       => esc_html__( 'Glass 2', 'abraham' ),
+                    'u-bg-1-glass-light u-text-white' => esc_html__( 'Glass 1 light', 'abraham' ),
+                    'u-bg-2-glass-light u-text-black' => esc_html__( 'Glass 2 light', 'abraham' ),
+                    'u-bg-1-glass-dark u-text-white'  => esc_html__( 'Glass 1 dark', 'abraham' ),
+                    'u-bg-2-glass-dark u-text-black'  => esc_html__( 'Glass 2 dark', 'abraham' ),
+                    'u-bg-frost-4 u-text-black'       => esc_html__( 'Frosted', 'abraham' ),
+                    'u-bg-tint-4 u-text-white'        => esc_html__( 'Tinted', 'abraham' ),
+                    'u-bg-silver u-text-black'        => esc_html__( 'Neutral Gray', 'abraham' ),
+                ),
+            ),
+            array(
+                'label'  => esc_html__( 'Intro Text', 'abraham' ),
+                'attr'   => 'row_intro',
+                'type'   => 'text',
+                'encode' => true,
+                'meta'   => array(
+                    'placeholder' => esc_html__( 'Introduce your row with a heading!', 'abraham' ),
+                    'data-test'   => 1,
+                ),
+            ),
+
+            array(
+                'label'    => 'Select Page',
+                'attr'     => 'page',
+                'type'     => 'post_select',
+                'query'    => array('post_type' => array( 'page', 'cpt_archive', 'department' )),
+                'multiple' => true,
+           ),
+       ),
+   )
+);

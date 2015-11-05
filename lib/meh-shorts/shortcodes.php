@@ -6,10 +6,11 @@ function meh_add_shortcodes() {
     add_shortcode('meh_tile', 'meh_tile_shortcode');
     add_shortcode('meh_cards', 'meh_cards_shortcode');
     add_shortcode('meh_toggles', 'meh_toggles_shortcode');
+    add_shortcode('meh_slides', 'meh_slides_shortcode');
 }
 
 /**
- * BLOCK.
+ * TILES
  */
 function meh_tile_shortcode($atts, $content = null) {
     global $mehsc_atts;
@@ -21,7 +22,7 @@ function meh_tile_shortcode($atts, $content = null) {
    ), $atts, 'meh_tile');
 
     $output = '
-    <section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
+    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
         <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
         <div class="card-row mdl-grid u-flex-justify-around">
     ';
@@ -68,7 +69,7 @@ function meh_cards_shortcode($atts, $content = null) {
    ), $atts, 'meh_cards');
 
    $output = '
-   <section id="row-' . get_the_ID() . '" class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
+   <section class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
        <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
        <div class="mdl-grid">';
 
@@ -115,9 +116,8 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-ob_start(); ?>
-    <section id="row-' . get_the_ID() . '" class="<?php echo wp_kses_post( $mehsc_atts['row_color'] ); ?> row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast"><?php echo wp_kses_post( $mehsc_atts['row_intro'] ); ?></div><div class="card-row card-columns">';
-<?php
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row py3 py4@md pages-highlight"><div class="mdl-typography--display-2-color-contrast">' . $mehsc_atts['row_intro'] . '</div><div class="card-row card-columns">';
+
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
@@ -130,14 +130,15 @@ $pages = $mehsc_atts['page'];
     $query2 = new WP_Query($args);
     while ($query2->have_posts()) : $query2->the_post();
 
+    ob_start();
     get_template_part('components/section', 'block');
+    $output .= ob_get_clean();
 
-    endwhile; ?>
+    endwhile;
 
-    </div></section>
-    <?php
+    $output .= '</div></section>';
 
-    return ob_get_clean();
+    return $output;
 
     wp_reset_postdata();
 }
@@ -157,14 +158,11 @@ function meh_toggles_shortcode($atts, $content = null) {
         'row_intro'    => '',
    ), $atts, 'meh_toggles');
 
-$row = 'row-'. get_the_ID();
+   $output = '
+   <section class="' . $mehsc_atts['row_color'] . ' section-row u-p3 u-py4@md">
+       <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
+       <div class="container toggles u-flex u-flex-wrap u-flex-justify-around">';
 
-   ob_start(); ?>
-   <section id="<?php echo $row ?>" class="<?php echo wp_kses_post( $mehsc_atts['row_color'] ); ?> section-row u-p3 u-py4@md">
-       <div id="trigger<?php get_the_ID() ?>" class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center"><?php echo wp_kses_post( $mehsc_atts['row_intro'] ); ?></div>
-       <div class="container toggles u-flex u-flex-wrap u-flex-justify-around">
-
-<?php
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
@@ -177,17 +175,57 @@ $pages = $mehsc_atts['page'];
 $queryToggle = new WP_Query($args);
 while ($queryToggle->have_posts()) : $queryToggle->the_post();
 
-
+    ob_start();
     get_template_part('components/section', 'toggles');
-
+    $output .= ob_get_clean();
 
 endwhile;
-     ?>
 
-    </div></section>
+    $output .= '</div></section>';
 
-<?php
-    return ob_get_clean();
+    return $output;
+
     wp_reset_postdata();
+}
 
+/**
+ * BLOCK.
+ */
+function meh_slides_shortcode($atts, $content = null) {
+    global $mehsc_atts;
+    $mehsc_atts = shortcode_atts(array(
+        'row_color'    => '',
+        'row_intro'    => '',
+        'page'         => '',
+   ), $atts, 'meh_slides');
+
+    $output = '
+    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
+        <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
+        <div class="card-row gallery js-flickity" data-flickity-options=\'{ "freeScroll": true, "wrapAround": true }\'>
+    ';
+
+// Get pages set (if any)
+$pages = $mehsc_atts['page'];
+
+    $args = array(
+        'post_type' => array( 'page', 'cpt_archive', 'department' ),
+        'post__in'  => explode(',', $pages),
+        'orderby'   => 'post__in',
+    );
+
+    $querySlides = new WP_Query($args);
+    while ($querySlides->have_posts()) : $querySlides->the_post();
+
+    ob_start();
+    get_template_part('components/section', 'slides');
+    $output .= ob_get_clean();
+
+    endwhile;
+
+    $output .= '</div></section>';
+
+    return $output;
+
+    wp_reset_postdata();
 }
