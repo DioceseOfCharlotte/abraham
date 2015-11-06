@@ -27,3 +27,14 @@ input[type="submit"] {
         background-color: $darken-3;
     }
 }
+
+input[type=button], input[type=reset], input[type=submit] {
+	border: 1px solid #009688;
+	color: #009688;
+	transition: all 0.2s $animation-curve-default;
+}
+
+input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
+	background-color: #009688;
+	color: white;
+}

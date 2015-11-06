@@ -667,8 +667,10 @@ svg:not(:root) {
 #site .u-color-inherit * {
     color: inherit;
 }
-#site .u-currentcolor,
-#site .u-currentcolor a {
+#site .u-currentcolor_a a {
+    color: currentColor;
+}
+#site .u-currentcolor {
     color: currentColor;
 }
 #site .u-text-1 {
@@ -679,6 +681,15 @@ svg:not(:root) {
 }
 #site .u-text-3 {
     color: #ffd870;
+}
+#site .u-text-1-dark {
+    color: #003066;
+}
+#site .u-text-2-dark {
+    color: #2e7555;
+}
+#site .u-text-3-dark {
+    color: #ffca3d;
 }
 #site .u-text-black {
     color: #111;

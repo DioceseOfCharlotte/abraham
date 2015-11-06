@@ -6,10 +6,11 @@ function meh_add_shortcodes() {
     add_shortcode('meh_tile', 'meh_tile_shortcode');
     add_shortcode('meh_cards', 'meh_cards_shortcode');
     add_shortcode('meh_toggles', 'meh_toggles_shortcode');
+    add_shortcode('meh_slides', 'meh_slides_shortcode');
 }
 
 /**
- * BLOCK.
+ * TILES
  */
 function meh_tile_shortcode($atts, $content = null) {
     global $mehsc_atts;
@@ -179,6 +180,48 @@ while ($queryToggle->have_posts()) : $queryToggle->the_post();
     $output .= ob_get_clean();
 
 endwhile;
+
+    $output .= '</div></section>';
+
+    return $output;
+
+    wp_reset_postdata();
+}
+
+/**
+ * BLOCK.
+ */
+function meh_slides_shortcode($atts, $content = null) {
+    global $mehsc_atts;
+    $mehsc_atts = shortcode_atts(array(
+        'row_color'    => '',
+        'row_intro'    => '',
+        'page'         => '',
+   ), $atts, 'meh_slides');
+
+    $output = '
+    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
+        <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
+        <div class="card-row gallery js-flickity" data-flickity-options=\'{ "wrapAround": true }\'>
+    ';
+
+// Get pages set (if any)
+$pages = $mehsc_atts['page'];
+
+    $args = array(
+        'post_type' => array( 'page', 'cpt_archive', 'department' ),
+        'post__in'  => explode(',', $pages),
+        'orderby'   => 'post__in',
+    );
+
+    $querySlides = new WP_Query($args);
+    while ($querySlides->have_posts()) : $querySlides->the_post();
+
+    ob_start();
+    get_template_part('components/section', 'slides');
+    $output .= ob_get_clean();
+
+    endwhile;
 
     $output .= '</div></section>';
 
