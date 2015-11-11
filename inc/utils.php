@@ -22,7 +22,7 @@ function meh_template_hierarchy($templates) {
     } elseif (is_singular()) {
         $templates = array_merge(array("content/content-single.php"), $templates);
         $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
-        $templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
+        //$templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
     }
 
     return $templates;

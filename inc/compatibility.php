@@ -1,10 +1,10 @@
 <?php
 
 add_action('init', 'meh_post_type_layouts_supports');
-add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );
+//add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_script', 100 );
 
 // Gravity Forms
-add_filter( 'gform_replace_merge_tags', 'meh_reload_form_replace_merge_tag', 10, 2 );
+//add_filter( 'gform_replace_merge_tags', 'meh_reload_form_replace_merge_tag', 10, 2 );
 
 
 
@@ -14,9 +14,9 @@ function meh_post_type_layouts_supports() {
     add_post_type_support('cpt_archive', 'theme-layouts');
 }
 
-function wpdocs_dequeue_script() {
-wp_dequeue_style( 'sc-events' );
-}
+// function wpdocs_dequeue_script() {
+// wp_dequeue_style( 'sc-events' );
+// }
 
 
 // function autologin($user_id, $config, $entry, $password) {
@@ -24,17 +24,17 @@ wp_dequeue_style( 'sc-events' );
 // }
 
 
-function meh_reload_form_replace_merge_tag($text, $form) {
-
-    preg_match_all('/{(reload_form):?([\s\w.,!?\'"]*)}/mi', $text, $matches, PREG_SET_ORDER);
-
-    if(empty($matches))
-        return $text;
-
-    $link_text = rgar($matches[0], 2) ? rgar($matches[0], 2) : 'Reload Form';
-    $reload_link = '<a href="" class="btn btn--default button--colored gws-reload-form">' . $link_text . ' <i class="material-icons">&#xE147;</i></a>';
-    $text = str_replace(rgar($matches[0], 0), $reload_link, $text);
-
-    return $text;
-
-}
+// function meh_reload_form_replace_merge_tag($text, $form) {
+//
+//     preg_match_all('/{(reload_form):?([\s\w.,!?\'"]*)}/mi', $text, $matches, PREG_SET_ORDER);
+//
+//     if(empty($matches))
+//         return $text;
+//
+//     $link_text = rgar($matches[0], 2) ? rgar($matches[0], 2) : 'Reload Form';
+//     $reload_link = '<a href="" class="btn btn--default button--colored gws-reload-form">' . $link_text . ' <i class="material-icons">&#xE147;</i></a>';
+//     $text = str_replace(rgar($matches[0], 0), $reload_link, $text);
+//
+//     return $text;
+//
+// }

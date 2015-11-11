@@ -166,9 +166,6 @@ class Attr_Trumps {
     }
 
 
-public function abe_layout() {
-    return hybrid_get_theme_layout('theme_layout');
-}
 
     /* === OBJECTS === */
 

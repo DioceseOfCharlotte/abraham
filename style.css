@@ -361,6 +361,22 @@ input[type="submit"].active {
     background-color: rgba(13, 16, 18, 0.5);
 }
 
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    border: 1px solid #009688;
+    color: #009688;
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+    color: white; 
+    background-color: #009688;
+}
+
 /* #LISTS
 \*------------------------------------*/
 ol,
@@ -933,6 +949,11 @@ svg:not(:root) {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+#site .u-flex-nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 #site .u-flex-center {
     -webkit-align-items: center;
