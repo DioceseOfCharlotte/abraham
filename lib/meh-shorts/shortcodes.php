@@ -199,11 +199,13 @@ function meh_slides_shortcode($atts, $content = null) {
         'page'         => '',
    ), $atts, 'meh_slides');
 
-    $output = '
-    <section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' section-row u-py3 u-py4@md">';
+    if ($mehsc_atts['row_intro']) {
+    $output .= '
         <div class="mdl-typography--display-2-color-contrast u-mb3 u-mb4@md u-text-center">' . $mehsc_atts['row_intro'] . '</div>
         <div class="card-row gallery js-flickity" data-flickity-options=\'{ "wrapAround": true, "pageDots": false, "freeScroll": true }\'>
     ';
+    }
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
