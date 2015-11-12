@@ -8,8 +8,6 @@
 $abraham_includes = array(
     // 3rd party libraries
     'lib/hybrid-core/hybrid.php',       // Hybrid Core library
-    'lib/meh-shorts/shortcodes.php',    // Shortcodes
-    'lib/meh-shorts/shorts-ui.php',     // Shortcake interface
     'lib/tha-theme-hooks.php',          // Template hooks
     // Theme specific includes
     'inc/setup.php',                     // Initial theme setup
