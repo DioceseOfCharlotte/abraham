@@ -14,7 +14,7 @@ var ready = function ( fn ) {
 
 };
 
-// Example
+
 ready(function() {
   var first_tab = document.getElementsByClassName("mdl-tabs__tab")[0];
   var first_panel = document.getElementsByClassName("mdl-tabs__panel")[0];
