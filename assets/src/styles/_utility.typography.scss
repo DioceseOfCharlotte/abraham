@@ -1,6 +1,5 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------*/
-
 .u-small {
     font-size: 80%;
 }
@@ -67,11 +66,11 @@
 
 .u-list-reset {
     list-style: none;
+
     > ul,
     > li {
         list-style: none;
         padding-left: 0;
         margin-left: 0;
     }
-
 }

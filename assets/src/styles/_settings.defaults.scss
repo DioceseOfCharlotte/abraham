@@ -80,7 +80,6 @@ $button-padding-y: 0.5rem;
 $button-padding-x: 1rem;
 $container-width: 64em;
 $container-wide: 84em;
-
 $darken-1: rgba($blue-grey-900,0.0625);
 $darken-2: rgba($blue-grey-900,0.25);
 $darken-3: rgba($blue-grey-900,0.5);
@@ -89,33 +88,24 @@ $lighten-1: rgba($blue-grey-50,0.0625);
 $lighten-2: rgba($blue-grey-50,0.25);
 $lighten-3: rgba($blue-grey-50,0.5);
 $lighten-4: rgba($blue-grey-50,0.8);
-
 $border-width: 4px;
 $border-radius: 2px;
 $border-color: $darken-4;
-
 $table-header-font-weight: $bold-font-weight;
 $table-cell-padding-x: $space-2;
 $table-cell-padding-y: 0.25rem;
-
 $opacity: 0.7;
-
 $body-color: $color-text;
 $body-background-color: $white;
-
 $link-color: $blue;
 $link-text-decoration: none;
 $link-hover-text-decoration: none;
-
 $pre-background-color: transparent;
-
 $form-element-background-color: transparent !default;
 $form-element-min-height: if(unitless($line-height), #{$line-height}em, if(unit($line-height) != '%', $line-height, null)) !default;
-
 
 // ANIMATION
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
-
 $animation-curve-default: $animation-curve-fast-out-slow-in !default;

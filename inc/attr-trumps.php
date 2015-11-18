@@ -50,14 +50,14 @@ class Attr_Trumps {
             'content_archive'         => '',
             // ENTRY
             'post'                    => '',
-			'post_archive'            => '',
+            'post_archive'            => '',
             'post_featured'           => '',
             'post_wide'               => '',
 
             'page_header'             => '',
 
             'entry_title'             => '',
-            'page_title'    		  => '',
+            'page_title'              => '',
             'archive_description'     => '',
 
             'entry_header'            => '',
@@ -81,14 +81,14 @@ class Attr_Trumps {
 
             // SIDEBAR
             'sidebar_primary'         => '',
-			'sidebar_footer'          => '',
+            'sidebar_footer'          => '',
             'sidebar_horizontal'      => '',
             'sidebar_right'           => '',
             'sidebar_left'            => '',
 
-			'widgets'                 => '',
-			'primary_widgets'         => '',
-			'footer_widgets'          => '',
+            'widgets'                 => '',
+            'primary_widgets'         => '',
+            'footer_widgets'          => '',
 
             // COMMENTS
             'comments_area'           => '',
@@ -114,7 +114,7 @@ class Attr_Trumps {
         // CONTAINERS
         add_filter('hybrid_attr_body',                  array($this, 'body'));
         add_filter('hybrid_attr_site_container',        array($this, 'site_container'));
-        add_filter('hybrid_attr_layout',        array($this, 'layout'));
+        add_filter('hybrid_attr_layout',                array($this, 'layout'));
         add_filter('hybrid_attr_grid',                  array($this, 'grid'));
 
         // SITE HEADER
@@ -148,7 +148,7 @@ class Attr_Trumps {
         // SIDEBAR
         add_filter('hybrid_attr_sidebar',               array($this, 'sidebar'), 10, 2);
 
-		add_filter('hybrid_attr_widgets',  				array($this, 'widgets'), 10, 2);
+        add_filter('hybrid_attr_widgets',               array($this, 'widgets'), 10, 2);
 
         // FOOTER
         add_filter('hybrid_attr_footer',                array($this, 'footer'));
@@ -159,10 +159,10 @@ class Attr_Trumps {
         add_filter('nav_menu_link_attributes',          array($this, 'menu_link'), 10, 3);
 
         add_filter ('wp_nav_menu',                      array($this, 'nav_menu_filters'));
-        add_filter('nav_menu_css_class' ,               array($this, 'menu_item') , 10 , 2);
+        add_filter('nav_menu_css_class',                array($this, 'menu_item'), 10, 2);
 
-        add_filter('gravityview/render/container/class',  	     array($this, 'gv_container'), 10, 1);
-        add_filter('gravityview_entry_class',  			         array($this, 'gv_entry'), 10, 3);
+        add_filter('gravityview/render/container/class',            array($this, 'gv_container'), 10, 1);
+        add_filter('gravityview_entry_class',                       array($this, 'gv_entry'), 10, 3);
     }
 
 
@@ -186,7 +186,7 @@ class Attr_Trumps {
         if (is_user_logged_in()) :
             $attr['class']      = $this->args['site_container_loggedin'];
         else :
-            $attr['class']   = $this->args['site_container'];
+            $attr['class']      = $this->args['site_container'];
         endif;
 
         return $attr;
@@ -309,25 +309,25 @@ class Attr_Trumps {
             $attr['class']      .= " {$this->args['sidebar_primary']}";
 
         }
-		if ('footer' === $context) {
-		          $attr['class']      = $this->args['sidebar_footer'];
+        if ('footer' === $context) {
+                  $attr['class']      = $this->args['sidebar_footer'];
         }
         return $attr;
     }
 
-	public function widgets($attr, $context) {
-		if (empty($context)) {
+    public function widgets($attr, $context) {
+        if (empty($context)) {
             return $attr;
         }
         if ($this->args['widgets']) {
             $attr['class']      = $this->args['widgets'];
 
-		if ('footer' === $context) {
+        if ('footer' === $context) {
             $attr['class']      .= " {$this->args['footer_widgets']}";
-		}
-		if ('primary' === $context) {
+        }
+        if ('primary' === $context) {
             $attr['class']      .= " {$this->args['primary_widgets']}";
-		}
+        }
 
         return $attr;
     }
@@ -420,8 +420,8 @@ class Attr_Trumps {
         global $post;
         $featured_post = get_post_meta( $post->ID, '_featured', true );
 
-    	if (is_singular()) :
-    		$attr['class']      .= " {$this->args['post']}";
+        if (is_singular()) :
+            $attr['class']      .= " {$this->args['post']}";
         else :
             $attr['class']      .= " {$this->args['post_archive']}";
         endif;
@@ -522,7 +522,7 @@ class Attr_Trumps {
 
 
 
-    public function menu_item($attr, $item){
+    public function menu_item($attr, $item) {
         if (!$this->args['content']) {
             return $attr;
         }
@@ -537,7 +537,7 @@ class Attr_Trumps {
         return $attr;
     }
 
-    public function nav_menu_filters($text){
+    public function nav_menu_filters($text) {
         $replace = array(
             //List of menu item classes that should be changed to "active"
             'current_page_item' => $this->args['current_page_item'],

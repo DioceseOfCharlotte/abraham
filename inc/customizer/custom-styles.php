@@ -42,8 +42,8 @@ final class Abraham_Custom_Styles {
         add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
 
         /* Visual editor colors */
-		add_action( 'wp_ajax_abraham_editor_styles',         array( $this, 'editor_styles_callback' ) );
-		add_action( 'wp_ajax_no_priv_abraham_editor_styles', array( $this, 'editor_styles_callback' ) );
+        add_action( 'wp_ajax_abraham_editor_styles',         array( $this, 'editor_styles_callback' ) );
+        add_action( 'wp_ajax_no_priv_abraham_editor_styles', array( $this, 'editor_styles_callback' ) );
     }
 
     /**
@@ -110,17 +110,17 @@ final class Abraham_Custom_Styles {
     }
 
     /**
-	 * Ajax callback for outputting the primary styles for the WordPress visual editor.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function editor_styles_callback() {
-		header( 'Content-type: text/css' );
-		echo $this->get_primary_styles();
-		die();
-	}
+     * Ajax callback for outputting the primary styles for the WordPress visual editor.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return void
+     */
+    public function editor_styles_callback() {
+        header( 'Content-type: text/css' );
+        echo $this->get_primary_styles();
+        die();
+    }
 
     /**
      * Formats the primary styles for output.

@@ -11,13 +11,11 @@
             font-family: 'Material Icons';
             @include font-size(24px, false);
         }
-
     }
 
-a {
+    a {
         color: inherit;
     }
-
 }
 
 .trail-end span {

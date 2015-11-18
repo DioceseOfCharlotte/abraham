@@ -4,6 +4,7 @@
  */
 
 add_action('after_setup_theme', 'abraham_setup', 5);
+add_action('wp_enqueue_scripts', 'abraham_assets');
 add_action('init', 'abraham_image_sizes', 5);
 add_action('hybrid_register_layouts', 'abraham_layouts');
 
@@ -46,6 +47,63 @@ function abraham_setup() {
     add_editor_style( abraham_get_editor_styles() );
 }
 
+
+
+
+/*
+ * Scripts and stylesheets
+ */
+function abraham_assets() {
+    $suffix = hybrid_get_min_suffix();
+
+    // Styles
+    wp_enqueue_style(
+        'material-icons',
+        '//fonts.googleapis.com/icon?family=Material+Icons'
+    );
+
+    // Load parent theme stylesheet if child theme is active.
+    if ( is_child_theme() )
+        wp_enqueue_style( 'hybrid-parent' );
+
+    // Load active theme stylesheet.
+    wp_enqueue_style( 'hybrid-style' );
+
+    // Scripts
+    wp_enqueue_script(
+        'abraham_js',
+        trailingslashit(get_template_directory_uri())."assets/js/abraham{$suffix}.js",
+        false, false, true
+    );
+}
+
+
+
+
+/*
+ * Styles for the editor.
+ */
+function abraham_get_editor_styles() {
+    /* Set up an array for the styles. */
+    $editor_styles = array();
+
+    /* Add the theme's editor styles. */
+    $editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'style.css';
+
+    /* If a child theme, add its editor styles. */
+    if ( is_child_theme() )
+    $editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
+
+    /* Uses Ajax to display custom theme styles added via the Theme Mods API. */
+    $editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
+
+    /* Return the styles. */
+    return $editor_styles;
+}
+
+
+
+
 /**
  * Register sidebars.
  */
@@ -53,22 +111,22 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 
 function abraham_widgets() {
     register_sidebar(array(
-		'id'            => 'primary',
-		'name'          => __( 'Primary', 'abraham' ),
-		'before_title'  => '<h3 class="h2 widget-title mt0">',
-		'after_title'   => '</h3>',
-		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
-		'after_widget'  => '</section>',
-	));
+        'id'            => 'primary',
+        'name'          => __( 'Primary', 'abraham' ),
+        'before_title'  => '<h3 class="h2 widget-title mt0">',
+        'after_title'   => '</h3>',
+        'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
+        'after_widget'  => '</section>',
+    ));
 
-	register_sidebar(array(
-		'id'            => 'footer',
-		'name'          => __( 'Footer', 'abraham' ),
-		'before_title'  => '<h3 class="h2 widget-title m0">',
-		'after_title'   => '</h3>',
-		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
-		'after_widget'  => '</section>',
-	));
+    register_sidebar(array(
+        'id'            => 'footer',
+        'name'          => __( 'Footer', 'abraham' ),
+        'before_title'  => '<h3 class="h2 widget-title m0">',
+        'after_title'   => '</h3>',
+        'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
+        'after_widget'  => '</section>',
+    ));
 }
 add_action('widgets_init', 'abraham_widgets', 5);
 
@@ -133,20 +191,4 @@ function abraham_layouts() {
         'post_types'       => array('gravityview'),
         'image'            => '%s/assets/images/3-card-row.svg',
     ));
-}
-
-
-
-function abraham_get_editor_styles() {
-	/* Set up an array for the styles. */
-	$editor_styles = array();
-	/* Add the theme's editor styles. */
-	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'style.css';
-	/* If a child theme, add its editor styles. */
-	if ( is_child_theme() )
-	$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
-	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
-	// $editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
-	/* Return the styles. */
-	return $editor_styles;
 }

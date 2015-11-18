@@ -69,16 +69,16 @@ function meh_responsive_videos_embed_html($html) {
 
 
 
-function doc_page_css_class( $css_class, $page ) {
+function doc_page_css_class($css_class, $page) {
 
-	if ( ! members_can_current_user_view_post( $page->ID ) )
-		$css_class[] = 'is-protected muted';
+    if ( ! members_can_current_user_view_post( $page->ID ) )
+        $css_class[] = 'is-protected muted';
 
-	return $css_class;
+    return $css_class;
 }
 
 
-function get_the_slug( $id=null ){
+function get_the_slug($id=null) {
     if( empty($id) ):
         global $post;
     if( empty($post) )

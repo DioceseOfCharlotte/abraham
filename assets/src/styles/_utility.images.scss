@@ -1,12 +1,35 @@
-.u-bg-cover   { background-size: cover }
-.u-bg-contain { background-size: contain }
+.u-bg-cover {
+    background-size: cover;
+}
 
-.u-bg-center  { background-position: center }
-.u-bg-top     { background-position: top }
-.u-bg-right   { background-position: right }
-.u-bg-bottom  { background-position: bottom }
-.u-bg-left    { background-position: left }
+.u-bg-contain {
+    background-size: contain;
+}
 
-.u-bg-fixed   { background-attachment: fixed }
+.u-bg-center {
+    background-position: center;
+}
 
-.u-bg-no-repeat { background-repeat: no-repeat }
+.u-bg-top {
+    background-position: top;
+}
+
+.u-bg-right {
+    background-position: right;
+}
+
+.u-bg-bottom {
+    background-position: bottom;
+}
+
+.u-bg-left {
+    background-position: left;
+}
+
+.u-bg-fixed {
+    background-attachment: fixed;
+}
+
+.u-bg-no-repeat {
+    background-repeat: no-repeat;
+}

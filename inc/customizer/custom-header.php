@@ -6,24 +6,24 @@
 add_action('after_setup_theme', 'abraham_custom_header_setup');
 
 function abraham_custom_header_setup() {
-	add_theme_support('custom-header', apply_filters('abraham_custom_header_args',
+    add_theme_support('custom-header', apply_filters('abraham_custom_header_args',
         array(
-    		'default-image'          => '',
-    		'default-text-color'     => 'FFFFFF',
-    		'width'                  => 1920,
-    		'height'                 => 400,
-    		'flex-height'            => true,
-    		'wp-head-callback'       => 'abraham_header_style',
-    	)
+            'default-image'          => '',
+            'default-text-color'     => 'FFFFFF',
+            'width'                  => 1920,
+            'height'                 => 400,
+            'flex-height'            => true,
+            'wp-head-callback'       => 'abraham_header_style',
+        )
     ));
 }
 
 if (!function_exists('abraham_header_style')) :
 
 function abraham_header_style() {
-	$header_text_color = get_header_textcolor();
+    $header_text_color = get_header_textcolor();
 
-	if (HEADER_TEXTCOLOR === $header_text_color) {
+    if (HEADER_TEXTCOLOR === $header_text_color) {
         return;
     } ?>
 
