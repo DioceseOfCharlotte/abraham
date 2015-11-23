@@ -33,7 +33,7 @@ function meh_template_hierarchy($templates) {
  * Clean up the_excerpt().
  */
 function meh_excerpt_more() {
-    return '<a class="absolute btn-readmore z1 right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
+    return '<a class="u-absolute btn-readmore u-z1 u-right0 u-bottom0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
 }
 
 function meh_excerpt_length($length) {

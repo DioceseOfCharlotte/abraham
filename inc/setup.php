@@ -113,7 +113,7 @@ function abraham_widgets() {
     register_sidebar(array(
         'id'            => 'primary',
         'name'          => __( 'Primary', 'abraham' ),
-        'before_title'  => '<h3 class="h2 widget-title mt0">',
+        'before_title'  => '<h3 class="h2 widget-title u-mt0">',
         'after_title'   => '</h3>',
         'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
         'after_widget'  => '</section>',
@@ -122,7 +122,7 @@ function abraham_widgets() {
     register_sidebar(array(
         'id'            => 'footer',
         'name'          => __( 'Footer', 'abraham' ),
-        'before_title'  => '<h3 class="h2 widget-title m0">',
+        'before_title'  => '<h3 class="h2 widget-title u-mt0">',
         'after_title'   => '</h3>',
         'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
         'after_widget'  => '</section>',
