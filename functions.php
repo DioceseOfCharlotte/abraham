@@ -2,8 +2,6 @@
 
 /**
  * Theme includes.
- *
- * @link https://github.com/roots/sage/pull/1042
  */
 
  /* Get the template directory and make sure it has a trailing slash. */
