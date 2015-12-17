@@ -1,15 +1,12 @@
 <?php
 
-add_action('init', 'meh_post_type_layouts_supports');
 add_action( 'wp_head',  'enqueue_abraham_ie' );
 
 
 
-function meh_post_type_layouts_supports() {
     add_post_type_support('gravityview', 'theme-layouts');
     add_post_type_support('sc_event', 'theme-layouts');
     add_post_type_support('cpt_archive', 'theme-layouts');
-}
 
 
 /**
