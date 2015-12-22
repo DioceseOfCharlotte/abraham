@@ -31,7 +31,7 @@
 
     <?php tha_content_while_after(); ?>
 
-        <?php get_template_part('components/loop', get_the_slug() ); ?>
+        <?php //get_template_part('components/loop', get_the_slug() ); ?>
 
 <?php
 endif;
