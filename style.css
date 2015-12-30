@@ -1196,7 +1196,7 @@ svg:not(:root) {
     z-index: 1;
 }
 #site .u-z2 {
-    z-index: 2;
+    z-index: 2 !important;
 }
 #site .u-z3 {
     z-index: 3;
