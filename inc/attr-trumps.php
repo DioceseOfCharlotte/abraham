@@ -420,9 +420,9 @@ class Attr_Trumps {
         global $post;
         $featured_post = get_post_meta( $post->ID, '_featured', true );
 
-        if (is_singular()) :
+        if (is_singular() && !is_front_page()) :
             $attr['class']      .= " {$this->args['post']}";
-        else :
+        elseif (is_archive()) :
             $attr['class']      .= " {$this->args['post_archive']}";
         endif;
 
@@ -430,7 +430,7 @@ class Attr_Trumps {
             $attr['class']      .= " {$this->args['post_featured']}";
         }
 
-        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) {
+        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout') && is_singular()) {
             $attr['class']      .= " {$this->args['post_wide']}";
         }
         return $attr;
