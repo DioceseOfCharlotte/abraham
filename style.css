@@ -979,6 +979,11 @@ svg:not(:root) {
     -webkit-justify-content: center;
     justify-content: center;
 }
+#site .u-flex-justify-start {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
 #site .u-flex-justify-end {
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
@@ -1008,6 +1013,11 @@ svg:not(:root) {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+}
+#site .u-flexed-shrink {
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
 }
 #site .u-flexed-none {
     -webkit-flex: none;

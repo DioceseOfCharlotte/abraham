@@ -65,6 +65,10 @@
     justify-content: center;
 }
 
+.u-flex-justify-start {
+    justify-content: flex-start;
+}
+
 .u-flex-justify-end {
     justify-content: flex-end;
 }
@@ -87,6 +91,10 @@
 
 .u-flexed-grow {
     flex: 1 0 auto;
+}
+
+.u-flexed-shrink {
+    flex-shrink: 0;
 }
 
 .u-flexed-none {
