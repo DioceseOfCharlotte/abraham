@@ -1,6 +1,4 @@
-<?php while (have_posts()) : the_post(); ?>
 
-    <?php tha_entry_before(); ?>
 
     <article <?php hybrid_attr('post'); ?>>
 
@@ -22,7 +20,3 @@
         <?php tha_entry_bottom(); ?>
 
     </article>
-
-    <?php tha_entry_after(); ?>
-
-<?php endwhile; ?>

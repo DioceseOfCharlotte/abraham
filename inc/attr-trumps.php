@@ -53,6 +53,9 @@ class Attr_Trumps {
             'post_archive'            => '',
             'post_featured'           => '',
             'post_wide'               => '',
+            'archive_33'              => '',
+            'archive_50'              => '',
+            'archive_100'             => '',
 
             'page_header'             => '',
 
@@ -418,7 +421,7 @@ class Attr_Trumps {
 
     public function post($attr) {
         global $post;
-        $featured_post = get_post_meta( $post->ID, '_featured', true );
+        $achive_width = get_post_meta( $post->ID, '_achive_width', true );
 
         if (is_singular() && !is_front_page()) :
             $attr['class']      .= " {$this->args['post']}";
@@ -426,8 +429,16 @@ class Attr_Trumps {
             $attr['class']      .= " {$this->args['post_archive']}";
         endif;
 
-        if ('yes' === $featured_post) {
-            $attr['class']      .= " {$this->args['post_featured']}";
+        if ('1' === $achive_width) {
+            $attr['class']      .= "  {$this->args['archive_100']}";
+        }
+
+        if ('2' === $achive_width) {
+            $attr['class']      .= "  {$this->args['archive_50']}";
+        }
+
+        if ('3' === $achive_width) {
+            $attr['class']      .= "  {$this->args['archive_33']}";
         }
 
         if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout') && is_singular()) {
