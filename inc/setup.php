@@ -95,7 +95,7 @@ function abraham_get_editor_styles() {
     $editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
 
     /* Uses Ajax to display custom theme styles added via the Theme Mods API. */
-    $editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
+    //$editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
 
     /* Return the styles. */
     return $editor_styles;
