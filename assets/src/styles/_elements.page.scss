@@ -40,7 +40,7 @@ body {
     flex-shrink: 1;
     flex-grow: 0;
     flex-basis: auto;
-    position: relative;
+    //position: relative;
 }
 
 *,
@@ -48,11 +48,6 @@ body {
 *::after {
     box-sizing: inherit;
     vertical-align: middle;
-}
-
- ::before,
-::after {
-    text-decoration: inherit;
 }
 
 // Make viewport responsive

@@ -45,12 +45,11 @@ body {
 }
 
 * {
-    position: relative; 
     margin: 0;
     padding: 0;
 
     -webkit-flex-basis: auto;
-    flex-basis: auto;
+    flex-basis: auto; 
     -webkit-flex-grow: 0;
     flex-grow: 0;
     -ms-flex-negative: 1;
@@ -65,11 +64,6 @@ body {
 *::after {
     box-sizing: inherit;
     vertical-align: middle;
-}
-
-::before,
-::after {
-    text-decoration: inherit;
 }
 
 @-moz-viewport {
