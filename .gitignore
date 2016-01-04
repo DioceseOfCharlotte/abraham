@@ -6,6 +6,11 @@
 # Development files
 /node_modules
 
+# 3rd party Dev files
+lib/cmb2/css/sass/*
+lib/cmb2/**/*.md
+lib/cmb2/languages/*
+
 # Generated theme files
 .tmp
 *.map

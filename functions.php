@@ -10,6 +10,7 @@ $abraham_dir = trailingslashit( get_template_directory() );
 // 3rd party libraries
 require_once( $abraham_dir . '/lib/hybrid-core/hybrid.php');       // Hybrid Core library
 require_once( $abraham_dir . '/lib/tha-theme-hooks.php');          // Template hooks
+require_once( $abraham_dir . '/lib/cmb2/init.php');          // Template hooks
 // Theme specific includes
 require_once( $abraham_dir . '/inc/setup.php');                    // Initial theme setup
 require_once( $abraham_dir . '/inc/attr-trumps.php');              // Css class selectors
