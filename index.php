@@ -29,6 +29,10 @@ get_header(); ?>
 
                     <?php get_template_part('components/posts', 'pagination'); ?>
 
+                <?php else : // If no posts were found. ?>
+
+                    <?php get_template_part('content/none'); ?>
+
                 <?php endif; ?>
 
                 <?php tha_content_bottom(); ?>
