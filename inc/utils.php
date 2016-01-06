@@ -20,7 +20,7 @@ function meh_template_hierarchy($templates) {
     } elseif (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     } elseif (is_singular()) {
-        $templates = array_merge(array("content/content-single.php"), $templates);
+        $templates = array_merge(array("content/single.php"), $templates);
         $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
         //$templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
     }
@@ -89,3 +89,20 @@ function get_the_slug($id=null) {
     $slug = basename( get_permalink($id) );
     return $slug;
 }
+
+
+function doc_post_order( $query ) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_post_type_archive( 'department' ) || is_post_type_archive( 'parish' ) || is_post_type_archive( 'school' ) ) {
+        $query->set( 'order', 'ASC' );
+	  	$query->set('orderby', 'name');
+	  	$query->set('post_parent', 0);
+        return;
+    } elseif ( is_post_type_archive() ) {
+	  	$query->set( 'order', 'ASC' );
+	  	$query->set('orderby', 'menu_order');
+	}
+}
+add_action( 'pre_get_posts', 'doc_post_order', 1 );
