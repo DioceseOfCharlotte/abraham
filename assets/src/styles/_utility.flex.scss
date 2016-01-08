@@ -111,33 +111,33 @@
 
 // small
 @include sm {
-    .u-flex\@sm {
+    .u-flex-sm {
         display: flex;
     }
 
-    .u-flex-column\@sm {
+    .u-flex-column-sm {
         flex-direction: column;
     }
 }
 
 // medium
 @include md {
-    .u-flex\@md {
+    .u-flex-md {
         display: flex;
     }
 
-    .u-flex-row\@md {
+    .u-flex-row-md {
         flex-direction: row;
     }
 }
 
 // large
 @include lg {
-    .u-flex\@lg {
+    .u-flex-lg {
         display: flex;
     }
 
-    .u-flex-row\@lg {
+    .u-flex-row-lg {
         flex-direction: row;
     }
 }

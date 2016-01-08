@@ -1,5 +1,5 @@
 <?php if ( is_home() || is_archive() || is_search() ) : ?>
-    <div class="u-1/1 u-text-center">
+    <div class="u-1of1 u-text-center">
 
         <?php the_posts_pagination(
             array(

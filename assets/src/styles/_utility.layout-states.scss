@@ -133,19 +133,19 @@
 }
 
 @include md {
-    .u-relative\@md {
+    .u-relative-md {
         position: relative;
     }
 
-    .u-absolute\@md {
+    .u-absolute-md {
         position: absolute;
     }
 
-    .u-fixed\@md {
+    .u-fixed-md {
         position: fixed;
     }
 
-    .u-static\@md {
+    .u-static-md {
         position: static;
     }
 }

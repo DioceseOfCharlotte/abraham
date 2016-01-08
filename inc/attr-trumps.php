@@ -51,11 +51,7 @@ class Attr_Trumps {
             // ENTRY
             'post'                    => '',
             'post_archive'            => '',
-            'post_featured'           => '',
             'post_wide'               => '',
-            'archive_33'              => '',
-            'archive_50'              => '',
-            'archive_100'             => '',
 
             'page_header'             => '',
 
@@ -421,29 +417,21 @@ class Attr_Trumps {
 
     public function post($attr) {
         global $post;
-        $achive_width = get_post_meta( $post->ID, '_achive_width', true );
+        $achive_width = get_archive_post_width( $post->ID );
 
         if (is_singular() && !is_front_page()) :
             $attr['class']      .= " {$this->args['post']}";
+
         elseif (is_archive()) :
             $attr['class']      .= " {$this->args['post_archive']}";
+            if ($achive_width) {
+                $attr['class']      .= "$achive_width";
+            }
         endif;
-
-        if ('1' === $achive_width) {
-            $attr['class']      .= "  {$this->args['archive_100']}";
-        }
-
-        if ('2' === $achive_width) {
-            $attr['class']      .= "  {$this->args['archive_50']}";
-        }
-
-        if ('3' === $achive_width) {
-            $attr['class']      .= "  {$this->args['archive_33']}";
-        }
-
-        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout') && is_singular()) {
+        if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) {
             $attr['class']      .= " {$this->args['post_wide']}";
         }
+
         return $attr;
     }
 

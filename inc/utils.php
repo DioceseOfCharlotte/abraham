@@ -5,7 +5,7 @@ add_filter('excerpt_more', 'meh_excerpt_more');
 add_filter('excerpt_length', 'meh_excerpt_length');
 add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 
 

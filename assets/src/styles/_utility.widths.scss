@@ -16,136 +16,136 @@ $gutter: 16px;
     width: auto;
 }
 
-.u-1\/1 {
+.u-1of1 {
     width: 100%;
 }
 
-.u-1\/2 {
+.u-1of2 {
     width: calc(1/2 * 100% - #{$gutter});
 }
 
-.u-1\/3 {
+.u-1of3 {
     width: calc(1/3 * 100% - #{$gutter});
 }
 
-.u-2\/3 {
+.u-2of3 {
     width: calc(2/3 * 100% - #{$gutter});
 }
 
-.u-1\/4 {
+.u-1of4 {
     width: calc(1/4 * 100% - #{$gutter});
 }
 
-.u-3\/4 {
+.u-3of4 {
     width: calc(3/4 * 100% - #{$gutter});
 }
 
-.u-1\/5 {
+.u-1of5 {
     width: calc(1/5 * 100% - #{$gutter});
 }
 
-.u-2\/5 {
+.u-2of5 {
     width: calc(2/5 * 100% - #{$gutter});
 }
 
-.u-3\/5 {
+.u-3of5 {
     width: calc(3/5 * 100% - #{$gutter});
 }
 
-.u-4\/5 {
+.u-4of5 {
     width: calc(4/5 * 100% - #{$gutter});
 }
 
 @include md {
-    .u-1\/1\@md {
+    .u-1of1-md {
         width: 100%;
     }
 
-    .u-1\/2\@md {
+    .u-1of2-md {
         width: calc(50% - #{$gutter});
     }
 
-    .u-1\/3\@md {
+    .u-1of3-md {
         width: calc(1/3 * 100% - #{$gutter});
     }
 
-    .u-2\/3\@md {
+    .u-2of3-md {
         width: calc(2/3 * 100% - #{$gutter});
     }
 
-    .u-1\/4\@md {
+    .u-1of4-md {
         width: calc(1/4 * 100% - #{$gutter});
     }
 
-    .u-3\/4\@md {
+    .u-3of4-md {
         width: calc(3/4 * 100% - #{$gutter});
     }
 
-    .u-1\/5\@md {
+    .u-1of5-md {
         width: calc(1/5 * 100% - #{$gutter});
     }
 
-    .u-2\/5\@md {
+    .u-2of5-md {
         width: calc(2/5 * 100% - #{$gutter});
     }
 
-    .u-3\/5\@md {
+    .u-3of5-md {
         width: calc(3/5 * 100% - #{$gutter});
     }
 
-    .u-4\/5\@md {
+    .u-4of5-md {
         width: calc(4/5 * 100% - #{$gutter});
     }
 
-    .u-width-auto\@md {
+    .u-width-auto-md {
         width: auto;
     }
 }
 
 @include lg {
-    .u-1\/1\@lg {
+    .u-1of1-lg {
         width: 100%;
     }
 
-    .u-1\/2\@lg {
+    .u-1of2-lg {
         width: calc(50% - #{$gutter});
     }
 
-    .u-1\/3\@lg {
+    .u-1of3-lg {
         width: calc(1/3 * 100% - #{$gutter});
     }
 
-    .u-2\/3\@lg {
+    .u-2of3-lg {
         width: calc(2/3 * 100% - #{$gutter});
     }
 
-    .u-1\/4\@lg {
+    .u-1of4-lg {
         width: calc(1/4 * 100% - #{$gutter});
     }
 
-    .u-3\/4\@lg {
+    .u-3of4-lg {
         width: calc(3/4 * 100% - #{$gutter});
     }
 
-    .u-1\/5\@lg {
+    .u-1of5-lg {
         width: calc(1/5 * 100% - #{$gutter});
     }
 
-    .u-2\/5\@lg {
+    .u-2of5-lg {
         width: calc(2/5 * 100% - #{$gutter});
     }
 
-    .u-3\/5\@lg {
+    .u-3of5-lg {
         width: calc(3/5 * 100% - #{$gutter});
     }
 
-    .u-4\/5\@lg {
+    .u-4of5-lg {
         width: calc(4/5 * 100% - #{$gutter});
     }
 }
 
 @include sm {
-    .u-1\/1\@sm {
+    .u-1of1-sm {
         width: 100%;
     }
 }

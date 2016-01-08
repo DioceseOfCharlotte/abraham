@@ -63,7 +63,6 @@ body {
 *::before,
 *::after {
     box-sizing: inherit;
-    vertical-align: middle;
 }
 
 @-moz-viewport {
@@ -630,6 +629,7 @@ svg:not(:root) {
     font-family: "Material Icons";
     font-size: 24px;
     font-size: 1.5rem; 
+    vertical-align: middle;
     content: "\E5CC";
 }
 
@@ -1029,12 +1029,12 @@ svg:not(:root) {
     order: 99999;
 }
 @media screen and (max-width: 51em) {
-    #site .u-flex\@sm {
+    #site .u-flex-sm {
     	display: -webkit-flex;
     	display: -ms-flexbox;
     	display: flex;
     }
-    #site .u-flex-column\@sm {
+    #site .u-flex-column-sm {
     	flex-direction: column; 
 
     	-webkit-flex-direction: column;
@@ -1042,12 +1042,12 @@ svg:not(:root) {
     }
 }
 @media screen and (min-width: 52em) {
-    #site .u-flex\@md {
+    #site .u-flex-md {
     	display: -webkit-flex;
     	display: -ms-flexbox;
     	display: flex;
     }
-    #site .u-flex-row\@md {
+    #site .u-flex-row-md {
     	flex-direction: row; 
 
     	-webkit-flex-direction: row;
@@ -1055,12 +1055,12 @@ svg:not(:root) {
     }
 }
 @media screen and (min-width: 64em) {
-    #site .u-flex\@lg {
+    #site .u-flex-lg {
     	display: -webkit-flex;
     	display: -ms-flexbox;
     	display: flex;
     }
-    #site .u-flex-row\@lg {
+    #site .u-flex-row-lg {
     	flex-direction: row; 
 
     	-webkit-flex-direction: row;
@@ -1218,16 +1218,16 @@ svg:not(:root) {
     max-width: 100%;
 }
 @media screen and (min-width: 52em) {
-    #site .u-relative\@md {
+    #site .u-relative-md {
     	position: relative;
     }
-    #site .u-absolute\@md {
+    #site .u-absolute-md {
     	position: absolute;
     }
-    #site .u-fixed\@md {
+    #site .u-fixed-md {
     	position: fixed;
     }
-    #site .u-static\@md {
+    #site .u-static-md {
     	position: static;
     }
 }
@@ -1461,119 +1461,119 @@ svg:not(:root) {
     padding-top: 0;
 }
 @media screen and (min-width: 52em) {
-    #site .u-m2\@md {
+    #site .u-m2-md {
     	margin: 1rem;
     }
-    #site .u-mt2\@md {
+    #site .u-mt2-md {
     	margin-top: 1rem;
     }
-    #site .u-mr2\@md {
+    #site .u-mr2-md {
     	margin-right: 1rem;
     }
-    #site .u-mb2\@md {
+    #site .u-mb2-md {
     	margin-bottom: 1rem;
     }
-    #site .u-ml2\@md {
+    #site .u-ml2-md {
     	margin-left: 1rem;
     }
-    #site .u-m3\@md {
+    #site .u-m3-md {
     	margin: 2rem;
     }
-    #site .u-mt3\@md {
+    #site .u-mt3-md {
     	margin-top: 2rem;
     }
-    #site .u-mr3\@md {
+    #site .u-mr3-md {
     	margin-right: 2rem;
     }
-    #site .u-mb3\@md {
+    #site .u-mb3-md {
     	margin-bottom: 2rem;
     }
-    #site .u-ml3\@md {
+    #site .u-ml3-md {
     	margin-left: 2rem;
     }
-    #site .u-m4\@md {
+    #site .u-m4-md {
     	margin: 4rem;
     }
-    #site .u-mt4\@md {
+    #site .u-mt4-md {
     	margin-top: 4rem;
     }
-    #site .u-mr4\@md {
+    #site .u-mr4-md {
     	margin-right: 4rem;
     }
-    #site .u-mb4\@md {
+    #site .u-mb4-md {
     	margin-bottom: 4rem;
     }
-    #site .u-ml4\@md {
+    #site .u-ml4-md {
     	margin-left: 4rem;
     }
-    #site .u-mxn2\@md {
+    #site .u-mxn2-md {
     	margin-right: -1rem; 
     	margin-left: -1rem;
     }
-    #site .u-mxn3\@md {
+    #site .u-mxn3-md {
     	margin-right: -2rem; 
     	margin-left: -2rem;
     }
-    #site .u-mxn4\@md {
+    #site .u-mxn4-md {
     	margin-right: -4rem; 
     	margin-left: -4rem;
     }
-    #site .u-mx-auto\@md {
+    #site .u-mx-auto-md {
     	margin-right: auto; 
     	margin-left: auto;
     }
-    #site .u-px1\@md {
+    #site .u-px1-md {
     	padding-right: 0.5rem; 
     	padding-left: 0.5rem;
     }
-    #site .u-p2\@md {
+    #site .u-p2-md {
     	padding: 1rem;
     }
-    #site .u-py2\@md {
+    #site .u-py2-md {
     	padding-top: 1rem;
     	padding-bottom: 1rem;
     }
-    #site .u-px2\@md {
+    #site .u-px2-md {
     	padding-right: 1rem; 
     	padding-left: 1rem;
     }
-    #site .u-p3\@md {
+    #site .u-p3-md {
     	padding: 2rem;
     }
-    #site .u-py3\@md {
+    #site .u-py3-md {
     	padding-top: 2rem;
     	padding-bottom: 2rem;
     }
-    #site .u-px3\@md {
+    #site .u-px3-md {
     	padding-right: 2rem; 
     	padding-left: 2rem;
     }
-    #site .u-pt3\@md {
+    #site .u-pt3-md {
     	padding-top: 2rem;
     }
-    #site .u-pb3\@md {
+    #site .u-pb3-md {
     	padding-bottom: 2rem;
     }
-    #site .u-p4\@md {
+    #site .u-p4-md {
     	padding: 4rem;
     }
-    #site .u-py4\@md {
+    #site .u-py4-md {
     	padding-top: 4rem;
     	padding-bottom: 4rem;
     }
-    #site .u-px4\@md {
+    #site .u-px4-md {
     	padding-right: 4rem; 
     	padding-left: 4rem;
     }
-    #site .u-pt4\@md {
+    #site .u-pt4-md {
     	padding-top: 4rem;
     }
-    #site .u-pb4\@md {
+    #site .u-pb4-md {
     	padding-bottom: 4rem;
     }
 }
 @media screen and (min-width: 64em) {
-    #site .u-mx4\@lg {
+    #site .u-mx4-lg {
     	margin-right: 4rem; 
     	margin-left: 4rem;
     }
@@ -1659,105 +1659,105 @@ svg:not(:root) {
 #site .u-width-auto {
     width: auto;
 }
-#site .u-1\/1 {
+#site .u-1of1 {
     width: 100%;
 }
-#site .u-1\/2 {
+#site .u-1of2 {
     width: calc(1/2 * 100% - 16px);
 }
-#site .u-1\/3 {
+#site .u-1of3 {
     width: calc(1/3 * 100% - 16px);
 }
-#site .u-2\/3 {
+#site .u-2of3 {
     width: calc(2/3 * 100% - 16px);
 }
-#site .u-1\/4 {
+#site .u-1of4 {
     width: calc(1/4 * 100% - 16px);
 }
-#site .u-3\/4 {
+#site .u-3of4 {
     width: calc(3/4 * 100% - 16px);
 }
-#site .u-1\/5 {
+#site .u-1of5 {
     width: calc(1/5 * 100% - 16px);
 }
-#site .u-2\/5 {
+#site .u-2of5 {
     width: calc(2/5 * 100% - 16px);
 }
-#site .u-3\/5 {
+#site .u-3of5 {
     width: calc(3/5 * 100% - 16px);
 }
-#site .u-4\/5 {
+#site .u-4of5 {
     width: calc(4/5 * 100% - 16px);
 }
 @media screen and (min-width: 52em) {
-    #site .u-1\/1\@md {
+    #site .u-1of1-md {
     	width: 100%;
     }
-    #site .u-1\/2\@md {
+    #site .u-1of2-md {
     	width: calc(50% - 16px);
     }
-    #site .u-1\/3\@md {
+    #site .u-1of3-md {
     	width: calc(1/3 * 100% - 16px);
     }
-    #site .u-2\/3\@md {
+    #site .u-2of3-md {
     	width: calc(2/3 * 100% - 16px);
     }
-    #site .u-1\/4\@md {
+    #site .u-1of4-md {
     	width: calc(1/4 * 100% - 16px);
     }
-    #site .u-3\/4\@md {
+    #site .u-3of4-md {
     	width: calc(3/4 * 100% - 16px);
     }
-    #site .u-1\/5\@md {
+    #site .u-1of5-md {
     	width: calc(1/5 * 100% - 16px);
     }
-    #site .u-2\/5\@md {
+    #site .u-2of5-md {
     	width: calc(2/5 * 100% - 16px);
     }
-    #site .u-3\/5\@md {
+    #site .u-3of5-md {
     	width: calc(3/5 * 100% - 16px);
     }
-    #site .u-4\/5\@md {
+    #site .u-4of5-md {
     	width: calc(4/5 * 100% - 16px);
     }
-    #site .u-width-auto\@md {
+    #site .u-width-auto-md {
     	width: auto;
     }
 }
 @media screen and (min-width: 64em) {
-    #site .u-1\/1\@lg {
+    #site .u-1of1-lg {
     	width: 100%;
     }
-    #site .u-1\/2\@lg {
+    #site .u-1of2-lg {
     	width: calc(50% - 16px);
     }
-    #site .u-1\/3\@lg {
+    #site .u-1of3-lg {
     	width: calc(1/3 * 100% - 16px);
     }
-    #site .u-2\/3\@lg {
+    #site .u-2of3-lg {
     	width: calc(2/3 * 100% - 16px);
     }
-    #site .u-1\/4\@lg {
+    #site .u-1of4-lg {
     	width: calc(1/4 * 100% - 16px);
     }
-    #site .u-3\/4\@lg {
+    #site .u-3of4-lg {
     	width: calc(3/4 * 100% - 16px);
     }
-    #site .u-1\/5\@lg {
+    #site .u-1of5-lg {
     	width: calc(1/5 * 100% - 16px);
     }
-    #site .u-2\/5\@lg {
+    #site .u-2of5-lg {
     	width: calc(2/5 * 100% - 16px);
     }
-    #site .u-3\/5\@lg {
+    #site .u-3of5-lg {
     	width: calc(3/5 * 100% - 16px);
     }
-    #site .u-4\/5\@lg {
+    #site .u-4of5-lg {
     	width: calc(4/5 * 100% - 16px);
     }
 }
 @media screen and (max-width: 51em) {
-    #site .u-1\/1\@sm {
+    #site .u-1of1-sm {
     	width: 100%;
     }
 }
@@ -1815,19 +1815,19 @@ svg:not(:root) {
     visibility: hidden;
 }
 @media screen and (max-width: 51em) {
-    #site .hidden\@sm {
+    #site .hidden-sm {
     	display: none;
     	visibility: hidden;
     }
 }
 @media screen and (min-width: 52em) {
-    #site .hidden\@md {
+    #site .hidden-md {
     	display: none;
     	visibility: hidden;
     }
 }
 @media screen and (min-width: 64em) {
-    #site .hidden\@lg {
+    #site .hidden-lg {
     	display: none;
     	visibility: hidden;
     }

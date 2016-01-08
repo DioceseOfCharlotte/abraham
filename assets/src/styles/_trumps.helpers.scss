@@ -7,21 +7,21 @@
 }
 
 @include sm {
-    .hidden\@sm {
+    .hidden-sm {
         display: none;
         visibility: hidden;
     }
 }
 
 @include md {
-    .hidden\@md {
+    .hidden-md {
         display: none;
         visibility: hidden;
     }
 }
 
 @include lg {
-    .hidden\@lg {
+    .hidden-lg {
         display: none;
         visibility: hidden;
     }
