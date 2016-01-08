@@ -1,6 +1,6 @@
 <?php
 /**
- * Main template file.
+ * Site Header template.
  *
  * @package abraham
  */

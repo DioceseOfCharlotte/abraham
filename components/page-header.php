@@ -1,4 +1,4 @@
-<?php if (is_home() || is_front_page()) {
+<?php if (is_front_page()) {
     return;
 }
 ?>
@@ -15,7 +15,7 @@
             echo sprintf(esc_html__('Search Results for %s', 'abraham'), get_search_query());
         } elseif (is_404()) {
             echo esc_html__('Not Found', 'abraham');
-        } elseif (!hybrid_is_plural() && !is_404()) {
+        } else {
             echo get_the_title();
         }
         ?>

@@ -37,13 +37,6 @@ final class Abraham_Custom_Styles {
         add_filter('theme_mod_primary_color', array($this, 'primary_color_default'), 95);
         add_filter('theme_mod_secondary_color', array($this, 'secondary_color_default'), 95);
         add_filter('theme_mod_accent_color', array($this, 'accent_color_default'), 95);
-
-        /* Delete the cached data for this feature. */
-        add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
-
-        /* Visual editor colors */
-        add_action( 'wp_ajax_abraham_editor_styles',         array( $this, 'editor_styles_callback' ) );
-        add_action( 'wp_ajax_no_priv_abraham_editor_styles', array( $this, 'editor_styles_callback' ) );
     }
 
     /**
@@ -89,37 +82,16 @@ final class Abraham_Custom_Styles {
      * @since  1.0.0
      */
     public function wp_head_callback() {
-        $stylesheet = get_stylesheet();
-        /* Get the cached style. */
-        $style = wp_cache_get("{$stylesheet}_custom_colors");
-        /* If the style is available, output it and return. */
-        if (!empty($style)) {
-            echo $style;
-
-            return;
-        }
         $style = $this->get_primary_styles();
         $style .= $this->get_secondary_styles();
         $style .= $this->get_accent_styles();
+        $style .= $this->get_accent_styles();
+        $style .= $this->get_abe_font_styles();
         /* Put the final style output together. */
         $style = "\n".'<style id="custom-colors-css">'.trim($style).'</style>'."\n";
-        /* Cache the style, so we don't have to process this on each page load. */
-        wp_cache_set("{$stylesheet}_custom_colors", $style);
+
         /* Output the custom style. */
         echo $style;
-    }
-
-    /**
-     * Ajax callback for outputting the primary styles for the WordPress visual editor.
-     *
-     * @since  1.0.0
-     * @access public
-     * @return void
-     */
-    public function editor_styles_callback() {
-        header( 'Content-type: text/css' );
-        echo $this->get_primary_styles();
-        die();
     }
 
     /**
@@ -132,8 +104,6 @@ final class Abraham_Custom_Styles {
     public function get_primary_styles() {
         $style = '';
         $hex   = get_theme_mod('primary_color', '');
-        $hfont = get_theme_mod('heading_font', '');
-        $bfont = get_theme_mod('body_font', '');
         $rgb   = implode(', ', hybrid_hex_to_rgb($hex));
 
 
@@ -166,8 +136,6 @@ final class Abraham_Custom_Styles {
         $style .= ".u-fill-1-light{fill:#{$color400}!important}";
         $style .= ".u-fill-1-dark{fill:#{$color600}!important}";
 
-        $style .= "h1,h2,h3,h4{font-family:'$hfont'}";
-        $style .= "body{font-family:'$bfont'}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -260,14 +228,29 @@ final class Abraham_Custom_Styles {
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
-    /**
-     * Deletes the cached style CSS that's output into the header.
-     *
-     * @since  1.0.0
-     */
-    public function cache_delete() {
-        wp_cache_delete(get_stylesheet().'_custom_colors');
+    function get_abe_font_styles() {
+    	/* === <p> === */
+    	$p_family = get_theme_mod( 'body_font', '' );
+    	if ( $p_family )
+    		$_p_style .= sprintf( "font-family: '%s';", esc_attr( $p_family ) );
+        if ( $_p_style )
+        	$_p_style = sprintf( 'body { %s }', $_p_style );
+
+    	/* === <h1> === */
+    	$h1_family = get_theme_mod( 'heading_font', '' );
+    	if ( $h1_family )
+    		$_h1_style .= sprintf( "font-family: '%s';", esc_attr( $h1_family ) );
+        if ( $_h1_style )
+        	$_h1_style = sprintf( 'h1,h2,h3,h4 { %s }', $_h1_style );
+    	/* === Output === */
+    	// Join the styles.
+    	$style = join( '', array( $_p_style, $_h1_style ) );
+    	// Output the styles.
+    	if ( $style ) {
+    		echo "\n" . '<style type="text/css" id="ctypo-css">' . $style . '</style>' . "\n";
+    	}
     }
+
     /**
      * Returns the instance.
      *

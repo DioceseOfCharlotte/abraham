@@ -1,4 +1,4 @@
-<?php if ( !is_singular( get_post_type() ) ) {
+<?php if ( is_singular() || is_front_page() ) {
     return;
 } ?>
 <footer class="entry-footer">
