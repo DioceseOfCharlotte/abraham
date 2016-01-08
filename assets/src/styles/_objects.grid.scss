@@ -1,0 +1,17 @@
+/* #GRID
+\*------------------------------------*/
+
+.o-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  align-items: stretch;
+  	@include md {
+		padding: 8px;
+	}
+}
+
+.o-cell {
+    margin: 8px;
+    width: calc(33.3333333333% - 16px);
+}
