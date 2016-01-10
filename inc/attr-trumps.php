@@ -33,37 +33,37 @@ class Attr_Trumps {
             'site_container_loggedin'   => '',
             'layout'                    => '',
             'layout_wide'               => '',
-            'grid'                      => '',
-            'grid_1-wide'               => '',
-            'grid_2c-r'                 => '',
-            'grid_2c-l'                 => '',
+            'grid'                      => 'u-p0 o-grid u-max-width',
+            'grid_1-wide'               => 'u-p0 o-grid',
+            'grid_2c-r'                 => 'u-p0 o-grid u-max-width u-flex-rev',
+            'grid_2c-l'                 => 'u-p0 o-grid u-max-width',
 
             // SITE HEADER
-            'header'                  => '',
+            'header'                  => 'u-text-white u-bg-1 u-flex u-flex-column u-flex-justify-between u-1of1',
             'branding'                => '',
-            'site_title'              => '',
-            'site_description'        => '',
+            'site_title'              => 'u-color-inherit u-m0',
+            'site_description'        => 'u-m0 u-text-3',
 
             // CONTENT
-            'content'                 => '',
-            'content_with_sidebar'    => '',
-            'content_archive'         => '',
+            'content'                 => 'o-cell o-grid u-m0 u-p0 u-1of1',
+            'content_with_sidebar'    => 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
+            'content_archive'         => 'u-flex u-flex-justify-around',
             // ENTRY
-            'post'                    => '',
-            'post_archive'            => '',
-            'post_wide'               => '',
+            'post'                    => 'o-cell u-mb2 u-1of1 u-py4 u-px3 u-text-gray',
+            'post_archive'            => 'o-cell',
+            'post_wide'               => 'u-1of1',
 
-            'page_header'             => '',
+            'page_header'             => 'u-1of1 u-text-center',
 
             'entry_title'             => '',
-            'page_title'              => '',
-            'archive_description'     => '',
+            'page_title'              => 'u-display-2 u-m0 u-py3',
+            'archive_description'     => 'u-1of1 u-p3 u-mb1 u-mx-auto',
 
             'entry_header'            => '',
-            'entry_content'           => '',
+            'entry_content'           => 'u-px2 u-pb2',
             'entry_content_wide'      => '',
-            'entry_summary'           => '',
-            'entry_footer'            => '',
+            'entry_summary'           => 'u-px2 u-pb2',
+            'entry_footer'            => 'u-mt-auto',
 
             'nav_single'              => '',
             'nav_archive'             => '',
@@ -75,15 +75,15 @@ class Attr_Trumps {
 
             // NAVIGATION
             'menu_all'                => '',
-            'menu_primary'            => '',
+            'menu_primary'            => 'u-ml-auto',
             'menu_secondary'          => '',
 
             // SIDEBAR
-            'sidebar_primary'         => '',
-            'sidebar_footer'          => '',
-            'sidebar_horizontal'      => '',
-            'sidebar_right'           => '',
-            'sidebar_left'            => '',
+            'sidebar_primary'         => 'o-cell o-grid u-m0 u-p0',
+            'sidebar_footer'          => 'u-flex-md',
+            'sidebar_horizontal'      => 'o-grid o-cell u-1of1',
+            'sidebar_right'           => 'u-1of1 u-1of3-md',
+            'sidebar_left'            => 'u-1of1 u-1of3-md',
 
             'widgets'                 => '',
             'primary_widgets'         => '',
@@ -93,14 +93,14 @@ class Attr_Trumps {
             'comments_area'           => '',
 
             // FOOTER
-            'footer'                  => '',
+            'footer'                  => 'u-bg-2',
 
             'menu_item'                 => '',
             'menu_link'                 => '',
-            'current_page_item'         => '',
-            'current_page_parent'       => '',
-            'current_page_ancestor'     => '',
-            'current-menu-item'         => '',
+            'current_page_item'         => 'is-active',
+            'current_page_parent'       => 'is-active',
+            'current_page_ancestor'     => 'is-active',
+            'current-menu-item'         => 'is-active',
             'menu-item-has-children'    => '',
             'sub-menu'                  => '',
 
