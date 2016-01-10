@@ -13,6 +13,7 @@ require_once( $abraham_dir . '/lib/tha-theme-hooks.php');          // Template h
 require_once( $abraham_dir . '/lib/cmb2/init.php');                // Custom Metaboxes
 // Theme specific includes
 require_once( $abraham_dir . '/inc/setup.php');                    // Initial theme setup
+require_once( $abraham_dir . '/inc/archive-width.php');
 require_once( $abraham_dir . '/inc/attr-trumps.php');              // Css class selectors
 require_once( $abraham_dir . '/inc/utils.php');                    // Utility functions
 require_once( $abraham_dir . '/inc/tiny-mce.php');                 // Extra wysiwyg actions
