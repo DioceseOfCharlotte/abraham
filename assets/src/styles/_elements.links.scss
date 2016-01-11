@@ -13,6 +13,15 @@ a:hover:not(.btn) {
     opacity: $opacity;
 }
 
+a[href]:not([class]):not([rel]) {
+  color: #008000;
+  text-decoration: underline;
+}
+
+nav a {
+    color: inherit;
+}
+
 h1,
 h2,
 h3,

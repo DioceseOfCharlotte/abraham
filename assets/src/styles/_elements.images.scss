@@ -7,7 +7,3 @@ img {
 svg {
     max-height: 100%;
 }
-
-svg:not(:root) {
-    overflow: hidden; // Correct overflow not hidden in IE 9/10/11.
-}
