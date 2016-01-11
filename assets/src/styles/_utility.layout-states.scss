@@ -132,7 +132,7 @@
     max-width: 100%;
 }
 
-@include md {
+@media (--md) {
     .u-relative-md {
         position: relative;
     }

@@ -109,8 +109,8 @@
     order: 99999;
 }
 
-// small
-@include sm {
+/*// small*/
+@media (--sm) {
     .u-flex-sm {
         display: flex;
     }
@@ -120,8 +120,8 @@
     }
 }
 
-// medium
-@include md {
+/*// medium*/
+@media (--md) {
     .u-flex-md {
         display: flex;
     }
@@ -131,8 +131,8 @@
     }
 }
 
-// large
-@include lg {
+/*// large*/
+@media (--lg) {
     .u-flex-lg {
         display: flex;
     }

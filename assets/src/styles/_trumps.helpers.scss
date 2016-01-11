@@ -6,21 +6,21 @@
     visibility: hidden;
 }
 
-@include sm {
+@media (--sm) {
     .hidden-sm {
         display: none;
         visibility: hidden;
     }
 }
 
-@include md {
+@media (--md) {
     .hidden-md {
         display: none;
         visibility: hidden;
     }
 }
 
-@include lg {
+@media (--lg) {
     .hidden-lg {
         display: none;
         visibility: hidden;

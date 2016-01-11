@@ -1,26 +1,24 @@
-///* #LINKS
-//\*------------------------------------*/
+/* #LINKS
+\*------------------------------------*/
 
 a {
     color: $link-color;
     text-decoration: none;
-    transition-duration: 0.28s;
+    transition-duration: 0.3s;
     transition-timing-function: $animation-curve-default;
     transition-property: opacity;
+    padding: 2px 0;
 }
 
-a[href]:not([class]):not([rel]) {
+a:not([class]):not([rel]) {
   color: $link-color;
-  text-decoration: underline;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 18px;
 }
 
-a:focus:not(.btn), a:hover:not(.btn) {
-  text-decoration: none;
-  opacity: $opacity;
-}
-
-a[href]:hover:not([class]):not([rel]) {
-  text-decoration: underline;
+a:hover:not([class]):not([rel]) {
   opacity: $opacity;
 }
 
@@ -40,7 +38,8 @@ h3,
 h4,
 h5,
 h6 {
-    > a {
+    > a[href]:not(.u-underline) {
         color: inherit;
+        background: none;
     }
 }

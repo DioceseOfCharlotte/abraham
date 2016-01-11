@@ -1,27 +1,27 @@
-///* #RESET
-//\*------------------------------------*/
+/* #RESET
+\*------------------------------------*/
  :root {
-    width: 100%; // Make html take up the entire width of screen
-    height: 100%; // Make html take up the entire height of screen
+    width: 100%;
+    height: 100%;
 }
 
 html {
     color: $color-text;
 
-    @include sm {
+    @media (--sm) {
         font-size: .8rem;
         line-height: 1.7;
     }
 }
 
 body {
-    width: 100%; // Make html take up the entire width of screen
-    height: 100%; // Make html take up the entire height of screen
+    width: 100%;
+    height: 100%;
 }
 
-// .site-container {
+/*// .site-container {
 //     height: 100%;
-// }
+// }*/
 
 hr {
     display: block;

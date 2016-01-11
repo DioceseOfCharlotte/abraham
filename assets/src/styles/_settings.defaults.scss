@@ -1,31 +1,33 @@
-///*------------------------------------*\
-//    #DEFAULTS
-//\*------------------------------------*/
-// These variables are inuitcss’ defaults; they should not be modified or
+/*------------------------------------*\
+    #DEFAULTS
+\*------------------------------------*/
+/*// These variables are inuitcss’ defaults; they should not be modified or
 // adjusted directly; you should predefine the variables in your own project.
-// High-level base settings.
+// High-level base settings.*/
 $base-font-size: 16px !default;
 $base-line-height: 24px !default;
 $base-text-color: #333 !default;
 $base-background-color: #fff !default;
 $base-radius: 3px !default;
 
-// Namespace.
+/*// Namespace.
 //
 // Would you like inuitcss’ classes to be prepended with a namespace? If so,
-// define it here.
+// define it here.*/
 $namespace: null !default;
 
-// These variables are framework variables, sourced from variables defined
+/*// These variables are framework variables, sourced from variables defined
 // above. Feel free to use these variables throughout your project, but do not
-// modify or reassign them.
+// modify or reassign them.*/
 $base-spacing-unit: $base-line-height;
-$base-spacing-unit--tiny: round($base-spacing-unit / 4);
-$base-spacing-unit--small: round($base-spacing-unit / 2);
-$base-spacing-unit--large: round($base-spacing-unit * 2);
-$base-spacing-unit--huge: round($base-spacing-unit * 4);
+$base-spacing-unit--tiny: calc($base-spacing-unit / 4);
+$base-spacing-unit--small: calc($base-spacing-unit / 2);
+$base-spacing-unit--large: calc($base-spacing-unit * 2);
+$base-spacing-unit--huge: calc($base-spacing-unit * 4);
 
-// Theme Colors
+$gutter: 1em;
+
+/*// Theme Colors*/
 $color-1: #004899;
 $color-2: $olive;
 $color-3: #ffd870;
@@ -40,7 +42,7 @@ $text-muted: rgba($color-text, .5);
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
-// Base Styles
+/*// Base Styles*/
 $font-family: 'Helvetica Neue', Helvetica, sans-serif;
 $line-height: 1.5;
 $heading-font-family: $font-family;
@@ -104,7 +106,7 @@ $pre-background-color: transparent;
 $form-element-background-color: transparent !default;
 $form-element-min-height: if(unitless($line-height), #{$line-height}em, if(unit($line-height) != '%', $line-height, null)) !default;
 
-// ANIMATION
+/*// ANIMATION*/
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;

@@ -1,6 +1,6 @@
-// /* #COLOR VARIABLES
-// \*------------------------------------*/
-// Cool
+/* #COLOR VARIABLES
+\*------------------------------------ */
+/* Cool */
 $aqua: #7fdbff;
 $blue: #0074d9;
 $navy: #001f3f;
@@ -9,7 +9,7 @@ $green: #2ecc40;
 $olive: #3d9970;
 $lime: #01ff70;
 
-// Warm
+/* Warm */
 $yellow: #ffdc00;
 $orange: #ff851b;
 $red: #ff4136;
@@ -17,7 +17,7 @@ $fuchsia: #f012be;
 $purple: #b10dc9;
 $maroon: #85144b;
 
-// Gray Scale
+/* Gray Scale */
 $white: #fff;
 $silver: #ddd;
 $gray: #808080;
@@ -25,7 +25,7 @@ $grey: #808080;
 $black: #111;
 $blue-grey: #607d8b;
 
-// Greys
+/* Greys */
 $grey-50: lighten($grey, 45);
 $grey-100: lighten($grey, 40);
 $grey-200: lighten($grey, 30);
@@ -37,7 +37,7 @@ $grey-700: darken($grey, 20);
 $grey-800: darken($grey, 30);
 $grey-900: darken($grey, 40);
 
-// Blue Greys
+/* Blue Greys */
 $blue-grey-50: lighten($blue-grey, 45);
 $blue-grey-100: lighten($blue-grey, 40);
 $blue-grey-200: lighten($blue-grey, 30);
@@ -49,7 +49,7 @@ $blue-grey-700: darken($blue-grey, 20);
 $blue-grey-800: darken($blue-grey, 30);
 $blue-grey-900: darken($blue-grey, 40);
 
-// Reds
+/* Reds */
 $red-100: lighten($red, 40);
 $red-200: lighten($red, 30);
 $red-300: lighten($red, 20);
@@ -60,7 +60,7 @@ $red-700: darken($red, 20);
 $red-800: darken($red, 30);
 $red-900: darken($red, 40);
 
-// Blues
+/* Blues */
 $blue-100: lighten($blue, 40);
 $blue-200: lighten($blue, 30);
 $blue-300: lighten($blue, 20);
@@ -71,7 +71,7 @@ $blue-700: darken($blue, 20);
 $blue-800: darken($blue, 30);
 $blue-900: darken($blue, 40);
 
-// Greens
+/* Greens */
 $green-100: lighten($green, 40);
 $green-200: lighten($green, 30);
 $green-300: lighten($green, 20);
@@ -82,7 +82,7 @@ $green-700: darken($green, 20);
 $green-800: darken($green, 30);
 $green-900: darken($green, 40);
 
-// Yellows
+/* Yellows */
 $yellow-100: lighten($yellow, 40);
 $yellow-200: lighten($yellow, 30);
 $yellow-300: lighten($yellow, 20);
@@ -93,7 +93,7 @@ $yellow-700: darken($yellow, 20);
 $yellow-800: darken($yellow, 30);
 $yellow-900: darken($yellow, 40);
 
-// purples
+/* purples */
 $purple-100: lighten($purple, 40);
 $purple-200: lighten($purple, 30);
 $purple-300: lighten($purple, 20);
@@ -104,7 +104,7 @@ $purple-700: darken($purple, 20);
 $purple-800: darken($purple, 30);
 $purple-900: darken($purple, 40);
 
-// Teals
+/* Teals */
 $teal-100: lighten($teal, 40);
 $teal-200: lighten($teal, 30);
 $teal-300: lighten($teal, 20);
@@ -115,7 +115,7 @@ $teal-700: darken($teal, 20);
 $teal-800: darken($teal, 30);
 $teal-900: darken($teal, 40);
 
-// Oranges
+/* Oranges */
 $orange-100: lighten($orange, 40);
 $orange-200: lighten($orange, 30);
 $orange-300: lighten($orange, 20);
@@ -126,7 +126,7 @@ $orange-700: darken($orange, 20);
 $orange-800: darken($orange, 30);
 $orange-900: darken($orange, 40);
 
-// olives
+/* olives */
 $olive-100: lighten($olive, 40);
 $olive-200: lighten($olive, 30);
 $olive-300: lighten($olive, 20);
@@ -137,7 +137,7 @@ $olive-700: darken($olive, 20);
 $olive-800: darken($olive, 30);
 $olive-900: darken($olive, 40);
 
-// aquas
+/* aquas */
 $aqua-100: lighten($aqua, 40);
 $aqua-200: lighten($aqua, 30);
 $aqua-300: lighten($aqua, 20);

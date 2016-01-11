@@ -19,6 +19,9 @@
  	line-height: inherit;
 	margin: 0;
  	padding: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
  }
 
  :before,
@@ -375,12 +378,6 @@ html input[disabled],
 [hidden][aria-hidden="false"]:focus {
 	clip: auto;
 }
-
-
-
-
-// Reboot
-//
 
 
 
