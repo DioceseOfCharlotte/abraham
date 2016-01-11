@@ -6,13 +6,10 @@
 }
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: white;
     color: $color-text;
 
     @include sm {
-        font-size: 14px;
+        font-size: .8rem;
         line-height: 1.7;
     }
 }
@@ -22,9 +19,9 @@ body {
     height: 100%; // Make html take up the entire height of screen
 }
 
-.site-container {
-    height: 100%;
-}
+// .site-container {
+//     height: 100%;
+// }
 
 hr {
     display: block;
@@ -33,15 +30,4 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
-}
-
-/* Embedded content
-   ========================================================================== */
-canvas {
-    -ms-touch-action: double-tap-zoom;
-}
-
-iframe[src*="google.com/maps"] {
-    max-width: 100%;
-    width: 100%;
 }

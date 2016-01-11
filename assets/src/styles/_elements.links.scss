@@ -1,5 +1,6 @@
 ///* #LINKS
 //\*------------------------------------*/
+
 a {
     color: $link-color;
     text-decoration: none;
@@ -8,14 +9,25 @@ a {
     transition-property: opacity;
 }
 
-a:hover:not(.btn) {
-    text-decoration: none;
-    opacity: $opacity;
+a[href]:not([class]):not([rel]) {
+  color: $link-color;
+  text-decoration: underline;
 }
 
-a[href]:not([class]):not([rel]) {
-  color: #008000;
+a:focus:not(.btn), a:hover:not(.btn) {
+  text-decoration: none;
+  opacity: $opacity;
+}
+
+a[href]:hover:not([class]):not([rel]) {
   text-decoration: underline;
+  opacity: $opacity;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 nav a {

@@ -1,9 +1,11 @@
 <?php
 get_header(); ?>
 
-    <?php get_template_part('components/page', 'header'); ?>
+
 
         <div <?php hybrid_attr('grid'); ?>>
+
+            <?php get_template_part('components/page', 'header'); ?>
 
             <?php tha_content_before(); ?>
 

@@ -34,12 +34,12 @@ class Attr_Trumps {
             'layout'                    => '',
             'layout_wide'               => '',
             'grid'                      => 'u-p0 o-grid u-max-width',
-            'grid_1-wide'               => 'u-p0 o-grid',
+            'grid_1-wide'               => 'u-p0 o-grid u-1of1',
             'grid_2c-r'                 => 'u-p0 o-grid u-max-width u-flex-rev',
             'grid_2c-l'                 => 'u-p0 o-grid u-max-width',
 
             // SITE HEADER
-            'header'                  => 'u-text-white u-bg-1 u-flex u-flex-column u-flex-justify-between u-1of1',
+            'header'                  => 'u-fixed u-z3 u-top0 u-text-white u-bg-1 u-flex u-flex-column u-flex-justify-between u-1of1',
             'branding'                => '',
             'site_title'              => 'u-color-inherit u-m0',
             'site_description'        => 'u-m0 u-text-3',
@@ -426,7 +426,7 @@ class Attr_Trumps {
         elseif (is_archive()) :
             $attr['class']      .= " {$this->args['post_archive']}";
             if ($achive_width) {
-                $attr['class']      .= "$achive_width";
+                $attr['class']      .= " $achive_width";
             }
         endif;
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) {

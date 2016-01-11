@@ -37,6 +37,12 @@
  	font: 100%/1.5 sans-serif;
  }
 
+ html {
+ 	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
+ 	overflow-y: scroll; /* All browsers without overlaying scrollbars */
+ 	-webkit-text-size-adjust: 100%; /* iOS 8+ */
+ }
+
  body {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 1rem;
@@ -50,19 +56,21 @@ audio:not([controls]) {
 	display: none; /* Chrome 44-, iOS 8+, Safari 9+ */
 }
 
-button {
-	overflow: visible; /* Internet Explorer 11- */
-	-webkit-appearance: button; /* iOS 8+ */
-}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
 
-details {
-	display: block; /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
-}
-
-html {
-	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
-	overflow-y: scroll; /* All browsers without overlaying scrollbars */
-	-webkit-text-size-adjust: 100%; /* iOS 8+ */
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  overflow: visible; /* Internet Explorer 11- */
 }
 
 
@@ -101,6 +109,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 button,
 input,
 select,
+optgroup,
 textarea {
 	color: inherit;
 	font-family: inherit;
@@ -160,18 +169,24 @@ select::-ms-value {
 	color: currentColor;/* Edge 12+, Internet Explorer 11- */
 }
 
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
 
 fieldset {
   min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
 }
 
 legend {
-  display: block;
   width: 100%;
-  padding: 0;
   margin-bottom: .5rem;
   font-size: 1.5rem;
   line-height: inherit;
@@ -187,9 +202,27 @@ optgroup {
 
 
 
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
 
-main {
-	display: block; /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
+legend {
+  display: block;
 }
 
 progress {
@@ -198,14 +231,6 @@ progress {
 
 small {
 	font-size: 75%; /* All browsers */
-}
-
-summary {
-	display: block; /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
-}
-
-svg:not(:root) {
-	overflow: hidden; /* Internet Explorer 11- */
 }
 
 template {
@@ -218,20 +243,38 @@ template {
 
 
 
-/* specify the text decoration of anchors */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
 
 a {
-  text-decoration: none;
+  background-color: transparent;
 }
 
-a:focus, a:hover {
-  text-decoration: underline;
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
 }
 
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
 }
 
 /* specify the alignment of media elements */
@@ -243,6 +286,7 @@ img,
 svg,
 video {
 	vertical-align: middle;
+    display: inline-block;
 }
 
 
@@ -254,10 +298,10 @@ kbd,
 pre,
 samp {
 	font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 pre {
-  margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto; /* Internet Explorer 11- */
 }
@@ -314,6 +358,8 @@ th {
 
 /* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 
+button[disabled],
+html input[disabled],
 [aria-disabled] {
 	cursor: default;
 }
@@ -342,14 +388,51 @@ th {
   outline: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 
 abbr[title],
@@ -371,7 +454,6 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -401,7 +483,7 @@ blockquote {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
 }
 
 [role="button"] {
@@ -425,4 +507,15 @@ textarea {
 
 output {
   display: inline-block;
+}
+
+/* Embedded content
+   ========================================================================== */
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
 }

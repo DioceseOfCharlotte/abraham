@@ -2,30 +2,26 @@
  * MEH gulp
  */
 
-//'use strict';
+// 'use strict';
 
-import path from 'path';
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
-import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-
-
 const AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
 ];
 
 const SOURCESJS = [
@@ -78,10 +74,9 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp'))
     // Concatenate Styles
     .pipe($.concat('style.css'))
-    .pipe($.csscomb())
     .pipe(gulp.dest('./'))
     // Minify Styles
-    .pipe($.if('*.css', $.minifyCss()))
+    .pipe($.if('*.css', $.cssnano()))
     .pipe($.concat('style.min.css'))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('./'))
