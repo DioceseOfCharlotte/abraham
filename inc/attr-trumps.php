@@ -29,8 +29,8 @@ class Attr_Trumps {
 
         $defaults = array(
             'body'                      => '',
-            'site_container'            => '',
-            'site_container_loggedin'   => '',
+            'site_container'            => 'u-flex u-flex-column',
+            'site_container_loggedin'   => 'u-flex u-flex-column',
             'layout'                    => '',
             'layout_wide'               => '',
             'grid'                      => 'u-p0 o-grid u-max-width',
@@ -93,10 +93,10 @@ class Attr_Trumps {
             'comments_area'           => '',
 
             // FOOTER
-            'footer'                  => 'u-bg-2',
+            'footer'                  => 'u-mt-auto u-bg-2',
 
             'menu_item'                 => '',
-            'menu_link'                 => '',
+            'menu_link'                 => 'menu__link',
             'current_page_item'         => 'is-active',
             'current_page_parent'       => 'is-active',
             'current_page_ancestor'     => 'is-active',
@@ -178,14 +178,15 @@ class Attr_Trumps {
     }
 
     public function site_container($attr) {
+        $attr['class']      = 'site-container';
         if (!$this->args['site_container']) {
             return $attr;
         }
 
         if (is_user_logged_in()) :
-            $attr['class']      = $this->args['site_container_loggedin'];
+            $attr['class']      .= " {$this->args['site_container_loggedin']}";
         else :
-            $attr['class']      = $this->args['site_container'];
+            $attr['class']      .= " {$this->args['site_container']}";
         endif;
 
         return $attr;
@@ -197,9 +198,9 @@ class Attr_Trumps {
         }
 
         if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']   = $this->args['layout_wide'];
+            $attr['class']   .= " {$this->args['layout_wide']}";
         else :
-            $attr['class']   = $this->args['layout'];
+            $attr['class']   .= " {$this->args['layout']}";
         endif;
 
         return $attr;
@@ -211,13 +212,13 @@ class Attr_Trumps {
         }
 
         if ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['grid_2c-l'];
+            $attr['class']      .= " {$this->args['grid_2c-l']}";
         elseif ('sidebar-left'  ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['grid_2c-r'];
+            $attr['class']      .= " {$this->args['grid_2c-r']}";
         elseif ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['grid_1-wide'];
+            $attr['class']      .= " {$this->args['grid_1-wide']}";
         else :
-            $attr['class']      = $this->args['grid'];
+            $attr['class']      .= " {$this->args['grid']}";
         endif;
 
         return $attr;
@@ -239,7 +240,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['comments_area'];
+        $attr['class']      .= " {$this->args['comments_area']}";
 
         return $attr;
     }
@@ -249,7 +250,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['header'];
+        $attr['class']      .= " {$this->args['header']}";
 
         return $attr;
     }
@@ -259,7 +260,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['footer'];
+        $attr['class']      .= " {$this->args['footer']}";
 
         return $attr;
     }
@@ -270,16 +271,16 @@ class Attr_Trumps {
         }
 
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['content'];
+            $attr['class']      .= " {$this->args['content']}";
 
         elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['content'];
+            $attr['class']      .= " {$this->args['content']}";
 
         elseif ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['content_with_sidebar'];
+            $attr['class']      .= " {$this->args['content_with_sidebar']}";
 
         elseif ('sidebar-left'     ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['content_with_sidebar'];
+            $attr['class']      .= " {$this->args['content_with_sidebar']}";
         endif;
 
         if (hybrid_is_plural()) {
@@ -297,19 +298,19 @@ class Attr_Trumps {
         if ('primary' === $context) {
 
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['sidebar_horizontal'];
+            $attr['class']      .= " {$this->args['sidebar_horizontal']}";
         elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['sidebar_horizontal'];
+            $attr['class']      .= " {$this->args['sidebar_horizontal']}";
         elseif ('sidebar-right' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['sidebar_right'];
+            $attr['class']      .= " {$this->args['sidebar_right']}";
         elseif ('sidebar-left' ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['sidebar_left'];
+            $attr['class']      .= " {$this->args['sidebar_left']}";
         endif;
             $attr['class']      .= " {$this->args['sidebar_primary']}";
 
         }
         if ('footer' === $context) {
-                  $attr['class']      = $this->args['sidebar_footer'];
+                  $attr['class']      = " {$this->args['sidebar_footer']}";
         }
         return $attr;
     }
@@ -319,17 +320,17 @@ class Attr_Trumps {
             return $attr;
         }
         if ($this->args['widgets']) {
-            $attr['class']      = $this->args['widgets'];
+            $attr['class']      .= " {$this->args['widgets']}";
 
-        if ('footer' === $context) {
-            $attr['class']      .= " {$this->args['footer_widgets']}";
-        }
-        if ('primary' === $context) {
-            $attr['class']      .= " {$this->args['primary_widgets']}";
-        }
+            if ('footer' === $context) {
+                $attr['class']      .= " {$this->args['footer_widgets']}";
+            }
+            if ('primary' === $context) {
+                $attr['class']      .= " {$this->args['primary_widgets']}";
+            }
 
         return $attr;
-    }
+        }
     }
 
     public function menu($attr, $context) {
@@ -355,7 +356,7 @@ class Attr_Trumps {
         return $attr;
         }
 
-        $attr['class']      = $this->args['branding'];
+        $attr['class']      .= " {$this->args['branding']}";
 
         return $attr;
     }
@@ -366,7 +367,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['site_title'];
+        $attr['class']      .= " {$this->args['site_title']}";
 
         return $attr;
     }
@@ -376,7 +377,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['site_description'];
+        $attr['class']      .= " {$this->args['site_description']}";
 
         return $attr;
     }
@@ -388,7 +389,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['page_header'];
+        $attr['class']      .= " {$this->args['page_header']}";
 
         return $attr;
     }
@@ -398,7 +399,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['page_title'];
+        $attr['class']      .= " {$this->args['page_title']}";
 
         return $attr;
     }
@@ -408,7 +409,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['archive_description'];
+        $attr['class']      .= " {$this->args['archive_description']}";
 
         return $attr;
     }
@@ -440,7 +441,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_title'];
+        $attr['class']      .= " {$this->args['entry_title']}";
 
         return $attr;
     }
@@ -450,7 +451,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_author'];
+        $attr['class']      .= " {$this->args['entry_author']}";
 
         return $attr;
     }
@@ -461,7 +462,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_published'];
+        $attr['class']      .= " {$this->args['entry_published']}";
 
         return $attr;
     }
@@ -471,7 +472,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_header'];
+        $attr['class']      .= " {$this->args['entry_header']}";
 
         return $attr;
     }
@@ -482,9 +483,9 @@ class Attr_Trumps {
         }
 
         if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
-            $attr['class']      = $this->args['entry_content_wide'];
+            $attr['class']      .= " {$this->args['entry_content_wide']}";
         else :
-            $attr['class']      = $this->args['entry_content'];
+            $attr['class']      .= " {$this->args['entry_content']}";
         endif;
 
         return $attr;
@@ -495,7 +496,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_summary'];
+        $attr['class']      .= " {$this->args['entry_summary']}";
 
         return $attr;
     }
@@ -505,7 +506,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_footer'];
+        $attr['class']      .= " {$this->args['entry_footer']}";
         return $attr;
     }
 
@@ -514,7 +515,7 @@ class Attr_Trumps {
             return $attr;
         }
 
-        $attr['class']      = $this->args['entry_terms'];
+        $attr['class']      .= " {$this->args['entry_terms']}";
 
         return $attr;
     }

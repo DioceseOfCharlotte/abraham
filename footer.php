@@ -16,8 +16,6 @@
 
         <?php tha_footer_after(); ?>
 
-    </div><!-- /.layout -->
-
 </div><!-- /.site-container -->
 
     <?php tha_body_bottom(); ?>

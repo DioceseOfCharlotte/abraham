@@ -29,5 +29,3 @@
         </header>
 
         <?php tha_header_after(); ?>
-
-            <div <?php hybrid_attr('layout'); ?>>

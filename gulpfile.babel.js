@@ -4,7 +4,6 @@
 
 //'use strict';
 
-import fs from 'fs';
 import path from 'path';
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
