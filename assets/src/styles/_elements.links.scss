@@ -10,7 +10,7 @@ a {
     padding: 2px 0;
 }
 
-a:not([class]):not([rel]) {
+a:not([class]) {
   color: $link-color;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
   background-repeat: repeat-x;
@@ -18,7 +18,7 @@ a:not([class]):not([rel]) {
   background-position: 0 18px;
 }
 
-a:hover:not([class]):not([rel]) {
+a:hover:not([class]) {
   opacity: $opacity;
 }
 
@@ -28,8 +28,9 @@ a:focus {
   outline-offset: -2px;
 }
 
-nav a {
+li > a[href] {
     color: inherit;
+    background-image: none;
 }
 
 h1,
@@ -38,8 +39,8 @@ h3,
 h4,
 h5,
 h6 {
-    > a[href]:not(.u-underline) {
+    > a[href] {
         color: inherit;
-        background: none;
+        background-image: none;
     }
 }

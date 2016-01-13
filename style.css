@@ -774,7 +774,7 @@ a {
 
     padding: 2px 0;
 }
-a:not([class]):not([rel]) {
+a:not([class]) {
 
     color: #0074d9;
 
@@ -786,7 +786,7 @@ a:not([class]):not([rel]) {
 
     background-position: 0 18px;
 }
-a:hover:not([class]):not([rel]) {
+a:hover:not([class]) {
 
     opacity: 0.7;
 }
@@ -798,15 +798,17 @@ a:focus {
 
     outline-offset: -2px;
 }
-nav a {
+li > a[href] {
 
     color: inherit;
+
+    background-image: none;
 }
-h1 > a[href]:not(.u-underline), h2 > a[href]:not(.u-underline), h3 > a[href]:not(.u-underline), h4 > a[href]:not(.u-underline), h5 > a[href]:not(.u-underline), h6 > a[href]:not(.u-underline) {
+h1 > a[href], h2 > a[href], h3 > a[href], h4 > a[href], h5 > a[href], h6 > a[href] {
 
     color: inherit;
 
-    background: none;
+    background-image: none;
 }
 /*/ @import '_elements.buttons.scss';*/
 /* #LISTS
