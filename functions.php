@@ -24,3 +24,22 @@ define('HYBRID_DIR', trailingslashit( get_template_directory()) . 'lib/hybrid-co
 define('HYBRID_URI', trailingslashit( get_template_directory_uri()) . 'lib/hybrid-core/');
 
 new Hybrid();
+
+
+
+
+
+add_filter( 'map_meta_cap', 'my_map_meta_cap', 16, 4 );
+
+function my_map_meta_cap( $caps, $cap, $user_id, $args ) {
+
+    if ( 'read_post' === $cap ) {
+        $post = get_post( $args[0] );
+
+        if ( 'document' === $post->post_type && 'private' === $post->post_status && members_can_user_view_post( $user_id, $post->ID ) ) {
+            $caps = array();
+        }
+    }
+
+    return $caps;
+}
