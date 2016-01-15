@@ -671,7 +671,7 @@ iframe[src*="google.com/maps"] {
 }
 html {
 
-    color: rgb(54, 70, 78);
+    color: rgb(63, 81, 90);
 }
 @media (max-width: 51em) {
 
@@ -791,11 +791,11 @@ a:not([class]) {
 
     color: #0074d9;
 
-    border-bottom: 1px solid rgb(66, 167, 255);
+    border-bottom: 1px solid rgb(153, 207, 255);
 }
 a:not([class]):hover {
 
-    color: rgb(0, 63, 117);
+    color: rgb(0, 82, 153);
 
     border-color: #0074d9;
 }
@@ -823,13 +823,13 @@ input, input[type=text], input[type=date], input[type=datetime], input[type=date
 
     line-height: 1.5;
 
-    color: rgb(54, 70, 78);
+    color: rgb(63, 81, 90);
 
     background-color: #fff;
 
     background-image: none;
 
-    border: 1px solid rgb(75, 97, 108);
+    border: 1px solid rgb(84, 108, 120);
 
     border-radius: 2px;
 
@@ -949,7 +949,7 @@ nav ol, nav ul, nav li {
 .btn[href]:hover, .btn:focus
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
 
-    background-color: rgba(13, 16, 18, 0.06);
+    background-color: rgba(21, 27, 30, 0.06);
 
     opacity: 1;
 }
@@ -963,9 +963,9 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     color: #fff;
 
-    background-color: rgb(0, 63, 117);
+    background-color: rgb(0, 82, 153);
 
-    border-color: rgb(0, 63, 117);
+    border-color: rgb(0, 82, 153);
 }
 .btn-primary {
 
@@ -977,7 +977,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     color: #fff;
 
-    background-color: rgb(0, 63, 117);
+    background-color: rgb(0, 82, 153);
 }
 
 
@@ -1164,42 +1164,42 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
 .u-bg-frost-1 {
 
-    background-color: rgba(10, 14, 15, 0.06);
+    background-color: rgba(240, 243, 245, 0.06);
 }
 
 .u-bg-frost-2 {
 
-    background-color: rgba(10, 14, 15, 0.25);
+    background-color: rgba(240, 243, 245, 0.25);
 }
 
 .u-bg-frost-3 {
 
-    background-color: rgba(10, 14, 15, 0.5);
+    background-color: rgba(240, 243, 245, 0.5);
 }
 
 .u-bg-frost-4 {
 
-    background-color: rgba(10, 14, 15, 0.8);
+    background-color: rgba(240, 243, 245, 0.8);
 }
 
 .u-bg-tint-1 {
 
-    background-color: rgba(13, 16, 18, 0.06);
+    background-color: rgba(21, 27, 30, 0.06);
 }
 
 .u-bg-tint-2 {
 
-    background-color: rgba(13, 16, 18, 0.25);
+    background-color: rgba(21, 27, 30, 0.25);
 }
 
 .u-bg-tint-3 {
 
-    background-color: rgba(13, 16, 18, 0.5);
+    background-color: rgba(21, 27, 30, 0.5);
 }
 
 .u-bg-tint-4 {
 
-    background-color: rgba(13, 16, 18, 0.8);
+    background-color: rgba(21, 27, 30, 0.8);
 }
 
 .u-bg-1-glass {
@@ -1249,42 +1249,42 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
 .u-hover-frost-1:hover {
 
-    background-color: rgba(10, 14, 15, 0.06);
+    background-color: rgba(240, 243, 245, 0.06);
 }
 
 .u-hover-frost-2:hover {
 
-    background-color: rgba(10, 14, 15, 0.25);
+    background-color: rgba(240, 243, 245, 0.25);
 }
 
 .u-hover-frost-3:hover {
 
-    background-color: rgba(10, 14, 15, 0.5);
+    background-color: rgba(240, 243, 245, 0.5);
 }
 
 .u-hover-frost-4:hover {
 
-    background-color: rgba(10, 14, 15, 0.8);
+    background-color: rgba(240, 243, 245, 0.8);
 }
 
 .u-hover-tint-1:hover {
 
-    background-color: rgba(13, 16, 18, 0.06);
+    background-color: rgba(21, 27, 30, 0.06);
 }
 
 .u-hover-tint-2:hover {
 
-    background-color: rgba(13, 16, 18, 0.25);
+    background-color: rgba(21, 27, 30, 0.25);
 }
 
 .u-hover-tint-3:hover {
 
-    background-color: rgba(13, 16, 18, 0.5);
+    background-color: rgba(21, 27, 30, 0.5);
 }
 
 .u-hover-tint-4:hover {
 
-    background-color: rgba(13, 16, 18, 0.8);
+    background-color: rgba(21, 27, 30, 0.8);
 }
 
 /* Fill Colors */
@@ -2436,7 +2436,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-bottom-style: solid;
 
-    border-bottom-color: rgba(13, 16, 18, 0.8);
+    border-bottom-color: rgba(21, 27, 30, 0.8);
 }
 .u-table-light tr:last-child td {
 
@@ -2710,7 +2710,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-width: 4px;
 
-    border-color: rgba(13, 16, 18, 0.8);
+    border-color: rgba(21, 27, 30, 0.8);
 }
 .u-border-t {
 
@@ -2718,7 +2718,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-top-width: 4px;
 
-    border-top-color: rgba(13, 16, 18, 0.8);
+    border-top-color: rgba(21, 27, 30, 0.8);
 }
 .u-border-r {
 
@@ -2726,7 +2726,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-right-width: 4px;
 
-    border-right-color: rgba(13, 16, 18, 0.8);
+    border-right-color: rgba(21, 27, 30, 0.8);
 }
 .u-border-b {
 
@@ -2734,7 +2734,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-bottom-width: 4px;
 
-    border-bottom-color: rgba(13, 16, 18, 0.8);
+    border-bottom-color: rgba(21, 27, 30, 0.8);
 }
 .u-border-l {
 
@@ -2742,7 +2742,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
     border-left-width: 4px;
 
-    border-left-color: rgba(13, 16, 18, 0.8);
+    border-left-color: rgba(21, 27, 30, 0.8);
 }
 .u-border0 {
 

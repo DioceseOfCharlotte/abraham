@@ -26,124 +26,124 @@ $black: #111;
 $blue-grey: #607d8b;
 
 /* Greys */
-$grey-50: color($grey lightness(5%));
-$grey-100: color($grey lightness(10%));
-$grey-200: color($grey lightness(20%));
-$grey-300: color($grey lightness(30%));
-$grey-400: color($grey lightness(40%));
+$grey-50: color($grey lightness(95%));
+$grey-100: color($grey lightness(90%));
+$grey-200: color($grey lightness(80%));
+$grey-300: color($grey lightness(70%));
+$grey-400: color($grey lightness(60%));
 $grey-500: $grey;
-$grey-600: color($grey lightness(- 10%));
-$grey-700: color($grey lightness(- 20%));
-$grey-800: color($grey lightness(- 30%));
-$grey-900: color($grey lightness(- 40%));
+$grey-600: color($grey lightness(40%));
+$grey-700: color($grey lightness(30%));
+$grey-800: color($grey lightness(20%));
+$grey-900: color($grey lightness(10%));
 
 /* Blue Greys */
-$blue-grey-50: color($blue-grey lightness(5%));
-$blue-grey-100: color($blue-grey lightness(10%));
-$blue-grey-200: color($blue-grey lightness(20%));
-$blue-grey-300: color($blue-grey lightness(30%));
-$blue-grey-400: color($blue-grey lightness(40%));
+$blue-grey-50: color($blue-grey lightness(95%));
+$blue-grey-100: color($blue-grey lightness(90%));
+$blue-grey-200: color($blue-grey lightness(80%));
+$blue-grey-300: color($blue-grey lightness(70%));
+$blue-grey-400: color($blue-grey lightness(60%));
 $blue-grey-500: $blue-grey;
-$blue-grey-600: color($blue-grey lightness(- 10%));
-$blue-grey-700: color($blue-grey lightness(- 20%));
-$blue-grey-800: color($blue-grey lightness(- 30%));
-$blue-grey-900: color($blue-grey lightness(- 40%));
+$blue-grey-600: color($blue-grey lightness(40%));
+$blue-grey-700: color($blue-grey lightness(30%));
+$blue-grey-800: color($blue-grey lightness(20%));
+$blue-grey-900: color($blue-grey lightness(10%));
 
 /* Reds */
-$red-100: color($red lightness(10%));
-$red-200: color($red lightness(20%));
-$red-300: color($red lightness(30%));
-$red-400: color($red lightness(40%));
+$red-100: color($red lightness(90%));
+$red-200: color($red lightness(80%));
+$red-300: color($red lightness(70%));
+$red-400: color($red lightness(60%));
 $red-500: $red;
-$red-600: color($red lightness(- 10%));
-$red-700: color($red lightness(- 20%));
-$red-800: color($red lightness(- 30%));
-$red-900: color($red lightness(- 40%));
+$red-600: color($red lightness(40%));
+$red-700: color($red lightness(30%));
+$red-800: color($red lightness(20%));
+$red-900: color($red lightness(10%));
 
 /* Blues */
-$blue-100: color($blue lightness(+ 10%));
-$blue-200: color($blue lightness(+ 20%));
-$blue-300: color($blue lightness(+ 30%));
-$blue-400: color($blue lightness(+ 40%));
+$blue-100: color($blue lightness(90%));
+$blue-200: color($blue lightness(80%));
+$blue-300: color($blue lightness(70%));
+$blue-400: color($blue lightness(60%));
 $blue-500: $blue;
-$blue-600: color($blue lightness(- 10%));
-$blue-700: color($blue lightness(- 20%));
-$blue-800: color($blue lightness(- 30%));
-$blue-900: color($blue lightness(- 40%));
+$blue-600: color($blue lightness(40%));
+$blue-700: color($blue lightness(30%));
+$blue-800: color($blue lightness(20%));
+$blue-900: color($blue lightness(10%));
 
 /* Greens */
-$green-100: color($green lightness(10%));
-$green-200: color($green lightness(20%));
-$green-300: color($green lightness(30%));
-$green-400: color($green lightness(40%));
+$green-100: color($green lightness(90%));
+$green-200: color($green lightness(80%));
+$green-300: color($green lightness(70%));
+$green-400: color($green lightness(60%));
 $green-500: $green;
-$green-600: color($green lightness(- 10%));
-$green-700: color($green lightness(- 20%));
-$green-800: color($green lightness(- 30%));
-$green-900: color($green lightness(- 40%));
+$green-600: color($green lightness(40%));
+$green-700: color($green lightness(30%));
+$green-800: color($green lightness(20%));
+$green-900: color($green lightness(10%));
 
 /* Yellows */
-$yellow-100: color($yellow lightness(10%));
-$yellow-200: color($yellow lightness(20%));
-$yellow-300: color($yellow lightness(30%));
-$yellow-400: color($yellow lightness(40%));
+$yellow-100: color($yellow lightness(90%));
+$yellow-200: color($yellow lightness(80%));
+$yellow-300: color($yellow lightness(70%));
+$yellow-400: color($yellow lightness(60%));
 $yellow-500: $yellow;
-$yellow-600: color($yellow lightness(- 10%));
-$yellow-700: color($yellow lightness(- 20%));
-$yellow-800: color($yellow lightness(- 30%));
-$yellow-900: color($yellow lightness(- 40%));
+$yellow-600: color($yellow lightness(40%));
+$yellow-700: color($yellow lightness(30%));
+$yellow-800: color($yellow lightness(20%));
+$yellow-900: color($yellow lightness(10%));
 
 /* purples */
-$purple-100: color($purple lightness(10%));
-$purple-200: color($purple lightness(20%));
-$purple-300: color($purple lightness(30%));
-$purple-400: color($purple lightness(40%));
+$purple-100: color($purple lightness(90%));
+$purple-200: color($purple lightness(80%));
+$purple-300: color($purple lightness(70%));
+$purple-400: color($purple lightness(60%));
 $purple-500: $purple;
-$purple-600: color($purple lightness(- 10%));
-$purple-700: color($purple lightness(- 20%));
-$purple-800: color($purple lightness(- 30%));
-$purple-900: color($purple lightness(- 40%));
+$purple-600: color($purple lightness(40%));
+$purple-700: color($purple lightness(30%));
+$purple-800: color($purple lightness(20%));
+$purple-900: color($purple lightness(10%));
 
 /* Teals */
-$teal-100: color($teal lightness(10%));
-$teal-200: color($teal lightness(20%));
-$teal-300: color($teal lightness(30%));
-$teal-400: color($teal lightness(40%));
+$teal-100: color($teal lightness(90%));
+$teal-200: color($teal lightness(80%));
+$teal-300: color($teal lightness(70%));
+$teal-400: color($teal lightness(60%));
 $teal-500: $teal;
-$teal-600: color($teal lightness(- 10%));
-$teal-700: color($teal lightness(- 20%));
-$teal-800: color($teal lightness(- 30%));
-$teal-900: color($teal lightness(- 40%));
+$teal-600: color($teal lightness(40%));
+$teal-700: color($teal lightness(30%));
+$teal-800: color($teal lightness(20%));
+$teal-900: color($teal lightness(10%));
 
 /* Oranges */
-$orange-100: color($orange lightness(10%));
-$orange-200: color($orange lightness(20%));
-$orange-300: color($orange lightness(30%));
-$orange-400: color($orange lightness(40%));
+$orange-100: color($orange lightness(90%));
+$orange-200: color($orange lightness(80%));
+$orange-300: color($orange lightness(70%));
+$orange-400: color($orange lightness(60%));
 $orange-500: $orange;
-$orange-600: color($orange lightness(- 10%));
-$orange-700: color($orange lightness(- 20%));
-$orange-800: color($orange lightness(- 30%));
-$orange-900: color($orange lightness(- 40%));
+$orange-600: color($orange lightness(40%));
+$orange-700: color($orange lightness(30%));
+$orange-800: color($orange lightness(20%));
+$orange-900: color($orange lightness(10%));
 
 /* olives */
-$olive-100: color($olive lightness(10%));
-$olive-200: color($olive lightness(20%));
-$olive-300: color($olive lightness(30%));
-$olive-400: color($olive lightness(40%));
+$olive-100: color($olive lightness(90%));
+$olive-200: color($olive lightness(80%));
+$olive-300: color($olive lightness(70%));
+$olive-400: color($olive lightness(60%));
 $olive-500: $olive;
-$olive-600: color($olive lightness(- 10%));
-$olive-700: color($olive lightness(- 20%));
-$olive-800: color($olive lightness(- 30%));
-$olive-900: color($olive lightness(- 40%));
+$olive-600: color($olive lightness(40%));
+$olive-700: color($olive lightness(30%));
+$olive-800: color($olive lightness(20%));
+$olive-900: color($olive lightness(10%));
 
 /* aquas */
-$aqua-100: color($aqua lightness(10%));
-$aqua-200: color($aqua lightness(20%));
-$aqua-300: color($aqua lightness(30%));
-$aqua-400: color($aqua lightness(40%));
+$aqua-100: color($aqua lightness(90%));
+$aqua-200: color($aqua lightness(80%));
+$aqua-300: color($aqua lightness(70%));
+$aqua-400: color($aqua lightness(60%));
 $aqua-500: $aqua;
-$aqua-600: color($aqua lightness(- 10%));
-$aqua-700: color($aqua lightness(- 20%));
-$aqua-800: color($aqua lightness(- 30%));
-$aqua-900: color($aqua lightness(- 40%));
+$aqua-600: color($aqua lightness(40%));
+$aqua-700: color($aqua lightness(30%));
+$aqua-800: color($aqua lightness(20%));
+$aqua-900: color($aqua lightness(10%));
