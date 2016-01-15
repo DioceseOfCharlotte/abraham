@@ -1,9 +1,9 @@
 <?php
 get_header(); ?>
 
-    <?php get_template_part('components/page', 'header'); ?>
+        <?php get_template_part('components/page', 'header'); ?>
 
-        <div <?php hybrid_attr('grid'); ?>>
+            <div <?php hybrid_attr('grid'); ?>>
 
             <?php tha_content_before(); ?>
 
@@ -11,7 +11,29 @@ get_header(); ?>
 
                 <?php tha_content_top(); ?>
 
-                <?php hybrid_get_content_template(); ?>
+                <?php if (have_posts()) : ?>
+
+                    <?php tha_content_while_before(); ?>
+
+                    <?php while (have_posts()) : the_post(); ?>
+
+                        <?php tha_entry_before(); ?>
+
+                            <?php hybrid_get_content_template(); ?>
+
+                        <?php tha_entry_after(); ?>
+
+                    <?php endwhile; ?>
+
+                    <?php tha_content_while_after(); ?>
+
+                    <?php get_template_part('components/posts', 'pagination'); ?>
+
+                <?php else : // If no posts were found. ?>
+
+                    <?php get_template_part('content/none'); ?>
+
+                <?php endif; ?>
 
                 <?php tha_content_bottom(); ?>
 

@@ -1,10 +1,4 @@
-<?php if (have_posts()) : ?>
 
-    <?php tha_content_while_before(); ?>
-
-    <?php while (have_posts()) : the_post(); ?>
-
-    <?php tha_entry_before(); ?>
 
     <article <?php hybrid_attr('post'); ?>>
 
@@ -32,14 +26,3 @@
     <?php tha_entry_bottom(); ?>
 
     </article>
-
-    <?php tha_entry_after(); ?>
-
-    <?php endwhile; ?>
-
-    <?php tha_content_while_after(); ?>
-
-    <?php get_template_part('components/posts', 'pagination'); ?>
-    
-<?php
-endif;
