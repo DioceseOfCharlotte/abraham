@@ -6,6 +6,9 @@ add_filter('excerpt_length', 'meh_excerpt_length');
 add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
 add_filter('show_admin_bar', '__return_false');
+add_shortcode( 'doc_logout', 'doc_logout_link' );
+add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
+add_action( 'pre_get_posts', 'doc_post_order', 1 );
 
 
 
@@ -20,7 +23,7 @@ function meh_template_hierarchy($templates) {
     } elseif (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     } elseif (is_singular()) {
-        $templates = array_merge(array("content/content-single.php"), $templates);
+        $templates = array_merge(array("content/single.php"), $templates);
         $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
         //$templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
     }
@@ -88,4 +91,33 @@ function get_the_slug($id=null) {
 
     $slug = basename( get_permalink($id) );
     return $slug;
+}
+
+
+// Shortcode
+function doc_logout_link() {
+$logoutlink = wp_logout_url( home_url() );
+return '<a href="' . $logoutlink . '">Logout</a>';
+}
+
+
+// Shortcode
+function doc_pass_reset_link() {
+$passresetlink = wp_lostpassword_url( get_permalink() );
+return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>';
+}
+
+
+function doc_post_order( $query ) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+    if ( is_post_type_archive( 'department' ) || is_post_type_archive( 'parish' ) || is_post_type_archive( 'school' ) ) {
+        $query->set( 'order', 'ASC' );
+	  	$query->set('orderby', 'name');
+	  	$query->set('post_parent', 0);
+        return;
+    } elseif ( is_post_type_archive() ) {
+	  	$query->set( 'order', 'ASC' );
+	  	$query->set('orderby', 'menu_order');
+	}
 }

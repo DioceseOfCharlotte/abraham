@@ -4,7 +4,7 @@
  *
  * @author      The Theme Foundry
  */
- 
+
 if (!function_exists('customizer_library_get_font_choices')) :
 /**
  * Packages the font choices into value/label pairs for use with the customizer.
