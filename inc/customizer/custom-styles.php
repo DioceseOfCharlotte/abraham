@@ -50,10 +50,30 @@ final class Abraham_Custom_Styles {
      * @return string
      */
     public function primary_color_default($hex) {
+        global $cptarchives;
+        $landing_prime_color = $cptarchives->get_archive_meta( 'doc_page_primary_color', true );
+        $post_prime_color = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+
+        if ( $post_prime_color && ! is_front_page() && ! is_post_type_archive() )
+            return $post_prime_color;
+
+        if ( $landing_prime_color && ! is_front_page() )
+            return $landing_prime_color;
+
         return $hex ? $hex : '004899';
     }
 
     public function secondary_color_default($hex) {
+        global $cptarchives;
+        $landing_second_color = $cptarchives->get_archive_meta( 'doc_page_secondary_color', true );
+        $post_second_color = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
+
+        if ( $post_second_color && ! is_front_page() && ! is_post_type_archive() )
+            return $post_second_color;
+
+        if ( $landing_second_color && ! is_front_page() )
+            return $landing_second_color;
+
         return $hex ? $hex : 'ffe192';
     }
 
