@@ -249,25 +249,19 @@ final class Abraham_Custom_Styles {
     }
 
     function get_abe_font_styles() {
-    	/* === <p> === */
-    	$p_family = get_theme_mod( 'body_font', '' );
-    	if ( $p_family )
-    		$_p_style .= sprintf( "font-family: '%s';", esc_attr( $p_family ) );
-        if ( $_p_style )
-        	$_p_style = sprintf( 'body { %s }', $_p_style );
+    	$style = '';
+        $h_family = get_theme_mod( 'heading_font', '' );
+    	$b_family = get_theme_mod( 'body_font', '' );
 
-    	/* === <h1> === */
-    	$h1_family = get_theme_mod( 'heading_font', '' );
-    	if ( $h1_family )
-    		$_h1_style .= sprintf( "font-family: '%s';", esc_attr( $h1_family ) );
-        if ( $_h1_style )
-        	$_h1_style = sprintf( 'h1,h2,h3,h4 { %s }', $_h1_style );
-    	/* === Output === */
-    	// Join the styles.
-    	$style = join( '', array( $_p_style, $_h1_style ) );
+    	if ( $h_family )
+    		$style .= sprintf( "font-family: '%s';", esc_attr( $h_family ) );
+
+        if ( $b_family )
+    		$style .= sprintf( "font-family: '%s';", esc_attr( $b_family ) );
+            
     	// Output the styles.
     	if ( $style ) {
-    		echo "\n" . '<style type="text/css" id="ctypo-css">' . $style . '</style>' . "\n";
+    		echo "\n" . '<style type="text/css" id="type-css">' . $style . '</style>' . "\n";
     	}
     }
 
