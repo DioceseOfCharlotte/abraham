@@ -6,7 +6,7 @@ add_action( 'init', 'archive_width_taxonomy' );
 function archive_width_taxonomy() {
 
     register_taxonomy( 'archive_post_width',
-        get_non_hierarchy_cpts(),
+        abe_non_hierarchy_cpts(),
         array(
         'public' => true,
         'hierarchical' => false,
@@ -38,7 +38,7 @@ function rcdoc_register_metabox() {
     $rcdoc_color_meta = new_cmb2_box( array(
         'id'            => $prefix . 'metabox',
         'title'         => __( 'Page Colors', 'cmb2' ),
-        'object_types'  => get_hierarchy_cpts(),
+        'object_types'  => abe_hierarchy_cpts(),
         'context'    => 'side',
         'priority'   => 'high',
         //'show_names' => false,
