@@ -10,8 +10,10 @@ $abraham_dir = trailingslashit( get_template_directory() );
 // 3rd party libraries
 require_once( $abraham_dir . '/lib/hybrid-core/hybrid.php');       // Hybrid Core library
 require_once( $abraham_dir . '/lib/tha-theme-hooks.php');          // Template hooks
+require_once( $abraham_dir . '/lib/cmb2/init.php');                // Custom Metaboxes
 // Theme specific includes
 require_once( $abraham_dir . '/inc/setup.php');                    // Initial theme setup
+require_once( $abraham_dir . '/inc/archive-width.php');
 require_once( $abraham_dir . '/inc/attr-trumps.php');              // Css class selectors
 require_once( $abraham_dir . '/inc/utils.php');                    // Utility functions
 require_once( $abraham_dir . '/inc/tiny-mce.php');                 // Extra wysiwyg actions
