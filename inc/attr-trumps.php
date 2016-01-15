@@ -39,7 +39,7 @@ class Attr_Trumps {
             'grid_2c-l'                 => 'u-p0 o-grid u-max-width',
 
             // SITE HEADER
-            'header'                  => 'u-fixed u-z3 u-top0 u-text-white u-bg-1 u-flex u-flex-column u-flex-justify-between u-1of1',
+            'header'                  => 'u-fixed u-z3 u-text-white u-bg-1 u-flex u-flex-column u-flex-justify-between u-1of1',
             'branding'                => '',
             'site_title'              => 'u-color-inherit u-m0',
             'site_description'        => 'u-m0 u-text-3',
@@ -96,7 +96,7 @@ class Attr_Trumps {
             'footer'                  => 'u-mt-auto u-bg-2',
 
             'menu_item'                 => '',
-            'menu_link'                 => 'menu__link',
+            'menu_link'                 => 'menu__link btn',
             'current_page_item'         => 'is-active',
             'current_page_parent'       => 'is-active',
             'current_page_ancestor'     => 'is-active',

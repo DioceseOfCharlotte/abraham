@@ -5,21 +5,20 @@
 // adjusted directly; you should predefine the variables in your own project.
 // High-level base settings.*/
 $base-font-size: 16px !default;
-$base-line-height: 24px !default;
-$base-text-color: #333 !default;
+$base-line-height: 1.5 !default;
+$base-text-color: $blue-grey-700 !default;
 $base-background-color: #fff !default;
 $base-radius: 3px !default;
 
 /*// Namespace.
 //
-// Would you like inuitcss’ classes to be prepended with a namespace? If so,
-// define it here.*/
+// namespace? */
 $namespace: null !default;
 
 /*// These variables are framework variables, sourced from variables defined
 // above. Feel free to use these variables throughout your project, but do not
 // modify or reassign them.*/
-$base-spacing-unit: $base-line-height;
+$base-spacing-unit: $base-font-size * $base-line-height;
 $base-spacing-unit--tiny: calc($base-spacing-unit / 4);
 $base-spacing-unit--small: calc($base-spacing-unit / 2);
 $base-spacing-unit--large: calc($base-spacing-unit * 2);
@@ -28,19 +27,25 @@ $base-spacing-unit--huge: calc($base-spacing-unit * 4);
 $gutter: 1em;
 
 /*// Theme Colors*/
-$color-1: #004899;
-$color-2: $olive;
-$color-3: #ffd870;
-$color1-light: lighten($color-1, 10);
-$color2-light: lighten($color-2, 10);
-$color3-light: lighten($color-3, 10);
-$color1-dark: darken($color-1, 10);
-$color2-dark: darken($color-2, 10);
-$color3-dark: darken($color-3, 10);
-$color-text: $grey-700;
-$text-muted: rgba($color-text, .5);
-$base-font-size: 16px;
-$base-line-height: 1.5;
+$color1: #004899;
+$color2: $olive;
+$color3: #ffd870;
+$color-1: $color1;
+$color-2: $color2;
+$color-3: $color3;
+$color1-light: color($color-1 lightness(10%));
+$color2-light: color($color-2 lightness(10%));
+$color3-light: color($color-3 lightness(10%));
+$color1-dark: color($color-1 lightness(- 10%));
+$color2-dark: color($color-2 lightness(- 10%));
+$color3-dark: color($color-3 lightness(- 10%));
+$color-text: $base-text-color;
+$color-text-muted: color($color-text a(50%));
+$color-links: $blue;
+$color-links-border: $blue-200;
+$color-links-hover: $blue-700;
+$link-text-decoration: none;
+$link-hover-text-decoration: none;
 
 /*// Base Styles*/
 $font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -49,12 +54,12 @@ $heading-font-family: $font-family;
 $heading-font-weight: 500;
 $heading-line-height: 1.25;
 $monospace-font-family: 'Source Code Pro', Consolas, monospace;
-$h1: 2rem;
-$h2: 1.5rem;
-$h3: 1.25rem;
-$h4: 1rem;
-$h5: 0.875rem;
-$h6: 0.75rem;
+$h1: 2.5rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+$h6: 1rem;
 $body-font-size: $base-font-size;
 $bold-font-weight: bold;
 $pre-font-size: inherit;
@@ -82,14 +87,14 @@ $button-padding-y: 0.5rem;
 $button-padding-x: 1rem;
 $container-width: 64em;
 $container-wide: 84em;
-$darken-1: rgba($blue-grey-900,0.0625);
-$darken-2: rgba($blue-grey-900,0.25);
-$darken-3: rgba($blue-grey-900,0.5);
-$darken-4: rgba($blue-grey-900,0.8);
-$lighten-1: rgba($blue-grey-50,0.0625);
-$lighten-2: rgba($blue-grey-50,0.25);
-$lighten-3: rgba($blue-grey-50,0.5);
-$lighten-4: rgba($blue-grey-50,0.8);
+$darken-1: color($blue-grey-900 a(6%));
+$darken-2: color($blue-grey-900 a(25%));
+$darken-3: color($blue-grey-900 a(50%));
+$darken-4: color($blue-grey-900 a(80%));
+$lighten-1: color($blue-grey-50 a(6%));
+$lighten-2: color($blue-grey-50 a(25%));
+$lighten-3: color($blue-grey-50 a(50%));
+$lighten-4: color($blue-grey-50 a(80%));
 $border-width: 4px;
 $border-radius: 2px;
 $border-color: $darken-4;
@@ -99,15 +104,12 @@ $table-cell-padding-y: 0.25rem;
 $opacity: 0.7;
 $body-color: $color-text;
 $body-background-color: $white;
-$link-color: $blue;
-$link-text-decoration: none;
-$link-hover-text-decoration: none;
 $pre-background-color: transparent;
-$form-element-background-color: transparent !default;
-$form-element-min-height: if(unitless($line-height), #{$line-height}em, if(unit($line-height) != '%', $line-height, null)) !default;
 
 /*// ANIMATION*/
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
 $animation-curve-default: $animation-curve-fast-out-slow-in !default;
+
+$transition-time: 0.3s;

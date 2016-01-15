@@ -2,24 +2,17 @@
 \*------------------------------------*/
 
 a {
-    color: $link-color;
-    text-decoration: none;
+    color: inherit;
+    text-decoration: $link-text-decoration;
     transition-duration: 0.3s;
     transition-timing-function: $animation-curve-default;
-    transition-property: opacity;
+    transition-property: color, border-color;
     padding: 2px 0;
 }
 
-a:not([class]) {
-  color: $link-color;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
-  background-repeat: repeat-x;
-  background-size: 2px 2px;
-  background-position: 0 18px;
-}
-
-a:hover:not([class]) {
-  opacity: $opacity;
+a:hover {
+    color: inherit;
+    text-decoration: $link-hover-text-decoration;
 }
 
 a:focus {
@@ -28,11 +21,17 @@ a:focus {
   outline-offset: -2px;
 }
 
-li > a[href] {
-    color: inherit;
-    background-image: none;
+a:not([class]) {
+  color: $color-links;
+  border-bottom: 1px solid $color-links-border;
 }
 
+a:not([class]):hover {
+  color: $color-links-hover;
+  border-color: $color-links;
+}
+
+li,
 h1,
 h2,
 h3,
@@ -41,6 +40,11 @@ h5,
 h6 {
     > a[href] {
         color: inherit;
-        background-image: none;
+        border-bottom: 0;
+        transition-property: opacity;
+    }
+    > a[href]:hover {
+        color: inherit;
+        opacity: $opacity;
     }
 }

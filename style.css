@@ -79,16 +79,15 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 // High-level base settings.*/
 /*// Namespace.
 //
-// Would you like inuitcss’ classes to be prepended with a namespace? If so,
-// define it here.*/
+// namespace? */
 /*// These variables are framework variables, sourced from variables defined
 // above. Feel free to use these variables throughout your project, but do not
 // modify or reassign them.*/
 /*// Theme Colors*/
 /*// Base Styles*/
 /*// ANIMATION*/
-///* #SETTINGS-RESPONSIVE
-//\*------------------------------------*/
+/* #SETTINGS-RESPONSIVE
+\*------------------------------------*/
 
 /*/ @import '_tools.aliases.scss';
 // @import '_tools.mixins.scss'; */
@@ -672,7 +671,7 @@ iframe[src*="google.com/maps"] {
 }
 html {
 
-    color: darken(#808080, 20);
+    color: rgb(54, 70, 78);
 }
 @media (max-width: 51em) {
 
@@ -720,27 +719,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 h2 {
 
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 h3 {
 
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 h4 {
 
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 h5 {
 
-    font-size: 0.875rem;
+    font-size: 1.25rem;
 }
 h6 {
 
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 p {
 
@@ -762,7 +761,7 @@ p:last-child {
 \*------------------------------------*/
 a {
 
-    color: #0074d9;
+    color: inherit;
 
     text-decoration: none;
 
@@ -770,25 +769,15 @@ a {
 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    transition-property: opacity;
+    transition-property: color, border-color;
 
     padding: 2px 0;
 }
-a:not([class]) {
+a:hover {
 
-    color: #0074d9;
+    color: inherit;
 
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
-
-    background-repeat: repeat-x;
-
-    background-size: 2px 2px;
-
-    background-position: 0 18px;
-}
-a:hover:not([class]) {
-
-    opacity: 0.7;
+    text-decoration: none;
 }
 a:focus {
 
@@ -798,17 +787,61 @@ a:focus {
 
     outline-offset: -2px;
 }
-li > a[href] {
+a:not([class]) {
 
-    color: inherit;
+    color: #0074d9;
 
-    background-image: none;
+    border-bottom: 1px solid rgb(66, 167, 255);
 }
-h1 > a[href], h2 > a[href], h3 > a[href], h4 > a[href], h5 > a[href], h6 > a[href] {
+a:not([class]):hover {
+
+    color: rgb(0, 63, 117);
+
+    border-color: #0074d9;
+}
+li > a[href], h1 > a[href], h2 > a[href], h3 > a[href], h4 > a[href], h5 > a[href], h6 > a[href] {
 
     color: inherit;
 
+    border-bottom: 0;
+
+    transition-property: opacity;
+}
+li > a[href]:hover, h1 > a[href]:hover, h2 > a[href]:hover, h3 > a[href]:hover, h4 > a[href]:hover, h5 > a[href]:hover, h6 > a[href]:hover {
+
+    color: inherit;
+
+    opacity: 0.7;
+}
+/* #FORMS
+\*------------------------------------*/
+input, input[type=text], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=week], select, textarea, .container .gform_wrapper .chosen-container-multi .chosen-choices {//display: block;
+
+    padding: 0.3rem 0.75rem;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+    color: rgb(54, 70, 78);
+
+    background-color: #fff;
+
     background-image: none;
+
+    border: 1px solid rgb(75, 97, 108);
+
+    border-radius: 2px;
+
+    box-shadow: none;
+
+    width: 100%;
+}
+input:focus, input[type=text]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, select:focus, textarea:focus, .container .gform_wrapper .chosen-container-multi .chosen-choices:focus {
+
+    border-color: #004899;
+
+    outline: none;
 }
 /*/ @import '_elements.buttons.scss';*/
 /* #LISTS
@@ -832,7 +865,7 @@ nav ol, nav ul, nav li {
 }
 /*/ @import '_elements.tables.scss';
 // @import '_elements.quotes.scss';
-// @import '_elements.forms.scss';
+//
 // @import '_elements.images.scss';*/
 
 /* #GRID
@@ -877,11 +910,83 @@ nav ol, nav ul, nav li {
 
     width: calc(33.33333% - 1em);
 }
+/* #BUTTONS
+\*------------------------------------*/
+.btn, button, input[type="button"], input[type="reset"], input[type="submit"] {
+
+    border-radius: 2px;
+
+    color: inherit;
+
+    background-image: none;
+
+    transition-duration: 0.3s;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition-property: color, background-color;
+
+    font-weight: normal;
+
+    font-size: 1rem;
+
+    white-space: nowrap;
+
+    display: inline-block;
+
+    line-height: 1.5;
+
+    padding: .5rem 1rem;
+
+    border: 1px solid transparent;
+
+    vertical-align: middle;
+
+    text-align: center;
+
+    background-color: transparent;
+}
+.btn[href]:hover, .btn:focus
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+
+    background-color: rgba(13, 16, 18, 0.06);
+
+    opacity: 1;
+}
+.btn-hollow {
+
+    color: #0074d9;
+
+    border-color: #0074d9;
+}
+.btn-hollow:hover {
+
+    color: #fff;
+
+    background-color: rgb(0, 63, 117);
+
+    border-color: rgb(0, 63, 117);
+}
+.btn-primary {
+
+    color: #fff;
+
+    background-color: #0074d9;
+}
+.btn-primary:hover {
+
+    color: #fff;
+
+    background-color: rgb(0, 63, 117);
+}
+
 
 /* #BREADCRUMBS
 \*------------------------------------*/
 
+
 //text-transform: uppercase;
+
 
 .breadcrumbs li + li:before {
 
@@ -898,10 +1003,12 @@ nav ol, nav ul, nav li {
     @include font-size(24px, false);
 }
 
+
 .breadcrumbs a {
 
     color: inherit;
 }
+
 
 .trail-end span {
 
@@ -980,7 +1087,7 @@ nav ol, nav ul, nav li {
 
 .u-text-muted {
 
-    color: rgba(darken(#808080, 20), .5);
+    color: $text-muted;
 }
 
 /* Background Colors */
@@ -1057,42 +1164,42 @@ nav ol, nav ul, nav li {
 
 .u-bg-frost-1 {
 
-    background-color: rgba(lighten(#607d8b, 45),0.0625);
+    background-color: rgba(10, 14, 15, 0.06);
 }
 
 .u-bg-frost-2 {
 
-    background-color: rgba(lighten(#607d8b, 45),0.25);
+    background-color: rgba(10, 14, 15, 0.25);
 }
 
 .u-bg-frost-3 {
 
-    background-color: rgba(lighten(#607d8b, 45),0.5);
+    background-color: rgba(10, 14, 15, 0.5);
 }
 
 .u-bg-frost-4 {
 
-    background-color: rgba(lighten(#607d8b, 45),0.8);
+    background-color: rgba(10, 14, 15, 0.8);
 }
 
 .u-bg-tint-1 {
 
-    background-color: rgba(darken(#607d8b, 40),0.0625);
+    background-color: rgba(13, 16, 18, 0.06);
 }
 
 .u-bg-tint-2 {
 
-    background-color: rgba(darken(#607d8b, 40),0.25);
+    background-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-bg-tint-3 {
 
-    background-color: rgba(darken(#607d8b, 40),0.5);
+    background-color: rgba(13, 16, 18, 0.5);
 }
 
 .u-bg-tint-4 {
 
-    background-color: rgba(darken(#607d8b, 40),0.8);
+    background-color: rgba(13, 16, 18, 0.8);
 }
 
 .u-bg-1-glass {
@@ -1142,42 +1249,42 @@ nav ol, nav ul, nav li {
 
 .u-hover-frost-1:hover {
 
-    background-color: rgba(lighten(#607d8b, 45),0.0625);
+    background-color: rgba(10, 14, 15, 0.06);
 }
 
 .u-hover-frost-2:hover {
 
-    background-color: rgba(lighten(#607d8b, 45),0.25);
+    background-color: rgba(10, 14, 15, 0.25);
 }
 
 .u-hover-frost-3:hover {
 
-    background-color: rgba(lighten(#607d8b, 45),0.5);
+    background-color: rgba(10, 14, 15, 0.5);
 }
 
 .u-hover-frost-4:hover {
 
-    background-color: rgba(lighten(#607d8b, 45),0.8);
+    background-color: rgba(10, 14, 15, 0.8);
 }
 
 .u-hover-tint-1:hover {
 
-    background-color: rgba(darken(#607d8b, 40),0.0625);
+    background-color: rgba(13, 16, 18, 0.06);
 }
 
 .u-hover-tint-2:hover {
 
-    background-color: rgba(darken(#607d8b, 40),0.25);
+    background-color: rgba(13, 16, 18, 0.25);
 }
 
 .u-hover-tint-3:hover {
 
-    background-color: rgba(darken(#607d8b, 40),0.5);
+    background-color: rgba(13, 16, 18, 0.5);
 }
 
 .u-hover-tint-4:hover {
 
-    background-color: rgba(darken(#607d8b, 40),0.8);
+    background-color: rgba(13, 16, 18, 0.8);
 }
 
 /* Fill Colors */
@@ -1560,53 +1667,53 @@ nav ol, nav ul, nav li {
 \*------------------------------------*/
 .u-h1 {
 
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .u-h2 {
 
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .u-h3 {
 
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 .u-h4 {
 
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .u-h5 {
 
-    font-size: 0.875rem;
+    font-size: 1.25rem;
 }
 .u-h6 {
 
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 @media (max-width: 51em) {
 
     .u-h1 {
 
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .u-h2 {
 
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 
     .u-h3 {
 
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .u-h4 {
 
-        font-size: 0.875rem;
+        font-size: 1.25rem;
     }
 
     .u-h5 {
 
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 }
 .u-display-1 {
@@ -1747,7 +1854,7 @@ nav ol, nav ul, nav li {
 }
 .u-z2 {
 
-    z-index: 2!important;
+    z-index: 2;
 }
 .u-z3 {
 
@@ -1756,6 +1863,10 @@ nav ol, nav ul, nav li {
 .u-z4 {
 
     z-index: 4;
+}
+.u-z999 {
+
+    z-index: 999;
 }
 .u-left {
 
@@ -2325,7 +2436,7 @@ nav ol, nav ul, nav li {
 
     border-bottom-style: solid;
 
-    border-bottom-color: rgba(darken(#607d8b, 40),0.8);
+    border-bottom-color: rgba(13, 16, 18, 0.8);
 }
 .u-table-light tr:last-child td {
 
@@ -2336,6 +2447,14 @@ nav ol, nav ul, nav li {
 .u-small {
 
     font-size: 80%;
+}
+.u-lh-title {
+
+    line-height: 1.3;
+}
+.u-lh-content {
+
+    line-height: 1.5;
 }
 .u-lh-1 {
 
@@ -2591,7 +2710,7 @@ nav ol, nav ul, nav li {
 
     border-width: 4px;
 
-    border-color: rgba(darken(#607d8b, 40),0.8);
+    border-color: rgba(13, 16, 18, 0.8);
 }
 .u-border-t {
 
@@ -2599,7 +2718,7 @@ nav ol, nav ul, nav li {
 
     border-top-width: 4px;
 
-    border-top-color: rgba(darken(#607d8b, 40),0.8);
+    border-top-color: rgba(13, 16, 18, 0.8);
 }
 .u-border-r {
 
@@ -2607,7 +2726,7 @@ nav ol, nav ul, nav li {
 
     border-right-width: 4px;
 
-    border-right-color: rgba(darken(#607d8b, 40),0.8);
+    border-right-color: rgba(13, 16, 18, 0.8);
 }
 .u-border-b {
 
@@ -2615,7 +2734,7 @@ nav ol, nav ul, nav li {
 
     border-bottom-width: 4px;
 
-    border-bottom-color: rgba(darken(#607d8b, 40),0.8);
+    border-bottom-color: rgba(13, 16, 18, 0.8);
 }
 .u-border-l {
 
@@ -2623,7 +2742,7 @@ nav ol, nav ul, nav li {
 
     border-left-width: 4px;
 
-    border-left-color: rgba(darken(#607d8b, 40),0.8);
+    border-left-color: rgba(13, 16, 18, 0.8);
 }
 .u-border0 {
 

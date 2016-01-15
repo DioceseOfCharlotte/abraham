@@ -14,7 +14,7 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 
 @import '_settings.colors.scss';
-@import '_settings.defaults.scss';
+@import '_settings.vars.scss';
 @import '_settings.responsive.scss';
 
 /*/ @import '_tools.aliases.scss';
@@ -24,16 +24,21 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import '_elements.page.scss';
 @import '_elements.typography.scss';
 @import '_elements.links.scss';
+@import '_elements.forms.scss';
 /*/ @import '_elements.buttons.scss';*/
 @import '_elements.lists.scss';
 /*/ @import '_elements.tables.scss';
 // @import '_elements.quotes.scss';
-// @import '_elements.forms.scss';
+//
 // @import '_elements.images.scss';*/
 
 @import '_objects.grid.scss';
+@import '_objects.buttons.scss';
+
 
 @import '_components.breadcrumbs.scss';
+
+@import '_theme.content.scss';
 
 @import '_utility.colors.scss';
 @import '_utility.images.scss';

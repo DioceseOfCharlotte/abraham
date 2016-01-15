@@ -9,8 +9,12 @@ import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import postcss from 'gulp-postcss';
+import postcssFlex from 'postcss-flexibility';
 import postcssScss from 'postcss-scss';
+import postcssNested from 'postcss-nested';
 import precss from 'precss';
+import autoPrefixer from 'autoprefixer';
+import colorFunction from 'postcss-color-function';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -25,6 +29,14 @@ const AUTOPREFIXER_BROWSERS = [
 	'ios >= 7',
 	'android >= 4.4',
 	'bb >= 10'
+];
+
+const POSTCSS_PLUGINS = [
+	colorFunction,
+	precss,
+	autoPrefixer({browsers: AUTOPREFIXER_BROWSERS}),
+	postcssNested
+	// postcssFlex
 ];
 
 const SOURCESJS = [
@@ -68,10 +80,7 @@ gulp.task('styles', () => {
 	gulp.src('assets/src/styles/style.scss')
 		// Generate Source Maps
 		.pipe($.sourcemaps.init())
-		.pipe(postcss([
-			precss()
-		], {syntax: postcssScss}))
-		.pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+		.pipe(postcss(POSTCSS_PLUGINS, {syntax: postcssScss}))
 		.pipe(gulp.dest('.tmp'))
 		// Concatenate Styles
 		.pipe($.concat('style.css'))

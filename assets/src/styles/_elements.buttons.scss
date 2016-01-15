@@ -44,3 +44,8 @@ input[type=submit]:hover {
     background-color: #009688;
     color: white;
 }
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}

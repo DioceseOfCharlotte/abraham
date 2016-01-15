@@ -109,7 +109,7 @@
 }
 
 .u-z2 {
-    z-index: 2!important;
+    z-index: 2;
 }
 
 .u-z3 {
@@ -118,6 +118,10 @@
 
 .u-z4 {
     z-index: 4;
+}
+
+.u-z999 {
+    z-index: 999;
 }
 
 .u-left {
