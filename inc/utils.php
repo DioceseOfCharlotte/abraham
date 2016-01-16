@@ -11,8 +11,8 @@ add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
 add_action( 'pre_get_posts', 'doc_post_order', 1 );
 
 
-function abe_hierarchy_cpts($cpts) {
-	$cpts = array( 'post' );
+function abe_hierarchy_cpts($cpts = array()) {
+	$cpts = array( 'page' );
 
     if(has_filter('abe_add_hierarchy_cpts')) {
         $cpts = apply_filters('abe_add_hierarchy_cpts', $cpts);
@@ -21,8 +21,8 @@ function abe_hierarchy_cpts($cpts) {
     return $cpts;
 }
 
-function abe_non_hierarchy_cpts($cpts) {
-	$cpts = array( 'page' );
+function abe_non_hierarchy_cpts($cpts = array()) {
+	$cpts = array( 'post' );
 
     if(has_filter('abe_add_non_hierarchy_cpts')) {
         $cpts = apply_filters('abe_add_non_hierarchy_cpts', $cpts);
