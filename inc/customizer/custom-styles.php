@@ -51,13 +51,17 @@ final class Abraham_Custom_Styles {
      */
     public function primary_color_default($hex) {
         global $cptarchives;
-        $landing_prime_color = $cptarchives->get_archive_meta( 'doc_page_primary_color', true );
+        if ( $GLOBALS['cptarchives'] ) {
+            $landing_prime_color = $cptarchives->get_archive_meta( 'doc_page_primary_color', true );
+        }
+
         $post_prime_color = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
 
         if ( $post_prime_color && ! is_front_page() && ! is_post_type_archive() )
             return $post_prime_color;
 
-        if ( $landing_prime_color && ! is_front_page() )
+
+        if ( $GLOBALS['cptarchives'] && $landing_prime_color && ! is_front_page() )
             return $landing_prime_color;
 
         return $hex ? $hex : '004899';
@@ -65,13 +69,15 @@ final class Abraham_Custom_Styles {
 
     public function secondary_color_default($hex) {
         global $cptarchives;
-        $landing_second_color = $cptarchives->get_archive_meta( 'doc_page_secondary_color', true );
+        if ( $GLOBALS['cptarchives'] ) {
+            $landing_second_color = $cptarchives->get_archive_meta( 'doc_page_secondary_color', true );
+        }
         $post_second_color = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
 
         if ( $post_second_color && ! is_front_page() && ! is_post_type_archive() )
             return $post_second_color;
 
-        if ( $landing_second_color && ! is_front_page() )
+        if ( $GLOBALS['cptarchives'] && $landing_second_color && ! is_front_page() )
             return $landing_second_color;
 
         return $hex ? $hex : 'ffe192';
@@ -145,16 +151,16 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-1{color:#{$color500}!important}";
-        $style .= ".u-bg-1{background-color:#{$color500}!important}";
-        $style .= ".u-bg-1-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-1-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-1{fill:#{$color500}!important}";
-        $style .= ".u-fill-1-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-1-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-1{color:#{$color500}}";
+        $style .= ".u-bg-1{background-color:#{$color500}}";
+        $style .= ".u-bg-1-light{background-color:#{$color400}}";
+        $style .= ".u-bg-1-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-1{fill:#{$color500}}";
+        $style .= ".u-fill-1-light{fill:#{$color400}}";
+        $style .= ".u-fill-1-dark{fill:#{$color600}}";
 
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
@@ -190,16 +196,16 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-2{color:#{$color500}!important}";
-        $style .= ".u-bg-2{background-color:#{$color500}!important}";
-        $style .= ".u-bg-2-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-2-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-2-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-2{fill:#{$color500}!important}";
-        $style .= ".u-fill-2-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-2-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-2{color:#{$color500}}";
+        $style .= ".u-bg-2{background-color:#{$color500}}";
+        $style .= ".u-bg-2-light{background-color:#{$color400}}";
+        $style .= ".u-bg-2-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-2-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-2{fill:#{$color500}}";
+        $style .= ".u-fill-2-light{fill:#{$color400}}";
+        $style .= ".u-fill-2-dark{fill:#{$color600}}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -234,34 +240,34 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-3{color:#{$color500}!important}";
-        $style .= ".u-bg-3{background-color:#{$color500}!important}";
-        $style .= ".u-bg-3-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-3-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-3{fill:#{$color500}!important}";
-        $style .= ".u-fill-3-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-3-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-3{color:#{$color500}}";
+        $style .= ".u-bg-3{background-color:#{$color500}}";
+        $style .= ".u-bg-3-light{background-color:#{$color400}}";
+        $style .= ".u-bg-3-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-3{fill:#{$color500}}";
+        $style .= ".u-fill-3-light{fill:#{$color400}}";
+        $style .= ".u-fill-3-dark{fill:#{$color600}}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
     function get_abe_font_styles() {
-    	$style = '';
+    	$font = '';
         $h_family = get_theme_mod( 'heading_font', '' );
     	$b_family = get_theme_mod( 'body_font', '' );
 
     	if ( $h_family )
-    		$style .= sprintf( "font-family: '%s';", esc_attr( $h_family ) );
+    		$font .= sprintf( "h1,h2,h3,h4,h5,h6 {font-family: '%s';}", esc_attr( $h_family ) );
 
         if ( $b_family )
-    		$style .= sprintf( "font-family: '%s';", esc_attr( $b_family ) );
-            
+    		$font .= sprintf( "body,p {font-family: '%s';}", esc_attr( $b_family ) );
+
     	// Output the styles.
-    	if ( $style ) {
-    		echo "\n" . '<style type="text/css" id="type-css">' . $style . '</style>' . "\n";
+    	if ( $font ) {
+    		echo "\n" . '<style type="text/css" id="font-css">' . $font . '</style>' . "\n";
     	}
     }
 
