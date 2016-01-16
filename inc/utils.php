@@ -8,7 +8,6 @@ add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter('show_admin_bar', '__return_false');
 add_shortcode( 'doc_logout', 'doc_logout_link' );
 add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
-add_action( 'pre_get_posts', 'doc_post_order', 1 );
 
 
 function abe_hierarchy_cpts($cpts = array()) {
@@ -124,19 +123,4 @@ return '<a href="' . $logoutlink . '">Logout</a>';
 function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
 return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>';
-}
-
-
-function doc_post_order( $query ) {
-    if ( is_admin() || ! $query->is_main_query() )
-        return;
-    if ( is_post_type_archive( 'department' ) || is_post_type_archive( 'parish' ) || is_post_type_archive( 'school' ) ) {
-        $query->set( 'order', 'ASC' );
-	  	$query->set('orderby', 'name');
-	  	$query->set('post_parent', 0);
-        return;
-    } elseif ( is_post_type_archive() ) {
-	  	$query->set( 'order', 'ASC' );
-	  	$query->set('orderby', 'menu_order');
-	}
 }
