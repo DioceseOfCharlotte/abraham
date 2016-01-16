@@ -4,13 +4,16 @@
 
 //'use strict';
 
-import fs from 'fs';
-import path from 'path';
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
-import pkg from './package.json';
+import postcss from 'gulp-postcss';
+import autoPrefixer from 'autoprefixer';
+import postcssFlex from 'postcss-flexibility';
+// import postcssScss from 'postcss-scss';
+// import postcssNested from 'postcss-nested';
+// import precss from 'precss';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -27,6 +30,14 @@ const AUTOPREFIXER_BROWSERS = [
   'ios >= 7',
   'android >= 4.4',
   'bb >= 10'
+];
+
+const POSTCSS_PLUGINS = [
+	autoPrefixer({browsers: AUTOPREFIXER_BROWSERS}),
+	postcssFlex
+	//postcssNested
+  //colorFunction,
+	//precss,
 ];
 
 const SOURCESJS = [
@@ -74,15 +85,13 @@ gulp.task('styles', () => {
       precision: 10,
       onError: console.error.bind(console, 'Sass error:')
     }))
-    //.pipe($.cssInlineImages({webRoot: 'src'}))
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(postcss(POSTCSS_PLUGINS))
     .pipe(gulp.dest('.tmp'))
     // Concatenate Styles
     .pipe($.concat('style.css'))
-    .pipe($.csscomb())
     .pipe(gulp.dest('./'))
     // Minify Styles
-    .pipe($.if('*.css', $.minifyCss()))
+    .pipe($.if('*.css', $.cssnano()))
     .pipe($.concat('style.min.css'))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('./'))

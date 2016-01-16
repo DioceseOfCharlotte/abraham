@@ -37,13 +37,6 @@ final class Abraham_Custom_Styles {
         add_filter('theme_mod_primary_color', array($this, 'primary_color_default'), 95);
         add_filter('theme_mod_secondary_color', array($this, 'secondary_color_default'), 95);
         add_filter('theme_mod_accent_color', array($this, 'accent_color_default'), 95);
-
-        /* Delete the cached data for this feature. */
-        add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
-
-        /* Visual editor colors */
-        add_action( 'wp_ajax_abraham_editor_styles',         array( $this, 'editor_styles_callback' ) );
-        add_action( 'wp_ajax_no_priv_abraham_editor_styles', array( $this, 'editor_styles_callback' ) );
     }
 
     /**
@@ -57,10 +50,36 @@ final class Abraham_Custom_Styles {
      * @return string
      */
     public function primary_color_default($hex) {
+        global $cptarchives;
+        if ( $GLOBALS['cptarchives'] ) {
+            $landing_prime_color = $cptarchives->get_archive_meta( 'doc_page_primary_color', true );
+        }
+
+        $post_prime_color = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+
+        if ( $post_prime_color && ! is_front_page() && ! is_post_type_archive() )
+            return $post_prime_color;
+
+
+        if ( $GLOBALS['cptarchives'] && $landing_prime_color && ! is_front_page() )
+            return $landing_prime_color;
+
         return $hex ? $hex : '004899';
     }
 
     public function secondary_color_default($hex) {
+        global $cptarchives;
+        if ( $GLOBALS['cptarchives'] ) {
+            $landing_second_color = $cptarchives->get_archive_meta( 'doc_page_secondary_color', true );
+        }
+        $post_second_color = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
+
+        if ( $post_second_color && ! is_front_page() && ! is_post_type_archive() )
+            return $post_second_color;
+
+        if ( $GLOBALS['cptarchives'] && $landing_second_color && ! is_front_page() )
+            return $landing_second_color;
+
         return $hex ? $hex : 'ffe192';
     }
 
@@ -89,37 +108,16 @@ final class Abraham_Custom_Styles {
      * @since  1.0.0
      */
     public function wp_head_callback() {
-        $stylesheet = get_stylesheet();
-        /* Get the cached style. */
-        $style = wp_cache_get("{$stylesheet}_custom_colors");
-        /* If the style is available, output it and return. */
-        if (!empty($style)) {
-            echo $style;
-
-            return;
-        }
         $style = $this->get_primary_styles();
         $style .= $this->get_secondary_styles();
         $style .= $this->get_accent_styles();
+        $style .= $this->get_accent_styles();
+        $style .= $this->get_abe_font_styles();
         /* Put the final style output together. */
         $style = "\n".'<style id="custom-colors-css">'.trim($style).'</style>'."\n";
-        /* Cache the style, so we don't have to process this on each page load. */
-        wp_cache_set("{$stylesheet}_custom_colors", $style);
+
         /* Output the custom style. */
         echo $style;
-    }
-
-    /**
-     * Ajax callback for outputting the primary styles for the WordPress visual editor.
-     *
-     * @since  1.0.0
-     * @access public
-     * @return void
-     */
-    public function editor_styles_callback() {
-        header( 'Content-type: text/css' );
-        echo $this->get_primary_styles();
-        die();
     }
 
     /**
@@ -132,8 +130,6 @@ final class Abraham_Custom_Styles {
     public function get_primary_styles() {
         $style = '';
         $hex   = get_theme_mod('primary_color', '');
-        $hfont = get_theme_mod('heading_font', '');
-        $bfont = get_theme_mod('body_font', '');
         $rgb   = implode(', ', hybrid_hex_to_rgb($hex));
 
 
@@ -155,19 +151,17 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-1{color:#{$color500}!important}";
-        $style .= ".u-bg-1{background-color:#{$color500}!important}";
-        $style .= ".u-bg-1-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-1-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-1{fill:#{$color500}!important}";
-        $style .= ".u-fill-1-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-1-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-1{color:#{$color500}}";
+        $style .= ".u-bg-1{background-color:#{$color500}}";
+        $style .= ".u-bg-1-light{background-color:#{$color400}}";
+        $style .= ".u-bg-1-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-1{fill:#{$color500}}";
+        $style .= ".u-fill-1-light{fill:#{$color400}}";
+        $style .= ".u-fill-1-dark{fill:#{$color600}}";
 
-        $style .= "h1,h2,h3,h4{font-family:'$hfont'}";
-        $style .= "body{font-family:'$bfont'}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -202,16 +196,16 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-2{color:#{$color500}!important}";
-        $style .= ".u-bg-2{background-color:#{$color500}!important}";
-        $style .= ".u-bg-2-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-2-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-2-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-2{fill:#{$color500}!important}";
-        $style .= ".u-fill-2-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-2-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-2{color:#{$color500}}";
+        $style .= ".u-bg-2{background-color:#{$color500}}";
+        $style .= ".u-bg-2-light{background-color:#{$color400}}";
+        $style .= ".u-bg-2-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-2-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-2{fill:#{$color500}}";
+        $style .= ".u-fill-2-light{fill:#{$color400}}";
+        $style .= ".u-fill-2-dark{fill:#{$color600}}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
@@ -246,28 +240,37 @@ final class Abraham_Custom_Styles {
 
         /* === Color === */
 
-        $style .= ".u-text-3{color:#{$color500}!important}";
-        $style .= ".u-bg-3{background-color:#{$color500}!important}";
-        $style .= ".u-bg-3-light{background-color:#{$color400}!important}";
-        $style .= ".u-bg-3-dark{background-color:#{$color600}!important}";
-        $style .= ".u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )!important}";
-        $style .= ".u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )!important}";
-        $style .= ".u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )!important}";
-        $style .= ".u-fill-3{fill:#{$color500}!important}";
-        $style .= ".u-fill-3-light{fill:#{$color400}!important}";
-        $style .= ".u-fill-3-dark{fill:#{$color600}!important}";
+        $style .= ".u-text-3{color:#{$color500}}";
+        $style .= ".u-bg-3{background-color:#{$color500}}";
+        $style .= ".u-bg-3-light{background-color:#{$color400}}";
+        $style .= ".u-bg-3-dark{background-color:#{$color600}}";
+        $style .= ".u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )}";
+        $style .= ".u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+        $style .= ".u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+        $style .= ".u-fill-3{fill:#{$color500}}";
+        $style .= ".u-fill-3-light{fill:#{$color400}}";
+        $style .= ".u-fill-3-dark{fill:#{$color600}}";
         /* Return the styles. */
         return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
-    /**
-     * Deletes the cached style CSS that's output into the header.
-     *
-     * @since  1.0.0
-     */
-    public function cache_delete() {
-        wp_cache_delete(get_stylesheet().'_custom_colors');
+    function get_abe_font_styles() {
+    	$font = '';
+        $h_family = get_theme_mod( 'heading_font', '' );
+    	$b_family = get_theme_mod( 'body_font', '' );
+
+    	if ( $h_family )
+    		$font .= sprintf( "h1,h2,h3,h4,h5,h6 {font-family: '%s';}", esc_attr( $h_family ) );
+
+        if ( $b_family )
+    		$font .= sprintf( "body,p {font-family: '%s';}", esc_attr( $b_family ) );
+
+    	// Output the styles.
+    	if ( $font ) {
+    		echo "\n" . '<style type="text/css" id="font-css">' . $font . '</style>' . "\n";
+    	}
     }
+
     /**
      * Returns the instance.
      *

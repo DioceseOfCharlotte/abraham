@@ -1,27 +1,5 @@
-<?php if (!have_posts()) : ?>
 
-<?php tha_entry_before(); ?>
-
-<section <?php hybrid_attr('post'); ?>>
-
-    <div <?php hybrid_attr('entry-summary'); ?>>
-
-        <?php _e('Sorry, no results were found.', 'abraham'); ?>
-    </div>
-
-    <?php get_search_form(); ?>
-
-</section>
-
-<?php tha_entry_after(); ?>
-
-<?php endif; ?>
-
-<?php while (have_posts()) : the_post(); ?>
-
-    <?php tha_entry_before(); ?>
-
-    <article <?php hybrid_attr('post'); ?>>
+<article <?php hybrid_attr('post'); ?>>
 
     <?php tha_entry_top(); ?>
 
@@ -41,10 +19,4 @@
 
     <?php tha_entry_bottom(); ?>
 
-    </article>
-
-    <?php tha_entry_after(); ?>
-
-<?php endwhile; ?>
-
-<?php the_posts_navigation(); ?>
+</article>

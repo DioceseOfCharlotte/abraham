@@ -142,10 +142,9 @@ function abraham_customize_register($wp_customize) {
     $wp_customize->add_setting(
         'heading_font',
         array(
-            'default'              => 'Arial',
+            'default'              => 'serif',
             'type'                 => 'theme_mod',
-            'sanitize_callback'    => 'esc_attr',
-            'sanitize_js_callback' => 'esc_attr',
+            'sanitize_callback'    => 'sanitize_text_field',
             //'transport'            => 'postMessage',
         )
     );
@@ -165,10 +164,9 @@ function abraham_customize_register($wp_customize) {
     $wp_customize->add_setting(
         'body_font',
         array(
-            'default'              => 'Arial',
+            'default'              => 'sans-serif',
             'type'                 => 'theme_mod',
-            'sanitize_callback'    => 'esc_attr',
-            'sanitize_js_callback' => 'esc_attr',
+            'sanitize_callback'    => 'sanitize_text_field',
             //'transport'            => 'postMessage',
         )
     );
@@ -210,6 +208,5 @@ function abraham_google_fonts() {
     );
     $font_uri = customizer_library_get_google_font_uri($fonts);
 
-    wp_register_style('google_font_headings', $font_uri, false, false);
-    wp_enqueue_style('google_font_headings');
+    wp_enqueue_style( 'google_font_headings', $font_uri, array(), null, 'screen' );
 }
