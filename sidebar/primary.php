@@ -1,8 +1,8 @@
 <?php
 if (!is_active_sidebar('primary')) {
-    return;
+	return;
 } ?>
 
-    <aside <?php hybrid_attr('sidebar', 'primary'); ?>>
-        <?php dynamic_sidebar('primary'); ?>
-    </aside>
+	<aside <?php hybrid_attr('sidebar', 'primary'); ?>>
+		<?php dynamic_sidebar('primary'); ?>
+	</aside>

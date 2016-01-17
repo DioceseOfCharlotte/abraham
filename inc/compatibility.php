@@ -2,7 +2,6 @@
 
 add_action( 'wp_enqueue_scripts', 'register_ie_scripts' );
 
-
 /**
  * Load our IE-only stylesheet for old versions of IE:
  */

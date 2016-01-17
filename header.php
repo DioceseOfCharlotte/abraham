@@ -14,20 +14,20 @@
 
 <body <?php hybrid_attr('body'); ?>>
 
-    <?php tha_body_top(); ?>
+	<?php tha_body_top(); ?>
 
-    <div <?php hybrid_attr('site_container'); ?>>
+	<div <?php hybrid_attr('site_container'); ?>>
 
-        <?php tha_header_before(); ?>
+		<?php tha_header_before(); ?>
 
-        <header <?php hybrid_attr('header'); ?>>
+		<header <?php hybrid_attr('header'); ?>>
 
-            <?php get_template_part('components/site', 'branding'); ?>
+			<?php get_template_part('components/site', 'branding'); ?>
 
-            <?php hybrid_get_menu('primary'); ?>
+			<?php hybrid_get_menu('primary'); ?>
 
-        </header>
+		</header>
 
-        <?php tha_header_after(); ?>
+		<?php tha_header_after(); ?>
 
-            <div <?php hybrid_attr('layout'); ?>>
+			<div <?php hybrid_attr('layout'); ?>>
