@@ -1,0 +1,56 @@
+/* #BUTTONS
+\*------------------------------------*/
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border-radius: $border-radius;
+    color: inherit;
+    background-image: none;
+    transition-duration: $transition-time;
+    transition-timing-function: $animation-curve-default;
+    transition-property: color, background-color;
+    font-weight: normal;
+    font-size: 1rem;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1.5;
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+}
+
+.btn[href]:hover, .btn:focus
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: $darken-1;
+    opacity: 1;
+}
+
+
+.btn-hollow {
+    color: $color-links;
+    border-color: $color-links;
+}
+
+.btn-hollow:hover {
+    color: #fff;
+    background-color: $color-links-hover;
+    border-color: $color-links-hover;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $color-links;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: $color-links-hover;
+}

@@ -1,39 +1,20 @@
 /* #LISTS
 \*------------------------------------*/
-ol,
-ul,
-dl {
-    margin-bottom: $space-2;
-}
 
-ul,
-ol,
-dd {
-    margin-left: $space-1;
-}
-
-li > ul,
-li > ol,
 ul:last-child {
     margin-bottom: 0;
 }
 
-dt {
-    font-weight: bold;
+nav li {
+    display: inline-block;
 }
 
-dd {
-    margin-bottom: $space-1;
-}
+/* specify the list style of nav lists */
 
 nav ol,
-nav ul {
-    list-style: none;
+nav ul,
+nav li {
+	list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 0;
 }

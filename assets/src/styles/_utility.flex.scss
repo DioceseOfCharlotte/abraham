@@ -1,4 +1,4 @@
-/* #u-flex OBJECT
+/* #FLEXBOX
 \*------------------------------------*/
 .u-flex {
     display: flex;
@@ -65,6 +65,10 @@
     justify-content: center;
 }
 
+.u-flex-justify-start {
+    justify-content: flex-start;
+}
+
 .u-flex-justify-end {
     justify-content: flex-end;
 }
@@ -89,6 +93,10 @@
     flex: 1 0 auto;
 }
 
+.u-flexed-shrink {
+    flex-shrink: 0;
+}
+
 .u-flexed-none {
     flex: none;
 }
@@ -101,35 +109,35 @@
     order: 99999;
 }
 
-// small
+/*// small*/
 @include sm {
-    .u-flex\@sm {
+    .u-flex-sm {
         display: flex;
     }
 
-    .u-flex-column\@sm {
+    .u-flex-column-sm {
         flex-direction: column;
     }
 }
 
-// medium
+/*// medium*/
 @include md {
-    .u-flex\@md {
+    .u-flex-md {
         display: flex;
     }
 
-    .u-flex-row\@md {
+    .u-flex-row-md {
         flex-direction: row;
     }
 }
 
-// large
+/*// large*/
 @include lg {
-    .u-flex\@lg {
+    .u-flex-lg {
         display: flex;
     }
 
-    .u-flex-row\@lg {
+    .u-flex-row-lg {
         flex-direction: row;
     }
 }

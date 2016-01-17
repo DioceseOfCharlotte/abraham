@@ -1,55 +1,44 @@
 /* #TYPOGRAPHY
 \*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin-bottom: $space-1;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+
 p {
-    margin-bottom: $space-2;
-}
-
-address {
-    margin-bottom: $space-2;
-    font-style: normal;
-    line-height: inherit;
-}
-
-pre,
-kbd,
-code,
-samp {
-    font-family: $monospace-font-family;
-    font-size: $pre-font-size;
-}
-
-pre {
-    margin-bottom: $space-2;
-
-    //overflow-x: scroll;
-    overflow: auto; // Internet Explorer 11-
-}
-
-b,
-strong {
-    font-weight: bold;
-}
-
-small {
-    font-size: 80%; // All browsers
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
+  margin-bottom: $space-2;
 }
 
 p:empty {

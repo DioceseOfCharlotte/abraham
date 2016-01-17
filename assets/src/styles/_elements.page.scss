@@ -1,161 +1,27 @@
-///* #RESET
-//\*------------------------------------*/
+/* #PAGE
+\*------------------------------------*/
  :root {
-    box-sizing: border-box;
-    width: 100%; // Make html take up the entire width of screen
-    height: 100%; // Make html take up the entire height of screen
-    cursor: default;
-
-    //-ms-overflow-style: -ms-autohiding-scrollbar; // Edge, Internet Explorer 11+
-    //overflow-y: scroll; // All browsers without overlaying scrollbars
-    -webkit-text-size-adjust: 100%; // iOS 8+
-    -ms-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); // Tap highlight transparent iOS
+    width: 100%;
+    height: 100%;
 }
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: white;
     color: $color-text;
 
     @include sm {
-        font-size: 14px;
+        font-size: .8rem;
         line-height: 1.7;
     }
 }
 
 body {
-    width: 100%; // Make html take up the entire width of screen
-    min-height: 100%; // Make html take up the entire height of screen
-    font-family: $font-family;
-    line-height: $line-height;
-    font-size: $body-font-size;
-    color: inherit;
+    width: 100%;
+    height: 100%;
 }
 
-* {
-    margin: 0; // remove margin of all elements
-    padding: 0; // remove padding of all elements
-    flex-shrink: 1;
-    flex-grow: 0;
-    flex-basis: auto;
-    position: relative;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    vertical-align: middle;
-}
-
- ::before,
-::after {
-    text-decoration: inherit;
-}
-
-// Make viewport responsive
-//
-// See http://getbootstrap.com/getting-started/#support-ie10-width.
-@-moz-viewport {
-    width: device-width;
-}
-
-@-ms-viewport {
-    width: device-width;
-}
-
-@-webkit-viewport {
-    width: device-width;
-}
-
-@viewport {
-    width: device-width;
-}
-
-abbr[title] {
-    cursor: help;
-    border-bottom: 1px dotted $silver;
-}
-
-a {
-    word-wrap: break-word;
-}
-
-a:not(.btn),
-span,
-i {
-    vertical-align: initial;
-}
-
-figure {
-    margin-bottom: $space-2;
-}
-
-[role="button"] {
-    cursor: pointer;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-// specify the background color and drop shadow of text selections
- ::selection {
-    background-color: #b3d4fc; // required when declaring ::selection
-    text-shadow: none;
-}
-
-main {
-    display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
-}
-
-summary {
-    display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-}
-
-details {
-    display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-}
-
-progress {
-    display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
-}
-
-template {
-    display: none; // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
-}
-
-[hidden] {
-    display: none; // Internet Explorer 10-
-}
-
-// specify the progress cursor of updating elements
-[aria-busy="true"] {
-    cursor: progress;
-}
-
-[aria-controls] {
-    cursor: pointer;
-}
-
-[aria-disabled] {
-    cursor: default;
-}
-
-// specify the style of visually hidden yet accessible elements
-[hidden][aria-hidden="false"] {
-    clip: rect(0 0 0 0);
-    display: inherit;
-    position: absolute;
-
-    &:focus {
-        clip: auto;
-    }
-}
+/*// .site-container {
+//     height: 100%;
+// }*/
 
 hr {
     display: block;
@@ -164,15 +30,4 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
-}
-
-/* Embedded content
-   ========================================================================== */
-canvas {
-    -ms-touch-action: double-tap-zoom;
-}
-
-iframe[src*="google.com/maps"] {
-    max-width: 100%;
-    width: 100%;
 }
