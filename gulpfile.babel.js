@@ -22,10 +22,11 @@ const reload = browserSync.reload;
 const AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
 	'ie_mob >= 10',
-	'ff >= 30',
-	'chrome >= 34',
-	'safari >= 7',
-	'opera >= 23',
+	'last 2 ff versions',
+	'last 2 chrome versions',
+	'last 2 edge versions',
+	'last 2 safari versions',
+	'last 2 opera versions',
 	'ios >= 7',
 	'android >= 4.4',
 	'bb >= 10'
