@@ -26,76 +26,76 @@ class Attr_Trumps {
 	public function __construct($args = array()) {
 
 		$defaults = array(
-			'body'                               => '',
-			'site_container'                     => 'u-flex u-flex-column',
-			'layout'                             => '',
-			'layout_wide'                        => '',
-			'grid'                               => 'o-grid u-max-width',
-            'grid_1-wide'               => 'o-grid u-1of1',
-            'grid_2c-r'                 => 'o-grid u-max-width u-flex-rev',
-            'grid_2c-l'                 => 'o-grid u-max-width',
+			'body'                   	  => '',
+			'site_container'         	  => 'u-flex u-flex-column',
+			'layout'                 	  => '',
+			'layout_wide'            	  => '',
+			'grid'                   	  => 'o-grid u-max-width',
+			'grid_1-wide'               => 'o-grid u-1of1 u-p0',
+			'grid_2c-r'                 => 'o-grid u-max-width u-flex-rev',
+			'grid_2c-l'                 => 'o-grid u-max-width',
 
 			// SITE HEADER
-			'header'                           => 'u-bg-1 u-flex u-flex-wrap u-flex-justify-around',
-			'branding'                         => '',
-			'site_title'                       => 'u-color-inherit u-m0',
-            'site_description'        => 'u-m0 u-text-3',
-            // CONTENT
-            'content'                 => 'o-cell o-grid u-m0 u-p0 u-1of1',
-            'content_with_sidebar'    => 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
-            'content_archive'         => 'u-flex u-flex-justify-around',
-            // ENTRY
-            'post'                    => 'o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
-            'post_archive'            => 'o-cell u-bg-white u-br',
-            'post_wide'               => 'u-1of1',
-            'page_header'             => 'u-1of1 u-text-center',
-            'entry_title'             => '',
-            'page_title'              => 'u-display-2 u-m0 u-py3',
-            'archive_description'     => 'u-1of1 u-p3 u-mb1 u-mx-auto',
-            'entry_header'            => '',
-            'entry_content'           => 'u-px2 u-pb2',
-            'entry_content_wide'      => '',
-            'entry_summary'           => 'u-px2 u-pb2',
-            'entry_footer'            => 'u-mt-auto',
+			'header'              		   => 'u-bg-1 u-flex u-flex-wrap u-flex-justify-around',
+			'branding'            		   => 'u-flexed-auto',
+			'site_title'          		   => 'u-color-inherit u-m0',
+			'site_description'        	=> 'u-m0 u-text-3',
+			// CONTENT
+			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
+			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
+			'content_archive'         	=> 'u-flex u-flex-justify-around facetwp-template',
+			// ENTRY
+			'post'                    	=> 'o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
+			'post_archive'            	=> 'o-cell u-bg-white u-br',
+			'post_wide'               	=> 'u-1of1',
+			'page_header'             	=> 'u-1of1 u-text-center',
+			'entry_title'             	=> '',
+			'page_title'              	=> 'u-display-2 u-m0 u-py3',
+			'archive_description'     	=> 'u-1of1 u-p3 u-mb1 u-mx-auto',
+			'entry_header'            	=> '',
+			'entry_content'           	=> 'u-px2 u-pb2',
+			'entry_content_wide'      	=> '',
+			'entry_summary'           	=> 'u-px2 u-pb2',
+			'entry_footer'            	=> 'u-mt-auto',
 
-			'nav_single'              => '',
-			'nav_archive'             => '',
+			'nav_single'              	=> '',
+			'nav_archive'             	=> '',
 
 			// ENTRY META
-			'entry_author'            => '',
-			'entry_published'         => '',
-			'entry_terms'             => '',
+			'entry_author'            	=> '',
+			'entry_published'         	=> '',
+			'entry_terms'             	=> '',
 
 			// NAVIGATION
-            'menu_all'                => '',
-            'menu_primary'            => 'u-ml-auto',
-            'menu_secondary'          => '',
+			'menu_all'                	=> '',
+			'menu_primary'            	=> 'u-flexed-end',
+			'menu_secondary'          	=> '',
 
-            // SIDEBAR
-            'sidebar_primary'         => 'o-cell o-grid u-m0 u-p0',
-            'sidebar_footer'          => 'u-flex-md',
-            'sidebar_horizontal'      => 'u-1of1',
-            'sidebar_right'           => 'u-1of1 u-1of3-md',
-            'sidebar_left'            => 'u-1of1 u-1of3-md',
-            'widgets'                 => '',
-            'primary_widgets'         => '',
-            'footer_widgets'          => '',
+			// SIDEBAR
+			'sidebar_primary'         	=> 'o-cell o-grid u-m0 u-p0',
+			'sidebar_footer'          	=> 'u-flex-md',
+			'sidebar_horizontal'      	=> 'u-1of1',
+			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
+			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
+			'widgets'                 	=> '',
+			'primary_widgets'         	=> '',
+			'footer_widgets'          	=> '',
 
-            // COMMENTS
-            'comments_area'           => '',
+			// COMMENTS
+			'comments_area'           	=> '',
 
-            // FOOTER
-            'footer'                    => 'u-mt-auto u-bg-2',
-            'menu_item'                 => '',
-            'menu_link'                 => 'menu__link btn',
-            'current_page_item'         => 'is-active',
-            'current_page_parent'       => 'is-active',
-            'current_page_ancestor'     => 'is-active',
-            'current-menu-item'         => 'is-active',
-            'menu-item-has-children'    => '',
-            'sub-menu'                  => '',
-            'gv_container'              => '',
-            'gv_entry'                  => '',
+			// FOOTER
+			'footer'                    => 'u-mt-auto u-bg-2',
+			'menu_item'                 => '',
+			'menu_link'                 => 'menu__link btn',
+			'current_page_item'         => 'is-active',
+			'current_page_parent'       => 'is-active',
+			'current_page_ancestor'     => 'is-active',
+			'current-menu-item'         => 'is-active',
+			'menu-item-has-children'    => '',
+			'sub-menu'                  => '',
+			'gv_container'              => '',
+			'gv_entry'                  => '',
 		);
 
 		$this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
@@ -413,18 +413,18 @@ class Attr_Trumps {
 	global $post;
 
 		$_classes           = array();
-        $achive_width = get_archive_post_width( $post->ID );
-        if (is_singular() && !is_front_page())
-            $_classes[]      = "{$this->args['post']}";
-        if (is_archive())
-            $_classes[]      = "{$this->args['post_archive']}";
-        if ($achive_width)
-            $_classes[]      = "$achive_width";
-        if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
-            $_classes[]      = "{$this->args['post_wide']}";
+		$achive_width       = get_archive_post_width( $post->ID );
+		if (is_singular() && !is_front_page())
+			$_classes[]      = "{$this->args['post']}";
+		if (is_archive())
+			$_classes[]      = "{$this->args['post_archive']}";
+		if ($achive_width)
+			$_classes[]      = "$achive_width";
+		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
+			$_classes[]      = "{$this->args['post_wide']}";
 
 		return array_map( 'esc_attr', array_unique( array_merge( $_classes, $classes ) ) );
-    }
+	}
 
 	public function entry_title($attr) {
 		if (!$this->args['entry_title']) {

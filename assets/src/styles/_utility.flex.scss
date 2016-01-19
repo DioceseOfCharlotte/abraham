@@ -1,5 +1,6 @@
 /* #FLEXBOX
 \*------------------------------------*/
+
 .u-flex {
 	display: flex;
 }
@@ -110,6 +111,7 @@
 
 /*// small*/
 @include sm {
+
 	.u-flex-sm {
 		display: flex;
 	}
@@ -121,6 +123,7 @@
 
 /*// medium*/
 @include md {
+
 	.u-flex-md {
 		display: flex;
 	}
@@ -132,6 +135,7 @@
 
 /*// large*/
 @include lg {
+
 	.u-flex-lg {
 		display: flex;
 	}
