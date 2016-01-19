@@ -43,9 +43,6 @@ const POSTCSS_PLUGINS = [
 ];
 
 const SOURCESJS = [
-	// ** Deps ** //
-	'assets/src/scripts/mdlComponentHandler.js',
-	// ** Mine ** //
 	'assets/src/scripts/main.js'
 ];
 
