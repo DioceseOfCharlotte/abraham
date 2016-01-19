@@ -45,8 +45,8 @@ class Attr_Trumps {
             'content_with_sidebar'    => 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
             'content_archive'         => 'u-flex u-flex-justify-around',
             // ENTRY
-            'post'                    => 'o-cell u-mb2 u-1of1 u-py4 u-px3 u-text-gray',
-            'post_archive'            => 'o-cell u-bg-white',
+            'post'                    => 'o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
+            'post_archive'            => 'o-cell u-bg-white u-br',
             'post_wide'               => 'u-1of1',
             'page_header'             => 'u-1of1 u-text-center',
             'entry_title'             => '',
