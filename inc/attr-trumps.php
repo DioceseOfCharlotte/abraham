@@ -36,8 +36,8 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-max-width',
 
 			// SITE HEADER
-			'header'              		   => 'u-bg-1 u-flex u-flex-wrap u-flex-justify-around',
-			'branding'            		   => 'u-flexed-auto',
+			'header'              		   => 'u-fixed u-bg-1 u-1of1 u-z2 u-flex u-flex-wrap u-flex-justify-around',
+			'branding'            		   => 'u-flex u-flexed-auto',
 			'site_title'          		   => 'u-color-inherit u-m0',
 			'site_description'        	=> 'u-m0 u-text-3',
 			// CONTENT

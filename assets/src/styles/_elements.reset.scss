@@ -2,57 +2,59 @@
  * Normalization
  */
 
- /*
+/*
   * Universal inheritance
   */
 
- *,
- :before,
- :after {
- 	box-sizing: inherit;
+*,
+:before,
+:after {
+	box-sizing: inherit;
+	border-width: 0;
 	border-style: solid;
- 	border-width: 0;
- }
+}
 
- * {
- 	font-size: inherit;
- 	line-height: inherit;
+* {
 	margin: 0;
- 	padding: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
- }
+	padding: 0;
+	font-size: inherit;
+	line-height: inherit;
 
- :before,
- :after {
- 	text-decoration: inherit;
- 	vertical-align: inherit;
- }
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+}
 
- /* specify the root styles of the document */
+:before,
+:after {
+	vertical-align: inherit;
+	text-decoration: inherit;
+}
 
- :root {
- 	background-color: #ffffff;
- 	box-sizing: border-box;
- 	color: #000000;
- 	cursor: default;
- 	font: 100%/1.5 sans-serif;
- }
+/* specify the root styles of the document */
 
- html {
- 	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
- 	overflow-y: scroll; /* All browsers without overlaying scrollbars */
- 	-webkit-text-size-adjust: 100%; /* iOS 8+ */
- }
+:root {
+	box-sizing: border-box;
+	color: #000;
+	background-color: #fff;
+	font: 100%/1.5 sans-serif;
+	cursor: default;
+}
 
- body {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-   font-size: 1rem;
-   line-height: 1.5;
-   color: #373a3c;
-   background-color: #fff;
- }
+html {
+	overflow-y: scroll; /* All browsers without overlaying scrollbars */
+
+	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
+	-webkit-text-size-adjust: 100%; /* iOS 8+ */
+}
+
+body {
+	color: #373a3c;
+	background-color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
 
 
 audio:not([controls]) {
@@ -71,9 +73,9 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-  overflow: visible; /* Internet Explorer 11- */
+	overflow: visible; /* Internet Explorer 11- */
+	cursor: pointer; /* 3 */
+	-webkit-appearance: button; /* 2 */
 }
 
 
@@ -82,8 +84,9 @@ input[type="submit"] {
 /**
  * FORMS
  */
+
 input {
-	-webkit-border-radius: 0 /* iOS 8+ */
+	-webkit-border-radius: 0; /* iOS 8+ */
 }
 
 textarea {
@@ -91,7 +94,9 @@ textarea {
 	resize: vertical;
 }
 
-input[type="button"], input[type="reset"], input[type="submit"] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	-webkit-appearance: button;/* iOS 8+ */
 }
 
@@ -103,7 +108,8 @@ input[type="search"] {
 	-webkit-appearance: textfield;/* Chrome 45+, Safari 9+ */
 }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;/* Chrome 45+, Safari 9+ */
 }
 
@@ -114,13 +120,13 @@ input,
 select,
 optgroup,
 textarea {
+	border-radius: 0;
 	color: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-weight: inherit;
 	background-color: transparent;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
 	line-height: inherit;
-    border-radius: 0;
 }
 
 /* specify the minimum height of form elements */
@@ -148,20 +154,20 @@ textarea {
 }
 
 label {
-  display: inline-block;
-  margin-bottom: .5rem;
+	display: inline-block;
+	margin-bottom: 0.5rem;
 }
 
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
 }
 
 /* specify the standard appearance of selects */
 
 select {
+	-webkit-appearance: none; /* Chrome 45+ */
 	-moz-appearance: none;    /* Firefox 40+ */
-	-webkit-appearance: none /* Chrome 45+ */
 }
 
 select::-ms-expand {
@@ -181,18 +187,18 @@ select::-ms-value {
 
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 fieldset {
-  min-width: 0;
+	min-width: 0;
 }
 
 legend {
-  width: 100%;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
+	width: 100%;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+	line-height: inherit;
 }
 
 /**
@@ -200,7 +206,7 @@ legend {
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 optgroup {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
@@ -225,7 +231,7 @@ nav,
 section,
 summary,
 legend {
-  display: block;
+	display: block;
 }
 
 progress {
@@ -251,7 +257,7 @@ template {
  */
 
 a {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 /**
@@ -261,7 +267,7 @@ a {
 
 a:active,
 a:hover {
-  outline: 0;
+	outline: 0;
 }
 
 /**
@@ -269,7 +275,7 @@ a:hover {
  */
 
 img {
-  border: 0;
+	border: 0;
 }
 
 /**
@@ -277,7 +283,7 @@ img {
  */
 
 svg:not(:root) {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 /* specify the alignment of media elements */
@@ -288,8 +294,8 @@ iframe,
 img,
 svg,
 video {
+	display: inline-block;
 	vertical-align: middle;
-    display: inline-block;
 }
 
 
@@ -301,12 +307,12 @@ kbd,
 pre,
 samp {
 	font-family: monospace, monospace;
-    font-size: 1em;
+	font-size: 1em;
 }
 
 pre {
-  margin-bottom: 1rem;
-  overflow: auto; /* Internet Explorer 11- */
+	overflow: auto; /* Internet Explorer 11- */
+	margin-bottom: 1rem;
 }
 
 /**
@@ -314,21 +320,21 @@ pre {
  */
 
 table {
-	border-collapse: collapse;
 	border-spacing: 0;
+	border-collapse: collapse;
 	background-color: transparent;
 }
 
 caption {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  color: #818a91;
-  text-align: left;
-  caption-side: bottom;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	caption-side: bottom;
+	color: #818a91;
+	text-align: left;
 }
 
 th {
-  text-align: left;
+	text-align: left;
 }
 
 
@@ -336,14 +342,14 @@ th {
 /* specify the background color, font color, and drop shadow of text selections */
 
 ::-moz-selection {
-	background-color: #b3d4fc; /* required when declaring ::selection */
 	color: #4c2b03;
+	background-color: #b3d4fc; /* required when declaring ::selection */
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #b3d4fc; /* required when declaring ::selection */
 	color: #4c2b03;
+	background-color: #b3d4fc; /* required when declaring ::selection */
 	text-shadow: none;
 }
 
@@ -370,9 +376,9 @@ html input[disabled],
 /* specify the style of visually hidden yet accessible elements */
 
 [hidden][aria-hidden="false"] {
-	clip: rect(0 0 0 0);
 	display: inherit;
-	position: absolute
+	clip: rect(0 0 0 0);
+	position: absolute;
 }
 
 [hidden][aria-hidden="false"]:focus {
@@ -382,7 +388,7 @@ html input[disabled],
 
 
 [tabindex="-1"]:focus {
-  outline: none !important;
+	outline: none !important;
 }
 
 
@@ -392,7 +398,7 @@ html input[disabled],
 
 b,
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /**
@@ -400,7 +406,7 @@ strong {
  */
 
 dfn {
-  font-style: italic;
+	font-style: italic;
 }
 
 /**
@@ -408,8 +414,8 @@ dfn {
  */
 
 mark {
-  background: #ff0;
-  color: #000;
+	color: #000;
+	background: #ff0;
 }
 
 /**
@@ -418,30 +424,30 @@ mark {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 abbr[title],
 abbr[data-original-title] {
-  cursor: help;
-  border-bottom: 1px dotted #818a91;
+	border-bottom: 1px dotted #818a91;
+	cursor: help;
 }
 
 address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
+	margin-bottom: 1rem;
+	font-style: normal;
+	line-height: inherit;
 }
 
 
@@ -451,24 +457,24 @@ address {
 ol,
 ul,
 dl {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 
 dt {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
+	margin-bottom: 0.5rem;
+	margin-left: 0;
 }
 
 
@@ -476,15 +482,15 @@ dd {
 
 
 blockquote {
-  margin: 0 0 1rem;
+	margin: 0 0 1rem;
 }
 
 figure {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 [role="button"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 a,
@@ -496,23 +502,23 @@ label,
 select,
 summary,
 textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 
 
 output {
-  display: inline-block;
+	display: inline-block;
 }
 
 /* Embedded content
    ========================================================================== */
 canvas {
-    -ms-touch-action: double-tap-zoom;
+	-ms-touch-action: double-tap-zoom;
 }
 
 iframe[src*="google.com/maps"] {
-    max-width: 100%;
-    width: 100%;
+	width: 100%;
+	max-width: 100%;
 }
