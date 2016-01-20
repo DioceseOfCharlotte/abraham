@@ -51,7 +51,7 @@ function rcdoc_register_metabox() {
 			'priority'   => 'high',
 			'attributes' => array(
 				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#e87', '#fc6', '#6d7', '#6ca', '#38e', '#a9d' ),
+					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#95a5a6' ),
 				) ),
 			),
 		) );
@@ -65,7 +65,7 @@ function rcdoc_register_metabox() {
 			'priority'   => 'high',
 			'attributes' => array(
 				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#e87', '#fc6', '#6d7', '#6ca', '#38e', '#a9d' ),
+					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#95a5a6' ),
 				) ),
 			),
 		) );
