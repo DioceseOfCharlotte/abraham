@@ -147,7 +147,7 @@ final class Abraham_Custom_Styles {
 		$glass_light    = implode(', ', hybrid_hex_to_rgb($color400));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($color600));
 
-		$textC = $primaryColor->isDark() ? "fff" : "000";
+		$textC = $primaryColor->isDark() ? "fff" : "222";
 		$textRGB = implode(', ', hybrid_hex_to_rgb($textC));
 		/* === Color === */
 
@@ -155,11 +155,11 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-bg-1{color: rgba( {$textRGB}, 0.85 );}";
 		$style .= "#page .u-text-1{color:#{$color500}}";
 		$style .= "#page .u-bg-1{background-color:#{$color500}}";
-		$style .= "#page .u-bg-1-light{background-color:#{$color400}}";
-		$style .= "#page .u-bg-1-dark{background-color:#{$color600}}";
-		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )}";
-		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
-		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+		$style .= "#page .u-bg-1-light{background-color:#{$color400};color:#{$textC};}";
+		$style .= "#page .u-bg-1-dark{background-color:#{$color600};color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 );color:#{$textC};}";
 		$style .= "#page .u-fill-1{fill:#{$color500}}";
 		$style .= "#page .u-fill-1-light{fill:#{$color400}}";
 		$style .= "#page .u-fill-1-dark{fill:#{$color600}}";
