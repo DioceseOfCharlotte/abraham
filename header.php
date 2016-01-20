@@ -9,6 +9,11 @@
 <html <?php language_attributes(); ?>>
 <head <?php hybrid_attr('head'); ?>>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-TileColor" content="#2F3BA2">
+<meta name="theme-color" content="#2F3BA2">
 <?php wp_head(); ?>
 </head>
 
