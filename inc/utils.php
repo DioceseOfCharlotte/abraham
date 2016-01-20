@@ -111,3 +111,11 @@ function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
 return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>';
 }
+
+
+function doc_rgb_prime($alpha) {
+$doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+$doc_rgb = implode( ',', hybrid_hex_to_rgb( $doc_hex ) );
+
+return 'rgba('. $doc_rgb .','. $alpha .')';
+}
