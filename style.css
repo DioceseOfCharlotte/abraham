@@ -622,16 +622,15 @@ input[type=week],
 select,
 textarea,
 .container .gform_wrapper .chosen-container-multi .chosen-choices {
+  width: 100%;
   padding: 0.3rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #36474f;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #7b96a3;
+  border: 1px solid #b7c6cd;
   border-radius: 2px;
+  color: #36474f;
+  background-image: none;
   box-shadow: none;
-  width: 100%; }
+  font-size: 1rem;
+  line-height: 1.5; }
   input:focus,
   input[type=text]:focus,
   input[type=date]:focus,
@@ -705,7 +704,8 @@ input[type="submit"] {
   border: 1px solid transparent;
   vertical-align: middle;
   text-align: center;
-  background-color: transparent; }
+  background-color: transparent;
+  width: auto; }
 
 .btn[href]:hover, .btn:focus
 button:hover,
@@ -1102,6 +1102,10 @@ input[type="submit"]:hover {
     font-weight: 400;
     line-height: 1.35;
     letter-spacing: -0.02em; }
+  #page .u-content-wrap > * {
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto; }
   #page .u-inline {
     display: inline; }
   #page .u-block {
@@ -1474,7 +1478,7 @@ input[type="submit"]:hover {
       padding-left: 0;
       margin-left: 0; }
   #page .u-max-width {
-    max-width: 84em; }
+    max-width: 64em; }
   #page .u-width-auto {
     width: auto; }
   #page .u-1of1 {

@@ -1,5 +1,11 @@
 /* #UTILITY LAYOUT
 \*------------------------------------*/
+.u-content-wrap > * {
+    max-width: $container;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .u-inline {
     display: inline;
 }
