@@ -51,7 +51,7 @@ class Attr_Trumps {
 			'page_header'             	=> 'u-1of1 u-text-center',
 			'entry_title'             	=> '',
 			'page_title'              	=> 'u-display-2 u-m0 u-py3',
-			'archive_description'     	=> 'u-1of1 u-p3 u-mb1 u-content-wrap u-bg-frost-1',
+			'archive_description'     	=> 'u-1of1 u-p3 u-mb1 u-content-wrap u-bg-frost-4',
 			'entry_header'            	=> 'u-max-width u-mx-auto',
 			'entry_content'           	=> 'u-px2 u-pb2 u-content-wrap',
 			'entry_content_wide'      	=> '',
