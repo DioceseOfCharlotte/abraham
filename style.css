@@ -457,9 +457,11 @@ html {
       font-size: 14px;
       line-height: 1.7; } }
 
-/*// .site-container {
-//     height: 100%;
-// }*/
+.site {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden; }
+
 hr {
   display: block;
   height: 1px;

@@ -50,7 +50,7 @@ class Attr_Trumps {
 			'post_wide'               	=> 'u-1of1',
 			'page_header'             	=> 'u-pt2 u-1of1 u-text-center',
 			'entry_title'             	=> '',
-			'page_title'              	=> 'u-display-2 u-m0 u-py3',
+			'page_title'              	=> 'u-display-2 u-m0 u-pb3',
 			'archive_description'     	=> 'u-1of1 u-p3 u-mb1 u-content-wrap u-bg-frost-4',
 			'entry_header'            	=> 'u-max-width u-mx-auto',
 			'entry_content'           	=> 'u-px2 u-pb2 u-content-wrap',

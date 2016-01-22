@@ -11,9 +11,11 @@ html {
 	font-size: 16px;
 }
 
-/*// .site-container {
-//     height: 100%;
-// }*/
+.site {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
 
 hr {
 	display: block;
