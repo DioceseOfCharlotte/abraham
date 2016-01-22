@@ -25,6 +25,15 @@ $base-spacing-unit--small: round($base-spacing-unit / 2);
 $base-spacing-unit--large: round($base-spacing-unit * 2);
 $base-spacing-unit--huge: round($base-spacing-unit * 4);
 
+
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 2rem;
+$space-4: 4rem;
+
+$container: 64em;
+$container-wide: 84em;
+
 // Theme Colors
 $color-1: #004899;
 $color-2: $olive;
@@ -63,10 +72,6 @@ $h6: 1rem;
 $body-font-size: $base-font-size;
 $bold-font-weight: bold;
 $pre-font-size: inherit;
-$space-1: 0.5rem;
-$space-2: 1rem;
-$space-3: 2rem;
-$space-4: 4rem;
 $heading-margin-top: 1em;
 $heading-margin-bottom: 0.5em;
 $paragraph-margin-top: 0;
@@ -85,8 +90,6 @@ $button-font-weight: normal;
 $button-line-height: 1.125rem;
 $button-padding-y: 0.5rem;
 $button-padding-x: 1rem;
-$container: 64em;
-$container-wide: 84em;
 $darken-1: rgba($blue-grey-900,0.0625);
 $darken-2: rgba($blue-grey-900,0.25);
 $darken-3: rgba($blue-grey-900,0.5);

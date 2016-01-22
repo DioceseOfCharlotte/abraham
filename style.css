@@ -530,8 +530,7 @@ a:focus {
   outline-offset: -2px; }
 
 a:not([class]) {
-  color: #0074d9;
-  border-bottom: 1px solid #73beff; }
+  color: #0074d9; }
 
 a:not([class]):hover {
   color: #003d73;
@@ -545,7 +544,6 @@ h4 > a[href],
 h5 > a[href],
 h6 > a[href] {
   color: inherit;
-  border-bottom: 0;
   transition-property: opacity; }
 
 li > a[href]:hover,
@@ -628,6 +626,7 @@ textarea,
   border-radius: 2px;
   color: #36474f;
   background-image: none;
+  background-color: white;
   box-shadow: none;
   font-size: 1rem;
   line-height: 1.5; }
@@ -666,21 +665,20 @@ svg {
   display: -ms-flexbox;
   -js-display: flex;
   display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin-right: auto;
   margin-left: auto;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-  @media screen and (min-width: 52em) {
-    .o-grid {
-      padding: calc(1 / 2 * 16px); } }
+          align-items: stretch; }
 
 .o-cell {
-  width: calc(33.33333% - $gutter);
-  margin: calc(1 / 2 * 16px); }
+  margin: calc(0.5 * 16px);
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
 
 /* #BUTTONS
 \*------------------------------------*/
@@ -1478,7 +1476,7 @@ input[type="submit"]:hover {
       padding-left: 0;
       margin-left: 0; }
   #page .u-max-width {
-    max-width: 64em; }
+    max-width: 84em; }
   #page .u-width-auto {
     width: auto; }
   #page .u-1of1 {
