@@ -8,7 +8,7 @@ add_action('wp_head','abe_head_meta');
 add_action('wp_enqueue_scripts', 'abraham_assets');
 add_action('init', 'abraham_image_sizes', 5);
 add_action('hybrid_register_layouts', 'abraham_layouts');
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 function abraham_setup() {
 

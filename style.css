@@ -519,24 +519,20 @@ a {
   text-decoration: none;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, border-color;
-  padding: 2px 0; }
+  transition-property: border-color;
+  padding: 1px 0; }
 
 a:hover {
   color: inherit;
   text-decoration: none; }
 
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px; }
-
-a:not([class]) {
-  color: #0074d9; }
-
-a:not([class]):hover {
-  color: #003d73;
-  border-color: #0074d9; }
+.entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
+  opacity: 0.7;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(61, 153, 112, 0.4); }
+  .entry-content a:not([class]):hover, .entry-content a:not([class]):focus, .entry-content a:not([class]):active, .entry-summary a:not([class]):hover, .entry-summary a:not([class]):focus, .entry-summary a:not([class]):active, .comment-content a:not([class]):hover, .comment-content a:not([class]):focus, .comment-content a:not([class]):active {
+    border-color: rgba(61, 153, 112, 0.95); }
 
 li > a[href],
 h1 > a[href],
@@ -546,6 +542,7 @@ h4 > a[href],
 h5 > a[href],
 h6 > a[href] {
   color: inherit;
+  opacity: 1;
   transition-property: opacity; }
 
 li > a[href]:hover,
@@ -556,7 +553,8 @@ h4 > a[href]:hover,
 h5 > a[href]:hover,
 h6 > a[href]:hover {
   color: inherit;
-  opacity: 0.7; }
+  opacity: 0.7;
+  border-bottom: 0; }
 
 /* #LISTS
 \*------------------------------------*/

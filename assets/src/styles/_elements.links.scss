@@ -6,28 +6,26 @@ a {
     text-decoration: $link-text-decoration;
     transition-duration: 0.3s;
     transition-timing-function: $animation-curve-default;
-    transition-property: color, border-color;
-    padding: 2px 0;
+    transition-property: border-color;
+    padding: 1px 0;
 }
 
 a:hover {
     color: inherit;
-    text-decoration: $link-hover-text-decoration;
+    text-decoration: none;
 }
 
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
+.entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
+  opacity: $opacity;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba( $color-2, 0.4 );
 
-a:not([class]) {
-  color: $color-links;
-}
-
-a:not([class]):hover {
-  color: $color-links-hover;
-  border-color: $color-links;
+	&:hover,
+	&:focus,
+	&:active {
+	  border-color: rgba( $color-2, 0.95 );
+	}
 }
 
 li,
@@ -39,10 +37,12 @@ h5,
 h6 {
     > a[href] {
         color: inherit;
+		opacity: 1;
         transition-property: opacity;
     }
     > a[href]:hover {
         color: inherit;
         opacity: $opacity;
+		border-bottom: 0;
     }
 }
