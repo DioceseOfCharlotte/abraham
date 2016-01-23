@@ -94,8 +94,9 @@ class Attr_Trumps {
 			'current-menu-item'         => 'is-active',
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
-			'gv_container'              => '',
-			'gv_entry'                  => '',
+			'gv_post'                   => 'u-bg-transparent',
+			'gv_container'              => 'o-grid',
+			'gv_entry'                  => 'o-cell u1of1 u-bg-white u-1of2-md',
 		);
 
 		$this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
@@ -422,6 +423,8 @@ class Attr_Trumps {
 			$_classes[]      = "$achive_width";
 		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
 			$_classes[]      = "{$this->args['post_wide']}";
+		if (is_singular('gravityview'))
+			$_classes[]      = "{$this->args['gv_post']}";
 
 		return array_map( 'esc_attr', array_unique( array_merge( $_classes, $classes ) ) );
 	}
