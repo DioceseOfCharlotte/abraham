@@ -18,21 +18,19 @@ input[type=week],
 select,
 textarea,
 .container .gform_wrapper .chosen-container-multi .chosen-choices {
+	width: 100%;
+	padding: 0.3rem 0.75rem;
+	border: 1px solid $blue-grey-200;
+	border-radius: $border-radius;
+	color: $color-text;
+	background-image: none;
+	background-color: white;
+	box-shadow: none;
+	font-size: 1rem;
+	line-height: 1.5;
 
-    //display: block;
-    padding: 0.3rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: $color-text;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid $blue-grey-600;
-    border-radius: $border-radius;
-    box-shadow: none;
-    width: 100%;
-
-    &:focus {
-        border-color: $color-1;
-        outline: none;
-    }
+	&:focus {
+		border-color: $color-1;
+		outline: none;
+	}
 }

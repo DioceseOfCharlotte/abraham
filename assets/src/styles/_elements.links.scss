@@ -23,7 +23,6 @@ a:focus {
 
 a:not([class]) {
   color: $color-links;
-  border-bottom: 1px solid $color-links-border;
 }
 
 a:not([class]):hover {
@@ -40,7 +39,6 @@ h5,
 h6 {
     > a[href] {
         color: inherit;
-        border-bottom: 0;
         transition-property: opacity;
     }
     > a[href]:hover {

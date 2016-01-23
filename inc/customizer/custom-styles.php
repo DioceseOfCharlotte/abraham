@@ -58,10 +58,10 @@ final class Abraham_Custom_Styles {
 		$post_prime_color = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
 
 		if ( $post_prime_color && ! is_front_page() && ! is_post_type_archive() )
-			return $post_prime_color;
+			return trim( $post_prime_color, '#' );
 
 		if ( $GLOBALS['cptarchives'] && $landing_prime_color && ! is_front_page() )
-			return $landing_prime_color;
+			return trim( $landing_prime_color, '#' );
 
 		return $hex ? $hex : '004899';
 	}
@@ -74,10 +74,10 @@ final class Abraham_Custom_Styles {
 		$post_second_color = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
 
 		if ( $post_second_color && ! is_front_page() && ! is_post_type_archive() )
-			return $post_second_color;
+			return trim( $post_second_color, '#' );
 
 		if ( $GLOBALS['cptarchives'] && $landing_second_color && ! is_front_page() )
-			return $landing_second_color;
+			return trim( $landing_second_color, '#' );
 
 		return $hex ? $hex : 'ffe192';
 	}
@@ -147,18 +147,22 @@ final class Abraham_Custom_Styles {
 		$glass_light    = implode(', ', hybrid_hex_to_rgb($color400));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($color600));
 
+		$textC = $primaryColor->isDark() ? "fff" : "222";
+		$textRGB = implode(', ', hybrid_hex_to_rgb($textC));
 		/* === Color === */
 
-		$style .= ".u-text-1{color:#{$color500}}";
-		$style .= ".u-bg-1{background-color:#{$color500}}";
-		$style .= ".u-bg-1-light{background-color:#{$color400}}";
-		$style .= ".u-bg-1-dark{background-color:#{$color600}}";
-		$style .= ".u-bg-1-glass{background-color:rgba( {$glass}, 0.9 )}";
-		$style .= ".u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
-		$style .= ".u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
-		$style .= ".u-fill-1{fill:#{$color500}}";
-		$style .= ".u-fill-1-light{fill:#{$color400}}";
-		$style .= ".u-fill-1-dark{fill:#{$color600}}";
+
+		$style .= "#page .u-bg-1{color: rgba( {$textRGB}, 0.85 );}";
+		$style .= "#page .u-text-1{color:#{$color500}}";
+		$style .= "#page .u-bg-1{background-color:#{$color500}}";
+		$style .= "#page .u-bg-1-light{background-color:#{$color400};color:#{$textC};}";
+		$style .= "#page .u-bg-1-dark{background-color:#{$color600};color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-fill-1{fill:#{$color500}}";
+		$style .= "#page .u-fill-1-light{fill:#{$color400}}";
+		$style .= "#page .u-fill-1-dark{fill:#{$color600}}";
 
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
@@ -188,22 +192,26 @@ final class Abraham_Custom_Styles {
 		$color800       = $secondaryColor->darken(30);
 		$color900       = $secondaryColor->darken(40);
 
+		$text = $secondaryColor->isDark() ? "fff" : "000";
 		$glass          = implode(', ', hybrid_hex_to_rgb($hex));
 		$glass_light    = implode(', ', hybrid_hex_to_rgb($color400));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($color600));
 
+		$textC = $secondaryColor->isDark() ? "fff" : "222";
+		$textRGB = implode(', ', hybrid_hex_to_rgb($textC));
+
 		/* === Color === */
 
-		$style .= ".u-text-2{color:#{$color500}}";
-		$style .= ".u-bg-2{background-color:#{$color500}}";
-		$style .= ".u-bg-2-light{background-color:#{$color400}}";
-		$style .= ".u-bg-2-dark{background-color:#{$color600}}";
-		$style .= ".u-bg-2-glass{background-color:rgba( {$glass}, 0.9 )}";
-		$style .= ".u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
-		$style .= ".u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
-		$style .= ".u-fill-2{fill:#{$color500}}";
-		$style .= ".u-fill-2-light{fill:#{$color400}}";
-		$style .= ".u-fill-2-dark{fill:#{$color600}}";
+		$style .= "#page .u-text-2{color:#{$color500}}";
+		$style .= "#page .u-bg-2{background-color:#{$color500};color:#{$textC};}";
+		$style .= "#page .u-bg-2-light{background-color:#{$color400};color:#{$textC};}";
+		$style .= "#page .u-bg-2-dark{background-color:#{$color600};color:#{$textC};}";
+		$style .= "#page .u-bg-2-glass{background-color:rgba( {$glass}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.9 );color:#{$textC};}";
+		$style .= "#page .u-fill-2{fill:#{$color500}}";
+		$style .= "#page .u-fill-2-light{fill:#{$color400}}";
+		$style .= "#page .u-fill-2-dark{fill:#{$color600}}";
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
 	}
@@ -238,16 +246,16 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= ".u-text-3{color:#{$color500}}";
-		$style .= ".u-bg-3{background-color:#{$color500}}";
-		$style .= ".u-bg-3-light{background-color:#{$color400}}";
-		$style .= ".u-bg-3-dark{background-color:#{$color600}}";
-		$style .= ".u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )}";
-		$style .= ".u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
-		$style .= ".u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
-		$style .= ".u-fill-3{fill:#{$color500}}";
-		$style .= ".u-fill-3-light{fill:#{$color400}}";
-		$style .= ".u-fill-3-dark{fill:#{$color600}}";
+		$style .= "#page .u-text-3{color:#{$color500}}";
+		$style .= "#page .u-bg-3{background-color:#{$color500}}";
+		$style .= "#page .u-bg-3-light{background-color:#{$color400}}";
+		$style .= "#page .u-bg-3-dark{background-color:#{$color600}}";
+		$style .= "#page .u-bg-3-glass{background-color:rgba( {$glass}, 0.9 )}";
+		$style .= "#page .u-bg-3-glass-light{background-color:rgba( {$glass_light}, 0.9 )}";
+		$style .= "#page .u-bg-3-glass-dark{background-color:rgba( {$glass_dark}, 0.9 )}";
+		$style .= "#page .u-fill-3{fill:#{$color500}}";
+		$style .= "#page .u-fill-3-light{fill:#{$color400}}";
+		$style .= "#page .u-fill-3-dark{fill:#{$color600}}";
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
 	}

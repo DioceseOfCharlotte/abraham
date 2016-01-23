@@ -43,9 +43,6 @@ const POSTCSS_PLUGINS = [
 ];
 
 const SOURCESJS = [
-	// ** Deps ** //
-	'assets/src/scripts/mdlComponentHandler.js',
-	// ** Mine ** //
 	'assets/src/scripts/main.js'
 ];
 
@@ -154,7 +151,7 @@ gulp.task('serve', ['scripts', 'styles'], () => {
 	browserSync.init({
 		// proxy: "local.wordpress.dev"
 		// proxy: "local.wordpress-trunk.dev"
-		proxy: 'doc.dev'
+		proxy: 'rcdoc.dev'
 			// proxy: "127.0.0.1:8080/wordpress/"
 	});
 

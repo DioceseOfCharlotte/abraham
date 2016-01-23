@@ -4,9 +4,11 @@
  */
 
 add_action('after_setup_theme', 'abraham_setup', 5);
+add_action('wp_head','abe_head_meta');
 add_action('wp_enqueue_scripts', 'abraham_assets');
 add_action('init', 'abraham_image_sizes', 5);
 add_action('hybrid_register_layouts', 'abraham_layouts');
+add_filter('show_admin_bar', '__return_false');
 
 function abraham_setup() {
 
@@ -45,6 +47,22 @@ function abraham_setup() {
 
   // Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
+}
+
+
+
+function abe_head_meta() {
+	$p_color = get_theme_mod('primary_color', '');
+	$hex = '#' .$p_color;
+
+	$output ='<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-TileColor" content="' . $hex . '">
+<meta name="theme-color" content="' . $hex . '">';
+
+	echo $output;
 }
 
 /*

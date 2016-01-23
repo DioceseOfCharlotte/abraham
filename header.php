@@ -6,9 +6,8 @@
  */
 
 ?><!doctype html>
-<html id="site" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 <head <?php hybrid_attr('head'); ?>>
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 <?php wp_head(); ?>
 </head>
 
