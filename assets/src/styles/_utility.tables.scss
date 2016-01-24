@@ -2,9 +2,8 @@
 \*------------------------------------*/
 .u-table-light th,
 .u-table-light td {
-    border-bottom-width: $border-width;
-    border-bottom-style: solid;
-    border-bottom-color: $border-color;
+    border-bottom-width: 1px;
+    border-bottom-color: $color-grey;
 }
 
 .u-table-light tr:last-child td {

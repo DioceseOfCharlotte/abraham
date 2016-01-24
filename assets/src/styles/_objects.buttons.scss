@@ -1,57 +1,88 @@
-/* #BUTTONS
-\*------------------------------------*/
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
 
 .btn,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    border-radius: $border-radius;
-    color: inherit;
-    background-image: none;
-    transition-duration: $transition-time;
-    transition-timing-function: $animation-curve-default;
-    transition-property: color, background-color;
-    font-weight: normal;
-    font-size: 1rem;
-    white-space: nowrap;
-    display: inline-block;
-    line-height: 1.5;
-    padding: .5rem 1rem;
-    border: 1px solid transparent;
-    vertical-align: middle;
-    text-align: center;
-    background-color: transparent;
-    width: auto;
+	font-family: inherit;
+	font-size: .875rem;
+	font-weight: 700;
+	font-weight: 500;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 1.125rem;
+	padding: .5rem 1rem;
+	height: auto;
+	width: auto;
+	text-align: center;
+	border-width: 1px;
+	border-color: transparent;
+	vertical-align: middle;
+	color: inherit;
+	background-color: transparent;
+	transition-duration: $transition-time;
+	transition-timing-function: $animation-curve-default;
+	transition-property: color, background-color, border-color, box-shadow;
 }
 
-.btn[href]:hover, .btn:focus
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-    background-color: $darken-1;
+.btn[href]:hover,
+button:hover {
+    background-color: $darken1;
     opacity: 1;
 }
 
-
-.btn-hollow {
-    color: $color-links;
-    border-color: $color-links;
+.btn[href]:focus,
+button:focus {
+    box-shadow: 0 0 0 1px $darken1;
+    border-color: $darken1;
+    background-color: $darken2;
+	outline: 0;
 }
 
-.btn-hollow:hover {
+
+.btn-hollow,
+input[type="reset"],
+input[type="button"] {
+    color: $color-links;
+    border-color: $color-links;
+	border-radius: $base-radius;
+}
+
+.btn-hollow:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
     color: #fff;
     background-color: $color-links-hover;
     border-color: $color-links-hover;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: $color-links;
+.btn-hollow:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus {
+	outline: 0;
+    border-color: $color-links;
+	box-shadow: 0 0 0 1px rgba($color-links,0.25);
 }
 
-.btn-primary:hover {
+.btn1,
+input[type="submit"] {
+    color: #fff;
+    background-color: $color-links;
+	border-radius: $base-radius;
+}
+
+.btn1:hover,
+input[type="submit"]:hover {
     color: #fff;
     background-color: $color-links-hover;
+}
+
+.btn1:focus,
+input[type="submit"]:focus {
+	outline: 0;
+    border-color: $color-links;
+	box-shadow: 0 0 0 1px rgba($color-links,0.25);
 }

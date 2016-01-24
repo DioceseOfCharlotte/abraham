@@ -1,6 +1,8 @@
 blockquote {
     quotes: "“" "”";
-    margin-bottom: $space-2;
+    margin-bottom: $space2;
+	font-size: $h5;
+	line-height: 1.6;
 
     p {
         text-indent: -0.42em;

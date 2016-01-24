@@ -2,29 +2,34 @@
 \*------------------------------------*/
 
 a {
-    color: inherit;
-    text-decoration: $link-text-decoration;
-    transition-duration: 0.3s;
+	color: inherit;
+    text-decoration: none;
+	line-height: inherit;
+	cursor: pointer;
+	transition-duration: $transition-time;
     transition-timing-function: $animation-curve-default;
-    transition-property: border-color;
+    transition-property: border-color, opacity;
+}
+
+a:not([class]) {
+	font-weight: bold;
     padding: 1px 0;
 }
 
-a:hover {
+a:not([class]):hover {
     color: inherit;
     text-decoration: none;
+	opacity: $opacity;
 }
 
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
-  opacity: $opacity;
-  font-weight: bold;
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgba( $color-2, 0.4 );
+  border-bottom: 1px solid rgba( $color-links, 0.25 );
 
 	&:hover,
 	&:focus,
 	&:active {
-	  border-color: rgba( $color-2, 0.95 );
+	  border-color: rgba( $color-links, 0.75 );
+	  opacity: 1;
 	}
 }
 
@@ -35,14 +40,14 @@ h3,
 h4,
 h5,
 h6 {
-    > a[href] {
+    > a[href]:not(.btn) {
+		font-weight: inherit;
         color: inherit;
 		opacity: 1;
-        transition-property: opacity;
+		border-bottom: 0;
     }
-    > a[href]:hover {
+    > a[href]:not(.btn):hover {
         color: inherit;
         opacity: $opacity;
-		border-bottom: 0;
     }
 }

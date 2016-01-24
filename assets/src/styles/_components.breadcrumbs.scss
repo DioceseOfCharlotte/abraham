@@ -7,10 +7,10 @@
         + li:before {
             content: "\E5CC";
             opacity: $opacity;
-            padding: $space-1;
+            padding: $space1;
             font-family: 'Material Icons';
             vertical-align: middle;
-            @include font-size(24px, false);
+            @include rem(font-size, 24px);
         }
     }
 

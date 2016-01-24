@@ -1,7 +1,31 @@
-/* #FORMS
-\*------------------------------------*/
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
 
 input,
+select,
+textarea {
+	background-color: rgba($blue-grey-50, 0.9);
+	font-family: inherit;
+    font-size: 1rem;
+	color: $color-text;
+	vertical-align: middle;
+	border: 1px solid $blue-grey-300;
+	transition-duration: $transition-time;
+	transition-timing-function: $animation-curve-default;
+	transition-property: color, background-color, border-color;
+
+	&:focus {
+		outline: 0;
+		background-color: rgba($white, 0.9);
+		border-color: $color-links-hover;
+	}
+}
+
+label {
+	vertical-align: middle;
+}
+
 input[type=text],
 input[type=date],
 input[type=datetime],
@@ -14,23 +38,24 @@ input[type=search],
 input[type=tel],
 input[type=time],
 input[type=url],
-input[type=week],
-select,
-textarea,
-.container .gform_wrapper .chosen-container-multi .chosen-choices {
-	width: 100%;
-	padding: 0.3rem 0.75rem;
-	border: 1px solid $blue-grey-200;
-	border-radius: $border-radius;
-	color: $color-text;
-	background-image: none;
-	background-color: white;
-	box-shadow: none;
-	font-size: 1rem;
-	line-height: 1.5;
+input[type=week] {
+	height: 2.25rem;
+	padding: .5rem;
+	border-radius: $base-radius;
+}
 
-	&:focus {
-		border-color: $color-1;
-		outline: none;
-	}
+select {
+	line-height: 1.25;
+	padding: .5rem;
+}
+
+select:not([multiple]) {
+	height: 2.25rem;
+}
+
+textarea {
+	line-height: 1.75;
+	padding: .5rem;
+	border-radius: $base-radius;
+	width: 100%;
 }

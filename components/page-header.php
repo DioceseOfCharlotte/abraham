@@ -15,7 +15,7 @@
 			echo sprintf(esc_html__('Search Results for %s', 'abraham'), get_search_query());
 		} elseif (is_404()) {
 			echo esc_html__('Not Found', 'abraham');
-		} elseif (!hybrid_is_plural() && !is_404()) {
+		} elseif (!hybrid_is_plural()) {
 			echo get_the_title();
 		}
 		?>

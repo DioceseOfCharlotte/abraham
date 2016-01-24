@@ -1,50 +1,69 @@
-// /*------------------------------------*\
-//  #SITE COLORS
-// \*------------------------------------*/
-// Brand
-$color-primary: $base-blue;
-$color-primary-light: lighten($color-primary, 10);
-$color-primary-dark: darken($color-primary, 10);
-$color-secondary: $green-600;
-$color-secondary-light: lighten($color-secondary, 10);
-$color-secondary-dark: darken($color-secondary, 10);
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$base-background-color: #fff;
+$base-radius: 3px;
 
-// Helpers
-$color-grey-darker: $grey-800;
-$color-grey-dark: $grey-700;
-$color-gray: $base-grey;
-$color-grey-light: $grey-300;
-$color-grey-lighter: $grey-200;
-$color-grey-lightest: $grey-100;
-$color-grey-ui: $grey-400;
+$space1: 0.5rem;
+$space2: 1rem;
+$space3: 2rem;
+$space4: 4rem;
+
+$container: 64em;
+$container-wide: 84em;
+
+$h1: 2.5rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+$h6: 1rem;
+$heading-line-height: 1.25;
+
+$paragraph-margin-bottom: $space2;
+$heading-margin-bottom: $space1;
+$list-margin-bottom: $space2;
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+$color1: #004899;
+$color1-light: lighten($color1, 10);
+$color1-dark: darken($color1, 10);
+$color2: $olive;
+$color2-light: lighten($color2, 10);
+$color2-dark: darken($color2, 10);
+$color3: #ffd870;
+$color3-light: lighten($color3, 10);
+$color3-dark: darken($color3, 10);
+
+$color-grey: $blue-grey-500;
+$color-grey-dark: darken($color-grey, 20);
+$color-grey-light: lighten($color-grey, 20);
+
 $color-black: $black;
 $color-white: $white;
 
-// Text
-$color-text: $grey-800;
+$darken1: rgba($blue-grey-900,0.0625);
+$darken2: rgba($blue-grey-900,0.25);
+$darken3: rgba($blue-grey-900,0.5);
+$darken4: rgba($blue-grey-900,0.8);
+$lighten1: rgba($blue-grey-50,0.0625);
+$lighten2: rgba($blue-grey-50,0.25);
+$lighten3: rgba($blue-grey-50,0.5);
+$lighten4: rgba($blue-grey-50,0.8);
+
+$base-opacity: 0.75;
+
+$color-text: $color-grey-dark;
 $color-text-light: lighten($color-text, 40);
 $color-text-dark: darken($color-text, 10);
-$color-headings: $grey-600;
-$color-text-light-hover: $grey-700;
-$color-links: $color-primary-dark;
-$color-links-hover: $color-primary-light;
-$color-links-active: $color-primary;
+$text-muted: rgba($color-text, .5);
+$color-links: $color1-dark;
+$color-links-hover: $color1;
 
-// Objects
-$color-hr: $color-grey-ui;
-
-// Sections
-$color-header: $color-primary;
-$footer-bg: $color-primary;
-$footer-widget-bg: $color-primary-light;
-
-// Buttons
-$btn-text: $white;
-$btn-bg: $color-primary;
-$btn-bg-hover: $color-primary-light;
-$btn-bg-active: $color-primary-dark;
-$btn-primary-bg: $color-primary;
-$btn-primary-text: $white;
 
 //Alerts
 $color-error: $red-400;
@@ -52,32 +71,18 @@ $color-valid: $green-400;
 $color-warning: $yellow-400;
 $color-information: $blue-400;
 
-// Formats
-$format-standard: $indigo-300;
-$format-image: $teal-300;
-$format-gallery: $yellow-300;
-$format-video: $red-300;
-$format-quote: $green-300;
-$format-audio: $green-300;
-$color-brand: $blue-500;
-$color-brand-highlight: lighten($color-brand, 15%);
-$color-brand-shadow: darken($color-brand, 15%);
-$color-gray: $grey-500;
-$color-gray-light: $grey-300;
-$color-gray-dark: $grey-700;
-$color-frost: rgba(255, 255, 255, 0.05);
-$color-tint: rgba(0, 0, 0, 0.05);
 
-// UI
-$color-ui: $color-gray-light;
 
-// Text
-$color-text: $color-gray-dark;
+$space1: 0.5rem;
+$space2: 1rem;
+$space3: 2rem;
+$space4: 4rem;
 
-// Links
-$color-link: $color-brand;
-$color-link-hover: $color-brand-shadow;
 
-// Buttons
-$color-btn: $color-brand;
-$color-btn-hover: $color-brand-shadow;
+
+// ANIMATION
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+$transition-time: 0.3s;
