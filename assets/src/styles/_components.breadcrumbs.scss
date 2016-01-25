@@ -4,6 +4,7 @@
 
     //text-transform: uppercase;
     li {
+        display: inline-block;
         + li:before {
             content: "\E5CC";
             opacity: $opacity;

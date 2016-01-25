@@ -580,9 +580,6 @@ ul ol {
 ul:last-child {
   margin-bottom: 0; }
 
-nav li {
-  display: inline-block; }
-
 /* specify the list style of nav lists */
 nav ol,
 nav ul,
@@ -789,13 +786,15 @@ input[type="submit"]:focus {
 
 /* #BREADCRUMBS
 \*------------------------------------*/
-.breadcrumbs li + li:before {
-  content: "\E5CC";
-  opacity: 0.75;
-  padding: 0.5rem;
-  font-family: 'Material Icons';
-  vertical-align: middle;
-  font-size: 1.5rem; }
+.breadcrumbs li {
+  display: inline-block; }
+  .breadcrumbs li + li:before {
+    content: "\E5CC";
+    opacity: 0.75;
+    padding: 0.5rem;
+    font-family: 'Material Icons';
+    vertical-align: middle;
+    font-size: 1.5rem; }
 
 .breadcrumbs a {
   color: inherit; }
@@ -1533,7 +1532,8 @@ input[type="submit"]:focus {
       padding-left: 0;
       margin-left: 0; }
   #page .u-fit {
-    max-width: 100%; }
+    max-width: 100%;
+    white-space: normal; }
   #page .u-max-width {
     max-width: 84em; }
   #page .u-width-auto {

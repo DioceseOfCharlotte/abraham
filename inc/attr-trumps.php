@@ -68,7 +68,7 @@ class Attr_Trumps {
 
 			// NAVIGATION
 			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-flexed-end',
+			'menu_primary'            	=> 'u-flexed-end u-1of1',
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR
@@ -87,7 +87,7 @@ class Attr_Trumps {
 			// FOOTER
 			'footer'                    => 'u-mt-auto u-bg-2-glass-dark',
 			'menu_item'                 => '',
-			'menu_link'                 => 'menu__link btn',
+			'menu_link'                 => 'menu__link btn u-1of1-sm',
 			'current_page_item'         => 'is-active',
 			'current_page_parent'       => 'is-active',
 			'current_page_ancestor'     => 'is-active',
