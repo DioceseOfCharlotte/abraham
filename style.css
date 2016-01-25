@@ -52,7 +52,8 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
           flex-grow: 0;
   -webkit-flex-shrink: 1;
       -ms-flex-negative: 1;
-          flex-shrink: 1; }
+          flex-shrink: 1;
+  word-wrap: break-word; }
 
 :before,
 :after {
@@ -608,7 +609,7 @@ td > ul {
 blockquote {
   quotes: "“" "”";
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.6; }
   blockquote p {
     text-indent: -0.42em; }
@@ -1531,6 +1532,8 @@ input[type="submit"]:focus {
       list-style: none;
       padding-left: 0;
       margin-left: 0; }
+  #page .u-fit {
+    max-width: 100%; }
   #page .u-max-width {
     max-width: 84em; }
   #page .u-width-auto {

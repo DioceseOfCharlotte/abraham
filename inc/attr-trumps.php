@@ -45,9 +45,9 @@ class Attr_Trumps {
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-justify-around facetwp-template',
 			// ENTRY
-			'post'                    	=> 'o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
-			'post_archive'            	=> 'o-cell u-bg-white u-px1 u-br',
-			'post_wide'               	=> 'u-1of1',
+			'post'                    	=> 'u-fit o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
+			'post_archive'            	=> 'u-fit o-cell u-bg-white u-px1 u-br',
+			'post_wide'               	=> 'u-fit u-1of1',
 			'page_header'             	=> 'u-pt2 u-1of1 u-text-center',
 			'entry_title'             	=> '',
 			'page_title'              	=> 'u-display-2 u-m0 u-pb3',
