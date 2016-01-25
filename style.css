@@ -762,8 +762,13 @@ input[type="button"]:hover {
 
 .btn-hollow:focus,
 input[type="button"]:focus,
-input[type="reset"]:focus {
+input[type="reset"]:focus,
+.btn-hollow:active,
+input[type="button"]:active,
+input[type="reset"]:active {
   outline: 0;
+  color: #fff;
+  background-color: #004899;
   border-color: #003066;
   box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25); }
 
@@ -779,7 +784,9 @@ input[type="submit"]:hover {
   background-color: #004899; }
 
 .btn1:focus,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+.btn1:active,
+input[type="submit"]:active {
   outline: 0;
   border-color: #003066;
   box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25); }
