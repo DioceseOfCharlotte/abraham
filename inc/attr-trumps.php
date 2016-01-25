@@ -94,9 +94,9 @@ class Attr_Trumps {
 			'current-menu-item'         => 'is-active',
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
-			'gv_post'                   => 'u-bg-transparent',
+			'gv_post'                   => 'u-bg-transparent shadow0 u-p0',
 			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u1of1 u-bg-white u-1of2-md',
+			'gv_entry'                  => 'o-cell u1of1 u-br u-bg-white u-1of2-md u-shadow--2dp',
 		);
 
 		$this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
