@@ -30,10 +30,10 @@ class Attr_Trumps {
 			'site_container'         	  => 'u-flex u-flex-column',
 			'layout'                 	  => '',
 			'layout_wide'            	  => '',
-			'grid'                   	  => 'o-grid u-max-width',
-			'grid_1-wide'               => 'o-grid u-1of1 u-p0',
-			'grid_2c-r'                 => 'o-grid u-max-width u-flex-rev',
-			'grid_2c-l'                 => 'o-grid u-max-width',
+			'grid'                   	  => 'o-grid u-mb2 u-max-width',
+			'grid_1-wide'               => 'o-grid u-mb2 u-1of1 u-p0',
+			'grid_2c-r'                 => 'o-grid u-mb2 u-max-width u-flex-rev',
+			'grid_2c-l'                 => 'o-grid u-mb2 u-max-width',
 
 			// SITE HEADER
 			'header'              		   => 'u-fixed u-bg-1-glass u-1of1 u-z2 u-flex u-flex-wrap u-flex-justify-around',
