@@ -85,7 +85,7 @@ class Attr_Trumps {
 			'comments_area'           	=> '',
 
 			// FOOTER
-			'footer'                    => 'u-mt-auto u-bg-2-glass-dark',
+			'footer'                    => 'u-mt-auto u-bg-2-glass',
 			'menu_item'                 => '',
 			'menu_link'                 => 'menu__link btn u-1of1-sm',
 			'current_page_item'         => 'is-active',
