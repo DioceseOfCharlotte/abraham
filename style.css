@@ -1698,6 +1698,10 @@ input[type="submit"]:active {
     clear: both;
     display: block;
     margin: 0 auto; }
+  #page .disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .5; }
   #page .shadow0 {
     box-shadow: none; }
   #page .u-shadow--2dp {

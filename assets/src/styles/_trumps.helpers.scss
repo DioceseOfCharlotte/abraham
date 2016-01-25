@@ -79,6 +79,11 @@
 	margin: 0 auto;
 }
 
+.disabled {
+	pointer-events: none;
+	cursor: default;
+	opacity: .5;
+}
 
 .shadow0 {
 	box-shadow: none;
