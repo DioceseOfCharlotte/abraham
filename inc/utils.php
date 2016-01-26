@@ -39,8 +39,8 @@ function meh_template_hierarchy($templates) {
 	} elseif (is_404()) {
 		$templates = array_merge(array('content/404.php'), $templates);
 	} elseif (is_singular()) {
-		$templates = array_merge(array("content/single.php"), $templates);
 		$templates = array_merge(array("content/{$post_type}-single.php"), $templates);
+		$templates = array_merge(array("content/single.php"), $templates);
 		//$templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
 	}
 
@@ -59,12 +59,14 @@ function meh_excerpt_length($length) {
 }
 
 function meh_responsive_videos() {
+
+	/* Wrap the videos */
 	add_filter('wp_video_shortcode', 'meh_responsive_videos_embed_html');
-	add_filter('embed_oembed_html', 'meh_responsive_videos_embed_html');
 	add_filter('video_embed_html', 'meh_responsive_videos_embed_html');
 
-	/* Wrap videos in Buddypress */
-	add_filter('bp_embed_oembed_html', 'meh_responsive_videos_embed_html');
+	/* Only wrap oEmbeds if video */
+	add_filter('embed_oembed_html', 'meh_responsive_videos_embed_html');
+	add_filter('embed_handler_html', 'meh_responsive_videos_embed_html');
 }
 
 /**
@@ -77,7 +79,7 @@ function meh_responsive_videos_embed_html($html) {
 		return $html;
 	}
 
-	return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>'.$html.'</div>';
+	return '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div><div class="FlexEmbed-content">'.$html.'</div></div>';
 }
 
 function doc_page_css_class($css_class, $page) {
