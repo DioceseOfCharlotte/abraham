@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 .btn,
+.button,
 button,
 input[type="button"],
 input[type="reset"],
@@ -29,14 +30,17 @@ input[type="submit"] {
 }
 
 .btn:hover,
+.button:hover
 button:hover {
     background-color: $darken1;
     opacity: 1;
 }
 
 .btn:focus,
+.button:focus,
 button:focus,
 .btn:active,
+.button:active,
 button:active {
     box-shadow: 0 0 0 1px $darken1;
     border-color: $darken1;

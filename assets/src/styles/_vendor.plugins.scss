@@ -1,0 +1,14 @@
+
+.gv-search-clear {
+	@extend .btn-hollow;
+}
+
+.gv-search-horizontal {
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gv-widget-search {
+    text-align: center;
+}
