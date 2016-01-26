@@ -18,8 +18,15 @@ function archive_width_taxonomy() {
 		'show_admin_column' => true,
 		//'rewrite' => false,
 		'show_ui' => true,
-		//'_builtin' => true,
 		'show_in_nav_menus' => false,
+
+		/* Capabilities. */
+		'capabilities' => array(
+			'manage_terms' => 'manage_options',
+			'edit_terms'   => 'manage_options',
+			'delete_terms' => 'manage_options',
+			'assign_terms' => 'edit_posts',
+		),
 	) );
 }
 
