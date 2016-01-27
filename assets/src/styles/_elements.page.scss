@@ -4,11 +4,19 @@
 html {
 
 	@include sm {
-		font-size: 14px;
-		line-height: 1.7;
+		font-size: 15px;
+		line-height: 1.6;
 	}
 
 	font-size: $base-font-size;
+}
+
+body {
+	color: $color-text;
+	background-color: $base-background-color;
+	font-family: $sans-serif;
+	font-size: 1rem;
+	line-height: $base-line-height;
 }
 
 .site {

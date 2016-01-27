@@ -1,10 +1,10 @@
 ///* #SETTINGS-RESPONSIVE
 //\*------------------------------------*/
 $breakpoints: (
-    "sm"        "screen and (max-width: 51em)",
-    "md"        "screen and (min-width: 52em)",
-    "lg"        "screen and (min-width: 64em)",
-    "xl"        "screen and (min-width: 80em)",
+    "sm"        "screen and (max-width: 47em)",
+    "md"        "screen and (min-width: 48em)",
+    "lg"        "screen and (min-width: 62em)",
+    "xl"        "screen and (min-width: 75em)",
     "retina"    "print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)"
 ) !default;
 
