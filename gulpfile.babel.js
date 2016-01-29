@@ -9,6 +9,7 @@ import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import postcss from 'gulp-postcss';
+import babel from 'gulp-babel';
 import xo from 'gulp-xo';
 import autoPrefixer from 'autoprefixer';
 import postcssFlex from 'postcss-flexibility';
@@ -74,9 +75,7 @@ gulp.task('images', () =>
 
 // Compile and Automatically Prefix Stylesheets (production)
 gulp.task('styles', () => {
-	// For best performance, don't add Sass partials to `gulp.src`
 	gulp.src('assets/src/styles/style.scss')
-		// Generate Source Maps
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({
 			precision: 10,
@@ -84,40 +83,30 @@ gulp.task('styles', () => {
 		}))
 		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('.tmp'))
-		// Concatenate Styles
 		.pipe($.concat('style.css'))
 		.pipe(gulp.dest('./'))
-		// Minify Styles
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
+		.pipe($.size({title: 'styles'}))
 		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest('./'))
-		.pipe($.size({
-			title: 'styles'
-		}));
+		.pipe(gulp.dest('./'));
 });
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', () =>
 	gulp.src(SOURCESJS)
 	.pipe($.sourcemaps.init())
-	.pipe($.babel())
+	.pipe(babel({
+		presets: ['es2015']
+	}))
 	.pipe($.sourcemaps.write())
-	// Concatenate Scripts
 	.pipe($.concat('abraham.js'))
 	.pipe(gulp.dest('assets/js'))
-	// Minify Scripts
-	.pipe($.uglify({
-		sourceRoot: '.',
-		sourceMapIncludeSources: true
-	}))
 	.pipe($.concat('abraham.min.js'))
-	// Write Source Maps
+	.pipe($.uglify())
+	.pipe($.size({title: 'scripts'}))
 	.pipe($.sourcemaps.write('.'))
 	.pipe(gulp.dest('assets/js'))
-	.pipe($.size({
-		title: 'scripts'
-	}))
 );
 
 // Concatenate And Minify JavaScript
@@ -125,22 +114,13 @@ gulp.task('jq_scripts', () =>
 	gulp.src(SOURCESJQ)
 	.pipe($.sourcemaps.init())
 	// .pipe($.babel())
-	.pipe($.sourcemaps.write())
-	// Concatenate Scripts
 	.pipe($.concat('jq-main.js'))
 	.pipe(gulp.dest('assets/js'))
-	// Minify Scripts
-	.pipe($.uglify({
-		sourceRoot: '.',
-		sourceMapIncludeSources: true
-	}))
+	.pipe($.uglify())
 	.pipe($.concat('jq-main.min.js'))
-	// Write Source Maps
 	.pipe($.sourcemaps.write('.'))
 	.pipe(gulp.dest('assets/js'))
-	.pipe($.size({
-		title: 'jq_scripts'
-	}))
+	.pipe($.size({title: 'jq_scripts'}))
 );
 
 /**

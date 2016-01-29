@@ -7,9 +7,12 @@
 *.gif binary
 *.ico binary
 
-/*.json         export-ignore
-/gulpfile.js    export-ignore
-/.gitignore     export-ignore
-/src            export-ignore
-/composer.lock  export-ignore
-/.editorconfig  export-ignore
+/*.json         	export-ignore
+/gulpfile.js    	export-ignore
+/gulpfile.babel.js  export-ignore
+/.git               export-ignore
+/.gitignore     	export-ignore
+/.gitattributes     export-ignore
+/assets/src         export-ignore
+/composer.lock  	export-ignore
+/.editorconfig  	export-ignore

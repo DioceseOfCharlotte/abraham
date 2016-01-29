@@ -723,6 +723,37 @@ input[type="submit"] {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, background-color, border-color, box-shadow; }
 
+.btn,
+.button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+  .btn::before,
+  .button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    border-radius: 50%;
+    margin: -50px 0 0 1px;
+    width: 30px;
+    height: 30px;
+    background: rgba(13, 16, 18, 0.0625);
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transform: scale3d(1, 2, 1);
+            transform: scale3d(1, 2, 1);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform; }
+  .btn:focus::before,
+  .button:focus::before {
+    -webkit-transform: scale3d(7, 4, 9);
+            transform: scale3d(7, 4, 9); }
+
 .btn:hover,
 .button:hover
 button:hover {
@@ -776,6 +807,7 @@ input[type="submit"] {
 .btn1:hover,
 input[type="submit"]:hover {
   color: #fff;
+  border-color: #004899;
   background-color: #004899; }
 
 .btn1:focus,
@@ -783,8 +815,14 @@ input[type="submit"]:focus,
 .btn1:active,
 input[type="submit"]:active {
   outline: 0;
-  border-color: #003066;
-  box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25); }
+  background-color: #003066;
+  border-color: #004899;
+  box-shadow: 0 0 0 1px rgba(0, 72, 153, 0.25); }
+  .btn1:focus::before,
+  input[type="submit"]:focus::before,
+  .btn1:active::before,
+  input[type="submit"]:active::before {
+    background: rgba(228, 234, 236, 0.25); }
 
 /**
  * Flexible media embeds

@@ -1,4 +1,5 @@
 <?php
+use Mexitek\PHPColors\Color;
 
 add_filter('hybrid_content_template_hierarchy', 'meh_template_hierarchy');
 add_filter('excerpt_more', 'meh_excerpt_more');
@@ -114,6 +115,13 @@ $passresetlink = wp_lostpassword_url( get_permalink() );
 return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>';
 }
 
+function doc_hex_prime($doc_hex) {
+$doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+$primaryText = new Color($doc_hex);
+$textColor = $primaryText->isDark() ? "rgba(255, 255, 255, 0.8)" : "rgba(34, 34, 34, 0.8)";
+
+return $textColor;
+}
 
 function doc_rgb_prime($alpha) {
 $doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
