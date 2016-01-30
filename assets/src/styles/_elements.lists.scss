@@ -3,7 +3,7 @@
 
 ul, ol, dl {
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: $space2;
     list-style-position: inside;
 }
 
@@ -11,7 +11,7 @@ ol ol,
 ul ul,
 ol ul,
 ul ol {
-	margin-left: 1.25rem;
+	padding-left: 2.5em;
     margin-bottom: 0;
 }
 
@@ -26,5 +26,9 @@ nav ul,
 nav li {
 	list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+nav li a {
     margin: 0;
 }

@@ -8,28 +8,52 @@ a {
 	cursor: pointer;
 	transition-duration: $transition-time;
     transition-timing-function: $animation-curve-default;
-    transition-property: border-color, opacity;
+    transition-property: color;
 }
 
 a:not([class]) {
-	font-weight: bold;
-    padding: 1px 0;
+	//opacity: .9;
+	font-weight: 500;
 }
 
 a:not([class]):hover {
     color: inherit;
     text-decoration: none;
-	opacity: $opacity;
 }
 
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
-  border-bottom: 1px solid rgba( $color-links, 0.25 );
+  position: relative;
+  display: inline-block;
+
+  &:before {
+  	  content: "";
+	  height: 1px;
+	  left: 0;
+	  bottom: 0;
+	  background: currentColor;
+	  opacity: .35;
+	  position: absolute;
+	  right: 0;
+	  transform: scaleX(.97) translateY(.055em);
+	  transition-duration: $transition-time;
+      transition-timing-function: $animation-curve-default;
+      transition-property: transform, opacity;
+  }
 
 	&:hover,
-	&:focus,
+	&:focus {
+		color: inherit;
+	  &:before {
+	      opacity: .95;
+	      transform: scaleX(.99);
+	  }
+	}
+
 	&:active {
-	  border-color: rgba( $color-links, 0.75 );
-	  opacity: 1;
+
+	  &:before {
+	      opacity: .2;
+	  }
 	}
 }
 
@@ -43,11 +67,20 @@ h6 {
     > a[href]:not(.btn) {
 		font-weight: inherit;
         color: inherit;
-		opacity: 1;
-		border-bottom: 0;
+
+		&:before {
+			content: none;
+		}
     }
     > a[href]:not(.btn):hover {
-        color: inherit;
-        opacity: $opacity;
+        //color: $color-text-light;
     }
+}
+
+.site-title > a {
+	transition-property: opacity;
+
+	&:hover {
+		opacity: $opacity;
+	}
 }

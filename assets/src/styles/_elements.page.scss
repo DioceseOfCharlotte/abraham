@@ -2,13 +2,12 @@
 \*------------------------------------*/
 
 html {
+	font-size: $base-font-size;
 
 	@include sm {
 		font-size: 15px;
 		line-height: 1.6;
 	}
-
-	font-size: $base-font-size;
 }
 
 body {
@@ -28,7 +27,7 @@ body {
 hr {
 	display: block;
 	height: 1px;
-	margin: 1em 0;
+	margin: $space2 0;
 	padding: 0;
 	border: 0;
 	border-top: 1px solid $color-grey;

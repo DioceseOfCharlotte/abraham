@@ -1,26 +1,28 @@
 blockquote {
-    quotes: "“" "”";
     margin-bottom: $space2;
-	font-size: $h4;
-	line-height: 1.6;
+    font-size    : $h4;
+    line-height  : 1.6;
 
     p {
-        text-indent: -0.42em;
-
-        &:before {
-            content: open-quote;
-        }
-
-        &:after {
-            content: no-close-quote;
-        }
+        // text-indent: -0.42em;
 
         &:last-of-type {
             margin-bottom: 0;
-
-            &:after {
-                content: close-quote;
-            }
         }
     }
+}
+
+cite {
+    text-align: right;
+    width     : 100%;
+    display   : inline-block;
+}
+
+blockquote cite {
+    font-size  : $h6;
+    font-weight: normal;
+}
+
+.blockquote {
+    justify-content: center;
 }

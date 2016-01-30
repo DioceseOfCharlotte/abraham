@@ -8,20 +8,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: inherit;
-	font-size: .875rem;
-	font-weight: 700;
-	font-weight: 500;
-	cursor: pointer;
 	display: inline-block;
-	line-height: 1.125rem;
-	padding: .5rem 1rem;
-	height: auto;
-	width: auto;
-	text-align: center;
-	border-width: 1px;
-	border-color: transparent;
-	vertical-align: middle;
 	color: inherit;
 	background-color: transparent;
 	transition-duration: $transition-time;
@@ -29,32 +16,6 @@ input[type="submit"] {
 	transition-property: color, background-color, border-color, box-shadow;
 }
 
-.btn,
-.button {
-	position:relative;
-	z-index: 1;
-	overflow: hidden;
-	&::before {
-	    content: '';
-	    z-index: -1;
-	    position: absolute;
-	    top: 50%;
-	    left: 100%;
-		border-radius: 50%;
-	    margin: -50px 0 0 1px;
-	    width: 30px;
-	    height: 30px;
-	    background: $darken1;
-	    transform-origin: 100% 0;
-	    transform: scale3d(1, 2, 1);
-		transition-duration: $transition-time;
-		transition-timing-function: $animation-curve-default;
-		transition-property: transform, opacity;
-	}
-	&:focus::before {
-		transform: scale3d(7, 4, 9);
-	}
-}
 .btn:hover,
 .button:hover
 button:hover {
@@ -126,8 +87,4 @@ input[type="submit"]:active {
 	background-color: $color-links;
     border-color: $color-links-hover;
 	box-shadow: 0 0 0 1px rgba($color-links-hover,0.25);
-
-	&::before {
-		background: $lighten2;
-	}
 }

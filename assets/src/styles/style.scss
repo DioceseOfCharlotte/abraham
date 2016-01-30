@@ -23,6 +23,7 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import "elements.page";
 @import "elements.typography";
 @import "elements.links";
+@import "elements.buttons";
 @import "elements.lists";
 @import "elements.tables";
 @import "elements.quotes";
@@ -35,7 +36,7 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 @import "components.breadcrumbs";
 
-#page {
+html {
 
 	@import "utility.colors";
 	@import "utility.images";

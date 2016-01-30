@@ -2,30 +2,55 @@
 # Forms
 --------------------------------------------------------------*/
 
+form {
+  margin-bottom: $space2;
+}
+
 input,
 select,
 textarea {
-	background-color: rgba($blue-grey-50, 0.9);
+	background-color: rgba(#f5f5f5, 0.8);
 	font-family: inherit;
     font-size: 1rem;
 	color: $color-text;
-	vertical-align: middle;
-	border: 1px solid $blue-grey-300;
+    vertical-align: middle;
+	border: 1px solid rgba($blue-grey-200, 0.9);
+	padding: $space1;
+	margin-bottom: $space2;
+	border-radius: $base-radius;
 	transition-duration: $transition-time;
 	transition-timing-function: $animation-curve-default;
 	transition-property: color, background-color, border-color;
 
 	&:focus {
 		outline: 0;
-		background-color: rgba($white, 0.9);
+		background-color: rgba($white, 0.95);
 		border-color: $color-links-hover;
 	}
 }
 
-label {
-	vertical-align: middle;
+legend {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
+// label,
+// input[type=text],
+// input[type=url],
+// select,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  font-size: .875rem;
+  font-weight: 700;
+  padding-top: $space2;
+  margin-bottom: $space1;
+}
+
+select,
 input[type=text],
 input[type=date],
 input[type=datetime],
@@ -39,23 +64,12 @@ input[type=tel],
 input[type=time],
 input[type=url],
 input[type=week] {
-	height: 2.25rem;
-	padding: .5rem;
-	border-radius: $base-radius;
+	height: 2.5em;
 }
 
-select {
-	line-height: 1.1;
-	padding: .5rem;
-}
-
-select:not([multiple]) {
-	height: 2.25rem;
-}
-
-textarea {
-	line-height: 1.75;
-	padding: .5rem;
-	border-radius: $base-radius;
-	width: 100%;
+input[type=checkbox],
+input[type=radio] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 $space1 0 0;
 }

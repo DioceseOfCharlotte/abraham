@@ -118,7 +118,7 @@ return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>
 function doc_hex_prime($doc_hex) {
 $doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
 $primaryText = new Color($doc_hex);
-$textColor = $primaryText->isDark() ? "rgba(255, 255, 255, 0.8)" : "rgba(34, 34, 34, 0.8)";
+$textColor = $primaryText->isDark() ? "#ECEFF1" : "#36474f";
 
 return $textColor;
 }

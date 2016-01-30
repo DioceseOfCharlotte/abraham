@@ -27,7 +27,7 @@ class Attr_Trumps {
 
 		$defaults = array(
 			'body'                   	  => '',
-			'site_container'         	  => 'u-flex u-flex-column',
+			'site_container'         	  => 'u-bg-frost-2 u-flex u-flex-column',
 			'layout'                 	  => '',
 			'layout_wide'            	  => '',
 			'grid'                   	  => 'o-grid u-mb2 u-max-width',

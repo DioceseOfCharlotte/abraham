@@ -7,20 +7,20 @@ $base-background-color: #fff;
 $base-radius: 2px;
 $base-opacity: 0.75;
 
-$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
 
 $container: 64em;
 $container-wide: 84em;
 
 $h1: 2.5rem;
 $h2: 2rem;
-$h3: 1.75rem;
-$h4: 1.5rem;
-$h5: 1.25rem;
-$h6: 1rem;
+$h3: 1.5rem;
+$h4: 1.25rem;
+$h5: 1rem;
+$h6: .875rem;
 $heading-line-height: 1.25;
 $heading-font-family: $sans-serif;
-$heading-font-weight: 500;
+$heading-font-weight: 700;
 
 /*--------------------------------------------------------------
 # Colors
@@ -35,24 +35,24 @@ $color3: #ffd870;
 $color3-light: lighten($color3, 10);
 $color3-dark: darken($color3, 10);
 
-$color-grey: $blue-grey-500;
+$color-grey: $grey;
 $color-grey-dark: darken($color-grey, 20);
 $color-grey-light: lighten($color-grey, 20);
 
 $color-black: $black;
 $color-white: $white;
 
-$darken1: rgba($blue-grey-900,0.0625);
-$darken2: rgba($blue-grey-900,0.25);
-$darken3: rgba($blue-grey-900,0.5);
-$darken4: rgba($blue-grey-900,0.8);
-$lighten1: rgba($blue-grey-50,0.0625);
-$lighten2: rgba($blue-grey-50,0.25);
-$lighten3: rgba($blue-grey-50,0.5);
-$lighten4: rgba($blue-grey-50,0.8);
+$darken1: rgba($grey-800,0.0625);
+$darken2: rgba($grey-800,0.25);
+$darken3: rgba($grey-800,0.5);
+$darken4: rgba($grey-800,0.8);
+$lighten1: rgba($grey-100,0.0625);
+$lighten2: rgba($grey-100,0.25);
+$lighten3: rgba($grey-100,0.5);
+$lighten4: rgba($grey-100,0.9);
 
 $color-text: $color-grey-dark;
-$color-text-light: lighten($color-text, 40);
+$color-text-light: rgba($color-text, .7);
 $color-text-dark: darken($color-text, 10);
 $text-muted: rgba($color-text, .5);
 $color-links: $color1-dark;
@@ -72,10 +72,10 @@ $color-information: $blue-400;
 /*--------------------------------------------------------------
 # Spacing
 --------------------------------------------------------------*/
-$space1: 0.5rem;
-$space2: 1rem;
-$space3: 2rem;
-$space4: 4rem;
+$space1: 0.5em;
+$space2: 1em;
+$space3: 2em;
+$space4: 4em;
 
 $paragraph-margin-bottom: $space2;
 $heading-margin-bottom: $space1;
