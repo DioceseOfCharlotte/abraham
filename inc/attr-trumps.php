@@ -68,7 +68,7 @@ class Attr_Trumps {
 
 			// NAVIGATION
 			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-flexed-end u-1of1',
+			'menu_primary'            	=> 'u-1of1',
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR
