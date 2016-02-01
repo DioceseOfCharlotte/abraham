@@ -1,8 +1,8 @@
 /* #GRID
 \*------------------------------------*/
-$gutter: 16px;
+$gutter: $space2;
 
-$cell-padding: calc(0.5 * #{$gutter});
+$cell-padding: $space1;
 
 .o-grid {
 
@@ -19,6 +19,6 @@ $cell-padding: calc(0.5 * #{$gutter});
 
 .o-cell {
 	//min-width: calc(33.33333% - #{$gutter});
-	margin: $cell-padding;
+	margin: 0 $cell-padding $space2;
 	flex: 1 1 auto;
 }

@@ -88,3 +88,11 @@ input[type="submit"]:active {
     border-color: $color-links-hover;
 	box-shadow: 0 0 0 1px rgba($color-links-hover,0.25);
 }
+
+.btn-round {
+	border-radius: 50%;
+	width: auto;
+	height: auto;
+	line-height: 1;
+	padding: $space1;
+}

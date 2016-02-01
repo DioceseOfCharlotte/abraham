@@ -14,8 +14,12 @@
 	color: currentColor;
 }
 
+.u-text-color {
+	color: $color-text;
+}
+
 .u-text-black {
-	color: $black;
+	color: $color-text-dark;
 }
 
 .u-text-gray {
@@ -27,7 +31,7 @@
 }
 
 .u-text-white {
-	color: $white;
+	color: $color-text-white;
 }
 
 .u-text-muted {
@@ -148,39 +152,39 @@
 }
 
 .u-bg-1-glass {
-	background-color: rgba($color1, 0.9);
+	background-color: rgba($color1, 0.95);
 }
 
 .u-bg-2-glass {
-	background-color: rgba($color2, 0.90);
+	background-color: rgba($color2, 0.95);
 }
 
 .u-bg-3-glass {
-	background-color: rgba($color3, 0.90);
+	background-color: rgba($color3, 0.95);
 }
 
 .u-bg-1-glass-light {
-	background-color: rgba(lighten($color1, 10), 0.90);
+	background-color: rgba(lighten($color1, 10), 0.95);
 }
 
 .u-bg-2-glass-light {
-	background-color: rgba(lighten($color2, 10), 0.90);
+	background-color: rgba(lighten($color2, 10), 0.95);
 }
 
 .u-bg-3-glass-light {
-	background-color: rgba(lighten($color3, 10), 0.90);
+	background-color: rgba(lighten($color3, 10), 0.95);
 }
 
 .u-bg-1-glass-dark {
-	background-color: rgba(darken($color1, 10), 0.90);
+	background-color: rgba(darken($color1, 10), 0.95);
 }
 
 .u-bg-2-glass-dark {
-	background-color: rgba(darken($color2, 10), 0.90);
+	background-color: rgba(darken($color2, 10), 0.95);
 }
 
 .u-bg-3-glass-dark {
-	background-color: rgba(darken($color3, 10), 0.90);
+	background-color: rgba(darken($color3, 10), 0.95);
 }
 
 .u-hover-frost-1:hover {

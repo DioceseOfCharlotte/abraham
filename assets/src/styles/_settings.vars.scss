@@ -42,18 +42,19 @@ $color-grey-light: lighten($color-grey, 20);
 $color-black: $black;
 $color-white: $white;
 
-$darken1: rgba($grey-800,0.0625);
-$darken2: rgba($grey-800,0.25);
-$darken3: rgba($grey-800,0.5);
-$darken4: rgba($grey-800,0.8);
-$lighten1: rgba($grey-100,0.0625);
-$lighten2: rgba($grey-100,0.25);
-$lighten3: rgba($grey-100,0.5);
-$lighten4: rgba($grey-100,0.9);
+$darken1: rgba($black,0.0625);
+$darken2: rgba($black,0.25);
+$darken3: rgba($black,0.5);
+$darken4: rgba($black,0.9);
+$lighten1: rgba($white,0.0625);
+$lighten2: rgba($white,0.25);
+$lighten3: rgba($white,0.5);
+$lighten4: rgba($white,0.9);
 
-$color-text: $color-grey-dark;
+$color-text: $blue-grey-700;
 $color-text-light: rgba($color-text, .7);
 $color-text-dark: darken($color-text, 10);
+$color-text-white: $blue-grey-50;
 $text-muted: rgba($color-text, .5);
 $color-links: $color1-dark;
 $color-links-hover: $color1;
