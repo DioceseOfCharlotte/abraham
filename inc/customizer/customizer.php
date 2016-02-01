@@ -102,32 +102,6 @@ function abraham_customize_register($wp_customize) {
 		)
 	);
 
-	/* Add the accent color setting. */
-	$wp_customize->add_setting(
-		'accent_color',
-		array(
-			'default'              => apply_filters('theme_mod_accent_color', ''),
-			'type'                 => 'theme_mod',
-			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
-			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			//'transport'            => 'postMessage',
-		)
-	);
-
-	/* Add the primary color control. */
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'custom-accent-color',
-			array(
-				'label'    => esc_html__('accent Color', 'abraham'),
-				'section'  => 'colors',
-				'settings' => 'accent_color',
-				'priority' => 15,
-			)
-		)
-	);
-
   //Typography
 
 	$wp_customize->add_section(
