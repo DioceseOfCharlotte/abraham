@@ -38,13 +38,6 @@ function abraham_setup() {
 		'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio',
 	));
 
-	add_theme_support('custom-background',
-		apply_filters('abraham_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-		))
-	);
-
   // Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
 }

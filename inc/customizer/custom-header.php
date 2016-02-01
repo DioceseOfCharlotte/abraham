@@ -1,47 +1,62 @@
 <?php
 /**
- * Custom Header
+ * Handles the setup and usage of the WordPress custom headers feature.
+ *
+ * @package    Stargazer
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2013 - 2016, Justin Tadlock
+ * @link       http://themehybrid.com/themes/abraham
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-add_action('after_setup_theme', 'abraham_custom_header_setup');
+# Call late so child themes can override.
+add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
 
+/**
+ * Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
 function abraham_custom_header_setup() {
-	add_theme_support('custom-header', apply_filters('abraham_custom_header_args',
+
+	// Adds support for WordPress' "custom-header" feature.
+	add_theme_support(
+		'custom-header',
 		array(
-			'default-image'          => '',
-			'default-text-color'     => 'FFFFFF',
 			'width'                  => 1920,
-			'height'                 => 400,
+			'height'                 => 560,
+			'flex-width'             => true,
 			'flex-height'            => true,
-			'wp-head-callback'       => 'abraham_header_style',
+			'default-text-color'     => 'FAFAFC',
+			'header-text'            => true,
+			'uploads'                => true,
+			'wp-head-callback'       => 'abraham_custom_header_wp_head'
 		)
-	));
+	);
 }
 
-if (!function_exists('abraham_header_style')) :
-
-function abraham_header_style() {
-	$header_text_color = get_header_textcolor();
-
-	if (HEADER_TEXTCOLOR === $header_text_color) {
+/**
+ * Callback function for outputting the custom header CSS to `wp_head`.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function abraham_custom_header_wp_head() {
+$style = '';
+if ( display_header_text() ) {
+	$hex = get_header_textcolor();
+	if ( ! $hex )
 		return;
-	} ?>
 
-	<style id="custom-header-css">
-	<?php if (!display_header_text()) : ?>
+	$style .= ".site-header,.archive-header{color:#{$hex};}";
+}
+if (get_header_image()) {
+	$bg_image = get_header_image();
+	$style .= ".archive-header{background-image:url({$bg_image});}.page-head-text{min-height:20vw;}";
+ }
 
-		#site-title,#site-description{position:absolute;clip:rect(1px,1px,1px,1px)}
-
-	<?php else : ?>
-
-		#header{color:#<?php echo esc_attr( $header_text_color ); ?>}
-
-	<?php endif; ?>
-
-	<?php if (get_header_image()) { ?>
-		#header{background-image:url( <?php header_image(); ?> )}
-	<?php } ?>
-	</style>
-
-<?php }
-endif; // abraham_header_style
+	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+}

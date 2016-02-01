@@ -20,6 +20,8 @@ require_once $abraham_dir . 'inc/utils.php';                    // Utility funct
 require_once $abraham_dir . 'inc/tiny-mce.php';                 // Extra wysiwyg actions
 require_once $abraham_dir . 'inc/compatibility.php';            // 3rd party compatibilty
 require_once $abraham_dir . 'inc/customizer/customizer.php';    // Customizer
+require_once $abraham_dir . 'inc/customizer/custom-background.php';    // Customizer
+require_once $abraham_dir . 'inc/customizer/custom-header.php';    // Customizer
 
 define('HYBRID_DIR', trailingslashit( get_template_directory() ) . 'lib/hybrid-core/');
 define('HYBRID_URI', trailingslashit( get_template_directory_uri() ) . 'lib/hybrid-core/');

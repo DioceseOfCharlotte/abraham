@@ -137,7 +137,7 @@ final class Abraham_Custom_Styles {
 		$color900     = $primaryColor->darken(40);
 
 		$glass          = implode(', ', hybrid_hex_to_rgb($hex));
-		$glass_light    = implode(', ', hybrid_hex_to_rgb($color400));
+		$glass_light    = implode(', ', hybrid_hex_to_rgb($color300));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($color600));
 
 		$textBase = $primaryColor->isDark() ? "rgba(255, 255, 255, 0.9)" : "rgba(34, 34, 34, 0.9)";
