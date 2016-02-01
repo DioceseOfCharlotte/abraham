@@ -6,7 +6,7 @@
 
 			<?php hybrid_get_sidebar('footer'); ?>
 
-			<p class="credit u-py1 u-bg-tint-2 u-text-center mdl-mega-footer--bottom-section">
+			<p class="credit u-py1 u-bg-tint-1 u-text-center mdl-mega-footer--bottom-section">
 				<?php printf(__('&#169; %1$s %2$s', 'abraham'), date_i18n('Y'), hybrid_get_site_link()); ?>
 			</p><!-- .credit -->
 

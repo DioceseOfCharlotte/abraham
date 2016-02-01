@@ -9,6 +9,12 @@ $gutter: $space2;
     max-width: $container-wide;
 }
 
+.u-max-center {
+    max-width: $container-wide;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .u-width-auto {
     width: auto;
 }

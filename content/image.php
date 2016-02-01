@@ -10,7 +10,7 @@ $bg_image       = 'background-image: url('.$feat_image_url.')';
 }
 ?>
 <section <?php hybrid_attr('post'); ?> style="<?php echo $bg_image ?>">
-<div class="u-bg-tint-3 u-text-white u-color-inherit">
+<div class="u-bg-tint-3 u-text-white u-mxn1 u-px2 u-color-inherit">
 		<header <?php hybrid_attr('entry-header'); ?>>
 			<h2 <?php hybrid_attr('entry-title'); ?>>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

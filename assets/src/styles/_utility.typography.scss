@@ -13,11 +13,11 @@
 }
 
 .u-bold {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .u-regular {
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .u-italic {
@@ -30,7 +30,7 @@
 }
 
 .u-text-shadow {
-    text-shadow: 1px 1px 5px rgba($black, 0.6);
+    text-shadow: 1px 1px 5px rgba($color-text-dark, 0.6);
 }
 
 .u-text-left {

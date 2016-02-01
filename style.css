@@ -222,7 +222,8 @@ nav,
 section,
 summary,
 legend {
-  display: block; }
+  display: block;
+  position: relative; }
 
 progress {
   display: inline-block;
@@ -911,10 +912,11 @@ input[type="submit"]:active {
   .breadcrumbs li + li:before {
     content: "\E5CC";
     opacity: 0.75;
-    padding: 0.5em;
+    padding: .2em;
     font-family: 'Material Icons';
     vertical-align: middle;
-    font-size: 1.5rem; }
+    font-size: 1.5em;
+    line-height: 1; }
 
 .breadcrumbs a {
   color: inherit; }
@@ -964,7 +966,7 @@ html {
   html .u-text-silver {
     color: #bdc3c7; }
   html .u-text-white {
-    color: #e4eaec; }
+    color: #fff; }
   html .u-text-muted {
     color: rgba(54, 71, 79, 0.5); }
   html .u-text-1 {
@@ -1097,6 +1099,14 @@ html {
     background-attachment: fixed; }
   html .u-bg-no-repeat {
     background-repeat: no-repeat; }
+  html .u-tinted-image:before {
+    background-color: rgba(96, 125, 139, 0.6);
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
   html .u-flex {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1241,6 +1251,8 @@ html {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row; } }
+  html .u-h0 {
+    font-size: 3rem; }
   html .u-h1 {
     font-size: 2.5rem; }
   html .u-h2 {
@@ -1631,16 +1643,16 @@ html {
   html .u-lh-2 {
     line-height: 2; }
   html .u-bold {
-    font-weight: bold; }
+    font-weight: 700; }
   html .u-regular {
-    font-weight: normal; }
+    font-weight: 400; }
   html .u-italic {
     font-style: italic; }
   html .u-caps {
     text-transform: uppercase;
     letter-spacing: 0.2em; }
   html .u-text-shadow {
-    text-shadow: 1px 1px 5px rgba(17, 17, 17, 0.6); }
+    text-shadow: 1px 1px 5px rgba(33, 44, 49, 0.6); }
   html .u-text-left {
     text-align: left; }
   html .u-text-center {
@@ -1670,6 +1682,10 @@ html {
     white-space: normal; }
   html .u-max-width {
     max-width: 84em; }
+  html .u-max-center {
+    max-width: 84em;
+    margin-left: auto;
+    margin-right: auto; }
   html .u-width-auto {
     width: auto; }
   html .u-1of1 {

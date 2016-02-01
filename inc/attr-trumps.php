@@ -38,8 +38,8 @@ class Attr_Trumps {
 			// SITE HEADER
 			'header'              		   => 'u-fixed u-bg-1-glass u-1of1 u-z2 u-flex u-flex-wrap u-flex-justify-around',
 			'branding'            		   => 'u-flex u-flexed-auto',
-			'site_title'          		   => 'u-color-inherit u-m0',
-			'site_description'        	=> 'u-m0 u-text-3',
+			'site_title'          		   => 'u-regular u-color-inherit u-m0',
+			'site_description'        	   => 'u-regular u-m0 u-text-3',
 			// CONTENT
 			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
@@ -48,14 +48,14 @@ class Attr_Trumps {
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
 			'post_archive'            	=> 'u-fit o-cell u-bg-white u-px1 u-br',
 			'post_wide'               	=> 'u-fit u-1of1',
-			'page_header'             	=> 'u-pt2 u-1of1 u-text-center',
-			'entry_title'             	=> 'u-p2 u-h3',
-			'page_title'              	=> 'u-display-2 u-m0 u-pb3',
-			'archive_description'     	=> 'u-1of1 u-p3 u-mb1 u-content-wrap u-bg-frost-4',
+			'page_header'             	=> 'u-relative u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb2 u-1of1 u-text-center',
+			'entry_title'             	=> 'u-text-center u-p2 u-h3',
+			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
+			'archive_description'     	=> 'u-1of1 u-mb2 u-p3 u-text-left u-br u-max-center u-bg-2-glass-light u-shadow--3dp',
 			'entry_header'            	=> 'u-max-width u-mx-auto',
-			'entry_content'           	=> 'u-px2 u-pb2 u-content-wrap',
+			'entry_content'           	=> 'u-px-1 u-px3-md u-pb2 u-content-wrap',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-px2 u-pb2 u-content-wrap',
+			'entry_summary'           	=> 'u-px-1 u-px3-md u-pb2 u-content-wrap',
 			'entry_footer'            	=> 'u-mt-auto',
 
 			'nav_single'              	=> '',
@@ -96,7 +96,7 @@ class Attr_Trumps {
 			'sub-menu'                  => '',
 			'gv_post'                   => 'u-bg-transparent shadow0 u-p0',
 			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u-1of1 u-br u-bg-white u-1of2-md u-1of3-lg u-border0 u-shadow--2dp',
+			'gv_entry'                  => 'o-cell u-1of1 u-br u-bg-white u-relative u-1of2-md u-1of3-lg u-border0 u-shadow--2dp',
 		);
 
 		$this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
