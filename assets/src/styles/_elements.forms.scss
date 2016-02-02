@@ -73,3 +73,11 @@ input[type=radio] {
   vertical-align: middle;
   margin: 0 $space1 0 0;
 }
+
+select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%220 0 7 14%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2214%22 fill=%22slategrey%22%3E %3Cpath d=%22M3.5 0L0 5.4h7L3.5 0zm0 14L7 8.6H0L3.5 14z%22/%3E %3C/svg%3E");
+  background-size: 7px 14px;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  padding-right: 27px;
+}
