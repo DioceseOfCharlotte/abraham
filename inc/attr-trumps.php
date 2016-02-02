@@ -48,7 +48,7 @@ class Attr_Trumps {
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
 			'post_archive'            	=> 'u-fit o-cell u-bg-white u-px1 u-br',
 			'post_wide'               	=> 'u-fit u-1of1',
-			'page_header'             	=> 'u-relative u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb2 u-1of1 u-text-center',
+			'page_header'             	=> 'u-rel u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb2 u-1of1 u-text-center',
 			'entry_title'             	=> 'u-text-center u-p2 u-h3',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
 			'archive_description'     	=> 'u-1of1 u-mb2 u-p3 u-text-left u-br u-max-center u-bg-2-glass-light u-shadow--3dp',
@@ -96,7 +96,7 @@ class Attr_Trumps {
 			'sub-menu'                  => '',
 			'gv_post'                   => 'u-bg-transparent shadow0 u-p0',
 			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u-1of1 u-br u-bg-white u-relative u-1of2-md u-1of3-lg u-border0 u-shadow--2dp',
+			'gv_entry'                  => 'o-cell u-1of1 u-br u-bg-white u-rel u-1of2-md u-1of3-lg u-border0 u-shadow--2dp',
 		);
 
 		$this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
