@@ -12,7 +12,6 @@
 
 $includes_dir = trailingslashit(get_template_directory());
 
-require_once $includes_dir.'inc/customizer/custom-header.php';
 require_once $includes_dir.'inc/customizer/Color.php';
 require_once $includes_dir.'inc/customizer/fonts.php';
 require_once $includes_dir.'inc/customizer/custom-styles.php';
