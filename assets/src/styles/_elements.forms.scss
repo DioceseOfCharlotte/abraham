@@ -51,6 +51,9 @@ label {
 }
 
 select,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
 input[type=text],
 input[type=date],
 input[type=datetime],

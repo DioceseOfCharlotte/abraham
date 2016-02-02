@@ -96,3 +96,7 @@ input[type="submit"]:active {
 	line-height: 1;
 	padding: $space1;
 }
+
+.btn-small {
+	padding: .5 * $space1 .5 * $space2;
+}
