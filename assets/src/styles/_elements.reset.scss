@@ -13,9 +13,10 @@
  }
 
  html {
- 	overflow-y: scroll; /* All browsers without overlaying scrollbars */
- 	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
+ 	//overflow-y: scroll; /* All browsers without overlaying scrollbars */
+ 	//-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
  	-webkit-text-size-adjust: 100%; /* iOS 8+ */
+    -ms-text-size-adjust: 100%;
  }
 
 /* Universal inheritance */

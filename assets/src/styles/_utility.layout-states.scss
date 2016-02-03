@@ -34,6 +34,9 @@
     height: 100vh;
 }
 
+.u-height100 {
+    height: 100%;
+}
 .u-vw100 {
     height: 100vw;
 }
@@ -136,6 +139,14 @@
 
 .u-fit {
     max-width: 100%;
+}
+
+.u-invisible {
+	visibility: hidden;
+}
+
+.u-visible {
+	visibility: visible;
 }
 
 @include md {

@@ -91,10 +91,14 @@ input[type="submit"]:active {
 
 .btn-round {
 	border-radius: 50%;
-	width: auto;
-	height: auto;
-	line-height: 1;
-	padding: $space1;
+	overflow: hidden;
+	height: 40px;
+	min-width: 40px;
+	width: 40px;
+	line-height: normal;
+	margin-left: 0;
+    margin-right: 0;
+	padding: 0;
 }
 
 .btn-small {
