@@ -1076,7 +1076,7 @@ html {
   html .u-bg-tint-4 {
     background-color: rgba(17, 17, 17, 0.9); }
   html .u-bg-mask {
-    background-color: rgba(33, 44, 49, 0.85); }
+    background-color: rgba(54, 71, 79, 0.85); }
   html .u-bg-1-glass {
     background-color: rgba(0, 72, 153, 0.95); }
   html .u-bg-2-glass {
@@ -1288,6 +1288,14 @@ html {
   html .u-mxn2 {
     margin-right: -1rem;
     margin-left: -1rem; }
+  html .u-mrn3 {
+    margin-right: -1.5rem; }
+  html .u-mrn4 {
+    margin-right: -2rem; }
+  html .u-mln3 {
+    margin-left: -1.5rem; }
+  html .u-mln4 {
+    margin-left: -2rem; }
   html .u-mxn3 {
     margin-right: -1.5rem;
     margin-left: -1.5rem; }
@@ -1792,6 +1800,19 @@ html {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row; } }
+  html .u-trans-curve {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  html .u-trans-time {
+    transition-duration: 0.3s;
+    transition-property: color; }
+  html .u-trans-color {
+    transition-property: color; }
+  html .u-trans-all {
+    transition-property: all; }
+  html .u-trans-opacity {
+    transition-property: opacity; }
+  html .u-trans-bg {
+    transition-property: background-color; }
   html .u-content-wrap > * {
     max-width: 64em;
     margin-left: auto;
