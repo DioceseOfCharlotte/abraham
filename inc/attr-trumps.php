@@ -44,18 +44,21 @@ class Attr_Trumps {
 			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-justify-around facetwp-template',
-			// ENTRY
-			'post'                    	=> 'u-fit o-cell u-bg-white u-mb2 u-1of1 u-py4 u-px3 u-br',
-			'post_archive'            	=> 'u-fit o-cell u-bg-white u-px1 u-br',
-			'post_wide'               	=> 'u-fit u-1of1',
-			'page_header'             	=> 'u-rel u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb2 u-1of1 u-text-center',
-			'entry_title'             	=> 'u-text-center u-p2 u-h3',
+
+			'page_header'             	=> 'u-rel u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb3 u-1of1 u-text-center',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
-			'archive_description'     	=> 'u-1of1 u-mb2 u-p3 u-text-left u-br u-max-center u-bg-2-glass-light u-shadow--3dp',
-			'entry_header'            	=> 'u-max-width u-mx-auto',
-			'entry_content'           	=> 'u-px-1 u-px3-md u-pb2 u-content-wrap',
+			'archive_description'     	=> 'u-1of1 u-p3 u-text-left u-br u-max-center u-bg-2-glass-light u-shadow--3dp',
+
+			// ENTRY
+			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br',
+			'post_wide'               	=> 'u-fit u-1of1',
+
+			'post_archive'            	=> 'u-mb3 o-cell u-bg-white u-br',
+			'entry_header'            	=> '',
+			'entry_title'             	=> 'u-px3 u-h3 u-pt2',
+			'entry_content'           	=> 'u-p3',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-px-1 u-px3-md u-pb2 u-content-wrap',
+			'entry_summary'           	=> 'u-px3 u-mb3',
 			'entry_footer'            	=> 'u-mt-auto',
 
 			'nav_single'              	=> '',

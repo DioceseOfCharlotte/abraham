@@ -136,14 +136,13 @@ add_action('widgets_init', 'abraham_widgets', 5);
 
 function abraham_image_sizes() {
 	// Set the 'post-thumbnail' size.
-	set_post_thumbnail_size(150, 150, true);
-	// Add the 'abraham-full' image size.
-	add_image_size('abraham-retina', 2560, 720, true);
-	add_image_size('abraham-md', 1024, 288, true);
-	add_image_size('abraham-full-cropped', 1280, 720, true);
-	add_image_size('abraham-full', 1920, 740, true);
-	add_image_size('abraham-hd', 1920, 1080, true);
-	add_image_size('abraham-sm', 640, 360, true);
+	set_post_thumbnail_size(180, 135, true);
+
+	// Create additional sizes.
+	add_image_size('abe-hd', 1200, 675, true);
+	add_image_size('abe-hd-half', 1200, 338, true);
+	add_image_size('abe-card-md', 660, 371, true);
+	add_image_size('abe-card', 330, 186, true);
 }
 
 function abraham_layouts() {
