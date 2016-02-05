@@ -30,7 +30,6 @@ function abraham_setup() {
 	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus(array(
 	  'primary'   => __('Primary', 'abraham'),
-	  'logged-in' => __('Logged In', 'abraham'),
 	));
 
   // http://codex.wordpress.org/Post_Formats
