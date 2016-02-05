@@ -98,9 +98,6 @@ function abraham_get_editor_styles() {
 	if ( is_child_theme() )
 	$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
 
-	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
-	$editor_styles[] = add_query_arg( 'action', 'abraham_editor_styles', admin_url( 'admin-ajax.php' ) );
-
 	/* Return the styles. */
 	return $editor_styles;
 }
@@ -172,22 +169,7 @@ function abraham_layouts() {
 
 	hybrid_register_layout('list', array(
 		'label'            => _x('List', 'theme layout', 'abraham'),
-		'is_global_layout' => false,
-		'post_types'       => array('gravityview'),
+		'is_global_layout' => true,
 		'image'            => '%s/assets/images/list.svg',
-	));
-
-	hybrid_register_layout('2-card-row', array(
-		'label'            => _x('2-card-row', 'theme layout', 'abraham'),
-		'is_global_layout' => false,
-		'post_types'       => array('gravityview'),
-		'image'            => '%s/assets/images/2-card-row.svg',
-	));
-
-	hybrid_register_layout('3-card-row', array(
-		'label'            => _x('2-card-row', 'theme layout', 'abraham'),
-		'is_global_layout' => false,
-		'post_types'       => array('gravityview'),
-		'image'            => '%s/assets/images/3-card-row.svg',
 	));
 }
