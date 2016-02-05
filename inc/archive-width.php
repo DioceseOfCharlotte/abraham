@@ -1,8 +1,21 @@
 <?php
-
 add_action( 'init', 'archive_width_taxonomy' );
 
-// Register Custom Taxonomy
+
+function get_archive_post_width($post = null) {
+	if ( ! $post = get_post( $post ) )
+		return false;
+
+	$_width = get_the_terms( $post->ID, 'archive_post_width' );
+
+	if ( empty( $_width ) )
+		return false;
+
+	$width = reset( $_width );
+		return $width->slug;
+}
+
+// Register Width Taxonomy
 function archive_width_taxonomy() {
 
 	register_taxonomy( 'archive_post_width',
@@ -28,66 +41,4 @@ function archive_width_taxonomy() {
 			'assign_terms' => 'edit_posts',
 		),
 	) );
-}
-
-add_action( 'cmb2_admin_init', 'rcdoc_register_metabox' );
-/**
- * Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
- */
-function rcdoc_register_metabox() {
-	$prefix = 'doc_';
-
-	/**
-	 * Page Styles metabox.
-	 */
-	$rcdoc_color_meta = new_cmb2_box( array(
-		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Page Colors', 'cmb2' ),
-		'object_types'  => abe_hierarchy_cpts(),
-		'context'       => 'side',
-		'priority'      => 'high',
-		//'show_names' => false,
-	) );
-
-		$rcdoc_color_meta->add_field( array(
-			'name'       => __( 'Primary Color', 'cmb2' ),
-			'desc'       => __( 'Primary color used throughout the page.', 'cmb2' ),
-			'id'         => $prefix . 'page_primary_color',
-			'type'       => 'colorpicker',
-			'default'    => apply_filters('theme_mod_primary_color', ''),
-			'priority'   => 'high',
-			'attributes' => array(
-				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#34495e' ),
-				) ),
-			),
-		) );
-
-		$rcdoc_color_meta->add_field( array(
-			'name'       => __( 'Secondary Color', 'cmb2' ),
-			'desc'       => __( 'Secondary color used throughout the page.', 'cmb2' ),
-			'id'         => $prefix . 'page_secondary_color',
-			'type'       => 'colorpicker',
-			'default'    => apply_filters('theme_mod_secondary_color', ''),
-			'priority'   => 'high',
-			'attributes' => array(
-				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#34495e' ),
-				) ),
-			),
-		) );
-
-}
-
-function get_archive_post_width($post = null) {
-	if ( ! $post = get_post( $post ) )
-		return false;
-
-	$_width = get_the_terms( $post->ID, 'archive_post_width' );
-
-	if ( empty( $_width ) )
-		return false;
-
-	$width = reset( $_width );
-		return $width->slug;
 }

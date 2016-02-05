@@ -85,7 +85,7 @@ class Attr_Trumps {
 			'footer_widgets'          	=> '',
 
 			// COMMENTS
-			'comments_area'           	=> '',
+			'comments_area'           	=> 'u-p3',
 
 			// FOOTER
 			'footer'                    => 'u-mt-auto u-bg-2-glass',
