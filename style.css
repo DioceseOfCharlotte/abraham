@@ -762,7 +762,7 @@ svg {
           align-items: stretch; }
 
 .o-cell {
-  width: calc(33.33333% - 1.5rem);
+  width: calc(310px - 1.5rem);
   margin: 0 0.75rem 0.75rem;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
