@@ -1,7 +1,9 @@
 blockquote {
+	padding: $space1 $space2;
     margin-bottom: $space2;
     font-size    : $h4;
     line-height  : 1.6;
+	text-align: center;
 
     p {
         // text-indent: -0.42em;

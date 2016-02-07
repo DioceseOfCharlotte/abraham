@@ -44,30 +44,30 @@ var POSTCSS_PLUGINS = [
 ];
 
 var SOURCESJS = [
-	'assets/src/scripts/main.js'
+	'src/scripts/main.js'
 ];
 
 // Scripts that rely on jQuery
 var SOURCESJQ = [
-	'assets/src/scripts/jq-main.js'
+	'src/scripts/jq-main.js'
 ];
 
 // ***** Development tasks ****** //
 // Lint JavaScript
 gulp.task('lint', function () {
-	gulp.src('assets/src/scripts/*.js')
+	gulp.src('src/scripts/*.js')
 	.pipe(xo())
 });
 
 // ***** Production build tasks ****** //
 // Optimize images
 gulp.task('images', function () {
-	gulp.src('assets/src/images/**/*.{svg,png,jpg}')
+	gulp.src('src/images/**/*.{svg,png,jpg}')
 	.pipe($.cache($.imagemin({
 		progressive: true,
 		interlaced: true
 	})))
-	.pipe(gulp.dest('assets/images'))
+	.pipe(gulp.dest('images'))
 	.pipe($.size({
 		title: 'images'
 	}))
@@ -75,7 +75,7 @@ gulp.task('images', function () {
 
 // Compile and Automatically Prefix Stylesheets (production)
 gulp.task('styles', function () {
-	gulp.src('assets/src/styles/style.scss')
+	gulp.src('src/styles/style.scss')
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({
 			precision: 10,
@@ -99,17 +99,17 @@ gulp.task('scripts', function () {
 	.pipe(babel({
 		"presets": ["es2015"],
 		"only": [
-			"assets/src/js/es6.js"
+			"src/js/es6.js"
 		]
 	}))
 	.pipe($.concat('abraham.js'))
 	.pipe($.sourcemaps.write())
-	.pipe(gulp.dest('assets/js'))
+	.pipe(gulp.dest('js'))
 	.pipe($.concat('abraham.min.js'))
 	.pipe($.uglify())
 	.pipe($.size({title: 'scripts'}))
 	.pipe($.sourcemaps.write('.'))
-	.pipe(gulp.dest('assets/js'))
+	.pipe(gulp.dest('js'))
 });
 
 // Concatenate And Minify JavaScript
@@ -118,11 +118,11 @@ gulp.task('jq_scripts',  function () {
 	.pipe($.sourcemaps.init())
 	// .pipe($.babel())
 	.pipe($.concat('jq-main.js'))
-	.pipe(gulp.dest('assets/js'))
+	.pipe(gulp.dest('js'))
 	.pipe($.uglify())
 	.pipe($.concat('jq-main.min.js'))
 	.pipe($.sourcemaps.write('.'))
-	.pipe(gulp.dest('assets/js'))
+	.pipe(gulp.dest('js'))
 	.pipe($.size({title: 'jq_scripts'}))
 });
 
@@ -141,7 +141,7 @@ gulp.task('serve', ['scripts', 'styles'], function () {
 	gulp.watch(['*/**/*.php'], reload);
 	gulp.watch(['src/**/*.{scss,css}'], ['styles', reload]);
 	gulp.watch(['src/**/*.js'], ['lint', 'scripts']);
-	gulp.watch(['assets/src/images/**/*'], reload);
+	gulp.watch(['src/images/**/*'], reload);
 });
 
 // Build production files, the default task

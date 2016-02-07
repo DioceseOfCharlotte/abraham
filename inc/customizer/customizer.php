@@ -164,7 +164,7 @@ function abraham_customizer_js() {
 
 	wp_enqueue_script(
 		'abraham_theme_customizer',
-		trailingslashit( get_template_directory_uri() ) . "assets/js/customizer{$suffix}.js",
+		trailingslashit( get_template_directory_uri() ) . "js/customizer{$suffix}.js",
 		array( 'customize-preview' ),
 		null,
 		true
