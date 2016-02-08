@@ -1260,15 +1260,15 @@ html {
   html .u-ml3 {
     margin-left: 1.5rem; }
   html .u-m4 {
-    margin: 2rem; }
+    margin: 3rem; }
   html .u-mt4 {
-    margin-top: 2rem; }
+    margin-top: 3rem; }
   html .u-mr4 {
-    margin-right: 2rem; }
+    margin-right: 3rem; }
   html .u-mb4 {
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
   html .u-ml4 {
-    margin-left: 2rem; }
+    margin-left: 3rem; }
   html .u-mx1 {
     margin-right: 0.5rem;
     margin-left: 0.5rem; }
@@ -1279,8 +1279,8 @@ html {
     margin-right: 1.5rem;
     margin-left: 1.5rem; }
   html .u-mx4 {
-    margin-right: 2rem;
-    margin-left: 2rem; }
+    margin-right: 3rem;
+    margin-left: 3rem; }
   html .u-mtn1 {
     margin-top: -0.5rem; }
   html .u-mxn1 {
@@ -1291,24 +1291,24 @@ html {
   html .u-mtn3 {
     margin-top: -1.5rem; }
   html .u-mtn4 {
-    margin-top: -2rem; }
+    margin-top: -3rem; }
   html .u-mxn2 {
     margin-right: -1rem;
     margin-left: -1rem; }
   html .u-mrn3 {
     margin-right: -1.5rem; }
   html .u-mrn4 {
-    margin-right: -2rem; }
+    margin-right: -3rem; }
   html .u-mln3 {
     margin-left: -1.5rem; }
   html .u-mln4 {
-    margin-left: -2rem; }
+    margin-left: -3rem; }
   html .u-mxn3 {
     margin-right: -1.5rem;
     margin-left: -1.5rem; }
   html .u-mxn4 {
-    margin-right: -2rem;
-    margin-left: -2rem; }
+    margin-right: -3rem;
+    margin-left: -3rem; }
   html .u-ml-auto {
     margin-left: auto; }
   html .u-mr-auto {
@@ -1376,19 +1376,19 @@ html {
   html .u-pb3 {
     padding-bottom: 1.5rem; }
   html .u-p4 {
-    padding: 2rem; }
+    padding: 3rem; }
   html .u-pl4 {
-    padding-left: 2rem; }
+    padding-left: 3rem; }
   html .u-py4 {
-    padding-top: 2rem;
-    padding-bottom: 2rem; }
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
   html .u-px4 {
-    padding-right: 2rem;
-    padding-left: 2rem; }
+    padding-right: 3rem;
+    padding-left: 3rem; }
   html .u-pt4 {
-    padding-top: 2rem; }
+    padding-top: 3rem; }
   html .u-pb4 {
-    padding-bottom: 2rem; }
+    padding-bottom: 3rem; }
   html .u-p0 {
     padding: 0; }
   html .u-py0 {
@@ -1421,15 +1421,15 @@ html {
     html .u-ml3-md {
       margin-left: 1.5rem; }
     html .u-m4-md {
-      margin: 2rem; }
+      margin: 3rem; }
     html .u-mt4-md {
-      margin-top: 2rem; }
+      margin-top: 3rem; }
     html .u-mr4-md {
-      margin-right: 2rem; }
+      margin-right: 3rem; }
     html .u-mb4-md {
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
     html .u-ml4-md {
-      margin-left: 2rem; }
+      margin-left: 3rem; }
     html .u-mxn2-md {
       margin-right: -1rem;
       margin-left: -1rem; }
@@ -1437,8 +1437,8 @@ html {
       margin-right: -1.5rem;
       margin-left: -1.5rem; }
     html .u-mxn4-md {
-      margin-right: -2rem;
-      margin-left: -2rem; }
+      margin-right: -3rem;
+      margin-left: -3rem; }
     html .u-mx-auto-md {
       margin-right: auto;
       margin-left: auto; }
@@ -1466,21 +1466,21 @@ html {
     html .u-pb3-md {
       padding-bottom: 1.5rem; }
     html .u-p4-md {
-      padding: 2rem; }
+      padding: 3rem; }
     html .u-py4-md {
-      padding-top: 2rem;
-      padding-bottom: 2rem; }
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
     html .u-px4-md {
-      padding-right: 2rem;
-      padding-left: 2rem; }
+      padding-right: 3rem;
+      padding-left: 3rem; }
     html .u-pt4-md {
-      padding-top: 2rem; }
+      padding-top: 3rem; }
     html .u-pb4-md {
-      padding-bottom: 2rem; } }
+      padding-bottom: 3rem; } }
   @media screen and (min-width: 62em) {
     html .u-mx4-lg {
-      margin-right: 2rem;
-      margin-left: 2rem; } }
+      margin-right: 3rem;
+      margin-left: 3rem; } }
   html .u-strip-space {
     margin: 0;
     padding: 0; }
