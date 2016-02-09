@@ -88,7 +88,7 @@ class Attr_Trumps {
 			'comments_area'           	=> 'u-p3',
 
 			// FOOTER
-			'footer'                    => 'u-mt-auto u-bg-silver',
+			'footer'                    => 'u-mt-auto u-bg-grey-dark',
 			'menu_item'                 => '',
 			'menu_link'                 => 'menu__link btn u-1of1-sm',
 			'current_page_item'         => 'is-active',
