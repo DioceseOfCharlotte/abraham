@@ -76,7 +76,7 @@ class Attr_Trumps {
 
 			// SIDEBAR
 			'sidebar_primary'         	=> 'o-cell o-grid u-m0 u-p0',
-			'sidebar_footer'          	=> 'u-flex-md',
+			'sidebar_footer'          	=> 'u-flex-md u-py3 u-max-width u-mx-auto',
 			'sidebar_horizontal'      	=> 'u-1of1',
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
@@ -88,7 +88,7 @@ class Attr_Trumps {
 			'comments_area'           	=> 'u-p3',
 
 			// FOOTER
-			'footer'                    => 'u-mt-auto u-bg-2-glass',
+			'footer'                    => 'u-mt-auto u-bg-silver',
 			'menu_item'                 => '',
 			'menu_link'                 => 'menu__link btn u-1of1-sm',
 			'current_page_item'         => 'is-active',

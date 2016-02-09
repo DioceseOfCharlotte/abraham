@@ -1014,7 +1014,7 @@ html {
     color: #36474f; }
   html .u-text-black {
     color: #212c31; }
-  html .u-text-gray {
+  html .u-text-grey {
     color: #9D9D9D; }
   html .u-text-silver {
     color: #bdc3c7; }
@@ -1054,8 +1054,11 @@ html {
     background-color: #ffca3d; }
   html .u-bg-black {
     background-color: #111; }
-  html .u-bg-gray {
+  html .u-bg-grey {
     background-color: #9D9D9D; }
+  html .u-bg-grey-dark {
+    background-color: #6a6a6a;
+    color: #fff; }
   html .u-bg-silver {
     background-color: #bdc3c7; }
   html .u-bg-white {
@@ -1081,23 +1084,23 @@ html {
   html .u-bg-mask {
     background-color: rgba(54, 71, 79, 0.85); }
   html .u-bg-1-glass {
-    background-color: rgba(0, 72, 153, 0.95); }
+    background-color: rgba(0, 72, 153, 0.98); }
   html .u-bg-2-glass {
-    background-color: rgba(61, 153, 112, 0.95); }
+    background-color: rgba(61, 153, 112, 0.98); }
   html .u-bg-3-glass {
-    background-color: rgba(255, 216, 112, 0.95); }
+    background-color: rgba(255, 216, 112, 0.98); }
   html .u-bg-1-glass-light {
-    background-color: rgba(0, 96, 204, 0.95); }
+    background-color: rgba(0, 96, 204, 0.98); }
   html .u-bg-2-glass-light {
-    background-color: rgba(80, 185, 138, 0.95); }
+    background-color: rgba(80, 185, 138, 0.98); }
   html .u-bg-3-glass-light {
-    background-color: rgba(255, 230, 163, 0.95); }
+    background-color: rgba(255, 230, 163, 0.98); }
   html .u-bg-1-glass-dark {
-    background-color: rgba(0, 48, 102, 0.95); }
+    background-color: rgba(0, 48, 102, 0.98); }
   html .u-bg-2-glass-dark {
-    background-color: rgba(46, 117, 85, 0.95); }
+    background-color: rgba(46, 117, 85, 0.98); }
   html .u-bg-3-glass-dark {
-    background-color: rgba(255, 202, 61, 0.95); }
+    background-color: rgba(255, 202, 61, 0.98); }
   html .u-hover-frost-1:hover {
     background-color: rgba(255, 255, 255, 0.0625); }
   html .u-hover-frost-2:hover {
