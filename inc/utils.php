@@ -80,7 +80,7 @@ return '<a class="btn btn-small u-br u-mt2" href="' . $logoutlink . '">Logout</a
 // Shortcode
 function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
-return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '"title="Lost Password">Lost your password?</a>';
+return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
 }
 
 function doc_hex_prime($doc_hex) {

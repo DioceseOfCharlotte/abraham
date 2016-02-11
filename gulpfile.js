@@ -10,7 +10,7 @@ var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var postcss = require('gulp-postcss');
 var babel = require('gulp-babel');
-var xo = require('gulp-xo');
+var oldie = require('oldie');
 var autoPrefixer = require('autoprefixer');
 var postcssFlex = require('postcss-flexibility');
 // var postcssScss = require('postcss-scss');
@@ -36,11 +36,15 @@ var AUTOPREFIXER_BROWSERS = [
 var POSTCSS_PLUGINS = [
 	autoPrefixer({
 		browsers: AUTOPREFIXER_BROWSERS
+	})
+];
+
+var POSTCSS_IE = [
+	autoPrefixer({
+		browsers: ['IE 8', 'IE 9']
 	}),
-	postcssFlex
-	// postcssNested
-	// colorFunction,
-	// precss,
+	postcssFlex,
+	oldie
 ];
 
 var SOURCESJS = [
@@ -81,8 +85,8 @@ gulp.task('styles', function () {
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:')
 		}))
-		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('.tmp'))
+		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
@@ -90,6 +94,13 @@ gulp.task('styles', function () {
 		.pipe($.size({title: 'styles'}))
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'));
+});
+
+gulp.task('oldie', function () {
+	gulp.src('.tmp/style.css')
+	.pipe(postcss(POSTCSS_IE))
+	.pipe($.concat('oldie.css'))
+	.pipe(gulp.dest('css'))
 });
 
 // Concatenate And Minify JavaScript
@@ -147,6 +158,6 @@ gulp.task('serve', ['scripts', 'styles'], function () {
 // Build production files, the default task
 gulp.task('default', function (cb) {
 	runSequence(
-		'styles', ['scripts', 'jq_scripts', 'images'],
+		'styles', ['oldie', 'scripts', 'jq_scripts', 'images'],
 		cb);
 });

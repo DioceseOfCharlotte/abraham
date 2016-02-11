@@ -62,9 +62,20 @@ function abraham_assets() {
 	// Scripts
 	wp_enqueue_script(
 		'abraham_js',
-		trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
+		'https://cdn.polyfill.io/v2/polyfill.min.js',
 		false, false, true
 	);
+
+	// wp_enqueue_script(
+	// 	'abraham_js',
+	// 	trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
+	// 	false, false, true
+	// );
+	wp_enqueue_style( 'oldie', trailingslashit(get_template_directory_uri()).'css/oldie.css', array( 'hybrid-style' ) );
+	wp_style_add_data( 'oldie', 'conditional', 'IE' );
+
+	wp_enqueue_script( 'flexibility', trailingslashit(get_template_directory_uri())."js/flexibility.js",  false, false, false );
+	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
 /*
