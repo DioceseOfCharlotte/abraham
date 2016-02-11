@@ -29,7 +29,7 @@ function abraham_custom_header_setup() {
 			'height'                 => 560,
 			'flex-width'             => true,
 			'flex-height'            => true,
-			'default-text-color'     => 'FAFAFC',
+			'default-text-color'     => 'ffffff',
 			'header-text'            => true,
 			'uploads'                => true,
 			'wp-head-callback'       => 'abraham_custom_header_wp_head'

@@ -30,10 +30,10 @@ class Attr_Trumps {
 			'site_container'         	  => 'u-bg-frost-2 u-flex u-flex-column',
 			'layout'                 	  => '',
 			'layout_wide'            	  => '',
-			'grid'                   	  => 'o-grid u-max-width',
-			'grid_1-wide'               => 'o-grid u-1of1 u-p0',
-			'grid_2c-r'                 => 'o-grid u-max-width u-flex-rev',
-			'grid_2c-l'                 => 'o-grid u-max-width',
+			'grid'                   	  => 'o-grid u-container  u-rel',
+			'grid_1-wide'               => 'o-grid u-1of1  u-rel u-p0',
+			'grid_2c-r'                 => 'o-grid u-container  u-rel u-flex-rev',
+			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER
 			'header'              		   => 'u-fix u-bg-1-glass u-1of1 u-z2 u-flex u-flex-wrap u-flex-center',
@@ -47,7 +47,7 @@ class Attr_Trumps {
 
 			'page_header'             	=> 'u-rel u-tinted-image u-bg-fixed u-bg-cover u-bg-center u-mb3 u-1of1 u-text-center',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
-			'archive_description'     	=> 'u-1of1 u-p3 u-text-left u-br u-max-center u-bg-2-glass-light u-shadow--3dp',
+			'archive_description'     	=> 'u-1of1 u-p3 u-text-left u-br u-container u-mx1 u-mb3 u-bg-white u-rel u-shadow--3dp',
 
 			// ENTRY
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br',
@@ -76,7 +76,7 @@ class Attr_Trumps {
 
 			// SIDEBAR
 			'sidebar_primary'         	=> 'o-cell o-grid u-m0 u-p0',
-			'sidebar_footer'          	=> 'u-flex-md u-py3 u-max-width u-mx-auto',
+			'sidebar_footer'          	=> 'u-flex-md u-py3 u-container-wide',
 			'sidebar_horizontal'      	=> 'u-1of1',
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
@@ -88,7 +88,7 @@ class Attr_Trumps {
 			'comments_area'           	=> 'u-p3',
 
 			// FOOTER
-			'footer'                    => 'u-mt-auto u-bg-grey-dark',
+			'footer'                    => 'u-mt-auto u-bg-tint-1',
 			'menu_item'                 => '',
 			'menu_link'                 => 'menu__link btn u-1of1-sm',
 			'current_page_item'         => 'is-active',
