@@ -3,10 +3,10 @@
  * Extended custom post types for WordPress.
  *
  * @package   ExtendedCPTs
- * @version   3.0.0
+ * @version   3.0.1
  * @author    John Blackbourn <https://johnblackbourn.com>
  * @link      https://github.com/johnbillion/extended-cpts
- * @copyright 2012-2015 John Blackbourn
+ * @copyright 2012-2016 John Blackbourn
  * @license   GPL v2 or later
  *
  * This program is free software; you can redistribute it and/or modify
@@ -323,7 +323,7 @@ class Extended_CPT {
 				if ( is_array( $col ) && isset( $col['default'] ) ) {
 					// @TODO Don't set 'order' if 'orderby' is an array (WP 4.0+)
 					$wp_query->query['orderby'] = $id;
-					$wp_query->query['order']   = ( 'desc' == strtolower( $col['default'] ) ? 'desc' : 'asc' );
+					$wp_query->query['order']   = ( 'desc' === strtolower( $col['default'] ) ? 'desc' : 'asc' );
 					break;
 				}
 			}
@@ -511,7 +511,7 @@ class Extended_CPT {
 		$clauses['where'] .= $wpdb->prepare( ' AND ( taxonomy = %s OR taxonomy IS NULL )', $orderby['taxonomy'] );
 		$clauses['groupby'] = 'ext_cpts_tr.object_id';
 		$clauses['orderby'] = 'GROUP_CONCAT( ext_cpts_t.name ORDER BY name ASC ) ';
-		$clauses['orderby'] .= ( isset( $vars['order'] ) && ( 'ASC' == strtoupper( $vars['order'] ) ) ) ? 'ASC' : 'DESC';
+		$clauses['orderby'] .= ( isset( $vars['order'] ) && ( 'ASC' === strtoupper( $vars['order'] ) ) ) ? 'ASC' : 'DESC';
 
 		return $clauses;
 
@@ -563,7 +563,7 @@ class Extended_CPT {
 	public function override_private_query_vars( WP $wp ) {
 
 		# If it's not our post type, bail out:
-		if ( ! isset( $wp->query_vars['post_type'] ) || ( $this->post_type != $wp->query_vars['post_type'] ) ) {
+		if ( ! isset( $wp->query_vars['post_type'] ) || ( $this->post_type !== $wp->query_vars['post_type'] ) ) {
 			return $wp;
 		}
 
@@ -588,7 +588,7 @@ class Extended_CPT {
 	 * @param object $args      Arguments used to register the post type.
 	 */
 	public function registered_post_type( $post_type, stdClass $args ) {
-		if ( $post_type != $this->post_type ) {
+		if ( $post_type !== $this->post_type ) {
 			return;
 		}
 		$struct = str_replace( "%{$this->post_type}_slug%", $this->post_slug, $args->rewrite['permastruct'] );
@@ -608,7 +608,7 @@ class Extended_CPT {
 	public function post_type_link( $post_link, WP_Post $post, $leavename, $sample ) {
 
 		# If it's not our post type, bail out:
-		if ( $this->post_type != $post->post_type ) {
+		if ( $this->post_type !== $post->post_type ) {
 			return $post_link;
 		}
 
@@ -712,10 +712,10 @@ class Extended_CPT {
 			// https://core.trac.wordpress.org/ticket/35089
 			foreach ( $taxonomies as $tax ) {
 				if ( $tax->query_var === $query_var ) {
-					trigger_error( sprintf(
-						__( 'Post type query var %s clashes with a taxonomy query var of the same name', 'extended-cpts' ),
-						"<code>{$query_var}</code>"
-					), E_USER_ERROR );
+					trigger_error( esc_html( sprintf(
+						__( 'Post type query var "%s" clashes with a taxonomy query var of the same name', 'extended-cpts' ),
+						$query_var
+					) ), E_USER_ERROR );
 				}
 			}
 
@@ -726,7 +726,7 @@ class Extended_CPT {
 			$cpt = register_post_type( $this->post_type, $this->args );
 
 			if ( is_wp_error( $cpt ) ) {
-				trigger_error( $cpt->get_error_message(), E_USER_ERROR );
+				trigger_error( esc_html( $cpt->get_error_message() ), E_USER_ERROR );
 			}
 		} else {
 
@@ -870,7 +870,7 @@ class Extended_CPT_Admin {
 	 */
 	public function admin_head() {
 
-		if ( $this->cpt->post_type != self::get_current_post_type() ) {
+		if ( $this->cpt->post_type !== self::get_current_post_type() ) {
 			return;
 		}
 
@@ -891,7 +891,7 @@ class Extended_CPT_Admin {
 	 */
 	public function default_sort() {
 
-		if ( $this->cpt->post_type != self::get_current_post_type() ) {
+		if ( $this->cpt->post_type !== self::get_current_post_type() ) {
 			return;
 		}
 
@@ -904,7 +904,7 @@ class Extended_CPT_Admin {
 		foreach ( $this->args['admin_cols'] as $id => $col ) {
 			if ( is_array( $col ) && isset( $col['default'] ) ) {
 				$_GET['orderby'] = $id;
-				$_GET['order']   = ( 'desc' == strtolower( $col['default'] ) ? 'desc' : 'asc' );
+				$_GET['order']   = ( 'desc' === strtolower( $col['default'] ) ? 'desc' : 'asc' );
 				break;
 			}
 		}
@@ -920,7 +920,7 @@ class Extended_CPT_Admin {
 	 */
 	public function enter_title_here( $title, WP_Post $post ) {
 
-		if ( $this->cpt->post_type != $post->post_type ) {
+		if ( $this->cpt->post_type !== $post->post_type ) {
 			return $title;
 		}
 
@@ -999,7 +999,7 @@ class Extended_CPT_Admin {
 
 		global $wpdb;
 
-		if ( $this->cpt->post_type != self::get_current_post_type() ) {
+		if ( $this->cpt->post_type !== self::get_current_post_type() ) {
 			return;
 		}
 
@@ -1021,7 +1021,10 @@ class Extended_CPT_Admin {
 
 				# For this, we need the dropdown walker from Extended Taxonomies:
 				if ( ! class_exists( $class = 'Walker_ExtendedTaxonomyDropdown' ) ) {
-					trigger_error( sprintf( __( 'The %s class is required in order to display taxonomy filters', 'extended-cpts' ), $class ), E_USER_WARNING );
+					trigger_error( esc_html( sprintf(
+						__( 'The "%s" class is required in order to display taxonomy filters', 'extended-cpts' ),
+						$class
+					) ), E_USER_WARNING );
 					continue;
 				} else {
 					$walker = new Walker_ExtendedTaxonomyDropdown( array(
@@ -1126,7 +1129,7 @@ class Extended_CPT_Admin {
 
 				$selected = wp_unslash( get_query_var( $filter_key ) );
 
-				if ( 1 == count( $filter['meta_exists'] ) ) {
+				if ( 1 === count( $filter['meta_exists'] ) ) {
 
 					# Output a checkbox:
 					foreach ( $filter['meta_exists'] as $v => $t ) {
@@ -1265,7 +1268,7 @@ class Extended_CPT_Admin {
 		$num   = number_format_i18n( $count->publish );
 
 		# This is absolutely not localisable. WordPress 3.8 didn't add a new post type label.
-		$text = '<a href="edit.php?post_type=' . $this->cpt->post_type . '">' . $num . ' ' . $text . '</a>';
+		$text = '<a href="edit.php?post_type=' . esc_attr( $this->cpt->post_type ) . '">' . esc_html( $num . ' ' . $text ) . '</a>';
 
 		# Go!
 		$items[] = $text;
@@ -1300,43 +1303,51 @@ class Extended_CPT_Admin {
 		$pto = get_post_type_object( $this->cpt->post_type );
 
 		$messages[ $this->cpt->post_type ] = array(
-			1 => sprintf( ( $pto->publicly_queryable ? '%1$s updated. <a href="%2$s">View %3$s</a>' : '%1$s updated.' ),
-				$this->cpt->post_singular,
+			1 => sprintf(
+				( $pto->publicly_queryable ? '%1$s updated. <a href="%2$s">View %3$s</a>' : '%1$s updated.' ),
+				esc_html( $this->cpt->post_singular ),
 				esc_url( get_permalink( $post ) ),
-				$this->cpt->post_singular_low
+				esc_html( $this->cpt->post_singular_low )
 			),
 			2 => 'Custom field updated.',
 			3 => 'Custom field deleted.',
-			4 => sprintf( '%s updated.',
-				$this->cpt->post_singular
+			4 => sprintf(
+				'%s updated.',
+				esc_html( $this->cpt->post_singular )
 			),
-			5 => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s',
-				$this->cpt->post_singular,
+			5 => isset( $_GET['revision'] ) ? sprintf(
+				'%1$s restored to revision from %2$s',
+				esc_html( $this->cpt->post_singular ),
 				wp_post_revision_title( intval( $_GET['revision'] ), false )
 			) : false,
-			6 => sprintf( ( $pto->publicly_queryable ? '%1$s published. <a href="%2$s">View %3$s</a>' : '%1$s published.' ),
-				$this->cpt->post_singular,
+			6 => sprintf(
+				( $pto->publicly_queryable ? '%1$s published. <a href="%2$s">View %3$s</a>' : '%1$s published.' ),
+				esc_html( $this->cpt->post_singular ),
 				esc_url( get_permalink( $post ) ),
-				$this->cpt->post_singular_low
+				esc_html( $this->cpt->post_singular_low )
 			),
-			7 => sprintf( '%s saved.',
-				$this->cpt->post_singular
+			7 => sprintf(
+				'%s saved.',
+				esc_html( $this->cpt->post_singular )
 			),
-			8 => sprintf( ( $pto->publicly_queryable ? '%1$s submitted. <a target="_blank" href="%2$s">Preview %3$s</a>' : '%1$s submitted.' ),
-				$this->cpt->post_singular,
+			8 => sprintf(
+				( $pto->publicly_queryable ? '%1$s submitted. <a target="_blank" href="%2$s">Preview %3$s</a>' : '%1$s submitted.' ),
+				esc_html( $this->cpt->post_singular ),
 				esc_url( add_query_arg( 'preview', 'true', get_permalink( $post ) ) ),
-				$this->cpt->post_singular_low
+				esc_html( $this->cpt->post_singular_low )
 			),
-			9 => sprintf( ( $pto->publicly_queryable ? '%1$s scheduled for: <strong>%2$s</strong>. <a target="_blank" href="%3$s">Preview %4$s</a>' : '%1$s scheduled for: <strong>%2$s</strong>.' ),
-				$this->cpt->post_singular,
-				date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ),
+			9 => sprintf(
+				( $pto->publicly_queryable ? '%1$s scheduled for: <strong>%2$s</strong>. <a target="_blank" href="%3$s">Preview %4$s</a>' : '%1$s scheduled for: <strong>%2$s</strong>.' ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ) ),
 				esc_url( get_permalink( $post ) ),
-				$this->cpt->post_singular_low
+				esc_html( $this->cpt->post_singular_low )
 			),
-			10 => sprintf( ( $pto->publicly_queryable ? '%1$s draft updated. <a target="_blank" href="%2$s">Preview %3$s</a>' : '%1$s draft updated.' ),
-				$this->cpt->post_singular,
+			10 => sprintf(
+				( $pto->publicly_queryable ? '%1$s draft updated. <a target="_blank" href="%2$s">Preview %3$s</a>' : '%1$s draft updated.' ),
+				esc_html( $this->cpt->post_singular ),
 				esc_url( add_query_arg( 'preview', 'true', get_permalink( $post ) ) ),
-				$this->cpt->post_singular_low
+				esc_html( $this->cpt->post_singular_low )
 			),
 		);
 
@@ -1362,30 +1373,35 @@ class Extended_CPT_Admin {
 	public function bulk_post_updated_messages( array $messages, array $counts ) {
 
 		$messages[ $this->cpt->post_type ] = array(
-			'updated' => sprintf( self::n( '%2$s updated.', '%1$s %3$s updated.', $counts['updated'] ),
-				number_format_i18n( $counts['updated'] ),
-				$this->cpt->post_singular,
-				$this->cpt->post_plural_low
+			'updated' => sprintf(
+				self::n( '%2$s updated.', '%1$s %3$s updated.', $counts['updated'] ),
+				esc_html( number_format_i18n( $counts['updated'] ) ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( $this->cpt->post_plural_low )
 			),
-			'locked' => sprintf( self::n( '%2$s not updated, somebody is editing it.', '%1$s %3$s not updated, somebody is editing them.', $counts['locked'] ),
-				number_format_i18n( $counts['locked'] ),
-				$this->cpt->post_singular,
-				$this->cpt->post_plural_low
+			'locked' => sprintf(
+				self::n( '%2$s not updated, somebody is editing it.', '%1$s %3$s not updated, somebody is editing them.', $counts['locked'] ),
+				esc_html( number_format_i18n( $counts['locked'] ) ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( $this->cpt->post_plural_low )
 			),
-			'deleted' => sprintf( self::n( '%2$s permanently deleted.', '%1$s %3$s permanently deleted.', $counts['deleted'] ),
-				number_format_i18n( $counts['deleted'] ),
-				$this->cpt->post_singular,
-				$this->cpt->post_plural_low
+			'deleted' => sprintf(
+				self::n( '%2$s permanently deleted.', '%1$s %3$s permanently deleted.', $counts['deleted'] ),
+				esc_html( number_format_i18n( $counts['deleted'] ) ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( $this->cpt->post_plural_low )
 			),
-			'trashed' => sprintf( self::n( '%2$s moved to the trash.', '%1$s %3$s moved to the trash.', $counts['trashed'] ),
-				number_format_i18n( $counts['trashed'] ),
-				$this->cpt->post_singular,
-				$this->cpt->post_plural_low
+			'trashed' => sprintf(
+				self::n( '%2$s moved to the trash.', '%1$s %3$s moved to the trash.', $counts['trashed'] ),
+				esc_html( number_format_i18n( $counts['trashed'] ) ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( $this->cpt->post_plural_low )
 			),
-			'untrashed' => sprintf( self::n( '%2$s restored from the trash.', '%1$s %3$s restored from the trash.', $counts['untrashed'] ),
-				number_format_i18n( $counts['untrashed'] ),
-				$this->cpt->post_singular,
-				$this->cpt->post_plural_low
+			'untrashed' => sprintf(
+				self::n( '%2$s restored from the trash.', '%1$s %3$s restored from the trash.', $counts['untrashed'] ),
+				esc_html( number_format_i18n( $counts['untrashed'] ) ),
+				esc_html( $this->cpt->post_singular ),
+				esc_html( $this->cpt->post_plural_low )
 			),
 		);
 
@@ -1519,7 +1535,7 @@ class Extended_CPT_Admin {
 				$new_cols[ $col ] = $cols[ $col ];
 			} else if ( is_string( $col ) && isset( $cols[ $id ] ) ) {
 				# Existing (ie. built-in) column with id as the key and title as the value
-				$new_cols[ $id ] = $col;
+				$new_cols[ $id ] = esc_html( $col );
 			} else if ( 'author' === $col ) {
 				# Automatic support for Co-Authors Plus plugin and special case for
 				# displaying author column when the post type doesn't support 'author'
@@ -1528,7 +1544,7 @@ class Extended_CPT_Admin {
 				} else {
 					$k = 'author';
 				}
-				$new_cols[ $k ] = __( 'Author' );
+				$new_cols[ $k ] = esc_html__( 'Author' );
 			} else if ( is_array( $col ) ) {
 				if ( isset( $col['cap'] ) && ! current_user_can( $col['cap'] ) ) {
 					continue;
@@ -1539,7 +1555,7 @@ class Extended_CPT_Admin {
 				if ( ! isset( $col['title'] ) ) {
 					$col['title'] = $this->get_item_title( $col );
 				}
-				$new_cols[ $id ] = $col['title'];
+				$new_cols[ $id ] = esc_html( $col['title'] );
 			}
 		}
 
@@ -1727,7 +1743,7 @@ class Extended_CPT_Admin {
 			case 'post_date_gmt':
 			case 'post_modified':
 			case 'post_modified_gmt':
-				if ( '0000-00-00 00:00:00' != get_post_field( $field, $post ) ) {
+				if ( '0000-00-00 00:00:00' !== get_post_field( $field, $post ) ) {
 					echo esc_html( mysql2date( get_option( 'date_format' ), get_post_field( $field, $post ) ) );
 				}
 				break;
@@ -1783,7 +1799,11 @@ class Extended_CPT_Admin {
 		}
 
 		$image_atts = array(
-			'style' => sprintf( 'width:%1$s;height:%2$s', $width, $height ),
+			'style' => esc_attr( sprintf(
+				'width:%1$s;height:%2$s',
+				$width,
+				$height
+			) ),
 			'title' => '',
 		);
 
@@ -1850,7 +1870,7 @@ class Extended_CPT_Admin {
 			if ( $pso->protected && ! current_user_can( 'edit_post', $post->ID ) ) {
 				continue;
 			}
-			if ( 'trash' == $post->post_status ) {
+			if ( 'trash' === $post->post_status ) {
 				continue;
 			}
 
@@ -1924,7 +1944,7 @@ class Extended_CPT_Admin {
 	 */
 	public function remove_quick_edit_action( array $actions, WP_Post $post ) {
 
-		if ( $this->cpt->post_type != $post->post_type ) {
+		if ( $this->cpt->post_type !== $post->post_type ) {
 			return $actions;
 		}
 
@@ -1968,7 +1988,7 @@ class Extended_CPT_Admin {
 	 */
 	protected static function n( $single, $plural, $number ) {
 
-		return ( 1 == $number ) ? $single : $plural;
+		return ( 1 === intval( $number ) ) ? $single : $plural;
 
 	}
 
@@ -1999,7 +2019,7 @@ class Extended_CPT_Admin {
 		} else if ( isset( $item['connection'] ) ) {
 			if ( function_exists( 'p2p_type' ) && $this->p2p_connection_exists( $item['connection'] ) ) {
 				if ( $ctype = p2p_type( $item['connection'] ) ) {
-					$other = ( 'from' == $ctype->direction_from_types( 'post', $this->cpt->post_type ) ) ? 'to' : 'from';
+					$other = ( 'from' === $ctype->direction_from_types( 'post', $this->cpt->post_type ) ) ? 'to' : 'from';
 					return $ctype->side[ $other ]->get_title();
 				}
 			}
