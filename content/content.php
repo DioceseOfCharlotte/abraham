@@ -25,7 +25,7 @@
 
 		<div <?php hybrid_attr('entry-summary'); ?>>
 			<?php tha_entry_content_before(); ?>
-			<?php the_excerpt(); ?>
+			<?php the_content(); ?>
 			<?php tha_entry_content_after(); ?>
 		</div>
 
