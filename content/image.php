@@ -4,13 +4,16 @@
  *
  * @package abraham
  */
-if ( has_post_thumbnail() ) {
-$feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-$bg_image       = 'background-image: url('.$feat_image_url.')';
-}
 ?>
-<section <?php hybrid_attr('post'); ?> style="<?php echo $bg_image ?>">
-<div class="u-bg-tint-3 u-text-white u-px2 u-color-inherit">
+<section <?php hybrid_attr('post'); ?>>
+	<?php
+		get_the_image(array(
+			'size' => 'abe-card-md',
+			'link_to_post' => false,
+			'image_class' => 'u-br u-block u-1of1',
+		));
+	?>
+<div class="u-bg-tint-3 u-text-white u-px2 u-abs u-bottom0 u-left0 u-1of1 u-top0 u-color-inherit">
 		<header <?php hybrid_attr('entry-header'); ?>>
 			<h2 <?php hybrid_attr('entry-title'); ?>>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

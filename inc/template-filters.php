@@ -57,3 +57,9 @@ function meh_excerpt_more() {
 function meh_excerpt_length($length) {
 	return 40;
 }
+
+function abe_excerpt() {
+	$abe_excerpt = get_post_meta( get_the_ID(), 'doc_show_content', true );
+
+	return $abe_excerpt == 'content' ? the_content() : the_excerpt();
+}
