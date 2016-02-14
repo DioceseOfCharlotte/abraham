@@ -420,7 +420,7 @@ class Attr_Trumps {
 		$achive_width       = get_archive_post_width( $post->ID );
 		if (is_singular() && !is_front_page())
 			$_classes[]      = "{$this->args['post']}";
-		if (is_archive())
+		if (is_archive() || is_search())
 			$_classes[]      = "{$this->args['post_archive']}";
 		if ($achive_width)
 			$_classes[]      = "$achive_width";
