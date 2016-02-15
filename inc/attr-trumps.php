@@ -422,7 +422,7 @@ class Attr_Trumps {
 			$_classes[]      = "{$this->args['post']}";
 		if (is_archive() || is_search())
 			$_classes[]      = "{$this->args['post_archive']}";
-		if ($achive_width)
+		if ($achive_width && ! is_search())
 			$_classes[]      = "$achive_width";
 		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
 			$_classes[]      = "{$this->args['post_wide']}";

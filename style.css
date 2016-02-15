@@ -936,8 +936,16 @@ input[type="submit"]:active {
 .breadcrumbs a {
   color: inherit; }
 
-.trail-end span {
-  display: none; }
+body:not(.search) .trail-end > span,
+.search .archive-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 .animating {
   transition-duration: 0.3s;
