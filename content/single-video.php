@@ -3,7 +3,7 @@
 <article <?php hybrid_attr('post'); ?>>
 
 	<?php echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true ) ) ); ?>
-	
+
 	<?php tha_entry_top(); ?>
 
 		<div <?php hybrid_attr('entry-content'); ?>>
