@@ -1,4 +1,4 @@
-<?php if ( !is_singular( get_post_type() ) ) {
+<?php if ( !is_single( get_the_ID() ) ) {
 	return;
 } ?>
 <footer class="entry-footer">
