@@ -20,6 +20,8 @@ function abraham_setup() {
 	// https://github.com/justintadlock/get-the-image
 	add_theme_support('get-the-image');
 
+	//add_theme_support( 'cleaner-gallery' );
+
 	// http://themehybrid.com/docs/template-hierarchy
 	add_theme_support('hybrid-core-template-hierarchy');
 

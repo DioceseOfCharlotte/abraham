@@ -897,7 +897,8 @@ input[type="submit"]:active {
 .breadcrumbs a {
   color: inherit; }
 
- {
+
+.search .archive-title {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1850,3 +1851,5 @@ html {
     flex-wrap: wrap; }
   html .gv-widget-search {
     text-align: center; }
+  html .flickity-slider > .gallery-item {
+    width: 100%; }
