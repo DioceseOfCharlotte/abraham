@@ -647,7 +647,7 @@ textarea {
   color: #36474f;
   vertical-align: middle;
   border: 1px solid #b7c6cd;
-  padding: 8px;
+  padding: 0 8px;
   margin-bottom: 16px;
   border-radius: 2px;
   transition-duration: 0.3s;
@@ -1516,6 +1516,10 @@ html {
   position: fixed; }
   html .u-static-md{
   position: static; }
+  html .u-left-md{
+  float: left; }
+  html .u-right-md{
+  float: right; }
   html .shadow-hover:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36); }
   html .u-m1 {

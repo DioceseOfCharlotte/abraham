@@ -679,7 +679,7 @@ textarea {
   color: #36474f;
   vertical-align: middle;
   border: 1px solid rgba(183, 198, 205, 0.9);
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   margin-bottom: 1rem;
   border-radius: 2px;
   transition-duration: 0.3s;
@@ -1652,7 +1652,11 @@ html {
     html .u-fixed-md {
       position: fixed; }
     html .u-static-md {
-      position: static; } }
+      position: static; }
+    html .u-left-md {
+      float: left; }
+    html .u-right-md {
+      float: right; } }
   html .shadow-hover:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36); }
   html .u-m1 {
@@ -1709,6 +1713,12 @@ html {
     margin-left: 3rem; }
   html .u-mtn1 {
     margin-top: -0.5rem; }
+  html .u-mbn1 {
+    margin-bottom: -0.5rem; }
+  html .u-mln1 {
+    margin-left: -0.5rem; }
+  html .u-mrn1 {
+    margin-right: -0.5rem; }
   html .u-mxn1 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }

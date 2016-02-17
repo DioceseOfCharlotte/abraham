@@ -133,6 +133,7 @@ function abraham_image_sizes() {
 	add_image_size('abe-hd', 1200, 675, true);
 	add_image_size('abe-hd-half', 1200, 338, true);
 	add_image_size('abe-card-md', 660, 371, true);
+	add_image_size('abe-card-square', 300, 300, true);
 	add_image_size('abe-card', 330, 186, true);
 	add_image_size('abe-icon', 60, 60, true);
 }
