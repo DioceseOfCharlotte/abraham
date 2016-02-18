@@ -30,25 +30,6 @@ function abraham_customize_register($wp_customize) {
 	// Theme layouts
 	$wp_customize->get_setting('theme_layout')->transport = 'refresh';
 
-	$wp_customize->add_setting(
-	  'abraham_logo',
-	  array(
-		  'type'      => 'theme_mod', // or 'option'
-		  'default'   => '',
-		  'transport' => 'refresh', // or postMessage
-	  )
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'custom-logo',
-			array(
-				'section'     => 'title_tagline',
-				'settings'    => 'abraham_logo',
-				'label'       => esc_html__('Your Logo', 'abraham'),
-	) ) );
-
 	/* Add the primary color setting. */
 	$wp_customize->add_setting(
 		'primary_color',
