@@ -1,5 +1,10 @@
-
-
+<?php
+/**
+ * General fallback template for post archives.
+ *
+ * @package abraham
+ */
+?>
 <article <?php hybrid_attr('post'); ?>>
 
 	<?php tha_entry_top(); ?>
@@ -7,7 +12,10 @@
 		<header <?php hybrid_attr('entry-header'); ?>>
 			<?php
 				get_the_image(array(
-					'size' => 'abraham-lg',
+					'size' => 'abe-card-md',
+					'image_class' => 'u-br-t u-1of1',
+					'before'             => '<div class="card-img u-overflow-hidden">',
+					'after'              => '</div>',
 				));
 			?>
 			<h2 <?php hybrid_attr('entry-title'); ?>>
@@ -17,7 +25,7 @@
 
 		<div <?php hybrid_attr('entry-summary'); ?>>
 			<?php tha_entry_content_before(); ?>
-			<?php the_excerpt(); ?>
+			<?php abe_excerpt(); ?>
 			<?php tha_entry_content_after(); ?>
 		</div>
 

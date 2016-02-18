@@ -1,0 +1,27 @@
+
+
+
+.u-trans-curve {
+	transition-timing-function: $animation-curve-default;
+}
+
+.u-trans-time {
+	transition-duration: $transition-time;
+    transition-property: color;
+}
+
+.u-trans-color {
+	transition-property: color;
+}
+
+.u-trans-all {
+	transition-property: all;
+}
+
+.u-trans-opacity {
+	transition-property: opacity;
+}
+
+.u-trans-bg {
+	transition-property: background-color;
+}

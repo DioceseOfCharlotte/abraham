@@ -1,76 +1,7 @@
 <?php
-
 add_action( 'init', 'archive_width_taxonomy' );
+add_action( 'after_switch_theme', 'archive_width_defaults' );
 
-// Register Custom Taxonomy
-function archive_width_taxonomy() {
-
-	register_taxonomy( 'archive_post_width',
-		abe_non_hierarchy_cpts(),
-		array(
-		'public'       => true,
-		'hierarchical' => false,
-		'labels'       => array(
-			'name'          => _x( 'Width', 'post width' ),
-			'singular_name' => _x( 'Width', 'post width' ),
-		),
-		'query_var'         => true,
-		'show_admin_column' => true,
-		//'rewrite' => false,
-		'show_ui' => true,
-		//'_builtin' => true,
-		'show_in_nav_menus' => false,
-	) );
-}
-
-add_action( 'cmb2_admin_init', 'rcdoc_register_metabox' );
-/**
- * Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
- */
-function rcdoc_register_metabox() {
-	$prefix = 'doc_';
-
-	/**
-	 * Page Styles metabox.
-	 */
-	$rcdoc_color_meta = new_cmb2_box( array(
-		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Page Colors', 'cmb2' ),
-		'object_types'  => abe_hierarchy_cpts(),
-		'context'       => 'side',
-		'priority'      => 'high',
-		//'show_names' => false,
-	) );
-
-		$rcdoc_color_meta->add_field( array(
-			'name'       => __( 'Primary Color', 'cmb2' ),
-			'desc'       => __( 'Primary color used throughout the page.', 'cmb2' ),
-			'id'         => $prefix . 'page_primary_color',
-			'type'       => 'colorpicker',
-			'default'    => apply_filters('theme_mod_primary_color', ''),
-			'priority'   => 'high',
-			'attributes' => array(
-				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#34495e' ),
-				) ),
-			),
-		) );
-
-		$rcdoc_color_meta->add_field( array(
-			'name'       => __( 'Secondary Color', 'cmb2' ),
-			'desc'       => __( 'Secondary color used throughout the page.', 'cmb2' ),
-			'id'         => $prefix . 'page_secondary_color',
-			'type'       => 'colorpicker',
-			'default'    => apply_filters('theme_mod_secondary_color', ''),
-			'priority'   => 'high',
-			'attributes' => array(
-				'data-colorpicker' => json_encode( array(
-					'palettes' => array( '#2980b9', '#27ae60', '#f1c40f', '#e74c3c', '#16a085', '#34495e' ),
-				) ),
-			),
-		) );
-
-}
 
 function get_archive_post_width($post = null) {
 	if ( ! $post = get_post( $post ) )
@@ -83,4 +14,88 @@ function get_archive_post_width($post = null) {
 
 	$width = reset( $_width );
 		return $width->slug;
+}
+
+// Register Width Taxonomy
+function archive_width_taxonomy() {
+
+	register_extended_taxonomy( 'archive_post_width', abe_non_hierarchy_cpts(),
+	array(
+
+	    'meta_box' => false,
+		//'exclusive' => true,
+		'hierarchical' => false,
+		'show_in_nav_menus' => false,
+		// 'public'            => true,
+		// 'show_ui'           => true,
+
+		'capabilities' => array(
+			'manage_terms' => 'manage_options',
+			'edit_terms'   => 'manage_options',
+			'delete_terms' => 'manage_options',
+			'assign_terms' => 'edit_posts',
+		),
+	), array(
+
+	    # Override the base names used for labels:
+	    'singular' => 'Width',
+	    'plural'   => 'Width',
+	    'slug'     => 'width'
+
+	) );
+}
+
+// Set default widths
+if ( ! function_exists( 'archive_width_defaults' ) ) {
+
+	function archive_width_defaults() {
+		wp_insert_term(
+		'100%', // the term
+	    'archive_post_width', // the taxonomy
+	    array(
+	      'description'=> 'Full width',
+	      'slug' => 'u-1of1'
+			)
+		);
+		wp_insert_term(
+		'1/4',
+	    'archive_post_width',
+	    array(
+	      'description'=> '1/4 width',
+	      'slug' => 'u-1of4-md'
+			)
+		);
+		wp_insert_term(
+		'1/3',
+	    'archive_post_width',
+	    array(
+	      'description'=> '1/3 width',
+	      'slug' => 'u-1of3-md'
+			)
+		);
+		wp_insert_term(
+		'1/2',
+	    'archive_post_width',
+	    array(
+	      'description'=> '1/2 width',
+	      'slug' => 'u-1of2-md'
+			)
+		);
+		wp_insert_term(
+		'2/3',
+	    'archive_post_width',
+	    array(
+	      'description'=> '2/3 width',
+	      'slug' => 'u-2of3-md'
+			)
+		);
+		wp_insert_term(
+		'3/4',
+	    'archive_post_width',
+	    array(
+	      'description'=> '3/4 width',
+	      'slug' => 'u-3of4-md'
+			)
+		);
+	}
 }

@@ -211,11 +211,11 @@ function customizer_library_get_standard_fonts() {
 		),
 		'sans-serif' => array(
 			'label' => _x('Sans Serif', 'font style', 'textdomain'),
-			'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+			'stack' => '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif',
 		),
 		'monospace' => array(
 			'label' => _x('Monospaced', 'font style', 'textdomain'),
-			'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace',
+			'stack' => '"Roboto Mono","Source Code Pro",Menlo,Consolas,"Liberation Mono",monospace',
 		),
 	);
 }

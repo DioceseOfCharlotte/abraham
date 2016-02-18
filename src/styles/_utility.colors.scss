@@ -1,0 +1,274 @@
+/* #COLORS
+\*------------------*/
+/* Text Colors */
+.u-color-inherit,
+.u-color-inherit * {
+	color: inherit;
+}
+
+.u-currentcolor_a a {
+	color: currentColor;
+}
+
+.u-currentcolor {
+	color: currentColor;
+}
+
+.u-text-color {
+	color: $color-text;
+}
+
+.u-text-black {
+	color: $color-text-dark;
+}
+
+.u-text-grey {
+	color: $grey;
+}
+
+.u-text-silver {
+	color: $silver;
+}
+
+.u-text-white {
+	color: $white;
+}
+
+.u-text-muted {
+	color: $text-muted;
+}
+
+.u-text-1 {
+	color: $color1;
+}
+
+.u-text-2 {
+	color: $color2;
+}
+
+.u-text-3 {
+	color: $color3;
+}
+
+.u-text-1-dark {
+	color: darken($color1, 10);
+}
+
+.u-text-2-dark {
+	color: darken($color2, 10);
+}
+
+.u-text-3-dark {
+	color: darken($color3, 10);
+}
+
+/* Background Colors */
+.u-bg-1 {
+	background-color: $color1;
+}
+
+.u-bg-2 {
+	background-color: $color2;
+}
+
+.u-bg-3 {
+	background-color: $color3;
+}
+
+.u-bg-1-light {
+	background-color: lighten($color1, 10);
+}
+
+.u-bg-2-light {
+	background-color: lighten($color2, 10);
+}
+
+.u-bg-3-light {
+	background-color: lighten($color3, 10);
+}
+
+.u-bg-1-dark {
+	background-color: darken($color1, 10);
+}
+
+.u-bg-2-dark {
+	background-color: darken($color2, 10);
+}
+
+.u-bg-3-dark {
+	background-color: darken($color3, 10);
+}
+
+.u-bg-black {
+	background-color: $black;
+}
+
+.u-bg-grey {
+	background-color: $grey;
+}
+
+.u-bg-grey-dark {
+	background-color: $grey-700;
+	color: $white;
+}
+
+.u-bg-silver {
+	background-color: $silver;
+}
+
+.u-bg-white {
+	background-color: $white;
+}
+
+.u-bg-transparent {
+	background-color: transparent;
+}
+
+.u-bg-frost-1 {
+	background-color: $lighten1;
+}
+
+.u-bg-frost-2 {
+	background-color: $lighten2;
+}
+
+.u-bg-frost-3 {
+	background-color: $lighten3;
+}
+
+.u-bg-frost-4 {
+	background-color: $lighten4;
+}
+
+.u-bg-tint-1 {
+	background-color: $darken1;
+}
+
+.u-bg-tint-2 {
+	background-color: $darken2;
+}
+
+.u-bg-tint-3 {
+	background-color: $darken3;
+}
+
+.u-bg-tint-4 {
+	background-color: $darken4;
+}
+
+.u-bg-mask {
+	background-color: rgba($blue-grey-700, 0.85);
+}
+.u-bg-1-glass {
+	background-color: rgba($color1, 0.98);
+}
+
+.u-bg-2-glass {
+	background-color: rgba($color2, 0.98);
+}
+
+.u-bg-3-glass {
+	background-color: rgba($color3, 0.98);
+}
+
+.u-bg-1-glass-light {
+	background-color: rgba(lighten($color1, 10), 0.98);
+}
+
+.u-bg-2-glass-light {
+	background-color: rgba(lighten($color2, 10), 0.98);
+}
+
+.u-bg-3-glass-light {
+	background-color: rgba(lighten($color3, 10), 0.98);
+}
+
+.u-bg-1-glass-dark {
+	background-color: rgba(darken($color1, 10), 0.98);
+}
+
+.u-bg-2-glass-dark {
+	background-color: rgba(darken($color2, 10), 0.98);
+}
+
+.u-bg-3-glass-dark {
+	background-color: rgba(darken($color3, 10), 0.98);
+}
+
+.u-hover-frost-1:hover {
+	background-color: $lighten1;
+}
+
+.u-hover-frost-2:hover {
+	background-color: $lighten2;
+}
+
+.u-hover-frost-3:hover {
+	background-color: $lighten3;
+}
+
+.u-hover-frost-4:hover {
+	background-color: $lighten4;
+}
+
+.u-hover-tint-1:hover {
+	background-color: $darken1;
+}
+
+.u-hover-tint-2:hover {
+	background-color: $darken2;
+}
+
+.u-hover-tint-3:hover {
+	background-color: $darken3;
+}
+
+.u-hover-tint-4:hover {
+	background-color: $darken4;
+}
+
+/* Fill Colors */
+.u-fill-1 {
+	fill: $color1;
+}
+
+.u-fill-2 {
+	fill: $color2;
+}
+
+.u-fill-3 {
+	fill: $color3;
+}
+
+.u-fill-1-light {
+	background-color: lighten($color1, 10);
+}
+
+.u-fill-2-light {
+	background-color: lighten($color2, 10);
+}
+
+.u-fill-3-light {
+	background-color: lighten($color3, 10);
+}
+
+.u-fill-1-dark {
+	background-color: darken($color1, 10);
+}
+
+.u-fill-2-dark {
+	background-color: darken($color2, 10);
+}
+
+.u-fill-3-dark {
+	background-color: darken($color3, 10);
+}
+
+/* Opacity */
+.u-opacity {
+	opacity: $opacity;
+}
+
+.u-opacity1 {
+	opacity: 1;
+}

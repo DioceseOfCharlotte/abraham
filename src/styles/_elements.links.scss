@@ -1,0 +1,86 @@
+/* #LINKS
+\*------------------------------------*/
+
+a {
+	color: inherit;
+    text-decoration: none;
+	line-height: inherit;
+	cursor: pointer;
+	transition-duration: $transition-time;
+    transition-timing-function: $animation-curve-default;
+    transition-property: color;
+}
+
+a:not([class]) {
+	//opacity: .9;
+	font-weight: 500;
+}
+
+a:not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+  	  content: "";
+	  height: 1px;
+	  left: 0;
+	  bottom: 0;
+	  background: currentColor;
+	  opacity: .35;
+	  position: absolute;
+	  right: 0;
+	  transform: scaleX(.97) translateY(.055em);
+	  transition-duration: $transition-time;
+      transition-timing-function: $animation-curve-default;
+      transition-property: transform, opacity;
+  }
+
+	&:hover,
+	&:focus {
+		color: inherit;
+	  &:before {
+	      opacity: .95;
+	      transform: scaleX(.99);
+	  }
+	}
+
+	&:active {
+
+	  &:before {
+	      opacity: .2;
+	  }
+	}
+}
+
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    > a[href]:not(.btn) {
+		font-weight: inherit;
+        color: inherit;
+
+		&:before {
+			content: none;
+		}
+    }
+    > a[href]:not(.btn):hover {
+        //color: $color-text-light;
+    }
+}
+
+.site-title > a {
+	transition-property: opacity;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}

@@ -1,0 +1,45 @@
+.u-bg-cover {
+    background-size: cover;
+}
+
+.u-bg-contain {
+    background-size: contain;
+}
+
+.u-bg-center {
+    background-position: center;
+}
+
+.u-bg-top {
+    background-position: top;
+}
+
+.u-bg-right {
+    background-position: right;
+}
+
+.u-bg-bottom {
+    background-position: bottom;
+}
+
+.u-bg-left {
+    background-position: left;
+}
+
+.u-bg-fixed {
+    background-attachment: fixed;
+}
+
+.u-bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.u-tinted-image:before {
+    background-color: rgba($blue-grey-500, 0.6);
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

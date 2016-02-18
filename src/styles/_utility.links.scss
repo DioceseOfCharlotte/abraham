@@ -1,0 +1,32 @@
+.u-link-blend {
+    text-decoration: none;
+}
+
+.u-link {
+    color: $color-links;
+    position: relative;
+    display: inline-block;
+    font-size: inherit;
+    &:before {
+        content: "";
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: currentColor;
+        opacity: .35;
+        position: absolute;
+        right: 0;
+        transform: scaleX(.97) translateY(.055em);
+        transition-duration: $transition-time;
+        transition-timing-function: $animation-curve-default;
+        transition-property: transform, opacity;
+    }
+    &:hover,
+    &:active {
+        color: $color-links-hover;
+        &:before {
+  	      opacity: .95;
+  	      transform: scaleX(.99);
+  	  }
+    }
+}

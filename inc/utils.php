@@ -1,8 +1,6 @@
 <?php
+use Mexitek\PHPColors\Color;
 
-add_filter('hybrid_content_template_hierarchy', 'meh_template_hierarchy');
-add_filter('excerpt_more', 'meh_excerpt_more');
-add_filter('excerpt_length', 'meh_excerpt_length');
 add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
 add_shortcode( 'doc_logout', 'doc_logout_link' );
@@ -28,43 +26,16 @@ function abe_non_hierarchy_cpts($cpts = array()) {
 	return $cpts;
 }
 
-/**
- * Add templates to hybrid_get_content_template()
- */
-function meh_template_hierarchy($templates) {
-		$post_type = get_post_type();
-		$post_slug = get_the_slug();
-	if (is_search()) {
-		$templates = array_merge(array('content/search.php'), $templates);
-	} elseif (is_404()) {
-		$templates = array_merge(array('content/404.php'), $templates);
-	} elseif (is_singular()) {
-		$templates = array_merge(array("content/single.php"), $templates);
-		$templates = array_merge(array("content/{$post_type}-single.php"), $templates);
-		//$templates = array_merge(array("content/{$post_type}-{$post_slug}.php"), $templates);
-	}
-
-	return $templates;
-}
-
-/**
- * Clean up the_excerpt().
- */
-function meh_excerpt_more() {
-	return '<a class="u-absolute btn-readmore u-z1 u-right0 u-bottom0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
-}
-
-function meh_excerpt_length($length) {
-	return 40;
-}
 
 function meh_responsive_videos() {
+
+	/* Wrap the videos */
 	add_filter('wp_video_shortcode', 'meh_responsive_videos_embed_html');
-	add_filter('embed_oembed_html', 'meh_responsive_videos_embed_html');
 	add_filter('video_embed_html', 'meh_responsive_videos_embed_html');
 
-	/* Wrap videos in Buddypress */
-	add_filter('bp_embed_oembed_html', 'meh_responsive_videos_embed_html');
+	/* Only wrap oEmbeds if video */
+	add_filter('embed_oembed_html', 'meh_responsive_videos_maybe_wrap_oembed', 10, 2 );
+	add_filter('embed_handler_html', 'meh_responsive_videos_maybe_wrap_oembed', 10, 2 );
 }
 
 /**
@@ -77,8 +48,68 @@ function meh_responsive_videos_embed_html($html) {
 		return $html;
 	}
 
-	return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>'.$html.'</div>';
+	return '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div><div class="FlexEmbed-content">'.$html.'</div></div>';
 }
+
+/**
+ * Check if oEmbed is a `$video_patterns` provider video before wrapping.
+ *
+ * @return string
+ */
+function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
+	if ( empty( $html ) || ! is_string( $html ) || ! $url ) {
+		return $html;
+	}
+	$meh_video_wrapper = '<div class="FlexEmbed">';
+	$already_wrapped = strpos( $html, $meh_video_wrapper );
+	// If the oEmbed has already been wrapped, return the html.
+	if ( false !== $already_wrapped ) {
+		return $html;
+	}
+	/**
+	 * oEmbed Video Providers.
+	 *
+	 * A whitelist of oEmbed video provider Regex patterns to check against before wrapping the output.
+	 *
+	 * @module theme-tools
+	 *
+	 * @since 3.8.0
+	 *
+	 * @param array $video_patterns oEmbed video provider Regex patterns.
+	 */
+	$video_patterns = apply_filters( 'meh_responsive_videos_oembed_videos', array(
+		'https?://((m|www)\.)?youtube\.com/watch',
+		'https?://((m|www)\.)?youtube\.com/playlist',
+		'https?://youtu\.be/',
+		'https?://(.+\.)?vimeo\.com/',
+		'https?://(www\.)?dailymotion\.com/',
+		'https?://dai.ly/',
+		'https?://(www\.)?hulu\.com/watch/',
+		'https?://wordpress.tv/',
+		'https?://(www\.)?funnyordie\.com/videos/',
+		'https?://vine.co/v/',
+		'https?://(www\.)?collegehumor\.com/video/',
+		'https?://(www\.|embed\.)?ted\.com/talks/'
+	) );
+	// Merge patterns to run in a single preg_match call.
+	$video_patterns = '(' . implode( '|', $video_patterns ) . ')';
+	$is_video = preg_match( $video_patterns, $url );
+	// If the oEmbed is a video, wrap it in the responsive wrapper.
+	if ( false === $already_wrapped && 1 === $is_video ) {
+		return meh_responsive_videos_embed_html( $html );
+	}
+	return $html;
+}
+
+
+
+
+
+
+
+
+
+
 
 function doc_page_css_class($css_class, $page) {
 
@@ -103,15 +134,22 @@ function get_the_slug($id=null) {
 // Shortcode
 function doc_logout_link() {
 $logoutlink = wp_logout_url( home_url() );
-return '<a href="' . $logoutlink . '">Logout</a>';
+return '<a class="btn btn-small u-br u-mt2" href="' . $logoutlink . '">Logout</a>';
 }
 
 // Shortcode
 function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
-return '<a href="' . $passresetlink . '" title="Lost Password">Lost Password</a>';
+return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
 }
 
+function doc_hex_prime($doc_hex) {
+$doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+$primaryText = new Color($doc_hex);
+$textColor = $primaryText->isDark() ? "#ECEFF1" : "#36474f";
+
+return $textColor;
+}
 
 function doc_rgb_prime($alpha) {
 $doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );

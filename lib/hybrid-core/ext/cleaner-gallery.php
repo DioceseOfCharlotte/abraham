@@ -170,8 +170,8 @@ final class Cleaner_Gallery {
 
 		// Gallery attributes.
 		$gallery_attr  = sprintf( 'id="%s"', esc_attr( $this->args['id'] ) . '-' . esc_attr( $this->gallery_instance ) );
-		$gallery_attr .= sprintf( ' class="gallery gallery-%1$s gallery-col-%2$s gallery-columns-%2$s gallery-size-%3$s%4$s"', esc_attr( $this->args['id'] ), esc_attr( $this->args['columns'] ), sanitize_html_class( $this->args['size'] ), !empty( $this->args['type'] ) ? ' gallery-type-' . sanitize_html_class( $this->args['type'] ) : '' );
-		$gallery_attr .= sprintf( ' itemscope itemtype="%s"', esc_attr( $this->get_gallery_itemtype() ) );
+		$gallery_attr .= sprintf( ' class="gallery gallery-%1$s gallery-col-%2$s js-flickity gallery-columns-%2$s gallery-size-%3$s%4$s"', esc_attr( $this->args['id'] ), esc_attr( $this->args['columns'] ), sanitize_html_class( $this->args['size'] ), !empty( $this->args['type'] ) ? ' gallery-type-' . sanitize_html_class( $this->args['type'] ) : '' );
+		$gallery_attr .= sprintf( ' itemscope itemtype="%s" data-flickity-options=\'{ "wrapAround": true }\'', esc_attr( $this->get_gallery_itemtype() ) );
 
 		// Return out very nice, valid HTML gallery.
 		return "\n\t\t\t" . sprintf( '<div %s>', $gallery_attr ) . $output . "\n\t\t\t</div><!-- .gallery -->\n";

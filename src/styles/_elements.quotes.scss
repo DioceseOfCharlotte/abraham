@@ -1,0 +1,30 @@
+blockquote {
+	padding: $space1 $space2;
+    margin-bottom: $space2;
+    font-size    : $h4;
+    line-height  : 1.6;
+	text-align: center;
+
+    p {
+        // text-indent: -0.42em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+cite {
+    text-align: right;
+    width     : 100%;
+    display   : inline-block;
+}
+
+blockquote cite {
+    font-size  : $h6;
+    font-weight: normal;
+}
+
+.blockquote {
+    justify-content: center;
+}

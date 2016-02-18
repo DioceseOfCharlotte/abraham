@@ -1,0 +1,35 @@
+/* #TABLES
+\*------------------------------------*/
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th,
+td {
+  padding: $space1 0;
+  line-height: inherit;
+}
+
+th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom;
+  border-bottom: 1px solid;
+}
+
+td {
+  vertical-align: top;
+  border-bottom: 1px solid;
+}
+
+td>ul {
+    list-style: none;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}

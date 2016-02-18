@@ -1,0 +1,23 @@
+/* #GRID
+\*------------------------------------*/
+
+$cell-padding: .5 * $gutter;
+
+.o-grid {
+
+	// @include md {
+	// 	padding: $cell-padding;
+	// }
+
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: stretch;
+}
+
+.o-cell {
+	width: calc(310px - #{$gutter});
+	margin: 0 $cell-padding $cell-padding;
+	flex: 1 1 auto;
+}

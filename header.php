@@ -21,9 +21,13 @@
 
 		<header <?php hybrid_attr('header'); ?>>
 
+			<?php tha_header_top(); ?>
+
 			<?php get_template_part('components/site', 'branding'); ?>
 
-			<?php hybrid_get_menu('primary'); ?>
+
+
+			<?php tha_header_bottom(); ?>
 
 		</header>
 
