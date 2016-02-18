@@ -37,7 +37,7 @@ class Attr_Trumps {
 
 			// SITE HEADER
 			'header'              		   => 'u-fix u-bg-1-glass u-1of1 u-z2 u-flex u-flex-justify-between u-flex-center',
-			'branding'            		   => 'u-flex',
+			'branding'            		   => 'u-flex u-ml4-md',
 			'site_title'          		   => 'u-regular u-color-inherit u-m0',
 			'site_description'        	   => 'u-regular u-m0 u-text-3',
 			// CONTENT

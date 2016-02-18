@@ -1,34 +1,33 @@
 /* #PAGE
 \*------------------------------------*/
-
 html {
-	font-size: $base-font-size;
+    font-size: $base-font-size;
 
-	@include sm {
-		font-size: 15px;
-		line-height: 1.6;
-	}
+    @include sm {
+        font-size  : 15px;
+        line-height: 1.6;
+    }
 }
 
 body {
-	color: $color-text;
-	background-color: $base-background-color;
-	font-family: $sans-serif;
-	font-size: 1rem;
-	line-height: $base-line-height;
+    color           : $color-text;
+    background-color: $base-background-color;
+    font-family     : $sans-serif;
+    font-size       : 1rem;
+    line-height     : $base-line-height;
 }
 
 .site {
-    max-width: 100%;
-    width: 100%;
+    max-width : 100%;
+    width     : 100%;
     overflow-x: hidden;
 }
 
 hr {
-	display: block;
-	height: 1px;
-	margin: $space2 0;
-	padding: 0;
-	border: 0;
-	border-top: 1px solid $color-grey;
+    margin-top         : 1.5em;
+    margin-bottom      : 1.5em;
+    border             : 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $color-grey;
 }

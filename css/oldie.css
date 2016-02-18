@@ -35,9 +35,7 @@ html {
   color: #222;
   font-family: sans-serif;
   background-color: #fff;
-  cursor: default; }
-
-html {
+  cursor: default;
   -webkit-text-size-adjust: 100%;
   /* iOS 8+ */
   -ms-text-size-adjust: 100%; }
@@ -76,14 +74,13 @@ html {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+/* 1 */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   overflow: visible;
   /* Internet Explorer 11- */
-  cursor: pointer;
-  /* 3 */
   -webkit-appearance: button;
   /* 2 */ }
 
@@ -149,10 +146,6 @@ textarea {
 
 label {
   display: inline-block; }
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color; }
 
 /* specify the standard appearance of selects */
 select {
@@ -273,11 +266,17 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Roboto Mono', 'Source Code Pro', Menlo, Consolas, 'Liberation Mono', monospace;
   font-size: 1em; }
 
+code,
+samp {
+  font-size: 87.5%;
+  padding: .125em; }
+
 pre {
-  overflow: auto;
+  font-size: 87.5%;
+  overflow: scroll;
   /* Internet Explorer 11- */
   margin-bottom: 16px; }
 
@@ -297,10 +296,9 @@ caption {
 th {
   text-align: left; }
 
-/* specify the background color, font color, and drop shadow of text selections */
+/* specify the background color and drop shadow of text selections */
 
 ::selection {
-  color: #4c2b03;
   background-color: #b3d4fc;
   /* required when declaring ::selection */
   text-shadow: none; }
@@ -436,12 +434,12 @@ body {
   overflow-x: hidden; }
 
 hr {
-  display: block;
-  height: 1px;
-  margin: 16px 0;
-  padding: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border: 0;
-  border-top: 1px solid #9D9D9D; }
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #9D9D9D; }
 
 /* #TYPOGRAPHY
 \*------------------------------------*/
@@ -452,30 +450,32 @@ h4,
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
-  margin-bottom: 8px; }
+  margin-top: 1em;
+  margin-bottom: .5em; }
 
 h1 {
-  font-size: 40px; }
-
-h2 {
   font-size: 32px; }
 
-h3 {
+h2 {
   font-size: 24px; }
 
-h4 {
+h3 {
   font-size: 20px; }
 
-h5 {
+h4 {
   font-size: 16px; }
 
-h6 {
+h5 {
   font-size: 14px; }
 
-p {
-  margin-bottom: 16px; }
+h6 {
+  font-size: 12px; }
+
+p, dl, ol, ul, pre, blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 p:empty {
   margin: 0;
@@ -546,19 +546,56 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  color: inherit;
+  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
+  vertical-align: middle;
+  display: inline-block;
+  text-decoration: none;
   margin: 0;
+  height: auto;
+  min-height: 40px;
   cursor: pointer;
-  padding: 8px 16px;
-  border: 1px solid transparent; }
+  padding: .5em 1em;
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, border-color, box-shadow; }
+  .btn:hover,
+  .button:hover,
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.1); }
+  .btn:active, .btn.is-active,
+  .button:active,
+  .button.is-active,
+  button:active,
+  button.is-active,
+  input[type="button"]:active,
+  input[type="button"].is-active,
+  input[type="reset"]:active,
+  input[type="reset"].is-active,
+  input[type="submit"]:active,
+  input[type="submit"].is-active {
+    box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.3); }
+  .btn:focus,
+  .button:focus,
+  button:focus,
+  input[type="button"]:focus,
+  input[type="reset"]:focus,
+  input[type="submit"]:focus {
+    outline: none;
+    border-color: #111111; }
 
 /* #LISTS
 \*------------------------------------*/
 ul, ol, dl {
   line-height: 1.6;
-  margin-bottom: 16px;
   list-style-position: inside; }
 
 ol ol,
@@ -613,10 +650,11 @@ tr:last-child td {
 
 blockquote {
   padding: 8px 16px;
-  margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.6;
-  text-align: center; }
+  text-align: center;
+  font-style: italic;
+  margin-left: 0; }
   blockquote p:last-of-type {
     margin-bottom: 0; }
 
@@ -671,7 +709,7 @@ textarea {
 label {
   font-size: 14px;
   font-weight: 700;
-  padding-top: 16px;
+  display: block;
   margin-bottom: 8px; }
 
 select,
@@ -691,7 +729,7 @@ input[type=tel],
 input[type=time],
 input[type=url],
 input[type=week] {
-  height: 2.5em; }
+  height: 40px; }
 
 input[type=checkbox],
 input[type=radio] {
@@ -731,36 +769,6 @@ svg {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.btn,
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  display: inline-block;
-  color: inherit;
-  background-color: transparent;
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, background-color, border-color, box-shadow; }
-
-.btn:hover,
-.button:hover
-button:hover {
-  background-color: #111111;
-  filter: alpha(opacity=100); }
-
-.btn:focus,
-.button:focus,
-button:focus,
-.btn:active,
-.button:active,
-button:active {
-  box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.1);
-  border-color: #111111;
-  background-color: #111111;
-  outline: 0; }
-
 .btn-hollow, html .gv-search-clear,
 input[type="reset"],
 input[type="button"] {
@@ -1576,6 +1584,12 @@ html {
     margin-left: 48px; }
   html .u-mtn1 {
     margin-top: -8px; }
+  html .u-mbn1 {
+    margin-bottom: -8px; }
+  html .u-mln1 {
+    margin-left: -8px; }
+  html .u-mrn1 {
+    margin-right: -8px; }
   html .u-mxn1 {
     margin-right: -8px;
     margin-left: -8px; }

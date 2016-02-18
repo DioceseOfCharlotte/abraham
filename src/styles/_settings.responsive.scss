@@ -1,6 +1,7 @@
 ///* #SETTINGS-RESPONSIVE
 //\*------------------------------------*/
 $breakpoints: (
+    "xs"        "screen and (max-width: 34em)",
     "sm"        "screen and (max-width: 47em)",
     "md"        "screen and (min-width: 48em)",
     "lg"        "screen and (min-width: 62em)",
@@ -37,6 +38,12 @@ $breakpoints: (
     // If the user specifies a non-exitent alias, send them a warning.
     @if $breakpoint-found == false {
         @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+}
+
+@mixin xs {
+    @include media-query(xs) {
+        @content;
     }
 }
 

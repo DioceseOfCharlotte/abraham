@@ -5,6 +5,7 @@
 // 'use strict';
 
 var gulp = require('gulp');
+var cssfmt = require('gulp-cssfmt');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
@@ -22,15 +23,14 @@ var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
-	'ie_mob >= 10',
-	'last 2 ff versions',
-	'last 2 chrome versions',
-	'last 2 edge versions',
-	'last 2 safari versions',
-	'last 2 opera versions',
-	'ios >= 7',
-	'android >= 4.4',
-	'bb >= 10'
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
 ];
 
 var POSTCSS_PLUGINS = [
@@ -72,9 +72,7 @@ gulp.task('images', function () {
 		interlaced: true
 	})))
 	.pipe(gulp.dest('images'))
-	.pipe($.size({
-		title: 'images'
-	}))
+	.pipe($.size({title: 'images'}))
 });
 
 // Compile and Automatically Prefix Stylesheets (production)
@@ -88,12 +86,13 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest('.tmp'))
 		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
+		.pipe(cssfmt())
 		.pipe(gulp.dest('./'))
+		.pipe($.size({title: 'styles'}))
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
-		.pipe($.size({title: 'styles'}))
 		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./'))
 });
 
 gulp.task('oldie', function () {
@@ -106,7 +105,6 @@ gulp.task('oldie', function () {
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function () {
 	gulp.src(SOURCESJS)
-	.pipe($.sourcemaps.init())
 	.pipe(babel({
 		"presets": ["es2015"],
 		"only": [
@@ -114,25 +112,21 @@ gulp.task('scripts', function () {
 		]
 	}))
 	.pipe($.concat('abraham.js'))
-	.pipe($.sourcemaps.write())
 	.pipe(gulp.dest('js'))
-	.pipe($.concat('abraham.min.js'))
 	.pipe($.uglify())
-	.pipe($.size({title: 'scripts'}))
-	.pipe($.sourcemaps.write('.'))
+	.pipe($.concat('abraham.min.js'))
 	.pipe(gulp.dest('js'))
+	.pipe($.size({title: 'scripts'}))
 });
 
 // Concatenate And Minify JavaScript
 gulp.task('jq_scripts',  function () {
 	gulp.src(SOURCESJQ)
-	.pipe($.sourcemaps.init())
 	// .pipe($.babel())
 	.pipe($.concat('jq-main.js'))
 	.pipe(gulp.dest('js'))
 	.pipe($.uglify())
 	.pipe($.concat('jq-main.min.js'))
-	.pipe($.sourcemaps.write('.'))
 	.pipe(gulp.dest('js'))
 	.pipe($.size({title: 'jq_scripts'}))
 });

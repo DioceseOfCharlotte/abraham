@@ -2,40 +2,6 @@
 # Buttons
 --------------------------------------------------------------*/
 
-.btn,
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	display: inline-block;
-	color: inherit;
-	background-color: transparent;
-	transition-duration: $transition-time;
-	transition-timing-function: $animation-curve-default;
-	transition-property: color, background-color, border-color, box-shadow;
-}
-
-.btn:hover,
-.button:hover
-button:hover {
-    background-color: $darken1;
-    opacity: 1;
-}
-
-.btn:focus,
-.button:focus,
-button:focus,
-.btn:active,
-.button:active,
-button:active {
-    box-shadow: 0 0 0 1px $darken1;
-    border-color: $darken1;
-    background-color: $darken2;
-	outline: 0;
-}
-
-
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
@@ -92,9 +58,9 @@ input[type="submit"]:active {
 .btn-round {
 	border-radius: 50%;
 	overflow: hidden;
-	height: 40px;
-	min-width: 40px;
-	width: 40px;
+	height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
 	line-height: normal;
 	margin-left: 0;
     margin-right: 0;

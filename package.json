@@ -12,6 +12,7 @@
 		"gulp-babel": "^6.1.2",
 		"gulp-cache": "^0.4.2",
 		"gulp-concat": "^2.6.0",
+		"gulp-cssfmt": "^1.0.0",
 		"gulp-if": "^2.0.0",
 		"gulp-imagemin": "^2.4.0",
 		"gulp-load-plugins": "^1.2.0",
