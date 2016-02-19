@@ -40,6 +40,12 @@ function abraham_setup() {
 
 	add_theme_support( 'site-logo' );
 
+	// add_theme_support( 'featured-content', array(
+	//     'filter'     => 'abe_get_featured_posts',
+	//     'max_posts'  => 20,
+	//     'post_types' => array( 'post', 'page' ),
+	// ) );
+
   // Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
 }
