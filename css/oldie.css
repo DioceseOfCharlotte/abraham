@@ -554,6 +554,7 @@ input[type="submit"] {
   vertical-align: middle;
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   margin: 0;
   height: auto;
   min-height: 40px;
@@ -821,12 +822,12 @@ input[type="submit"]:active {
   border-radius: 50%;
   overflow: hidden;
   height: 40px;
-  min-width: 40px;
   width: 40px;
-  line-height: normal;
   margin-left: 0;
   margin-right: 0;
   padding: 0; }
+  .btn-round > i {
+    line-height: 38.4px; }
 
 .btn-small {
   padding: 4px 8px; }

@@ -59,12 +59,14 @@ input[type="submit"]:active {
 	border-radius: 50%;
 	overflow: hidden;
 	height: 2.5rem;
-    min-width: 2.5rem;
     width: 2.5rem;
-	line-height: normal;
 	margin-left: 0;
     margin-right: 0;
 	padding: 0;
+
+    > i {
+        line-height: 2.4rem;
+    }
 }
 
 .btn-small {

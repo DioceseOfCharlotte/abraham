@@ -730,6 +730,7 @@ input[type="submit"] {
 	vertical-align: middle;
 	display: inline-block;
 	text-decoration: none;
+	text-align: center;
 	margin: 0;
 	height: auto;
 	min-height: 2.5rem;
@@ -773,7 +774,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
 	outline: none;
-	border-color: rgba(17, 17, 17, 0.1);
+	border-color: rgba(17, 17, 17, 0.3);
 }
 
 /* #LISTS
@@ -1056,12 +1057,14 @@ input[type="submit"]:active {
 	border-radius: 50%;
 	overflow: hidden;
 	height: 2.5rem;
-	min-width: 2.5rem;
 	width: 2.5rem;
-	line-height: normal;
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
+}
+
+.btn-round > i {
+	line-height: 2.4rem;
 }
 
 .btn-small {
