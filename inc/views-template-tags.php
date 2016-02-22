@@ -38,12 +38,11 @@ function abe_do_svg( $icon='cog', $size='sm' ) { ?>
  */
 
  function doc_prime_style($alpha='1') {
-	 $style = 'style="';
 	 $style .= 'background-color:';
 	 $style .= doc_prime_rgb($alpha);
 	 $style .= ';color:';
 	 $style .= doc_prime_text();
-	 $style .= ';"';
+	 $style .= ';';
  	return $style;
  }
 
@@ -62,5 +61,32 @@ function doc_prime_rgb($alpha) {
 function doc_prime_text() {
 	$prime = new Color(doc_prime_hex());
 
-	return $prime->isDark() ? "#EEE":"#333";
+	return $prime->isDark() ? "#FFF":"#333";
+}
+
+function abe_second_style($alpha='1') {
+	$style .= 'background-color:';
+	$style .= abe_second_rgb($alpha);
+	$style .= ';color:';
+	$style .= abe_second_text();
+	$style .= ';';
+   return $style;
+}
+
+function abe_second_hex() {
+	$second = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
+	return $second ? $second : get_theme_mod('secondary_color', '');
+}
+
+function abe_second_rgb($alpha) {
+   $abe_hex = abe_second_hex();
+   $abe_rgb = implode( ',', hybrid_hex_to_rgb( $abe_hex ) );
+
+   return 'rgba('. $abe_rgb .','. $alpha .')';
+}
+
+function abe_second_text() {
+   $second = new Color(abe_second_hex());
+
+   return $second->isDark() ? "#FFF":"#333";
 }
