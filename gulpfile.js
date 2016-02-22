@@ -23,14 +23,15 @@ var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
+	'ie_mob >= 10',
+	'last 2 ff versions',
+	'last 2 chrome versions',
+	'last 2 edge versions',
+	'last 2 safari versions',
+	'last 2 opera versions',
+	'ios >= 7',
+	'android >= 4.4',
+	'bb >= 10'
 ];
 
 var POSTCSS_PLUGINS = [
@@ -67,10 +68,27 @@ gulp.task('lint', function () {
 // Optimize images
 gulp.task('images', function () {
 	gulp.src('src/images/**/*.{svg,png,jpg}')
-	.pipe($.cache($.imagemin({
+	.pipe($.imagemin({
 		progressive: true,
-		interlaced: true
-	})))
+		interlaced: true,
+		svgoPlugins: [{
+                cleanupIDs: false
+            }, {
+                removeTitle: true
+            }, {
+				addClassesToSVGElement: {
+					className: 'v-icon'
+				}
+			}, {
+                removeUselessStrokeAndFill: true
+            }, {
+                cleanupNumericValues: {
+                    floatPrecision: 2
+                }
+            }, {
+                removeDimensions: true
+            }]
+	}))
 	.pipe(gulp.dest('images'))
 	.pipe($.size({title: 'images'}))
 });

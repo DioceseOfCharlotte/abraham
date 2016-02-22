@@ -22,3 +22,12 @@ function abe_has_multiple_featured_posts() {
 function abe_get_featured_posts() {
 	return apply_filters( 'abe_get_featured_posts', false );
 }
+
+/**
+ * SVG
+ */
+function abe_do_svg( $icon='cog', $size='sm' ) { ?>
+<div class="icon-<?= $size ?>">
+	<?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?>
+</div>
+<?php }
