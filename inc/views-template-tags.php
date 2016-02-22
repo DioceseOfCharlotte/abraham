@@ -37,9 +37,8 @@ function abe_do_svg( $icon='cog', $size='sm' ) { ?>
  * Colors
  */
 
- function doc_prime_style($alpha) {
+ function doc_prime_style($alpha='1') {
 	 $style = 'style="';
-	 $alpha = $alpha ? $alpha : '1';
 	 $style .= 'background-color:';
 	 $style .= doc_prime_rgb($alpha);
 	 $style .= ';color:';
