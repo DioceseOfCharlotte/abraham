@@ -426,7 +426,7 @@ class Attr_Trumps {
 			$_classes[]      = "$achive_width";
 		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
 			$_classes[]      = "{$this->args['post_wide']}";
-		if (is_singular('gravityview'))
+		if (is_singular('gravityview') && 'edit' != gravityview_get_context())
 			$_classes[]      = "{$this->args['gv_post']}";
 
 		return array_map( 'esc_attr', array_unique( array_merge( $_classes, $classes ) ) );
@@ -559,7 +559,6 @@ class Attr_Trumps {
 			if (!$this->args['gv_entry']) {
 				return $attr;
 			}
-
 			$attr     .= " {$this->args['gv_entry']}";
 
 			return $attr;
