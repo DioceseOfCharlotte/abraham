@@ -150,7 +150,7 @@ final class Abraham_Custom_Styles {
 		/* === Color === */
 
 
-		$style .= "#page .u-bg-1#{$textBase};}";
+		$style .= "#page .u-bg-1{color:#{$textBase};}";
 		$style .= "#page .u-text-1{color:#{$color500}}";
 		$style .= "#page .u-bg-1{background-color:#{$color500}}";
 		$style .= "#page .u-bg-1-light{background-color:#{$color400};color:#{$textOnLight};}";
