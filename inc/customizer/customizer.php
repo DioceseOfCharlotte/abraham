@@ -10,12 +10,6 @@
 // }
 // add_action( 'customize_register', 'wpt_register_theme_customizer' );
 
-$includes_dir = trailingslashit(get_template_directory());
-
-require_once $includes_dir.'inc/customizer/Color.php';
-require_once $includes_dir.'inc/customizer/fonts.php';
-require_once $includes_dir.'inc/customizer/custom-styles.php';
-
 add_action('customize_register', 'abraham_customize_register', 11);
 add_action('customize_preview_init', 'abraham_customizer_js');
 add_action('wp_enqueue_scripts', 'abraham_google_fonts');

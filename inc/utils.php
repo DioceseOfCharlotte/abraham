@@ -1,5 +1,4 @@
 <?php
-use Mexitek\PHPColors\Color;
 
 add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
@@ -104,13 +103,6 @@ function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
 
 
 
-
-
-
-
-
-
-
 function doc_page_css_class($css_class, $page) {
 
 	if ( ! members_can_current_user_view_post( $page->ID ) )
@@ -141,19 +133,4 @@ return '<a class="btn btn-small u-br u-mt2" href="' . $logoutlink . '">Logout</a
 function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
 return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
-}
-
-function doc_hex_prime($doc_hex) {
-$doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
-$primaryText = new Color($doc_hex);
-$textColor = $primaryText->isDark() ? "#ECEFF1" : "#36474f";
-
-return $textColor;
-}
-
-function doc_rgb_prime($alpha) {
-$doc_hex = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
-$doc_rgb = implode( ',', hybrid_hex_to_rgb( $doc_hex ) );
-
-return 'rgba('. $doc_rgb .','. $alpha .')';
 }
