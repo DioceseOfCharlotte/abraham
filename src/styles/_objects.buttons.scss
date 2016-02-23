@@ -8,6 +8,7 @@ input[type="button"] {
     color: $color-links;
     border-color: $color-links;
 	border-radius: $base-radius;
+    background-color: $lighten3;
 }
 
 .btn-hollow:hover,
@@ -24,35 +25,11 @@ input[type="reset"]:focus,
 .btn-hollow:active,
 input[type="button"]:active,
 input[type="reset"]:active {
-	outline: 0;
+	outline: none;
 	color: #fff;
 	background-color: $color-links-hover;
     border-color: $color-links;
 	box-shadow: 0 0 0 1px rgba($color-links,0.25);
-}
-
-.btn1,
-input[type="submit"] {
-    color: #fff;
-    background-color: $color-links;
-	border-radius: $base-radius;
-}
-
-.btn1:hover,
-input[type="submit"]:hover {
-    color: #fff;
-	border-color: $color-links-hover;
-    background-color: $color-links-hover;
-}
-
-.btn1:focus,
-input[type="submit"]:focus,
-.btn1:active,
-input[type="submit"]:active {
-	outline: 0;
-	background-color: $color-links;
-    border-color: $color-links-hover;
-	box-shadow: 0 0 0 1px rgba($color-links-hover,0.25);
 }
 
 .btn-round {
@@ -70,5 +47,10 @@ input[type="submit"]:active {
 }
 
 .btn-small {
-	padding: .5 * $space1 .5 * $space2;
+	padding: .25rem .5rem;
+}
+
+.btn-big {
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
 }

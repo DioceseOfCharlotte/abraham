@@ -34,12 +34,34 @@
     background-repeat: no-repeat;
 }
 
+.u-frosted-image,
+.u-tinted-image {
+
+     > * {
+    position: relative;
+    }
+}
+
+.u-frosted-image:before,
 .u-tinted-image:before {
-    background-color: rgba($blue-grey-500, 0.6);
-    content: " ";
+    content: "";
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.u-frosted-image {
+    &:before {
+        background-color: rgba($blue-grey-50, 0.6);
+    }
+    color: $color-text-dark;
+}
+
+.u-tinted-image {
+    &:before {
+        background-color: rgba($blue-grey-500, 0.6);
+    }
+    color: $white;
 }

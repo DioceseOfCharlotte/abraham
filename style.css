@@ -1003,6 +1003,7 @@ input[type="button"] {
 	color: #003066;
 	border-color: #003066;
 	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-hollow:hover,
@@ -1022,35 +1023,11 @@ input[type="reset"]:focus,
 html .gv-search-clear:active,
 input[type="button"]:active,
 input[type="reset"]:active {
-	outline: 0;
+	outline: none;
 	color: #fff;
 	background-color: #004899;
 	border-color: #003066;
 	box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25);
-}
-
-.btn1,
-input[type="submit"] {
-	color: #fff;
-	background-color: #003066;
-	border-radius: 2px;
-}
-
-.btn1:hover,
-input[type="submit"]:hover {
-	color: #fff;
-	border-color: #004899;
-	background-color: #004899;
-}
-
-.btn1:focus,
-input[type="submit"]:focus,
-.btn1:active,
-input[type="submit"]:active {
-	outline: 0;
-	background-color: #003066;
-	border-color: #004899;
-	box-shadow: 0 0 0 1px rgba(0, 72, 153, 0.25);
 }
 
 .btn-round {
@@ -1068,7 +1045,12 @@ input[type="submit"]:active {
 }
 
 .btn-small {
-	padding: 0.25rem 0.5rem;
+	padding: .25rem .5rem;
+}
+
+.btn-big {
+	padding: 1rem 1.25rem;
+	font-size: 1.1rem;
 }
 
 /**
@@ -1586,14 +1568,35 @@ html .u-bg-no-repeat {
 	background-repeat: no-repeat;
 }
 
+html .u-frosted-image > *,
+html .u-tinted-image > * {
+	position: relative;
+}
+
+html .u-frosted-image:before,
 html .u-tinted-image:before {
-	background-color: rgba(96, 125, 139, 0.6);
-	content: " ";
+	content: "";
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
+}
+
+html .u-frosted-image {
+	color: #212c31;
+}
+
+html .u-frosted-image:before {
+	background-color: rgba(228, 234, 236, 0.6);
+}
+
+html .u-tinted-image {
+	color: #fff;
+}
+
+html .u-tinted-image:before {
+	background-color: rgba(96, 125, 139, 0.6);
 }
 
 html .u-h0 {
