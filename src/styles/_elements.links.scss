@@ -6,7 +6,7 @@ a:not(.btn) {
     text-decoration: none;
 	line-height: inherit;
 	cursor: pointer;
-	opacity: $opacity;
+	opacity: .9;
 	transition-duration: $transition-time;
     transition-timing-function: $animation-curve-default;
     transition-property: color, opacity;
@@ -16,7 +16,6 @@ a:not(.btn) {
 }
 
 a:not([class]) {
-	//opacity: .9;
 	font-weight: 500;
 }
 
@@ -28,7 +27,6 @@ a:not([class]):hover {
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
   position: relative;
   display: inline-block;
-  opacity: .9;
 
   &:before {
   	  content: "";

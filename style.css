@@ -618,7 +618,7 @@ a:not(.btn) {
 	text-decoration: none;
 	line-height: inherit;
 	cursor: pointer;
-	opacity: 0.75;
+	opacity: .9;
 	transition-duration: 0.3s;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-property: color, opacity;
@@ -642,7 +642,6 @@ a:not([class]):hover {
 .comment-content a:not([class]) {
 	position: relative;
 	display: inline-block;
-	opacity: .9;
 }
 
 .entry-content a:not([class]):before,
