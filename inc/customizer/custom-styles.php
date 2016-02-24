@@ -62,7 +62,7 @@ final class Abraham_Custom_Styles {
 		if ( $GLOBALS['cptarchives'] && $landing_prime_color && ! is_front_page() )
 			return trim( $landing_prime_color, '#' );
 
-		return $hex ? $hex : '004899';
+		return $hex ? $hex : '2980b9';
 	}
 
 	public function secondary_color_default($hex) {
@@ -78,7 +78,7 @@ final class Abraham_Custom_Styles {
 		if ( $GLOBALS['cptarchives'] && $landing_second_color && ! is_front_page() )
 			return trim( $landing_second_color, '#' );
 
-		return $hex ? $hex : 'ffe192';
+		return $hex ? $hex : '16a085';
 	}
 
 	/**

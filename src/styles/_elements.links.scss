@@ -1,14 +1,18 @@
 /* #LINKS
 \*------------------------------------*/
 
-a {
+a:not(.btn) {
 	color: inherit;
     text-decoration: none;
 	line-height: inherit;
 	cursor: pointer;
+	opacity: $opacity;
 	transition-duration: $transition-time;
     transition-timing-function: $animation-curve-default;
-    transition-property: color;
+    transition-property: color, opacity;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 a:not([class]) {
@@ -24,6 +28,7 @@ a:not([class]):hover {
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
   position: relative;
   display: inline-block;
+  opacity: .9;
 
   &:before {
   	  content: "";
@@ -31,7 +36,7 @@ a:not([class]):hover {
 	  left: 0;
 	  bottom: 0;
 	  background: currentColor;
-	  opacity: .35;
+	  opacity: .30;
 	  position: absolute;
 	  right: 0;
 	  transform: scaleX(.97) translateY(.055em);
@@ -43,6 +48,7 @@ a:not([class]):hover {
 	&:hover,
 	&:focus {
 		color: inherit;
+		opacity: 1;
 	  &:before {
 	      opacity: .95;
 	      transform: scaleX(.99);
@@ -78,6 +84,7 @@ h6 {
 }
 
 .site-title > a {
+	opacity: 1;
 	transition-property: opacity;
 
 	&:hover {

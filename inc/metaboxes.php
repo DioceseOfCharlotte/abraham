@@ -25,7 +25,7 @@ function abe_register_metaboxes() {
 		'default'    => apply_filters('theme_mod_primary_color', ''),
 		'attributes' => array(
 			'data-colorpicker' => json_encode( array(
-				'palettes' => array( '#34495E', '#3581ce', '#39CCCC', '#3bc391', '#FFC107', '#F44336' ),
+				'palettes' => array( '#34495E', '#2980b9', '#39CCCC', '#16a085', '#FFC107', '#F44336' ),
 			) ),
 		),
 	) );
@@ -38,7 +38,7 @@ function abe_register_metaboxes() {
 		'default'    => apply_filters('theme_mod_secondary_color', ''),
 		'attributes' => array(
 			'data-colorpicker' => json_encode( array(
-				'palettes' => array( '#34495E', '#3581ce', '#39CCCC', '#409B63', '#3bc391', '#F44336' ),
+				'palettes' => array( '#34495E', '#2980b9', '#39CCCC', '#16a085', '#FFC107', '#F44336' ),
 			) ),
 		),
 	) );

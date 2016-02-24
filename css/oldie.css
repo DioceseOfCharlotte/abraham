@@ -452,7 +452,6 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.25;
-  margin-top: 1em;
   margin-bottom: .5em; }
 
 h1 {
@@ -474,7 +473,6 @@ h6 {
   font-size: 12px; }
 
 p, dl, ol, ul, pre, blockquote {
-  margin-top: 1em;
   margin-bottom: 1em; }
 
 p:empty {
@@ -487,14 +485,17 @@ p:last-child {
 
 /* #LINKS
 \*------------------------------------*/
-a {
+ {
   color: inherit;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer;
+  filter: alpha(opacity=75);
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color; }
+  transition-property: color, opacity; }
+   {
+    filter: alpha(opacity=100); }
 
  {
   font-weight: 500; }
@@ -505,14 +506,15 @@ a {
 
  {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  filter: alpha(opacity=90); }
    {
     content: "";
     height: 1px;
     left: 0;
     bottom: 0;
     background: currentColor;
-    filter: alpha(opacity=35);
+    filter: alpha(opacity=30);
     position: absolute;
     right: 0;
     -ms-transform: scaleX(0.97) translateY(0.055em);
@@ -521,7 +523,8 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: transform, opacity; }
    {
-    color: inherit; }
+    color: inherit;
+    filter: alpha(opacity=100); }
      {
       filter: alpha(opacity=95);
       -ms-transform: scaleX(0.99);
@@ -536,6 +539,7 @@ a {
     content: none; }
 
 .site-title > a {
+  filter: alpha(opacity=100);
   transition-property: opacity; }
   .site-title > a:hover {
     filter: alpha(opacity=75); }
@@ -595,6 +599,9 @@ input[type="submit"] {
 
 /* #LISTS
 \*------------------------------------*/
+li {
+  margin-bottom: .5em; }
+
 ul, ol, dl {
   line-height: 1.6;
   list-style-position: inside; }
@@ -697,7 +704,7 @@ textarea {
   textarea:focus {
     outline: 0;
     background-color: #ffffff;
-    border-color: #3581ce; }
+    border-color: #2980b9; }
 
 legend {
   font-size: 20px;
@@ -773,8 +780,8 @@ svg {
 .btn-hollow, html .gv-search-clear,
 input[type="reset"],
 input[type="button"] {
-  color: #2968a7;
-  border-color: #2968a7;
+  color: #20638f;
+  border-color: #20638f;
   border-radius: 2px;
   background-color: #ffffff; }
 
@@ -782,8 +789,8 @@ input[type="button"] {
 input[type="reset"]:hover,
 input[type="button"]:hover {
   color: #fff;
-  background-color: #2968a7;
-  border-color: #2968a7; }
+  background-color: #20638f;
+  border-color: #20638f; }
 
 .btn-hollow:focus, html .gv-search-clear:focus,
 input[type="button"]:focus,
@@ -794,9 +801,9 @@ input[type="button"]:active,
 input[type="reset"]:active {
   outline: none;
   color: #fff;
-  background-color: #2968a7;
-  border-color: #2968a7;
-  box-shadow: 0 0 0 1px rgba(41, 104, 167, 0.25); }
+  background-color: #20638f;
+  border-color: #20638f;
+  box-shadow: 0 0 0 1px rgba(32, 99, 143, 0.25); }
 
 .btn-round {
   border-radius: 50%;
@@ -814,7 +821,8 @@ input[type="reset"]:active {
 
 .btn-big {
   padding: 16px 20px;
-  font-size: 17.6px; }
+  font-size: 17.6px;
+  font-weight: 700; }
 
 /**
  * Flexible media embeds
@@ -999,33 +1007,33 @@ html {
   html .u-text-muted {
     color: #36474f; }
   html .u-text-1 {
-    color: #3581ce; }
+    color: #2980b9; }
   html .u-text-2 {
-    color: #3BC391; }
+    color: #16a085; }
   html .u-text-3 {
     color: #ffd870; }
   html .u-text-1-dark {
-    color: #1f4e7e; }
+    color: #164666; }
   html .u-text-2-dark {
-    color: #237557; }
+    color: #0a463a; }
   html .u-text-3-dark {
     color: #ffca3d; }
   html .u-bg-1 {
-    background-color: #3581ce; }
+    background-color: #2980b9; }
   html .u-bg-2 {
-    background-color: #3BC391; }
+    background-color: #16a085; }
   html .u-bg-3 {
     background-color: #ffd870; }
   html .u-bg-1-light {
-    background-color: #5e9bd8; }
+    background-color: #409ad5; }
   html .u-bg-2-light {
-    background-color: #62cfa7; }
+    background-color: #1ccdaa; }
   html .u-bg-3-light {
     background-color: #ffe6a3; }
   html .u-bg-1-dark {
-    background-color: #2968a7; }
+    background-color: #20638f; }
   html .u-bg-2-dark {
-    background-color: #2f9c74; }
+    background-color: #107360; }
   html .u-bg-3-dark {
     background-color: #ffca3d; }
   html .u-bg-black {
@@ -1060,21 +1068,21 @@ html {
   html .u-bg-mask {
     background-color: #36474f; }
   html .u-bg-1-glass {
-    background-color: #3581ce; }
+    background-color: #2980b9; }
   html .u-bg-2-glass {
-    background-color: #3bc391; }
+    background-color: #16a085; }
   html .u-bg-3-glass {
     background-color: #ffd870; }
   html .u-bg-1-glass-light {
-    background-color: #5e9bd8; }
+    background-color: #409ad5; }
   html .u-bg-2-glass-light {
-    background-color: #62cfa7; }
+    background-color: #1ccdaa; }
   html .u-bg-3-glass-light {
     background-color: #ffe6a3; }
   html .u-bg-1-glass-dark {
-    background-color: #2968a7; }
+    background-color: #20638f; }
   html .u-bg-2-glass-dark {
-    background-color: #2f9c74; }
+    background-color: #107360; }
   html .u-bg-3-glass-dark {
     background-color: #ffca3d; }
   html .u-hover-frost-1:hover {
@@ -1094,21 +1102,21 @@ html {
   html .u-hover-tint-4:hover {
     background-color: #111111; }
   html .u-fill-1 {
-    fill: #3581ce; }
+    fill: #2980b9; }
   html .u-fill-2 {
-    fill: #3BC391; }
+    fill: #16a085; }
   html .u-fill-3 {
     fill: #ffd870; }
   html .u-fill-1-light {
-    background-color: #5e9bd8; }
+    background-color: #409ad5; }
   html .u-fill-2-light {
-    background-color: #62cfa7; }
+    background-color: #1ccdaa; }
   html .u-fill-3-light {
     background-color: #ffe6a3; }
   html .u-fill-1-dark {
-    background-color: #2968a7; }
+    background-color: #20638f; }
   html .u-fill-2-dark {
-    background-color: #2f9c74; }
+    background-color: #107360; }
   html .u-fill-3-dark {
     background-color: #ffca3d; }
   html .u-opacity {
@@ -1182,7 +1190,7 @@ html {
   html .u-link-blend {
     text-decoration: none; }
   html .u-link {
-    color: #2968a7;
+    color: #20638f;
     position: relative;
     display: inline-block;
     font-size: inherit; }
@@ -1201,7 +1209,7 @@ html {
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-property: transform, opacity; }
     html .u-link:hover, html .u-link:active {
-      color: #3581ce; }
+      color: #2980b9; }
       html .u-link:hover:before, html .u-link:active:before {
         filter: alpha(opacity=95);
         -ms-transform: scaleX(0.99);
