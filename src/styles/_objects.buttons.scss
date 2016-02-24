@@ -5,8 +5,8 @@
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
-    color: $color-links;
-    border-color: $color-links;
+    color: $color1-dark;
+    border-color: $color1-dark;
 	border-radius: $base-radius;
     background-color: $lighten3;
 }
@@ -15,8 +15,8 @@ input[type="button"] {
 input[type="reset"]:hover,
 input[type="button"]:hover {
     color: #fff;
-    background-color: $color-links-hover;
-    border-color: $color-links-hover;
+    background-color: $color1-dark;
+    border-color: $color1-dark;
 }
 
 .btn-hollow:focus,
@@ -27,9 +27,9 @@ input[type="button"]:active,
 input[type="reset"]:active {
 	outline: none;
 	color: #fff;
-	background-color: $color-links-hover;
-    border-color: $color-links;
-	box-shadow: 0 0 0 1px rgba($color-links,0.25);
+	background-color: $color1-dark;
+    border-color: $color1-dark;
+	box-shadow: 0 0 0 1px rgba($color1-dark,0.25);
 }
 
 .btn-round {
@@ -53,4 +53,5 @@ input[type="reset"]:active {
 .btn-big {
   padding: 1rem 1.25rem;
   font-size: 1.1rem;
+  font-weight: $bold;
 }

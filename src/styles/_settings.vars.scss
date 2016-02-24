@@ -12,6 +12,7 @@ $sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica
 $container: 74em;
 $container-wide: 84em;
 
+$bold: 700;
 $jumbo: 3rem;
 $h1: 2.5rem;
 $h2: 2rem;
@@ -21,15 +22,15 @@ $h5: 1rem;
 $h6: .875rem;
 $heading-line-height: 1.25;
 $heading-font-family: $sans-serif;
-$heading-font-weight: 700;
+$heading-font-weight: $bold;
 
 /*--------------------------------------------------------------
 # Colors
 --------------------------------------------------------------*/
-$color1: #004899;
+$color1: #3581ce;
 $color1-light: lighten($color1, 10);
 $color1-dark: darken($color1, 10);
-$color2: $olive;
+$color2: #3BC391;
 $color2-light: lighten($color2, 10);
 $color2-dark: darken($color2, 10);
 $color3: #ffd870;
@@ -50,7 +51,7 @@ $darken4: rgba($black,0.9);
 $lighten1: rgba($white,0.1);
 $lighten2: rgba($white,0.3);
 $lighten3: rgba($white,0.5);
-$lighten4: rgba($white,0.99);
+$lighten4: rgba($white,0.95);
 
 $color-text: $blue-grey-700;
 $color-text-light: rgba($color-text, .7);

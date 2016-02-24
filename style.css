@@ -905,7 +905,7 @@ select:focus,
 textarea:focus {
 	outline: 0;
 	background-color: rgba(255, 255, 255, 0.95);
-	border-color: #004899;
+	border-color: #3581ce;
 }
 
 legend {
@@ -1000,8 +1000,8 @@ svg {
 html .gv-search-clear,
 input[type="reset"],
 input[type="button"] {
-	color: #003066;
-	border-color: #003066;
+	color: #2968a7;
+	border-color: #2968a7;
 	border-radius: 2px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
@@ -1011,8 +1011,8 @@ html .gv-search-clear:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
 	color: #fff;
-	background-color: #004899;
-	border-color: #004899;
+	background-color: #2968a7;
+	border-color: #2968a7;
 }
 
 .btn-hollow:focus,
@@ -1025,9 +1025,9 @@ input[type="button"]:active,
 input[type="reset"]:active {
 	outline: none;
 	color: #fff;
-	background-color: #004899;
-	border-color: #003066;
-	box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25);
+	background-color: #2968a7;
+	border-color: #2968a7;
+	box-shadow: 0 0 0 1px rgba(41, 104, 167, 0.25);
 }
 
 .btn-round {
@@ -1051,6 +1051,7 @@ input[type="reset"]:active {
 .btn-big {
 	padding: 1rem 1.25rem;
 	font-size: 1.1rem;
+	font-weight: 700;
 }
 
 /**
@@ -1300,11 +1301,11 @@ html .u-text-muted {
 }
 
 html .u-text-1 {
-	color: #004899;
+	color: #3581ce;
 }
 
 html .u-text-2 {
-	color: #3d9970;
+	color: #3bc391;
 }
 
 html .u-text-3 {
@@ -1312,11 +1313,11 @@ html .u-text-3 {
 }
 
 html .u-text-1-dark {
-	color: #003066;
+	color: #1f4e7e;
 }
 
 html .u-text-2-dark {
-	color: #2e7555;
+	color: #237557;
 }
 
 html .u-text-3-dark {
@@ -1324,11 +1325,11 @@ html .u-text-3-dark {
 }
 
 html .u-bg-1 {
-	background-color: #004899;
+	background-color: #3581ce;
 }
 
 html .u-bg-2 {
-	background-color: #3d9970;
+	background-color: #3bc391;
 }
 
 html .u-bg-3 {
@@ -1336,11 +1337,11 @@ html .u-bg-3 {
 }
 
 html .u-bg-1-light {
-	background-color: #0060cc;
+	background-color: #5e9bd8;
 }
 
 html .u-bg-2-light {
-	background-color: #50b98a;
+	background-color: #62cfa7;
 }
 
 html .u-bg-3-light {
@@ -1348,11 +1349,11 @@ html .u-bg-3-light {
 }
 
 html .u-bg-1-dark {
-	background-color: #003066;
+	background-color: #2968a7;
 }
 
 html .u-bg-2-dark {
-	background-color: #2e7555;
+	background-color: #2f9c74;
 }
 
 html .u-bg-3-dark {
@@ -1397,7 +1398,7 @@ html .u-bg-frost-3 {
 }
 
 html .u-bg-frost-4 {
-	background-color: rgba(255, 255, 255, 0.99);
+	background-color: rgba(255, 255, 255, 0.95);
 }
 
 html .u-bg-tint-1 {
@@ -1421,11 +1422,11 @@ html .u-bg-mask {
 }
 
 html .u-bg-1-glass {
-	background-color: rgba(0, 72, 153, 0.98);
+	background-color: rgba(53, 129, 206, 0.98);
 }
 
 html .u-bg-2-glass {
-	background-color: rgba(61, 153, 112, 0.98);
+	background-color: rgba(59, 195, 145, 0.98);
 }
 
 html .u-bg-3-glass {
@@ -1433,11 +1434,11 @@ html .u-bg-3-glass {
 }
 
 html .u-bg-1-glass-light {
-	background-color: rgba(0, 96, 204, 0.98);
+	background-color: rgba(94, 155, 216, 0.98);
 }
 
 html .u-bg-2-glass-light {
-	background-color: rgba(80, 185, 138, 0.98);
+	background-color: rgba(98, 207, 167, 0.98);
 }
 
 html .u-bg-3-glass-light {
@@ -1445,11 +1446,11 @@ html .u-bg-3-glass-light {
 }
 
 html .u-bg-1-glass-dark {
-	background-color: rgba(0, 48, 102, 0.98);
+	background-color: rgba(41, 104, 167, 0.98);
 }
 
 html .u-bg-2-glass-dark {
-	background-color: rgba(46, 117, 85, 0.98);
+	background-color: rgba(47, 156, 116, 0.98);
 }
 
 html .u-bg-3-glass-dark {
@@ -1469,7 +1470,7 @@ html .u-hover-frost-3:hover {
 }
 
 html .u-hover-frost-4:hover {
-	background-color: rgba(255, 255, 255, 0.99);
+	background-color: rgba(255, 255, 255, 0.95);
 }
 
 html .u-hover-tint-1:hover {
@@ -1489,11 +1490,11 @@ html .u-hover-tint-4:hover {
 }
 
 html .u-fill-1 {
-	fill: #004899;
+	fill: #3581ce;
 }
 
 html .u-fill-2 {
-	fill: #3d9970;
+	fill: #3bc391;
 }
 
 html .u-fill-3 {
@@ -1501,11 +1502,11 @@ html .u-fill-3 {
 }
 
 html .u-fill-1-light {
-	background-color: #0060cc;
+	background-color: #5e9bd8;
 }
 
 html .u-fill-2-light {
-	background-color: #50b98a;
+	background-color: #62cfa7;
 }
 
 html .u-fill-3-light {
@@ -1513,11 +1514,11 @@ html .u-fill-3-light {
 }
 
 html .u-fill-1-dark {
-	background-color: #003066;
+	background-color: #2968a7;
 }
 
 html .u-fill-2-dark {
-	background-color: #2e7555;
+	background-color: #2f9c74;
 }
 
 html .u-fill-3-dark {
@@ -1673,7 +1674,7 @@ html .u-link-blend {
 }
 
 html .u-link {
-	color: #003066;
+	color: #2968a7;
 	position: relative;
 	display: inline-block;
 	font-size: inherit;
@@ -1699,7 +1700,7 @@ html .u-link:before {
 
 html .u-link:hover,
 html .u-link:active {
-	color: #004899;
+	color: #3581ce;
 }
 
 html .u-link:hover:before,

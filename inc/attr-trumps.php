@@ -27,7 +27,7 @@ class Attr_Trumps {
 
 		$defaults = array(
 			'body'                   	  => '',
-			'site_container'         	  => 'u-bg-frost-2 u-flex u-flex-column',
+			'site_container'         	  => 'u-bg-frost-2',
 			'layout'                 	  => '',
 			'layout_wide'            	  => '',
 			'grid'                   	  => 'o-grid u-container  u-rel',
@@ -36,7 +36,7 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER
-			'header'              		   => 'u-fix u-bg-1-glass u-1of1 u-z2 u-flex u-flex-justify-between u-flex-center',
+			'header'              		   => 'u-abs is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-justify-between u-flex-center',
 			'branding'            		   => 'u-flex u-ml4-md',
 			'site_title'          		   => 'u-regular u-color-inherit u-m0',
 			'site_description'        	   => 'u-regular u-m0 u-text-3',

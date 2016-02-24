@@ -697,7 +697,7 @@ textarea {
   textarea:focus {
     outline: 0;
     background-color: #ffffff;
-    border-color: #004899; }
+    border-color: #3581ce; }
 
 legend {
   font-size: 20px;
@@ -773,8 +773,8 @@ svg {
 .btn-hollow, html .gv-search-clear,
 input[type="reset"],
 input[type="button"] {
-  color: #003066;
-  border-color: #003066;
+  color: #2968a7;
+  border-color: #2968a7;
   border-radius: 2px;
   background-color: #ffffff; }
 
@@ -782,8 +782,8 @@ input[type="button"] {
 input[type="reset"]:hover,
 input[type="button"]:hover {
   color: #fff;
-  background-color: #004899;
-  border-color: #004899; }
+  background-color: #2968a7;
+  border-color: #2968a7; }
 
 .btn-hollow:focus, html .gv-search-clear:focus,
 input[type="button"]:focus,
@@ -794,9 +794,9 @@ input[type="button"]:active,
 input[type="reset"]:active {
   outline: none;
   color: #fff;
-  background-color: #004899;
-  border-color: #003066;
-  box-shadow: 0 0 0 1px rgba(0, 48, 102, 0.25); }
+  background-color: #2968a7;
+  border-color: #2968a7;
+  box-shadow: 0 0 0 1px rgba(41, 104, 167, 0.25); }
 
 .btn-round {
   border-radius: 50%;
@@ -999,33 +999,33 @@ html {
   html .u-text-muted {
     color: #36474f; }
   html .u-text-1 {
-    color: #004899; }
+    color: #3581ce; }
   html .u-text-2 {
-    color: #3d9970; }
+    color: #3BC391; }
   html .u-text-3 {
     color: #ffd870; }
   html .u-text-1-dark {
-    color: #003066; }
+    color: #1f4e7e; }
   html .u-text-2-dark {
-    color: #2e7555; }
+    color: #237557; }
   html .u-text-3-dark {
     color: #ffca3d; }
   html .u-bg-1 {
-    background-color: #004899; }
+    background-color: #3581ce; }
   html .u-bg-2 {
-    background-color: #3d9970; }
+    background-color: #3BC391; }
   html .u-bg-3 {
     background-color: #ffd870; }
   html .u-bg-1-light {
-    background-color: #0060cc; }
+    background-color: #5e9bd8; }
   html .u-bg-2-light {
-    background-color: #50b98a; }
+    background-color: #62cfa7; }
   html .u-bg-3-light {
     background-color: #ffe6a3; }
   html .u-bg-1-dark {
-    background-color: #003066; }
+    background-color: #2968a7; }
   html .u-bg-2-dark {
-    background-color: #2e7555; }
+    background-color: #2f9c74; }
   html .u-bg-3-dark {
     background-color: #ffca3d; }
   html .u-bg-black {
@@ -1060,21 +1060,21 @@ html {
   html .u-bg-mask {
     background-color: #36474f; }
   html .u-bg-1-glass {
-    background-color: #004899; }
+    background-color: #3581ce; }
   html .u-bg-2-glass {
-    background-color: #3d9970; }
+    background-color: #3bc391; }
   html .u-bg-3-glass {
     background-color: #ffd870; }
   html .u-bg-1-glass-light {
-    background-color: #0060cc; }
+    background-color: #5e9bd8; }
   html .u-bg-2-glass-light {
-    background-color: #50b98a; }
+    background-color: #62cfa7; }
   html .u-bg-3-glass-light {
     background-color: #ffe6a3; }
   html .u-bg-1-glass-dark {
-    background-color: #003066; }
+    background-color: #2968a7; }
   html .u-bg-2-glass-dark {
-    background-color: #2e7555; }
+    background-color: #2f9c74; }
   html .u-bg-3-glass-dark {
     background-color: #ffca3d; }
   html .u-hover-frost-1:hover {
@@ -1094,21 +1094,21 @@ html {
   html .u-hover-tint-4:hover {
     background-color: #111111; }
   html .u-fill-1 {
-    fill: #004899; }
+    fill: #3581ce; }
   html .u-fill-2 {
-    fill: #3d9970; }
+    fill: #3BC391; }
   html .u-fill-3 {
     fill: #ffd870; }
   html .u-fill-1-light {
-    background-color: #0060cc; }
+    background-color: #5e9bd8; }
   html .u-fill-2-light {
-    background-color: #50b98a; }
+    background-color: #62cfa7; }
   html .u-fill-3-light {
     background-color: #ffe6a3; }
   html .u-fill-1-dark {
-    background-color: #003066; }
+    background-color: #2968a7; }
   html .u-fill-2-dark {
-    background-color: #2e7555; }
+    background-color: #2f9c74; }
   html .u-fill-3-dark {
     background-color: #ffca3d; }
   html .u-opacity {
@@ -1182,7 +1182,7 @@ html {
   html .u-link-blend {
     text-decoration: none; }
   html .u-link {
-    color: #003066;
+    color: #2968a7;
     position: relative;
     display: inline-block;
     font-size: inherit; }
@@ -1201,7 +1201,7 @@ html {
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-property: transform, opacity; }
     html .u-link:hover, html .u-link:active {
-      color: #004899; }
+      color: #3581ce; }
       html .u-link:hover:before, html .u-link:active:before {
         filter: alpha(opacity=95);
         -ms-transform: scaleX(0.99);

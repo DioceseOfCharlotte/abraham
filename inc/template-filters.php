@@ -34,12 +34,12 @@ function abe_head_meta() {
 	$p_color = get_theme_mod('primary_color', '');
 	$hex = '#' .$p_color;
 
-	$output ='<meta http-equiv="x-ua-compatible" content="ie=edge">
+	$output ='<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="msapplication-TileColor" content="' . $hex . '">
-<meta name="theme-color" content="' . $hex . '">';
+<meta id="theme-color" name="theme-color" content="' . $hex . '">';
 
 	echo $output;
 }
