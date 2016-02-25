@@ -490,7 +490,7 @@ p:last-child {
   text-decoration: none;
   line-height: inherit;
   cursor: pointer;
-  filter: alpha(opacity=75);
+  filter: alpha(opacity=90);
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, opacity; }
@@ -506,8 +506,7 @@ p:last-child {
 
  {
   position: relative;
-  display: inline-block;
-  filter: alpha(opacity=90); }
+  display: inline-block; }
    {
     content: "";
     height: 1px;
