@@ -884,6 +884,11 @@ input[type="reset"]:active {
 .v-icon {
   width: 100%; }
 
+.icon-xs {
+  max-width: 16px;
+  max-height: 16px;
+  display: inline-block; }
+
 .icon-sm {
   max-width: 24px;
   max-height: 24px; }
