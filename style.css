@@ -2599,12 +2599,24 @@ html .u-mtn2 {
 	margin-top: -1rem;
 }
 
+html .u-mbn2 {
+	margin-bottom: -1rem;
+}
+
 html .u-mtn3 {
 	margin-top: -1.5rem;
 }
 
+html .u-mbn3 {
+	margin-bottom: -1.5rem;
+}
+
 html .u-mtn4 {
 	margin-top: -3rem;
+}
+
+html .u-mbn4 {
+	margin-bottom: -3rem;
 }
 
 html .u-mxn2 {
