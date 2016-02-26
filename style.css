@@ -877,6 +877,7 @@ cite {
 blockquote cite {
 	font-size: 0.875rem;
 	font-weight: normal;
+	font-style: normal;
 }
 
 .blockquote {
