@@ -136,31 +136,34 @@ final class Abraham_Custom_Styles {
 		$color800     = $primaryColor->darken(30);
 		$color900     = $primaryColor->darken(40);
 
-
+		$colorBase = $color500;
 		$colorDark = Color::isDark($color300) ? $color400 : $color600;
+		$colorLight = Color::isDark($color300) ? $color100 : $color300;
 
-		$glass          = implode(', ', hybrid_hex_to_rgb($hex));
-		$glass_light    = implode(', ', hybrid_hex_to_rgb($color300));
+		$textBase = Color::isDark($colorBase) ? "fff" : "333";
+		$textOnDark = Color::isDark($colorDark) ? "fff" : "333";
+		$textOnLight = Color::isDark($colorLight) ? "fff" : "333";
+
+		$glass          = implode(', ', hybrid_hex_to_rgb($colorBase));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($colorDark));
-
-		$textBase = $primaryColor->isDark() ? "fff" : "222";
+		$glass_light    = implode(', ', hybrid_hex_to_rgb($colorLight));
 		$textRGB = implode(', ', hybrid_hex_to_rgb($textBase));
-		$textOnLight = Color::isDark($color400) ? "fff" : "222";
-		$textOnDark = Color::isDark($color600) ? "fff" : "222";
+
 		/* === Color === */
 
 
-		$style .= "#page .u-bg-1{color:#{$textBase};}";
-		$style .= "#page .u-text-1{color:#{$color500}}";
-		$style .= "#page .u-bg-1{background-color:#{$color500}}";
-		$style .= "#page .u-bg-1-light{background-color:#{$color400};color:#{$textOnLight};}";
+		$style .= "#page .u-text-1{color:#{$colorBase}}";
+		$style .= "#page .u-text-1-dark,.u-dropcap:first-letter{color:#{$colorDark}}";
+		$style .= "#page .u-text-1-light{color:#{$colorLight}}";
+		$style .= "#page .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
+		$style .= "#page .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "#page .u-bg-1-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
 		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
 		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
 		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
-		$style .= "#page .u-fill-1{fill:#{$color500}}";
-		$style .= "#page .u-fill-1-light{fill:#{$color400}}";
-		$style .= "#page .u-fill-1-dark{fill:#{$color600}}";
+		$style .= "#page .u-fill-1{fill:#{$colorBase}}";
+		$style .= "#page .u-fill-1-light{fill:#{$colorLight}}";
+		$style .= "#page .u-fill-1-dark{fill:#{$colorDark}}";
 
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
@@ -190,27 +193,35 @@ final class Abraham_Custom_Styles {
 		$color800       = $secondaryColor->darken(30);
 		$color900       = $secondaryColor->darken(40);
 
-		$glass          = implode(', ', hybrid_hex_to_rgb($hex));
-		$glass_light    = implode(', ', hybrid_hex_to_rgb($color400));
-		$glass_dark     = implode(', ', hybrid_hex_to_rgb($color600));
+		$colorBase = $color500;
+		$colorDark = Color::isDark($color300) ? $color400 : $color600;
+		$colorLight = Color::isDark($color300) ? $color100 : $color300;
 
-		$textBase = $secondaryColor->isDark() ? "fff" : "222";
+		$textBase = Color::isDark($colorBase) ? "fff" : "333";
+		$textOnDark = Color::isDark($colorDark) ? "fff" : "333";
+		$textOnLight = Color::isDark($colorLight) ? "fff" : "333";
+
+		$glass          = implode(', ', hybrid_hex_to_rgb($colorBase));
+		$glass_dark     = implode(', ', hybrid_hex_to_rgb($colorDark));
+		$glass_light    = implode(', ', hybrid_hex_to_rgb($colorLight));
 		$textRGB = implode(', ', hybrid_hex_to_rgb($textBase));
-		$textOnLight = Color::isDark($color400) ? "fff" : "222";
-		$textOnDark = Color::isDark($color600) ? "fff" : "222";
 
 		/* === Color === */
 
-		$style .= "#page .u-text-2{color:#{$color500}}";
-		$style .= "#page .u-bg-2{background-color:#{$color500};color:#{$textBase};}";
-		$style .= "#page .u-bg-2-light{background-color:#{$color400};color:#{$textOnLight};}";
-		$style .= "#page .u-bg-2-dark{background-color:#{$color600};color:#{$textOnDark};}";
+
+		$style .= "#page .u-text-2{color:#{$colorBase}}";
+		$style .= "#page .u-text-2-dark{color:#{$colorDark}}";
+		$style .= "#page .u-text-2-light{color:#{$colorLight}}";
+		$style .= "#page .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
+		$style .= "#page .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
+		$style .= "#page .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
 		$style .= "#page .u-bg-2-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
 		$style .= "#page .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
 		$style .= "#page .u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
-		$style .= "#page .u-fill-2{fill:#{$color500}}";
-		$style .= "#page .u-fill-2-light{fill:#{$color400}}";
-		$style .= "#page .u-fill-2-dark{fill:#{$color600}}";
+		$style .= "#page .u-fill-2{fill:#{$colorBase}}";
+		$style .= "#page .u-fill-2-light{fill:#{$colorLight}}";
+		$style .= "#page .u-fill-2-dark{fill:#{$colorDark}}";
+
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
 	}
@@ -221,7 +232,7 @@ final class Abraham_Custom_Styles {
 		$b_family    = get_theme_mod( 'body_font', '' );
 
 		if ( $h_family )
-			$font .= sprintf( "h1,h2,h3,h4,h5,h6 {font-family: '%s';}", esc_attr( $h_family ) );
+			$font .= sprintf( "h1,h2,h3,h4,h5,h6,.u-dropcap:first-letter {font-family: '%s';}", esc_attr( $h_family ) );
 
 		if ( $b_family )
 			$font .= sprintf( "body,p {font-family: '%s';}", esc_attr( $b_family ) );
