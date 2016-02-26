@@ -426,7 +426,9 @@ body {
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  hyphens: auto;
+  word-wrap: break-word; }
 
 .site {
   max-width: 100%;
@@ -1266,6 +1268,16 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+  html .u-dropcap:first-letter {
+    float: left;
+    margin: 0;
+    padding: 0.125em 0.125em 0 0;
+    font-size: 5em;
+    font-family: Copperplate;
+    line-height: 0.5;
+    text-indent: 0;
+    background: transparent;
+    color: inherit; }
   html .u-list-reset {
     list-style: none; }
     html .u-list-reset > ul,
