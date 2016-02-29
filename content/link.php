@@ -13,18 +13,8 @@
 					'after'              => '</div>',
 				));
 			?>
-			<h2 <?php hybrid_attr('entry-title'); ?>>
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h2>
+<?php the_title( '<a class="btn btn-hollow u-1of1 u-h4" href="' . hybrid_get_the_post_format_url() . '">', is_rtl() ? ' <span class="meta-nav">&larr;</span>' : ' <span class="meta-nav">&rarr;</span>' . '</a>' ); ?>
 		</header>
-
-		<div <?php hybrid_attr('entry-summary'); ?>>
-			<?php tha_entry_content_before(); ?>
-			<?php abe_excerpt(); ?>
-			<?php tha_entry_content_after(); ?>
-		</div>
-
-		<?php get_template_part('components/entry', 'footer'); ?>
 
 <?php tha_entry_bottom(); ?>
 
