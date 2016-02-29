@@ -861,7 +861,7 @@ tr:last-child td {
 
 blockquote {
 	padding: 0.5rem 1rem;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	line-height: 1.6;
 	text-align: center;
 	font-style: italic;
@@ -1876,39 +1876,39 @@ html .u-1of1 {
 }
 
 html .u-1of2 {
-	width: calc(1 / 2 * 100% - 1.5rem);
+	width: calc(50% - 1.5rem);
 }
 
 html .u-1of3 {
-	width: calc(1 / 3 * 100% - 1.5rem);
+	width: calc(33.33% - 1.5rem);
 }
 
 html .u-2of3 {
-	width: calc(2 / 3 * 100% - 1.5rem);
+	width: calc(66.66% - 1.5rem);
 }
 
 html .u-1of4 {
-	width: calc(1 / 4 * 100% - 1.5rem);
+	width: calc(25% - 1.5rem);
 }
 
 html .u-3of4 {
-	width: calc(3 / 4 * 100% - 1.5rem);
+	width: calc(75% - 1.5rem);
 }
 
 html .u-1of5 {
-	width: calc(1 / 5 * 100% - 1.5rem);
+	width: calc(20% - 1.5rem);
 }
 
 html .u-2of5 {
-	width: calc(2 / 5 * 100% - 1.5rem);
+	width: calc(40% - 1.5rem);
 }
 
 html .u-3of5 {
-	width: calc(3 / 5 * 100% - 1.5rem);
+	width: calc(60% - 1.5rem);
 }
 
 html .u-4of5 {
-	width: calc(4 / 5 * 100% - 1.5rem);
+	width: calc(80% - 1.5rem);
 }
 
 @media screen and (min-width: 48em) {
@@ -1925,39 +1925,39 @@ html .u-4of5 {
 	}
 
 	html .u-1of3-md {
-		width: calc(1 / 3 * 100% - 1.5rem);
+		width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-1of3-md:last-of-type {
-		max-width: calc(1 / 3 * 100% - 1.5rem);
+		width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-2of3-md {
-		width: calc(2 / 3 * 100% - 1.5rem);
+		width: calc(66.66% - 1.5rem);
 	}
 
 	html .u-1of4-md {
-		width: calc(1 / 4 * 100% - 1.5rem);
+		width: calc(25% - 1.5rem);
 	}
 
 	html .u-3of4-md {
-		width: calc(3 / 4 * 100% - 1.5rem);
+		width: calc(75% - 1.5rem);
 	}
 
 	html .u-1of5-md {
-		width: calc(1 / 5 * 100% - 1.5rem);
+		width: calc(20% - 1.5rem);
 	}
 
 	html .u-2of5-md {
-		width: calc(2 / 5 * 100% - 1.5rem);
+		width: calc(40% - 1.5rem);
 	}
 
 	html .u-3of5-md {
-		width: calc(3 / 5 * 100% - 1.5rem);
+		width: calc(60% - 1.5rem);
 	}
 
 	html .u-4of5-md {
-		width: calc(4 / 5 * 100% - 1.5rem);
+		width: calc(80% - 1.5rem);
 	}
 
 	html .u-width-auto-md {
@@ -1979,39 +1979,39 @@ html .u-4of5 {
 	}
 
 	html .u-1of3-lg {
-		width: calc(1 / 3 * 100% - 1.5rem);
+		width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-1of3-lg:last-of-type {
-		max-width: calc(1 / 3 * 100% - 1.5rem);
+		width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-2of3-lg {
-		width: calc(2 / 3 * 100% - 1.5rem);
+		width: calc(66.66% - 1.5rem);
 	}
 
 	html .u-1of4-lg {
-		width: calc(1 / 4 * 100% - 1.5rem);
+		width: calc(25% - 1.5rem);
 	}
 
 	html .u-3of4-lg {
-		width: calc(3 / 4 * 100% - 1.5rem);
+		width: calc(75% - 1.5rem);
 	}
 
 	html .u-1of5-lg {
-		width: calc(1 / 5 * 100% - 1.5rem);
+		width: calc(20% - 1.5rem);
 	}
 
 	html .u-2of5-lg {
-		width: calc(2 / 5 * 100% - 1.5rem);
+		width: calc(40% - 1.5rem);
 	}
 
 	html .u-3of5-lg {
-		width: calc(3 / 5 * 100% - 1.5rem);
+		width: calc(60% - 1.5rem);
 	}
 
 	html .u-4of5-lg {
-		width: calc(4 / 5 * 100% - 1.5rem);
+		width: calc(80% - 1.5rem);
 	}
 }
 
