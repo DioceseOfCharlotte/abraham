@@ -84,13 +84,20 @@ function abraham_tiny_mce_formats($args) {
 			array(
 				'title'    => __('Intro Paragraph', 'abraham'),
 				'selector' => 'p',
-				'classes'  => 'intro-paragraph',
+				'classes'  => 'intro-paragraph u-f-plus',
 				'wrapper'  => true,
 			),
 			array(
-				'title'   => __('Feature Box', 'abraham'),
+				'title'   => __('Card Box', 'abraham'),
 				'block'   => 'div',
-				'classes' => 'u-p2 u-shadow--3dp',
+				'classes' => 'u-p2 u-bg-white u-br u-shadow--3dp',
+				'wrapper' => true,
+				'exact'   => true,
+			),
+			array(
+				'title'   => __('Flex Grid', 'abraham'),
+				'block'   => 'div',
+				'classes' => 'o-grid u-flex-justify-around',
 				'wrapper' => true,
 				'exact'   => true,
 			),
