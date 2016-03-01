@@ -1052,6 +1052,15 @@ input[type="reset"]:active {
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .btn-round > i {
@@ -1929,7 +1938,7 @@ html .u-4of5 {
 	}
 
 	html .u-1of3-md:last-of-type {
-		width: calc(33.33% - 1.5rem);
+		max-width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-2of3-md {
@@ -1983,7 +1992,7 @@ html .u-4of5 {
 	}
 
 	html .u-1of3-lg:last-of-type {
-		width: calc(33.33% - 1.5rem);
+		max-width: calc(33.33% - 1.5rem);
 	}
 
 	html .u-2of3-lg {

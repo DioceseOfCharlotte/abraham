@@ -88,7 +88,7 @@
         width: calc(33.33% - #{$gutter});
 
         &:last-of-type {
-            width: calc(33.33% - #{$gutter});
+            max-width: calc(33.33% - #{$gutter});
         }
     }
 
@@ -142,7 +142,7 @@
         width: calc(33.33% - #{$gutter});
 
         &:last-of-type {
-            width: calc(33.33% - #{$gutter});
+            max-width: calc(33.33% - #{$gutter});
         }
     }
 

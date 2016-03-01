@@ -1,6 +1,9 @@
 <?php
 use Mexitek\PHPColors\Color;
 
+/**
+ * Logo
+ */
 function abe_site_logo() {
 	if ( ! function_exists( 'jetpack_the_site_logo' ) ) {
 		return;
@@ -24,19 +27,49 @@ function abe_get_featured_posts() {
 	return apply_filters( 'abe_get_featured_posts', false );
 }
 
+
+
+
 /**
  * SVG
  */
-function abe_do_svg( $icon='cog', $size='sm' ) { ?>
+function abe_do_svg( $icon='cog', $size='sm' ) {
+    echo abe_get_svg( $icon='cog', $size='sm' );
+}
+
+function abe_get_svg( $icon='cog', $size='sm' ) {
+    
+ob_start(); ?>
+
 <div class="icon-<?= $size ?>">
 	<?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?>
 </div>
-<?php }
+
+<?php return ob_get_clean();
+
+}
+
+
+
+/**
+ *
+ */
+function abe_edit_link() {
+    edit_post_link(abe_get_svg( 'compose', 'sm' ));
+}
+add_action( 'tha_entry_bottom', 'abe_edit_link' );
+
+function meh_edit_post_link($output) {
+    $output = str_replace('class="post-edit-link"', 'class="post-edit-link btn btn-round u-abs u-right0 u-bottom0"', $output);
+    return $output;
+}
+add_filter('edit_post_link', 'meh_edit_post_link');
+
+
 
 /**
  * Colors
  */
-
  function doc_prime_style($alpha='1') {
 	 $style .= 'background-color:';
 	 $style .= doc_prime_rgb($alpha);
