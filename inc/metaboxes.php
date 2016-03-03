@@ -64,6 +64,7 @@ function abe_register_metaboxes() {
 		'options'    => array(
 			'excerpt' => __( 'Excerpt', 'cmb2' ),
 			'content'   => __( 'Content', 'cmb2' ),
+			'none'   => __( 'Title Only', 'cmb2' ),
 		),
 	) );
 }
