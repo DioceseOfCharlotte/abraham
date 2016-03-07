@@ -4,6 +4,7 @@ add_action('after_setup_theme', 'meh_responsive_videos', 99);
 //add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
 add_shortcode( 'doc_logout', 'doc_logout_link' );
 add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
+add_shortcode('abe_permalink', 'abe_do_permalink');
 
 function abe_hierarchy_cpts($cpts = array()) {
 	$cpts = array( 'page' );
@@ -133,4 +134,19 @@ return '<a class="btn btn-small u-br u-mt2" href="' . $logoutlink . '">Logout</a
 function doc_pass_reset_link() {
 $passresetlink = wp_lostpassword_url( get_permalink() );
 return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
+}
+
+// Permalink
+function abe_do_permalink($atts) {
+	extract(shortcode_atts(array(
+		'id' => get_the_ID(),
+		'text' => ""  // default value if none supplied
+    ), $atts));
+
+    if ($text) {
+        $url = get_permalink($id);
+        return "<a href='$url'>$text</a>";
+    } else {
+	   return get_permalink($id);
+	}
 }
