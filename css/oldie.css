@@ -512,11 +512,11 @@ p:last-child {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #ccc 5px, #ccc); }
+  background-image: linear-gradient(transparent, transparent 5px, #d5dee2 5px, #d5dee2); }
    {
     color: inherit;
     filter: alpha(opacity=100);
-    background-image: linear-gradient(transparent, transparent 4px, #0cf 4px, #0cf); }
+    background-image: linear-gradient(transparent, transparent 4px, #99aeb8 4px, #99aeb8); }
 
  {
   font-weight: inherit;
@@ -1276,17 +1276,17 @@ html {
     max-width: 100%;
     white-space: normal; }
   html .u-max-width {
-    max-width: 84em; }
+    max-width: 1344px; }
   html .u-container {
-    max-width: 74em;
+    max-width: 1184px;
     margin-left: auto;
     margin-right: auto; }
   html .u-container-wide {
-    max-width: 84em;
+    max-width: 1344px;
     margin-left: auto;
     margin-right: auto; }
   html .u-max-center {
-    max-width: 84em;
+    max-width: 1344px;
     margin-left: auto;
     margin-right: auto; }
   html .u-width-auto {
@@ -1476,7 +1476,7 @@ html {
   html .u-trans-bg {
     transition-property: background-color; }
   html .u-content-wrap > * {
-    max-width: 74em;
+    max-width: 1184px;
     margin-left: auto;
     margin-right: auto; }
   html .u-inline {

@@ -33,12 +33,12 @@ function abe_get_featured_posts() {
 /**
  * SVG
  */
-function abe_do_svg( $icon='cog', $size='sm' ) {
-    echo abe_get_svg( $icon='cog', $size='sm' );
+function abe_do_svg( $icon='info', $size='sm' ) {
+    echo abe_get_svg( $icon, $size );
 }
 
-function abe_get_svg( $icon='cog', $size='sm' ) {
-    
+function abe_get_svg( $icon='info', $size='sm' ) {
+
 ob_start(); ?>
 
 <div class="icon-<?= $size ?>">

@@ -649,7 +649,7 @@ a:not([class]):hover {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 6px;
-	background-image: linear-gradient(transparent, transparent 5px, #ccc 5px, #ccc);
+	background-image: linear-gradient(transparent, transparent 5px, #d5dee2 5px, #d5dee2);
 }
 
 .entry-content a:not([class]):hover,
@@ -660,7 +660,7 @@ a:not([class]):hover {
 .comment-content a:not([class]):focus {
 	color: inherit;
 	opacity: 1;
-	background-image: linear-gradient(transparent, transparent 4px, #0cf 4px, #0cf);
+	background-image: linear-gradient(transparent, transparent 4px, #99aeb8 4px, #99aeb8);
 }
 
 li > a[href]:not(.btn),
@@ -1813,23 +1813,23 @@ html .u-fit {
 }
 
 html .u-max-width {
-	max-width: 84em;
+	max-width: 84rem;
 }
 
 html .u-container {
-	max-width: 74em;
+	max-width: 74rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 html .u-container-wide {
-	max-width: 84em;
+	max-width: 84rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 html .u-max-center {
-	max-width: 84em;
+	max-width: 84rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1988,7 +1988,7 @@ html .u-4of5 {
 	}
 
 	html .u-1of2-sm {
-		width: calc(1 / 2 * 100% - 1.5rem);
+		width: calc(50% - 1.5rem);
 	}
 }
 
@@ -2289,7 +2289,7 @@ html .u-trans-bg {
 }
 
 html .u-content-wrap > * {
-	max-width: 74em;
+	max-width: 74rem;
 	margin-left: auto;
 	margin-right: auto;
 }
