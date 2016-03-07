@@ -36,7 +36,7 @@ a:not([class]):hover {
 	&:focus {
 		color: inherit;
 		opacity: 1;
-		background-image: linear-gradient(transparent, transparent 4px, $blue-grey-300 4px, $blue-grey-300);
+		background-image: linear-gradient(transparent, transparent 4px, $blue-grey-500 4px, $blue-grey-500);
 	}
 
 	&:active {
