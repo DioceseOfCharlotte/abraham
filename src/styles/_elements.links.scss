@@ -27,37 +27,42 @@ a:not([class]):hover {
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
   position: relative;
   display: inline-block;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-image: linear-gradient(transparent, transparent 5px, #ccc 5px, #ccc);
 
-  &:before {
-  	  content: "";
-	  height: 1px;
-	  left: 0;
-	  bottom: 0;
-	  background: currentColor;
-	  opacity: .30;
-	  position: absolute;
-	  right: 0;
-	  transform: scaleX(.97) translateY(.055em);
-	  transition-duration: $transition-time;
-      transition-timing-function: $animation-curve-default;
-      transition-property: transform, opacity;
-  }
+  // &:before {
+  // 	  content: "";
+  //  height: 1px;
+  //  left: 0;
+  //  bottom: 0;
+  //  background: currentColor;
+  //  opacity: .30;
+  //  position: absolute;
+  //  right: 0;
+  //  transform: scaleX(.97) translateY(.055em);
+  //  transition-duration: $transition-time;
+  //     transition-timing-function: $animation-curve-default;
+  //     transition-property: transform, opacity;
+  // }
 
 	&:hover,
 	&:focus {
 		color: inherit;
 		opacity: 1;
-	  &:before {
-	      opacity: .95;
-	      transform: scaleX(.99);
-	  }
+		background-image: linear-gradient(transparent, transparent 4px, #0cf 4px, #0cf);
+	//   &:before {
+	//       opacity: .95;
+	//       transform: scaleX(.99);
+	//   }
 	}
 
 	&:active {
 
-	  &:before {
-	      opacity: .2;
-	  }
+	//   &:before {
+	//       opacity: .2;
+	//   }
 	}
 }
 
@@ -72,9 +77,9 @@ h6 {
 		font-weight: inherit;
         color: inherit;
 
-		&:before {
-			content: none;
-		}
+		// &:before {
+		// 	content: none;
+		// }
     }
     > a[href]:not(.btn):hover {
         //color: $color-text-light;

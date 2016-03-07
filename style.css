@@ -612,7 +612,7 @@ p:empty {
 }
 
 p:last-child {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 /* #LINKS
@@ -646,26 +646,10 @@ a:not([class]):hover {
 .comment-content a:not([class]) {
 	position: relative;
 	display: inline-block;
-}
-
-.entry-content a:not([class]):before,
-.entry-summary a:not([class]):before,
-.comment-content a:not([class]):before {
-	content: "";
-	height: 1px;
-	left: 0;
-	bottom: 0;
-	background: currentColor;
-	opacity: .30;
-	position: absolute;
-	right: 0;
-	-webkit-transform: scaleX(0.97) translateY(0.055em);
-	transform: scaleX(0.97) translateY(0.055em);
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: opacity, -webkit-transform;
-	transition-property: transform, opacity;
-	transition-property: transform, opacity, -webkit-transform;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100% 6px;
+	background-image: linear-gradient(transparent, transparent 5px, #ccc 5px, #ccc);
 }
 
 .entry-content a:not([class]):hover,
@@ -676,23 +660,7 @@ a:not([class]):hover {
 .comment-content a:not([class]):focus {
 	color: inherit;
 	opacity: 1;
-}
-
-.entry-content a:not([class]):hover:before,
-.entry-content a:not([class]):focus:before,
-.entry-summary a:not([class]):hover:before,
-.entry-summary a:not([class]):focus:before,
-.comment-content a:not([class]):hover:before,
-.comment-content a:not([class]):focus:before {
-	opacity: .95;
-	-webkit-transform: scaleX(0.99);
-	transform: scaleX(0.99);
-}
-
-.entry-content a:not([class]):active:before,
-.entry-summary a:not([class]):active:before,
-.comment-content a:not([class]):active:before {
-	opacity: .2;
+	background-image: linear-gradient(transparent, transparent 4px, #0cf 4px, #0cf);
 }
 
 li > a[href]:not(.btn),
@@ -704,16 +672,6 @@ h5 > a[href]:not(.btn),
 h6 > a[href]:not(.btn) {
 	font-weight: inherit;
 	color: inherit;
-}
-
-li > a[href]:not(.btn):before,
-h1 > a[href]:not(.btn):before,
-h2 > a[href]:not(.btn):before,
-h3 > a[href]:not(.btn):before,
-h4 > a[href]:not(.btn):before,
-h5 > a[href]:not(.btn):before,
-h6 > a[href]:not(.btn):before {
-	content: none;
 }
 
 .site-title > a {
@@ -1067,11 +1025,11 @@ input[type="reset"]:active {
 	line-height: 2.4rem;
 }
 
-.btn-small {
+.btn-sm {
 	padding: .25rem .5rem;
 }
 
-.btn-big {
+.btn-lg {
 	padding: 1rem 1.25rem;
 	font-size: 1.1rem;
 	font-weight: 700;
