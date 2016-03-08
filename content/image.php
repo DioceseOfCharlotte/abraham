@@ -8,7 +8,7 @@
 <section <?php hybrid_attr('post'); ?>>
 	<?php
 		get_the_image(array(
-			'size' => 'abe-card-md',
+			'size' => 'abe-hd',
 			'link_to_post' => false,
 			'image_class' => 'u-br u-block u-1of1',
 			'default_image' => get_template_directory_uri() . '/images/blank.jpg'
