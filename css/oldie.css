@@ -1319,12 +1319,14 @@ html {
   max-width: calc(50% - 1.5rem); }
   html .u-1of3-md{
   width: calc(33.33% - 1.5rem); }
-  html .u-1of3-md:last-of-type{
+  html .u-1of3-md:last-of-type, html .u-1of3-md:nth-last-child(2){
   max-width: calc(33.33% - 1.5rem); }
   html .u-2of3-md{
   width: calc(66.66% - 1.5rem); }
   html .u-1of4-md{
   width: calc(25% - 1.5rem); }
+  html .u-1of4-md:last-of-type, html .u-1of4-md:nth-last-child(2), html .u-1of4-md:nth-last-child(3){
+  max-width: calc(25% - 1.5rem); }
   html .u-3of4-md{
   width: calc(75% - 1.5rem); }
   html .u-1of5-md{
@@ -1345,12 +1347,14 @@ html {
   max-width: calc(50% - 1.5rem); }
   html .u-1of3-lg{
   width: calc(33.33% - 1.5rem); }
-  html .u-1of3-lg:last-of-type{
+  html .u-1of3-lg:last-of-type, html .u-1of3-lg:nth-last-child(2){
   max-width: calc(33.33% - 1.5rem); }
   html .u-2of3-lg{
   width: calc(66.66% - 1.5rem); }
   html .u-1of4-lg{
   width: calc(25% - 1.5rem); }
+  html .u-1of4-lg:last-of-type, html .u-1of4-lg:nth-last-child(2), html .u-1of4-lg:nth-last-child(3){
+  max-width: calc(25% - 1.5rem); }
   html .u-3of4-lg{
   width: calc(75% - 1.5rem); }
   html .u-1of5-lg{
