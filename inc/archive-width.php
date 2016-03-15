@@ -1,6 +1,6 @@
 <?php
-add_action( 'init', 'archive_width_taxonomy' );
-add_action( 'after_switch_theme', 'archive_width_defaults' );
+// add_action( 'init', 'archive_width_taxonomy' );
+// add_action( 'after_switch_theme', 'archive_width_defaults' );
 
 
 function get_archive_post_width($post = null) {

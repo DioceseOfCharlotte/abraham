@@ -22,7 +22,7 @@ require_once $abe_inc . 'customizer/customizer.php';    // Customizer
 require_once $abe_inc . 'customizer/custom-background.php';    // Customizer
 require_once $abe_inc . 'template-filters.php';
 require_once $abe_inc . 'views-template-tags.php';
-require_once $abe_inc . 'archive-width.php';
+//require_once $abe_inc . 'archive-width.php';
 require_once $abe_inc . 'metaboxes.php';
 require_once $abe_inc . 'attr-trumps.php';              // Css class selectors
 require_once $abe_inc . 'utils.php';                    // Utility functions
