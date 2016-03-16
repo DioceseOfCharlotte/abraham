@@ -4,7 +4,7 @@ add_filter('hybrid_content_template_hierarchy', 'meh_template_hierarchy');
 add_action('wp_head','abe_head_meta');
 add_filter('excerpt_more', 'meh_excerpt_more');
 add_filter('excerpt_length', 'meh_excerpt_length');
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 /**
  * Add templates to hybrid_get_content_template()
@@ -59,7 +59,7 @@ function meh_excerpt_length($length) {
 }
 
 function abe_excerpt() {
-	$abe_excerpt = get_post_meta( get_the_ID(), 'doc_show_content', true );
+	$abe_excerpt = get_post_meta( get_the_ID(), 'arch_show_content', true );
 	if ($abe_excerpt == 'none')
 		return;
 
