@@ -54,7 +54,7 @@ class Attr_Trumps {
 			'post_wide'               	=> 'u-fit u-1of1',
 
 			'post_archive'            	=> 'u-mb3 o-cell u-bg-white u-br',
-			'entry_header'            	=> '',
+			'entry_header'            	=> 'u-z1',
 			'entry_title'             	=> 'u-px3 u-py2 u-h3 u-m0 u-flexed-auto',
 			'entry_content'           	=> 'u-p3',
 			'entry_content_wide'      	=> '',
@@ -411,8 +411,8 @@ class Attr_Trumps {
 	/* === POSTS === */
 
 	public function post($classes, $class, $post_id) {
-	if ( is_admin() )
-		return $attr;
+	// if ( is_admin() )
+	// 	return;
 
 	global $post;
 

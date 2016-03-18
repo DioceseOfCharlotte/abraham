@@ -59,9 +59,6 @@ function meh_excerpt_length($length) {
 }
 
 function abe_excerpt() {
-	$abe_excerpt = get_post_meta( get_the_ID(), 'arch_show_content', true );
-	if ($abe_excerpt == 'none')
-		return;
 
-	return $abe_excerpt == 'content' ? the_content() : the_excerpt();
+	return arch_excerpt();
 }

@@ -452,27 +452,27 @@ h4,
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   margin-bottom: .5em; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 40px; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 32px; }
 
 h3 {
-  font-size: 20px; }
+  font-size: 24px; }
 
 h4 {
-  font-size: 16px; }
+  font-size: 20px; }
 
 h5 {
-  font-size: 14px; }
+  font-size: 16px; }
 
 h6 {
-  font-size: 12px; }
+  font-size: 14px; }
 
 p, dl, ol, ul, pre, blockquote {
   margin-bottom: 1em; }

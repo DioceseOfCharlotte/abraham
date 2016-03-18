@@ -2,6 +2,12 @@
 # Buttons
 --------------------------------------------------------------*/
 
+input[type="submit"] {
+    background-color: $color1;
+    color: white;
+	border-radius: $base-radius;
+}
+
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
