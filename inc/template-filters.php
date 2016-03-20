@@ -57,8 +57,3 @@ function meh_excerpt_more() {
 function meh_excerpt_length($length) {
 	return 40;
 }
-
-function abe_excerpt() {
-
-	return arch_excerpt();
-}
