@@ -6,7 +6,7 @@ add_shortcode( 'doc_logout', 'doc_logout_link' );
 add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
 add_shortcode('abe_permalink', 'abe_do_permalink');
 
-function abe_hierarchy_cpts($cpts = array()) {
+function abe_hierarchy_cpts() {
 	$cpts = array( 'page' );
 
 	if(has_filter('abe_add_hierarchy_cpts')) {
@@ -16,7 +16,7 @@ function abe_hierarchy_cpts($cpts = array()) {
 	return $cpts;
 }
 
-function abe_non_hierarchy_cpts($cpts = array()) {
+function abe_non_hierarchy_cpts() {
 	$cpts = array( 'post' );
 
 	if (has_filter('abe_add_non_hierarchy_cpts')) {
