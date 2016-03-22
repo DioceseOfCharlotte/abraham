@@ -56,12 +56,12 @@ function meh_responsive_videos_embed_html($html) {
  *
  * @return string
  */
-function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
+function meh_responsive_videos_maybe_wrap_oembed($html, $url = null) {
 	if ( empty( $html ) || ! is_string( $html ) || ! $url ) {
 		return $html;
 	}
 	$meh_video_wrapper = '<div class="FlexEmbed">';
-	$already_wrapped = strpos( $html, $meh_video_wrapper );
+	$already_wrapped   = strpos( $html, $meh_video_wrapper );
 	// If the oEmbed has already been wrapped, return the html.
 	if ( false !== $already_wrapped ) {
 		return $html;
@@ -89,11 +89,11 @@ function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
 		'https?://(www\.)?funnyordie\.com/videos/',
 		'https?://vine.co/v/',
 		'https?://(www\.)?collegehumor\.com/video/',
-		'https?://(www\.|embed\.)?ted\.com/talks/'
+		'https?://(www\.|embed\.)?ted\.com/talks/',
 	) );
 	// Merge patterns to run in a single preg_match call.
 	$video_patterns = '(' . implode( '|', $video_patterns ) . ')';
-	$is_video = preg_match( $video_patterns, $url );
+	$is_video       = preg_match( $video_patterns, $url );
 	// If the oEmbed is a video, wrap it in the responsive wrapper.
 	if ( false === $already_wrapped && 1 === $is_video ) {
 		return meh_responsive_videos_embed_html( $html );
@@ -139,8 +139,8 @@ return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passrese
 // Permalink
 function abe_do_permalink($atts) {
 	extract(shortcode_atts(array(
-		'id' => get_the_ID(),
-		'text' => ""  // default value if none supplied
+		'id'   => get_the_ID(),
+		'text' => "",  // default value if none supplied
     ), $atts));
 
     if ($text) {
@@ -149,4 +149,8 @@ function abe_do_permalink($atts) {
     } else {
 	   return get_permalink($id);
 	}
+}
+
+function abe_excerpt() {
+	return arch_excerpt();
 }
