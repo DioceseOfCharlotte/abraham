@@ -762,6 +762,11 @@ svg {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
+input[type="submit"] {
+  background-color: #2980b9;
+  color: white;
+  border-radius: 2px; }
+
 .btn-hollow, html .gv-search-clear,
 input[type="reset"],
 input[type="button"] {
