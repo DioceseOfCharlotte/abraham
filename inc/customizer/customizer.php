@@ -10,12 +10,6 @@
 // }
 // add_action( 'customize_register', 'wpt_register_theme_customizer' );
 
-$includes_dir = trailingslashit(get_template_directory());
-
-require_once $includes_dir.'inc/customizer/Color.php';
-require_once $includes_dir.'inc/customizer/fonts.php';
-require_once $includes_dir.'inc/customizer/custom-styles.php';
-
 add_action('customize_register', 'abraham_customize_register', 11);
 add_action('customize_preview_init', 'abraham_customizer_js');
 add_action('wp_enqueue_scripts', 'abraham_google_fonts');
@@ -29,25 +23,6 @@ function abraham_customize_register($wp_customize) {
 
 	// Theme layouts
 	$wp_customize->get_setting('theme_layout')->transport = 'refresh';
-
-	$wp_customize->add_setting(
-	  'abraham_logo',
-	  array(
-		  'type'      => 'theme_mod', // or 'option'
-		  'default'   => '',
-		  'transport' => 'refresh', // or postMessage
-	  )
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'custom-logo',
-			array(
-				'section'     => 'title_tagline',
-				'settings'    => 'abraham_logo',
-				'label'       => esc_html__('Your Logo', 'abraham'),
-	) ) );
 
 	/* Add the primary color setting. */
 	$wp_customize->add_setting(

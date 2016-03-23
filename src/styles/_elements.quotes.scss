@@ -1,9 +1,10 @@
 blockquote {
 	padding: $space1 $space2;
-    margin-bottom: $space2;
     font-size    : $h4;
     line-height  : 1.6;
 	text-align: center;
+	font-style: italic;
+    margin-left: 0;
 
     p {
         // text-indent: -0.42em;
@@ -23,6 +24,7 @@ cite {
 blockquote cite {
     font-size  : $h6;
     font-weight: normal;
+	font-style: normal;
 }
 
 .blockquote {

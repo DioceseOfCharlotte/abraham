@@ -1,9 +1,12 @@
 /* #LISTS
 \*------------------------------------*/
 
+li {
+    margin-bottom: .5em;
+}
+
 ul, ol, dl {
     line-height: 1.6;
-    margin-bottom: $space2;
     list-style-position: inside;
 }
 

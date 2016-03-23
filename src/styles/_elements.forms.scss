@@ -46,7 +46,8 @@ textarea {
 label {
   font-size: .875rem;
   font-weight: 700;
-  padding-top: $space2;
+  //padding-top: $space2;
+  display: block;
   margin-bottom: $space1;
 }
 
@@ -67,7 +68,7 @@ input[type=tel],
 input[type=time],
 input[type=url],
 input[type=week] {
-	height: 2.5em;
+	height: 2.5rem;
 }
 
 input[type=checkbox],

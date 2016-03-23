@@ -1,18 +1,21 @@
 /* #LINKS
 \*------------------------------------*/
 
-a {
+a:not(.btn) {
 	color: inherit;
     text-decoration: none;
 	line-height: inherit;
 	cursor: pointer;
+	opacity: .9;
 	transition-duration: $transition-time;
     transition-timing-function: $animation-curve-default;
-    transition-property: color;
+    transition-property: color, opacity;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 a:not([class]) {
-	//opacity: .9;
 	font-weight: 500;
 }
 
@@ -24,36 +27,20 @@ a:not([class]):hover {
 .entry-content a:not([class]), .entry-summary a:not([class]), .comment-content a:not([class]) {
   position: relative;
   display: inline-block;
-
-  &:before {
-  	  content: "";
-	  height: 1px;
-	  left: 0;
-	  bottom: 0;
-	  background: currentColor;
-	  opacity: .35;
-	  position: absolute;
-	  right: 0;
-	  transform: scaleX(.97) translateY(.055em);
-	  transition-duration: $transition-time;
-      transition-timing-function: $animation-curve-default;
-      transition-property: transform, opacity;
-  }
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-image: linear-gradient(transparent, transparent 5px, $blue-grey-100 5px, $blue-grey-100);
 
 	&:hover,
 	&:focus {
 		color: inherit;
-	  &:before {
-	      opacity: .95;
-	      transform: scaleX(.99);
-	  }
+		opacity: 1;
+		background-image: linear-gradient(transparent, transparent 4px, $blue-grey-500 4px, $blue-grey-500);
 	}
 
 	&:active {
 
-	  &:before {
-	      opacity: .2;
-	  }
 	}
 }
 
@@ -67,10 +54,6 @@ h6 {
     > a[href]:not(.btn) {
 		font-weight: inherit;
         color: inherit;
-
-		&:before {
-			content: none;
-		}
     }
     > a[href]:not(.btn):hover {
         //color: $color-text-light;
@@ -78,6 +61,7 @@ h6 {
 }
 
 .site-title > a {
+	opacity: 1;
 	transition-property: opacity;
 
 	&:hover {

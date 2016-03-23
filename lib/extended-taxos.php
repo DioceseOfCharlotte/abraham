@@ -3,7 +3,7 @@
  * Extended custom taxonomies for WordPress.
  *
  * @package   ExtendedTaxos
- * @version   2.0.1
+ * @version   2.0.3
  * @author    John Blackbourn <https://johnblackbourn.com>
  * @link      https://github.com/johnbillion/extended-taxos
  * @copyright 2012-2016 John Blackbourn
@@ -826,7 +826,11 @@ class Extended_Taxonomy_Admin {
 		$num   = number_format_i18n( $count );
 
 		# This is absolutely not localisable. WordPress 3.8 didn't add a new taxonomy label.
-		$text = '<a href="edit-tags.php?taxonomy=' . esc_attr( $this->taxo->taxonomy ) . '&amp;post_type=' . esc_attr( reset( $taxonomy->object_type ) ) . '">' . esc_html( $num . ' ' . $text ) . '</a>';
+		$url = add_query_arg( [
+			'taxonomy'  => $this->taxo->taxonomy,
+			'post_type' => reset( $taxonomy->object_type ),
+		], admin_url( 'edit-tags.php' ) );
+		$text = '<a href="' . esc_url( $url ) . '">' . esc_html( $num . ' ' . $text ) . '</a>';
 
 		# Go!
 		$items[] = $text;
@@ -853,12 +857,12 @@ class Extended_Taxonomy_Admin {
 	public function term_updated_messages( array $messages ) {
 
 		$messages[ $this->taxo->taxonomy ] = array(
-			1 => sprintf( esc_html( '%s added.', $this->taxo->tax_singular ) ),
-			2 => sprintf( esc_html( '%s deleted.', $this->taxo->tax_singular ) ),
-			3 => sprintf( esc_html( '%s updated.', $this->taxo->tax_singular ) ),
-			4 => sprintf( esc_html( '%s not added.', $this->taxo->tax_singular ) ),
-			5 => sprintf( esc_html( '%s not updated.', $this->taxo->tax_singular ) ),
-			6 => sprintf( esc_html( '%s deleted.', $this->taxo->tax_plural ) ),
+			1 => esc_html( sprintf( '%s added.', $this->taxo->tax_singular ) ),
+			2 => esc_html( sprintf( '%s deleted.', $this->taxo->tax_singular ) ),
+			3 => esc_html( sprintf( '%s updated.', $this->taxo->tax_singular ) ),
+			4 => esc_html( sprintf( '%s not added.', $this->taxo->tax_singular ) ),
+			5 => esc_html( sprintf( '%s not updated.', $this->taxo->tax_singular ) ),
+			6 => esc_html( sprintf( '%s deleted.', $this->taxo->tax_plural ) ),
 		);
 
 		return $messages;

@@ -38,6 +38,14 @@ function abraham_setup() {
 		'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio',
 	));
 
+	add_theme_support( 'site-logo' );
+
+	// add_theme_support( 'featured-content', array(
+	//     'filter'     => 'abe_get_featured_posts',
+	//     'max_posts'  => 20,
+	//     'post_types' => array( 'post', 'page' ),
+	// ) );
+
   // Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
 }
@@ -55,11 +63,13 @@ function abraham_assets() {
 	);
 
 	// Load parent theme stylesheet if child theme is active.
-	if ( is_child_theme() )
-		wp_enqueue_style( 'hybrid-parent' );
-
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'abe-parent-style', get_template_directory_uri() . '/style.css' );
+		wp_enqueue_style( 'abe-style', get_stylesheet_uri(), array( 'abe-parent-style' ) );
+	} else {
 	// Load active theme stylesheet.
-	wp_enqueue_style( 'hybrid-style' );
+		wp_enqueue_style( 'abe-style', get_stylesheet_uri() );
+	}
 
 	// Scripts
 	wp_enqueue_script(
@@ -73,7 +83,7 @@ function abraham_assets() {
 	// 	trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
 	// 	false, false, true
 	// );
-	wp_enqueue_style( 'oldie', trailingslashit(get_template_directory_uri()).'css/oldie.css', array( 'hybrid-style' ) );
+	wp_enqueue_style( 'oldie', trailingslashit(get_template_directory_uri()).'css/oldie.css', array( 'abe-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
 
 	wp_enqueue_script( 'flexibility', trailingslashit(get_template_directory_uri())."js/flexibility.js",  false, false, false );
@@ -126,16 +136,12 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 }
 
 function abraham_image_sizes() {
-	// Set the 'post-thumbnail' size.
-	set_post_thumbnail_size(180, 135, true);
-
 	// Create additional sizes.
 	add_image_size('abe-hd', 1200, 675, true);
 	add_image_size('abe-hd-half', 1200, 338, true);
 	add_image_size('abe-card-md', 660, 371, true);
-	add_image_size('abe-card-square', 300, 300, true);
 	add_image_size('abe-card', 330, 186, true);
-	add_image_size('abe-icon', 60, 60, true);
+	add_image_size('abe-icon', 80, 80, true);
 }
 
 function abraham_layouts() {

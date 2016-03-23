@@ -8,38 +8,32 @@ h4,
 h5,
 h6 {
     font-family: $heading-font-family;
+    // font-weight: $heading-font-weight;
+    // line-height: $heading-line-height;
+    // margin-bottom: $space1;
+
     font-weight: $heading-font-weight;
-    line-height: $heading-line-height;
-    margin-bottom: $space1;
+    line-height: 1.25;
+    //margin-top: 1em;
+    margin-bottom: .5em;
 }
 
-h1 {
-    font-size: $h1;
+h1 { font-size: $h1 }
+h2 { font-size: $h2 }
+h3 { font-size: $h3 }
+h4 { font-size: $h4 }
+h5 { font-size: $h5 }
+h6 { font-size: $h6 }
+
+p, dl, ol, ul, pre, blockquote {
+  //margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-h2 {
-    font-size: $h2;
-}
-
-h3 {
-    font-size: $h3;
-}
-
-h4 {
-    font-size: $h4;
-}
-
-h5 {
-    font-size: $h5;
-}
-
-h6 {
-    font-size: $h6;
-}
-
-p {
-  margin-bottom: $space2;
-}
+// p+p {
+//     text-indent: 1.5em;
+//     margin-top: -.5em;
+// }
 
 p:empty {
     margin: 0;
@@ -48,5 +42,5 @@ p:empty {
 }
 
 p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0!important;
 }

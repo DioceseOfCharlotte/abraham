@@ -25,8 +25,6 @@
 
 			<?php get_template_part('components/site', 'branding'); ?>
 
-
-
 			<?php tha_header_bottom(); ?>
 
 		</header>

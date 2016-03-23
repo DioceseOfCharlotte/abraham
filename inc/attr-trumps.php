@@ -27,7 +27,7 @@ class Attr_Trumps {
 
 		$defaults = array(
 			'body'                   	  => '',
-			'site_container'         	  => 'u-bg-frost-2 u-flex u-flex-column',
+			'site_container'         	  => 'u-bg-frost-2',
 			'layout'                 	  => '',
 			'layout_wide'            	  => '',
 			'grid'                   	  => 'o-grid u-container  u-rel',
@@ -36,8 +36,8 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER
-			'header'              		   => 'u-fix u-bg-1-glass u-1of1 u-z2 u-flex u-flex-justify-between u-flex-center',
-			'branding'            		   => 'u-flex',
+			'header'              		   => 'u-abs is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-justify-between u-flex-center',
+			'branding'            		   => 'u-flex u-ml4-md',
 			'site_title'          		   => 'u-regular u-color-inherit u-m0',
 			'site_description'        	   => 'u-regular u-m0 u-text-3',
 			// CONTENT
@@ -54,11 +54,11 @@ class Attr_Trumps {
 			'post_wide'               	=> 'u-fit u-1of1',
 
 			'post_archive'            	=> 'u-mb3 o-cell u-bg-white u-br',
-			'entry_header'            	=> '',
-			'entry_title'             	=> 'u-px3 u-h3 u-pt2',
+			'entry_header'            	=> 'u-z1',
+			'entry_title'             	=> 'u-px3 u-py2 u-h3 u-m0 u-flexed-auto',
 			'entry_content'           	=> 'u-p3',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-px3 u-mb3',
+			'entry_summary'           	=> 'u-px3 u-mb2',
 			'entry_footer'            	=> 'u-mt-auto',
 
 			'nav_single'              	=> '',
@@ -411,22 +411,22 @@ class Attr_Trumps {
 	/* === POSTS === */
 
 	public function post($classes, $class, $post_id) {
-	if ( is_admin() )
-		return $attr;
+	// if ( is_admin() )
+	// 	return;
 
 	global $post;
 
 		$_classes           = array();
-		$achive_width       = get_archive_post_width( $post->ID );
+		// $achive_width       = get_arch_post_width( $post->ID );
 		if (is_singular() && !is_front_page())
 			$_classes[]      = "{$this->args['post']}";
 		if (is_archive() || is_search())
 			$_classes[]      = "{$this->args['post_archive']}";
-		if ($achive_width && ! is_search())
-			$_classes[]      = "$achive_width";
+		// if ($achive_width && ! is_search() && ! is_single(get_the_ID()))
+		// 	$_classes[]      = "$achive_width";
 		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
 			$_classes[]      = "{$this->args['post_wide']}";
-		if (is_singular('gravityview'))
+		if (is_singular('gravityview') && 'edit' != gravityview_get_context())
 			$_classes[]      = "{$this->args['gv_post']}";
 
 		return array_map( 'esc_attr', array_unique( array_merge( $_classes, $classes ) ) );
@@ -559,7 +559,6 @@ class Attr_Trumps {
 			if (!$this->args['gv_entry']) {
 				return $attr;
 			}
-
 			$attr     .= " {$this->args['gv_entry']}";
 
 			return $attr;

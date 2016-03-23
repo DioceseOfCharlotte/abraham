@@ -77,6 +77,18 @@
     white-space: nowrap;
 }
 
+.u-dropcap:first-letter {
+    float: left;
+    margin: 0;
+    padding: 0.125em 0.125em 0 0;
+    font-size: 5em;
+    font-family: Copperplate;
+    line-height: 0.5;
+    text-indent: 0;
+    background: transparent;
+    color: inherit;
+}
+
 .u-list-reset {
     list-style: none;
 
