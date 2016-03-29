@@ -24,5 +24,5 @@
 
 		<?php get_template_part('components/entry', 'footer'); ?>
 </div>
-<a class="u-1of1 u-abs u-bottom0 u-top0 u-left0" href="<?php the_permalink(); ?>"></a>
+<a class="u-1of1 u-abs u-bottom0 u-z1 u-top0 u-left0" href="<?php the_permalink(); ?>"></a>
 </section>
