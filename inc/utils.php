@@ -151,6 +151,8 @@ function abe_do_permalink($atts) {
 	}
 }
 
-function abe_excerpt() {
-	return arch_excerpt();
+if (function_exists('arch_excerpt')) {
+	function abe_excerpt() {
+		return arch_excerpt();
+	}
 }
