@@ -6,21 +6,9 @@ Abraham is being built as a parent theme to house several functions and plugins 
 Opinionated styles are kept to a minimum which give child themes a bit more freedom with their designs. This also makes Abraham a great starter theme.
 
 
-## What's included?
-
-#### Development tools and features.
-- Gulp with [BrowserSync](https://github.com/shakyShane/browser-sync)
-- SASS with BEM-like structure based on Harry Roberts' [CSS Guidelines](http://cssguidelin.es/)
-- Advanced development features and best practices borrowed from Google’s [Web Starter Kit](https://developers.google.com/web/starter-kit/) including:
-⋅⋅* Multi-device responsive boilerplate
-⋅⋅* Cross-device Synchronization
-⋅⋅* Live Browser Reloading
-⋅⋅* Performance optimization
-⋅⋅* Built in HTTP Server
 
 #### Additional libraries for advanced Wordpress theming.
 - Advanced theming functions and solid child theme support via [Hybrid Core](http://themehybrid.com/hybrid-core)
-- WP Customizer options with the help of [Customizer Library](https://github.com/devinsays/customizer-library) & [Simple Color Adjuster](https://github.com/fikrirasyid/simple-color-adjuster)
 - Action hooks via [Theme Hook Alliance](https://github.com/zamoose/themehookalliance)
 
 ## Getting Started
@@ -28,7 +16,6 @@ You'll need the following dependencies installed to take advantage of the develo
 
 * [Node.js](https://nodejs.org)
 * [gulp.js](http://gulpjs.com)
-* [Sass](http://sass-lang.com/install)
 * [Composer](https://getcomposer.org) *installed [globally](https://getcomposer.org/doc/00-intro.md#globally)*
 
 I use [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) to run my local WordPress. This isn't necessary for this theme but the Gulp file is configured for it so if you're environment is different you'll need to edit the file accordingly.
