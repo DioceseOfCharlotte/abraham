@@ -65,3 +65,18 @@
     }
     color: $white;
 }
+
+.u-grad-overlay {
+    &::after {
+    	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
+    	background: -o-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
+    	background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
+    	content: "";
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+}
+    color: $white;
+}
