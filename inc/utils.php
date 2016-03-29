@@ -155,4 +155,8 @@ if (function_exists('arch_excerpt')) {
 	function abe_excerpt() {
 		return arch_excerpt();
 	}
+} else {
+	function abe_excerpt() {
+		return array('post');
+	}
 }
