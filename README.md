@@ -7,7 +7,7 @@ Opinionated styles are kept to a minimum which give child themes a bit more free
 
 
 
-#### Additional libraries for advanced Wordpress theming.
+#### Included libraries for advanced Wordpress theming.
 - Advanced theming functions and solid child theme support via [Hybrid Core](http://themehybrid.com/hybrid-core)
 - Action hooks via [Theme Hook Alliance](https://github.com/zamoose/themehookalliance)
 
@@ -28,7 +28,7 @@ $ cd vagrant-local/www/wordpress-default/wp-content/themes
 ```
 clone the repository:
 ```sh
-$ git clone https://github.com/m-e-h/abraham.git
+$ git clone https://github.com/DioceseOfCharlotte/abraham.git
 ```
 go to the theme folder in your terminal:
 ```sh
