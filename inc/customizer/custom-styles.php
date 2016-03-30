@@ -137,12 +137,12 @@ final class Abraham_Custom_Styles {
 		$color900     = $primaryColor->darken(40);
 
 		$colorBase = $color500;
-		$colorDark = Color::isDark($color300) ? $color400 : $color600;
-		$colorLight = Color::isDark($color300) ? $color100 : $color300;
+		$colorDark = $primaryColor->isDark($color300) ? $color400 : $color600;
+		$colorLight = $primaryColor->isDark($color300) ? $color100 : $color300;
 
-		$textBase = Color::isDark($colorBase) ? "fff" : "333";
-		$textOnDark = Color::isDark($colorDark) ? "fff" : "333";
-		$textOnLight = Color::isDark($colorLight) ? "fff" : "333";
+		$textBase = $primaryColor->isDark($colorBase) ? "fff" : "333";
+		$textOnDark = $primaryColor->isDark($colorDark) ? "fff" : "333";
+		$textOnLight = $primaryColor->isDark($colorLight) ? "fff" : "333";
 
 		$glass          = implode(', ', hybrid_hex_to_rgb($colorBase));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($colorDark));
@@ -194,12 +194,12 @@ final class Abraham_Custom_Styles {
 		$color900       = $secondaryColor->darken(40);
 
 		$colorBase = $color500;
-		$colorDark = Color::isDark($color300) ? $color400 : $color600;
-		$colorLight = Color::isDark($color300) ? $color100 : $color300;
+		$colorDark = $secondaryColor->isDark($color300) ? $color400 : $color600;
+		$colorLight = $secondaryColor->isDark($color300) ? $color100 : $color300;
 
-		$textBase = Color::isDark($colorBase) ? "fff" : "333";
-		$textOnDark = Color::isDark($colorDark) ? "fff" : "333";
-		$textOnLight = Color::isDark($colorLight) ? "fff" : "333";
+		$textBase = $secondaryColor->isDark($colorBase) ? "fff" : "333";
+		$textOnDark = $secondaryColor->isDark($colorDark) ? "fff" : "333";
+		$textOnLight = $secondaryColor->isDark($colorLight) ? "fff" : "333";
 
 		$glass          = implode(', ', hybrid_hex_to_rgb($colorBase));
 		$glass_dark     = implode(', ', hybrid_hex_to_rgb($colorDark));
