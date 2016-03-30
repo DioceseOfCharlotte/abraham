@@ -232,10 +232,10 @@ final class Abraham_Custom_Styles {
 		$b_family    = get_theme_mod( 'body_font', '' );
 
 		if ( $h_family )
-			$font .= sprintf( ".u-heading,.u-dropcap:first-letter {font-family: '%s';}", esc_attr( $h_family ) );
+			$font .= sprintf( "#page .u-heading,.u-dropcap:first-letter {font-family: '%s';}", esc_attr( $h_family ) );
 
 		if ( $b_family )
-			$font .= sprintf( ".u-body,body,p {font-family: '%s';}", esc_attr( $b_family ) );
+			$font .= sprintf( "#page .u-body,body,p {font-family: '%s';}", esc_attr( $b_family ) );
 
 		// Output the styles.
 		if ( $font ) {
