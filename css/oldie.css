@@ -1159,6 +1159,16 @@ html {
     color: #fff; }
     html .u-tinted-image:before {
       background-color: #607d8b; }
+  html .u-grad-overlay {
+    color: #fff; }
+    html .u-grad-overlay:after {
+      background: linear-gradient(#000000 40%, #000000);
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
   html .u-h0 {
     font-size: 48px; }
   html .u-h1 {
