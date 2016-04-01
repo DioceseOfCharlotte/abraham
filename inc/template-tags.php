@@ -71,6 +71,7 @@ add_filter('edit_post_link', 'meh_edit_post_link');
  * Colors
  */
  function doc_prime_style($alpha='1') {
+	 $style = '';
 	 $style .= 'background-color:';
 	 $style .= doc_prime_rgb($alpha);
 	 $style .= ';color:';

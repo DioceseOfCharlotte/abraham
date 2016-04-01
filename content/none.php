@@ -3,7 +3,7 @@
 
 		<?php if (is_search()) : ?>
 
-			<p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'abraham'); ?></p>
+			<p><?php esc_html_e('Sorry, but nothing matched your search. Perhaps try again with some different keywords.', 'abraham'); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>

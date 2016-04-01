@@ -414,8 +414,9 @@ class Attr_Trumps {
 	if ( is_admin() )
 		return;
 
-		if (is_singular() && !is_front_page())
-			$classes[]      = "{$this->args['post']}";
+		if (is_singular() && !is_front_page()) {
+			is_single($post_id) ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
+		}
 
 		if (is_archive() || is_search())
 			$classes[]      = "{$this->args['post_archive']}";
