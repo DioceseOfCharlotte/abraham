@@ -411,25 +411,22 @@ class Attr_Trumps {
 	/* === POSTS === */
 
 	public function post($classes, $class, $post_id) {
-	// if ( is_admin() )
-	// 	return;
+	if ( is_admin() )
+		return;
 
-	global $post;
-
-		$_classes           = array();
-		// $achive_width       = get_arch_post_width( $post->ID );
 		if (is_singular() && !is_front_page())
-			$_classes[]      = "{$this->args['post']}";
-		if (is_archive() || is_search())
-			$_classes[]      = "{$this->args['post_archive']}";
-		// if ($achive_width && ! is_search() && ! is_single(get_the_ID()))
-		// 	$_classes[]      = "$achive_width";
-		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
-			$_classes[]      = "{$this->args['post_wide']}";
-		if (is_singular('gravityview') && 'edit' != gravityview_get_context())
-			$_classes[]      = "{$this->args['gv_post']}";
+			$classes[]      = "{$this->args['post']}";
 
-		return array_map( 'esc_attr', array_unique( array_merge( $_classes, $classes ) ) );
+		if (is_archive() || is_search())
+			$classes[]      = "{$this->args['post_archive']}";
+
+		if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout'))
+			$classes[]      = "{$this->args['post_wide']}";
+
+		if (is_singular('gravityview') && 'edit' != gravityview_get_context())
+			$classes[]      = "{$this->args['gv_post']}";
+
+		return $classes;
 	}
 
 	public function entry_title($attr) {
