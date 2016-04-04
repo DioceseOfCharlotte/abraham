@@ -1,7 +1,13 @@
 <?php
-if (is_taxonomy_hierarchical(get_queried_object()->taxonomy)) :
+/**
+ * Sub-terms Menu.
+ *
+ * @package Abraham
+ */
 
-	$terms = wp_list_categories(array(
+if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) :
+
+	$terms = wp_list_categories( array(
 		'taxonomy'         => get_queried_object()->taxonomy,
 		'child_of'         => get_queried_object_id(),
 		'depth'            => 1,
@@ -10,17 +16,17 @@ if (is_taxonomy_hierarchical(get_queried_object()->taxonomy)) :
 		'echo'             => false,
 	));
 
-	if (!empty($terms)) : ?>
+	if ( ! empty( $terms ) ) : ?>
 
-		<nav <?php hybrid_attr('menu', 'sub-terms'); ?>>
+	<nav <?php hybrid_attr( 'menu', 'sub-terms' ); ?>>
 
-			<ul id="menu-sub-terms-items" class="menu-items">
-				<?php echo $terms; ?>
-			</ul>
+		<ul id="menu-sub-terms-items" class="menu-items">
+			<?php echo $terms; ?>
+		</ul>
 
-		</nav>
+	</nav>
 
 	<?php
-	endif; // End check for list.
+endif; // End check for list.
 
 endif; // End check for hierarchy.

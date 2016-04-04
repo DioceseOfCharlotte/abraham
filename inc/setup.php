@@ -1,58 +1,64 @@
 <?php
-/*
- * Theme setup
+/**
+ * Theme Setup.
+ *
+ * @package Abraham
  */
 
-add_action('after_setup_theme', 'abraham_setup', 5);
-add_action('wp_enqueue_scripts', 'abraham_assets');
-add_action('widgets_init', 'abraham_widgets', 5);
-add_action('init', 'abraham_image_sizes', 5);
-add_action('hybrid_register_layouts', 'abraham_layouts');
+add_action( 'after_setup_theme', 'abraham_setup', 5 );
+add_action( 'wp_enqueue_scripts', 'abraham_assets' );
+add_action( 'widgets_init', 'abraham_widgets', 5 );
+add_action( 'init', 'abraham_image_sizes', 5 );
+add_action( 'hybrid_register_layouts', 'abraham_layouts' );
 
 function abraham_setup() {
 
 	// http://codex.wordpress.org/Automatic_Feed_Links
-	add_theme_support('automatic-feed-links');
+	add_theme_support( 'automatic-feed-links' );
 
 	// https://github.com/justintadlock/breadcrumb-trail
-	add_theme_support('breadcrumb-trail');
+	add_theme_support( 'breadcrumb-trail' );
 
 	// https://github.com/justintadlock/get-the-image
-	add_theme_support('get-the-image');
+	add_theme_support( 'get-the-image' );
 
-	//add_theme_support( 'cleaner-gallery' );
-
+	// add_theme_support( 'cleaner-gallery' );
 	// http://themehybrid.com/docs/template-hierarchy
-	add_theme_support('hybrid-core-template-hierarchy');
+	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	// Layouts
-	add_theme_support('theme-layouts', array('default' => '1-column'));
+	add_theme_support( 'theme-layouts', array( 'default' => '1-column' ) );
 
 	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus(array(
-	  'primary'   => __('Primary', 'abraham'),
+		'primary'   => __( 'Primary', 'abraham' ),
 	));
 
-  // http://codex.wordpress.org/Post_Formats
+	// http://codex.wordpress.org/Post_Formats
 	add_theme_support('post-formats', array(
-		'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio',
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'video',
+		'audio',
 	));
 
 	add_theme_support( 'site-logo' );
 
 	// add_theme_support( 'featured-content', array(
-	//     'filter'     => 'abe_get_featured_posts',
-	//     'max_posts'  => 20,
-	//     'post_types' => array( 'post', 'page' ),
+	// 'filter'     => 'abe_get_featured_posts',
+	// 'max_posts'  => 20,
+	// 'post_types' => array( 'post', 'page' ),
 	// ) );
-
-  // Tell the TinyMCE editor to use a custom stylesheet
+	// Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
 }
 
 /*
- * Scripts and stylesheets
- */
+* Scripts and stylesheets
+*/
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
@@ -67,7 +73,7 @@ function abraham_assets() {
 		wp_enqueue_style( 'abe-parent-style', get_template_directory_uri() . '/style.css' );
 		wp_enqueue_style( 'abe-style', get_stylesheet_uri(), array( 'abe-parent-style' ) );
 	} else {
-	// Load active theme stylesheet.
+		// Load active theme stylesheet.
 		wp_enqueue_style( 'abe-style', get_stylesheet_uri() );
 	}
 
@@ -79,20 +85,20 @@ function abraham_assets() {
 	);
 
 	// wp_enqueue_script(
-	// 	'abraham_js',
-	// 	trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
-	// 	false, false, true
+	// 'abraham_js',
+	// trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
+	// false, false, true
 	// );
-	wp_enqueue_style( 'oldie', trailingslashit(get_template_directory_uri()).'css/oldie.css', array( 'abe-style' ) );
+	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ).'css/oldie.css', array( 'abe-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
 
-	wp_enqueue_script( 'flexibility', trailingslashit(get_template_directory_uri())."js/flexibility.js",  false, false, false );
+	wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ).'js/flexibility.js',  false, false, false );
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
 /*
- * Styles for the editor.
- */
+* Styles for the editor.
+*/
 function abraham_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
@@ -102,16 +108,16 @@ function abraham_get_editor_styles() {
 	$editor_styles[] = str_replace( ',', '%2C', '//fonts.googleapis.com/icon?family=Material+Icons' );
 
 	/* If a child theme, add its editor styles. */
-	if ( is_child_theme() )
-	$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css';
+	if ( is_child_theme() ) {
+		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css'; }
 
 	/* Return the styles. */
 	return $editor_styles;
 }
 
 /**
- * Register sidebars.
- */
+* Register sidebars.
+*/
 if ( ! function_exists( 'abraham_widgets' ) ) {
 
 	function abraham_widgets() {
@@ -120,7 +126,7 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 			'name'          => __( 'Primary', 'abraham' ),
 			'before_title'  => '<h3 class="h2 widget-title u-mt0">',
 			'after_title'   => '</h3>',
-			'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
+			'before_widget' => '<section ' .hybrid_get_attr( 'widgets', 'primary' ).'>',
 			'after_widget'  => '</section>',
 		));
 
@@ -129,7 +135,7 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 			'name'          => __( 'Footer', 'abraham' ),
 			'before_title'  => '<h3 class="h2 widget-title u-mt0">',
 			'after_title'   => '</h3>',
-			'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
+			'before_widget' => '<section ' .hybrid_get_attr( 'widgets', 'footer' ).'>',
 			'after_widget'  => '</section>',
 		));
 	}
@@ -137,42 +143,36 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 
 function abraham_image_sizes() {
 	// Create additional sizes.
-	add_image_size('abe-hd', 1200, 675, true);
-	add_image_size('abe-hd-half', 1200, 338, true);
-	add_image_size('abe-card-md', 660, 371, true);
-	add_image_size('abe-card', 330, 186, true);
-	add_image_size('abe-icon', 80, 80, true);
+	add_image_size( 'abe-hd', 1200, 675, true );
+	add_image_size( 'abe-hd-half', 1200, 338, true );
+	add_image_size( 'abe-card-md', 660, 371, true );
+	add_image_size( 'abe-card', 330, 186, true );
+	add_image_size( 'abe-icon', 80, 80, true );
 }
 
 function abraham_layouts() {
 
 	hybrid_register_layout('1-column', array(
-		'label'            => _x('Single Column', 'theme layout', 'abraham'),
+		'label'            => _x( 'Single Column', 'theme layout', 'abraham' ),
 		'is_global_layout' => true,
 		'image'            => '%s/images/single-column.svg',
 	));
 
 	hybrid_register_layout('1-column-wide', array(
-		'label'            => _x('Single Column Wide', 'theme layout', 'abraham'),
+		'label'            => _x( 'Single Column Wide', 'theme layout', 'abraham' ),
 		'is_global_layout' => true,
 		'image'            => '%s/images/single-column-wide.svg',
 	));
 
 	hybrid_register_layout('sidebar-right', array(
-		'label'            => _x('Sidebar Right', 'theme layout', 'abraham'),
+		'label'            => _x( 'Sidebar Right', 'theme layout', 'abraham' ),
 		'is_global_layout' => true,
 		'image'            => '%s/images/sidebar-right.svg',
 	));
 
 	hybrid_register_layout('sidebar-left', array(
-		'label'            => _x('Sidebar Left', 'theme layout', 'abraham'),
+		'label'            => _x( 'Sidebar Left', 'theme layout', 'abraham' ),
 		'is_global_layout' => true,
 		'image'            => '%s/images/sidebar-left.svg',
 	));
-
-	// hybrid_register_layout('list', array(
-	// 	'label'            => _x('List', 'theme layout', 'abraham'),
-	// 	'is_global_layout' => true,
-	// 	'image'            => '%s/images/list.svg',
-	// ));
 }

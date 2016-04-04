@@ -1,27 +1,35 @@
-		<?php tha_footer_before(); ?>
+<?php
+/**
+ * Footer Template.
+ *
+ * @package Abraham
+ */
 
-		<footer <?php hybrid_attr('footer'); ?>>
+?>
+<?php tha_footer_before(); ?>
 
-			<?php tha_footer_top(); ?>
+	<footer <?php hybrid_attr( 'footer' ); ?>>
 
-			<?php hybrid_get_sidebar('footer'); ?>
+		<?php tha_footer_top(); ?>
 
-			<p class="credit u-py1 u-bg-tint-1 u-text-center mdl-mega-footer--bottom-section">
-				<?php printf(__('&#169; %1$s %2$s', 'abraham'), date_i18n('Y'), hybrid_get_site_link()); ?>
-			</p><!-- .credit -->
+		<?php hybrid_get_sidebar( 'footer' ); ?>
 
-			<?php tha_footer_bottom(); ?>
+		<p class="credit u-py1 u-bg-tint-1 u-text-center mdl-mega-footer--bottom-section">
+			<?php printf( __( '&#169; %1$s %2$s', 'abraham' ), date_i18n( 'Y' ), hybrid_get_site_link() ); ?>
+		</p><!-- .credit -->
 
-		</footer>
+		<?php tha_footer_bottom(); ?>
 
-		<?php tha_footer_after(); ?>
+	</footer>
 
-	</div><!-- /.layout -->
+<?php tha_footer_after(); ?>
+
+</div><!-- /.layout -->
 
 </div><!-- /.site-container -->
 
-	<?php tha_body_bottom(); ?>
-	<?php wp_footer(); ?>
+<?php tha_body_bottom(); ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>
