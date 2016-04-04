@@ -5,7 +5,6 @@
 // 'use strict';
 
 var gulp = require('gulp');
-var cssfmt = require('gulp-cssfmt');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
@@ -14,9 +13,7 @@ var babel = require('gulp-babel');
 var oldie = require('oldie');
 var autoPrefixer = require('autoprefixer');
 var postcssFlex = require('postcss-flexibility');
-// var postcssScss = require('postcss-scss');
-// var postcssNested = require('postcss-nested');
-// var precss = require('precss');
+var perfectionist = require('perfectionist');
 
 var $ = gulpLoadPlugins();
 var reload = browserSync.reload;
@@ -37,6 +34,9 @@ var AUTOPREFIXER_BROWSERS = [
 var POSTCSS_PLUGINS = [
 	autoPrefixer({
 		browsers: AUTOPREFIXER_BROWSERS
+	}),
+	perfectionist({
+		cascade: false
 	})
 ];
 
@@ -104,11 +104,10 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest('.tmp'))
 		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
-		.pipe(cssfmt())
 		.pipe(gulp.dest('./'))
-		.pipe($.size({title: 'styles'}))
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
+		.pipe($.size({title: 'styles'}))
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 });
