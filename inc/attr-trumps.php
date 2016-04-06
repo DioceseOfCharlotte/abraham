@@ -499,6 +499,7 @@ class Attr_Trumps {
 	}
 
 	public function entry_footer( $attr ) {
+		$attr['class']     = 'entry-footer';
 		if ( ! $this->args['entry_footer'] ) {
 			return $attr;
 		}
