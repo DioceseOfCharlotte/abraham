@@ -1,82 +1,85 @@
 .u-bg-cover {
-    background-size: cover;
+	background-size: cover;
 }
 
 .u-bg-contain {
-    background-size: contain;
+	background-size: contain;
 }
 
 .u-bg-center {
-    background-position: center;
+	background-position: center;
 }
 
 .u-bg-top {
-    background-position: top;
+	background-position: top;
 }
 
 .u-bg-right {
-    background-position: right;
+	background-position: right;
 }
 
 .u-bg-bottom {
-    background-position: bottom;
+	background-position: bottom;
 }
 
 .u-bg-left {
-    background-position: left;
+	background-position: left;
 }
 
 .u-bg-fixed {
-    background-attachment: fixed;
+	background-attachment: fixed;
 }
 
 .u-bg-no-repeat {
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 
 .u-frosted-image,
 .u-tinted-image {
 
-     > * {
-    position: relative;
-    }
+	> * {
+		position: relative;
+	}
 }
 
 .u-frosted-image:before,
 .u-tinted-image:before {
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .u-frosted-image {
-    &:before {
-        background-color: rgba($blue-grey-50, 0.6);
-    }
-    color: $color-text-dark;
+
+	&:before {
+		background-color: rgba($blue-grey-50, 0.6);
+	}
+	color: $color-text-dark;
 }
 
 .u-tinted-image {
-    &:before {
-        background-color: rgba($blue-grey-500, 0.6);
-    }
-    color: $white;
+
+	&:before {
+		background-color: rgba($blue-grey-500, 0.6);
+	}
+	color: $white;
 }
 
 .u-grad-overlay {
-    &::after {
-    	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
-    	background: -o-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
-    	background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
-    	content: "";
-    	height: 100%;
-    	position: absolute;
-    	top: 0;
-    	left: 0;
-    	width: 100%;
-}
-    color: $white;
+
+	&:after {
+		background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
+		background: -o-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
+		background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
+		content: "";
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	color: $white;
 }

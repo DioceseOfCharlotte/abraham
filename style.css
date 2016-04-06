@@ -1469,7 +1469,7 @@ html .u-grad-overlay {
     color: #fff;
 }
 
-html .u-grad-overlay::after {
+html .u-grad-overlay:after {
     background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
     content: "";
     height: 100%;
