@@ -45,6 +45,16 @@ function abraham_setup() {
 		'audio',
 	));
 
+	/*
+	 * Enable support for custom logo.
+	 *
+	 */
+	// add_theme_support( 'custom-logo', array(
+	// 	'height'      => 150,
+	// 	'width'       => 150,
+	// 	'flex-height' => true,
+	// ) );
+
 	add_theme_support( 'site-logo' );
 
 	// add_theme_support( 'featured-content', array(
@@ -52,6 +62,7 @@ function abraham_setup() {
 	// 'max_posts'  => 20,
 	// 'post_types' => array( 'post', 'page' ),
 	// ) );
+
 	// Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( abraham_get_editor_styles() );
 }
