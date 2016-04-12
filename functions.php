@@ -8,21 +8,21 @@
 $abe_lib = trailingslashit( get_template_directory() ) . 'lib/';
 $abe_inc = trailingslashit( get_template_directory() ) . 'inc/';
 
-// 3rd party libraries
+// 3rd party libraries.
 require_once $abe_lib . 'hybrid-core/hybrid.php'; 	// Hybrid Core library.
 require_once $abe_lib . 'cmb2/init.php';          	// Custom Metaboxes.
 require_once $abe_lib . 'extended-cpts.php';      	// CPT creation library.
 require_once $abe_lib . 'extended-taxos.php';     	// Taxonomy creation library.
 require_once $abe_lib . 'tha-theme-hooks.php';    	// Template hooks.
 
-// Theme specific includes
+// Theme specific includes.
 require_once $abe_inc . 'setup.php';                    	// Initial theme setup.
 require_once $abe_inc . 'customizer/Color.php';				// Customizer.
 require_once $abe_inc . 'customizer/fonts.php';				// Customizer.
 require_once $abe_inc . 'customizer/custom-styles.php';		// Customizer.
 require_once $abe_inc . 'customizer/customizer.php';    	// Customizer.
 require_once $abe_inc . 'customizer/custom-background.php'; // Customizer.
-require_once $abe_inc . 'template-filters.php';
+require_once $abe_inc . 'template-tweaks.php';
 require_once $abe_inc . 'template-tags.php';
 require_once $abe_inc . 'metaboxes.php';
 require_once $abe_inc . 'attr-trumps.php';              // Css class selectors.
