@@ -1,48 +1,65 @@
 <?php
 /**
- * abraham Theme Customizer.
+ * Theme Customizer.
+ *
+ * @package Abraham
  */
 
-// function wpt_register_theme_customizer( $wp_customize ) {
+add_action( 'customize_register', 'abraham_customize_register', 11 );
+add_action( 'customize_preview_init', 'abraham_customizer_js' );
+add_action( 'wp_enqueue_scripts', 'abraham_google_fonts' );
+add_action( 'customize_register', 'my_register_blogname_partials' );
 
-//     var_dump( $wp_customize );
+/**
+ * Customizer Settings
+ *
+ * @param  array $wp_customize Add controls and settings.
+ */
+function abraham_customize_register( $wp_customize ) {
 
-// }
-// add_action( 'customize_register', 'wpt_register_theme_customizer' );
+	// Customize title and tagline sections and labels.
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-add_action('customize_register', 'abraham_customize_register', 11);
-add_action('customize_preview_init', 'abraham_customizer_js');
-add_action('wp_enqueue_scripts', 'abraham_google_fonts');
+	if ( isset( $wp_customize->selective_refresh ) ) {
 
-function abraham_customize_register($wp_customize) {
+	    $wp_customize->selective_refresh->add_partial( 'blogname', array(
+	        'selector' => '#site-title a',
+	        'render_callback' => function() {
+	            return get_bloginfo( 'name', 'display' );
+	        },
+	    ) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+	        'selector' => '#site-description',
+	        'render_callback' => function() {
+	            return get_bloginfo( 'description', 'display' );
+	        },
+	    ) );
+	}
 
-	// Customize title and tagline sections and labels
-	$wp_customize->get_setting('blogname')->transport         = 'postMessage';
-	$wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-	$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+	// Theme layouts.
+	$wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
 
-	// Theme layouts
-	$wp_customize->get_setting('theme_layout')->transport = 'refresh';
-
-	/* Add the primary color setting. */
+	// Add the primary color setting.
 	$wp_customize->add_setting(
 		'primary_color',
 		array(
-			'default'              => apply_filters('theme_mod_primary_color', ''),
+			'default'              => apply_filters( 'theme_mod_primary_color', '' ),
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			//'transport'            => 'postMessage',
+			// 'transport'            => 'postMessage',
 		)
 	);
 
-	/* Add secondary color control. */
+	// Add secondary color control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'custom-primary-color',
 			array(
-				'label'    => esc_html__('Primary Color', 'abraham'),
+				'label'    => esc_html__( 'Primary Color', 'abraham' ),
 				'section'  => 'colors',
 				'settings' => 'primary_color',
 				'priority' => 10,
@@ -50,15 +67,15 @@ function abraham_customize_register($wp_customize) {
 		)
 	);
 
-	/* Add the secondary color setting. */
+	// Add the secondary color setting.
 	$wp_customize->add_setting(
 		'secondary_color',
 		array(
-			'default'              => apply_filters('theme_mod_secondary_color', ''),
+			'default'              => apply_filters( 'theme_mod_secondary_color', '' ),
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			//'transport'            => 'postMessage',
+			// 'transport'            => 'postMessage',
 		)
 	);
 
@@ -68,7 +85,7 @@ function abraham_customize_register($wp_customize) {
 			$wp_customize,
 			'custom-secondary-color',
 			array(
-				'label'    => esc_html__('Secondary Color', 'abraham'),
+				'label'    => esc_html__( 'Secondary Color', 'abraham' ),
 				'section'  => 'colors',
 				'settings' => 'secondary_color',
 				'priority' => 15,
@@ -76,12 +93,11 @@ function abraham_customize_register($wp_customize) {
 		)
 	);
 
-  //Typography
-
+	/* Typography. */
 	$wp_customize->add_section(
 		'custom_typography',
 		array(
-		'title'    => esc_html__('Typography', 'abraham'),
+		'title'    => esc_html__( 'Typography', 'abraham' ),
 		'priority' => 80,
 		)
 	);
@@ -93,14 +109,14 @@ function abraham_customize_register($wp_customize) {
 			'default'              => 'serif',
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_text_field',
-			//'transport'            => 'postMessage',
+			// 'transport'            => 'postMessage',
 		)
 	);
 	/* Adds the heading font control. */
 	$wp_customize->add_control(
 		'abraham-heading-font',
 		array(
-			'label'    => esc_html__('Heading Font', 'abraham'),
+			'label'    => esc_html__( 'Heading Font', 'abraham' ),
 			'section'  => 'custom_typography',
 			'settings' => 'heading_font',
 			'type'     => 'select',
@@ -115,14 +131,14 @@ function abraham_customize_register($wp_customize) {
 			'default'              => 'sans-serif',
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_text_field',
-			//'transport'            => 'postMessage',
+			// 'transport'            => 'postMessage',
 		)
 	);
 	/* Adds the body font control. */
 	$wp_customize->add_control(
 		'abraham-body-font',
 		array(
-			'label'    => esc_html__('Body Font', 'abraham'),
+			'label'    => esc_html__( 'Body Font', 'abraham' ),
 			'section'  => 'custom_typography',
 			'settings' => 'body_font',
 			'type'     => 'select',
@@ -131,7 +147,9 @@ function abraham_customize_register($wp_customize) {
 	);
 }
 
-// Custom js for theme customizer
+/**
+ * Custom js for theme customizer
+ */
 function abraham_customizer_js() {
 
 	/* Use the .min script if SCRIPT_DEBUG is turned off. */
@@ -151,10 +169,10 @@ function abraham_customizer_js() {
  */
 function abraham_google_fonts() {
 	$fonts = array(
-		get_theme_mod('heading_font', 'default'),
-		get_theme_mod('body_font', 'default'),
+		get_theme_mod( 'heading_font', 'default' ),
+		get_theme_mod( 'body_font', 'default' ),
 	);
-	$font_uri = customizer_library_get_google_font_uri($fonts);
+	$font_uri = customizer_library_get_google_font_uri( $fonts );
 
 	wp_enqueue_style( 'google_font_headings', $font_uri, array(), null, 'screen' );
 }

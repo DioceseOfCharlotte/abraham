@@ -6,35 +6,31 @@
  */
 
 add_action( 'after_setup_theme', 'abraham_setup', 5 );
+add_action( 'after_setup_theme', 'abraham_content_width', 0 );
 add_action( 'wp_enqueue_scripts', 'abraham_assets' );
 add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
 
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ */
 function abraham_setup() {
 
-	// http://codex.wordpress.org/Automatic_Feed_Links
 	add_theme_support( 'automatic-feed-links' );
 
-	// https://github.com/justintadlock/breadcrumb-trail
 	add_theme_support( 'breadcrumb-trail' );
 
-	// https://github.com/justintadlock/get-the-image
 	add_theme_support( 'get-the-image' );
 
-	// add_theme_support( 'cleaner-gallery' );
-	// http://themehybrid.com/docs/template-hierarchy
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	// Layouts
 	add_theme_support( 'theme-layouts', array( 'default' => '1-column' ) );
 
-	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus(array(
 		'primary'   => __( 'Primary', 'abraham' ),
 	));
 
-	// http://codex.wordpress.org/Post_Formats
 	add_theme_support('post-formats', array(
 		'aside',
 		'gallery',
@@ -49,31 +45,34 @@ function abraham_setup() {
 	 * Enable support for custom logo.
 	 *
 	 */
-	// add_theme_support( 'custom-logo', array(
-	// 	'height'      => 150,
-	// 	'width'       => 150,
-	// 	'flex-height' => true,
-	// ) );
+	add_theme_support( 'custom-logo', array(
+		'height'      => 150,
+		'width'       => 150,
+		'flex-width' => true,
+	) );
 
-	add_theme_support( 'site-logo' );
-
-	// add_theme_support( 'featured-content', array(
-	// 'filter'     => 'abe_get_featured_posts',
-	// 'max_posts'  => 20,
-	// 'post_types' => array( 'post', 'page' ),
-	// ) );
-
-	// Tell the TinyMCE editor to use a custom stylesheet
+	// Tell the TinyMCE editor to use a custom stylesheet.
 	add_editor_style( abraham_get_editor_styles() );
 }
 
-/*
-* Scripts and stylesheets
-*/
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function abraham_content_width() {
+	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 1184 );
+}
+
+/**
+ * Scripts and stylesheets
+ */
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
-	// Styles
+	// Styles.
 	wp_enqueue_style(
 		'material-icons',
 		'//fonts.googleapis.com/icon?family=Material+Icons'
@@ -88,7 +87,7 @@ function abraham_assets() {
 		wp_enqueue_style( 'abe-style', get_stylesheet_uri() );
 	}
 
-	// Scripts
+	// Scripts.
 	wp_enqueue_script(
 		'abraham_js',
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
@@ -96,9 +95,9 @@ function abraham_assets() {
 	);
 
 	// wp_enqueue_script(
-	// 'abraham_js',
-	// trailingslashit(get_template_directory_uri())."js/abraham{$suffix}.js",
-	// false, false, true
+	// 	'abraham_js',
+	// 	trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
+	// 	false, false, true
 	// );
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ).'css/oldie.css', array( 'abe-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
@@ -107,9 +106,9 @@ function abraham_assets() {
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
-/*
-* Styles for the editor.
-*/
+/**
+ * Styles for the editor.
+ */
 function abraham_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
@@ -126,11 +125,11 @@ function abraham_get_editor_styles() {
 	return $editor_styles;
 }
 
-/**
-* Register sidebars.
-*/
 if ( ! function_exists( 'abraham_widgets' ) ) {
 
+	/**
+	 * Register sidebars.
+	 */
 	function abraham_widgets() {
 		register_sidebar(array(
 			'id'            => 'primary',
@@ -152,8 +151,10 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 	}
 }
 
+/**
+ * Create additional sizes.
+ */
 function abraham_image_sizes() {
-	// Create additional sizes.
 	add_image_size( 'abe-hd', 1200, 675, true );
 	add_image_size( 'abe-hd-half', 1200, 338, true );
 	add_image_size( 'abe-card-md', 660, 371, true );
@@ -161,6 +162,9 @@ function abraham_image_sizes() {
 	add_image_size( 'abe-icon', 80, 80, true );
 }
 
+/**
+ * Hybrid Theme Layouts
+ */
 function abraham_layouts() {
 
 	hybrid_register_layout('1-column', array(

@@ -30,17 +30,22 @@ function abe_has_multiple_featured_posts() {
 	return false;
 }
 
-function abe_get_featured_posts() {
-	return apply_filters( 'abe_get_featured_posts', false );
-}
-
 /**
- * SVG
+ * Display the SVG.
+ *
+ * @param string $icon name of the icon.
+ * @param string $size css class for icon size.
  */
-function abe_do_svg( $icon = 'info', $size = 'sm' ) {
+function abe_do_svg( $icon, $size ) {
 	echo abe_get_svg( $icon, $size );
 }
 
+/**
+ * Get the SVG.
+ *
+ * @param string $icon name of the icon.
+ * @param string $size css class for icon size.
+ */
 function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 
 	ob_start(); ?>
@@ -53,12 +58,19 @@ function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 
 }
 
-
-function abe_edit_link() {
+/**
+ * Display the Edit Post Link
+ */
+function abe_do_edit_link() {
 	edit_post_link( abe_get_svg( 'compose', 'sm' ) );
 }
-add_action( 'tha_entry_bottom', 'abe_edit_link' );
+add_action( 'tha_entry_bottom', 'abe_do_edit_link' );
 
+/**
+ * Customize the html of the edit link
+ *
+ * @param string $output Link html.
+ */
 function meh_edit_post_link( $output ) {
 	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-abs u-right0 u-bottom0"', $output );
 	return $output;
@@ -68,7 +80,7 @@ add_filter( 'edit_post_link', 'meh_edit_post_link' );
 /**
  * Colors
  */
-function doc_prime_style( $alpha = '1' ) {
+function doc_prime_style( $alpha ) {
 	$style = '';
 	$style .= 'background-color:';
 	$style .= doc_prime_rgb( $alpha );
@@ -84,7 +96,7 @@ function doc_prime_hex() {
 	return "#{$hex_color}";
 }
 
-function doc_prime_rgb( $alpha ) {
+function doc_prime_rgb( $alpha = '1' ) {
 	$doc_hex = doc_prime_hex();
 	$doc_rgb = implode( ',', hybrid_hex_to_rgb( $doc_hex ) );
 	return 'rgba('. $doc_rgb .','. $alpha .')';
@@ -96,7 +108,7 @@ function doc_prime_text() {
 	return "#{$text_color}";
 }
 
-function abe_second_style( $alpha = '1' ) {
+function abe_second_style( $alpha ) {
 	$style .= 'background-color:';
 	$style .= abe_second_rgb( $alpha );
 	$style .= ';color:';
@@ -111,7 +123,7 @@ function abe_second_hex() {
 	return "#{$hex_color}";
 }
 
-function abe_second_rgb( $alpha ) {
+function abe_second_rgb( $alpha = '1' ) {
 	$abe_hex = abe_second_hex();
 	$abe_rgb = implode( ',', hybrid_hex_to_rgb( $abe_hex ) );
 	return 'rgba('. $abe_rgb .','. $alpha .')';
