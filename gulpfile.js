@@ -72,7 +72,7 @@ gulp.task('images', function () {
 		progressive: true,
 		interlaced: true,
 		svgoPlugins: [{
-                cleanupIDs: false
+                cleanupIDs: true
             }, {
                 removeTitle: true
             }, {
@@ -86,6 +86,8 @@ gulp.task('images', function () {
                     floatPrecision: 2
                 }
             }, {
+				removeNonInheritableGroupAttrs: true
+			}, {
                 removeDimensions: true
             }]
 	}))
@@ -102,8 +104,8 @@ gulp.task('styles', function () {
 			onError: console.error.bind(console, 'Sass error:')
 		}))
 		.pipe(gulp.dest('.tmp'))
-		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
+		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))

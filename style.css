@@ -1013,7 +1013,10 @@ input[type="button"]:active, input[type="reset"]:active {
 }
 
 .v-icon {
-    width: 100%;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
 }
 
 .icon-xs {
