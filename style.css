@@ -576,59 +576,62 @@ p:last-child {
 a:not(.btn) {
     color: inherit;
     text-decoration: none;
-    line-height: inherit;
-    cursor: pointer;
-    opacity: .9;
+    opacity: 0.8;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color, opacity;
+    transition-property: border-bottom, opacity;
 }
 
-a:not(.btn):hover {
+a:not(.btn):focus, a:not(.btn):hover {
     opacity: 1;
 }
 
 a:not([class]) {
-    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
 }
 
-a:not([class]):hover {
-    color: inherit;
-    text-decoration: none;
+article a:not([class]) {
+    font-weight: 700;
 }
 
-.entry-content a:not([class]), .entry-summary a:not([class]),
-.comment-content a:not([class]) {
-    position: relative;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 6px;
-    background-image: linear-gradient(transparent, transparent 5px, #d5dee2 5px, #d5dee2);
-}
-
-.entry-content a:not([class]):hover, .entry-content a:not([class]):focus,
-.entry-summary a:not([class]):hover, .entry-summary a:not([class]):focus,
-.comment-content a:not([class]):hover, .comment-content a:not([class]):focus {
-    color: inherit;
-    opacity: 1;
-    background-image: linear-gradient(transparent, transparent 4px, #607d8b 4px, #607d8b);
-}
-
-li > a[href]:not(.btn), h1 > a[href]:not(.btn), h2 > a[href]:not(.btn),
-h3 > a[href]:not(.btn), h4 > a[href]:not(.btn), h5 > a[href]:not(.btn),
-h6 > a[href]:not(.btn) {
+li:not([class]) > a:not(.btn), .entry-title > a:not(.btn) {
     font-weight: inherit;
-    color: inherit;
+    border-bottom: 0;
 }
 
-.site-title > a {
+li:not([class]) > a:not(.btn):after, .entry-title > a:not(.btn):after {
+    content: "\E5C8";
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    vertical-align: middle;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    opacity: 0.5;
+    transition: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+li:not([class]) > a:not(.btn):hover:after,
+.entry-title > a:not(.btn):hover:after {
+    opacity: 0.9;
+}
+
+.site-branding a {
+    border-bottom: 0;
+    padding-bottom: 0;
     opacity: 1;
-    transition-property: opacity;
 }
 
-.site-title > a:hover {
-    opacity: 0.75;
+.site-branding a:hover {
+    opacity: 0.8;
 }
 
 .btn, .button, button, input[type="button"], input[type="reset"],
@@ -1054,9 +1057,8 @@ input[type="button"]:active, input[type="reset"]:active {
 
 .breadcrumbs li + li:before {
     content: "\E5CC";
-    opacity: 0.75;
-    padding: .2em;
-    font-family: 'Material Icons';
+    padding: 0.2em;
+    font-family: "Material Icons";
     vertical-align: middle;
     font-size: 1.5em;
     line-height: 1;
@@ -1064,6 +1066,12 @@ input[type="button"]:active, input[type="reset"]:active {
 
 .breadcrumbs a {
     color: inherit;
+    opacity: 1;
+    border-bottom: 0;
+}
+
+.breadcrumbs a:hover {
+    opacity: 0.8;
 }
 
 body:not(.search) .trail-end > span, .search .archive-title {

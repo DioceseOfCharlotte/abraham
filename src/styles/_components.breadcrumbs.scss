@@ -1,24 +1,29 @@
 /* #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
+	//text-transform: uppercase;
+	li {
+		display: inline-block;
 
-    //text-transform: uppercase;
-    li {
-        display: inline-block;
-        + li:before {
-            content: "\E5CC";
-            opacity: $opacity;
-            padding: .2em;
-            font-family: 'Material Icons';
-            vertical-align: middle;
-            font-size: 1.5em;
-            line-height: 1;
-        }
-    }
+		+ li:before {
+			content: "\E5CC";
+			padding: 0.2em;
+			font-family: "Material Icons";
+			vertical-align: middle;
+			font-size: 1.5em;
+			line-height: 1;
+		}
+	}
 
-    a {
-        color: inherit;
-    }
+	a {
+		color: inherit;
+		opacity: 1;
+		border-bottom: 0;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
 body:not(.search) .trail-end > span,
