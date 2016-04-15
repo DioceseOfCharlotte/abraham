@@ -44,14 +44,42 @@ li:not([class]),
 			display: inline-block;
 			white-space: nowrap;
 			word-wrap: normal;
-			opacity: 0.5;
+			opacity: 0.6;
 			transition: inherit;
+			transition-property: opacity;
 			-webkit-font-smoothing: antialiased;
 		}
 
 		&:hover:after {
-			opacity: 0.9;
+			opacity: 1;
 		}
+	}
+}
+
+a[href*=".pdf"] {
+
+	&:after {
+		content: "\E873";
+		font-family: "Material Icons";
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1em;
+		line-height: 1;
+		padding-bottom: 2px;
+		padding-left: 4px;
+		vertical-align: middle;
+		text-transform: none;
+		display: inline-block;
+		white-space: nowrap;
+		word-wrap: normal;
+		opacity: 0.6;
+		transition: inherit;
+		transition-property: opacity;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	&:hover:after {
+		opacity: 1;
 	}
 }
 

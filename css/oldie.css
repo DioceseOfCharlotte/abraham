@@ -521,16 +521,40 @@ p:last-child {
     display: inline-block;
     white-space: nowrap;
     word-wrap: normal;
-    filter: alpha(opacity=50);
+    filter: alpha(opacity=60);
     transition: inherit;
     -webkit-font-smoothing: antialiased; }
    {
-    filter: alpha(opacity=90); }
+    filter: alpha(opacity=100); }
+
+a[href*=".pdf"]:after {
+  content: "\E873";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  vertical-align: middle;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  filter: alpha(opacity=60);
+  transition: inherit;
+  transition-property: opacity;
+  -webkit-font-smoothing: antialiased; }
+
+a[href*=".pdf"]:hover:after {
+  filter: alpha(opacity=100); }
 
 .site-branding a {
   border-bottom: 0;
   padding-bottom: 0;
   filter: alpha(opacity=100); }
+  .site-branding a:hover {
+    filter: alpha(opacity=80); }
 
 .btn,
 .button,

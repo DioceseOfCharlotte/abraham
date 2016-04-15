@@ -614,14 +614,39 @@ li:not([class]) > a:not(.btn):after, .entry-title > a:not(.btn):after {
     display: inline-block;
     white-space: nowrap;
     word-wrap: normal;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: inherit;
+    transition-property: opacity;
     -webkit-font-smoothing: antialiased;
 }
 
 li:not([class]) > a:not(.btn):hover:after,
 .entry-title > a:not(.btn):hover:after {
-    opacity: 0.9;
+    opacity: 1;
+}
+
+a[href*=".pdf"]:after {
+    content: "\E873";
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    vertical-align: middle;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    opacity: 0.6;
+    transition: inherit;
+    transition-property: opacity;
+    -webkit-font-smoothing: antialiased;
+}
+
+a[href*=".pdf"]:hover:after {
+    opacity: 1;
 }
 
 .site-branding a {
