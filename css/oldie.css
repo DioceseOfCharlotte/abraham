@@ -881,6 +881,7 @@ input[type="reset"]:active {
   font-size: 24px; }
 
 .icon-md {
+  width: 100%;
   max-width: 90px;
   max-height: 90px; }
   .icon-md svg {
@@ -888,6 +889,7 @@ input[type="reset"]:active {
     width: 100%; }
 
 .icon-lg {
+  width: 100%;
   max-width: 210px;
   max-height: 210px; }
   .icon-lg svg {
@@ -895,6 +897,7 @@ input[type="reset"]:active {
     width: 100%; }
 
 .icon-xl {
+  width: 100%;
   max-width: 310px;
   max-height: 310px; }
   .icon-xl svg {

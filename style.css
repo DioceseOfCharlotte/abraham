@@ -1015,6 +1015,7 @@ input[type="button"]:active, input[type="reset"]:active {
 }
 
 .icon-md {
+    width: 100%;
     max-width: 90px;
     max-height: 90px;
 }
@@ -1025,6 +1026,7 @@ input[type="button"]:active, input[type="reset"]:active {
 }
 
 .icon-lg {
+    width: 100%;
     max-width: 210px;
     max-height: 210px;
 }
@@ -1035,6 +1037,7 @@ input[type="button"]:active, input[type="reset"]:active {
 }
 
 .icon-xl {
+    width: 100%;
     max-width: 310px;
     max-height: 310px;
 }
