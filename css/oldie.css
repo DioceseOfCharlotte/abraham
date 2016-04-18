@@ -27,8 +27,8 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 # Animation
 --------------------------------------------------------------*/
 /*
- * Normalization
- */
+* Normalization
+*/
 /* specify the root styles of the document */
 html {
   box-sizing: border-box;
@@ -61,19 +61,19 @@ html {
 :before,
 :after {
   vertical-align: inherit;
-  text-decoration: inherit; }
+  text-decoration: none; }
 
  {
   display: none;
   /* Chrome 44-, iOS 8+, Safari 9+ */ }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
 /* 1 */
 button,
 html input[type="button"],
@@ -85,8 +85,8 @@ input[type="submit"] {
   /* 2 */ }
 
 /**
- * FORMS
- */
+* FORMS
+*/
 input {
   -webkit-border-radius: 0;
   /* iOS 8+ */ }
@@ -163,11 +163,11 @@ select::-ms-value {
   /* Edge 12+, Internet Explorer 11- */ }
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
 button,
 select {
   text-transform: none; }
@@ -181,18 +181,18 @@ legend {
   font-size: 24px; }
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
 optgroup {
   font-weight: bold; }
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
 article,
 aside,
 details,
@@ -226,28 +226,28 @@ template {
   /* Internet Explorer 10- */ }
 
 /**
- * Remove the gray background color from active links in IE 10.
- */
+* Remove the gray background color from active links in IE 10.
+*/
 a {
   background-color: transparent; }
 
 /**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
+* Improve readability of focused elements when they are also in an
+* active/hover state.
+*/
 a:active,
 a:hover {
   outline: 0; }
 
 /**
- * Remove border when inside `a` element in IE 8/9/10.
- */
+* Remove border when inside `a` element in IE 8/9/10.
+*/
 img {
   border: 0; }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
- */
+* Correct overflow not hidden in IE 9/10/11.
+*/
  {
   overflow: hidden; }
 
@@ -281,8 +281,8 @@ pre {
   margin-bottom: 16px; }
 
 /**
- * tables
- */
+* tables
+*/
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -330,28 +330,28 @@ html input[disabled],
   outline: none !important; }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
 b,
 strong {
   font-weight: bold; }
 
 /**
- * Address styling not present in Safari and Chrome.
- */
+* Address styling not present in Safari and Chrome.
+*/
 dfn {
   font-style: italic; }
 
 /**
- * Address styling not present in IE 8/9.
- */
+* Address styling not present in IE 8/9.
+*/
 mark {
   color: #000;
   background: #ff0; }
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
 sub,
 sup {
   position: relative;
@@ -375,8 +375,8 @@ address {
   font-style: normal; }
 
 /**
- * LISTS
- */
+* LISTS
+*/
 dt {
   font-weight: bold; }
 
@@ -408,7 +408,7 @@ output {
   display: inline-block; }
 
 /* Embedded content
-   ========================================================================== */
+========================================================================== */
 canvas {
   -ms-touch-action: double-tap-zoom; }
 
@@ -493,68 +493,32 @@ p:last-child {
   filter: alpha(opacity=80);
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-bottom, opacity; }
+  transition-property: all; }
    {
+    text-decoration: underline;
+    border-bottom-color: currentColor;
     filter: alpha(opacity=100); }
-
- {
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px; }
+     {
+      text-decoration: none; }
 
  {
   font-weight: 700; }
 
  {
-  font-weight: inherit;
-  border-bottom: 0; }
-   {
-    content: "\E5C8";
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    vertical-align: middle;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    filter: alpha(opacity=60);
-    transition: inherit;
-    -webkit-font-smoothing: antialiased; }
-   {
-    filter: alpha(opacity=100); }
+  color: #096EB0; }
 
-a[href*=".pdf"]:after {
-  content: "\E873";
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 1;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  vertical-align: middle;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  filter: alpha(opacity=60);
-  transition: inherit;
-  transition-property: opacity;
-  -webkit-font-smoothing: antialiased; }
-
-a[href*=".pdf"]:hover:after {
-  filter: alpha(opacity=100); }
+article p > a:hover,
+article p > a:focus {
+  color: #72B0D9; }
 
 .site-branding a {
-  border-bottom: 0;
-  padding-bottom: 0;
   filter: alpha(opacity=100); }
   .site-branding a:hover {
-    filter: alpha(opacity=80); }
+    filter: alpha(opacity=80);
+    text-decoration: none; }
+
+ {
+  font-weight: inherit; }
 
 .btn,
 .button,
@@ -906,30 +870,36 @@ input[type="reset"]:active {
 
 .v-icon {
   width: 1em;
-  height: 1em;
+  height: auto;
   vertical-align: -0.15em;
   fill: currentColor; }
 
 .icon-xs {
-  max-width: 16px;
-  max-height: 16px;
-  display: inline-block; }
+  font-size: 16px; }
 
 .icon-sm {
-  max-width: 24px;
-  max-height: 24px; }
+  font-size: 24px; }
 
 .icon-md {
   max-width: 90px;
   max-height: 90px; }
+  .icon-md svg {
+    height: auto;
+    width: 100%; }
 
 .icon-lg {
   max-width: 210px;
   max-height: 210px; }
+  .icon-lg svg {
+    height: auto;
+    width: 100%; }
 
 .icon-xl {
   max-width: 310px;
   max-height: 310px; }
+  .icon-xl svg {
+    height: auto;
+    width: 100%; }
 
 /* #BREADCRUMBS
 \*------------------------------------*/
@@ -1462,9 +1432,9 @@ html {
     flex-direction: row-reverse; }
   html .u-flex-row-rev {
     flex-direction: row-reverse; }
-  html .u-flex-column-rev {
+  html .u-flex-col-rev {
     flex-direction: column-reverse; }
-  html .u-flex-column {
+  html .u-flex-col {
     flex-direction: column; }
   html .u-flex-row {
     flex-direction: row; }
@@ -1482,15 +1452,15 @@ html {
     align-items: flex-start; }
   html .u-flex-end {
     align-items: flex-end; }
-  html .u-flex-justify-between {
+  html .u-flex-jb {
     justify-content: space-between; }
-  html .u-flex-justify-around {
+  html .u-flex-ja {
     justify-content: space-around; }
-  html .u-flex-justify-center {
+  html .u-flex-jc {
     justify-content: center; }
-  html .u-flex-justify-start {
+  html .u-flex-js {
     justify-content: flex-start; }
-  html .u-flex-justify-end {
+  html .u-flex-je {
     justify-content: flex-end; }
   html .u-flexed-start {
     align-self: flex-start; }
@@ -1498,6 +1468,8 @@ html {
     align-self: flex-end; }
   html .u-flexed-center {
     align-self: center; }
+  html .u-flexed-1 {
+    flex: 1 1 0; }
   html .u-flexed-auto {
     flex: 1 1 auto; }
   html .u-flexed-grow {

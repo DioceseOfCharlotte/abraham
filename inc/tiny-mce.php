@@ -95,7 +95,7 @@ function abraham_tiny_mce_formats( $args ) {
 			array(
 				'title'   => __( 'Flex Grid', 'abraham' ),
 				'block'   => 'div',
-				'classes' => 'o-grid u-flex-justify-around',
+				'classes' => 'o-grid u-flex-ja',
 				'wrapper' => true,
 				'exact'   => true,
 			),

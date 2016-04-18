@@ -6,92 +6,51 @@ a:not(.btn) {
 	opacity: 0.8;
 	transition-duration: $transition-time;
 	transition-timing-function: $animation-curve-default;
-	transition-property: border-bottom, opacity;
+	transition-property: all;
 
 	&:focus,
 	&:hover {
+		text-decoration: underline;
+		border-bottom-color: currentColor;
 		opacity: 1;
+
+		&:before,
+		&:after {
+			text-decoration: none;
+		}
 	}
 }
 
-a:not([class]) {
-	border-bottom: 1px solid currentColor;
-	padding-bottom: 2px;
-}
+// a:not([class]) {
+// 	border-bottom: 1px solid transparent;
+// 	padding-bottom: 1px;
+// }
 
 article a:not([class]) {
 	font-weight: 700;
 }
 
-li:not([class]),
-.entry-title {
-
-	> a:not(.btn) {
-		font-weight: inherit;
-		border-bottom: 0;
-
-		&:after {
-			content: "\E5C8";
-			font-family: "Material Icons";
-			font-weight: normal;
-			font-style: normal;
-			font-size: 1em;
-			line-height: 1;
-			padding-bottom: 2px;
-			padding-left: 4px;
-			vertical-align: middle;
-			text-transform: none;
-			display: inline-block;
-			white-space: nowrap;
-			word-wrap: normal;
-			opacity: 0.6;
-			transition: inherit;
-			transition-property: opacity;
-			-webkit-font-smoothing: antialiased;
-		}
-
-		&:hover:after {
-			opacity: 1;
-		}
-	}
+article p > a:not([class]) {
+	color: #096EB0;
 }
 
-a[href*=".pdf"] {
-
-	&:after {
-		content: "\E873";
-		font-family: "Material Icons";
-		font-weight: normal;
-		font-style: normal;
-		font-size: 1em;
-		line-height: 1;
-		padding-bottom: 2px;
-		padding-left: 4px;
-		vertical-align: middle;
-		text-transform: none;
-		display: inline-block;
-		white-space: nowrap;
-		word-wrap: normal;
-		opacity: 0.6;
-		transition: inherit;
-		transition-property: opacity;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	&:hover:after {
-		opacity: 1;
-	}
+article p > a:hover,
+article p > a:focus {
+	color: #72B0D9;
 }
 
 .site-branding {
 
 	a {
-		border-bottom: 0;
-		padding-bottom: 0;
 		opacity: 1;
 
 		&:hover {
 			opacity: 0.8;
+			text-decoration: none;
 		}
 	}
+}
+
+h2 > a:not([class]) {
+	font-weight: inherit;
 }

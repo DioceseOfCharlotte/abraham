@@ -34,8 +34,8 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 --------------------------------------------------------------*/
 
 /*
- * Normalization
- */
+* Normalization
+*/
 
 /* specify the root styles of the document */
 
@@ -77,7 +77,7 @@ html {
 
 :before, :after {
     vertical-align: inherit;
-    text-decoration: inherit;
+    text-decoration: none;
 }
 
 audio:not([controls]) {
@@ -86,12 +86,12 @@ audio:not([controls]) {
 }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
 
 /* 1 */
 
@@ -103,8 +103,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 /**
- * FORMS
- */
+* FORMS
+*/
 
 input {
     -webkit-border-radius: 0;
@@ -178,11 +178,11 @@ select::-ms-value {
 }
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
 
 button, select {
     text-transform: none;
@@ -199,20 +199,20 @@ legend {
 }
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
 
 optgroup {
     font-weight: bold;
 }
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav,
 section, summary, legend {
@@ -241,33 +241,33 @@ template {
 }
 
 /**
- * Remove the gray background color from active links in IE 10.
- */
+* Remove the gray background color from active links in IE 10.
+*/
 
 a {
     background-color: transparent;
 }
 
 /**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
+* Improve readability of focused elements when they are also in an
+* active/hover state.
+*/
 
 a:active, a:hover {
     outline: 0;
 }
 
 /**
- * Remove border when inside `a` element in IE 8/9/10.
- */
+* Remove border when inside `a` element in IE 8/9/10.
+*/
 
 img {
     border: 0;
 }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
- */
+* Correct overflow not hidden in IE 9/10/11.
+*/
 
 svg:not(:root) {
     overflow: hidden;
@@ -300,8 +300,8 @@ pre {
 }
 
 /**
- * tables
- */
+* tables
+*/
 
 table {
     border-spacing: 0;
@@ -368,24 +368,24 @@ button[disabled], html input[disabled], [aria-disabled] {
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
 
 b, strong {
     font-weight: bold;
 }
 
 /**
- * Address styling not present in Safari and Chrome.
- */
+* Address styling not present in Safari and Chrome.
+*/
 
 dfn {
     font-style: italic;
 }
 
 /**
- * Address styling not present in IE 8/9.
- */
+* Address styling not present in IE 8/9.
+*/
 
 mark {
     color: #000;
@@ -393,8 +393,8 @@ mark {
 }
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
 
 sub, sup {
     position: relative;
@@ -422,8 +422,8 @@ address {
 }
 
 /**
- * LISTS
- */
+* LISTS
+*/
 
 dt {
     font-weight: bold;
@@ -456,7 +456,7 @@ output {
 }
 
 /* Embedded content
-   ========================================================================== */
+========================================================================== */
 
 canvas {
     -ms-touch-action: double-tap-zoom;
@@ -579,84 +579,43 @@ a:not(.btn) {
     opacity: 0.8;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: border-bottom, opacity;
+    transition-property: all;
 }
 
 a:not(.btn):focus, a:not(.btn):hover {
+    text-decoration: underline;
+    border-bottom-color: currentColor;
     opacity: 1;
 }
 
-a:not([class]) {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
+a:not(.btn):focus:before, a:not(.btn):focus:after, a:not(.btn):hover:before,
+a:not(.btn):hover:after {
+    text-decoration: none;
 }
 
 article a:not([class]) {
     font-weight: 700;
 }
 
-li:not([class]) > a:not(.btn), .entry-title > a:not(.btn) {
-    font-weight: inherit;
-    border-bottom: 0;
+article p > a:not([class]) {
+    color: #096EB0;
 }
 
-li:not([class]) > a:not(.btn):after, .entry-title > a:not(.btn):after {
-    content: "\E5C8";
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    vertical-align: middle;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    opacity: 0.6;
-    transition: inherit;
-    transition-property: opacity;
-    -webkit-font-smoothing: antialiased;
-}
-
-li:not([class]) > a:not(.btn):hover:after,
-.entry-title > a:not(.btn):hover:after {
-    opacity: 1;
-}
-
-a[href*=".pdf"]:after {
-    content: "\E873";
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    vertical-align: middle;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    opacity: 0.6;
-    transition: inherit;
-    transition-property: opacity;
-    -webkit-font-smoothing: antialiased;
-}
-
-a[href*=".pdf"]:hover:after {
-    opacity: 1;
+article p > a:hover, article p > a:focus {
+    color: #72B0D9;
 }
 
 .site-branding a {
-    border-bottom: 0;
-    padding-bottom: 0;
     opacity: 1;
 }
 
 .site-branding a:hover {
     opacity: 0.8;
+    text-decoration: none;
+}
+
+h2 > a:not([class]) {
+    font-weight: inherit;
 }
 
 .btn, .button, button, input[type="button"], input[type="reset"],
@@ -1042,20 +1001,17 @@ input[type="button"]:active, input[type="reset"]:active {
 
 .v-icon {
     width: 1em;
-    height: 1em;
+    height: auto;
     vertical-align: -0.15em;
     fill: currentColor;
 }
 
 .icon-xs {
-    max-width: 16px;
-    max-height: 16px;
-    display: inline-block;
+    font-size: 1rem;
 }
 
 .icon-sm {
-    max-width: 24px;
-    max-height: 24px;
+    font-size: 1.5rem;
 }
 
 .icon-md {
@@ -1063,14 +1019,29 @@ input[type="button"]:active, input[type="reset"]:active {
     max-height: 90px;
 }
 
+.icon-md svg {
+    height: auto;
+    width: 100%;
+}
+
 .icon-lg {
     max-width: 210px;
     max-height: 210px;
 }
 
+.icon-lg svg {
+    height: auto;
+    width: 100%;
+}
+
 .icon-xl {
     max-width: 310px;
     max-height: 310px;
+}
+
+.icon-xl svg {
+    height: auto;
+    width: 100%;
 }
 
 /* #BREADCRUMBS
@@ -2021,13 +1992,13 @@ html .u-flex-row-rev {
     flex-direction: row-reverse;
 }
 
-html .u-flex-column-rev {
+html .u-flex-col-rev {
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
 }
 
-html .u-flex-column {
+html .u-flex-col {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2086,31 +2057,31 @@ html .u-flex-end {
     align-items: flex-end;
 }
 
-html .u-flex-justify-between {
+html .u-flex-jb {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
-html .u-flex-justify-around {
+html .u-flex-ja {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
-html .u-flex-justify-center {
+html .u-flex-jc {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
-html .u-flex-justify-start {
+html .u-flex-js {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
 }
 
-html .u-flex-justify-end {
+html .u-flex-je {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -2132,6 +2103,12 @@ html .u-flexed-center {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+}
+
+html .u-flexed-1 {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
 }
 
 html .u-flexed-auto {
@@ -2177,7 +2154,7 @@ html .u-flexed-last {
         display: flex;
     }
 
-    html .u-flex-column-sm {
+    html .u-flex-col-sm {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;

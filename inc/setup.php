@@ -75,7 +75,7 @@ function abraham_assets() {
 	// Styles.
 	wp_enqueue_style(
 		'material-icons',
-		'//fonts.googleapis.com/icon?family=Material+Icons'
+		'https://fonts.googleapis.com/icon?family=Material+Icons'
 	);
 
 	// Load parent theme stylesheet if child theme is active.
