@@ -11,11 +11,10 @@ use Mexitek\PHPColors\Color;
  * Logo
  */
 function abe_site_logo() {
-	if ( function_exists( 'the_custom_logo' ) ) {
-		the_custom_logo();
-	} elseif ( function_exists( 'jetpack_the_site_logo' ) ) {
-		jetpack_the_site_logo();
+	if ( ! function_exists( 'the_custom_logo' ) ) {
+		return;
 	}
+	the_custom_logo();
 }
 
 

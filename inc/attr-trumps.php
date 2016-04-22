@@ -535,7 +535,7 @@ class Attr_Trumps {
 	 */
 	public function post( $classes, $class, $post_id ) {
 		if ( is_admin() ) {
-			return; }
+			return $classes; }
 
 		if ( is_singular() && ! is_front_page() ) {
 			is_single( $post_id ) ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
