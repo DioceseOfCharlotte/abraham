@@ -12,6 +12,7 @@ var postcss = require('gulp-postcss');
 var babel = require('gulp-babel');
 var oldie = require('oldie');
 var autoPrefixer = require('autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 var postcssFlex = require('postcss-flexibility');
 var perfectionist = require('perfectionist');
 
@@ -98,7 +99,7 @@ gulp.task('images', function () {
 // Compile and Automatically Prefix Stylesheets (production)
 gulp.task('styles', function () {
 	gulp.src('src/styles/style.scss')
-		.pipe($.sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe($.sass({
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:')
@@ -106,11 +107,11 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest('.tmp'))
 		.pipe($.concat('style.css'))
 		.pipe(postcss(POSTCSS_PLUGINS))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
 		.pipe($.size({title: 'styles'}))
-		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 });
 
@@ -118,6 +119,9 @@ gulp.task('oldie', function () {
 	gulp.src('.tmp/style.css')
 	.pipe(postcss(POSTCSS_IE))
 	.pipe($.concat('oldie.css'))
+	.pipe(gulp.dest('css'))
+	.pipe($.if('*.css', $.cssnano()))
+	.pipe($.concat('oldie.min.css'))
 	.pipe(gulp.dest('css'))
 });
 
