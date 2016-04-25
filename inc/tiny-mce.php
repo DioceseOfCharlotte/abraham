@@ -82,7 +82,7 @@ function abraham_tiny_mce_formats( $args ) {
 			array(
 				'title'    => __( 'Intro Paragraph', 'abraham' ),
 				'selector' => 'p',
-				'classes'  => 'intro-paragraph u-f-plus',
+				'classes'  => 'intro-paragraph u-lead',
 				'wrapper'  => true,
 			),
 			array(

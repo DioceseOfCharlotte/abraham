@@ -1698,6 +1698,10 @@ html .u-truncate {
     white-space: nowrap;
 }
 
+html .u-lead {
+    font-size: 1.2rem;
+}
+
 html .u-dropcap:first-letter {
     float: left;
     margin: 0;
