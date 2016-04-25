@@ -1282,6 +1282,8 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+  html .u-lead {
+    font-size: 19.2px; }
   html .u-dropcap:first-letter {
     float: left;
     margin: 0;
