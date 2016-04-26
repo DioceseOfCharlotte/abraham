@@ -1,5 +1,6 @@
 /* #LINKS
 \*------------------------------------*/
+
 a:not(.btn) {
 	color: inherit;
 	text-decoration: none;
@@ -8,16 +9,20 @@ a:not(.btn) {
 	transition-timing-function: $animation-curve-default;
 	transition-property: all;
 
-	&:focus,
 	&:hover {
 		text-decoration: underline;
 		border-bottom-color: currentColor;
-		opacity: 1;
 
 		&:before,
 		&:after {
 			text-decoration: none;
 		}
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		opacity: 1;
 	}
 }
 
@@ -25,18 +30,14 @@ a:not(.btn) {
 // 	border-bottom: 1px solid transparent;
 // 	padding-bottom: 1px;
 // }
-
 article a:not([class]) {
 	font-weight: 700;
+	color: #096eb0;
 }
 
-article p > a:not([class]) {
-	color: #096EB0;
-}
-
-article p > a:hover,
-article p > a:focus {
-	color: #72B0D9;
+article a:hover,
+article a:focus {
+	color: #72b0d9;
 }
 
 .site-branding {
@@ -53,4 +54,9 @@ article p > a:focus {
 
 h2 > a:not([class]) {
 	font-weight: inherit;
+}
+
+.entry-title.entry-title > a {
+	color: inherit;
+	text-decoration: none;
 }

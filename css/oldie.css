@@ -496,20 +496,19 @@ p:last-child {
   transition-property: all; }
    {
     text-decoration: underline;
-    border-bottom-color: currentColor;
-    filter: alpha(opacity=100); }
+    border-bottom-color: currentColor; }
      {
       text-decoration: none; }
+   {
+    filter: alpha(opacity=100); }
 
  {
-  font-weight: 700; }
+  font-weight: 700;
+  color: #096eb0; }
 
- {
-  color: #096EB0; }
-
-article p > a:hover,
-article p > a:focus {
-  color: #72B0D9; }
+article a:hover,
+article a:focus {
+  color: #72b0d9; }
 
 .site-branding a {
   filter: alpha(opacity=100); }
@@ -519,6 +518,9 @@ article p > a:focus {
 
  {
   font-weight: inherit; }
+
+.entry-title.entry-title > a {
+  color: inherit; }
 
 .btn,
 .button,
