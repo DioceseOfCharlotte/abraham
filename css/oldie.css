@@ -520,7 +520,8 @@ article a:focus {
   font-weight: inherit; }
 
 .entry-title.entry-title > a {
-  color: inherit; }
+  color: inherit;
+  text-decoration: none; }
 
 .btn,
 .button,
