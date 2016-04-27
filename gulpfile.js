@@ -107,11 +107,11 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest('.tmp'))
 		.pipe($.concat('style.css'))
 		.pipe(postcss(POSTCSS_PLUGINS))
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
 		.pipe($.size({title: 'styles'}))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 });
 

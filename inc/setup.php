@@ -79,17 +79,14 @@ function abraham_assets() {
 	);
 
 	// Load parent theme stylesheet if child theme is active.
-	if ( is_child_theme() ) {
-		wp_enqueue_style( 'abe-parent-style', get_template_directory_uri() . '/style.css' );
-		wp_enqueue_style( 'abe-style', get_stylesheet_uri(), array( 'abe-parent-style' ) );
-	} else {
-		// Load active theme stylesheet.
-		wp_enqueue_style( 'abe-style', get_stylesheet_uri() );
-	}
+	if ( is_child_theme() )
+		wp_enqueue_style( 'hybrid-parent' );
+	// Load active theme stylesheet.
+	wp_enqueue_style( 'hybrid-style' );
 
 	// Scripts.
 	wp_enqueue_script(
-		'abraham_js',
+		'polyfill_js',
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
 		false, false, true
 	);
@@ -99,7 +96,7 @@ function abraham_assets() {
 	// 	trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
 	// 	false, false, true
 	// );
-	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ).'css/oldie.css', array( 'abe-style' ) );
+	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
 
 	wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ).'js/flexibility.js',  false, false, false );
