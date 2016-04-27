@@ -1,6 +1,6 @@
 <?php
 /**
- * List of related articles.
+ * Image format template.
  *
  * @package abraham
  */
