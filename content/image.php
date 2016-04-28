@@ -6,7 +6,7 @@
  */
 
 ?>
-<section <?php hybrid_attr( 'post' ); ?>>
+<article <?php hybrid_attr( 'post' ); ?>>
 	<?php
 		get_the_image(array(
 			'size' => 'abe-hd',
@@ -26,4 +26,4 @@
 		<?php get_template_part( 'components/entry', 'footer' ); ?>
 </div>
 <a class="u-1of1 u-abs u-bottom0 u-z1 u-top0 u-left0" href="<?php the_permalink(); ?>"></a>
-</section>
+</article>

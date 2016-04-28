@@ -6,7 +6,7 @@
  */
 
 ?>
-<section class="no-results not-found u-mx-auto u-mb2">
+<article class="no-results not-found u-mx-auto u-mb2">
 	<div class="page-content">
 
 		<?php if ( is_search() ) : ?>
@@ -22,4 +22,4 @@
 		<?php endif; ?>
 
 	</div><!-- .page-content -->
-</section><!-- .no-results -->
+</article><!-- .no-results -->
