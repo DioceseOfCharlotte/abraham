@@ -491,7 +491,6 @@ p:last-child {
   color: inherit;
   text-decoration: none;
   filter: alpha(opacity=80);
-  display: inline-block;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: all; }
@@ -521,7 +520,10 @@ p:last-child {
 
 .entry-title.entry-title > a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  -js-display: flex;
+  display: flex;
+  align-items: center; }
 
 .btn,
 .button,

@@ -577,7 +577,6 @@ a:not(.btn) {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
-    display: inline-block;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
