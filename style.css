@@ -577,6 +577,7 @@ a:not(.btn) {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
+    display: inline-block;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
@@ -595,12 +596,12 @@ a:not(.btn):active, a:not(.btn):focus, a:not(.btn):hover {
     opacity: 1;
 }
 
-article a:not([class]) {
-    font-weight: 700;
+a:not([class]) {
+    font-weight: 500;
     color: #096eb0;
 }
 
-article a:hover, article a:focus {
+a:not([class]):hover, a:not([class]):focus {
     color: #72b0d9;
 }
 
@@ -620,6 +621,12 @@ h2 > a:not([class]) {
 .entry-title.entry-title > a {
     color: inherit;
     text-decoration: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .btn, .button, button, input[type="button"], input[type="reset"],

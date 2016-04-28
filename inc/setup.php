@@ -28,11 +28,10 @@ function abraham_setup() {
 	add_theme_support( 'theme-layouts', array( 'default' => '1-column' ) );
 
 	register_nav_menus(array(
-		'primary'   => __( 'Primary', 'abraham' ),
+		'primary'   => esc_html__( 'Primary', 'abraham' ),
 	));
 
 	add_theme_support('post-formats', array(
-		'aside',
 		'gallery',
 		'link',
 		'image',
