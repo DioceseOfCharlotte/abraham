@@ -575,32 +575,26 @@ p:last-child {
 
 a:not(.btn) {
     color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: all;
-}
-
-a:not(.btn):hover {
-    text-decoration: underline;
-    border-bottom-color: currentColor;
-}
-
-a:not(.btn):hover:before, a:not(.btn):hover:after {
-    text-decoration: none;
-}
-
-a:not(.btn):active, a:not(.btn):focus, a:not(.btn):hover {
-    opacity: 1;
 }
 
 a:not([class]) {
     font-weight: 500;
     color: #096eb0;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: all;
 }
 
-a:not([class]):hover, a:not([class]):focus {
+a:not([class]):hover {
+    text-decoration: underline;
+}
+
+a:not([class]):hover:before, a:not([class]):hover:after {
+    text-decoration: none;
+}
+
+a:not([class]):active, a:not([class]):focus, a:not([class]):hover {
     color: #72b0d9;
 }
 
@@ -619,6 +613,7 @@ h2 > a:not([class]) {
 
 .entry-title.entry-title > a {
     color: inherit;
+    opacity: 0.7;
     text-decoration: none;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -626,6 +621,10 @@ h2 > a:not([class]) {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.entry-title.entry-title > a:hover {
+    opacity: 1;
 }
 
 .btn, .button, button, input[type="button"], input[type="reset"],
@@ -1147,7 +1146,7 @@ html {
 \*------------------------------------*//* #FLEXBOX
 \*------------------------------------*//*// small*//*// medium*//*// large*//* #UTILITY LAYOUT
 \*------------------------------------*//* #WHITE SPACE
-\*------------------------------------*//*------------------------------------*	#HELPERS
+\*------------------------------------*//*------------------------------------*#HELPERS
 \*------------------------------------*/
 }
 
@@ -2407,8 +2406,33 @@ html .u-visible {
     }
 }
 
+html .shadow-hover {
+    overflow: visible;
+}
+
 html .shadow-hover:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+    z-index: 2;
+}
+
+html .shadow-hover:after {
+    content: "";
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: opacity;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
+                0 11px 15px -7px rgba(0, 0, 0, 0.12),
+                0 24px 38px 3px currentColor;
+}
+
+html .shadow-hover:hover:after {
+    opacity: 1;
 }
 
 html .u-m1 {
@@ -3009,50 +3033,38 @@ html .aligncenter {
 html .disabled {
     pointer-events: none;
     cursor: default;
-    opacity: .5;
+    opacity: 0.5;
 }
 
-html .shadow0 {
+html .u-shadow0 {
     box-shadow: none;
 }
 
-html .u-shadow--2dp {
+html .u-shadow1, html .u-shadow--2dp {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
                 0 3px 1px -2px rgba(0, 0, 0, 0.2),
                 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-html .u-shadow--3dp {
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
-                0 3px 3px -2px rgba(0, 0, 0, 0.2),
-                0 1px 8px 0 rgba(0, 0, 0, 0.12);
-}
-
-html .u-shadow--4dp {
+html .u-shadow2, html .u-shadow--3dp, html .u-shadow--4dp {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
                 0 1px 10px 0 rgba(0, 0, 0, 0.12),
                 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-html .u-shadow--6dp {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
-                0 1px 18px 0 rgba(0, 0, 0, 0.12),
-                0 3px 5px -1px rgba(0, 0, 0, 0.2);
-}
-
-html .u-shadow--8dp {
+html .u-shadow3, html .u-shadow--6dp, html .u-shadow--8dp {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
                 0 3px 14px 2px rgba(0, 0, 0, 0.12),
                 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
 
-html .u-shadow--16dp {
+html .u-shadow4, html .u-shadow--16dp {
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
                 0 6px 30px 5px rgba(0, 0, 0, 0.12),
                 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-html .u-shadow--24dp {
+html .u-shadow5, html .u-shadow--24dp {
     box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
                 0 11px 15px -7px rgba(0, 0, 0, 0.12),
                 0 24px 38px 3px rgba(0, 0, 0, 0.2);

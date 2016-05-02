@@ -3,15 +3,18 @@
 
 a:not(.btn) {
 	color: inherit;
+}
+
+a:not([class]) {
+	font-weight: 500;
+	color: #096eb0;
 	text-decoration: none;
-	opacity: 0.8;
 	transition-duration: $transition-time;
 	transition-timing-function: $animation-curve-default;
 	transition-property: all;
 
 	&:hover {
 		text-decoration: underline;
-		border-bottom-color: currentColor;
 
 		&:before,
 		&:after {
@@ -22,7 +25,7 @@ a:not(.btn) {
 	&:active,
 	&:focus,
 	&:hover {
-		opacity: 1;
+		color: #72b0d9;
 	}
 }
 
@@ -30,15 +33,15 @@ a:not(.btn) {
 // 	border-bottom: 1px solid transparent;
 // 	padding-bottom: 1px;
 // }
-a:not([class]) {
-	font-weight: 500;
-	color: #096eb0;
-}
-
-a:not([class]):hover,
-a:not([class]):focus {
-	color: #72b0d9;
-}
+// a:not([class]) {
+// 	font-weight: 500;
+// 	color: #096eb0;
+// }
+//
+// a:not([class]):hover,
+// a:not([class]):focus {
+// 	color: #72b0d9;
+// }
 
 .site-branding {
 
@@ -58,7 +61,12 @@ h2 > a:not([class]) {
 
 .entry-title.entry-title > a {
 	color: inherit;
+	opacity: 0.7;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
+
+	&:hover {
+		opacity: 1;
+	}
 }
