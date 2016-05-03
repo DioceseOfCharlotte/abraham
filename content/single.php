@@ -5,9 +5,9 @@
  * @package abraham
  */
 
-if ( ! hybrid_post_has_content() ) {
-	return;
-}
+// if ( ! hybrid_post_has_content() ) {
+// 	return;
+// }
 ?>
 
 <article <?php hybrid_attr( 'post' ); ?>>
