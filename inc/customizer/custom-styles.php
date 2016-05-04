@@ -221,6 +221,8 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-fill-2{fill:#{$colorBase}}";
 		$style .= "#page .u-fill-2-light{fill:#{$colorLight}}";
 		$style .= "#page .u-fill-2-dark{fill:#{$colorDark}}";
+		$style .= "a:not(.btn):before,a:not(.btn):after{color:#{$colorBase}}";
+		$style .= "a:not(.btn):hover:before,a:not(.btn):hover:after{color:#{$colorBase}}";
 
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);

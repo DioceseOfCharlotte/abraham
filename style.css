@@ -573,29 +573,48 @@ p:last-child {
 /* #LINKS
 \*------------------------------------*/
 
-a:not(.btn) {
+a {
     color: inherit;
-}
-
-a:not([class]) {
-    font-weight: 500;
-    color: #096eb0;
     text-decoration: none;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
 }
 
-a:not([class]):hover {
-    text-decoration: underline;
+a:active, a:focus, a:hover {
+    opacity: 0.6;
 }
 
-a:not([class]):hover:before, a:not([class]):hover:after {
+a:active:before, a:active:after, a:focus:before, a:focus:after, a:hover:before,
+a:hover:after {
+    opacity: 1;
+    color: #096eb0;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: all;
+}
+
+a:before, a:after {
+    opacity: 0.6;
+    color: #096eb0;
+}
+
+a:not([class]) {
+    font-weight: 500;
+    color: #096eb0;
     text-decoration: none;
 }
 
 a:not([class]):active, a:not([class]):focus, a:not([class]):hover {
     color: #72b0d9;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+a:not([class]):active:before, a:not([class]):active:after,
+a:not([class]):focus:before, a:not([class]):focus:after,
+a:not([class]):hover:before, a:not([class]):hover:after {
+    text-decoration: none;
 }
 
 .site-branding a {
@@ -621,6 +640,9 @@ h2 > a:not([class]) {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .entry-title.entry-title > a:hover {
