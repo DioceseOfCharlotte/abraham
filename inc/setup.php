@@ -11,6 +11,13 @@ add_action( 'wp_enqueue_scripts', 'abraham_assets' );
 add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
+add_filter( 'show_admin_bar' , 'abe_show_admin_bar');
+
+
+function abe_show_admin_bar( $content ) {
+	return defined( 'WP_DEBUG' ) && WP_DEBUG ? $content : false;
+}
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
