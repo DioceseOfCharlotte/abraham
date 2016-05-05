@@ -1,114 +1,117 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------*/
 .u-small {
-    font-size: 80%;
+	font-size: 80%;
 }
 
 .u-f1 {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 .u-f-minus {
-    font-size: .9rem;
+	font-size: 0.9rem;
 }
 
 .u-f-plus {
-    font-size: 1.1rem;
+	font-size: 1.1rem;
 }
 
 .u-lh-1 {
-    line-height: 1;
+	line-height: 1;
 }
 
 .u-lh-2 {
-    line-height: 2;
+	line-height: 2;
 }
 
 .u-bold {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .u-heading {
-    font-family: $serif;
+	font-family: $serif;
 }
 
 .u-body {
-    font-family: $sans-serif;
-    font-weight: 400;
+	font-family: $sans-serif;
+	font-weight: 400;
 }
 
 .u-regular,
 .u-normal {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .u-italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 .u-caps {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 .u-text-shadow {
-    text-shadow: 1px 1px 5px rgba($color-text-dark, 0.6);
+	text-shadow: 1px 1px 5px rgba($color-text-dark, 0.6);
 }
 
 .u-text-left {
-    text-align: left;
+	text-align: left;
 }
 
 .u-text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .u-text-right {
-    text-align: right;
+	text-align: right;
 }
 
 .u-text-justify {
-    text-align: justify;
+	text-align: justify;
 }
 
 .u-nowrap {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 .u-break-word {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .u-truncate {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .u-lead {
 	font-size: 1.2rem;
+	opacity: 0.8;
 }
 
 .u-dropcap:first-letter {
-    float: left;
-    margin: 0;
-    padding: 0.125em 0.125em 0 0;
-    font-size: 5em;
-    font-family: Copperplate;
-    line-height: 0.5;
-    text-indent: 0;
-    background: transparent;
-    color: inherit;
+	float: left;
+	margin: 0;
+	padding: 0.1em 0.125em 0 0;
+	font-size: 4em;
+	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	line-height: 0.7;
+	text-indent: 0;
+	margin-left: -0.2em;
+	background: transparent;
+
+	//color: inherit;
 }
 
 .u-list-reset {
-    list-style: none;
+	list-style: none;
 
-    > ul,
-    > li {
-        list-style: none;
-        padding-left: 0;
-        margin-left: 0;
-    }
+	> ul,
+	> li {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+	}
 }

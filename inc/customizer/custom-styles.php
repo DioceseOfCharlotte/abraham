@@ -152,8 +152,8 @@ final class Abraham_Custom_Styles {
 		/* === Color === */
 
 
-		$style .= "#page .u-text-1{color:#{$colorBase}}";
-		$style .= "#page .u-text-1-dark,.u-dropcap:first-letter{color:#{$colorDark}}";
+		$style .= "#page .u-text-1,.u-dropcap:first-letter{color:#{$colorBase}}";
+		$style .= "#page .u-text-1-dark{color:#{$colorDark}}";
 		$style .= "#page .u-text-1-light{color:#{$colorLight}}";
 		$style .= "#page .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "#page .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
@@ -221,8 +221,8 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-fill-2{fill:#{$colorBase}}";
 		$style .= "#page .u-fill-2-light{fill:#{$colorLight}}";
 		$style .= "#page .u-fill-2-dark{fill:#{$colorDark}}";
-		$style .= "a:not(.btn):before,a:not(.btn):after{color:#{$colorBase}}";
-		$style .= "a:not(.btn):hover:before,a:not(.btn):hover:after{color:#{$colorBase}}";
+		$style .= "a:not(.btn):before,a:not(.btn):after{color:#{$colorLight}}";
+		$style .= "a:not(.btn):hover:before,a:not(.btn):hover:after{color:#{$colorDark}}";
 
 		/* Return the styles. */
 		return str_replace(array("\r", "\n", "\t"), '', $style);
@@ -234,7 +234,7 @@ final class Abraham_Custom_Styles {
 		$b_family    = get_theme_mod( 'body_font', '' );
 
 		if ( $h_family )
-			$font .= sprintf( "#page .u-heading,.u-dropcap:first-letter {font-family: '%s';}", esc_attr( $h_family ) );
+			$font .= sprintf( "#page .u-heading {font-family: '%s';}", esc_attr( $h_family ) );
 
 		if ( $b_family )
 			$font .= sprintf( "#page .u-body,body,p {font-family: '%s';}", esc_attr( $b_family ) );

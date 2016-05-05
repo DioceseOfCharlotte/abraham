@@ -576,45 +576,29 @@ p:last-child {
 a {
     color: inherit;
     text-decoration: none;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: all;
-}
-
-a:active, a:focus, a:hover {
-    opacity: 0.6;
-}
-
-a:active:before, a:active:after, a:focus:before, a:focus:after, a:hover:before,
-a:hover:after {
     opacity: 1;
-    color: #096eb0;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
 }
 
 a:before, a:after {
-    opacity: 0.6;
+    color: #72b0d9;
+    transition: inherit;
+}
+
+a:active, a:focus, a:hover {
+    opacity: 0.7;
+}
+
+a:active:before, a:active:after, a:focus:before, a:focus:after, a:hover:before,
+a:hover:after {
     color: #096eb0;
 }
 
 a:not([class]) {
-    font-weight: 500;
-    color: #096eb0;
-    text-decoration: none;
-}
-
-a:not([class]):active, a:not([class]):focus, a:not([class]):hover {
-    color: #72b0d9;
-    opacity: 1;
-    text-decoration: underline;
-}
-
-a:not([class]):active:before, a:not([class]):active:after,
-a:not([class]):focus:before, a:not([class]):focus:after,
-a:not([class]):hover:before, a:not([class]):hover:after {
-    text-decoration: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .site-branding a {
@@ -630,7 +614,7 @@ h2 > a:not([class]) {
     font-weight: inherit;
 }
 
-.entry-title.entry-title > a {
+.entry-title > a {
     color: inherit;
     opacity: 0.7;
     text-decoration: none;
@@ -645,7 +629,7 @@ h2 > a:not([class]) {
     justify-content: space-between;
 }
 
-.entry-title.entry-title > a:hover {
+.entry-title > a:hover {
     opacity: 1;
 }
 
@@ -661,10 +645,11 @@ input[type="submit"] {
     text-decoration: none;
     text-align: center;
     margin: 0;
+    opacity: 1;
     height: auto;
     min-height: 2.5rem;
     cursor: pointer;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     border: 1px solid transparent;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -673,6 +658,7 @@ input[type="submit"] {
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover,
 input[type="reset"]:hover, input[type="submit"]:hover {
+    opacity: 1;
     text-decoration: none;
     box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.1);
 }
@@ -694,11 +680,10 @@ input[type="reset"]:focus, input[type="submit"]:focus {
 \*------------------------------------*/
 
 li {
-    margin-bottom: .5em;
+    margin-bottom: .25em;
 }
 
 ul, ol, dl {
-    line-height: 1.6;
     list-style-position: inside;
 }
 
@@ -889,6 +874,41 @@ svg {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+}
+
+.u-list-group {
+    display: block;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.u-list-group > li {
+    letter-spacing: 0.04em;
+    line-height: 1;
+    min-height: 48px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    cursor: default;
+    overflow: hidden;
+}
+
+.u-list-group > li:before {
+    position: absolute;
+    margin-left: -1.5em;
+    content: "\2022";
+}
+
+.u-list-group.bullet-cross > li:before {
+    content: "\2671";
+}
+
+.u-list-group.bullet-heart > li:before {
+    content: "\2661";
 }
 
 /*--------------------------------------------------------------
@@ -1646,7 +1666,7 @@ html .u-f1 {
 }
 
 html .u-f-minus {
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 html .u-f-plus {
@@ -1731,18 +1751,24 @@ html .u-truncate {
 
 html .u-lead {
     font-size: 1.2rem;
+    opacity: 0.8;
 }
 
 html .u-dropcap:first-letter {
     float: left;
     margin: 0;
-    padding: 0.125em 0.125em 0 0;
-    font-size: 5em;
-    font-family: Copperplate;
-    line-height: 0.5;
+    padding: 0.1em 0.125em 0 0;
+    font-size: 4em;
+    font-family: Garamond,
+                 Baskerville,
+                 "Baskerville Old Face",
+                 "Hoefler Text",
+                 "Times New Roman",
+                 serif;
+    line-height: 0.7;
     text-indent: 0;
+    margin-left: -0.2em;
     background: transparent;
-    color: inherit;
 }
 
 html .u-list-reset {
@@ -1762,6 +1788,12 @@ html .u-fit {
 
 html .u-max-width {
     max-width: 84rem;
+}
+
+html .u-text-wrap {
+    max-width: calc(52rem + 3rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html .u-container {

@@ -1,200 +1,204 @@
-
-
 .u-fit {
-    max-width  : 100%;
-    white-space: normal;
+	max-width: 100%;
+	white-space: normal;
 }
 
 .u-max-width {
-    max-width: $container-wide;
+	max-width: $container-wide;
+}
+
+.u-text-wrap {
+	max-width: calc(#{$paragraph-width} + #{$space4});
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .u-container {
-    max-width: $container;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: $container;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .u-container-wide {
-    max-width: $container-wide;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: $container-wide;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .u-max-center {
-    max-width: $container-wide;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: $container-wide;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .u-width-auto {
-    width: auto;
+	width: auto;
 }
 
 .u-1of1 {
-    width: 100%;
+	width: 100%;
 }
 
 .u-1of2 {
-    width: calc(50% - #{$gutter});
+	width: calc(50% - #{$gutter});
 }
 
 .u-1of3 {
-    width: calc(33.33% - #{$gutter});
+	width: calc(33.33% - #{$gutter});
 }
 
 .u-2of3 {
-    width: calc(66.66% - #{$gutter});
+	width: calc(66.66% - #{$gutter});
 }
 
 .u-1of4 {
-    width: calc(25% - #{$gutter});
+	width: calc(25% - #{$gutter});
 }
 
 .u-3of4 {
-    width: calc(75% - #{$gutter});
+	width: calc(75% - #{$gutter});
 }
 
 .u-1of5 {
-    width: calc(20% - #{$gutter});
+	width: calc(20% - #{$gutter});
 }
 
 .u-2of5 {
-    width: calc(40% - #{$gutter});
+	width: calc(40% - #{$gutter});
 }
 
 .u-3of5 {
-    width: calc(60% - #{$gutter});
+	width: calc(60% - #{$gutter});
 }
 
 .u-4of5 {
-    width: calc(80% - #{$gutter});
+	width: calc(80% - #{$gutter});
 }
 
 @include md {
-    .u-1of1-md {
-        width: 100%;
-    }
+	.u-1of1-md {
+		width: 100%;
+	}
 
-    .u-1of2-md {
-        width: calc(50% - #{$gutter});
+	.u-1of2-md {
+		width: calc(50% - #{$gutter});
 
-        &:last-of-type {
-            max-width: calc(50% - #{$gutter});
-        }
-    }
+		&:last-of-type {
+			max-width: calc(50% - #{$gutter});
+		}
+	}
 
-    .u-1of3-md {
-        width: calc(33.33% - #{$gutter});
+	.u-1of3-md {
+		width: calc(33.33% - #{$gutter});
 
-        &:last-of-type,
-        &:nth-last-child(2) {
-            max-width: calc(33.33% - #{$gutter});
-        }
-    }
+		&:last-of-type,
+		&:nth-last-child(2) {
+			max-width: calc(33.33% - #{$gutter});
+		}
+	}
 
-    .u-2of3-md {
-        width: calc(66.66% - #{$gutter});
-    }
+	.u-2of3-md {
+		width: calc(66.66% - #{$gutter});
+	}
 
-    .u-1of4-md {
-        width: calc(25% - #{$gutter});
+	.u-1of4-md {
+		width: calc(25% - #{$gutter});
 
-        &:last-of-type,
-        &:nth-last-child(2),
-        &:nth-last-child(3) {
-            max-width: calc(25% - #{$gutter});
-        }
-    }
+		&:last-of-type,
+		&:nth-last-child(2),
+		&:nth-last-child(3) {
+			max-width: calc(25% - #{$gutter});
+		}
+	}
 
-    .u-3of4-md {
-        width: calc(75% - #{$gutter});
-    }
+	.u-3of4-md {
+		width: calc(75% - #{$gutter});
+	}
 
-    .u-1of5-md {
-        width: calc(20% - #{$gutter});
-    }
+	.u-1of5-md {
+		width: calc(20% - #{$gutter});
+	}
 
-    .u-2of5-md {
-        width: calc(40% - #{$gutter});
-    }
+	.u-2of5-md {
+		width: calc(40% - #{$gutter});
+	}
 
-    .u-3of5-md {
-        width: calc(60% - #{$gutter});
-    }
+	.u-3of5-md {
+		width: calc(60% - #{$gutter});
+	}
 
-    .u-4of5-md {
-        width: calc(80% - #{$gutter});
-    }
+	.u-4of5-md {
+		width: calc(80% - #{$gutter});
+	}
 
-    .u-width-auto-md {
-        width: auto;
-    }
+	.u-width-auto-md {
+		width: auto;
+	}
 }
 
 @include lg {
-    .u-1of1-lg {
-        width: 100%;
-    }
+	.u-1of1-lg {
+		width: 100%;
+	}
 
-    .u-1of2-lg {
-        width: calc(50% - #{$gutter});
+	.u-1of2-lg {
+		width: calc(50% - #{$gutter});
 
-        &:last-of-type {
-            max-width: calc(50% - #{$gutter});
-        }
-    }
+		&:last-of-type {
+			max-width: calc(50% - #{$gutter});
+		}
+	}
 
-    .u-1of3-lg {
-        width: calc(33.33% - #{$gutter});
+	.u-1of3-lg {
+		width: calc(33.33% - #{$gutter});
 
-        &:last-of-type,
-        &:nth-last-child(2) {
-            max-width: calc(33.33% - #{$gutter});
-        }
-    }
+		&:last-of-type,
+		&:nth-last-child(2) {
+			max-width: calc(33.33% - #{$gutter});
+		}
+	}
 
-    .u-2of3-lg {
-        width: calc(66.66% - #{$gutter});
-    }
+	.u-2of3-lg {
+		width: calc(66.66% - #{$gutter});
+	}
 
-    .u-1of4-lg {
-        width: calc(25% - #{$gutter});
+	.u-1of4-lg {
+		width: calc(25% - #{$gutter});
 
-        &:last-of-type,
-        &:nth-last-child(2),
-        &:nth-last-child(3) {
-            max-width: calc(25% - #{$gutter});
-        }
-    }
+		&:last-of-type,
+		&:nth-last-child(2),
+		&:nth-last-child(3) {
+			max-width: calc(25% - #{$gutter});
+		}
+	}
 
-    .u-3of4-lg {
-        width: calc(75% - #{$gutter});
-    }
+	.u-3of4-lg {
+		width: calc(75% - #{$gutter});
+	}
 
-    .u-1of5-lg {
-        width: calc(20% - #{$gutter});
-    }
+	.u-1of5-lg {
+		width: calc(20% - #{$gutter});
+	}
 
-    .u-2of5-lg {
-        width: calc(40% - #{$gutter});
-    }
+	.u-2of5-lg {
+		width: calc(40% - #{$gutter});
+	}
 
-    .u-3of5-lg {
-        width: calc(60% - #{$gutter});
-    }
+	.u-3of5-lg {
+		width: calc(60% - #{$gutter});
+	}
 
-    .u-4of5-lg {
-        width: calc(80% - #{$gutter});
-    }
+	.u-4of5-lg {
+		width: calc(80% - #{$gutter});
+	}
 }
 
 @include sm {
-    .u-1of1-sm {
-        width: 100%;
-    }
+	.u-1of1-sm {
+		width: 100%;
+	}
 
-    .u-1of2-sm {
-        width: calc(50% - #{$gutter});
-    }
+	.u-1of2-sm {
+		width: calc(50% - #{$gutter});
+	}
 }

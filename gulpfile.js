@@ -4,6 +4,7 @@
 
 // 'use strict';
 
+var fs = require('graceful-fs');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
