@@ -9,6 +9,7 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
+var imagemin = require('gulp-imagemin');
 var postcss = require('gulp-postcss');
 var babel = require('gulp-babel');
 var oldie = require('oldie');
@@ -16,6 +17,7 @@ var autoPrefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var postcssFlex = require('postcss-flexibility');
 var perfectionist = require('perfectionist');
+var svgo = require('svgo');
 
 var $ = gulpLoadPlugins();
 var reload = browserSync.reload;
@@ -70,10 +72,10 @@ gulp.task('lint', function () {
 // Optimize images
 gulp.task('images', function () {
 	gulp.src('src/images/**/*.{svg,png,jpg}')
-	.pipe($.imagemin({
+	.pipe(imagemin({
 		progressive: true,
 		interlaced: true,
-		svgoPlugins: [{
+		plugins: [{
                 cleanupIDs: true
             }, {
                 removeTitle: true

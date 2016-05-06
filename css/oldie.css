@@ -424,7 +424,7 @@ html {
 body {
   color: #36474f;
   background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Dejavu Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   hyphens: auto;
@@ -451,7 +451,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Dejavu Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.25;
   margin-bottom: .5em; }
@@ -1284,7 +1284,7 @@ html {
   html .u-heading {
     font-family: georgia, times, serif; }
   html .u-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Dejavu Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400; }
   html .u-regular,
   html .u-normal {
