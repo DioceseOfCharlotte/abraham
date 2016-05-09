@@ -6,14 +6,11 @@ $base-line-height: 1.5;
 $base-background-color: #fff;
 $base-radius: 2px;
 $base-opacity: 0.75;
-
 $serif: georgia, times, serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
-
 $container: 74rem;
 $container-wide: 84rem;
 $paragraph-width: 52rem;
-
 $bold: 700;
 $jumbo: 3rem;
 $h1: 2.5rem;
@@ -21,7 +18,7 @@ $h2: 2rem;
 $h3: 1.5rem;
 $h4: 1.25rem;
 $h5: 1rem;
-$h6: .875rem;
+$h6: 0.875rem;
 $heading-line-height: 1.25;
 $heading-font-family: $sans-serif;
 $heading-font-weight: 500;
@@ -38,31 +35,26 @@ $color2-dark: darken($color2, 10);
 $color3: #ffd870;
 $color3-light: lighten($color3, 10);
 $color3-dark: darken($color3, 10);
-
 $color-grey: $grey;
 $color-grey-dark: darken($color-grey, 20);
 $color-grey-light: lighten($color-grey, 20);
-
 $color-black: $black;
 $color-white: $white;
-
-$darken1: rgba($black,0.1);
-$darken2: rgba($black,0.3);
-$darken3: rgba($black,0.5);
-$darken4: rgba($black,0.9);
-$lighten1: rgba($white,0.1);
-$lighten2: rgba($white,0.3);
-$lighten3: rgba($white,0.5);
-$lighten4: rgba($white,0.95);
-
+$darken1: rgba($black, 0.1);
+$darken2: rgba($black, 0.3);
+$darken3: rgba($black, 0.5);
+$darken4: rgba($black, 0.9);
+$lighten1: rgba($white, 0.1);
+$lighten2: rgba($white, 0.3);
+$lighten3: rgba($white, 0.5);
+$lighten4: rgba($white, 0.95);
 $color-text: $blue-grey-700;
-$color-text-light: rgba($color-text, .7);
+$color-text-light: rgba($color-text, 0.7);
 $color-text-dark: darken($color-text, 10);
 $color-text-white: $blue-grey-50;
-$text-muted: rgba($color-text, .5);
+$text-muted: rgba($color-text, 0.5);
 $color-links: $color1-dark;
 $color-links-hover: $color1;
-
 $opacity: $base-opacity;
 
 /*--------------------------------------------------------------
@@ -73,7 +65,6 @@ $color-valid: $green-400;
 $color-warning: $yellow-400;
 $color-information: $blue-400;
 
-
 /*--------------------------------------------------------------
 # Spacing
 --------------------------------------------------------------*/
@@ -81,9 +72,7 @@ $space1: 0.5rem;
 $space2: 1rem;
 $space3: 1.5rem;
 $space4: 3rem;
-
 $gutter: $space3;
-
 $paragraph-margin-bottom: $space2;
 $heading-margin-bottom: $space1;
 $list-margin-bottom: $space2;

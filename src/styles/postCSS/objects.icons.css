@@ -1,3 +1,18 @@
+$darken1: #7fdbff;
+$darken2: #39cccc;
+$name: info;
+
+@define-mixin icon $name {
+
+    &:before {
+        content: " ";
+		background-image: svg-load($name.svg, fill=$darken1);
+		background-repeat: no-repeat;
+		width: 1em;
+		height: 1em;
+    }
+}
+
 .v-icon {
 	width: 1em;
 	height: auto;
@@ -44,4 +59,8 @@
 		height: auto;
 		width: 100%;
 	}
+}
+
+.entry-title > a {
+ 	@mixin icon $name;
 }

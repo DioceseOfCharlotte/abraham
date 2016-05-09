@@ -1,0 +1,48 @@
+.v-icon {
+	width: 1em;
+	height: auto;
+	vertical-align: -0.15em;
+	fill: currentColor;
+}
+.icon-xs {
+	font-size: 1rem;
+}
+.icon-sm {
+	font-size: 1.5rem;
+}
+.icon-md {
+	width: 100%;
+	max-width: 90px;
+	max-height: 90px;
+}
+.icon-md svg {
+	height: auto;
+	width: 100%;
+}
+.icon-lg {
+	width: 100%;
+	max-width: 210px;
+	max-height: 210px;
+}
+.icon-lg svg {
+	height: auto;
+	width: 100%;
+}
+.icon-xl {
+	width: 100%;
+	max-width: 310px;
+	max-height: 310px;
+}
+.icon-xl svg {
+	height: auto;
+	width: 100%;
+}
+.entry-title > a {
+}
+.entry-title > a:before {
+	content: " ";
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%237fdbff'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	width: 1em;
+	height: 1em;
+}
