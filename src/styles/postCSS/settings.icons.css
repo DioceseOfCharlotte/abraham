@@ -1,0 +1,19 @@
+
+
+
+@define-mixin icon $name: info, $fill: #36474f {
+	&:before {
+		content: " ";
+		background-image: svg-load($name.svg, fill=$fill);
+		background-repeat: no-repeat;
+		width: 1.3em;
+		height: 1.3em;
+		background-position: center;
+		display: inline-block;
+		margin-right: 0.5em;
+		border-radius: 50%;
+		vertical-align: middle;
+		background-color: color(white a(50%));
+		border: .2em solid transparent;
+	}
+}
