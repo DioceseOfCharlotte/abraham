@@ -11,6 +11,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var imagemin = require('gulp-imagemin');
+var svgmin = require('gulp-svgmin');
 var postcss = require('gulp-postcss');
 var preCss = require('precss');
 var babel = require('gulp-babel');
@@ -23,7 +24,7 @@ var postcssFlex = require('postcss-flexibility');
 var postSvg = require('postcss-inline-svg');
 var syntax = require('postcss-scss');
 var styleFmt = require('stylefmt');
-var svgmin = require('gulp-svgmin');
+var cssnano = require('gulp-cssnano');
 
 var $ = gulpLoadPlugins();
 var reload = browserSync.reload;
@@ -41,21 +42,20 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-
 var PRECSS_PLUGINS = [
-	atImport(),
-	preCss(),
+	atImport,
+	preCss,
 	postSvg({
-		path: './images/css-icons'
-	}),
+		path: './images/icons'
+	})
 ];
 
 var POSTCSS_PLUGINS = [
-	atImport(),
+	atImport,
 	autoPrefixer({
 		browsers: AUTOPREFIXER_BROWSERS
 	}),
-//	stylefmt()
+	//	stylefmt()
 	perfectionist({
 		cascade: false
 	})
@@ -87,13 +87,17 @@ gulp.task('lint', function() {
 
 // ***** Production build tasks ****** //
 // Optimize images
-gulp.task('svg', function() {
-	gulp.src('src/images/**/*.svg')
+gulp.task('images', function() {
+	gulp.src('src/images/icons/*.svg')
 		.pipe(svgmin({
 			plugins: [{
 				cleanupIDs: true
 			}, {
 				removeTitle: true
+			}, {
+				removeAttrs: {
+					attrs: '(fill|stroke)'
+				}
 			}, {
 				addClassesToSVGElement: {
 					className: 'v-icon'
@@ -110,7 +114,7 @@ gulp.task('svg', function() {
 				removeDimensions: true
 			}]
 		}))
-		.pipe(gulp.dest('images'))
+		.pipe(gulp.dest('./images/icons'))
 		.pipe($.size({
 			title: 'images'
 		}))
@@ -118,8 +122,10 @@ gulp.task('svg', function() {
 
 // Compile and Automatically Prefix Stylesheets (production)
 gulp.task('presass', function() {
-	gulp.src('src/styles/postCSS/**/*.css')
-		.pipe($.if('*.css', postcss(PRECSS_PLUGINS, {syntax: syntax })))
+	gulp.src('src/styles/postCSS/index.css')
+		.pipe($.if('*.css', postcss(PRECSS_PLUGINS, {
+			syntax: syntax
+		})))
 		.pipe($.concat('_postcss.scss'))
 		.pipe(gulp.dest('src/styles/'))
 });
@@ -136,7 +142,7 @@ gulp.task('styles', function() {
 		.pipe($.if('*.css', $.concat('style.css')))
 		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('./'))
-		.pipe($.if('*.css', $.cssnano()))
+		.pipe($.if('*.css', cssnano()))
 		.pipe($.concat('style.min.css'))
 		.pipe($.size({
 			title: 'styles'
@@ -150,7 +156,7 @@ gulp.task('oldie', function() {
 		.pipe(postcss(POSTCSS_IE))
 		.pipe($.concat('oldie.css'))
 		.pipe(gulp.dest('css'))
-		.pipe($.if('*.css', $.cssnano()))
+		.pipe($.if('*.css', cssnano()))
 		.pipe($.concat('oldie.min.css'))
 		.pipe(gulp.dest('css'))
 });
@@ -188,16 +194,6 @@ gulp.task('jq_scripts', function() {
 		}))
 });
 
-// Optimize images
-gulp.task('images', function() {
-	gulp.src('src/images/**/*.{png,jpg}')
-		.pipe(imagemin())
-		.pipe(gulp.dest('images'))
-		.pipe($.size({
-			title: 'images'
-		}))
-});
-
 /**
  * Defines the list of resources to watch for changes.
  */
@@ -218,6 +214,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('svg', 'presass', 'styles', 'oldie', 'scripts', 'jq_scripts',
-		'images', cb);
+	runSequence('images', ['presass', 'styles'], 'oldie', 'scripts', 'jq_scripts', cb);
 });

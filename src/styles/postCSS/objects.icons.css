@@ -1,17 +1,3 @@
-$darken1: #7fdbff;
-$darken2: #39cccc;
-$name: info;
-
-@define-mixin icon $name {
-
-    &:before {
-        content: " ";
-		background-image: svg-load($name.svg, fill=$darken1);
-		background-repeat: no-repeat;
-		width: 1em;
-		height: 1em;
-    }
-}
 
 .v-icon {
 	width: 1em;
@@ -61,6 +47,58 @@ $name: info;
 	}
 }
 
-.entry-title > a {
- 	@mixin icon $name;
+.icon-info {
+ 	@mixin icon info;
+}
+
+.icon-heart {
+ 	@mixin icon heart;
+}
+
+.icon-twitter,
+a[href*="twitter.com"] {
+ 	@mixin icon twitter, #1DA1F2;
+}
+
+.icon-facebook,
+a[href*="facebook.com"] {
+ 	@mixin icon facebook, #3B5998;
+}
+
+.icon-youtube,
+a[href*="youtube.com"],
+a[href*="youtu.be"] {
+ 	@mixin icon youtube, #cd201f;
+}
+
+.icon-instagram {
+ 	@mixin icon instagram;
+}
+
+.icon-pdf,
+a[href*=".pdf"]:not(.btn) {
+ 	@mixin icon file-pdf, #c01e07;
+}
+
+.icon-map,
+a[href*="maps.google.com"] {
+	@mixin icon map_pin;
+}
+
+a[href*=".doc"]:not(.btn),
+a[href*=".docx"]:not(.btn) {
+	@mixin icon file-word, #2c5898;
+}
+
+a[href*=".xls"]:not(.btn),
+a[href*=".xlsx"]:not(.btn) {
+	@mixin icon file-excel, #207347;
+}
+
+a[href*="tel:"] {
+	@mixin icon call;
+}
+
+a[href*="mailto:"] {
+	@mixin icon at;
 }

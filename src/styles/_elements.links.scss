@@ -9,21 +9,10 @@ a {
 	transition-timing-function: $animation-curve-default;
 	transition-property: all;
 
-	&:before,
-	&:after {
-		color: #72b0d9;
-		transition: inherit;
-	}
-
 	&:active,
 	&:focus,
 	&:hover {
 		opacity: 0.7;
-
-		&:before,
-		&:after {
-			color: #096eb0;
-		}
 	}
 }
 

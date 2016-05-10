@@ -83,3 +83,34 @@
 	}
 	color: $white;
 }
+
+
+
+
+.o-crop {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+.o-crop--1x1 {
+	padding-top: 100%;
+}
+
+.o-crop--4x3 {
+	padding-top: 75%;
+}
+
+.o-crop--16x9 {
+	padding-top: 56.25%;
+}
+
+.o-crop__content {
+	position: absolute;
+	top: 0;
+	height: auto;
+	left: 0;
+	width: 100%;
+}

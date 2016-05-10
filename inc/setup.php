@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'abraham_assets' );
 add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
-add_filter( 'show_admin_bar' , 'abe_show_admin_bar');
+add_filter( 'show_admin_bar' , 'abe_show_admin_bar' );
 
 
 function abe_show_admin_bar( $content ) {
@@ -85,8 +85,8 @@ function abraham_assets() {
 	);
 
 	// Load parent theme stylesheet if child theme is active.
-	if ( is_child_theme() )
-		wp_enqueue_style( 'hybrid-parent' );
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'hybrid-parent' ); }
 	// Load active theme stylesheet.
 	wp_enqueue_style( 'hybrid-style' );
 
@@ -97,10 +97,13 @@ function abraham_assets() {
 		false, false, true
 	);
 
+	// Scripts.
+	wp_enqueue_script( 'object-fit', trailingslashit( get_template_directory_uri() ).'js/ofi.browser.js',  false, false, false );
+
 	// wp_enqueue_script(
-	// 	'abraham_js',
-	// 	trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
-	// 	false, false, true
+	// 'abraham_js',
+	// trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
+	// false, false, true
 	// );
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
