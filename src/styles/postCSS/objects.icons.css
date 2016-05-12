@@ -6,6 +6,11 @@
 	fill: currentColor;
 }
 
+.o-cell > .v-icon {
+    width: 100%;
+    max-width: 50%;
+}
+
 .icon-xs {
 	font-size: 1rem;
 }

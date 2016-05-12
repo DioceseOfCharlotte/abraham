@@ -10,10 +10,10 @@
 		height: 1.3em;
 		background-position: center;
 		display: inline-block;
-		margin-right: 0.5em;
+		margin: 0 0.2em;
 		border-radius: 50%;
 		vertical-align: middle;
-		background-color: color(white a(50%));
+		background-color: #fff;
 		border: .2em solid transparent;
 	}
 }

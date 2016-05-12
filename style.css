@@ -1125,6 +1125,11 @@ body:not(.search) .trail-end > span, .search .archive-title {
     fill: currentColor;
 }
 
+.o-cell > .v-icon {
+    width: 100%;
+    max-width: 50%;
+}
+
 .icon-xs {
     font-size: 1rem;
 }
@@ -1168,16 +1173,16 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 .icon-info:before {
     content: " ";
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%2336474f'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2336474f'%3E%3Cpath d='M16.247 4.733c0 1.684 1.271 2.825 2.84 2.825s2.842-1.142 2.842-2.825c0-1.685-1.272-2.826-2.842-2.826-1.568 0-2.84 1.141-2.84 2.826zm-6.151 9.642c0 .334-.061 1.163.008 1.662l2.479-2.983c.513-.562 1.106-.955 1.409-.849s.47.463.371.795L10.26 26.59c-.473 1.588.421 3.148 2.599 3.504 3.189 0 5.084-2.158 6.948-4.955 0-.334.111-1.213.044-1.713l-2.479 2.982c-.514.562-1.151.955-1.455.85-.28-.098-.444-.41-.389-.721l4.132-13.653c.344-1.734-.59-3.312-2.564-3.514-2.076.001-5.136 2.209-7 5.005z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     width: 1.3em;
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1189,10 +1194,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1204,10 +1209,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1219,10 +1224,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1234,10 +1239,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1249,10 +1254,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1264,10 +1269,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1279,10 +1284,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1294,10 +1299,10 @@ a[href*=".doc"]:not(.btn):before, a[href*=".docx"]:not(.btn):before {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1309,10 +1314,10 @@ a[href*=".xls"]:not(.btn):before, a[href*=".xlsx"]:not(.btn):before {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1324,10 +1329,10 @@ a[href*="tel:"]:before {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
@@ -1339,10 +1344,10 @@ a[href*="mailto:"]:before {
     height: 1.3em;
     background-position: center;
     display: inline-block;
-    margin-right: 0.5em;
+    margin: 0 0.2em;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border: .2em solid transparent;
 }
 
