@@ -106,7 +106,7 @@ function abraham_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'heading_font',
 		array(
-			'default'              => 'serif',
+			'default'              => 'Georgia,Times,"Times New Roman",serif',
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_text_field',
 			// 'transport'            => 'postMessage',
@@ -128,7 +128,7 @@ function abraham_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'body_font',
 		array(
-			'default'              => 'sans-serif',
+			'default'              => '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif',
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_text_field',
 			// 'transport'            => 'postMessage',

@@ -14,8 +14,8 @@ if (!function_exists('customizer_library_get_font_choices')) :
  * @return array    The fonts in value/label pairs.
  */
 function customizer_library_get_all_fonts() {
-	$heading1       = array(1 => array('label' => sprintf('--- %s ---', __('Standard Fonts', 'customizer-library'))));
-	$standard_fonts = customizer_library_get_standard_fonts();
+	$heading1       = array(1 => array('label' => sprintf('%s', __('System Fonts', 'customizer-library'))));
+	//$standard_fonts = customizer_library_get_standard_fonts();
 	$heading2       = array(2 => array('label' => sprintf('--- %s ---', __('Google Fonts', 'customizer-library'))));
 	$google_fonts   = customizer_library_get_google_fonts();
 
@@ -26,7 +26,7 @@ function customizer_library_get_all_fonts() {
 	 *
 	 * @param array    $fonts    The list of all fonts.
 	 */
-	return apply_filters('customizer_library_all_fonts', array_merge($heading1, $standard_fonts, $heading2, $google_fonts));
+	return apply_filters('customizer_library_all_fonts', array_merge($heading1, $heading2, $google_fonts));
 }
 endif;
 
