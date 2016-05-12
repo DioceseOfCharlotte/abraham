@@ -52,6 +52,10 @@
 	}
 }
 
+.breadcrumbs li + li {
+	@mixin icon chevron-right, #fff, #444, 2%;
+}
+
 .icon-info {
  	@mixin icon info;
 }

@@ -2,7 +2,7 @@
 \*------------------------------------*/
 
 a {
-	color: inherit;
+	color: #2980b9;
 	text-decoration: none;
 	opacity: 1;
 	transition-duration: $transition-time;
@@ -13,6 +13,7 @@ a {
 	&:focus,
 	&:hover {
 		opacity: 0.7;
+		text-decoration: none;
 	}
 }
 
@@ -21,29 +22,12 @@ a:not([class]) {
 	padding-bottom: 2px;
 }
 
-.site-branding {
-
-	a {
-		opacity: 1;
-
-		&:hover {
-			opacity: 0.8;
-			text-decoration: none;
-		}
-	}
-}
-
-h2 > a:not([class]) {
-	font-weight: inherit;
-}
-
+a[class]:not(.btn),
 .entry-title > a {
 	color: inherit;
 	opacity: 0.7;
-	text-decoration: none;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 
 	&:hover {
 		opacity: 1;

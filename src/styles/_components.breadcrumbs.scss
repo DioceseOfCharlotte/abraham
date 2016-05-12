@@ -4,15 +4,17 @@
 	//text-transform: uppercase;
 	li {
 		display: inline-block;
+		display: flex;
+		align-items: center;
 
-		+ li:before {
-			content: "\E5CC";
-			padding: 0.2em;
-			font-family: "Material Icons";
-			vertical-align: middle;
-			font-size: 1.5em;
-			line-height: 1;
-		}
+		// + li:before {
+		// 	content: "\E5CC";
+		// 	padding: 0.2em;
+		// 	font-family: "Material Icons";
+		// 	vertical-align: middle;
+		// 	font-size: 1.5em;
+		// 	line-height: 1;
+		// }
 	}
 
 	a {
@@ -24,6 +26,11 @@
 			opacity: 0.8;
 		}
 	}
+}
+
+.trail-items {
+	display: flex;
+	justify-content: center;
 }
 
 body:not(.search) .trail-end > span,

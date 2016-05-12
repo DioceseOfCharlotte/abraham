@@ -1,19 +1,20 @@
 
 
 
-@define-mixin icon $name: info, $fill: #36474f {
+@define-mixin icon $name: info, $fill: #36474f, $stroke: #fff, $sWidth: "0", $width: 1em, $height: 1em {
+
 	&:before {
 		content: " ";
-		background-image: svg-load($name.svg, fill=$fill);
+		background-image: svg-load($name.svg, fill=$fill, stroke=$stroke, stroke-width=$sWidth, width=$width, height=$height );
 		background-repeat: no-repeat;
-		width: 1.3em;
-		height: 1.3em;
+		width: 1em;
+		height: 1em;
 		background-position: center;
 		display: inline-block;
 		margin: 0 0.2em;
-		border-radius: 50%;
 		vertical-align: middle;
-		background-color: #fff;
-		border: .2em solid transparent;
+		/*background-color: #fff;*/
+		/*border-radius: 50%;*/
+		/*border: .2em solid transparent;*/
 	}
 }
