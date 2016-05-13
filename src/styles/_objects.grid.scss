@@ -16,36 +16,5 @@ $cell-padding: .5 * $gutter;
 .o-cell {
 	width: calc(310px - #{$gutter});
 	margin: 0 $cell-padding $cell-padding;
-	flex: 1 1 auto;
-}
-
-.u-list-group {
-	display: block;
-	padding: 0.5rem 0;
-	list-style: none;
-
-	> li {
-		letter-spacing: 0.04em;
-		line-height: 1;
-		min-height: 48px;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		padding: 1rem;
-		cursor: default;
-		overflow: hidden;
-
-		&:before {
-		    position: absolute;
-		    margin-left: -1.5em;
-		    content: "\2022";
-		}
-	}
-}
-
-.u-list-group.bullet-cross > li:before {
-	content: "\2671";
-}
-
-.u-list-group.bullet-heart > li:before {
-	content: "\2661";
+	flex: 1 1 0;
 }

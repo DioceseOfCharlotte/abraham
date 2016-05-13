@@ -1,13 +1,13 @@
 /* #LISTS
 \*------------------------------------*/
-li {
-	margin-bottom: .25em;
-}
+// li {
+// 	margin-bottom: .25em;
+// }
 
 ul,
 ol,
 dl {
-	list-style-position: inside;
+	//list-style-position: inside;
 }
 
 ol ol,
@@ -22,6 +22,9 @@ ul:last-child {
 	margin-bottom: 0;
 }
 
+li {
+	padding: 4px 0;
+}
 /* specify the list style of nav lists */
 nav ol,
 nav ul,

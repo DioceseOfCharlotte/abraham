@@ -1,0 +1,30 @@
+.u-list-group {
+	padding-left: 0;
+	margin-bottom: 0;
+
+	> li {
+		letter-spacing: 0.02em;
+		position: relative;
+		display: block;
+		padding: 0.75rem 1.25rem;
+		background-color: #fff;
+		border-bottom: 1px solid $color-grey-light;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&:before {
+			position: absolute;
+			margin-left: -1.5em!important;
+		}
+	}
+}
+
+.u-list-group.bullet-cross > li {
+	@mixin icon cross;
+}
+
+.u-list-group.bullet-heart > li {
+	@mixin icon heart;
+}

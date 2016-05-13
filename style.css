@@ -586,8 +586,13 @@ a:active, a:focus, a:hover {
 }
 
 a:not([class]) {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 1;
 }
 
 a[class]:not(.btn), .entry-title > a {
@@ -651,14 +656,6 @@ input[type="reset"]:focus, input[type="submit"]:focus {
 /* #LISTS
 \*------------------------------------*/
 
-li {
-    margin-bottom: .25em;
-}
-
-ul, ol, dl {
-    list-style-position: inside;
-}
-
 ol ol, ul ul, ol ul, ul ol {
     padding-left: 2.5em;
     margin-bottom: 0;
@@ -666,6 +663,10 @@ ol ol, ul ul, ol ul, ul ol {
 
 ul:last-child {
     margin-bottom: 0;
+}
+
+li {
+    padding: 4px 0;
 }
 
 /* specify the list style of nav lists */
@@ -842,44 +843,9 @@ svg {
 .o-cell {
     width: calc(310px - 1.5rem);
     margin: 0 0.75rem 0.75rem;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-}
-
-.u-list-group {
-    display: block;
-    padding: 0.5rem 0;
-    list-style: none;
-}
-
-.u-list-group > li {
-    letter-spacing: 0.04em;
-    line-height: 1;
-    min-height: 48px;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding: 1rem;
-    cursor: default;
-    overflow: hidden;
-}
-
-.u-list-group > li:before {
-    position: absolute;
-    margin-left: -1.5em;
-    content: "\2022";
-}
-
-.u-list-group.bullet-cross > li:before {
-    content: "\2671";
-}
-
-.u-list-group.bullet-heart > li:before {
-    content: "\2661";
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
 }
 
 /*--------------------------------------------------------------
@@ -1029,6 +995,9 @@ input[type="button"]:active, input[type="reset"]:active {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1320,6 +1289,55 @@ a[href*="tel:"]:before {
 a[href*="mailto:"]:before {
     content: " ";
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2336474f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M28.113 23A13.84 13.84 0 0 0 30 16c0-7.732-6.268-14-14-14S2 8.268 2 16c0 7.73 6.27 14 14 14 3.866 0 7.366-1.565 9.898-4.102L23.42 23.42A10.452 10.452 0 0 1 16 26.5c-5.79 0-10.5-4.71-10.5-10.5S10.21 5.5 16 5.5 26.5 10.21 26.5 16c0 1.244-.24 2.433-.64 3.54l-.027-.04H23V9.038h-7a7 7 0 1 0 0 14c1.607 0 3.07-.565 4.252-1.474C20.888 22.412 21.858 23 23 23h5.114zM19.5 14.257v1.78c0 1.932-1.572 3.5-3.5 3.5s-3.5-1.568-3.5-3.5c0-1.93 1.572-3.5 3.5-3.5h3.5v1.72z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
+    background-position: center;
+    display: inline-block;
+    margin: 0 0.2em;
+    vertical-align: middle;
+    /*background-color: #fff;*//*border-radius: 50%;*//*border: .2em solid transparent;*/
+}
+
+.u-list-group {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.u-list-group > li {
+    letter-spacing: 0.02em;
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.u-list-group > li:last-child {
+    border-bottom: 0;
+}
+
+.u-list-group > li:before {
+    position: absolute;
+    margin-left: -1.5em !important;
+}
+
+.u-list-group.bullet-cross > li:before {
+    content: " ";
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2336474f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M5.979 10.974v5.021h7.041v11.99h5.042v-11.99h6.958v-5.021h-6.958V4.016H13.02v6.958H5.979z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
+    background-position: center;
+    display: inline-block;
+    margin: 0 0.2em;
+    vertical-align: middle;
+    /*background-color: #fff;*//*border-radius: 50%;*//*border: .2em solid transparent;*/
+}
+
+.u-list-group.bullet-heart > li:before {
+    content: " ";
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2336474f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M22.65 2.75c-2.943 0-5.476 2.424-6.65 4.955-1.173-2.531-3.707-4.955-6.65-4.955C5.293 2.75 2 6.084 2 10.192 2 18.548 10.326 20.739 16 29c5.365-8.21 14-10.719 14-18.808 0-4.108-3.293-7.442-7.35-7.442z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     width: 1em;
     height: 1em;

@@ -80,24 +80,28 @@ function abraham_tiny_mce_formats( $args ) {
 				'wrapper'  => true,
 			),
 			array(
+				'title'   => __( 'List Group', 'abraham' ),
 				'items' => array(
 					array(
-						'title'    => __( 'List Group', 'abraham' ),
+						'title'    => __( 'Plain', 'abraham' ),
 						'selector' => 'ul',
 						'classes'  => 'u-list-group',
 						'wrapper'  => true,
+						'exact'   => true,
 					),
 					array(
-						'title'    => __( 'List Group Heart', 'abraham' ),
+						'title'    => __( 'Heart', 'abraham' ),
 						'selector' => 'ul',
 						'classes'  => 'u-list-group bullet-heart',
 						'wrapper'  => true,
+						'exact'   => true,
 					),
 					array(
-						'title'    => __( 'List Group Cross', 'abraham' ),
+						'title'    => __( 'Cross', 'abraham' ),
 						'selector' => 'ul',
 						'classes'  => 'u-list-group bullet-cross',
 						'wrapper'  => true,
+						'exact'   => true,
 					),
 				),
 			),
