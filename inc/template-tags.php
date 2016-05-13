@@ -61,7 +61,7 @@ function abe_get_svg( $icon = 'info', $size = 'sm' ) {
  * Display the Edit Post Link
  */
 function abe_do_edit_link() {
-	edit_post_link( abe_get_svg( 'compose', 'sm' ) );
+	edit_post_link( abe_get_svg( 'edit', 'sm' ) );
 }
 add_action( 'tha_entry_bottom', 'abe_do_edit_link' );
 

@@ -109,5 +109,5 @@ a[href*="tel:"] {
 }
 
 a[href*="mailto:"] {
-	@mixin icon at;
+	@mixin icon mail;
 }

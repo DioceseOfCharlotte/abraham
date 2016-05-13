@@ -614,9 +614,6 @@ a[class]:not(.btn):hover, .entry-title > a:hover {
 input[type="submit"] {
     color: inherit;
     background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 500;
     vertical-align: middle;
     display: inline-block;
     text-decoration: none;
@@ -626,11 +623,9 @@ input[type="submit"] {
     height: auto;
     min-height: 2.5rem;
     cursor: pointer;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     border: 1px solid transparent;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color, background-color, border-color, box-shadow;
+    transition: all 0.3s, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover,
@@ -656,8 +651,12 @@ input[type="reset"]:focus, input[type="submit"]:focus {
 /* #LISTS
 \*------------------------------------*/
 
+ul, ol, dl {
+    list-style-type: none;
+}
+
 ol ol, ul ul, ol ul, ul ol {
-    padding-left: 2.5em;
+    padding-left: 2.5rem;
     margin-bottom: 0;
 }
 
@@ -798,7 +797,7 @@ input[type=text], input[type=date], input[type=datetime],
 input[type=datetime-local], input[type=email], input[type=month],
 input[type=number], input[type=password], input[type=search], input[type=tel],
 input[type=time], input[type=url], input[type=week] {
-    height: 2.5rem;
+    min-height: 2.5rem;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -817,6 +816,10 @@ select {
 
 img {
     max-width: 100%;
+}
+
+article img {
+    height: auto;
 }
 
 svg {
@@ -841,11 +844,16 @@ svg {
 }
 
 .o-cell {
-    width: calc(310px - 1.5rem);
     margin: 0 0.75rem 0.75rem;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+@media screen and (min-width: 48em) {
+    .o-cell {
+        width: calc(33.333% - 1.5rem);
+    }
 }
 
 /*--------------------------------------------------------------
@@ -1288,7 +1296,7 @@ a[href*="tel:"]:before {
 
 a[href*="mailto:"]:before {
     content: " ";
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2336474f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M28.113 23A13.84 13.84 0 0 0 30 16c0-7.732-6.268-14-14-14S2 8.268 2 16c0 7.73 6.27 14 14 14 3.866 0 7.366-1.565 9.898-4.102L23.42 23.42A10.452 10.452 0 0 1 16 26.5c-5.79 0-10.5-4.71-10.5-10.5S10.21 5.5 16 5.5 26.5 10.21 26.5 16c0 1.244-.24 2.433-.64 3.54l-.027-.04H23V9.038h-7a7 7 0 1 0 0 14c1.607 0 3.07-.565 4.252-1.474C20.888 22.412 21.858 23 23 23h5.114zM19.5 14.257v1.78c0 1.932-1.572 3.5-3.5 3.5s-3.5-1.568-3.5-3.5c0-1.93 1.572-3.5 3.5-3.5h3.5v1.72z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%2336474f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     width: 1em;
     height: 1em;

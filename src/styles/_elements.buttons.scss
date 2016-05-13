@@ -4,12 +4,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	//display: inline-block;
 	color: inherit;
 	background-color: transparent;
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: 500;
 	vertical-align: middle;
 	display: inline-block;
 	text-decoration: none;
@@ -19,11 +15,9 @@ input[type="submit"] {
 	height: auto;
 	min-height: 2.5rem;
 	cursor: pointer;
-	padding: 0.5em 1em;
+	padding: 0.5rem 1rem;
 	border: 1px solid transparent;
-	transition-duration: $transition-time;
-	transition-timing-function: $animation-curve-default;
-	transition-property: color, background-color, border-color, box-shadow;
+	transition: all $transition-time, $animation-curve-default;
 
 	&:hover {
 		opacity: 1;
