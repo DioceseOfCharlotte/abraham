@@ -1,5 +1,6 @@
 /* #LINKS
 \*------------------------------------*/
+
 a {
 	color: #2980b9;
 	text-decoration: none;
@@ -19,9 +20,6 @@ a {
 a:not([class]) {
 	padding-top: 1px;
 	padding-bottom: 1px;
-	display: inline-flex;
-	vertical-align: middle;
-	line-height: 1;
 }
 
 a[class]:not(.btn),

@@ -1,7 +1,7 @@
 
 
 
-@define-mixin icon $name: info, $fill: #36474f, $stroke: #fff, $sWidth: "0", $width: 1em, $height: 1em {
+@define-mixin icon $name: info, $fill: #a5b1b1, $stroke: #fff, $sWidth: "0", $width: 1em, $height: 1em {
 
 	&:before {
 		content: " ";

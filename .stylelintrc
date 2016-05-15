@@ -1,9 +1,5 @@
 {
   "rules": {
-    "at-rule-empty-line-before": [ "always", {
-      except: ["blockless-group"],
-      ignore: ["after-comment"],
-    } ],
     "at-rule-name-case": "lower",
     "at-rule-semicolon-newline-after": "always",
     "block-closing-brace-newline-after": "always",
