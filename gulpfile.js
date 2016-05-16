@@ -4,7 +4,7 @@
 
 // 'use strict';
 
-//var fs = require('graceful-fs');
+var fs = require('graceful-fs');
 var path = require('path');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
@@ -121,6 +121,15 @@ gulp.task('images', function() {
 });
 
 // Compile and Automatically Prefix Stylesheets (production)
+gulp.task('preset', function() {
+	gulp.src('src/styles/postCSS/preset.css')
+		.pipe(postcss(PRECSS_PLUGINS, {
+			syntax: syntax
+		}))
+		.pipe($.concat('_preset.scss'))
+		.pipe(gulp.dest('src/styles/'))
+});
+
 gulp.task('presass', function() {
 	gulp.src('src/styles/postCSS/index.css')
 		.pipe($.if('*.css', postcss(PRECSS_PLUGINS, {
@@ -214,5 +223,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('images', ['presass', 'styles'], 'oldie', 'scripts', 'jq_scripts', cb);
+	runSequence('images', 'preset', ['presass', 'styles'], 'oldie', 'scripts', 'jq_scripts', cb);
 });
