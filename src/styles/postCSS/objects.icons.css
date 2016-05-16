@@ -51,62 +51,58 @@
 	}
 }
 
-.breadcrumbs li + li {
-	@mixin icon chevron-right, #fff, #444, 2% ;
+.icon-info:before {
+	@mixin icon info;
 }
 
-.icon-info {
-	@mixin icon info ;
+.icon-heart:before {
+	@mixin icon heart;
 }
 
-.icon-heart {
-	@mixin icon heart ;
+.icon-twitter:before,
+a[href*="twitter.com"]:before {
+	@mixin icon twitter, #1DA1F2;
 }
 
-.icon-twitter,
-a[href*="twitter.com"] {
-	@mixin icon twitter, #1DA1F2 ;
+.icon-facebook:before,
+a[href*="facebook.com"]:before {
+	@mixin icon facebook, #3B5998;
 }
 
-.icon-facebook,
-a[href*="facebook.com"] {
-	@mixin icon facebook, #3B5998 ;
+.icon-youtube:before,
+a[href*="youtube.com"]:before,
+a[href*="youtu.be"]:before {
+	@mixin icon youtube, #cd201f;
 }
 
-.icon-youtube,
-a[href*="youtube.com"],
-a[href*="youtu.be"] {
-	@mixin icon youtube, #cd201f ;
+.icon-instagram:before {
+	@mixin icon instagram;
 }
 
-.icon-instagram {
-	@mixin icon instagram ;
-}
-
-.icon-pdf,
-a[href*=".pdf"]:not(.btn) {
+.icon-pdf:before,
+a[href*=".pdf"]:not(.btn):before {
 	@mixin icon file-pdf;
 }
 
-.icon-map,
-a[href*="maps.google.com"] {
-	@mixin icon map_pin ;
+.icon-map:before,
+a[href*="maps.google.com"]:before {
+	@mixin icon map_pin;
 }
 
-a[href*=".doc"]:not(.btn),
-a[href*=".docx"]:not(.btn) {
+a[href*=".doc"]:not(.btn):before,
+a[href*=".docx"]:not(.btn):before {
 	@mixin icon file-word;
 }
 
-a[href*=".xls"]:not(.btn),
-a[href*=".xlsx"]:not(.btn) {
+a[href*=".xls"]:not(.btn):before,
+a[href*=".xlsx"]:not(.btn):before {
 	@mixin icon file-excel;
 }
 
-a[href*="tel:"] {
-	@mixin icon call ;
+a[href*="tel:"]:before {
+	@mixin icon call;
 }
 
-a[href*="mailto:"] {
-	@mixin icon mail ;
+a[href*="mailto:"]:before {
+	@mixin icon mail;
 }

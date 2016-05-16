@@ -13,7 +13,6 @@ input[type="submit"] {
 	margin: 0;
 	opacity: 1;
 	height: auto;
-	min-height: 2.5rem;
 	cursor: pointer;
 	padding: 0.5rem 1rem;
 	border: 1px solid transparent;

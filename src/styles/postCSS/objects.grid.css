@@ -3,9 +3,9 @@
 $cell-padding: .5 * $gutter;
 
 .o-grid {
-	// @include md {
-	// 	padding: $cell-padding;
-	// }
+	/*@include md {
+		padding: $cell-padding;
+	}*/
 	display: flex;
 	flex-flow: row wrap;
 	margin-right: auto;

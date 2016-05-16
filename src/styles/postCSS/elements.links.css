@@ -22,6 +22,24 @@ a:not([class]) {
 	padding-bottom: 1px;
 }
 
+a[href]:before,
+a[href]:after {
+	padding: 0.5em;
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+	bottom: 1px;
+    position: relative;
+}
+
+a[href]:before {
+	margin-right: 0.2em;
+}
+
+a[href]:after {
+	margin-left: 0.2em;
+}
+
 a[class]:not(.btn),
 .entry-title > a {
 	color: inherit;

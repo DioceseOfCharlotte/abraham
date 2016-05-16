@@ -1,0 +1,36 @@
+
+* {
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+	word-wrap: break-word;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
+legend {
+	display: block;
+	position: relative;
+}
+
+
+/* Embedded content
+========================================================================== */
+canvas {
+	-ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+	width: 100%;
+	max-width: 100%;
+}

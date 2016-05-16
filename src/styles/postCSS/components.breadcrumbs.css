@@ -1,31 +1,30 @@
 /* #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
-	//text-transform: uppercase;
+
 	li {
 		display: inline-block;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 
-		// + li:before {
-		// 	content: "\E5CC";
-		// 	padding: 0.2em;
-		// 	font-family: "Material Icons";
-		// 	vertical-align: middle;
-		// 	font-size: 1.5em;
-		// 	line-height: 1;
-		// }
-	}
+		+ li:before {
+			padding: 0.5em;
+			background-size: cover;
+			width: 1em;
+			height: 1em;
 
-	a {
-		color: inherit;
-		opacity: 1;
-		border-bottom: 0;
-
-		&:hover {
-			opacity: 0.8;
+			@mixin icon chevron-right, #fff, #444, 2% ;
 		}
+	}
+}
+
+.breadcrumbs a {
+	color: inherit;
+	opacity: 1;
+
+	&:hover {
+		opacity: 0.8;
 	}
 }
 

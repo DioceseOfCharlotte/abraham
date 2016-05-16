@@ -18,12 +18,20 @@ var babel = require('gulp-babel');
 var oldie = require('oldie');
 var autoPrefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
-var atImport = require("postcss-import");
 var perfectionist = require('perfectionist');
-var postcssFlex = require('postcss-flexibility');
-var postSvg = require('postcss-inline-svg');
+
+var atImport = require("postcss-import");
+var pcMixins = require("postcss-mixins");
+var pcColor = require('postcss-color-function');
+var pcVars = require("postcss-simple-vars");
+var pcMedia = require("postcss-custom-media");
+var pcProperties = require("postcss-custom-properties");
+var pcFlex = require('postcss-flexibility');
+var pcSvg = require('postcss-inline-svg');
+var pcNoDups = require('postcss-discard-duplicates');
 var syntax = require('postcss-scss');
 var styleFmt = require('stylefmt');
+
 var cssnano = require('gulp-cssnano');
 
 var $ = gulpLoadPlugins();
@@ -45,9 +53,10 @@ var AUTOPREFIXER_BROWSERS = [
 var PRECSS_PLUGINS = [
 	atImport,
 	preCss,
-	postSvg({
+	pcSvg({
 		path: './images/icons'
-	})
+	}),
+	pcNoDups
 ];
 
 var POSTCSS_PLUGINS = [
@@ -65,7 +74,7 @@ var POSTCSS_IE = [
 	autoPrefixer({
 		browsers: ['IE 8', 'IE 9']
 	}),
-	postcssFlex,
+	pcFlex,
 	oldie
 ];
 
@@ -223,5 +232,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('images', 'preset', ['presass', 'styles'], 'oldie', 'scripts', 'jq_scripts', cb);
+	runSequence('images', 'presass', ['styles'], 'oldie', 'scripts', 'jq_scripts', cb);
 });
