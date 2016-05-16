@@ -1,9 +1,9 @@
 
 
 /* Custom media queries */
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 52em);
-@custom-media --breakpoint-lg (min-width: 64em);
+@custom-media --bp-sm (max-width: 47em);
+@custom-media --bp-md (min-width: 48em);
+@custom-media --bp-lg (min-width: 62em);
 
 /* sanitize.css vars */
 :root {

@@ -3,9 +3,6 @@
 $cell-padding: .5 * $gutter;
 
 .o-grid {
-	/*@include md {
-		padding: $cell-padding;
-	}*/
 	display: flex;
 	flex-flow: row wrap;
 	margin-right: auto;
@@ -16,7 +13,10 @@ $cell-padding: .5 * $gutter;
 .o-cell {
 	margin: 0 $cell-padding $cell-padding;
 	flex: 1 1 auto;
-	@include md {
+}
+
+@media (--bp-md) {
+	.o-cell {
 		width: calc(33.333% - #{$gutter});
 	}
 }

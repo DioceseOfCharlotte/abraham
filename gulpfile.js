@@ -13,7 +13,6 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var imagemin = require('gulp-imagemin');
 var svgmin = require('gulp-svgmin');
 var postcss = require('gulp-postcss');
-var preCss = require('precss');
 var babel = require('gulp-babel');
 var oldie = require('oldie');
 var autoPrefixer = require('autoprefixer');
@@ -23,7 +22,8 @@ var perfectionist = require('perfectionist');
 var atImport = require("postcss-import");
 var pcMixins = require("postcss-mixins");
 var pcColor = require('postcss-color-function');
-var pcVars = require("postcss-simple-vars");
+var pcVars = require("postcss-advanced-variables");
+var pcNested = require("postcss-nested");
 var pcMedia = require("postcss-custom-media");
 var pcProperties = require("postcss-custom-properties");
 var pcFlex = require('postcss-flexibility');
@@ -52,7 +52,12 @@ var AUTOPREFIXER_BROWSERS = [
 
 var PRECSS_PLUGINS = [
 	atImport,
-	preCss,
+	pcProperties,
+	pcVars,
+	pcColor,
+	pcMedia,
+	pcNested,
+	pcMixins,
 	pcSvg({
 		path: './images/icons'
 	}),

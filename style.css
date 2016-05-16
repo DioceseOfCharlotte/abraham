@@ -502,6 +502,8 @@ input {
     -webkit-border-radius: 0;
 }
 
+/* iOS 8+ */
+
 input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     /* iOS 8+ */
@@ -514,8 +516,9 @@ input[type="number"] {
 
 input[type="search"] {
     -webkit-appearance: textfield;
-    /* Chrome 45+, Safari 9+ */
 }
+
+/* Chrome 45+, Safari 9+ */
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -620,6 +623,8 @@ select {
     -webkit-appearance: none;
 }
 
+/* Chrome 45+ */
+
 select::-ms-expand {
     display: none;
     /* Edge 12+, Internet Explorer 11- */
@@ -688,9 +693,9 @@ svg {
     font: 100%/1.5 sans-serif;
     font: 100%/1.5 -apple-system,
           BlinkMacSystemFont,
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
           Helvetica,
           sans-serif;
 }
@@ -1131,9 +1136,6 @@ svg {
 \*------------------------------------*/
 
 .o-grid {
-    /*@include md {
-		padding: $cell-padding;
-	}*/
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1154,7 +1156,7 @@ svg {
     flex: 1 1 auto;
 }
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
     .o-cell {
         width: calc(33.333% - 1.5rem);
     }
@@ -1362,6 +1364,143 @@ a[href*="mailto:"]:before {
     vertical-align: middle;
 }
 
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+input[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.btn-hollow, input[type="reset"], input[type="button"] {
+    color: #20638f;
+    border-color: #20638f;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-hollow:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    color: #fff;
+    background-color: #20638f;
+    border-color: #20638f;
+}
+
+.btn-hollow:focus, input[type="button"]:focus, input[type="reset"]:focus,
+.btn-hollow:active, input[type="button"]:active, input[type="reset"]:active {
+    outline: none;
+    color: #fff;
+    background-color: #20638f;
+    border-color: #20638f;
+    box-shadow: 0 0 0 1px rgba(32, 99, 143, 0.25);
+}
+
+.btn-round {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.btn-round > i {
+    line-height: 2.4rem;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-lg {
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/**
+* Flexible media embeds
+*
+* For use with media embeds – such as videos, slideshows, or even images –
+* that need to retain a specific aspect ratio but adapt to the width of their
+* containing element.
+*
+* Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+
+.FlexEmbed {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+/**
+* The aspect-ratio hack is applied to an empty element because it allows
+* the component to respect `max-height`. Default aspect ratio is 1:1.
+*/
+
+.FlexEmbed-ratio {
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+/**
+* Modifier: 3:1 aspect ratio
+*/
+
+.FlexEmbed-ratio--3by1 {
+    padding-bottom: calc(100% / 3);
+}
+
+/**
+* Modifier: 2:1 aspect ratio
+*/
+
+.FlexEmbed-ratio--2by1 {
+    padding-bottom: 50%;
+}
+
+/**
+* Modifier: 16:9 aspect ratio
+*/
+
+.FlexEmbed-ratio--16by9 {
+    padding-bottom: 56.25%;
+}
+
+/**
+* Modifier: 4:3 aspect ratio
+*/
+
+.FlexEmbed-ratio--4by3 {
+    padding-bottom: 75%;
+}
+
+/**
+* Fit the content to the aspect ratio
+*/
+
+.FlexEmbed-content > iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 /* #BREADCRUMBS
 \*------------------------------------*/
 
@@ -1420,147 +1559,12 @@ body:not(.search) .trail-end > span, .search .archive-title {
     width: 1px;
 }
 
+/* Custom media queries */
+
+/* sanitize.css vars */
+
 :root {
     /*--monospace-font-family: monospace;*/
-}
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-
-input[type="submit"] {
-    background-color: #2980b9;
-    color: white;
-    border-radius: 2px;
-}
-
-.btn-hollow, html .gv-search-clear, input[type="reset"], input[type="button"] {
-    color: #20638f;
-    border-color: #20638f;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.btn-hollow:hover, html .gv-search-clear:hover, input[type="reset"]:hover,
-input[type="button"]:hover {
-    color: #fff;
-    background-color: #20638f;
-    border-color: #20638f;
-}
-
-.btn-hollow:focus, html .gv-search-clear:focus, input[type="button"]:focus,
-input[type="reset"]:focus, .btn-hollow:active, html .gv-search-clear:active,
-input[type="button"]:active, input[type="reset"]:active {
-    outline: none;
-    color: #fff;
-    background-color: #20638f;
-    border-color: #20638f;
-    box-shadow: 0 0 0 1px rgba(32, 99, 143, 0.25);
-}
-
-.btn-round {
-    border-radius: 50%;
-    overflow: hidden;
-    height: 2.5rem;
-    width: 2.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.btn-round > i {
-    line-height: 2.4rem;
-}
-
-.btn-sm {
-    padding: .25rem .5rem;
-}
-
-.btn-lg {
-    padding: 1rem 1.25rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-/**
- * Flexible media embeds
- *
- * For use with media embeds – such as videos, slideshows, or even images –
- * that need to retain a specific aspect ratio but adapt to the width of their
- * containing element.
- *
- * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
- */
-
-.FlexEmbed {
-    display: block;
-    overflow: hidden;
-    position: relative;
-}
-
-/**
- * The aspect-ratio hack is applied to an empty element because it allows
- * the component to respect `max-height`. Default aspect ratio is 1:1.
- */
-
-.FlexEmbed-ratio {
-    display: block;
-    padding-bottom: 100%;
-    width: 100%;
-}
-
-/**
- * Modifier: 3:1 aspect ratio
- */
-
-.FlexEmbed-ratio--3by1 {
-    padding-bottom: calc(100% / 3);
-}
-
-/**
- * Modifier: 2:1 aspect ratio
- */
-
-.FlexEmbed-ratio--2by1 {
-    padding-bottom: 50%;
-}
-
-/**
- * Modifier: 16:9 aspect ratio
- */
-
-.FlexEmbed-ratio--16by9 {
-    padding-bottom: 56.25%;
-}
-
-/**
- * Modifier: 4:3 aspect ratio
- */
-
-.FlexEmbed-ratio--4by3 {
-    padding-bottom: 75%;
-}
-
-/**
- * Fit the content to the aspect ratio
- */
-
-.FlexEmbed-content > iframe {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
 }
 
 .animating {
@@ -3576,6 +3580,19 @@ html .u-shadow5, html .u-shadow--24dp {
     box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
                 0 11px 15px -7px rgba(0, 0, 0, 0.12),
                 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+}
+
+html .gv-search-clear {
+    color: #20638f;
+    border-color: #20638f;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+html .gv-search-clear:hover {
+    color: #fff;
+    background-color: #20638f;
+    border-color: #20638f;
 }
 
 html .gv-search-horizontal {

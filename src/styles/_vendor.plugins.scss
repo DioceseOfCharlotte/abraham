@@ -1,19 +1,26 @@
-
 .gv-search-clear {
-	@extend .btn-hollow;
+	color: $color1-dark;
+	border-color: $color1-dark;
+	border-radius: $base-radius;
+	background-color: $lighten3;
+
+	&:hover {
+		color: #fff;
+		background-color: $color1-dark;
+		border-color: $color1-dark;
+	}
 }
 
 .gv-search-horizontal {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
 .gv-widget-search {
-    text-align: center;
+	text-align: center;
 }
 
-
 .flickity-slider > .gallery-item {
-    width: 100%;
+	width: 100%;
 }

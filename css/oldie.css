@@ -37,14 +37,28 @@ body {
  * 1. Add the correct display in Edge, IE, and Firefox.
  * 2. Add the correct display in IE.
  */
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
   /* 1 */
   display: block; }
 
 /**
  * Add the correct display in IE 9-.
  */
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block; }
 
 /**
@@ -64,7 +78,8 @@ progress {
  * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
  */
-template, [hidden] {
+template,
+[hidden] {
   display: none; }
 
 /* Links
@@ -83,7 +98,8 @@ a {
  * Remove the outline on focused links when they are also active or hovered
  * in all browsers (opinionated).
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline-width: 0; }
 
 /* Text-level semantics
@@ -103,13 +119,15 @@ abbr[title] {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-b, strong {
+b,
+strong {
   font-weight: inherit; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-b, strong {
+b,
+strong {
   font-weight: bolder; }
 
 /**
@@ -143,7 +161,8 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -175,7 +194,10 @@ img {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
@@ -205,7 +227,10 @@ hr {
  * 1. Change font properties to `inherit` in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
   /* 1 */
   margin: 0;
@@ -221,7 +246,8 @@ optgroup {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button, input {
+button,
+input {
   /* 1 */
   overflow: visible; }
 
@@ -229,7 +255,8 @@ button, input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button, select {
+button,
+select {
   /* 1 */
   text-transform: none; }
 
@@ -238,21 +265,30 @@ button, select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-button, html [type="button"], [type="reset"], [type="submit"] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 2 */ }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 /**
@@ -293,7 +329,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type="checkbox"], [type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -302,7 +339,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -318,7 +356,8 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
  */
-[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -353,7 +392,8 @@ abbr[title] {
   display: none;
   /* Chrome 44-, iOS 8+, Safari 9+ */ }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
   /* Edge 12+, Safari 6.2+, and Chrome 18+ */ }
 
@@ -373,7 +413,8 @@ button:-moz-focusring, input:-moz-focusring {
   outline: 1px dotted ButtonText;
   /* Firefox 4+ */ }
 
-button, select {
+button,
+select {
   text-transform: none;
   /* Firefox 40+, Internet Explorer 11- */ }
 
@@ -396,7 +437,10 @@ hr {
 input {
   -webkit-border-radius: 0; }
 
-input[type="button"], input[type="reset"], input[type="submit"] {
+/* iOS 8+ */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* iOS 8+ */ }
 
@@ -405,10 +449,11 @@ input[type="number"] {
   /* Firefox 36+ */ }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Chrome 45+, Safari 9+ */ }
+  -webkit-appearance: textfield; }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+/* Chrome 45+, Safari 9+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
   /* Chrome 45+, Safari 9+ */ }
 
@@ -447,18 +492,24 @@ textarea {
 /*
  * Universal inheritance
  */
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: inherit; }
 
 * {
   font-size: inherit;
   line-height: inherit; }
 
-:before, :after {
+:before,
+:after {
   text-decoration: inherit;
   vertical-align: inherit; }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-style: inherit;
   font-weight: inherit; }
@@ -472,12 +523,21 @@ button, input, select, textarea {
   padding: 0; }
 
 /* specify the border style and width of all elements */
-*, :before, :after {
+*,
+:before,
+:after {
   border-style: solid;
   border-width: 0; }
 
 /* remove the tapping delay from clickable elements */
-a, area, button, input, label, select, textarea, [tabindex] {
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
   touch-action: manipulation; }
 
 /* specify the standard appearance of selects */
@@ -486,6 +546,7 @@ select {
   /* Firefox 40+ */
   -webkit-appearance: none; }
 
+/* Chrome 45+ */
 select::-ms-expand {
   display: none;
   /* Edge 12+, Internet Explorer 11- */ }
@@ -535,33 +596,63 @@ html {
   color: #36474f;
   cursor: default;
   font: 100%/1.5 sans-serif;
-  font: 100%/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; }
+  font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, sans-serif; }
 
 /* specify the text decoration of anchors */
 a {
   text-decoration: none; }
 
 /* specify the alignment of media elements */
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
   vertical-align: middle; }
 
 /* specify the coloring of form elements */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   background-color: transparent;
   background-color: rgba(245, 245, 245, 0.8);
   color: inherit; }
 
 /* specify the minimum height of form elements */
-button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea {
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
   min-height: 1.5em;
   min-height: 40px; }
 
 /* specify the font family of code elements */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace; }
 
 /* specify the list style of nav lists */
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none; }
 
 /* specify the font size of small elements */
@@ -593,7 +684,19 @@ textarea {
   flex-shrink: 1;
   word-wrap: break-word; }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary, legend {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
+legend {
   display: block;
   position: relative; }
 
@@ -621,7 +724,12 @@ iframe[src*="google.com/maps"] {
 
 /* #TYPOGRAPHY
 \*------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
   line-height: 1.25;
   margin-bottom: 0.5em; }
@@ -644,7 +752,12 @@ h5 {
 h6 {
   font-size: 14px; }
 
-p, dl, ol, ul, pre, blockquote {
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
   margin-bottom: 1em; }
 
 p:empty {
@@ -665,7 +778,9 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: all; }
 
-a:active, a:focus, a:hover {
+a:active,
+a:focus,
+a:hover {
   filter: alpha(opacity=70);
   text-decoration: none; }
 
@@ -673,7 +788,8 @@ a:active, a:focus, a:hover {
   padding-top: 1px;
   padding-bottom: 1px; }
 
-a[href]:before, a[href]:after {
+a[href]:before,
+a[href]:after {
   padding: 0.5em;
   background-size: cover;
   width: 1em;
@@ -687,7 +803,8 @@ a[href]:before {
 a[href]:after {
   margin-left: 0.2em; }
 
- .entry-title > a {
+
+.entry-title > a {
   color: inherit;
   filter: alpha(opacity=70);
   -js-display: flex;
@@ -697,7 +814,12 @@ a[href]:after {
  .entry-title > a:hover {
   filter: alpha(opacity=100); }
 
-.btn, .button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+.btn,
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   color: inherit;
   background-color: transparent;
   vertical-align: middle;
@@ -717,7 +839,18 @@ a[href]:after {
   text-decoration: none;
   box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.1); }
 
-.btn:active, .btn.is-active, .button:active, .button.is-active, button:active, button.is-active, input[type="button"]:active, input[type="button"].is-active, input[type="reset"]:active, input[type="reset"].is-active, input[type="submit"]:active, input[type="submit"].is-active {
+.btn:active,
+.btn.is-active,
+.button:active,
+.button.is-active,
+button:active,
+button.is-active,
+input[type="button"]:active,
+input[type="button"].is-active,
+input[type="reset"]:active,
+input[type="reset"].is-active,
+input[type="submit"]:active,
+input[type="submit"].is-active {
   box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.3); }
 
 .btn:focus, .button:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
@@ -726,10 +859,15 @@ a[href]:after {
 
 /* #LISTS
 \*------------------------------------*/
-ul, ol, dl {
+ul,
+ol,
+dl {
   list-style-type: none; }
 
-ol ol, ul ul, ol ul, ul ol {
+ol ol,
+ul ul,
+ol ul,
+ul ol {
   padding-left: 40px;
   margin-bottom: 0; }
 
@@ -740,7 +878,9 @@ li {
   padding: 4px 0; }
 
 /* specify the list style of nav lists */
-nav ol, nav ul, nav li {
+nav ol,
+nav ul,
+nav li {
   list-style: none;
   padding: 0;
   margin: 0; }
@@ -754,7 +894,8 @@ table {
   max-width: 100%;
   width: 100%; }
 
-th, td {
+th,
+td {
   padding: 8px 0;
   line-height: inherit; }
 
@@ -804,7 +945,9 @@ blockquote cite {
 form {
   margin-bottom: 16px; }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font-size: 16px;
   vertical-align: middle;
   border: 1px solid #b7c6cd;
@@ -834,7 +977,8 @@ label {
   display: block;
   margin-bottom: 8px; }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
   display: inline-block;
   vertical-align: middle;
   margin: 0 8px 0 0; }
@@ -855,6 +999,23 @@ img {
 
 svg {
   max-height: 100%; }
+
+/* #GRID
+\*------------------------------------*/
+.o-grid {
+  -js-display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: stretch; }
+
+.o-cell {
+  margin: 0 12px 12px;
+  flex: 1 1 auto; }
+
+.o-cell{
+  width: calc(33.333% - 1.5rem); }
 
 .v-icon {
   width: 1em;
@@ -915,7 +1076,8 @@ svg {
   display: inline-block;
   vertical-align: middle; }
 
-.icon-twitter:before, a[href*="twitter.com"]:before {
+.icon-twitter:before,
+a[href*="twitter.com"]:before {
   content: " ";
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' class='v-icon' fill='%231DA1F2' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M25.999 6.374q-1.02 1.531-2.467 2.61.016.218.016.655 0 2.031-.579 4.055-.579 2.025-1.76 3.884-1.18 1.859-2.809 3.289-1.63 1.43-3.928 2.281-2.3.851-4.919.852Q5.427 24 2 21.734q.533.063 1.188.063 3.427 0 6.107-2.156-1.6-.031-2.864-1.008-1.264-.977-1.735-2.492.503.078.928.078.655 0 1.295-.172-1.706-.36-2.825-1.742-1.118-1.384-1.118-3.212v-.063q1.035.594 2.223.641-1.005-.688-1.6-1.797-.594-1.109-.593-2.406 0-1.375.67-2.547Q5.52 7.249 8.161 8.648q2.642 1.4 5.658 1.555-.122-.594-.122-1.156 0-2.094 1.44-3.57Q16.575 4.001 18.615 4q2.132 0 3.593 1.594 1.66-.328 3.121-1.219-.563 1.797-2.162 2.781Q24.584 7 26 6.376z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -923,7 +1085,8 @@ svg {
   display: inline-block;
   vertical-align: middle; }
 
-.icon-facebook:before, a[href*="facebook.com"]:before {
+.icon-facebook:before,
+a[href*="facebook.com"]:before {
   content: " ";
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' class='v-icon' fill='%233B5998' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M24.672 2.001q.547 0 .938.391.391.39.391.938v21.34q0 .547-.391.938-.391.391-.938.391h-6.109v-9.296h3.109l.469-3.624h-3.578v-2.312q0-.875.367-1.313.367-.438 1.43-.438L22.266 9V5.768q-.984-.141-2.781-.141-2.125 0-3.398 1.25-1.273 1.25-1.273 3.53v2.672h-3.125v3.624h3.125V26H3.33q-.547 0-.938-.391Q2 25.218 2 24.67V3.33q0-.547.392-.938Q2.783 2 3.33 2h21.344z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -931,7 +1094,9 @@ svg {
   display: inline-block;
   vertical-align: middle; }
 
-.icon-youtube:before, a[href*="youtube.com"]:before, a[href*="youtu.be"]:before {
+.icon-youtube:before,
+a[href*="youtube.com"]:before,
+a[href*="youtu.be"]:before {
   content: " ";
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' class='v-icon' fill='%23cd201f' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M19.143 14.029q0-.496-.402-.724L11.884 9.02q-.415-.268-.871-.027-.442.241-.442.75v8.57q0 .51.442.75.214.108.415.108.268 0 .455-.134l6.857-4.285q.402-.228.402-.723zm6.857 0q0 1.285-.014 2.009-.013.723-.114 1.828-.1 1.104-.301 1.975-.215.978-.924 1.647-.71.67-1.66.777-2.974.335-8.987.335t-8.986-.335q-.95-.107-1.667-.777-.717-.669-.931-1.647-.188-.87-.288-1.975Q2 16.76 2 16.038V12.02q0-.724.128-1.828.1-1.105.301-1.976.215-.978.924-1.647.71-.67 1.66-.777Q7.988 5.457 14 5.457t8.986.335q.95.107 1.667.777.717.67.931 1.647.188.87.288 1.976.1 1.104.114 1.828.014.723.014 2.009z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -955,7 +1120,8 @@ svg {
   display: inline-block;
   vertical-align: middle; }
 
-.icon-map:before, a[href*="maps.google.com"]:before {
+.icon-map:before,
+a[href*="maps.google.com"]:before {
   content: " ";
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23a5b1b1' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -1030,6 +1196,123 @@ a[href*="mailto:"]:before {
   display: inline-block;
   vertical-align: middle; }
 
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+input[type="submit"] {
+  background-color: #2980b9;
+  color: #fff;
+  border-radius: 2px; }
+
+.btn-hollow,
+input[type="reset"],
+input[type="button"] {
+  color: #20638f;
+  border-color: #20638f;
+  border-radius: 2px;
+  background-color: #ffffff; }
+
+.btn-hollow:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: #fff;
+  background-color: #20638f;
+  border-color: #20638f; }
+
+.btn-hollow:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+.btn-hollow:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+  outline: none;
+  color: #fff;
+  background-color: #20638f;
+  border-color: #20638f;
+  box-shadow: 0 0 0 1px rgba(32, 99, 143, 0.25); }
+
+.btn-round {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  -js-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.btn-round > i {
+  line-height: 38.4px; }
+
+.btn-sm {
+  padding: 4px 8px; }
+
+.btn-lg {
+  padding: 16px 20px;
+  font-size: 17.6px;
+  font-weight: 700; }
+
+/**
+* Flexible media embeds
+*
+* For use with media embeds – such as videos, slideshows, or even images –
+* that need to retain a specific aspect ratio but adapt to the width of their
+* containing element.
+*
+* Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+.FlexEmbed {
+  display: block;
+  overflow: hidden;
+  position: relative; }
+
+/**
+* The aspect-ratio hack is applied to an empty element because it allows
+* the component to respect `max-height`. Default aspect ratio is 1:1.
+*/
+.FlexEmbed-ratio {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%; }
+
+/**
+* Modifier: 3:1 aspect ratio
+*/
+.FlexEmbed-ratio--3by1 {
+  padding-bottom: 33.33333%; }
+
+/**
+* Modifier: 2:1 aspect ratio
+*/
+.FlexEmbed-ratio--2by1 {
+  padding-bottom: 50%; }
+
+/**
+* Modifier: 16:9 aspect ratio
+*/
+.FlexEmbed-ratio--16by9 {
+  padding-bottom: 56.25%; }
+
+/**
+* Modifier: 4:3 aspect ratio
+*/
+.FlexEmbed-ratio--4by3 {
+  padding-bottom: 75%; }
+
+/**
+* Fit the content to the aspect ratio
+*/
+.FlexEmbed-content > iframe {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
 /* #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs li {
@@ -1063,7 +1346,8 @@ a[href*="mailto:"]:before {
   display: flex;
   justify-content: center; }
 
- .search .archive-title {
+
+.search .archive-title {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1073,125 +1357,10 @@ a[href*="mailto:"]:before {
   position: absolute;
   width: 1px; }
 
+/* Custom media queries */
+/* sanitize.css vars */
 html {
   /*--monospace-font-family: monospace;*/ }
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-input[type="submit"] {
-  background-color: #2980b9;
-  color: white;
-  border-radius: 2px; }
-
-.btn-hollow, html .gv-search-clear,
-input[type="reset"],
-input[type="button"] {
-  color: #20638f;
-  border-color: #20638f;
-  border-radius: 2px;
-  background-color: #ffffff; }
-
-.btn-hollow:hover, html .gv-search-clear:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-  color: #fff;
-  background-color: #20638f;
-  border-color: #20638f; }
-
-.btn-hollow:focus, html .gv-search-clear:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-.btn-hollow:active,
-html .gv-search-clear:active,
-input[type="button"]:active,
-input[type="reset"]:active {
-  outline: none;
-  color: #fff;
-  background-color: #20638f;
-  border-color: #20638f;
-  box-shadow: 0 0 0 1px rgba(32, 99, 143, 0.25); }
-
-.btn-round {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 40px;
-  width: 40px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
-  -js-display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .btn-round > i {
-    line-height: 38.4px; }
-
-.btn-sm {
-  padding: 4px 8px; }
-
-.btn-lg {
-  padding: 16px 20px;
-  font-size: 17.6px;
-  font-weight: 700; }
-
-/**
- * Flexible media embeds
- *
- * For use with media embeds – such as videos, slideshows, or even images –
- * that need to retain a specific aspect ratio but adapt to the width of their
- * containing element.
- *
- * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
- */
-.FlexEmbed {
-  display: block;
-  overflow: hidden;
-  position: relative; }
-
-/**
- * The aspect-ratio hack is applied to an empty element because it allows
- * the component to respect `max-height`. Default aspect ratio is 1:1.
- */
-.FlexEmbed-ratio {
-  display: block;
-  padding-bottom: 100%;
-  width: 100%; }
-
-/**
- * Modifier: 3:1 aspect ratio
- */
-.FlexEmbed-ratio--3by1 {
-  padding-bottom: 33.33333%; }
-
-/**
- * Modifier: 2:1 aspect ratio
- */
-.FlexEmbed-ratio--2by1 {
-  padding-bottom: 50%; }
-
-/**
- * Modifier: 16:9 aspect ratio
- */
-.FlexEmbed-ratio--16by9 {
-  padding-bottom: 56.25%; }
-
-/**
- * Modifier: 4:3 aspect ratio
- */
-.FlexEmbed-ratio--4by3 {
-  padding-bottom: 75%; }
-
-/**
- * Fit the content to the aspect ratio
- */
-.FlexEmbed-content > iframe {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
 
 .animating {
   transition-duration: 0.3s;
@@ -2235,6 +2404,15 @@ html {
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
   html .u-shadow5, html .u-shadow--24dp {
     box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2); }
+  html .gv-search-clear {
+    color: #20638f;
+    border-color: #20638f;
+    border-radius: 2px;
+    background-color: #ffffff; }
+    html .gv-search-clear:hover {
+      color: #fff;
+      background-color: #20638f;
+      border-color: #20638f; }
   html .gv-search-horizontal {
     -js-display: flex;
     display: flex;
