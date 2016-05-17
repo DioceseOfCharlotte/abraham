@@ -37,7 +37,7 @@
     "postcss-flexibility": "^1.0.3",
     "postcss-import": "^8.1.2",
     "postcss-inline-svg": "^1.4.0",
-    "postcss-merge-rules": "^2.0.8",
+    "postcss-merge-rules": "^2.0.9",
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-scss": "^0.1.8",

@@ -15,7 +15,7 @@ $cell-padding: .5 * $gutter;
 	flex: 1 1 auto;
 }
 
-@media (--bp-md) {
+@media (--md) {
 	.o-cell {
 		width: calc(33.333% - #{$gutter});
 	}

@@ -792,10 +792,8 @@ a[href]:before,
 a[href]:after {
   padding: 0.5em;
   background-size: cover;
-  width: 1em;
-  height: 1em;
-  bottom: 1px;
-  position: relative; }
+  width: 1.2em;
+  height: 1.2em; }
 
 a[href]:before {
   margin-right: 0.2em; }
