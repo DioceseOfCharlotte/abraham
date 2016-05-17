@@ -161,7 +161,7 @@ gulp.task('styles', function() {
 			precision: 10,
 			onError: console.error.bind(console, 'Sass error:')
 		}))
-		.pipe(gulp.dest('.tmp'))
+		.pipe(gulp.dest('src/styles/oldie/'))
 		.pipe($.if('*.css', $.concat('style.css')))
 		.pipe(postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('./'))
@@ -175,7 +175,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('oldie', function() {
-	gulp.src('.tmp/style.css')
+	gulp.src('src/styles/oldie/ie-compat.css')
 		.pipe(postcss(POSTCSS_IE))
 		.pipe($.concat('oldie.css'))
 		.pipe(gulp.dest('css'))

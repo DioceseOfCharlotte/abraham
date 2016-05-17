@@ -538,7 +538,7 @@ class Attr_Trumps {
 			return $classes; }
 
 		if ( is_singular() && ! is_front_page() ) {
-			is_single( $post_id ) ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
+			is_single( $post_id ) || is_page() ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
 		}
 
 		if ( is_archive() || is_search() ) {

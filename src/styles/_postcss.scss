@@ -380,8 +380,8 @@ details {
 	display: block; /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
 }
 html {
-	-ms-overflow-style: -ms-autohiding-scrollbar; /* Edge 12+, Internet Explorer 11- */
-	overflow-y: scroll; /* All browsers without overlaying scrollbars */
+	/*-ms-overflow-style: -ms-autohiding-scrollbar; */
+	/*overflow-y: scroll; */
 	-webkit-text-size-adjust: 100%; /* iOS 8+, Windows Phone 8.1+ */
 }
 hr {
