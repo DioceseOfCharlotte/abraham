@@ -16,18 +16,11 @@ a {
 	}
 }
 
-a:not([class]) {
-	padding-top: 1px;
-	padding-bottom: 1px;
-}
-
 a[href]:before,
 a[href]:after {
 	background-size: contain;
 	width: 1.1em;
 	height: 1.1em;
-	bottom: 1px;
-	position: relative;
 }
 
 a[href]:before {
@@ -42,10 +35,14 @@ a[class]:not(.btn),
 .entry-title > a {
 	color: inherit;
 	opacity: 0.7;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 
 	&:hover {
 		opacity: 1;
 	}
+}
+
+.entry-title > a {
+	width: 100%;
 }
