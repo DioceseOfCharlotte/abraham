@@ -51,7 +51,8 @@ input[type=radio] {
 }
 
 select {
-  @mixin icon select-arrows, #445963;
+  @mixin icon select-arrows, #78909C;
   background-size: 1em;
   background-position: 98% 50%;
+  padding-right: 1rem;
 }

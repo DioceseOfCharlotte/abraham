@@ -55,10 +55,10 @@ class Attr_Trumps {
 
 			'page_header'             	=> 'u-p4 u-1of1 u-rel u-text-center',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
-			'archive_description'     	=> 'u-1of1 u-p3 u-py4-md u-text-left u-br u-container u-mb3 u-bg-white u-rel u-shadow--3dp',
+			'archive_description'     	=> 'u-1of1 u-p3 u-py4-md u-text-left u-br u-container u-mb3 u-bg-white u-rel u-shadow2',
 
 			// ENTRY.
-			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br u-shadow--3dp',
+			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br u-shadow2',
 			'post_wide'               	=> 'u-fit u-1of1',
 
 			'post_archive'            	=> 'u-mb3 o-cell u-1of2-md u-bg-white u-br',
@@ -105,9 +105,9 @@ class Attr_Trumps {
 			'current-menu-item'         => 'is-active',
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
-			'gv_post'                   => 'u-bg-transparent shadow0 u-p0',
+			'gv_post'                   => 'u-bg-transparent u-shadow0',
 			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u-1of1 u-br u-bg-white u-rel u-1of2-md u-1of3-lg u-border0 u-shadow--2dp',
+			'gv_entry'                  => 'o-cell u-1of1 u-p1 u-br u-bg-white u-rel u-1of2-md u-1of3-lg u-border0 u-shadow1',
 		);
 
 		$this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
@@ -632,7 +632,7 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) || is_singular( 'gravityview' ) ) :
 			$attr['class']      .= " {$this->args['entry_content_wide']}";
 			else :
 				$attr['class']      .= " {$this->args['entry_content']}";

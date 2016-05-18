@@ -1,7 +1,7 @@
 
 
 
-@define-mixin icon $name: info, $fill: #a5b1b1, $stroke: #fff, $sWidth: "0", $width: 1em, $height: 1em {
+@define-mixin icon $name: info, $fill: #9aacb5, $stroke: #fff, $sWidth: "0", $width: 1em, $height: 1em {
 	content: " ";
 	background-image: svg-load($name.svg, fill=$fill, stroke=$stroke, stroke-width=$sWidth, width=$width, height=$height);
 	background-repeat: no-repeat;
