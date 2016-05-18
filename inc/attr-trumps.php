@@ -51,7 +51,7 @@ class Attr_Trumps {
 			// CONTENT.
 			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
-			'content_archive'         	=> 'u-flex u-flex-ja facetwp-template',
+			'content_archive'         	=> 'u-flex u-flex-ja',
 
 			'page_header'             	=> 'u-p4 u-1of1 u-rel u-text-center',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
@@ -342,6 +342,9 @@ class Attr_Trumps {
 
 					if ( hybrid_is_plural() ) {
 						$attr['class']      .= " {$this->args['content_archive']}";
+					}
+					if ( function_exists( doc_get_facet_cpts ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
+						$attr['class']   .= ' facetwp-template';
 					}
 
 					return $attr;
