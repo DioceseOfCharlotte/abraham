@@ -343,7 +343,7 @@ class Attr_Trumps {
 					if ( hybrid_is_plural() ) {
 						$attr['class']      .= " {$this->args['content_archive']}";
 					}
-					if ( function_exists( doc_get_facet_cpts ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
+					if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
 						$attr['class']   .= ' facetwp-template';
 					}
 
