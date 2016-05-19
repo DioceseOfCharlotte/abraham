@@ -5,7 +5,7 @@
 * {
 	flex-basis: auto;
 	flex-grow: 0;
-	flex-shrink: 0;
+	flex-shrink: 1;
 	word-wrap: break-word;
 }
 
