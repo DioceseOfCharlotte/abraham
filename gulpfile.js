@@ -10,6 +10,7 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var gulpLoadPlugins = require('gulp-load-plugins');
+var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var svgmin = require('gulp-svgmin');
 var postcss = require('gulp-postcss');
@@ -31,8 +32,6 @@ var pcSvg = require('postcss-inline-svg');
 var pcNoDups = require('postcss-discard-duplicates');
 var syntax = require('postcss-scss');
 var styleFmt = require('stylefmt');
-
-var cssnano = require('gulp-cssnano');
 
 var $ = gulpLoadPlugins();
 var reload = browserSync.reload;

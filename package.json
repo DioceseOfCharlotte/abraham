@@ -41,9 +41,9 @@
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-scss": "^0.1.8",
-    "run-sequence": "^1.1.5",
+    "run-sequence": "^1.2.0",
     "stylefmt": "^3.2.1",
-    "stylelint": "^6.4.1"
+    "stylelint": "^6.4.2"
   },
   "private": true,
   "engines": {
