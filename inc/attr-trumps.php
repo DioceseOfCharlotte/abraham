@@ -632,7 +632,7 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) || is_singular( 'gravityview' ) ) :
+		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) || is_singular( 'gravityview' ) && 'edit' !== gravityview_get_context() ) :
 			$attr['class']      .= " {$this->args['entry_content_wide']}";
 			else :
 				$attr['class']      .= " {$this->args['entry_content']}";
