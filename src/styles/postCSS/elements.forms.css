@@ -9,6 +9,7 @@ form {
 input,
 select,
 textarea {
+	color: #333;
     font-size: 1rem;
     vertical-align: middle;
 	border: 1px solid color(#B7C6CD a(90%));

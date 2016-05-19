@@ -1066,6 +1066,7 @@ form {
 }
 
 input, select, textarea {
+    color: #333;
     font-size: 1rem;
     vertical-align: middle;
     border: 1px solid rgba(183, 198, 205, 0.9);
@@ -2630,7 +2631,7 @@ html .u-flexed-grow {
     flex: 1 0 auto;
 }
 
-html .u-flexed-shrink {
+html .u-flexed-s0 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
