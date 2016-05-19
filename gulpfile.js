@@ -87,11 +87,6 @@ var SOURCESJS = [
 	'src/scripts/main.js'
 ];
 
-// Scripts that rely on jQuery
-var SOURCESJQ = [
-	'src/scripts/jq-main.js'
-];
-
 // ***** Development tasks ****** //
 // Lint JavaScript
 gulp.task('lint', function() {
@@ -203,20 +198,6 @@ gulp.task('scripts', function() {
 		}))
 });
 
-// Concatenate And Minify JavaScript
-gulp.task('jq_scripts', function() {
-	gulp.src(SOURCESJQ)
-		// .pipe($.babel())
-		.pipe($.concat('jq-main.js'))
-		.pipe(gulp.dest('js'))
-		.pipe($.uglify())
-		.pipe($.concat('jq-main.min.js'))
-		.pipe(gulp.dest('js'))
-		.pipe($.size({
-			title: 'jq_scripts'
-		}))
-});
-
 /**
  * Defines the list of resources to watch for changes.
  */
@@ -237,5 +218,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('images', 'presass', ['styles'], 'oldie', 'scripts', 'jq_scripts', cb);
+	runSequence('images', 'presass', ['styles'], 'oldie', 'scripts', cb);
 });
