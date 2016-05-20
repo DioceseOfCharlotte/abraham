@@ -51,6 +51,20 @@
 	}
 }
 
+.icon-refresh {
+	background-size: contain;
+	@mixin icon refresh, #36474f;
+	width: 2em;
+	height: 2em;
+}
+
+.icon-edit {
+	background-size: contain;
+	@mixin icon edit, #36474f;
+	width: 2em;
+	height: 2em;
+}
+
 .icon-info:before {
 	@mixin icon info;
 }
