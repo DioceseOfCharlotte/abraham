@@ -52,7 +52,7 @@ function abe_head_meta() {
  * Clean up the_excerpt().
  */
 function meh_excerpt_more() {
-	return '<a class="u-absolute btn-readmore u-z1 u-right0 u-bottom0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
+	return '<a class="u-abs u-bold u-text-2 u-1of1 btn u-p1 u-px4 u-border0 u-text-right btn-readmore u-z1 u-left0 u-bottom0" href="'.get_permalink().'">Read More</a>';
 }
 
 /**
