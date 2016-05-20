@@ -78,12 +78,6 @@ function abraham_content_width() {
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
-	// Styles.
-	wp_enqueue_style(
-		'material-icons',
-		'https://fonts.googleapis.com/icon?family=Material+Icons'
-	);
-
 	// Load parent theme stylesheet if child theme is active.
 	if ( is_child_theme() ) {
 		wp_enqueue_style( 'hybrid-parent' ); }
@@ -98,7 +92,7 @@ function abraham_assets() {
 	);
 
 	// Scripts.
-	wp_enqueue_script( 'object-fit', trailingslashit( get_template_directory_uri() ).'js/ofi.browser.js',  false, false, false );
+	// wp_enqueue_script( 'object-fit', trailingslashit( get_template_directory_uri() ).'js/ofi.browser.js',  false, false, false );
 
 	// wp_enqueue_script(
 	// 'abraham_js',
@@ -121,7 +115,6 @@ function abraham_get_editor_styles() {
 
 	/* Add the theme's editor styles. */
 	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'style.css';
-	$editor_styles[] = str_replace( ',', '%2C', '//fonts.googleapis.com/icon?family=Material+Icons' );
 
 	/* If a child theme, add its editor styles. */
 	if ( is_child_theme() ) {

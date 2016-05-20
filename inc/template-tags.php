@@ -71,7 +71,7 @@ add_action( 'tha_entry_bottom', 'abe_do_edit_link' );
  * @param string $output Link html.
  */
 function meh_edit_post_link( $output ) {
-	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-opacity u-abs u-right0 u-bottom0"', $output );
+	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn u-z2 btn-round u-opacity u-abs u-right0 u-bottom0"', $output );
 	return $output;
 }
 add_filter( 'edit_post_link', 'meh_edit_post_link' );
