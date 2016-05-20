@@ -11,14 +11,9 @@
 	<?php tha_entry_top(); ?>
 
 		<header <?php hybrid_attr( 'entry-header' ); ?>>
-			<?php
-				get_the_image(array(
-					'size' => 'abe-card-md',
-					'image_class' => 'u-br-t u-1of1',
-					'before'             => '<div class="card-img u-overflow-hidden">',
-					'after'              => '</div>',
-				));
-			?>
+
+			<?php get_template_part( 'components/img', 'hd' ); ?>
+
 			<h2 <?php hybrid_attr( 'entry-title' ); ?>>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h2>
