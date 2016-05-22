@@ -9,6 +9,7 @@ add_filter( 'hybrid_content_template_hierarchy', 'meh_template_hierarchy' );
 add_action( 'wp_head','abe_head_meta' );
 add_filter( 'excerpt_more', 'meh_excerpt_more' );
 add_filter( 'excerpt_length', 'meh_excerpt_length' );
+add_filter( 'get_custom_logo', 'abe_custom_logo' );
 
 /**
  * Add templates to hybrid_get_content_template()
@@ -60,4 +61,14 @@ function meh_excerpt_more() {
  */
 function meh_excerpt_length( $length ) {
 	return 40;
+}
+
+function abe_custom_logo() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$html = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+            'class'    => 'custom-logo',
+            'itemprop' => 'logo',
+        )
+    );
+	return $html;
 }

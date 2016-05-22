@@ -45,7 +45,7 @@ class Attr_Trumps {
 
 			// SITE HEADER.
 			'header'              		   => 'u-abs is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-jb u-flex-center',
-			'branding'            		   => 'u-flex u-ml4-md',
+			'branding'            		   => 'u-ml4-md',
 			'site_title'          		   => 'u-heading u-color-inherit u-m0',
 			'site_description'        	   => 'u-heading u-m0 u-text-3',
 			// CONTENT.

@@ -8,17 +8,6 @@
 use Mexitek\PHPColors\Color;
 
 /**
- * Logo
- */
-function abe_site_logo() {
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		return;
-	}
-	the_custom_logo();
-}
-
-
-/**
  * Featured Posts
  */
 function abe_has_multiple_featured_posts() {
@@ -49,9 +38,9 @@ function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 
 	ob_start(); ?>
 
-	<div class="icon-<?= $size ?>">
+	<span class="icon-<?= $size ?>">
 		<?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?>
-	</div>
+	</span>
 
 	<?php return ob_get_clean();
 
