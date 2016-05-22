@@ -104,7 +104,7 @@ final class Abraham_Custom_Styles {
 	public function wp_head_callback() {
 		$style = $this->get_primary_styles();
 		$style .= $this->get_secondary_styles();
-		$style .= $this->get_abe_font_styles();
+		// $style .= $this->get_abe_font_styles();
 		/* Put the final style output together. */
 		$style = "\n".'<style id="custom-colors-css">'.trim( $style ).'</style>'."\n";
 
@@ -226,22 +226,21 @@ final class Abraham_Custom_Styles {
 		return str_replace( array( "\r", "\n", "\t" ), '', $style );
 	}
 
-	function get_abe_font_styles() {
-		$font        = '';
-		$h_family = get_theme_mod( 'heading_font', '' );
-		$b_family    = get_theme_mod( 'body_font', '' );
+	// function get_abe_font_styles() {
+	// 	$font        = '';
+	// 	$h_family = get_theme_mod( 'heading_font', '' );
+	// 	$b_family    = get_theme_mod( 'body_font', '' );
 
-		if ( $h_family ) {
-			$font .= sprintf( "#page .u-heading {font-family: '%s';}", esc_attr( $h_family ) ); }
+	// 	if ( $h_family ) {
+	// 		$font .= sprintf( "#page .u-heading {font-family: '%s';}", esc_attr( $h_family ) ); }
 
-		if ( $b_family ) {
-			$font .= sprintf( "#page .u-body,body,p {font-family: '%s';}", esc_attr( $b_family ) ); }
+	// 	if ( $b_family ) {
+	// 		$font .= sprintf( "#page .u-body,body,p {font-family: '%s';}", esc_attr( $b_family ) ); }
 
-		// Output the styles.
-		if ( $font ) {
-			echo "\n" . '<style type="text/css" id="font-css">' . $font . '</style>' . "\n";
-		}
-	}
+	// 	if ( $font ) {
+	// 		echo "\n" . '<style type="text/css" id="font-css">' . $font . '</style>' . "\n";
+	// 	}
+	// }
 
 	/**
 	 * Returns the instance.
