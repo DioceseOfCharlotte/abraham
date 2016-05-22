@@ -15,16 +15,20 @@
 		}
 
 		&:before {
-			position: absolute;
-			margin-left: -1.5em!important;
+			width: 1em;
+			height: 1em;
+			min-width: 1em;
+			background-size: contain;
+			margin-right: 0.5em;
+			margin-left: -1.5em;
 		}
 	}
 }
 
-.u-list-group.bullet-cross > li {
+.u-list-group.bullet-cross > li:before {
 	@mixin icon cross;
 }
 
-.u-list-group.bullet-heart > li {
+.u-list-group.bullet-heart > li:before {
 	@mixin icon heart;
 }

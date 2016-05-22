@@ -691,9 +691,11 @@ svg {
     font: 100%/1.5 -apple-system,
           BlinkMacSystemFont,
           "Segoe UI",
-          Roboto,
+          "Roboto",
+          "Liberation Sans",
+          "Fira Sans",
+          "Droid Sans",
           "Helvetica Neue",
-          Helvetica,
           sans-serif;
 }
 
@@ -877,7 +879,7 @@ p:last-child {
 \*------------------------------------*/
 
 a {
-    color: #2980b9;
+    color: #08b09b;
     text-decoration: none;
     opacity: 1;
     transition-duration: 0.3s;
@@ -886,28 +888,33 @@ a {
 }
 
 a:active, a:focus, a:hover {
-    opacity: 0.7;
     text-decoration: none;
 }
 
-a[href]:before, a[href]:after {
+a:before, a:after {
     background-size: contain;
     min-width: 1.1em;
     width: 1.1em;
     height: 1.1em;
 }
 
-a[href]:before {
+a:before {
     margin-right: 0.2em;
 }
 
-a[href]:after {
+a:after {
     margin-left: 0.2em;
 }
 
-a[class]:not(.btn), .entry-title > a {
+a:not([class]):active, a:not([class]):focus, a:not([class]):hover {
+    background: rgba(183, 198, 205, 0.5);
+    box-shadow: 0 0 0 2px rgba(183, 198, 205, 0.5);
+    border-radius: 0.5px;
+}
+
+a[class] {
     color: inherit;
-    opacity: 0.7;
+    opacity: 0.8;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -916,12 +923,8 @@ a[class]:not(.btn), .entry-title > a {
     align-items: center;
 }
 
-a[class]:not(.btn):hover, .entry-title > a:hover {
+a[class]:hover {
     opacity: 1;
-}
-
-.entry-title > a {
-    width: 100%;
 }
 
 .btn, .button, button, input[type="button"], input[type="reset"],
@@ -930,10 +933,8 @@ input[type="submit"] {
     background-color: transparent;
     vertical-align: middle;
     display: inline-block;
-    text-decoration: none;
     text-align: center;
     margin: 0;
-    opacity: 1;
     height: auto;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -943,8 +944,6 @@ input[type="submit"] {
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover,
 input[type="reset"]:hover, input[type="submit"]:hover {
-    opacity: 1;
-    text-decoration: none;
     box-shadow: inset 0 0 0 20rem rgba(17, 17, 17, 0.1);
 }
 
@@ -1359,11 +1358,15 @@ a[href*="mailto:"]:before {
 }
 
 .u-list-group > li:before {
-    position: absolute;
-    margin-left: -1.5em !important;
+    width: 1em;
+    height: 1em;
+    min-width: 1em;
+    background-size: contain;
+    margin-right: 0.5em;
+    margin-left: -1.5em;
 }
 
-.u-list-group.bullet-cross > li {
+.u-list-group.bullet-cross > li:before {
     content: " ";
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%239aacb5' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M5.979 10.974v5.021h7.041v11.99h5.042v-11.99h6.958v-5.021h-6.958V4.016H13.02v6.958H5.979z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -1371,7 +1374,7 @@ a[href*="mailto:"]:before {
     vertical-align: middle;
 }
 
-.u-list-group.bullet-heart > li {
+.u-list-group.bullet-heart > li:before {
     content: " ";
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%239aacb5' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M22.65 2.75c-2.943 0-5.476 2.424-6.65 4.955-1.173-2.531-3.707-4.955-6.65-4.955C5.293 2.75 2 6.084 2 10.192 2 18.548 10.326 20.739 16 29c5.365-8.21 14-10.719 14-18.808 0-4.108-3.293-7.442-7.35-7.442z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -1382,6 +1385,16 @@ a[href*="mailto:"]:before {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
+
+a.btn, a.button {
+    opacity: 1;
+    text-decoration: none;
+}
+
+a.btn:hover, a.button:hover {
+    opacity: 1;
+    text-decoration: none;
+}
 
 input[type="submit"] {
     background-color: #2980b9;
@@ -2159,7 +2172,7 @@ html .u-bold {
 }
 
 html .u-heading {
-    font-family: georgia, times, serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 html .u-body {
@@ -2167,8 +2180,10 @@ html .u-body {
                  BlinkMacSystemFont,
                  "Segoe UI",
                  "Roboto",
+                 "Liberation Sans",
+                 "Fira Sans",
+                 "Droid Sans",
                  "Helvetica Neue",
-                 Helvetica,
                  sans-serif;
     font-weight: 400;
 }

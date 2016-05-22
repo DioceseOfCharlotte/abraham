@@ -8,10 +8,8 @@ input[type="submit"] {
 	background-color: transparent;
 	vertical-align: middle;
 	display: inline-block;
-	text-decoration: none;
 	text-align: center;
 	margin: 0;
-	opacity: 1;
 	height: auto;
 	cursor: pointer;
 	padding: 0.5rem 1rem;
@@ -19,8 +17,6 @@ input[type="submit"] {
 	transition: all $transition-time, $animation-curve-default;
 
 	&:hover {
-		opacity: 1;
-		text-decoration: none;
 		box-shadow: inset 0 0 0 20rem $darken1;
 	}
 

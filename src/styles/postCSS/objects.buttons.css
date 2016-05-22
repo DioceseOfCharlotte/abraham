@@ -1,6 +1,18 @@
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
+
+a.btn,
+a.button {
+	opacity: 1;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 1;
+		text-decoration: none;
+	}
+}
+
 input[type="submit"] {
 	background-color: $color1;
 	color: #fff;
