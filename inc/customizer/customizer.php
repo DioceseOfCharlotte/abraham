@@ -135,16 +135,16 @@ function abraham_customize_register( $wp_customize ) {
 	// 	)
 	// );
 	/* Adds the body font control. */
-	$wp_customize->add_control(
-		'abraham-body-font',
-		array(
-			'label'    => esc_html__( 'Body Font', 'abraham' ),
-			'section'  => 'custom_typography',
-			'settings' => 'body_font',
-			'type'     => 'select',
-			'choices'  => customizer_library_get_font_choices(),
-		)
-	);
+	// $wp_customize->add_control(
+	// 	'abraham-body-font',
+	// 	array(
+	// 		'label'    => esc_html__( 'Body Font', 'abraham' ),
+	// 		'section'  => 'custom_typography',
+	// 		'settings' => 'body_font',
+	// 		'type'     => 'select',
+	// 		'choices'  => customizer_library_get_font_choices(),
+	// 	)
+	// );
 }
 
 /**
