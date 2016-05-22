@@ -132,20 +132,20 @@ if ( ! function_exists( 'abraham_widgets' ) ) {
 	function abraham_widgets() {
 		register_sidebar(array(
 			'id'            => 'primary',
-			'name'          => __( 'Primary', 'abraham' ),
-			'before_title'  => '<h3 class="h2 widget-title u-mt0">',
-			'after_title'   => '</h3>',
-			'before_widget' => '<section ' .hybrid_get_attr( 'widgets', 'primary' ).'>',
+			'name'          => esc_html__( 'Primary', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title u-mt0">',
+			'after_title'   => '</h3>',
 		));
 
 		register_sidebar(array(
 			'id'            => 'footer',
-			'name'          => __( 'Footer', 'abraham' ),
-			'before_title'  => '<h3 class="h2 widget-title u-mt0">',
-			'after_title'   => '</h3>',
-			'before_widget' => '<section ' .hybrid_get_attr( 'widgets', 'footer' ).'>',
+			'name'          => esc_html__( 'Footer', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title u-mt0">',
+			'after_title'   => '</h3>',
 		));
 	}
 }
