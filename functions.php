@@ -18,7 +18,7 @@ require_once $abe_lib . 'tha-theme-hooks.php';    	// Template hooks.
 // Theme specific includes.
 require_once $abe_inc . 'setup.php';                    	// Initial theme setup.
 require_once $abe_inc . 'customizer/Color.php';				// Customizer.
-require_once $abe_inc . 'customizer/fonts.php';				// Customizer.
+// require_once $abe_inc . 'customizer/fonts.php';				// Customizer.
 require_once $abe_inc . 'customizer/custom-styles.php';		// Customizer.
 require_once $abe_inc . 'customizer/customizer.php';    	// Customizer.
 require_once $abe_inc . 'customizer/custom-background.php'; // Customizer.
