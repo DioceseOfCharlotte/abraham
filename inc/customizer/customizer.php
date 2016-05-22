@@ -7,8 +7,8 @@
 
 add_action( 'customize_register', 'abraham_customize_register', 11 );
 add_action( 'customize_preview_init', 'abraham_customizer_js' );
-add_action( 'wp_enqueue_scripts', 'abraham_google_fonts' );
-add_action( 'customize_register', 'my_register_blogname_partials' );
+// add_action( 'wp_enqueue_scripts', 'abraham_google_fonts' );
+//add_action( 'customize_register', 'my_register_blogname_partials' );
 
 /**
  * Customizer Settings
@@ -94,46 +94,46 @@ function abraham_customize_register( $wp_customize ) {
 	);
 
 	/* Typography. */
-	$wp_customize->add_section(
-		'custom_typography',
-		array(
-		'title'    => esc_html__( 'Typography', 'abraham' ),
-		'priority' => 80,
-		)
-	);
+	// $wp_customize->add_section(
+	// 	'custom_typography',
+	// 	array(
+	// 	'title'    => esc_html__( 'Typography', 'abraham' ),
+	// 	'priority' => 80,
+	// 	)
+	// );
 
 	/* Adds the heading font setting. */
-	$wp_customize->add_setting(
-		'heading_font',
-		array(
-			'default'              => 'Georgia,Times,"Times New Roman",serif',
-			'type'                 => 'theme_mod',
-			'sanitize_callback'    => 'sanitize_text_field',
-			// 'transport'            => 'postMessage',
-		)
-	);
+	// $wp_customize->add_setting(
+	// 	'heading_font',
+	// 	array(
+	// 		'default'              => 'Georgia,Times,"Times New Roman",serif',
+	// 		'type'                 => 'theme_mod',
+	// 		'sanitize_callback'    => 'sanitize_text_field',
+	// 		// 'transport'            => 'postMessage',
+	// 	)
+	// );
 	/* Adds the heading font control. */
-	$wp_customize->add_control(
-		'abraham-heading-font',
-		array(
-			'label'    => esc_html__( 'Heading Font', 'abraham' ),
-			'section'  => 'custom_typography',
-			'settings' => 'heading_font',
-			'type'     => 'select',
-			'choices'  => customizer_library_get_font_choices(),
-		)
-	);
+	// $wp_customize->add_control(
+	// 	'abraham-heading-font',
+	// 	array(
+	// 		'label'    => esc_html__( 'Heading Font', 'abraham' ),
+	// 		'section'  => 'custom_typography',
+	// 		'settings' => 'heading_font',
+	// 		'type'     => 'select',
+	// 		'choices'  => customizer_library_get_font_choices(),
+	// 	)
+	// );
 
 	/* Adds the body font setting. */
-	$wp_customize->add_setting(
-		'body_font',
-		array(
-			'default'              => '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif',
-			'type'                 => 'theme_mod',
-			'sanitize_callback'    => 'sanitize_text_field',
-			// 'transport'            => 'postMessage',
-		)
-	);
+	// $wp_customize->add_setting(
+	// 	'body_font',
+	// 	array(
+	// 		'default'              => '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif',
+	// 		'type'                 => 'theme_mod',
+	// 		'sanitize_callback'    => 'sanitize_text_field',
+	// 		// 'transport'            => 'postMessage',
+	// 	)
+	// );
 	/* Adds the body font control. */
 	$wp_customize->add_control(
 		'abraham-body-font',
