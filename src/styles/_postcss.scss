@@ -730,11 +730,15 @@ a {
 	transition-duration: $transition-time;
 	transition-timing-function: $animation-curve-default;
 	transition-property: all;
+	border-radius: 0.5px;
+}
+a:hover {
+  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.2);
+  text-decoration: none;
 }
 a:active,
-	a:focus,
-	a:hover {
-  text-decoration: none;
+	a:focus {
+  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.4);
 }
 a:before,
 a:after {
@@ -749,20 +753,14 @@ a:before {
 a:after {
 	margin-left: 0.2em;
 }
-a:not([class]):active,
-	a:not([class]):focus,
-	a:not([class]):hover {
-  background: rgba(183, 198, 205, 0.5);
-  box-shadow: 0 0 0 2px rgba(183, 198, 205, 0.5);
-  border-radius: 0.5px;
-}
-a[class] {
+a[class]:not(.btn) {
+	box-shadow: none;
 	color: inherit;
 	opacity: 0.8;
 	display: inline-flex;
 	align-items: center;
 }
-a[class]:hover {
+a[class]:not(.btn):hover {
   opacity: 1;
 }
 .btn,
@@ -780,6 +778,7 @@ input[type="submit"] {
 	height: auto;
 	cursor: pointer;
 	padding: 0.5rem 1rem;
+	border-radius: $base-radius;
 	border: 1px solid transparent;
 	transition: all $transition-time, $animation-curve-default;
 }
@@ -891,14 +890,14 @@ blockquote cite {
 # Forms
 --------------------------------------------------------------*/
 form {
-  margin-bottom: $space2;
+	margin-bottom: $space2;
 }
 input,
 select,
 textarea {
 	color: #333;
-    font-size: 1rem;
-    vertical-align: middle;
+	font-size: 1rem;
+	vertical-align: middle;
 	border: 1px solid rgba(183, 198, 205, 0.9);
 	padding: 0 $space1;
 	margin-bottom: $space2;
@@ -913,34 +912,54 @@ input:focus, select:focus, textarea:focus {
   border-color: $color-links-hover;
 }
 legend {
-  font-size: 1.25rem;
-  font-weight: 700;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
 textarea {
-  display: block;
-  width: 100%;
+	display: block;
+	width: 100%;
 }
 label {
-  font-size: .875rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: $space1;
+	font-size: 0.875rem;
+	font-weight: 700;
+	display: block;
+	margin-bottom: $space1;
 }
 input[type=checkbox],
 input[type=radio] {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 $space1 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 $space1 0 0;
 }
 select {
-  content: " ";
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' class='v-icon' fill='%2378909C' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M8.422 15.664c.32.446.836.45 1.158 0l2.763-3.86c.32-.447.135-.81-.414-.81h-5.86c-.579 0-.714.36-.416.81l2.767 3.86zm0-13.328c.32-.446.836-.45 1.158 0l2.763 3.86c.32.447.135.81-.414.81h-5.86c-.579 0-.714-.36-.416-.81l2.77-3.86z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  background-size: 1em;
-  background-position: 98% 50%;
-  padding-right: 1.5em;
+	content: " ";
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' class='v-icon' fill='%2378909C' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M8.422 15.664c.32.446.836.45 1.158 0l2.763-3.86c.32-.447.135-.81-.414-.81h-5.86c-.579 0-.714.36-.416.81l2.767 3.86zm0-13.328c.32-.446.836-.45 1.158 0l2.763 3.86c.32.447.135.81-.414.81h-5.86c-.579 0-.714-.36-.416-.81l2.77-3.86z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 1em;
+	background-position: 98% 50%;
+	padding-right: 1.5em;
+}
+input[type=search] {
+	content: " ";
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%2378909C' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M16.294 14.579h-.903l-.32-.31a7.4 7.4 0 0 0 1.795-4.836 7.433 7.433 0 1 0-7.433 7.433 7.4 7.4 0 0 0 4.837-1.796l.309.32v.904L20.296 22 22 20.296l-5.706-5.717zm-6.861 0a5.139 5.139 0 0 1-5.146-5.146 5.139 5.139 0 0 1 5.146-5.146 5.139 5.139 0 0 1 5.146 5.146 5.139 5.139 0 0 1-5.146 5.146z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 1.4em;
+	background-position: 97% 50%;
+	padding-right: 1.5em;
+}
+.search-submit {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 img {
 	max-width: 100%;
@@ -1185,34 +1204,27 @@ a.btn:hover, a.button:hover {
 input[type="submit"] {
 	background-color: $color1;
 	color: #fff;
-	border-radius: $base-radius;
 }
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
 	color: $color1-dark;
-	border-color: $color1-dark;
-	border-radius: $base-radius;
+	border-color: currentColor;
 	background-color: $lighten3;
+	box-shadow: inset 0 0 0 20rem transparent;
 }
 .btn-hollow:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover {
-	color: #fff;
-	background-color: $color1-dark;
-	border-color: $color1-dark;
-}
+input[type="button"]:hover,
 .btn-hollow:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 .btn-hollow:active,
 input[type="button"]:active,
-input[type="reset"]:active {
-	outline: none;
+input[type="reset"]:active  {
 	color: #fff;
-	background-color: $color1-dark;
-	border-color: $color1-dark;
-	box-shadow: 0 0 0 1px rgba($color1-dark, 0.25);
+	/*border-color: transparent;*/
+	box-shadow: inset 0 0 0 20rem $color1-dark;
 }
 .btn-round {
 	border-radius: 50%;

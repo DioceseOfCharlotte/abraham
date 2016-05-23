@@ -1,18 +1,17 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-
 form {
-  margin-bottom: $space2;
+	margin-bottom: $space2;
 }
 
 input,
 select,
 textarea {
 	color: #333;
-    font-size: 1rem;
-    vertical-align: middle;
-	border: 1px solid color(#B7C6CD a(90%));
+	font-size: 1rem;
+	vertical-align: middle;
+	border: 1px solid color(#b7c6cd a(90%));
 	padding: 0 $space1;
 	margin-bottom: $space2;
 	border-radius: $base-radius;
@@ -28,32 +27,50 @@ textarea {
 }
 
 legend {
-  font-size: 1.25rem;
-  font-weight: 700;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
 
 textarea {
-  display: block;
-  width: 100%;
+	display: block;
+	width: 100%;
 }
 
 label {
-  font-size: .875rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: $space1;
+	font-size: 0.875rem;
+	font-weight: 700;
+	display: block;
+	margin-bottom: $space1;
 }
 
 input[type=checkbox],
 input[type=radio] {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 $space1 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 $space1 0 0;
 }
 
 select {
-  @mixin icon select-arrows, #78909C;
-  background-size: 1em;
-  background-position: 98% 50%;
-  padding-right: 1.5em;
+	@mixin icon select-arrows, #78909C ;
+	background-size: 1em;
+	background-position: 98% 50%;
+	padding-right: 1.5em;
+}
+
+input[type=search] {
+	@mixin icon search, #78909C ;
+	background-size: 1.4em;
+	background-position: 97% 50%;
+	padding-right: 1.5em;
+}
+
+.search-submit {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }

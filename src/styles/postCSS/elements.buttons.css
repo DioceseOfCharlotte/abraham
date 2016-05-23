@@ -13,6 +13,7 @@ input[type="submit"] {
 	height: auto;
 	cursor: pointer;
 	padding: 0.5rem 1rem;
+	border-radius: $base-radius;
 	border: 1px solid transparent;
 	transition: all $transition-time, $animation-curve-default;
 

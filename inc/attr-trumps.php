@@ -84,7 +84,7 @@ class Attr_Trumps {
 
 			// SIDEBAR.
 			'sidebar_primary'         	=> 'o-cell o-grid u-m0 u-p0',
-			'sidebar_footer'          	=> 'u-flex-md u-py3 u-container-wide',
+			'sidebar_footer'          	=> 'o-grid u-py3 u-container-wide',
 			'sidebar_horizontal'      	=> 'u-1of1',
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
