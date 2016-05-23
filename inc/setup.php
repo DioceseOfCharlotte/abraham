@@ -34,6 +34,8 @@ function abraham_setup() {
 
 	add_theme_support( 'theme-layouts', array( 'default' => '1-column' ) );
 
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
 	register_nav_menus(array(
 		'primary'   => esc_html__( 'Primary', 'abraham' ),
 	));
@@ -124,30 +126,27 @@ function abraham_get_editor_styles() {
 	return $editor_styles;
 }
 
-if ( ! function_exists( 'abraham_widgets' ) ) {
-
-	/**
-	 * Register sidebars.
-	 */
-	function abraham_widgets() {
-		register_sidebar(array(
-			'id'            => 'primary',
-			'name'          => esc_html__( 'Primary', 'abraham' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title u-mt0">',
-			'after_title'   => '</h3>',
-		));
-
-		register_sidebar(array(
-			'id'            => 'footer',
-			'name'          => esc_html__( 'Footer', 'abraham' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title u-mt0">',
-			'after_title'   => '</h3>',
-		));
-	}
+/**
+ * Registers sidebars.
+ *
+ * @access public
+ * @return void
+ */
+function abraham_widgets() {
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'primary',
+			'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
+			'description' => __( 'The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout.', 'abraham' ),
+		)
+	);
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'footer',
+			'name'        => _x( 'Footer', 'sidebar', 'abraham' ),
+			'description' => __( 'A sidebar located in the footer of the site.', 'abraham' ),
+		)
+	);
 }
 
 /**
