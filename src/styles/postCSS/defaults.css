@@ -11,7 +11,7 @@
 
 	--root-box-sizing: border-box;
 
-	--root-color: #36474f;
+	--root-color: $color-text;
 
 	--root-cursor: default;
 
@@ -31,7 +31,7 @@
 
 	--media-element-vertical-align: middle;
 
-	/*--monospace-font-family: monospace;*/
+	--monospace-font-family: monospace;
 
 	--nav-list-style: none;
 
@@ -48,6 +48,4 @@
 	--table-border-spacing: 0;
 
 	--textarea-resize: vertical;
-
-	--anchor-text-decoration: none;
 }

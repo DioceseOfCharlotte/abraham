@@ -5,8 +5,7 @@
   "repository": "https://github.com/m-e-h/abraham",
   "license": "GNU General Public License v2 or later",
   "dependencies": {
-    "normalize.css": "^4.1.1",
-    "sanitize.css": "^3.3.0"
+    "normalize.css": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

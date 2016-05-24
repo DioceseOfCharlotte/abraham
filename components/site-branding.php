@@ -1,10 +1,10 @@
 <div <?php hybrid_attr( 'branding' ); ?>>
-<a class="site-home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<a class="site-home-link u-inline-flex u-flex-center" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	<?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
 		<?php the_custom_logo(); ?>
 	<?php endif; // End check for custom logo. ?>
 
-<div class="title-text u-flex u-flex-col-rev u-p1">
+<div class="title-text u-flex u-flex-col u-p1">
 	<?php
 	if ( is_front_page() ) : ?>
 		<h1 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h1>

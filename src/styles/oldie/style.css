@@ -380,58 +380,8 @@ textarea {
 /*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 /* Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1 */
 /*
- * Normalization
- */
-abbr[title] {
-  text-decoration: underline;
-  /* Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+ */
-  text-decoration: underline dotted;
-  /* Firefox 40+ */ }
-
-audio:not([controls]) {
-  display: none;
-  /* Chrome 44-, iOS 8+, Safari 9+ */ }
-
-b,
-strong {
-  font-weight: bolder;
-  /* Edge 12+, Safari 6.2+, and Chrome 18+ */ }
-
-button {
-  -webkit-appearance: button;
-  /* iOS 8+ */
-  overflow: visible;
-  /* Internet Explorer 11- */ }
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  /* Firefox 4+ */
-  padding: 0;
-  /* Firefox 4+ */ }
-
-button:-moz-focusring, input:-moz-focusring {
-  outline: 1px dotted ButtonText;
-  /* Firefox 4+ */ }
-
-button,
-select {
-  text-transform: none;
-  /* Firefox 40+, Internet Explorer 11- */ }
-
-details {
-  display: block;
-  /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
-
-html {
-  /*-ms-overflow-style: -ms-autohiding-scrollbar; */
-  /*overflow-y: scroll; */
-  -webkit-text-size-adjust: 100%;
-  /* iOS 8+, Windows Phone 8.1+ */ }
-
-hr {
-  overflow: visible;
-  /* Internet Explorer 11-, Edge 12+ */ }
-
+* Normalization
+*/
 input {
   -webkit-border-radius: 0; }
 
@@ -446,50 +396,13 @@ input[type="number"] {
   width: auto;
   /* Firefox 36+ */ }
 
-input[type="search"] {
-  -webkit-appearance: textfield; }
-
-/* Chrome 45+, Safari 9+ */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  /* Chrome 45+, Safari 9+ */ }
-
-main {
-  display: block;
-  /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */ }
-
 pre {
   overflow: auto;
   /* Internet Explorer 11- */ }
 
-progress {
-  display: inline-block;
-  /* Internet Explorer 11-, Windows Phone 8.1+ */ }
-
-summary {
-  display: block;
-  /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
-
-svg:not(:root) {
-  overflow: hidden;
-  /* Internet Explorer 11- */ }
-
-template {
-  display: none;
-  /* Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */ }
-
-textarea {
-  overflow: auto;
-  /* Edge 12+, Internet Explorer 11- */ }
-
-[hidden] {
-  display: none;
-  /* Internet Explorer 10- */ }
-
 /*
- * Universal inheritance
- */
+* Universal inheritance
+*/
 *,
 ::before,
 ::after {
@@ -513,20 +426,20 @@ textarea {
   font-weight: inherit; }
 
 /*
- * Opinionated defaults
- */
+* Opinionated defaults
+*/
 /* specify the margin and padding of all elements */
 * {
   margin: 0;
   padding: 0; }
 
 /* specify the border style and width of all elements */
-*,
+/**,
 ::before,
 ::after {
-  border-style: solid;
-  border-width: 0; }
-
+	border-style: solid;
+	border-width: 0;
+}*/
 /* remove the tapping delay from clickable elements */
 a,
 area,
@@ -579,26 +492,19 @@ svg {
   clip: auto; }
 
 /*
- * Configurable defaults
- */
+* Configurable defaults
+*/
 /* specify the background repeat of all elements */
 * {
   background-repeat: no-repeat; }
 
 /* specify the root styles of the document */
 :root {
-  background-color: #ffffff;
   background-color: #fff;
   box-sizing: border-box;
-  color: #000000;
-  color: #36474f;
+  color: #212c31;
   cursor: default;
-  font: 100%/1.5 sans-serif;
   font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
-
-/* specify the text decoration of anchors */
-a {
-  text-decoration: none; }
 
 /* specify the alignment of media elements */
 audio,
@@ -614,7 +520,6 @@ button,
 input,
 select,
 textarea {
-  background-color: transparent;
   background-color: rgba(245, 245, 245, 0.8);
   color: inherit; }
 
@@ -638,7 +543,6 @@ button,
 [type="week"],
 select,
 textarea {
-  min-height: 1.5em;
   min-height: 2.5rem; }
 
 /* specify the font family of code elements */
@@ -670,7 +574,6 @@ textarea {
 ::selection {
   background-color: #b3d4fc;
   /* required when declaring ::selection */
-  color: #ffffff;
   color: inherit;
   text-shadow: none; }
 
@@ -720,6 +623,52 @@ iframe[src*="google.com/maps"] {
   width: 100%;
   max-width: 100%; }
 
+/* #LINKS
+\*------------------------------------*/
+a {
+  /*color: #08b09b;*/
+  /*text-decoration: none;*/
+  opacity: 1;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
+  border-radius: 0.5px; }
+
+a:hover {
+  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.2); }
+
+a:active,
+a:focus {
+  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.4); }
+
+a:before,
+a:after {
+  background-size: contain;
+  min-width: 1.1em;
+  width: 1.1em;
+  height: 1.1em;
+  margin-bottom: 0.1em; }
+
+a:before {
+  margin-right: 0.2em;
+  margin-left: 0.3em; }
+
+a:after {
+  margin-right: 0.3em;
+  margin-left: 0.2em; }
+
+a[class] {
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.8; }
+
+a[class]:hover {
+  opacity: 1; }
+
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, li > a {
+  text-decoration: none; }
+
 /* #TYPOGRAPHY
 \*------------------------------------*/
 h1,
@@ -765,48 +714,6 @@ p:empty {
 
 p:last-child {
   margin-bottom: 0; }
-
-/* #LINKS
-\*------------------------------------*/
-a {
-  color: #08b09b;
-  text-decoration: none;
-  opacity: 1;
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: all;
-  border-radius: 0.5px; }
-
-a:hover {
-  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.2);
-  text-decoration: none; }
-
-a:active,
-a:focus {
-  box-shadow: inset 0 0 0 20rem rgba(183, 198, 205, 0.4); }
-
-a:before,
-a:after {
-  background-size: contain;
-  min-width: 1.1em;
-  width: 1.1em;
-  height: 1.1em; }
-
-a:before {
-  margin-right: 0.2em; }
-
-a:after {
-  margin-left: 0.2em; }
-
-a[class]:not(.btn) {
-  box-shadow: none;
-  color: inherit;
-  opacity: 0.8;
-  display: inline-flex;
-  align-items: center; }
-
-a[class]:not(.btn):hover {
-  opacity: 1; }
 
 .btn,
 .button,
@@ -1393,9 +1300,6 @@ body:not(.search) .trail-end > span,
 
 /* Custom media queries */
 /* sanitize.css vars */
-:root {
-  /*--monospace-font-family: monospace;*/ }
-
 .animating {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
@@ -1459,9 +1363,9 @@ html {
   html .u-currentcolor {
     color: currentColor; }
   html .u-text-color {
-    color: #36474f; }
-  html .u-text-black {
     color: #212c31; }
+  html .u-text-black {
+    color: #0d1012; }
   html .u-text-grey {
     color: #9D9D9D; }
   html .u-text-silver {
@@ -1469,7 +1373,7 @@ html {
   html .u-text-white {
     color: #fff; }
   html .u-text-muted {
-    color: rgba(54, 71, 79, 0.5); }
+    color: rgba(33, 44, 49, 0.5); }
   html .u-text-1 {
     color: #2980b9; }
   html .u-text-2 {
@@ -1617,7 +1521,7 @@ html {
     top: 0;
     width: 100%; }
   html .u-frosted-image {
-    color: #212c31; }
+    color: #0d1012; }
     html .u-frosted-image:before {
       background-color: rgba(228, 234, 236, 0.6); }
   html .u-tinted-image {
@@ -1750,7 +1654,7 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.2em; }
   html .u-text-shadow {
-    text-shadow: 1px 1px 5px rgba(33, 44, 49, 0.6); }
+    text-shadow: 1px 1px 5px rgba(13, 16, 18, 0.6); }
   html .u-text-left {
     text-align: left; }
   html .u-text-center {
@@ -1930,6 +1834,8 @@ html {
     border-radius: 2px 0 0 2px; }
   html .u-flex {
     display: flex; }
+  html .u-inline-flex {
+    display: inline-flex; }
   html .u-flex-rev {
     flex-direction: row-reverse; }
   html .u-flex-row-rev {
