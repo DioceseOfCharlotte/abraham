@@ -677,7 +677,6 @@ textarea {
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
-    word-wrap: break-word;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav,
@@ -690,6 +689,7 @@ section, summary, legend {
     max-width: 100%;
     width: 100%;
     overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 hr {

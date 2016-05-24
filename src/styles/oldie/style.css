@@ -582,8 +582,7 @@ textarea {
 * {
   flex-basis: auto;
   flex-grow: 0;
-  flex-shrink: 1;
-  word-wrap: break-word; }
+  flex-shrink: 1; }
 
 article,
 aside,
@@ -604,7 +603,8 @@ legend {
 .site {
   max-width: 100%;
   width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  word-wrap: break-word; }
 
 hr {
   margin-top: 1.5em;
