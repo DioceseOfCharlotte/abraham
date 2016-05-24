@@ -73,11 +73,10 @@ function abraham_custom_background_callback() {
 	if ( empty( $color ) )
 		return;
 
-	// Use 'background' instead of 'background-color'.
 	$style = "background-color: #{$color};";
 
 ?>
-<style type="text/css" id="custom-background-css">body.custom-background { <?php echo trim( $style ); ?> }</style>
+<style type="text/css" id="custom-background-css">body.custom-background,.u-bg-page{ <?php echo trim( $style ); ?> }</style>
 <?php
 
 }
