@@ -128,3 +128,21 @@ a[href*="tel:"]:before {
 a[href*="mailto:"]:before {
 	@mixin icon mail;
 }
+
+
+a[href*="twitter.com"],
+a[href*="facebook.com"],
+a[href*="youtube.com"],
+a[href*="youtu.be"],
+a[href*=".pdf"],
+a[href*="maps.google.com"],
+a[href*=".doc"],
+a[href*=".docx"],
+a[href*=".xls"],
+a[href*=".xlsx"],
+a[href*="tel:"],
+a[href*="mailto:"] {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
+}

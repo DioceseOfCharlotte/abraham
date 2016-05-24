@@ -611,7 +611,6 @@ a:after {
 	min-width: 1.1em;
 	width: 1.1em;
 	height: 1.1em;
-	margin-bottom: 0.1em;
 }
 a:before {
 	margin-right: 0.2em;
@@ -1066,6 +1065,22 @@ a[href*="mailto:"]:before {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%239aacb5' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	display: inline-block;
+	vertical-align: middle;
+}
+a[href*="twitter.com"],
+a[href*="facebook.com"],
+a[href*="youtube.com"],
+a[href*="youtu.be"],
+a[href*=".pdf"],
+a[href*="maps.google.com"],
+a[href*=".doc"],
+a[href*=".docx"],
+a[href*=".xls"],
+a[href*=".xlsx"],
+a[href*="tel:"],
+a[href*="mailto:"] {
+	display: inline-flex;
+	align-items: center;
 	vertical-align: middle;
 }
 .u-list-group {
