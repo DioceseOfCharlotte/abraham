@@ -131,18 +131,26 @@ function abraham_get_editor_styles() {
  * @return void
  */
 function abraham_widgets() {
-	hybrid_register_sidebar(
+	register_sidebar(
 		array(
-			'id'          => 'primary',
-			'name'        => _x( 'Primary', 'sidebar', 'abraham' ),
-			'description' => __( 'The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout.', 'abraham' ),
+			'id'          	=> 'primary',
+			'name'        	=> esc_html__( 'Primary', 'sidebar', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
-	hybrid_register_sidebar(
+	register_sidebar(
 		array(
-			'id'          => 'footer',
-			'name'        => _x( 'Footer', 'sidebar', 'abraham' ),
-			'description' => __( 'A sidebar located in the footer of the site.', 'abraham' ),
+			'id'          	=> 'footer',
+			'name'        	=> esc_html__( 'Footer', 'sidebar', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-tint-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
