@@ -1892,6 +1892,8 @@ html {
     align-self: flex-end; }
   html .u-flexed-center {
     align-self: center; }
+  html .u-flexed-stretch {
+    align-self: stretch; }
   html .u-flexed-1 {
     flex: 1 1 0; }
   html .u-flexed-auto {

@@ -2577,6 +2577,12 @@ html .u-flexed-center {
     align-self: center;
 }
 
+html .u-flexed-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
 html .u-flexed-1 {
     -webkit-flex: 1 1 0;
     -ms-flex: 1 1 0;
