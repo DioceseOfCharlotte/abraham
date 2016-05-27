@@ -620,7 +620,7 @@ textarea {
 /* specify the font family of code elements */
 
 code, kbd, pre, samp {
-    font-family: monospace, monospace;
+    font-family: Roboto Mono, Fira Code, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 /* specify the list style of nav lists */
@@ -830,20 +830,20 @@ input[type="submit"] {
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover,
 input[type="reset"]:hover, input[type="submit"]:hover {
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 0 20rem rgba(19, 24, 27, 0.15);
 }
 
 .btn:active, .btn.is-active, .button:active, .button.is-active, button:active,
 button.is-active, input[type="button"]:active, input[type="button"].is-active,
 input[type="reset"]:active, input[type="reset"].is-active,
 input[type="submit"]:active, input[type="submit"].is-active {
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 20rem rgba(19, 24, 27, 0.3);
 }
 
 .btn:focus, .button:focus, button:focus, input[type="button"]:focus,
 input[type="reset"]:focus, input[type="submit"]:focus {
     outline: none;
-    border-color: rgba(0, 0, 0, 0.25);
+    border-color: rgba(19, 24, 27, 0.3);
 }
 
 /* #LISTS
@@ -957,7 +957,7 @@ input, select, textarea {
     border: 1px solid rgba(183, 198, 205, 0.9);
     padding: 0 0.5rem;
     margin-bottom: 1rem;
-    border-radius: 2px;
+    border-radius: 0.3em;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, background-color, border-color;
@@ -1271,7 +1271,7 @@ a[href*="tel:"], a[href*="mailto:"] {
     display: block;
     padding: 0.75rem 1.25rem;
     background-color: #fff;
-    border-bottom: 1px solid #d0d0d0;
+    border-bottom: 1px solid #36474f;
 }
 
 .u-list-group > li:last-child {
@@ -1442,6 +1442,84 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     width: 100%;
 }
 
+.top-header {
+    height: 56px;
+}
+
+.slide-nav {
+    pointer-events: none;
+    z-index: 4;
+}
+
+.side-nav--visible {
+    pointer-events: auto;
+}
+
+.slide-nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.slide-nav__container {
+    width: 90%;
+    max-width: 400px;
+    -webkit-transform: translateX(-102%);
+    transform: translateX(-102%);
+    will-change: transform;
+}
+
+.side-nav--animatable .slide-nav__container {
+    transition: -webkit-transform 0.13s cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 0.13s cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 0.13s cubic-bezier(0, 0, 0.3, 1),
+                -webkit-transform 0.13s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.side-nav--visible.side-nav--animatable .slide-nav__container {
+    transition: -webkit-transform 0.33s cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 0.33s cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 0.33s cubic-bezier(0, 0, 0.3, 1),
+                -webkit-transform 0.33s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.side-nav--visible::before {
+    opacity: 1;
+}
+
+.side-nav--visible .slide-nav__container {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.slide-nav__header {
+    height: 200px;
+}
+
+.slide-nav__content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide-nav__content li {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+}
+
+.slide-nav__content li:hover {
+    background: #CCC;
+}
+
 /* #BREADCRUMBS
 \*------------------------------------*/
 
@@ -1502,6 +1580,10 @@ body:not(.search) .trail-end > span, .search .archive-title {
 /* Custom media queries */
 
 /* sanitize.css vars */
+
+:root {
+    /* Cool *//* Warm *//* Gray */
+}
 
 .animating {
     transition-duration: 0.3s;
@@ -2081,7 +2163,12 @@ html .u-bold {
 }
 
 html .u-heading {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Garamond,
+                 Baskerville,
+                 "Baskerville Old Face",
+                 "Hoefler Text",
+                 "Times New Roman",
+                 serif;
 }
 
 html .u-body {
@@ -2413,7 +2500,7 @@ html .u-border0 {
 }
 
 html .u-br {
-    border-radius: 2px;
+    border-radius: 0.3em;
 }
 
 html .u-br0 {
@@ -2425,19 +2512,19 @@ html .u-round {
 }
 
 html .u-br-t {
-    border-radius: 2px 2px 0 0;
+    border-radius: 0.3em 0.3em 0 0;
 }
 
 html .u-br-r {
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 0.3em 0.3em 0;
 }
 
 html .u-br-b {
-    border-radius: 0 0 2px 2px;
+    border-radius: 0 0 0.3em 0.3em;
 }
 
 html .u-br-l {
-    border-radius: 2px 0 0 2px;
+    border-radius: 0.3em 0 0 0.3em;
 }
 
 html .u-flex {
@@ -2778,7 +2865,7 @@ html .u-abs {
     position: absolute;
 }
 
-html .u-fix {
+html .u-fixed, html .u-fix {
     position: fixed;
 }
 
@@ -3535,7 +3622,7 @@ html .u-shadow0 {
 html .gv-search-clear {
     color: #20638f;
     border-color: #20638f;
-    border-radius: 2px;
+    border-radius: 0.3em;
     background-color: rgba(255, 255, 255, 0.5);
 }
 

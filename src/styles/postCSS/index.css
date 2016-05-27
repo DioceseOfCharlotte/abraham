@@ -13,7 +13,8 @@
 @import "objects.grid.css";
 @import "objects.icons.css";
 @import "objects.list-group.css";
-@import "objects.buttons";
-@import "objects.embeds";
+@import "objects.buttons.css";
+@import "objects.embeds.css";
+@import "objects.side-nav.css";
 @import "components.breadcrumbs.css";
 @import "defaults.css";

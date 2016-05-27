@@ -1,0 +1,13 @@
+pre {
+	margin-bottom: $space2;
+	padding: $space2;
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	font-weight: 400;
+	border: 1px solid var(--color-grey-ui-light);
+	border-radius: var(--border-radius);
+	background: var(--color-frost-3);
+	tab-width: 4;
+	width: 100%;
+	white-space: pre-wrap;
+}

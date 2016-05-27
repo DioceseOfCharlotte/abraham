@@ -87,7 +87,11 @@ function abraham_assets() {
 	wp_enqueue_style( 'hybrid-style' );
 
 	// Scripts.
-
+	wp_enqueue_script(
+		'side_nav',
+		trailingslashit( get_template_directory_uri() ).'js/side-nav.js',
+		false, false, true
+	);
 	// wp_enqueue_script(
 	// 'abraham_js',
 	// trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",

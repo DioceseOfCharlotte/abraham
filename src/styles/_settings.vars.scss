@@ -4,9 +4,9 @@
 $base-font-size: 16px;
 $base-line-height: 1.5;
 $base-background-color: #fff;
-$base-radius: 2px;
+$base-radius: 0.3em;
 $base-opacity: 0.75;
-$serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$serif: Garamond,Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $container: 74rem;
 $container-wide: 84rem;
@@ -37,7 +37,7 @@ $color3-light: lighten($color3, 10);
 $color3-dark: darken($color3, 10);
 $color-grey: $grey;
 $color-grey-dark: darken($color-grey, 20);
-$color-grey-light: lighten($color-grey, 20);
+$color-grey-light: darken(#607d8b, 20);
 
 $color-blue-grey: $blue-grey-200;
 $color-black: $black;
