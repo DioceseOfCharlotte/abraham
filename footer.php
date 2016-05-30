@@ -25,7 +25,7 @@
 <?php tha_footer_after(); ?>
 
 </div><!-- /.layout -->
-
+<?php hybrid_get_sidebar( 'secondary' ); ?>
 </div><!-- /.site-container -->
 
 <?php tha_body_bottom(); ?>
