@@ -50,7 +50,7 @@
 	--textarea-resize: vertical;
 
 
-	--border-radius: 2px;
+	--border-radius: 0.2rem;
 
 	--transition-time: 0.3s;
 	--animation-curve: cubic-bezier(0.4, 0, 0.2, 1);

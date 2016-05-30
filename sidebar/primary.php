@@ -17,4 +17,4 @@ if ( ! is_active_sidebar( 'primary' ) ) {
 	<?php tha_sidebar_bottom(); ?>
 </aside>
 
-<?php tha_sidebars_after(); ?>
+<?php tha_sidebars_after();

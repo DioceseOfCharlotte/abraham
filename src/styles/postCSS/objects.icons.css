@@ -66,6 +66,22 @@
 	height: 2em;
 }
 
+.icon-menu {
+	background-size: 1.5em;
+	background-position: center;
+	@mixin icon menu, #fff;
+	width: 2em;
+	height: 2em;
+}
+
+.icon-close {
+	background-size: 1.5em;
+	background-position: center;
+	@mixin icon close, #fff;
+	width: 2em;
+	height: 2em;
+}
+
 .icon-edit {
 	background-size: contain;
 	@mixin icon edit, #36474f;

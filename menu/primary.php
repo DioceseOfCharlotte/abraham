@@ -15,9 +15,8 @@ if ( has_nav_menu( 'primary' ) ) : ?>
 		'container'      => '',
 		'depth'          => 2,
 		'menu_id'        => 'menu-primary__list',
-		'menu_class'     => 'menu__list menu-primary__list',
+		'menu_class'     => 'nav-menu menu-primary__list',
 		'fallback_cb'    => '',
-		'items_wrap'     => '%3$s',
 	));
 	?>
 </nav>

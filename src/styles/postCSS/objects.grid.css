@@ -1,6 +1,6 @@
 /* #GRID
 \*------------------------------------*/
-$cell-padding: .5 * $gutter;
+$cell-padding: 0.5 * $gutter;
 
 .o-grid {
 	display: flex;

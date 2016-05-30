@@ -2,14 +2,20 @@
 \*------------------------------------*/
 .breadcrumbs {
 
-	li {
-		display: inline-block;
+	ul {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: center;
+	}
 
-		+ li:before {
+	li {
+		display: inline-flex;
+    	align-items: center;
+
+		&:not(:last-of-type):after {
 			padding: 0.5em;
+			margin: 0 .25em;
 			background-size: cover;
 			width: 1em;
 			height: 1em;
@@ -26,11 +32,6 @@
 	&:hover {
 		opacity: 0.8;
 	}
-}
-
-.trail-items {
-	display: flex;
-	justify-content: center;
 }
 
 body:not(.search) .trail-end > span,

@@ -217,5 +217,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('images', 'presass', ['styles'], 'oldie', 'scripts', cb);
+	runSequence('images', 'presass', 'styles', 'oldie', 'scripts', cb);
 });

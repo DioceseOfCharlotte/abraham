@@ -15,6 +15,7 @@
 @import "objects.list-group.css";
 @import "objects.buttons.css";
 @import "objects.embeds.css";
-@import "objects.side-nav.css";
+@import "objects.nav.css";
+@import "objects.off-canvas.css";
 @import "components.breadcrumbs.css";
 @import "defaults.css";

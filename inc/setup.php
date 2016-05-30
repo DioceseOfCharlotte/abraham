@@ -88,8 +88,8 @@ function abraham_assets() {
 
 	// Scripts.
 	wp_enqueue_script(
-		'side_nav',
-		trailingslashit( get_template_directory_uri() ).'js/side-nav.js',
+		'off_canvas',
+		trailingslashit( get_template_directory_uri() ).'js/off-canvas.js',
 		false, false, true
 	);
 	// wp_enqueue_script(
@@ -139,6 +139,17 @@ function abraham_widgets() {
 		array(
 			'id'          	=> 'primary',
 			'name'        	=> esc_html__( 'Primary', 'sidebar', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'          	=> 'secondary',
+			'name'        	=> esc_html__( 'Secondary', 'sidebar', 'abraham' ),
 			'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 			'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 			'after_widget'  => '</section>',

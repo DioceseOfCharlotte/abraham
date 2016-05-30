@@ -22,8 +22,8 @@ class SideNav {
 	this.body = document.body;
     this.showButtonEl = document.querySelector('.js-menu-show');
     this.hideButtonEl = document.querySelector('.js-menu-hide');
-    this.sideNavEl = document.querySelector('.js-side-nav');
-    this.sideNavContainerEl = document.querySelector('.js-side-nav-container');
+    this.sideNavEl = document.querySelector('.js-off-canvas');
+    this.sideNavContainerEl = document.querySelector('.js-off-canvas-container');
 
     this.showSideNav = this.showSideNav.bind(this);
     this.hideSideNav = this.hideSideNav.bind(this);
@@ -53,7 +53,7 @@ class SideNav {
   }
 
   onTouchStart (evt) {
-    if (!this.sideNavEl.classList.contains('side-nav--visible'))
+    if (!this.sideNavEl.classList.contains('off-canvas--visible'))
       return;
 
     this.startX = evt.touches[0].pageX;
@@ -104,20 +104,20 @@ class SideNav {
   }
 
   onTransitionEnd (evt) {
-    this.sideNavEl.classList.remove('side-nav--animatable');
+    this.sideNavEl.classList.remove('off-canvas--animatable');
     this.sideNavEl.removeEventListener('transitionend', this.onTransitionEnd);
   }
 
   showSideNav () {
-    this.sideNavEl.classList.add('side-nav--animatable');
-    this.sideNavEl.classList.add('side-nav--visible');
+    this.sideNavEl.classList.add('off-canvas--animatable');
+    this.sideNavEl.classList.add('off-canvas--visible');
 	this.body.classList.add('u-overflow-hidden');
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
   }
 
   hideSideNav () {
-    this.sideNavEl.classList.add('side-nav--animatable');
-    this.sideNavEl.classList.remove('side-nav--visible');
+    this.sideNavEl.classList.add('off-canvas--animatable');
+    this.sideNavEl.classList.remove('off-canvas--visible');
 	this.body.classList.remove('u-overflow-hidden');
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
   }
