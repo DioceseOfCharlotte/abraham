@@ -1076,13 +1076,13 @@ svg {
     max-width: 50%;
 }
 
-.icon-xs {
-    font-size: 1rem;
+/*.icon-xs {
+	font-size: 1rem;
 }
 
 .icon-sm {
-    font-size: 1.5rem;
-}
+	font-size: 1.5rem;
+}*/
 
 .icon-md {
     width: 100%;
@@ -1342,14 +1342,14 @@ a.btn:hover, a.button:hover {
 }
 
 input[type="submit"] {
-    background-color: #2980b9;
+    background-color: #0074D9;
     color: #fff;
 }
 
 a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
-    color: #20638f;
+    color: #00080f;
     border-color: currentColor;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(243, 245, 247, 0.3);
     box-shadow: inset 0 0 0 20rem transparent;
 }
 
@@ -1357,8 +1357,8 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 .btn-hollow:focus, input[type="button"]:focus, input[type="reset"]:focus,
 .btn-hollow:active, input[type="button"]:active, input[type="reset"]:active {
     color: #fff;
-    border-color: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 0 20rem #20638f;
+    border-color: rgba(19, 24, 27, 0.3);
+    box-shadow: inset 0 0 0 20rem #00080f;
 }
 
 .btn-round {
@@ -1466,64 +1466,69 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     width: 100%;
 }
 
-.main-navigation {
-    clear: both;
-    display: block;
-    float: left;
-    width: 100%;
-}
-
-.main-navigation ul {
+.menu-primary ul {
     display: none;
-    list-style: none;
     margin: 0;
     padding-left: 0;
 }
 
-.main-navigation ul ul {
+.menu-primary ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    float: left;
     position: absolute;
     top: 1.5em;
     left: -999em;
     z-index: 99999;
 }
 
-.main-navigation ul ul ul {
+.menu-primary ul ul ul {
     left: -999em;
     top: 0;
 }
 
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+.menu-primary ul ul li:hover > ul, .menu-primary ul ul li.focus > ul {
     left: 100%;
 }
 
-.main-navigation ul ul a {
+.menu-primary ul ul a {
     width: 200px;
 }
 
-.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+.menu-primary ul li:hover > ul, .menu-primary ul li.focus > ul {
     left: auto;
 }
 
-.main-navigation li {
-    float: left;
-    position: relative;
+.home #header.is-top .menu-main-container, .home #header.is-top > .menu-primary {
+    background-color: transparent;
+}
+
+.menu-primary .v-icon {
+    transition: all .3s;
+}
+
+.menu-primary.toggled .v-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /* Small menu. */
 
-.menu-toggle, .main-navigation.toggled ul {
+.menu-toggle, .menu-primary.toggled ul {
     display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 48em) {
+    #menu-primary .menu-main-container {
+        background-color: transparent;
+    }
+
     .menu-toggle {
         display: none;
     }
 
-    .main-navigation ul {
-        display: block;
+    .menu-primary ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -1580,14 +1585,15 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     transform: none;
 }
 
-.off-canvas__header {
-    height: 200px;
-}
-
 .off-canvas__content {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+.off-canvas__content > .widget_nav_menu {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* #BREADCRUMBS
@@ -1624,7 +1630,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     width: 1em;
     height: 1em;
     content: " ";
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23fff' stroke='%23444' stroke-width='2%25' width='1em' height='1em'%3E%3Cpath d='M8.1 2L5.75 4.35 13.383 12 5.75 19.65 8.1 22l10-10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23fff' stroke='%23444' stroke-width='2%25' width='1em' height='1em'%3E%3Cpath d='M8.283 2L6 4.35 13.417 12 6 19.65 8.283 22 18 12z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -1704,8 +1710,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 html {
     /* #COLORS
-\*------------------*//* Text Colors *//* Background Colors *//* Fill Colors *//* Opacity *//*------------------------------------*    #HEADINGS
-\*------------------------------------*//* #COLOR TABLES
+\*------------------*//* Text Colors *//* Background Colors *//* Fill Colors *//* Opacity *//* #COLOR TABLES
 \*------------------------------------*//* #TYPOGRAPHY UTILITY
 \*------------------------------------*//* #BORDERS
 \*------------------------------------*//* #FLEXBOX
@@ -2090,75 +2095,6 @@ html .o-crop__content {
     width: 100%;
 }
 
-html .u-h0 {
-    font-size: 3rem;
-}
-
-html .u-h1 {
-    font-size: 2.5rem;
-}
-
-html .u-h2 {
-    font-size: 2rem;
-}
-
-html .u-h3 {
-    font-size: 1.5rem;
-}
-
-html .u-h4 {
-    font-size: 1.25rem;
-}
-
-html .u-h5 {
-    font-size: 1rem;
-}
-
-html .u-h6 {
-    font-size: 0.875rem;
-}
-
-@media screen and (max-width: 47em) {
-    html .u-h1 {
-        font-size: 2rem;
-    }
-
-    html .u-h2 {
-        font-size: 1.5rem;
-    }
-
-    html .u-h3 {
-        font-size: 1.25rem;
-    }
-
-    html .u-h4 {
-        font-size: 1rem;
-    }
-
-    html .u-h5 {
-        font-size: 0.875rem;
-    }
-}
-
-html .u-display-1 {
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 40px;
-}
-
-html .u-display-2 {
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 48px;
-}
-
-html .u-display-3 {
-    font-size: 56px;
-    font-weight: 400;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
-}
-
 html .u-link-blend {
     text-decoration: none;
 }
@@ -2221,6 +2157,34 @@ html .u-f-minus {
 
 html .u-f-plus {
     font-size: 1.1rem;
+}
+
+html .u-h0 {
+    font-size: 3rem;
+}
+
+html .u-h1 {
+    font-size: 2.5rem;
+}
+
+html .u-h2 {
+    font-size: 2rem;
+}
+
+html .u-h3 {
+    font-size: 1.5rem;
+}
+
+html .u-h4 {
+    font-size: 1.25rem;
+}
+
+html .u-h5 {
+    font-size: 1rem;
+}
+
+html .u-h6 {
+    font-size: 0.875rem;
 }
 
 html .u-lh-1 {
@@ -2525,6 +2489,10 @@ html .u-4of5 {
 
     html .u-4of5-lg {
         width: calc(80% - 1.5rem);
+    }
+
+    html .u-width-auto-lg {
+        width: auto;
     }
 }
 

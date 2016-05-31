@@ -23,9 +23,13 @@
 
 			<?php tha_header_top(); ?>
 
-			<button class="js-menu-show header__menu-toggle btn-round u-bg-frost-1 u-mx2 u-z2">
-				<?php abe_do_svg( 'menu', 'sm' ); ?>
-			</button>
+			<?php if ( is_active_sidebar( 'secondary' ) ) { ?>
+
+				<button class="js-menu-show header__menu-toggle btn-round u-h3 u-mx2 u-z2">
+					<?php abe_do_svg( 'side-toggle', 'sm' ); ?>
+				</button>
+
+			<?php } ?>
 
 			<?php get_template_part( 'components/site', 'branding' ); ?>
 

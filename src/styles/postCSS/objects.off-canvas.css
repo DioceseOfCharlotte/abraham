@@ -44,10 +44,6 @@
   transform: none;
 }
 
-.off-canvas__header {
-  height: 200px;
-}
-
 .off-canvas__content {
   overflow-x: hidden;
   overflow-y: auto;

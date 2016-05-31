@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="chevron-right.svg">
+   sodipodi:docname="chevron-down.svg">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,7 +49,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
-     d="M 8.2834008,2 6,4.35 13.41668,12 6,19.65 8.2834008,22 18,12 Z"
+     d="M 19.65,6 12,13.417004 4.35,6 2,8.2834008 12,18 22,8.2834008 Z"
      id="path4"
      inkscape:connector-curvature="0" />
 </svg>

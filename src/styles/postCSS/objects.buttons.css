@@ -14,7 +14,7 @@ a.button {
 }
 
 input[type="submit"] {
-	background-color: $color1;
+	background-color: var(--color-1);
 	color: #fff;
 }
 
@@ -22,9 +22,9 @@ a.btn-hollow,
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
-	color: $color1-dark;
+	color: var(--color-1-dark);
 	border-color: currentColor;
-	background-color: $lighten3;
+	background-color: var(--color-frost-2);
 	box-shadow: inset 0 0 0 20rem transparent;
 }
 
@@ -38,8 +38,8 @@ input[type="reset"]:focus,
 input[type="button"]:active,
 input[type="reset"]:active {
 	color: #fff;
-	border-color: $darken3;
-	box-shadow: inset 0 0 0 20rem $color1-dark;
+	border-color: var(--color-tint-2);
+	box-shadow: inset 0 0 0 20rem var(--color-1-dark);
 }
 
 .btn-round {
@@ -66,5 +66,5 @@ input[type="reset"]:active {
 .btn-lg {
 	padding: 1rem 1.25rem;
 	font-size: 1.1rem;
-	font-weight: $bold;
+	font-weight: var(--font-bold);
 }

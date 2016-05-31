@@ -88,15 +88,11 @@ function abraham_assets() {
 
 	// Scripts.
 	wp_enqueue_script(
-		'off_canvas',
-		trailingslashit( get_template_directory_uri() ).'js/off-canvas.js',
+		'abraham_js',
+		trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
 		false, false, true
 	);
-	// wp_enqueue_script(
-	// 'abraham_js',
-	// trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js",
-	// false, false, true
-	// );
+
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
 

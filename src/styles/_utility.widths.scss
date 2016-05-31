@@ -191,6 +191,10 @@
 	.u-4of5-lg {
 		width: calc(80% - #{$gutter});
 	}
+
+	.u-width-auto-lg {
+		width: auto;
+	}
 }
 
 @include sm {

@@ -7,7 +7,6 @@ blockquote {
     margin-left: 0;
 
     p {
-        // text-indent: -0.42em;
 
         &:last-of-type {
             margin-bottom: 0;

@@ -50,6 +50,7 @@
 	--textarea-resize: vertical;
 
 
+	--font-bold: 700;
 	--border-radius: 0.2rem;
 
 	--transition-time: 0.3s;
@@ -79,6 +80,8 @@
 	--blue-grey:	#678695;
 	--black:  		#111111;
 
+	--color-1: var(--blue);
+	--color-1-dark: color(var(--color-1) lightness(-40%));
 
 	--color-grey-ui: color(var(--blue-grey) lightness(+20%));
 	--color-grey-ui-light: color(var(--blue-grey) lightness(+47%));

@@ -784,7 +784,6 @@ blockquote {
 	font-style: italic;
     margin-left: 0;
 }
-// text-indent: -0.42em;
 blockquote p:last-of-type {
   margin-bottom: 0;
 }
@@ -911,12 +910,13 @@ svg {
 	width: 100%;
 	max-width: 50%;
 }
-.icon-xs {
+/*.icon-xs {
 	font-size: 1rem;
 }
+
 .icon-sm {
 	font-size: 1.5rem;
-}
+}*/
 .icon-md {
 	width: 100%;
 	max-width: 90px;
@@ -1155,16 +1155,16 @@ a.btn:hover, a.button:hover {
   text-decoration: none;
 }
 input[type="submit"] {
-	background-color: $color1;
+	background-color: #0074D9;
 	color: #fff;
 }
 a.btn-hollow,
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
-	color: $color1-dark;
+	color: rgb(0, 8, 15);
 	border-color: currentColor;
-	background-color: $lighten3;
+	background-color: rgba(243, 245, 247, 0.3);
 	box-shadow: inset 0 0 0 20rem transparent;
 }
 .btn-hollow:hover,
@@ -1177,8 +1177,8 @@ input[type="reset"]:focus,
 input[type="button"]:active,
 input[type="reset"]:active {
 	color: #fff;
-	border-color: $darken3;
-	box-shadow: inset 0 0 0 20rem $color1-dark;
+	border-color: rgba(19, 24, 27, 0.3);
+	box-shadow: inset 0 0 0 20rem rgb(0, 8, 15);
 }
 .btn-round {
 	border-radius: 50%;
@@ -1201,7 +1201,7 @@ input[type="reset"]:active {
 .btn-lg {
 	padding: 1rem 1.25rem;
 	font-size: 1.1rem;
-	font-weight: $bold;
+	font-weight: 700;
 }
 /**
 * Flexible media embeds
@@ -1261,62 +1261,59 @@ input[type="reset"]:active {
 	top: 0;
 	width: 100%;
 }
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-.main-navigation ul {
+.menu-primary ul {
   display: none;
-  list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul ul {
+.menu-primary ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 1.5em;
   left: -999em;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+.menu-primary ul ul ul {
   left: -999em;
   top: 0;
 }
-.main-navigation ul ul li:hover > ul,
-				.main-navigation ul ul li.focus > ul {
+.menu-primary ul ul li:hover > ul,
+				.menu-primary ul ul li.focus > ul {
   left: 100%;
 }
-.main-navigation ul ul a {
+.menu-primary ul ul a {
   width: 200px;
 }
-.main-navigation ul ul :hover > a,
-			.main-navigation ul ul .focus > a {}
-.main-navigation ul ul a:hover,
-			.main-navigation ul ul a.focus {}
-.main-navigation ul li:hover > ul,
-		.main-navigation ul li.focus > ul {
+.menu-primary ul li:hover > ul,
+		.menu-primary ul li.focus > ul {
   left: auto;
 }
-.main-navigation li {
-  float: left;
-  position: relative;
+.home #header.is-top .menu-main-container,
+	.home #header.is-top > .menu-primary {
+  background-color: transparent;
 }
-.main-navigation li:hover > a,
-		.main-navigation li.focus > a {}
+.menu-primary .v-icon {
+	transition: all .3s;
+}
+.menu-primary.toggled .v-icon {
+	transform: rotate(180deg);
+}
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.menu-primary.toggled ul {
 	display: block;
 }
-@media screen and (min-width: 37.5em) {
+@media (min-width: 48em) {
+	#menu-primary .menu-main-container {
+		background-color: transparent;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+
+	.menu-primary ul {
+		display: flex;
 	}
 }
 .off-canvas {
@@ -1356,9 +1353,6 @@ input[type="reset"]:active {
 .off-canvas--visible .off-canvas__container {
   transform: none;
 }
-.off-canvas__header {
-  height: 200px;
-}
 .off-canvas__content {
   overflow-x: hidden;
   overflow-y: auto;
@@ -1387,7 +1381,7 @@ input[type="reset"]:active {
   width: 1em;
   height: 1em;
   content: " ";
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23fff' stroke='%23444' stroke-width='2%25' width='1em' height='1em'%3E%3Cpath d='M8.1 2L5.75 4.35 13.383 12 5.75 19.65 8.1 22l10-10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23fff' stroke='%23444' stroke-width='2%25' width='1em' height='1em'%3E%3Cpath d='M8.283 2L6 4.35 13.417 12 6 19.65 8.283 22 18 12z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
