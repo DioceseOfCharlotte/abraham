@@ -2,7 +2,6 @@
 
 # Sass cache
 /.sass-cache
-/.vscode
 
 # Development files
 /node_modules
