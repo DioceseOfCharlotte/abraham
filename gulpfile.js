@@ -83,6 +83,8 @@ var POSTCSS_IE = [
 ];
 
 var SOURCESJS = [
+	'src/scripts/navigation.js',
+	'src/scripts/off-canvas.js',
 	'src/scripts/main.js'
 ];
 
@@ -182,10 +184,7 @@ gulp.task('oldie', function() {
 gulp.task('scripts', function() {
 	gulp.src(SOURCESJS)
 		.pipe(babel({
-			"presets": ["es2015"],
-			"only": [
-				"src/js/es6.js"
-			]
+			"presets": ["es2015"]
 		}))
 		.pipe($.concat('abraham.js'))
 		.pipe(gulp.dest('js'))
