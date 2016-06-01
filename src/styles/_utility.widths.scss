@@ -74,7 +74,6 @@
 .u-4of5 {
 	width: calc(80% - #{$gutter});
 }
-
 @include md {
 	.u-1of1-md {
 		width: 100%;
@@ -135,7 +134,6 @@
 		width: auto;
 	}
 }
-
 @include lg {
 	.u-1of1-lg {
 		width: 100%;
@@ -196,7 +194,6 @@
 		width: auto;
 	}
 }
-
 @include sm {
 	.u-1of1-sm {
 		width: 100%;
