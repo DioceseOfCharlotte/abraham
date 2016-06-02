@@ -23,7 +23,7 @@
 
 	--background-repeat: no-repeat;
 
-	--form-element-background-color: color(#f5f5f5 a(80%));
+	--form-element-background-color: color(var(--color-grey-ui-light) a(80%));
 
 	--form-element-color: inherit;
 

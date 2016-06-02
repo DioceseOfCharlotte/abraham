@@ -603,7 +603,7 @@ audio, canvas, iframe, img, svg, video {
 /* specify the coloring of form elements */
 
 button, input, select, textarea {
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(243, 245, 247, 0.8);
     color: inherit;
 }
 
@@ -954,8 +954,9 @@ input, select, textarea {
     color: #333;
     font-size: 1rem;
     vertical-align: middle;
-    border: 1px solid rgba(183, 198, 205, 0.9);
+    border: 1px solid rgba(162, 181, 190, 0.5);
     padding: 0 0.5rem;
+    max-width: 100%;
     margin-bottom: 1rem;
     border-radius: 0.2rem;
     transition-duration: 0.3s;
@@ -1618,6 +1619,8 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     min-height: 3rem;
     font-size: 1.2rem;
     font-weight: 500;
+    border-left: 0;
+    border-right: 0;
 }
 
 /* #BREADCRUMBS

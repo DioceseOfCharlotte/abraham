@@ -171,9 +171,9 @@ var SideNav = function () {
       this.sideNavEl.addEventListener('click', this.hideSideNav);
       this.sideNavContainerEl.addEventListener('click', this.blockClicks);
 
-      document.addEventListener('touchstart', this.onTouchStart);
-      document.addEventListener('touchmove', this.onTouchMove);
-      document.addEventListener('touchend', this.onTouchEnd);
+      this.sideNavEl.addEventListener('touchstart', this.onTouchStart);
+      this.sideNavEl.addEventListener('touchmove', this.onTouchMove);
+      this.sideNavEl.addEventListener('touchend', this.onTouchEnd);
     }
   }, {
     key: 'onTouchStart',
@@ -194,7 +194,7 @@ var SideNav = function () {
       this.currentX = evt.touches[0].pageX;
       var translateX = Math.min(0, this.currentX - this.startX);
 
-      if (translateX < 0) {
+      if (translateX < -100) {
         evt.preventDefault();
       }
     }
@@ -208,7 +208,7 @@ var SideNav = function () {
       var translateX = Math.min(0, this.currentX - this.startX);
       this.sideNavContainerEl.style.transform = '';
 
-      if (translateX < 0) {
+      if (translateX < -100) {
         this.hideSideNav();
       }
     }

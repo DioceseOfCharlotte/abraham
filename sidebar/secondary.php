@@ -21,9 +21,9 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 			<h2 class="u-h3 u-m0 u-inline-block u-align-middle"><?php bloginfo( 'name' ); ?></h2>
 		</header>
 
-    <ul class="off-canvas__content u-py2 u-flexed-1 ">
+    <div class="off-canvas__content u-py2 u-flexed-1 ">
       <?php dynamic_sidebar( 'secondary' ); ?>
-    </ul>
+  </div>
 
 	</nav>
 </aside>

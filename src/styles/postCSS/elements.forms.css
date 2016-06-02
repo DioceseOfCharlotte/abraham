@@ -11,8 +11,9 @@ textarea {
 	color: #333;
 	font-size: 1rem;
 	vertical-align: middle;
-	border: 1px solid color(#b7c6cd a(90%));
+	border: 1px solid color(var(--color-grey-ui) a(50%));
 	padding: 0 $space1;
+	max-width: 100%;
 	margin-bottom: $space2;
 	border-radius: $base-radius;
 	transition-duration: $transition-time;
