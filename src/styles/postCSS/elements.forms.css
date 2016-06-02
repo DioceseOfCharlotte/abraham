@@ -64,10 +64,11 @@ input[type=search] {
 	padding-right: 1.5em;
 }
 
-.search-submit {
+.search-form .search-submit {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
+	min-height: 0;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;

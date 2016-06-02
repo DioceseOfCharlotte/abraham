@@ -1014,10 +1014,11 @@ input[type=search] {
     padding-right: 1.5em;
 }
 
-.search-submit {
+.search-form .search-submit {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
+    min-height: 0;
     margin: -1px;
     overflow: hidden;
     padding: 0;
@@ -1595,6 +1596,28 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 .off-canvas__content > .widget_nav_menu {
     padding-left: 0;
     padding-right: 0;
+}
+
+.off-canvas__content .widget-title {
+    padding-left: 5%;
+}
+
+.off-canvas__content .menu__link {
+    padding-left: 10%;
+}
+
+.off-canvas__content .widget_search {
+    padding: 0 !important;
+    margin-top: -1rem;
+}
+
+.off-canvas__content .search-field {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+    min-height: 3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 /* #BREADCRUMBS
