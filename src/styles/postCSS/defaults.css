@@ -11,7 +11,7 @@
 
 	--root-box-sizing: border-box;
 
-	--root-color: $color-text;
+	--root-color: var(--color-grey-ui-dark);
 
 	--root-cursor: default;
 
@@ -25,7 +25,7 @@
 
 	--form-element-background-color: color(var(--color-grey-ui-light) a(80%));
 
-	--form-element-color: inherit;
+	--form-element-color: --root-color;
 
 	--form-element-min-height: 2.5rem;
 
@@ -50,11 +50,28 @@
 	--textarea-resize: vertical;
 
 
+	--h1: 2.5rem;
+	--h2: 2rem;
+	--h3: 1.5rem;
+	--h4: 1.25rem;
+	--h5: 1rem;
+	--h6: 0.875rem;
+
+
+	--space-1: 0.5rem;
+	--space-2: 1rem;
+	--space-3: 1.5rem;
+	--space-4: 3rem;
+	--gutter: var(--space-3);
+
+
 	--font-bold: 700;
 	--border-radius: 0.2rem;
 
 	--transition-time: 0.3s;
 	--animation-curve: cubic-bezier(0.4, 0, 0.2, 1);
+
+	--opacity: 0.75;
 
 	/* Cool */
 	--aqua:  #7FDBFF;
@@ -76,14 +93,18 @@
 	/* Gray */
 	--white: #FFFFFF;
 	--silver: #DDDDDD;
-	--gray: #AAAAAA;
+	--grey: #AAAAAA;
 	--blue-grey: #678695;
+	--grey-nuetral: #90a4ae;
 	--black: #111111;
 
 	--color-1: var(--blue);
 	--color-1-dark: color(var(--color-1) lightness(-20%));
 
-	--color-grey-ui: color(var(--blue-grey) lightness(+20%));
+	--color-links: var(--color-1-dark);
+	--color-links-hover: var(--color-1);
+
+	--color-grey-ui: color(var(--blue-grey) lightness(+30%));
 	--color-grey-ui-light: color(var(--blue-grey) lightness(+47%));
 	--color-grey-ui-dark: color(var(--blue-grey) lightness(-40%));
 

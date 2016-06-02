@@ -17,8 +17,6 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 
 @import "postcss";
 
-@import "themes.animations";
-
 html {
 
 	@import "utility.colors";
@@ -32,6 +30,5 @@ html {
 	@import "utility.animations";
 	@import "utility.layout-states";
 	@import "utility.spacing";
-	@import "trumps.helpers";
 	@import "vendor.plugins";
 }

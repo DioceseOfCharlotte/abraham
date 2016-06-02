@@ -1,6 +1,6 @@
 pre {
-	margin-bottom: $space2;
-	padding: $space2;
+	margin-bottom: var(--space-2);
+	padding: var(--space-2);
 	font-size: 0.9rem;
 	line-height: 1.5rem;
 	font-weight: 400;

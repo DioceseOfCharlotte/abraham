@@ -1,6 +1,8 @@
 /* #GRID
 \*------------------------------------*/
-$cell-padding: 0.5 * $gutter;
+:root {
+	--cell-padding: calc(0.5 * var(--gutter));
+}
 
 .o-grid {
 	display: flex;
@@ -11,13 +13,6 @@ $cell-padding: 0.5 * $gutter;
 }
 
 .o-cell {
-	margin: 0 $cell-padding $cell-padding;
+	margin: 0 var(--cell-padding) var(--cell-padding);
 	flex: 1 1 auto;
 }
-
-/*@media (--md) {
-	.o-cell {
-	width: auto;
-		width: calc(33.333% - #{$gutter});
-	}
-}*/

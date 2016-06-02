@@ -2,28 +2,27 @@
 # Forms
 --------------------------------------------------------------*/
 form {
-	margin-bottom: $space2;
+	margin-bottom: var(--space-2);
 }
 
 input,
 select,
 textarea {
-	color: #333;
 	font-size: 1rem;
 	vertical-align: middle;
 	border: 1px solid color(var(--color-grey-ui) a(50%));
-	padding: 0 $space1;
+	padding: 0 var(--space-1);
 	max-width: 100%;
-	margin-bottom: $space2;
-	border-radius: $base-radius;
-	transition-duration: $transition-time;
-	transition-timing-function: $animation-curve-default;
+	margin-bottom: var(--space-2);
+	border-radius: var(--border-radius);
+	transition-duration: var(--transition-time);
+	transition-timing-function: var(--animation-curve);
 	transition-property: color, background-color, border-color;
 
 	&:focus {
 		outline: 0;
-		background-color: rgba($white, 0.95);
-		border-color: $color-links-hover;
+		background-color: color(#fff a(95%));
+		border-color: var(--color-links-hover);
 	}
 }
 
@@ -41,25 +40,25 @@ label {
 	font-size: 0.875rem;
 	font-weight: 700;
 	display: block;
-	margin-bottom: $space1;
+	margin-bottom: var(--space-1);
 }
 
 input[type=checkbox],
 input[type=radio] {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 $space1 0 0;
+	margin: 0 var(--space-1) 0 0;
 }
 
 select {
-	@mixin icon select-arrows, #78909C ;
+	@mixin icon select-arrows, #678695;
 	background-size: 1em;
 	background-position: 98% 50%;
 	padding-right: 1.5em;
 }
 
 input[type=search] {
-	@mixin icon search, #78909C ;
+	@mixin icon search, #678695;
 	background-size: 1.4em;
 	background-position: 97% 50%;
 	padding-right: 1.5em;

@@ -44,7 +44,9 @@
 	}
 }
 .menu-primary .v-icon {
-	transition: all .3s;
+	transition-duration: var(--transition-time);
+	transition-timing-function: var(--animation-curve);
+	transition-property: transform;
 }
 .menu-primary.toggled .v-icon {
 	transform: rotate(180deg);

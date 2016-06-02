@@ -8,6 +8,13 @@
 	flex-shrink: 1;
 }
 
+@media (--sm) {
+	:root {
+		font-size: 90%;
+		line-height: 1.2
+	}
+}
+
 article,
 aside,
 details,
@@ -38,7 +45,7 @@ hr {
 	border: 0;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #ccc;
+	border-bottom-color: var(--grey-nuetral);
 }
 
 /* Embedded content

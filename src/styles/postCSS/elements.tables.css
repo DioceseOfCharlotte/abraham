@@ -7,20 +7,20 @@ table {
 
 th,
 td {
-	padding: $space1 0;
+	padding: var(--space-1) 0;
 	line-height: inherit;
 }
 
 th {
 	text-align: left;
-	font-weight: 700;
+	font-weight: var(--font-bold);
 	vertical-align: bottom;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid var(--color-grey-ui);
 }
 
 td {
 	vertical-align: middle;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid var(--color-grey-ui-light);
 }
 
 td > ul {
