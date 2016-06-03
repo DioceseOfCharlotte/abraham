@@ -130,6 +130,14 @@ gulp.task('images', function() {
 		}))
 });
 
+// Copy from node-modules
+gulp.task('venders', function () {
+  gulp.src([
+  	'node_modules/normalize.css/normalize.css'
+  	])
+    .pipe(gulp.dest('src/styles/postCSS/'));
+});
+
 // Compile and Automatically Prefix Stylesheets (production)
 gulp.task('preset', function() {
 	gulp.src('src/styles/postCSS/preset.css')
@@ -216,5 +224,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('images', 'presass', 'styles', 'oldie', 'scripts', cb);
+	runSequence('venders', 'images', 'presass', 'styles', 'oldie', 'scripts', cb);
 });
