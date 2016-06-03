@@ -14,11 +14,13 @@
 
 		<?php get_template_part( 'components/entry', 'header' ); ?>
 
+		<?php if ( has_excerpt() ) { ?>
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php tha_entry_content_before(); ?>
 			<?php the_excerpt(); ?>
 			<?php tha_entry_content_after(); ?>
 		</div>
+		<?php } ?>
 
 		<?php get_template_part( 'components/entry', 'footer' ); ?>
 

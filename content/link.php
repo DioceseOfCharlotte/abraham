@@ -6,22 +6,23 @@
  */
 
 ?>
-
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php tha_entry_top(); ?>
 
-		<header <?php hybrid_attr( 'entry-header' ); ?>>
-			<?php
-				get_the_image(array(
-					'size' => 'abe-card-md',
-					'image_class' => 'u-br-t u-1of1',
-					'before'             => '<div class="card-img u-overflow-hidden">',
-					'after'              => '</div>',
-				));
-			?>
-<?php the_title( '<a class="entry-title-link u-1of1 u-inline-flex u-flex-center" href="' . hybrid_get_the_post_format_url() . '">', is_rtl() ? ' <span class="meta-nav">&larr;</span>' : ' <span class="meta-nav">&rarr;</span></a>' ); ?>
-		</header>
+		<?php get_template_part( 'components/img', 'hd' ); ?>
+
+		<?php get_template_part( 'components/entry', 'header' ); ?>
+
+		<?php if ( has_excerpt() ) { ?>
+		<div <?php hybrid_attr( 'entry-summary' ); ?>>
+			<?php tha_entry_content_before(); ?>
+			<?php the_excerpt(); ?>
+			<?php tha_entry_content_after(); ?>
+		</div>
+		<?php } ?>
+
+		<?php get_template_part( 'components/entry', 'footer' ); ?>
 
 <?php tha_entry_bottom(); ?>
 

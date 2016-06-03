@@ -15,9 +15,7 @@
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h4>
 
-			<?php if ( get_post_type() === 'post' ) {
-				get_template_part( 'components/entry-meta' );
-			} ?>
+			<?php get_template_part( 'components/entry-meta' ); ?>
 		</header>
 
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
