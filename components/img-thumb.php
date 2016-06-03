@@ -10,6 +10,6 @@
 get_the_image(array(
 	'image_class' => 'u-1of1',
 	'default_image' => abe_get_default_image(),
-	'before'             => '<div class="card-img u-overflow-hidden">',
+	'before'             => '<div class="card-img u-overflow-hidden u-flexed-s0">',
 	'after'              => '</div>',
 ));

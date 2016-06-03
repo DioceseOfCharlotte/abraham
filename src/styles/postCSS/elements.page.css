@@ -6,12 +6,19 @@
 	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
+	vertical-align: middle;
 }
 
-@media (--sm) {
-	:root {
-		font-size: 90%;
-		line-height: 1.2
+/* specify the root styles of the document */
+html {
+	background-color: var(--root-background-color);
+	box-sizing: var(--root-box-sizing);
+	color: var(--root-color);
+	cursor: var(--root-cursor);
+	font: var(--root-font-size)/var(--root-line-height) var(--root-font-family);
+
+	@media (--sm) {
+		font-size: var(--mobile-font-size);
 	}
 }
 
@@ -46,6 +53,24 @@ hr {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: var(--grey-nuetral);
+}
+
+article p,
+article li {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+	max-width: 848px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Embedded content

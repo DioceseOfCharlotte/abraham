@@ -6,3 +6,11 @@ img {
 svg {
 	max-height: 100%;
 }
+
+.taxonomy-agency .thumbnail {
+	max-width: 100px;
+
+	@media (--md) {
+		max-width: 130px;
+	}
+}

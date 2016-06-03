@@ -1,3 +1,9 @@
+
+.media-img > a {
+	box-shadow: none;
+}
+
+
 /**
 * Flexible media embeds
 *

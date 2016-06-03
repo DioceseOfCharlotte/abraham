@@ -55,18 +55,18 @@ class Attr_Trumps {
 
 			'page_header'             	=> 'u-p4 u-1of1 u-rel u-text-center',
 			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1',
-			'archive_description'     	=> 'u-1of1 u-p2 u-p4-md u-text-left u-br u-container u-mb3 u-bg-white u-rel u-shadow2',
+			'archive_description'     	=> 'u-1of1 u-p2 u-p4-md u-text-left u-br u-container u-mb2 u-mb3-md u-bg-white u-rel u-shadow2',
 
 			// ENTRY.
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br u-shadow2',
 			'post_wide'               	=> 'u-fit u-1of1',
 
-			'post_archive'            	=> 'u-mb3 o-cell u-1of2-md u-bg-white u-overflow-hidden u-shadow1 u-br',
+			'post_archive'            	=> 'o-cell u-1of2-md u-1of3-lg u-bg-white u-overflow-hidden u-shadow1 u-br',
 			'entry_header'            	=> 'u-z1',
-			'entry_title'             	=> 'u-p1 u-h3 u-m0 u-flexed-auto',
+			'entry_title'             	=> 'u-px2 u-py1 u-h3 u-flexed-auto',
 			'entry_content'           	=> 'u-p2 u-p4-md',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-p2 u-p4-md',
+			'entry_summary'           	=> 'u-p2 u-p3-md',
 			'entry_footer'            	=> 'u-mt-auto',
 
 			'nav_single'              	=> '',

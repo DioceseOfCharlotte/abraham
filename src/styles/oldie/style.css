@@ -415,7 +415,7 @@ pre {
 ::before,
 ::after {
   text-decoration: inherit;
-  vertical-align: inherit; }
+  vertical-align: initial; }
 
 button,
 input,
@@ -498,14 +498,6 @@ svg {
 * {
   background-repeat: no-repeat; }
 
-/* specify the root styles of the document */
-:root {
-  background-color: #fff;
-  box-sizing: border-box;
-  color: #13181b;
-  cursor: default;
-  font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
-
 /* specify the alignment of media elements */
 audio,
 canvas,
@@ -582,12 +574,20 @@ textarea {
 * {
   flex-basis: auto;
   flex-grow: 0;
-  flex-shrink: 1; }
+  flex-shrink: 1;
+  vertical-align: middle; }
+
+/* specify the root styles of the document */
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #13181b;
+  cursor: default;
+  font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
 
 @media (max-width: 47em) {
-  :root {
-    font-size: 90%;
-    line-height: 1.2; } }
+  html {
+    font-size: 90%; } }
 
 article,
 aside,
@@ -618,6 +618,22 @@ hr {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #90a4ae; }
+
+article p,
+article li {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  max-width: 848px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* Embedded content
 ========================================================================== */
@@ -664,12 +680,15 @@ a[class] {
   box-shadow: none;
   text-decoration: none; }
 
+.entry-title {
+  line-height: 2; }
+
 .entry-title > a {
   width: 100%;
   display: inline-flex;
-  line-height: 1;
+  line-height: 1.2;
   align-items: center;
-  padding: 0.5rem; }
+  padding: 0.25rem; }
 
 /* #TYPOGRAPHY
 \*------------------------------------*/
@@ -927,6 +946,13 @@ img {
 svg {
   max-height: 100%; }
 
+.taxonomy-agency .thumbnail {
+  max-width: 100px; }
+
+@media (min-width: 48em) {
+  .taxonomy-agency .thumbnail {
+    max-width: 130px; } }
+
 /* #GRID
 \*------------------------------------*/
 .o-grid {
@@ -937,8 +963,13 @@ svg {
   align-items: stretch; }
 
 .o-cell {
-  margin: 0 calc(0.5 * 1.5rem) calc(0.5 * 1.5rem);
-  flex: 1 1 auto; }
+  max-width: 100%;
+  min-height: 1px;
+  margin: 0 calc(0.5 * 1rem) calc(0.5 * 1.5rem); }
+
+@media (min-width: 48em) {
+  .o-cell {
+    margin: 0 calc(0.5 * 1.5rem) 1.5rem; } }
 
 .v-icon {
   width: 1em;
@@ -1241,6 +1272,9 @@ input[type="reset"]:active {
 .btn-lg {
   padding: 1rem 1.25rem;
   font-size: 1.1rem; }
+
+.media-img > a {
+  box-shadow: none; }
 
 /**
 * Flexible media embeds

@@ -40,7 +40,7 @@ pre {
 ::before,
 ::after {
 	text-decoration: inherit;
-	vertical-align: inherit;
+	vertical-align: initial;
 }
 
 button,
@@ -133,15 +133,6 @@ svg {
 /* specify the background repeat of all elements */
 * {
 	background-repeat: var(--background-repeat);
-}
-
-/* specify the root styles of the document */
-:root {
-	background-color: var(--root-background-color);
-	box-sizing: var(--root-box-sizing);
-	color: var(--root-color);
-	cursor: var(--root-cursor);
-	font: var(--root-font-size)/var(--root-line-height) var(--root-font-family);
 }
 
 /* specify the alignment of media elements */
