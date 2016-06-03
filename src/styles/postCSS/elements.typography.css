@@ -33,6 +33,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
+	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 
 	/* remove when merged into normalize */

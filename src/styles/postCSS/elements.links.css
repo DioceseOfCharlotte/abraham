@@ -42,14 +42,9 @@ a[class] {
 	text-decoration: none;
 }
 
-.entry-title {
-	line-height: 2;
-}
-
 .entry-title > a {
 	width: 100%;
 	display: inline-flex;
-	line-height: 1.2;
 	align-items: center;
 	padding: 0.25rem;
 }

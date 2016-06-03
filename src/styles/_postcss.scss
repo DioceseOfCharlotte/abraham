@@ -645,13 +645,9 @@ a[class] {
 	box-shadow: none;
 	text-decoration: none;
 }
-.entry-title {
-	line-height: 2;
-}
 .entry-title > a {
 	width: 100%;
 	display: inline-flex;
-	line-height: 1.2;
 	align-items: center;
 	padding: 0.25rem;
 }
@@ -682,6 +678,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
+	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 
 	/* remove when merged into normalize */

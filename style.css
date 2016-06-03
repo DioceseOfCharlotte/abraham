@@ -774,16 +774,11 @@ a[class] {
     text-decoration: none;
 }
 
-.entry-title {
-    line-height: 2;
-}
-
 .entry-title > a {
     width: 100%;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    line-height: 1.2;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -819,6 +814,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
     /* remove when merged into normalize */
     line-height: 1.15;

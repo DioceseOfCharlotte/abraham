@@ -63,7 +63,7 @@ class Attr_Trumps {
 
 			'post_archive'            	=> 'o-cell u-1of2-md u-1of3-xl u-bg-white u-overflow-hidden u-shadow1 u-br',
 			'entry_header'            	=> 'u-z1',
-			'entry_title'             	=> 'u-px2 u-py1 u-h3 u-flexed-auto',
+			'entry_title'             	=> 'u-px2 u-h3 u-flexed-auto',
 			'entry_content'           	=> 'u-p2 u-p4-md',
 			'entry_content_wide'      	=> '',
 			'entry_summary'           	=> 'u-p2 u-p3-md',
