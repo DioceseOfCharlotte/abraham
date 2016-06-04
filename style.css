@@ -672,7 +672,6 @@ html {
     font: 100%/1.5 -apple-system,
           BlinkMacSystemFont,
           "Segoe UI",
-          "Roboto",
           "Liberation Sans",
           "Fira Sans",
           "Droid Sans",
@@ -2170,6 +2169,17 @@ html .u-opacity {
 
 html .u-opacity1 {
     opacity: 1;
+}
+
+html .u-of-cover {
+    object-fit: cover;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+html .u-of-contain {
+    object-fit: contain;
 }
 
 html .u-bg-cover {

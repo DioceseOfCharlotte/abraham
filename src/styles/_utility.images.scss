@@ -1,3 +1,12 @@
+.u-of-cover {
+	object-fit: cover;
+	height: fit-content;
+}
+
+.u-of-contain {
+	object-fit: contain;
+}
+
 .u-bg-cover {
 	background-size: cover;
 }
