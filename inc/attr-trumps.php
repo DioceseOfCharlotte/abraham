@@ -11,6 +11,10 @@
  * @param  array $args Arguments to pass to hybrid_attr.
  */
 function attr_trumps( $args = array() ) {
+
+	if ( is_admin() )
+		return;
+
 	$trump = apply_filters( 'attr_trumps_object', null, $args );
 	if ( ! is_object( $trump ) ) {
 		$trump = new Attr_Trumps( $args ); }
