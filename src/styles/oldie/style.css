@@ -583,7 +583,7 @@ html {
   box-sizing: border-box;
   color: #13181b;
   cursor: default;
-  font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+  font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
 
 @media (max-width: 47em) {
   html {
@@ -747,7 +747,7 @@ input[type="submit"] {
   text-align: center;
   margin: 0;
   height: auto;
-  min-height: --form-element-min-height;
+  min-height: 2.5rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;

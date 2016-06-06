@@ -37,11 +37,7 @@ function abe_do_svg( $icon, $size ) {
 function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 
 	ob_start(); ?>
-
-	<span class="icon-<?= $size ?>">
-		<?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?>
-	</span>
-
+	<span class="icon-<?= $size ?>"><?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?></span>
 	<?php return ob_get_clean();
 
 }

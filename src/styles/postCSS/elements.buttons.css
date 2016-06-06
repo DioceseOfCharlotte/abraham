@@ -11,7 +11,7 @@ input[type="submit"] {
 	text-align: center;
 	margin: 0;
 	height: auto;
-	min-height: --form-element-min-height;
+	min-height: var(--form-element-min-height);
 	cursor: pointer;
 	padding: 0.5rem 1rem;
 	border-radius: var(--border-radius);
