@@ -27,6 +27,7 @@ var pcVars = require("postcss-advanced-variables");
 var pcNested = require("postcss-nested");
 var pcMedia = require("postcss-custom-media");
 var pcProperties = require("postcss-custom-properties");
+var pcCalc = require('postcss-calc');
 var pcFlex = require('postcss-flexibility');
 var pcSvg = require('postcss-inline-svg');
 var pcNoDups = require('postcss-discard-duplicates');
@@ -54,6 +55,7 @@ var PRECSS_PLUGINS = [
 	pcMixins,
 	pcProperties,
 	pcVars,
+	pcCalc,
 	pcColor,
 	pcMedia,
 	pcNested,
