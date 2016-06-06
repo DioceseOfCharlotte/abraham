@@ -548,7 +548,7 @@ class Attr_Trumps {
 			is_single( $post_id ) || is_page() ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
 		}
 
-		if ( is_archive() || is_search() || is_home ) {
+		if ( is_archive() || is_search() || is_home() ) {
 			$classes[]      = "{$this->args['post_archive']}"; }
 
 		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) {
