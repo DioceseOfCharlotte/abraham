@@ -3085,6 +3085,14 @@ html .u-overflow-auto {
     overflow: auto;
 }
 
+html .u-hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
 html .u-nowrap {
     white-space: nowrap;
 }
