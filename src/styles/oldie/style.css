@@ -1778,8 +1778,7 @@ html {
   html .u-opacity1 {
     opacity: 1; }
   html .u-of-cover {
-    object-fit: cover;
-    height: fit-content; }
+    object-fit: cover; }
   html .u-of-contain {
     object-fit: contain; }
   html .u-bg-cover {
