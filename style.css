@@ -686,6 +686,10 @@ html {
     }
 }
 
+span, i, a {
+    vertical-align: initial;
+}
+
 article, aside, details, figcaption, figure, footer, header, main, menu, nav,
 section, summary, legend {
     display: block;
@@ -1417,6 +1421,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 
 .btn-sm {
     padding: 0.25rem 0.5rem;
+    min-height: 0.5rem;
 }
 
 .btn-lg {

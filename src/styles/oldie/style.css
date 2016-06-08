@@ -589,6 +589,11 @@ html {
   html {
     font-size: 90%; } }
 
+span,
+i,
+a {
+  vertical-align: initial; }
+
 article,
 aside,
 details,
@@ -1264,7 +1269,8 @@ input[type="reset"]:active {
   line-height: 2.4rem; }
 
 .btn-sm {
-  padding: 0.25rem 0.5rem; }
+  padding: 0.25rem 0.5rem;
+  min-height: 0.5rem; }
 
 .btn-lg {
   padding: 1rem 1.25rem;
