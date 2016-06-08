@@ -156,7 +156,7 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-text-1-light{color:#{$colorLight}}";
 		$style .= "#page .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "#page .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
-		$style .= "#page .u-bg-1-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
+		$style .= "#page .u-bg-1-dark,input[type=submit]{background-color:#{$colorDark};color:#{$textOnDark};}";
 		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
 		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
 		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
