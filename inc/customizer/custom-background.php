@@ -61,7 +61,7 @@ function abraham_custom_background_callback() {
 	$image = get_background_image();
 
 	// If there's an image, just call the normal WordPress callback. We won't do anything here.
-	if ( !empty( $image ) && is_front_page() ) {
+	if ( !empty( $image ) ) {
 		_custom_background_cb();
 		return;
 	}
