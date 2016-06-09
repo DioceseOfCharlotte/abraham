@@ -2521,12 +2521,14 @@ html .u-text-wrap {
 }
 
 html .u-container {
+    width: 100%;
     max-width: 74rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 html .u-container-wide {
+    width: 100%;
     max-width: 84rem;
     margin-left: auto;
     margin-right: auto;
