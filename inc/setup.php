@@ -54,8 +54,7 @@ function abraham_setup() {
 	 *
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 150,
-		'width'       => 150,
+		'height'      => 78,
 		'flex-width' => true,
 	) );
 
