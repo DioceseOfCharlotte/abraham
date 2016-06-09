@@ -111,7 +111,7 @@ class Attr_Trumps {
 			'sub-menu'                  => '',
 			'gv_post'                   => 'u-bg-transparent u-shadow0',
 			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u-1of1 u-p1 u-br u-bg-white u-rel u-1of2-md u-1of3-lg u-border0 u-shadow1',
+			'gv_entry'                  => 'o-cell u-1of1 u-p1 u-br u-bg-white u-rel u-mb3-md u-1of2-md u-1of3-lg u-border0 u-shadow1',
 		);
 
 		$this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
