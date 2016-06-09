@@ -1835,12 +1835,14 @@ body:not(.search) .trail-end > span, .search .archive-title {
     display: inline;
     float: left;
     margin-right: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .alignright {
     display: inline;
     float: right;
     margin-left: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .aligncenter {
@@ -2489,6 +2491,8 @@ html .u-dropcap:first-letter {
     text-indent: 0;
     margin-left: -0.2rem;
     background: transparent;
+    color: inherit;
+    opacity: 0.6 !important;
 }
 
 html .u-list-reset {
