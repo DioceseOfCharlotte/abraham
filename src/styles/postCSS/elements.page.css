@@ -22,6 +22,10 @@ html {
 	}
 }
 
+body {
+	font-family: inherit;
+}
+
 span,
 i,
 a {

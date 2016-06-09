@@ -686,6 +686,10 @@ html {
     }
 }
 
+body {
+    font-family: inherit;
+}
+
 span, i, a {
     vertical-align: initial;
 }
@@ -3052,6 +3056,10 @@ html .u-vh100 {
 
 html .u-height100 {
     height: 100%;
+}
+
+html .u-vh100-min {
+    min-height: 100vh;
 }
 
 html .u-vw100 {

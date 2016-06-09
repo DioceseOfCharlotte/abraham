@@ -589,6 +589,9 @@ html {
   html {
     font-size: 90%; } }
 
+body {
+  font-family: inherit; }
+
 span,
 i,
 a {
@@ -2217,6 +2220,8 @@ html {
     height: 100vh; }
   html .u-height100 {
     height: 100%; }
+  html .u-vh100-min {
+    min-height: 100vh; }
   html .u-vw100 {
     height: 100vw; }
   html .u-align-baseline {
