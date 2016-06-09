@@ -1,7 +1,8 @@
 /* #LINKS
 \*------------------------------------*/
 
-a {
+a,
+.link {
 	color: var(--blue-grey);
 	text-decoration: none;
 	transition-duration: var(--transition-time);

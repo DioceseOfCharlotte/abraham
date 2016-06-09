@@ -616,7 +616,8 @@ iframe[src*="google.com/maps"] {
 }
 /* #LINKS
 \*------------------------------------*/
-a {
+a,
+.link {
 	color: #678695;
 	text-decoration: none;
 	transition-duration: 0.3s;
@@ -624,11 +625,13 @@ a {
 	transition-property: all;
 	border-radius: 0.5px;
 }
-a:hover {
+a:hover, .link:hover {
   box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.2);
 }
 a:active,
-	a:focus {
+	a:focus,
+	.link:active,
+	.link:focus {
   box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.4);
 }
 a:before,
@@ -698,9 +701,9 @@ blockquote {
 	margin-bottom: 1em;
 }
 p:empty {
-	margin: 0;
-	padding: 0;
-	line-height: 0;
+	margin: 0!important;
+	padding: 0!important;
+	line-height: 0!important;
 }
 p:last-child {
 	margin-bottom: 0;
