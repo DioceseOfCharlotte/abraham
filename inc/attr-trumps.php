@@ -158,7 +158,7 @@ class Attr_Trumps {
 		add_filter( 'hybrid_attr_footer',                array( $this, 'footer' ) );
 
 		// COMMENTS.
-		add_filter( 'hybrid_attr_comments-area',         array( $this, 'comments_area' ) );
+		add_filter( 'hybrid_attr_comments_area',         array( $this, 'comments_area' ) );
 
 		add_filter( 'nav_menu_link_attributes',          array( $this, 'menu_link' ), 10, 3 );
 
