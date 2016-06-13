@@ -146,13 +146,17 @@ function abe_do_permalink( $atts ) {
 	extract( shortcode_atts( array(
 		'id'   => get_the_ID(),
 		'text' => '',  // Default value if none supplied.
+		'title' => '',
 	), $atts) );
 
 	if ( $text ) {
 		$url = get_permalink( $id );
 		return "<a href='$url'>$text</a>";
-	} else {
-		return get_permalink( $id );
+	} elseif ( $title ) {
+		$url = get_permalink( $id );
+		$title = get_the_title( $id );
+
+		return "<a href='$url'>$title</a>";
 	}
 }
 
