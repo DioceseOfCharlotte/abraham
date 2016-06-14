@@ -766,7 +766,7 @@ input[type="submit"] {
   transition: all 0.3s, cubic-bezier(0.4, 0, 0.2, 1); }
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.2); }
+  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.3); }
 
 .btn:focus,
 .btn:active,
@@ -786,7 +786,7 @@ input[type="reset"].is-active,
 input[type="submit"]:focus,
 input[type="submit"]:active,
 input[type="submit"].is-active {
-  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.4);
+  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.5);
   outline: none; }
 
 /* #LISTS
@@ -1792,9 +1792,11 @@ html {
   html .u-opacity1 {
     opacity: 1; }
   html .u-of-cover {
-    object-fit: cover; }
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; }
   html .u-of-contain {
-    object-fit: contain; }
+    object-fit: contain;
+    font-family: 'object-fit: contain;'; }
   html .u-bg-cover {
     background-size: cover; }
   html .u-bg-contain {

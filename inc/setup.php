@@ -92,6 +92,12 @@ function abraham_assets() {
 		false, false, true
 	);
 
+	wp_enqueue_script(
+		'object_fit_js',
+		trailingslashit( get_template_directory_uri() )."js/polyfill/ofi.browser.js",
+		false, false, true
+	);
+
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
 

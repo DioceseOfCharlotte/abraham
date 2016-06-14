@@ -732,7 +732,7 @@ input[type="submit"] {
 	transition: all 0.3s, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.2);
+  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.3);
 }
 .btn:focus,
 	.btn:active,
@@ -752,7 +752,7 @@ input[type="submit"] {
 	input[type="submit"]:focus,
 	input[type="submit"]:active,
 	input[type="submit"].is-active {
-  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.4);
+  box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.5);
   outline: none;
 }
 /* #LISTS

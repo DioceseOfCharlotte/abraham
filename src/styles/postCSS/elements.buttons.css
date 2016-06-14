@@ -19,13 +19,13 @@ input[type="submit"] {
 	transition: all var(--transition-time), var(--animation-curve);
 
 	&:hover {
-		box-shadow: inset 0 0 0 20rem color(var(--grey-nuetral) a(20%));
+		box-shadow: inset 0 0 0 20rem color(var(--grey-nuetral) a(30%));
 	}
 
 	&:focus,
 	&:active,
 	&.is-active {
-		box-shadow: inset 0 0 0 20rem color(var(--grey-nuetral) a(40%));
+		box-shadow: inset 0 0 0 20rem color(var(--grey-nuetral) a(50%));
 		outline: none;
 	}
 }
