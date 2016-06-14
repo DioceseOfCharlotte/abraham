@@ -847,7 +847,9 @@ input[type="submit"] {
     color: inherit;
     background-color: transparent;
     vertical-align: middle;
-    display: inline-block;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     text-align: center;
     margin: 0;
     height: auto;
