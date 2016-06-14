@@ -719,8 +719,8 @@ input[type="reset"],
 input[type="submit"] {
 	color: inherit;
 	background-color: transparent;
-	vertical-align: middle;
 	display: inline-flex;
+	align-items: center;
 	text-align: center;
 	margin: 0;
 	height: auto;
