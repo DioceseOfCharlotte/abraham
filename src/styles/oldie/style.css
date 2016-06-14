@@ -987,6 +987,7 @@ svg {
 
 .o-cell > .v-icon {
   width: 100%;
+  height: auto;
   max-width: 50%; }
 
 /*.icon-xs {
