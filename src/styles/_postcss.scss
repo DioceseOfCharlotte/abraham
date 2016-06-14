@@ -722,6 +722,7 @@ input[type="submit"] {
 	display: inline-flex;
 	align-items: center;
 	text-align: center;
+	line-height: 1;
 	margin: 0;
 	height: auto;
 	min-height: 2.5rem;
@@ -950,8 +951,7 @@ svg {
 }
 .v-icon {
 	width: 1em;
-	height: auto;
-	vertical-align: middle;
+	height: 1em;
 	fill: currentColor;
 }
 .o-cell > .v-icon {
@@ -961,10 +961,14 @@ svg {
 /*.icon-xs {
 	font-size: 1rem;
 }
-
+*/
 .icon-sm {
-	font-size: 1.5rem;
-}*/
+	/*width: 1em;
+    height: 1em;*/
+
+	line-height: 1;
+	margin: 0 0.2em;
+}
 .icon-md {
 	width: 100%;
 	max-width: 90px;

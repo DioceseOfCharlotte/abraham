@@ -1,7 +1,6 @@
 .v-icon {
 	width: 1em;
-	height: auto;
-	vertical-align: middle;
+	height: 1em;
 	fill: currentColor;
 }
 
@@ -13,10 +12,15 @@
 /*.icon-xs {
 	font-size: 1rem;
 }
+*/
 
 .icon-sm {
-	font-size: 1.5rem;
-}*/
+	/*width: 1em;
+    height: 1em;*/
+
+	line-height: 1;
+	margin: 0 0.2em;
+}
 
 .icon-md {
 	width: 100%;
