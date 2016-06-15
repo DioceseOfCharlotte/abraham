@@ -6,5 +6,4 @@
 	background-image: svg-load($name.svg, fill=$fill, stroke=$stroke, stroke-width=$sWidth, width=$width, height=$height);
 	background-repeat: no-repeat;
 	display: inline-block;
-	vertical-align: middle;
 }

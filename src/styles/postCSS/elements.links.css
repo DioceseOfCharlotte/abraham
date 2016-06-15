@@ -23,9 +23,11 @@ a,
 a:before,
 a:after {
 	background-size: contain;
-	min-width: 1.1em;
-	width: 1.1em;
-	height: 1.1em;
+	min-width: 1em;
+	line-height: 1;
+	width: 1em;
+	height: 1em;
+	vertical-align: inherit;
 }
 
 a:before {
