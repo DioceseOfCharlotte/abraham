@@ -143,6 +143,7 @@ img,
 svg,
 video {
 	vertical-align: var(--media-element-vertical-align);
+	max-width: 100%;
 }
 
 /* specify the coloring of form elements */
@@ -212,4 +213,9 @@ textarea {
 	background-color: var(--selection-background-color); /* required when declaring ::selection */
 	color: var(--selection-color);
 	text-shadow: var(--selection-text-shadow);
+}
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54;
 }

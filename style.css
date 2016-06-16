@@ -580,6 +580,7 @@ svg {
 
 audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
+    max-width: 100%;
 }
 
 /* specify the coloring of form elements */
@@ -644,6 +645,11 @@ textarea {
     /* required when declaring ::selection */
     color: inherit;
     text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
 }
 
 /* #PAGE
@@ -1883,6 +1889,8 @@ body:not(.search) .trail-end > span, .search .archive-title {
 .u-shadow0 {
     box-shadow: none !important;
 }
+
+/*@import "utility.colors";*/
 
 /* Custom media queries */
 
