@@ -1768,6 +1768,30 @@ body:not(.search) .trail-end > span, .search .archive-title {
     width: 1px;
 }
 
+.u-link-blend {
+    text-decoration: none;
+}
+
+.u-link {
+    color: #0074D9;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-image: linear-gradient(transparent, transparent 4px, currentColor 4px, currentColor);
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: all;
+}
+
+.u-link:hover, .u-link:focus {
+    opacity: 0.5;
+}
+
+.u-link:active {
+    opacity: 0.8;
+}
+
 /*------------------------------------*#HELPERS
 \*------------------------------------*/
 
@@ -2294,45 +2318,6 @@ html .o-crop__content {
     height: auto;
     left: 0;
     width: 100%;
-}
-
-html .u-link-blend {
-    text-decoration: none;
-}
-
-html .u-link {
-    color: #20638f;
-    position: relative;
-    display: inline-block;
-    font-size: inherit;
-}
-
-html .u-link:before {
-    content: "";
-    height: 1px;
-    left: 0;
-    bottom: 0;
-    background: currentColor;
-    opacity: .35;
-    position: absolute;
-    right: 0;
-    -webkit-transform: scaleX(0.97) translateY(0.055em);
-    transform: scaleX(0.97) translateY(0.055em);
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
-}
-
-html .u-link:hover, html .u-link:active {
-    color: #2980b9;
-}
-
-html .u-link:hover:before, html .u-link:active:before {
-    opacity: .95;
-    -webkit-transform: scaleX(0.99);
-    transform: scaleX(0.99);
 }
 
 html .u-table-light th, html .u-table-light td {

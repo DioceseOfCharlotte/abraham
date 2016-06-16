@@ -103,8 +103,8 @@
 	--color-1: var(--blue);
 	--color-1-dark: color(var(--color-1) lightness(-20%));
 
-	--color-links: var(--color-1-dark);
-	--color-links-hover: var(--color-1);
+	--color-links: #265C83;
+	--color-links-hover: var(--blue);
 
 	--color-grey-ui: color(var(--blue-grey) lightness(+30%));
 	--color-grey-ui-light: color(var(--blue-grey) lightness(+47%));

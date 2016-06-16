@@ -1498,6 +1498,27 @@ body:not(.search) .trail-end > span,
 	position: absolute;
 	width: 1px;
 }
+.u-link-blend {
+	text-decoration: none;
+}
+.u-link {
+	color: #0074D9;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100% 6px;
+	background-image: linear-gradient(transparent, transparent 4px, currentColor 4px, currentColor);
+	transition-duration: 0.15s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: all;
+}
+.u-link:hover,
+	.u-link:focus {
+  opacity: 0.5;
+}
+.u-link:active {
+  opacity: 0.8;
+}
 /*------------------------------------*\
 #HELPERS
 \*------------------------------------*/
