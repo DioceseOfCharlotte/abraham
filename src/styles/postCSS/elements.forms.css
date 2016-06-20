@@ -75,3 +75,7 @@ input[type=search] {
 	position: absolute;
 	width: 1px;
 }
+
+input[value=Other]:not(:focus) {
+	color: color(var(--root-color) a(50%));
+}

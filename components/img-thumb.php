@@ -8,8 +8,8 @@
  */
 
 get_the_image(array(
-	'image_class' => 'u-1of1 u-of-cover',
-	'default_image' => abe_get_default_image(),
-	'before'             => '<div class="card-img u-overflow-hidden u-flexed-s0">',
-	'after'              => '</div>',
+	'size'               => 'thumbnail',
+	'image_class'        => 'u-1of3 u-1of4-md u-of-cover',
+	'default_image' 	=> abe_get_default_image(),
+	'link_to_post'		=> false,
 ));

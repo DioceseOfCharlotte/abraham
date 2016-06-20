@@ -2,6 +2,5 @@
 	return;
 } ?>
 <footer <?php hybrid_attr( 'entry-footer' ); ?>>
-	<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => esc_html__( 'Posted in %s', 'abraham' ) ) ); ?>
-	<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => esc_html__( 'Tagged %s', 'abraham' ), 'before' => '<br />' ) ); ?>
+	<?php get_template_part( 'components/entry', 'terms' ); ?>
 </footer><!-- .entry-footer -->

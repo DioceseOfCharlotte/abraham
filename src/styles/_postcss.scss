@@ -479,7 +479,7 @@ input,
 select,
 textarea {
 	background-color: rgba(243, 245, 247, 0.8);
-	color: --root-color;
+	color: rgb(19, 24, 27);
 }
 /* specify the minimum height of form elements */
 button,
@@ -621,6 +621,10 @@ canvas {
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
+}
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: .54;
 }
 /* #LINKS
 \*------------------------------------*/
@@ -919,6 +923,9 @@ input[type=search] {
 	position: absolute;
 	width: 1px;
 }
+input[value=Other]:not(:focus) {
+	color: rgba(19, 24, 27, 0.5);
+}
 img {
 	max-width: 100%;
 	height: auto;
@@ -945,7 +952,6 @@ svg {
 }
 .o-cell {
 	max-width: 100%;
-	min-height: 1px;
 	margin: 0 0.5rem 0.75rem;
 }
 @media (min-width: 48em) {

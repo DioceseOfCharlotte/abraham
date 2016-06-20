@@ -16,15 +16,8 @@ $video = hybrid_media_grabber(
 
 	<?php tha_entry_top(); ?>
 
-			<?php
-			if ( $video ) {
-				echo $video;
-
-			} else {
-				get_template_part( 'components/img', 'hd' );
-			}
-			?>
-
+	<?php get_template_part( 'components/img', 'thumb' ); ?>
+	<div class="flag-body u-flexed-auto">
 		<header <?php hybrid_attr( 'entry-header' ); ?>>
 
 			<?php arch_title(); ?>
@@ -32,6 +25,7 @@ $video = hybrid_media_grabber(
 		</header>
 
 		<?php arch_excerpt(); ?>
+	</div>
 
 	<?php tha_entry_bottom(); ?>
 

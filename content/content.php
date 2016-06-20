@@ -24,6 +24,6 @@
 
 		<?php get_template_part( 'components/entry', 'footer' ); ?>
 
-<?php tha_entry_bottom(); ?>
+	<?php tha_entry_bottom(); ?>
 
 </article>

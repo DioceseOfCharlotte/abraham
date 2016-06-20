@@ -27,7 +27,7 @@
 
 	--form-element-background-color: color(var(--color-grey-ui-light) a(80%));
 
-	--form-element-color: --root-color;
+	--form-element-color: var(--root-color);
 
 	--form-element-min-height: 2.5rem;
 
@@ -94,7 +94,7 @@
 
 	/* Gray */
 	--white: #FFFFFF;
-	--silver: #DDDDDD;
+	--silver: #edeff3;
 	--grey: #AAAAAA;
 	--blue-grey: #678695;
 	--grey-nuetral: #90a4ae;

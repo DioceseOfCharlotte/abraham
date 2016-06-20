@@ -587,7 +587,7 @@ audio, canvas, iframe, img, svg, video {
 
 button, input, select, textarea {
     background-color: rgba(243, 245, 247, 0.8);
-    color: --root-color;
+    color: #13181b;
 }
 
 /* specify the minimum height of form elements */
@@ -744,6 +744,11 @@ canvas {
 iframe[src*="google.com/maps"] {
     width: 100%;
     max-width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .54;
 }
 
 /* #LINKS
@@ -1066,6 +1071,10 @@ input[type=search] {
     width: 1px;
 }
 
+input[value=Other]:not(:focus) {
+    color: rgba(19, 24, 27, 0.5);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -1104,7 +1113,6 @@ svg {
 
 .o-cell {
     max-width: 100%;
-    min-height: 1px;
     margin: 0 0.5rem 0.75rem;
 }
 
@@ -1956,11 +1964,11 @@ html .u-text-black {
 }
 
 html .u-text-grey {
-    color: #9D9D9D;
+    color: #AAAAAA;
 }
 
 html .u-text-silver {
-    color: #bdc3c7;
+    color: #edeff3;
 }
 
 html .u-text-white {
@@ -2032,20 +2040,20 @@ html .u-bg-3-dark {
 }
 
 html .u-bg-black {
-    background-color: #000;
+    background-color: #111;
 }
 
 html .u-bg-grey {
-    background-color: #9D9D9D;
+    background-color: #AAAAAA;
 }
 
 html .u-bg-grey-dark {
-    background-color: #6a6a6a;
+    background-color: #777777;
     color: #fff;
 }
 
 html .u-bg-silver {
-    background-color: #bdc3c7;
+    background-color: #edeff3;
 }
 
 html .u-bg-white {
@@ -2073,19 +2081,19 @@ html .u-bg-frost-4 {
 }
 
 html .u-bg-tint-1 {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(17, 17, 17, 0.15);
 }
 
 html .u-bg-tint-2 {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(17, 17, 17, 0.25);
 }
 
 html .u-bg-tint-3 {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 17, 17, 0.5);
 }
 
 html .u-bg-tint-4 {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(17, 17, 17, 0.9);
 }
 
 html .u-bg-mask {
@@ -2145,19 +2153,19 @@ html .u-hover-frost-4:hover {
 }
 
 html .u-hover-tint-1:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(17, 17, 17, 0.15);
 }
 
 html .u-hover-tint-2:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(17, 17, 17, 0.25);
 }
 
 html .u-hover-tint-3:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 17, 17, 0.5);
 }
 
 html .u-hover-tint-4:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(17, 17, 17, 0.9);
 }
 
 html .u-fill-1 {
@@ -2322,7 +2330,7 @@ html .o-crop__content {
 
 html .u-table-light th, html .u-table-light td {
     border-bottom-width: 1px;
-    border-bottom-color: #9D9D9D;
+    border-bottom-color: #AAAAAA;
 }
 
 html .u-table-light tr:last-child td {
@@ -2699,31 +2707,31 @@ html .u-4of5 {
 html .u-border {
     border-style: solid;
     border-width: 1px;
-    border-color: #9D9D9D;
+    border-color: #AAAAAA;
 }
 
 html .u-border-t {
     border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: #9D9D9D;
+    border-top-color: #AAAAAA;
 }
 
 html .u-border-r {
     border-right-style: solid;
     border-right-width: 1px;
-    border-right-color: #9D9D9D;
+    border-right-color: #AAAAAA;
 }
 
 html .u-border-b {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: #9D9D9D;
+    border-bottom-color: #AAAAAA;
 }
 
 html .u-border-l {
     border-left-style: solid;
     border-left-width: 1px;
-    border-left-color: #9D9D9D;
+    border-left-color: #AAAAAA;
 }
 
 html .u-border0 {

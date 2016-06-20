@@ -40,8 +40,8 @@
     "postcss-nested": "^1.0.0",
     "postcss-scss": "^0.1.8",
     "run-sequence": "^1.2.1",
-    "stylefmt": "^3.4.4",
-    "stylelint": "^6.6.0"
+    "stylefmt": "^3.5.0",
+    "stylelint": "^6.7.0"
   },
   "private": true,
   "engines": {

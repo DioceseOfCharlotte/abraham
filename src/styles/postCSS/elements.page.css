@@ -93,3 +93,9 @@ iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
 }
+
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: .54;
+}
