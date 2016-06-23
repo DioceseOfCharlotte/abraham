@@ -12,4 +12,5 @@ get_the_image(array(
 	'image_class'        => 'u-1of3 u-1of4-md u-of-cover',
 	'default_image' 	=> abe_get_default_image(),
 	'link_to_post'		=> false,
+	'attachment' 		=> false,
 ));
