@@ -89,7 +89,7 @@ function abe_font_url() {
 			$font_families[] = 'Roboto:400,500,700';
 		}
 		if ( 'off' !== $cormorant ) {
-			$font_families[] = 'Cormorant:400,600';
+			$font_families[] = 'Cormorant Garamond:400,500,600';
 		}
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -122,6 +122,8 @@ function abraham_assets() {
 
 	// Scripts.
 	wp_enqueue_script( 'abraham_js', trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js", false, false, true );
+
+	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.24/webfont.js', false, false, false );
 
 	// polyfills
 	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() )."js/polyfill/ofi.browser.js", false, false, true );
