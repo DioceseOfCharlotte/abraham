@@ -123,7 +123,7 @@ function abraham_assets() {
 	// Scripts.
 	wp_enqueue_script( 'abraham_js', trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js", false, false, true );
 
-	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.24/webfont.js', false, false, false );
+	wp_enqueue_script( 'webfont', 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js', false, false, false );
 
 	// polyfills
 	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() )."js/polyfill/ofi.browser.js", false, false, true );
