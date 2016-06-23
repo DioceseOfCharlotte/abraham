@@ -83,7 +83,19 @@ function abraham_tiny_mce_formats( $args ) {
 				'title'   => __( 'List Group', 'abraham' ),
 				'items' => array(
 					array(
-						'title'    => __( 'Plain', 'abraham' ),
+						'title'    => __( 'Naked', 'abraham' ),
+						'selector' => 'ul',
+						'classes'  => 'u-list-naked',
+						'wrapper'  => true,
+					),
+					array(
+						'title'    => __( 'Ordered Steps', 'abraham' ),
+						'selector' => 'ol',
+						'classes'  => 'u-list-steps',
+						'wrapper'  => true,
+					),
+					array(
+						'title'    => __( 'Segmented', 'abraham' ),
 						'selector' => 'ul',
 						'classes'  => 'u-list-group',
 						'wrapper'  => true,

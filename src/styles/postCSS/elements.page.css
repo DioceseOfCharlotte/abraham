@@ -57,8 +57,8 @@ legend {
 }
 
 hr {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	margin-top: var(--space-3);
+	margin-bottom: var(--space-3);
 	border: 0;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -66,10 +66,25 @@ hr {
 }
 
 article p,
-article li {
-	max-width: 800px;
+article ul,
+article ol {
+	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+article ul {
+	list-style-type: disc;
+	padding-left: var(--space-4);
+}
+
+article ol {
+	list-style-type: upper-roman;
+	padding-left: var(--space-4);
+
+	li {
+		    padding-left: 0.5rem;
+	}
 }
 
 article h1,
@@ -78,7 +93,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-	max-width: 848px;
+	max-width: 948px;
 	margin-left: auto;
 	margin-right: auto;
 }

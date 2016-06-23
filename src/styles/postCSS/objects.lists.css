@@ -1,6 +1,32 @@
+.u-list-naked {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.u-list-steps {
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		counter-increment: step-counter;
+
+		&:before {
+			content: counter(step-counter);
+			margin-right: 1rem;
+			font-size: 1rem;
+			line-height: 1;
+			background-color: var(--color-grey-ui);
+			color: #fff;
+			font-weight: bold;
+			padding: 5px 10px;
+			border-radius: 50%;
+		}
+	}
+}
+
 .u-list-group {
 	padding-left: 0;
-	margin-bottom: var(--space-2);
+	list-style-type: none;
 
 	> li {
 		letter-spacing: 0.02em;

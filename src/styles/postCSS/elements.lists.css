@@ -5,6 +5,8 @@ ul,
 ol,
 dl {
 	list-style-type: none;
+	margin-bottom: var(--space-2);
+	line-height: var(--space-4);
 }
 
 ol ol,
@@ -17,10 +19,6 @@ ul ol {
 
 ul:last-child {
 	margin-bottom: 0;
-}
-
-li {
-	padding: 4px 0;
 }
 
 /* specify the list style of nav lists */
