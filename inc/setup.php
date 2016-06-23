@@ -80,13 +80,9 @@ function abraham_content_width() {
  */
 function abe_font_url() {
 	$fonts_url = '';
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by the following, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$roboto = _x( 'on', 'Roboto font: on or off', '_s' );
-	$cormorant = _x( 'on', 'Cormorant font: on or off', '_s' );
+	$roboto = _x( 'on', 'Roboto font: on or off', 'abe' );
+	$cormorant = _x( 'on', 'Cormorant font: on or off', 'abe' );
+
 	if ( 'off' !== $roboto || 'off' !== $cormorant ) {
 		$font_families = array();
 		if ( 'off' !== $roboto ) {
@@ -100,6 +96,7 @@ function abe_font_url() {
 		);
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
+
 	return $fonts_url;
 }
 

@@ -5,10 +5,8 @@
  * @package Abraham
  */
 
-add_action( 'customize_register', 'abraham_customize_register', 11 );
+add_action( 'customize_register', 'abraham_customize_register' );
 add_action( 'customize_preview_init', 'abraham_customizer_js' );
-// add_action( 'wp_enqueue_scripts', 'abraham_google_fonts' );
-//add_action( 'customize_register', 'my_register_blogname_partials' );
 
 /**
  * Customizer Settings
@@ -25,7 +23,7 @@ function abraham_customize_register( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 
 	    $wp_customize->selective_refresh->add_partial( 'blogname', array(
-	        'selector' => '#site-title a',
+	        'selector' => '#site-title',
 	        'render_callback' => function() {
 	            return get_bloginfo( 'name', 'display' );
 	        },
@@ -93,58 +91,32 @@ function abraham_customize_register( $wp_customize ) {
 		)
 	);
 
-	/* Typography. */
-	// $wp_customize->add_section(
-	// 	'custom_typography',
-	// 	array(
-	// 	'title'    => esc_html__( 'Typography', 'abraham' ),
-	// 	'priority' => 80,
-	// 	)
-	// );
+	// Add our Footer Customization section section.
+    $wp_customize->add_section(
+        'abe_footer_section',
+        array(
+            'title'    => esc_html__( 'Footer Customization', 'abe' ),
+            'priority' => 90,
+        )
+    );
 
-	/* Adds the heading font setting. */
-	// $wp_customize->add_setting(
-	// 	'heading_font',
-	// 	array(
-	// 		'default'              => 'Georgia,Times,"Times New Roman",serif',
-	// 		'type'                 => 'theme_mod',
-	// 		'sanitize_callback'    => 'sanitize_text_field',
-	// 		// 'transport'            => 'postMessage',
-	// 	)
-	// );
-	/* Adds the heading font control. */
-	// $wp_customize->add_control(
-	// 	'abraham-heading-font',
-	// 	array(
-	// 		'label'    => esc_html__( 'Heading Font', 'abraham' ),
-	// 		'section'  => 'custom_typography',
-	// 		'settings' => 'heading_font',
-	// 		'type'     => 'select',
-	// 		'choices'  => customizer_library_get_font_choices(),
-	// 	)
-	// );
-
-	/* Adds the body font setting. */
-	// $wp_customize->add_setting(
-	// 	'body_font',
-	// 	array(
-	// 		'default'              => '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif',
-	// 		'type'                 => 'theme_mod',
-	// 		'sanitize_callback'    => 'sanitize_text_field',
-	// 		// 'transport'            => 'postMessage',
-	// 	)
-	// );
-	/* Adds the body font control. */
-	// $wp_customize->add_control(
-	// 	'abraham-body-font',
-	// 	array(
-	// 		'label'    => esc_html__( 'Body Font', 'abraham' ),
-	// 		'section'  => 'custom_typography',
-	// 		'settings' => 'body_font',
-	// 		'type'     => 'select',
-	// 		'choices'  => customizer_library_get_font_choices(),
-	// 	)
-	// );
+    // Add our copyright text field.
+    $wp_customize->add_setting(
+        'abe_copyright_text',
+        array(
+            'default' => ''
+        )
+    );
+    $wp_customize->add_control(
+        'abe_copyright_text',
+        array(
+            'label'       => esc_html__( 'Copyright Text', 'abe' ),
+            'description' => esc_html__( 'Displayed in the sites footer.  &#169; 20** will be prepended to this text.', 'abe' ),
+            'section'     => 'abe_footer_section',
+            'type'        => 'text',
+            'sanitize'    => 'html'
+        )
+    );
 }
 
 /**

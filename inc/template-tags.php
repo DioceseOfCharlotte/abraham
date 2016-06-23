@@ -61,6 +61,21 @@ function meh_edit_post_link( $output ) {
 }
 add_filter( 'edit_post_link', 'meh_edit_post_link' );
 
+
+/**
+ * Echo the copyright text saved in the Customizer.
+ */
+function abe_do_copyright_text() {
+	// Grab our customizer settings.
+	$copyright_text = get_theme_mod( 'abe_copyright_text' );
+	// Display the default text.
+	if ( ! $copyright_text ) {
+		return printf( __( '&#169; %1$s %2$s', 'abraham' ), date_i18n( 'Y' ), hybrid_get_site_link() );
+	}
+	// Display the customizer text.
+	return printf( __( '&#169; %1$s %2$s', 'abraham' ), date_i18n( 'Y' ), wp_kses_post( $copyright_text ) );
+}
+
 /**
  * Colors
  */
