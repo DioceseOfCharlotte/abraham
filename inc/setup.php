@@ -79,26 +79,27 @@ function abraham_content_width() {
  *
  * @link http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
  */
-function abe_font_url() {
-	$fonts_url = '';
-	$roboto = _x( 'on', 'Roboto font: on or off', 'abe' );
-	$cormorant = _x( 'on', 'Cormorant font: on or off', 'abe' );
+function abe_font_list( $display_name ) {
+	$fonts_list = '';
+	$body_font = '';
+	$display_font = 'Cormorant Garamond';
 
-	if ( 'off' !== $roboto || 'off' !== $cormorant ) {
-		$font_families = array();
-		if ( 'off' !== $roboto ) {
-			$font_families[] = 'Roboto:400,500,700';
-		}
-		if ( 'off' !== $cormorant ) {
-			$font_families[] = 'Cormorant Garamond:400,500,600';
-		}
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-		);
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+	if ( true === $display_name ) {
+		return $display_font;
 	}
 
-	return $fonts_url;
+	if ( $body_font || $display_font ) {
+		$font_families = array();
+		if ( $body_font ) {
+			$font_families[] = "'{$body_font}:400,500,700'";
+		}
+		if ( $display_font ) {
+			$font_families[] = "'{$display_font}:400,500,600'";
+		}
+		$fonts_list = wp_kses_post( implode( ',', $font_families ) );
+	}
+
+	return $fonts_list;
 }
 
 /**
@@ -108,8 +109,8 @@ function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
 	// Load parent theme stylesheet if child theme is active.
-	if ( is_child_theme() )
-		wp_enqueue_style( 'hybrid-parent' );
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'hybrid-parent' ); }
 
 	// Load active theme stylesheet.
 	wp_enqueue_style( 'hybrid-style' );
@@ -127,7 +128,7 @@ function abraham_assets() {
 	// wp_enqueue_script( 'webfont', 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js', array( 'abraham_js' ), false, true );
 
 	// polyfills
-	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() )."js/polyfill/ofi.browser.js", false, false, true );
+	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() ).'js/polyfill/ofi.browser.js', false, false, true );
 
 	wp_enqueue_script( 'html5shiv', trailingslashit( get_template_directory_uri() ).'js/polyfill/html5shiv.min.js',  false, false, false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
@@ -139,11 +140,12 @@ function abraham_assets() {
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
-function abe_font_loader() { ?>
+function abe_font_loader() {
+	?>
 	<script type="text/javascript">
 		WebFontConfig = {
 		  google: {
-		    families: ['Cormorant Garamond:400,500,600']
+		    families: [ <?= abe_font_list() ?> ]
 		  }
 		};
 
@@ -156,8 +158,12 @@ function abe_font_loader() { ?>
 	    })(document);
 	</script>
 	<style type="text/css">
+	.wf-loading .u-text-display {
+		opacity: 0.1;
+	}
 	.wf-active .u-text-display {
-		font-family: 'Cormorant Garamond', serif;
+		font-family: <?= abe_font_list( $display_name = true ) ?>, serif;
+		opacity: 1;
 		font-weight: 600;
 	}
 	</style>
