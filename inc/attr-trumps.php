@@ -38,7 +38,7 @@ class Attr_Trumps {
 	public function __construct( $args = array() ) {
 
 		$defaults = array(
-			'body'                   	  => 'u-body',
+			'body'                   	  => '',
 			'site_container'         	  => '',
 			'layout'                 	  => 'u-flex u-flex-col',
 			'layout_wide'            	  => '',
@@ -50,15 +50,15 @@ class Attr_Trumps {
 			// SITE HEADER.
 			'header'              		   => 'u-abs is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-wrap u-flex-center',
 			'branding'            		   => '',
-			'site_title'          		   => 'u-heading u-color-inherit u-m0',
-			'site_description'        	   => 'u-heading u-m0 u-text-3',
+			'site_title'          		   => 'u-text-display u-color-inherit u-m0',
+			'site_description'        	   => 'u-text-display u-m0 u-text-3',
 			// CONTENT.
 			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-ja',
 
 			'page_header'             	=> 'u-p4 u-1of1 u-rel u-text-center',
-			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1 u-heading',
+			'page_title'              	=> 'u-text-shadow u-h0 u-m0 u-pb1 u-text-display',
 			'archive_description'     	=> 'u-1of1 u-p2 u-p4-md u-text-left u-br u-container u-mb2 u-mb3-md u-bg-white u-rel u-shadow2',
 
 			// ENTRY.
@@ -67,7 +67,7 @@ class Attr_Trumps {
 
 			'post_archive'            	=> 'o-cell u-flexed-auto u-1of2-md u-1of3-xl u-bg-white u-overflow-hidden u-shadow1 u-br',
 			'entry_header'            	=> 'u-z1',
-			'entry_title'             	=> 'u-px2 u-h3 u-flexed-auto u-heading',
+			'entry_title'             	=> 'u-px2 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p2 u-p4-md',
 			'entry_content_wide'      	=> '',
 			'entry_summary'           	=> 'u-p2 u-p3-md show-icons',

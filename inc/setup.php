@@ -12,6 +12,7 @@ add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
 add_filter( 'show_admin_bar' , 'abe_show_admin_bar' );
+add_action( 'wp_head', 'abe_font_loader' );
 
 
 function abe_show_admin_bar( $content ) {
@@ -114,8 +115,8 @@ function abraham_assets() {
 	wp_enqueue_style( 'hybrid-style' );
 
 	// Google fonts
-	wp_register_style( 'abe-google-font', abe_font_url(), array(), null );
-	wp_enqueue_style( 'abe-google-font' );
+	// wp_register_style( 'abe-google-font', abe_font_url(), array(), null );
+	// wp_enqueue_style( 'abe-google-font' );
 
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
@@ -123,7 +124,7 @@ function abraham_assets() {
 	// Scripts.
 	wp_enqueue_script( 'abraham_js', trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js", false, false, true );
 
-	wp_enqueue_script( 'webfont', 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js', false, false, false );
+	// wp_enqueue_script( 'webfont', 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js', array( 'abraham_js' ), false, true );
 
 	// polyfills
 	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() )."js/polyfill/ofi.browser.js", false, false, true );
@@ -137,6 +138,30 @@ function abraham_assets() {
 	wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ).'js/polyfill/flexibility.js',  false, false, false );
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
+
+function abe_font_loader() { ?>
+	<script type="text/javascript">
+		WebFontConfig = {
+		  google: {
+		    families: ['Cormorant Garamond:400,500,600']
+		  }
+		};
+
+		(function(d) {
+	       var wf = d.createElement('script'), s = d.scripts[0];
+	       wf.src = 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js';
+		   wf.type = 'text/javascript';
+		   wf.async = 'true';
+	       s.parentNode.insertBefore(wf, s);
+	    })(document);
+	</script>
+	<style type="text/css">
+	.wf-active .u-text-display {
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 600;
+	}
+	</style>
+<?php }
 
 /**
  * Styles for the editor.

@@ -1919,12 +1919,9 @@ html {
     border-bottom-color: #AAAAAA; }
   html .u-table-light tr:last-child td {
     border-bottom: 0; }
-  html .u-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600; }
-  html .u-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400; }
+  html .u-text-display {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Liberation Serif", Georgia, "Times New Roman", serif;
+    font-weight: normal; }
   html .u-small {
     font-size: 80%; }
   html .u-f1 {
