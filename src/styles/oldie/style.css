@@ -900,10 +900,7 @@ blockquote {
   line-height: 1.6;
   text-align: center;
   font-style: italic;
-  margin-left: 0; }
-
-blockquote p:last-of-type {
-  margin-bottom: 0; }
+  margin: 0; }
 
 cite {
   text-align: right;
@@ -1041,10 +1038,9 @@ svg {
 }
 */
 .icon-sm {
-  /*width: 1em;
-    height: 1em;*/
   line-height: 1;
-  margin: 0 0.2em; }
+  margin: 0;
+  display: inline-flex; }
 
 .icon-md {
   width: 100%;

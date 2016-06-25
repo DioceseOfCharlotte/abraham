@@ -70,7 +70,7 @@ function abraham_tiny_mce_formats( $args ) {
 			array(
 				'title'   => __( 'Pull Quote', 'abraham' ),
 				'block'   => 'blockquote',
-				'classes' => 'pullquote',
+				'classes' => 'pullquote u-text-display',
 				'wrapper' => true,
 			),
 			array(
@@ -83,9 +83,9 @@ function abraham_tiny_mce_formats( $args ) {
 				'title'   => __( 'List Group', 'abraham' ),
 				'items' => array(
 					array(
-						'title'    => __( 'Naked', 'abraham' ),
+						'title'    => __( 'No Bullets', 'abraham' ),
 						'selector' => 'ul',
-						'classes'  => 'u-list-naked',
+						'classes'  => 'u-list-reset',
 						'wrapper'  => true,
 					),
 					array(

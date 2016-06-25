@@ -15,10 +15,10 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 
 
 		<header class="off-canvas__header u-px1 u-py2 u-bg-2 u-shadow1">
-			<button class="js-menu-hide off-canvas__hide u-z1 u-mr1 btn-round u-h3 u-inline-block">
+			<button class="js-menu-hide off-canvas__hide u-z1 u-mr1 btn-round u-h3 u-inline-flex">
 				<?php abe_do_svg( 'arrow-left', 'sm' ); ?>
 			</button>
-			<h2 class="u-h3 u-m0 u-inline-block u-align-middle"><?php bloginfo( 'name' ); ?></h2>
+			<h2 class="u-h3 u-m0 u-text-display u-inline-block u-align-middle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
 		</header>
 
     <div class="off-canvas__content u-py2 u-flexed-1 ">
