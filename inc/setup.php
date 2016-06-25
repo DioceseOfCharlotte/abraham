@@ -158,13 +158,16 @@ function abe_font_loader() {
 	    })(document);
 	</script>
 	<style type="text/css">
-	.wf-loading .u-text-display {
-		opacity: 0.1;
+	.u-text-display {
+		opacity: 0.3;
 	}
 	.wf-active .u-text-display {
 		font-family: <?= abe_font_list( $display_name = true ) ?>, serif;
 		opacity: 1;
 		font-weight: 600;
+	}
+	.wf-inactive .u-text-display {
+		opacity: 1;
 	}
 	</style>
 <?php }
