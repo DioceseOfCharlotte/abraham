@@ -41,7 +41,14 @@
     "postcss-scss": "^0.1.8",
     "run-sequence": "^1.2.1",
     "stylefmt": "^4.0.0",
-    "stylelint": "^6.7.1"
+    "stylelint": "^6.7.1",
+    "stylelint-config-standard": "^9.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": "tab"
+    }
   },
   "private": true,
   "engines": {
