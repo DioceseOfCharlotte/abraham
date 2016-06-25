@@ -723,35 +723,35 @@ a[class] {
 /* #TYPOGRAPHY
 \*------------------------------------*/
 h1 {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 @media (min-width: 48em) {
   h1 {
     font-size: 3rem; } }
 
 h2 {
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 
 @media (min-width: 48em) {
   h2 {
     font-size: 2.5rem; } }
 
 h3 {
-  font-size: 1.2; }
+  font-size: 1.5; }
 
 @media (min-width: 48em) {
   h3 {
     font-size: 2rem; } }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 @media (min-width: 48em) {
   h4 {
     font-size: 1.5rem; } }
 
 h5 {
-  font-size: 1.0625rem; }
+  font-size: 1.15rem; }
 
 @media (min-width: 48em) {
   h5 {
@@ -1946,42 +1946,42 @@ body:not(.search) .trail-end > span,
   font-size: 0.9rem; }
 
 .u-f-plus {
-  font-size: 1.0625rem; }
+  font-size: 1.15rem; }
 
 @media (min-width: 48em) {
   .u-f-plus {
     font-size: 1.25rem; } }
 
 .u-h1 {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 @media (min-width: 48em) {
   .u-h1 {
     font-size: 3rem; } }
 
 .u-h2 {
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 
 @media (min-width: 48em) {
   .u-h2 {
     font-size: 2.5rem; } }
 
 .u-h3 {
-  font-size: 1.2; }
+  font-size: 1.5; }
 
 @media (min-width: 48em) {
   .u-h3 {
     font-size: 2rem; } }
 
 .u-h4 {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 @media (min-width: 48em) {
   .u-h4 {
     font-size: 1.5rem; } }
 
 .u-h5 {
-  font-size: 1.0625rem; }
+  font-size: 1.15rem; }
 
 @media (min-width: 48em) {
   .u-h5 {

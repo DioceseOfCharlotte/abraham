@@ -824,7 +824,7 @@ a[class] {
 \*------------------------------------*/
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 @media (min-width: 48em) {
@@ -834,7 +834,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 
 @media (min-width: 48em) {
@@ -844,7 +844,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2;
+    font-size: 1.5;
 }
 
 @media (min-width: 48em) {
@@ -854,7 +854,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 48em) {
@@ -864,7 +864,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.0625rem;
+    font-size: 1.15rem;
 }
 
 @media (min-width: 48em) {
@@ -2400,7 +2400,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-f-plus {
-    font-size: 1.0625rem;
+    font-size: 1.15rem;
 }
 
 @media (min-width: 48em) {
@@ -2410,7 +2410,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 @media (min-width: 48em) {
@@ -2420,7 +2420,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h2 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 
 @media (min-width: 48em) {
@@ -2430,7 +2430,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h3 {
-    font-size: 1.2;
+    font-size: 1.5;
 }
 
 @media (min-width: 48em) {
@@ -2440,7 +2440,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h4 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 48em) {
@@ -2450,7 +2450,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h5 {
-    font-size: 1.0625rem;
+    font-size: 1.15rem;
 }
 
 @media (min-width: 48em) {
