@@ -122,7 +122,7 @@
 }
 
 /*// small*/
-@include sm {
+@media (--sm) {
 
 	.u-flex-sm {
 		display: flex;
@@ -134,7 +134,7 @@
 }
 
 /*// medium*/
-@include md {
+@media (--md) {
 
 	.u-flex-md {
 		display: flex;
@@ -146,7 +146,7 @@
 }
 
 /*// large*/
-@include lg {
+@media (--lg) {
 
 	.u-flex-lg {
 		display: flex;

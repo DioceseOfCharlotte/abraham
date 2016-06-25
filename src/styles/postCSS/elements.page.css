@@ -16,14 +16,14 @@ html {
 	color: var(--root-color);
 	cursor: var(--root-cursor);
 	font: var(--root-font-size)/var(--root-line-height) var(--root-font-family);
-
-	@media (--sm) {
-		font-size: var(--mobile-font-size);
-	}
 }
 
 body {
 	font-family: inherit;
+
+	@media (--sm) {
+		font-size: 0.95rem;
+	}
 }
 
 span,

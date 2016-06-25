@@ -19,8 +19,6 @@
 
 	--root-font-size: 100%;
 
-	--mobile-font-size: 90%;
-
 	--root-line-height: 1.5;
 
 	--background-repeat: no-repeat;
@@ -52,13 +50,19 @@
 	--textarea-resize: vertical;
 
 
-	--h1: 2.5rem;
-	--h2: 2rem;
-	--h3: 1.5rem;
-	--h4: 1.25rem;
-	--h5: 1rem;
-	--h6: 0.875rem;
+	--h1: 3rem;
+	--h2: 2.5rem;
+	--h3: 2rem;
+	--h4: 1.5rem;
+	--h5: 1.25rem;
+	--h6: 0.9rem;
 
+	--h1-mobile: 1.5rem;
+	--h2-mobile: 1.25rem;
+	--h3-mobile: 1.2;
+	--h4-mobile: 1.125rem;
+	--h5-mobile: 1.0625rem;
+	--h6-mobile: 0.9rem;
 
 	--space-1: 0.5rem;
 	--space-2: 1rem;

@@ -65,17 +65,17 @@
 .u-frosted-image {
 
 	&:before {
-		background-color: rgba($blue-grey-50, 0.6);
+		background-color: var(--color-frost-3);
 	}
-	color: $color-text-dark;
+	color: var(--root-color);
 }
 
 .u-tinted-image {
 
 	&:before {
-		background-color: rgba($blue-grey-500, 0.6);
+		background-color: var(--color-tint-3);
 	}
-	color: $white;
+	color: white;
 }
 
 .u-grad-overlay {
@@ -91,7 +91,7 @@
 		left: 0;
 		width: 100%;
 	}
-	color: $white;
+	color: white;
 }
 
 

@@ -2,12 +2,12 @@
 
 
 .u-trans-curve {
-	transition-timing-function: $animation-curve-default;
+	transition-timing-function: var(--animation-curve);
 }
 
 .u-trans-time {
-	transition-duration: $transition-time;
-    transition-property: color;
+	transition-duration: var(--transition-time);
+	transition-property: color;
 }
 
 .u-trans-color {

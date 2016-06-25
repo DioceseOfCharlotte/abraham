@@ -1,6 +1,14 @@
-.u-list-naked {
-	list-style-type: none;
+.u-list-naked,
+.u-list-reset {
+	list-style: none;
 	padding-left: 0;
+
+	> ul,
+	> li {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+	}
 }
 
 .u-list-steps {

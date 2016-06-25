@@ -21,5 +21,9 @@
 @import "components.breadcrumbs.css";
 @import "utility.links";
 @import "utility.helpers";
-/*@import "utility.colors";*/
+@import "utility.tables";
+@import "utility.flex";
+@import "utility.images";
+@import "utility.typography";
+@import "utility.animations";
 @import "defaults.css";

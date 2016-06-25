@@ -3,27 +3,45 @@
 
 
 h1 {
-	font-size: var(--h1);
+	font-size: var(--h1-mobile);
+	@media (--md) {
+		font-size: var(--h1);
+	}
 }
 
 h2 {
-	font-size: var(--h2);
+	font-size: var(--h2-mobile);
+	@media (--md) {
+		font-size: var(--h2);
+	}
 }
 
 h3 {
-	font-size: var(--h3);
+	font-size: var(--h3-mobile);
+	@media (--md) {
+		font-size: var(--h3);
+	}
 }
 
 h4 {
-	font-size: var(--h4);
+	font-size: var(--h4-mobile);
+	@media (--md) {
+		font-size: var(--h4);
+	}
 }
 
 h5 {
-	font-size: var(--h5);
+	font-size: var(--h5-mobile);
+	@media (--md) {
+		font-size: var(--h5);
+	}
 }
 
 h6 {
-	font-size: var(--h6);
+	font-size: var(--h6-mobile);
+	@media (--md) {
+		font-size: var(--h6);
+	}
 }
 
 h1,
@@ -50,9 +68,9 @@ blockquote {
 }
 
 p:empty {
-	margin: 0!important;
-	padding: 0!important;
-	line-height: 0!important;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: 0 !important;
 }
 
 p:last-child {

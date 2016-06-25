@@ -12,42 +12,70 @@
 
 .u-f1 {
 	font-size: 1rem;
+
+	@media (--sm) {
+		font-size: 0.95rem;
+	}
 }
 
 .u-f-minus {
-	font-size: 0.9rem;
+	font-size: var(--h6);
 }
 
 .u-f-plus {
-	font-size: 1.1rem;
-}
+	font-size: var(--h5-mobile);
 
-.u-h0 {
-    font-size: $jumbo;
+	@media (--md) {
+		font-size: var(--h5);
+	}
 }
 
 .u-h1 {
-    font-size: $h1;
+	font-size: var(--h1-mobile);
+
+	@media (--md) {
+		font-size: var(--h1);
+	}
 }
 
 .u-h2 {
-    font-size: $h2;
+	font-size: var(--h2-mobile);
+
+	@media (--md) {
+		font-size: var(--h2);
+	}
 }
 
 .u-h3 {
-    font-size: $h3;
+	font-size: var(--h3-mobile);
+
+	@media (--md) {
+		font-size: var(--h3);
+	}
 }
 
 .u-h4 {
-    font-size: $h4;
+	font-size: var(--h4-mobile);
+
+	@media (--md) {
+		font-size: var(--h4);
+	}
 }
 
 .u-h5 {
-    font-size: $h5;
+	font-size: var(--h5-mobile);
+
+	@media (--md) {
+		font-size: var(--h5);
+	}
 }
 
 .u-h6 {
-    font-size: $h6;
+	font-size: var(--h6-mobile);
+
+	@media (--md) {
+		font-size: var(--h6);
+	}
 }
 
 .u-lh-1 {
@@ -59,7 +87,7 @@
 }
 
 .u-bold {
-	font-weight: 700;
+	font-weight: var(--font-bold);
 }
 
 .u-regular,
@@ -77,7 +105,7 @@
 }
 
 .u-text-shadow {
-	text-shadow: 1px 1px 5px rgba($color-text-dark, 0.6);
+	text-shadow: 1px 1px 5px var(--color-tint-3);
 }
 
 .u-text-left {
@@ -128,17 +156,4 @@
 	background: transparent;
 	color: inherit;
 	opacity: 0.6 !important;
-
-	//color: inherit;
-}
-
-.u-list-reset {
-	list-style: none;
-
-	> ul,
-	> li {
-		list-style: none;
-		padding-left: 0;
-		margin-left: 0;
-	}
 }

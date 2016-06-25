@@ -20,13 +20,8 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 html {
 
 	@import "utility.colors";
-	@import "utility.images";
-	@import "utility.tables";
-	@import "utility.typography";
 	@import "utility.widths";
 	@import "utility.borders";
-	@import "utility.flex";
-	@import "utility.animations";
 	@import "utility.layout-states";
 	@import "utility.spacing";
 	@import "vendor.plugins";
