@@ -844,7 +844,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 48em) {
@@ -2430,7 +2430,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-h3 {
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 48em) {

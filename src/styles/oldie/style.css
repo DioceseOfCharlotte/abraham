@@ -737,7 +737,7 @@ h2 {
     font-size: 2.5rem; } }
 
 h3 {
-  font-size: 1.5; }
+  font-size: 1.5rem; }
 
 @media (min-width: 48em) {
   h3 {
@@ -1967,7 +1967,7 @@ body:not(.search) .trail-end > span,
     font-size: 2.5rem; } }
 
 .u-h3 {
-  font-size: 1.5; }
+  font-size: 1.5rem; }
 
 @media (min-width: 48em) {
   .u-h3 {
