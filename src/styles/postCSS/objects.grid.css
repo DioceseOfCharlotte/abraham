@@ -3,10 +3,11 @@
 
 .o-grid {
 	display: flex;
-	flex-flow: row wrap;
+	flex-wrap: wrap;
 	margin-right: auto;
 	margin-left: auto;
 	align-items: stretch;
+	list-style: none;
 }
 
 .o-cell {

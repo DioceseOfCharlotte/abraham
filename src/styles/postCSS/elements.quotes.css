@@ -1,6 +1,6 @@
 blockquote {
 	padding: var(--space-1) var(--space-2);
-	font-size: var(--h4);
+	font-size: var(--h3);
 	line-height: 1.6;
 	text-align: center;
 	font-style: italic;
@@ -11,6 +11,7 @@ cite {
 	text-align: right;
 	width: 100%;
 	display: inline-block;
+	font-family: var(--root-font-family);
 }
 
 blockquote cite {

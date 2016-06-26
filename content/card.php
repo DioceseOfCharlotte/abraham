@@ -25,11 +25,7 @@ $video = hybrid_media_grabber(
 			}
 			?>
 
-		<header <?php hybrid_attr( 'entry-header' ); ?>>
-
-			<?php arch_title(); ?>
-
-		</header>
+		<?php arch_title(); ?>
 
 		<?php arch_excerpt(); ?>
 

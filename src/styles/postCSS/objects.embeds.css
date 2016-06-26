@@ -3,6 +3,9 @@
 	box-shadow: none;
 }
 
+.entry-header + .entry-summary {
+    padding-top: 0;
+}
 
 /**
 * Flexible media embeds

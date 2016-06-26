@@ -1008,7 +1008,7 @@ tr:last-child td {
 
 blockquote {
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.6;
     text-align: center;
     font-style: italic;
@@ -1019,6 +1019,15 @@ cite {
     text-align: right;
     width: 100%;
     display: inline-block;
+    font-family: -apple-system,
+                 BlinkMacSystemFont,
+                 "Segoe UI",
+                 "Roboto",
+                 "Liberation Sans",
+                 "Fira Sans",
+                 "Droid Sans",
+                 "Helvetica Neue",
+                 sans-serif;
 }
 
 blockquote cite {
@@ -1145,14 +1154,15 @@ svg {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-right: auto;
     margin-left: auto;
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    list-style: none;
 }
 
 .o-cell {
@@ -1516,6 +1526,10 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 
 .media-img > a {
     box-shadow: none;
+}
+
+.entry-header + .entry-summary {
+    padding-top: 0;
 }
 
 /**
