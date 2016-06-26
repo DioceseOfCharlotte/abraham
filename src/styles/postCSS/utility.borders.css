@@ -1,0 +1,64 @@
+/* #BORDERS
+\*------------------------------------*/
+
+.u-border {
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--color-grey-ui);
+}
+
+.u-border-t {
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: var(--color-grey-ui);
+}
+
+.u-border-r {
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: var(--color-grey-ui);
+}
+
+.u-border-b {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--color-grey-ui);
+}
+
+.u-border-l {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: var(--color-grey-ui);
+}
+
+.u-border0 {
+	border: 0;
+}
+
+.u-br {
+	border-radius: var(--border-radius);
+}
+
+.u-br0 {
+	border-radius: 0;
+}
+
+.u-round {
+	border-radius: 50%;
+}
+
+.u-br-t {
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.u-br-r {
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.u-br-b {
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.u-br-l {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}

@@ -49,6 +49,10 @@
 
 	--textarea-resize: vertical;
 
+	--paragraph-width: 64rem;
+	--container: 74rem;
+	--container-wide: 84rem;
+
 	--h1: 3rem;
 	--h2: 2.5rem;
 	--h3: 2rem;

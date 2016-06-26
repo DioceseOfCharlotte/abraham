@@ -13,16 +13,9 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import "settings.colors";
 @import "settings.vars";
 @import "settings.responsive";
-@import "tools.mixins";
-
 @import "postcss";
 
 html {
-
 	@import "utility.colors";
-	@import "utility.widths";
-	@import "utility.borders";
-	@import "utility.layout-states";
 	@import "utility.spacing";
-	@import "vendor.plugins";
 }
