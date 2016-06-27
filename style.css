@@ -554,8 +554,8 @@ audio, canvas, iframe, img, svg, video {
 /* specify the coloring of form elements */
 
 button, input, select, textarea {
-    background-color: rgba(243, 245, 247, 0.8);
-    color: rgb(19, 24, 27);
+    background-color: rgba(237, 241, 242, 0.8);
+    color: rgb(29, 38, 42);
 }
 
 /* specify the minimum height of form elements */
@@ -639,7 +639,7 @@ textarea {
 html {
     background-color: #fff;
     box-sizing: border-box;
-    color: rgb(19, 24, 27);
+    color: rgb(29, 38, 42);
     cursor: default;
     font: 100%/1.5 -apple-system,
           BlinkMacSystemFont,
@@ -735,20 +735,23 @@ iframe[src*="google.com/maps"] {
 \*------------------------------------*/
 
 a, .link {
-    color: #678695;
+    color: rgb(0, 110, 153);
     text-decoration: none;
-    transition-duration: 0.3s;
+    transition-duration: 0.1s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: all;
+    transition-property: color;
     border-radius: 0.5px;
+    box-shadow: inset 0 -1px 0 0 rgba(192, 205, 211, 0.2);
 }
 
 a:hover, .link:hover {
-    box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.2);
+    color: rgb(0, 164, 230);
+    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.2);
 }
 
 a:active, a:focus, .link:active, .link:focus {
-    box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.4);
+    color: rgb(0, 164, 230);
+    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.4);
 }
 
 a:before, a:after {
@@ -770,11 +773,6 @@ a:after {
     margin-left: 0.2em;
 }
 
-a[class] {
-    box-shadow: none;
-    text-decoration: none;
-}
-
 .entry-title > a {
     width: 100%;
     display: -webkit-inline-flex;
@@ -784,6 +782,23 @@ a[class] {
     -ms-flex-align: center;
     align-items: center;
     padding: 0.25rem;
+}
+
+[class*="u-bg-1"] a, [class*="u-bg-2"] a {
+    opacity: 0.75;
+    color: inherit;
+    transition-property: opacity;
+}
+
+[class*="u-bg-1"] a:hover, [class*="u-bg-1"] a:active, [class*="u-bg-1"] a:focus,
+[class*="u-bg-2"] a:hover, [class*="u-bg-2"] a:active, [class*="u-bg-2"] a:focus {
+    opacity: 1;
+}
+
+a[class] {
+    box-shadow: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* #TYPOGRAPHY
@@ -961,7 +976,7 @@ th {
 
 td {
     vertical-align: middle;
-    border-bottom: 1px solid rgb(243, 245, 247);
+    border-bottom: 1px solid rgb(237, 241, 242);
 }
 
 td > ul {
@@ -1032,7 +1047,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
     outline: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    border-color: #0074d9;
+    border-color: rgb(0, 164, 230);
 }
 
 legend {
@@ -1091,7 +1106,7 @@ input[type=search] {
 }
 
 input[value=Other]:not(:focus) {
-    color: rgba(19, 24, 27, 0.5);
+    color: rgba(29, 38, 42, 0.5);
 }
 
 img {
@@ -1445,7 +1460,7 @@ input[type="submit"] {
 a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     color: rgb(0, 63, 117);
     border-color: currentColor;
-    background-color: rgba(243, 245, 247, 0.3);
+    background-color: rgba(237, 241, 242, 0.3);
     box-shadow: inset 0 0 0 20rem transparent;
 }
 
@@ -1656,7 +1671,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(19, 24, 27, 0.6);
+    background: rgba(29, 38, 42, 0.6);
     opacity: 0;
     will-change: opacity;
     transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -1838,7 +1853,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-link {
-    color: #0074d9;
+    color: rgb(0, 164, 230);
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -1875,7 +1890,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-text-color {
-    color: rgb(19, 24, 27);
+    color: rgb(29, 38, 42);
 }
 
 .u-text-black {
@@ -1895,7 +1910,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-text-muted {
-    color: rgba(19, 24, 27, 0.6);
+    color: rgba(29, 38, 42, 0.6);
 }
 
 .u-text-1 {
@@ -1961,39 +1976,39 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-bg-frost-1 {
-    background-color: rgba(243, 245, 247, 0.15);
+    background-color: rgba(237, 241, 242, 0.15);
 }
 
 .u-bg-frost-2 {
-    background-color: rgba(243, 245, 247, 0.3);
+    background-color: rgba(237, 241, 242, 0.3);
 }
 
 .u-bg-frost-3 {
-    background-color: rgba(243, 245, 247, 0.6);
+    background-color: rgba(237, 241, 242, 0.6);
 }
 
 .u-bg-frost-4 {
-    background-color: rgba(243, 245, 247, 0.9);
+    background-color: rgba(237, 241, 242, 0.9);
 }
 
 .u-bg-tint-1 {
-    background-color: rgba(19, 24, 27, 0.15);
+    background-color: rgba(29, 38, 42, 0.15);
 }
 
 .u-bg-tint-2 {
-    background-color: rgba(19, 24, 27, 0.3);
+    background-color: rgba(29, 38, 42, 0.3);
 }
 
 .u-bg-tint-3 {
-    background-color: rgba(19, 24, 27, 0.6);
+    background-color: rgba(29, 38, 42, 0.6);
 }
 
 .u-bg-tint-4 {
-    background-color: rgba(19, 24, 27, 0.9);
+    background-color: rgba(29, 38, 42, 0.9);
 }
 
 .u-bg-mask {
-    background-color: rgba(19, 24, 27, 0.6);
+    background-color: rgba(29, 38, 42, 0.6);
 }
 
 .u-bg-1-glass {
@@ -2021,11 +2036,11 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-hover-frost:hover {
-    background-color: rgba(243, 245, 247, 0.3);
+    background-color: rgba(237, 241, 242, 0.3);
 }
 
 .u-hover-tint:hover {
-    background-color: rgba(19, 24, 27, 0.3);
+    background-color: rgba(29, 38, 42, 0.3);
 }
 
 /* Fill Colors */
@@ -2061,7 +2076,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-opacity1 {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .u-fit {
@@ -3219,11 +3234,11 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-frosted-image {
-    color: rgb(19, 24, 27);
+    color: rgb(29, 38, 42);
 }
 
 .u-frosted-image:before {
-    background-color: rgba(243, 245, 247, 0.6);
+    background-color: rgba(237, 241, 242, 0.6);
 }
 
 .u-tinted-image {
@@ -3231,7 +3246,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-tinted-image:before {
-    background-color: rgba(19, 24, 27, 0.6);
+    background-color: rgba(29, 38, 42, 0.6);
 }
 
 .u-grad-overlay {
@@ -3404,7 +3419,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 }
 
 .u-text-shadow {
-    text-shadow: 1px 1px 5px rgba(19, 24, 27, 0.6);
+    text-shadow: 1px 1px 5px rgba(29, 38, 42, 0.6);
 }
 
 .u-text-left {
