@@ -1002,12 +1002,11 @@ form {
  select,
 textarea {
     max-width: 100%;
-    margin-bottom: 16px;
     border-radius: 0.2rem !important;
     //line-height: 1.5;
     padding: 4px 10px !important;
     border-width: 0 !important;
-    margin: 0;
+    margin: 0 0 16px;
     vertical-align: baseline;
     font-size: inherit;
     font-family: inherit;
