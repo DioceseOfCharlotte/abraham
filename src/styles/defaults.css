@@ -84,34 +84,39 @@
 	--opacity: 0.75;
 
 	/* Cool */
-	--aqua:  #7FDBFF;
-	--blue:  #0074D9;
-	--navy:  #001F3F;
-	--teal:  #39CCCC;
-	--green: #2ECC40;
-	--olive: #3D9970;
-	--lime:  #01FF70;
+	--aqua: #7fdbff;
+	--blue: #0074d9;
+	--navy: #001f3f;
+	--teal: #39cccc;
+	--green: #2ecc40;
+	--olive: #3d9970;
+	--lime: #01ff70;
 
 	/* Warm */
-	--yellow:  #FFDC00;
-	--orange:  #FF851B;
-	--red:     #FF4136;
-	--fuchsia: #F012BE;
-	--purple:  #B10DC9;
-	--maroon:  #85144B;
+	--yellow: #ffdc00;
+	--orange: #ff851b;
+	--red: #ff4136;
+	--fuchsia: #f012be;
+	--purple: #b10dc9;
+	--maroon: #85144b;
 
-	/* Gray */
-	--white: #FFFFFF;
+	/* Grey */
+	--white: #fff;
 	--silver: #edeff3;
-	--grey: #AAAAAA;
+	--grey: #aaa;
 	--blue-grey: #678695;
 	--grey-nuetral: #90a4ae;
-	--black: #111111;
+	--black: #111;
 
 	--color-1: var(--blue);
+	--color-1-light: color(var(--color-1) lightness(+20%));
 	--color-1-dark: color(var(--color-1) lightness(-20%));
 
-	--color-links: #265C83;
+	--color-2: var(--olive);
+	--color-2-light: color(var(--color-2) lightness(+20%));
+	--color-2-dark: color(var(--color-2) lightness(-20%));
+
+	--color-links: #265c83;
 	--color-links-hover: var(--blue);
 
 	--color-grey-ui: color(var(--blue-grey) lightness(+30%));

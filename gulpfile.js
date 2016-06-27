@@ -50,7 +50,7 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-var PRECSS_PLUGINS = [
+var POSTCSS_PLUGINS = [
 	atImport,
 	pcMixins,
 	pcProperties,
@@ -62,11 +62,6 @@ var PRECSS_PLUGINS = [
 	pcSvg({
 		path: './images/icons'
 	}),
-	pcNoDups
-];
-
-var POSTCSS_PLUGINS = [
-	atImport,
 	autoPrefixer({
 		browsers: AUTOPREFIXER_BROWSERS
 	}),
@@ -133,43 +128,20 @@ gulp.task('images', function() {
 });
 
 // Copy from node-modules
-gulp.task('venders', function () {
+gulp.task('vendors', function () {
   gulp.src([
   	'node_modules/normalize.css/normalize.css'
   	])
-    .pipe(gulp.dest('src/styles/postCSS/'));
-});
-
-// Compile and Automatically Prefix Stylesheets (production)
-gulp.task('preset', function() {
-	gulp.src('src/styles/postCSS/preset.css')
-		.pipe(postcss(PRECSS_PLUGINS, {
-			syntax: syntax
-		}))
-		.pipe($.concat('_preset.scss'))
-		.pipe(gulp.dest('src/styles/'))
-});
-
-gulp.task('presass', function() {
-	gulp.src('src/styles/postCSS/index.css')
-		.pipe($.if('*.css', postcss(PRECSS_PLUGINS, {
-			syntax: syntax
-		})))
-		.pipe($.concat('_postcss.scss'))
-		.pipe(gulp.dest('src/styles/'))
+    .pipe(gulp.dest('src/styles'));
 });
 
 gulp.task('styles', function() {
-	gulp.src('src/styles/**/*.scss')
+	gulp.src('src/styles/index.css')
 		.pipe(sourcemaps.init())
 
-	.pipe($.sass({
-			precision: 10,
-			onError: console.error.bind(console, 'Sass error:')
-		}))
-		.pipe(gulp.dest('src/styles/oldie/'))
-		.pipe($.if('*.css', $.concat('style.css')))
 		.pipe(postcss(POSTCSS_PLUGINS))
+		.pipe(gulp.dest('.tmp'))
+		.pipe($.if('*.css', $.concat('style.css')))
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', cssnano()))
 		.pipe($.concat('style.min.css'))
@@ -181,7 +153,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('oldie', function() {
-	gulp.src('src/styles/oldie/ie-compat.css')
+	gulp.src('.tmp/index.css')
 		.pipe(postcss(POSTCSS_IE))
 		.pipe($.concat('oldie.css'))
 		.pipe(gulp.dest('css'))
@@ -226,5 +198,5 @@ gulp.task('serve', ['scripts', 'styles'], function() {
 
 // Build production files, the default task
 gulp.task('default', function(cb) {
-	runSequence('venders', 'images', 'presass', 'styles', 'oldie', 'scripts', cb);
+	runSequence('vendors', 'images', 'styles', 'oldie', 'scripts', cb);
 });

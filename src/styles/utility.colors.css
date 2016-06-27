@@ -1,0 +1,203 @@
+/* #COLORS
+\*------------------ */
+
+/* Text Colors */
+.u-color-inherit,
+.u-color-inherit * {
+	color: inherit;
+}
+
+.u-currentcolor_a a {
+	color: currentColor;
+}
+
+.u-currentcolor {
+	color: currentColor;
+}
+
+.u-text-color {
+	color: var(--root-color);
+}
+
+.u-text-black {
+	color: var(--black);
+}
+
+.u-text-grey {
+	color: var(--grey-nuetral);
+}
+
+.u-text-silver {
+	color: var(--silver);
+}
+
+.u-text-white {
+	color: var(--white);
+}
+
+.u-text-muted {
+	color: var(--color-tint-3);
+}
+
+.u-text-1 {
+	color: var(--color-1);
+}
+
+.u-text-2 {
+	color: var(--color-2);
+}
+
+.u-text-1-dark {
+	color: var(--color-1-dark);
+}
+
+.u-text-2-dark {
+	color: var(--color-2-dark);
+}
+
+/* Background Colors */
+.u-bg-1 {
+	background-color: var(--color-1);
+}
+
+.u-bg-2 {
+	background-color: var(--color-2);
+}
+
+.u-bg-1-light {
+	background-color: var(--color-1-light);
+}
+
+.u-bg-2-light {
+	background-color: var(--color-2-light);
+}
+
+.u-bg-1-dark {
+	background-color: var(--color-1-dark);
+}
+
+.u-bg-2-dark {
+	background-color: var(--color-2-dark);
+}
+
+.u-bg-black {
+	background-color: var(--black);
+}
+
+.u-bg-grey {
+	background-color: var(--grey);
+}
+
+.u-bg-silver {
+	background-color: var(--silver);
+}
+
+.u-bg-white {
+	background-color: var(--white);
+}
+
+.u-bg-transparent {
+	background-color: transparent;
+}
+
+.u-bg-frost-1 {
+	background-color: var(--color-frost-1);
+}
+
+.u-bg-frost-2 {
+	background-color: var(--color-frost-2);
+}
+
+.u-bg-frost-3 {
+	background-color: var(--color-frost-3);
+}
+
+.u-bg-frost-4 {
+	background-color: var(--color-frost-4);
+}
+
+.u-bg-tint-1 {
+	background-color: var(--color-tint-1);
+}
+
+.u-bg-tint-2 {
+	background-color: var(--color-tint-2);
+}
+
+.u-bg-tint-3 {
+	background-color: var(--color-tint-3);
+}
+
+.u-bg-tint-4 {
+	background-color: var(--color-tint-4);
+}
+
+.u-bg-mask {
+	background-color: var(--color-tint-3);
+}
+
+.u-bg-1-glass {
+	background-color: color(var(--color-1) a(0.96));
+}
+
+.u-bg-2-glass {
+	background-color: color(var(--color-2) a(0.96));
+}
+
+.u-bg-1-glass-light {
+	background-color: color(var(--color-1-light) a(0.96));
+}
+
+.u-bg-2-glass-light {
+	background-color: color(var(--color-2-light) a(0.96));
+}
+
+.u-bg-1-glass-dark {
+	background-color: color(var(--color-1-dark) a(0.96));
+}
+
+.u-bg-2-glass-dark {
+	background-color: color(var(--color-2-dark) a(0.96));
+}
+
+.u-hover-frost:hover {
+	background-color: var(--color-frost-2);
+}
+
+.u-hover-tint:hover {
+	background-color: var(--color-tint-2);
+}
+
+/* Fill Colors */
+.u-fill-1 {
+	fill: var(--color-1);
+}
+
+.u-fill-2 {
+	fill: var(--color-2);
+}
+
+.u-fill-1-light {
+	background-color: var(--color-1-light);
+}
+
+.u-fill-2-light {
+	background-color: var(--color-2-light);
+}
+
+.u-fill-1-dark {
+	background-color: var(--color-1-dark);
+}
+
+.u-fill-2-dark {
+	background-color: var(--color-2-dark);
+}
+
+/* Opacity */
+.u-opacity {
+	opacity: var(--opacity);
+}
+
+.u-opacity1 {
+	opacity: 1;
+}
