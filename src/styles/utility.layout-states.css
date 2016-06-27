@@ -217,3 +217,14 @@
 .shadow-hover:hover:after {
 	opacity: 1;
 }
+
+html .opacity-hover {
+	opacity: 1;
+	transition-duration: var(--transition-time);
+	transition-timing-function: var(--animation-curve);
+	transition-property: opacity;
+}
+
+html .opacity-hover:hover {
+	opacity: var(--opacity);
+}

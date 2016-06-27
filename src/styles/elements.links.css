@@ -1,24 +1,25 @@
 /* #LINKS
-\*------------------------------------*/
+\*------------------------------------ */
 
 a,
 .link {
 	color: var(--color-links);
 	text-decoration: none;
-	transition-duration: 0.1s;
+	transition-duration: 0.2s;
 	transition-timing-function: var(--animation-curve);
-	transition-property: color;
+	transition-property: all;
 	border-radius: 0.5px;
-	box-shadow: inset 0 -1px 0 0 color(var(--color-grey-ui) a(20%));
+	box-shadow: inset 0 -1px 0 0 color(var(--color-grey-ui) a(40%));
 
 	&:hover {
 		color: var(--color-links-hover);
 		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(20%));
+		transition-duration: var(--transition-time);
 	}
 
 	&:active,
 	&:focus {
-		color: var(--color-links-hover);
+		color: var(--color-links-active);
 		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(40%));
 	}
 }
@@ -50,10 +51,10 @@ a:after {
 	padding: 0.25rem;
 }
 
-[class*="u-bg-1"] a, [class*="u-bg-2"] a {
+[class*="u-bg-1"] a,
+[class*="u-bg-2"] a {
 	opacity: var(--opacity);
 	color: inherit;
-	transition-property: opacity;
 
 	&:hover,
 	&:active,
@@ -65,5 +66,13 @@ a:after {
 a[class] {
 	box-shadow: none;
 	color: inherit;
+	text-decoration: none;
+}
+
+li > a,
+h1 > a,
+h2 > a,
+h3 > a {
+	box-shadow: none;
 	text-decoration: none;
 }
