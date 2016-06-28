@@ -48,8 +48,8 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER.
-			'header'              		   => 'u-abs is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-wrap u-flex-center',
-			'branding'            		   => '',
+			'header'              		   => 'u-abs u-px1 is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-wrap u-flex-center',
+			'branding'            		   => 'u-flexed-auto u-text-center u-mln1',
 			'site_title'          		   => 'u-text-display u-color-inherit u-m0',
 			'site_description'        	   => 'u-text-display u-m0 u-text-3',
 			// CONTENT.

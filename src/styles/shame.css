@@ -1,0 +1,15 @@
+
+#menu-primary {
+	display: none;
+}
+
+@media (--lg) {
+
+	#menu-primary {
+		display: inline-block;
+	}
+
+	#nav_menu-5 {
+		display: none;
+	}
+}

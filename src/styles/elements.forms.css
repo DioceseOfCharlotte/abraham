@@ -59,7 +59,6 @@ select {
 	background-size: 1em;
 	background-position: 98% 50%;
 	padding-right: 1.5em;
-	vertical-align: middle;
 }
 
 input[type=search] {

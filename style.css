@@ -634,7 +634,6 @@ textarea {
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
-    vertical-align: middle;
 }
 
 /* specify the root styles of the document */
@@ -1085,7 +1084,6 @@ select {
     background-size: 1em;
     background-position: 98% 50%;
     padding-right: 1.5em;
-    vertical-align: middle;
 }
 
 input[type=search] {
@@ -1464,14 +1462,13 @@ input[type="submit"] {
 a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     color: rgb(0, 63, 117);
     background-color: rgba(237, 241, 242, 0.3);
-    box-shadow: inset 0 0 0 1px rgb(0, 63, 117);
+    box-shadow: inset 0 0 0 2px rgb(0, 63, 117);
 }
 
 .btn-hollow:hover, input[type="reset"]:hover, input[type="button"]:hover,
 .btn-hollow:focus, input[type="button"]:focus, input[type="reset"]:focus,
 .btn-hollow:active, input[type="button"]:active, input[type="reset"]:active {
     color: #fff;
-    border-color: #90a4ae;
     box-shadow: inset 0 0 0 20rem rgb(0, 63, 117);
 }
 
@@ -1499,12 +1496,10 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 }
 
 .btn-sm {
-    padding: 0.25rem 0.5rem;
-    min-height: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .btn-lg {
-    padding: 1rem 1.25rem;
     font-size: 1.1rem;
 }
 
@@ -1588,74 +1583,22 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     width: 100%;
 }
 
-.menu-primary ul {
-    display: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-.menu-primary ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 1.5em;
-    left: -999em;
-    z-index: 99999;
-}
-
-.menu-primary ul ul ul {
-    left: -999em;
-    top: 0;
-}
-
-.menu-primary ul ul li:hover > ul, .menu-primary ul ul li.focus > ul {
-    left: 100%;
-}
-
-.menu-primary ul ul a {
-    width: 200px;
-}
-
-.menu-primary ul li:hover > ul, .menu-primary ul li.focus > ul {
-    left: auto;
-}
-
 .home #header.is-top .menu-main-container, .home #header.is-top > .menu-primary {
     background-color: transparent;
 }
 
-.menu-primary .v-icon {
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
+#menu-primary .menu-main-container {
+    background-color: transparent;
 }
 
-.menu-primary.toggled .v-icon {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+.menu-toggle {
+    display: none;
 }
 
-/* Small menu. */
-
-.menu-toggle, .menu-primary.toggled ul {
-    display: block;
-}
-
-@media (min-width: 48em) {
-    #menu-primary .menu-main-container {
-        background-color: transparent;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .menu-primary ul {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
+.menu-primary ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .off-canvas {
@@ -1727,18 +1670,18 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     -webkit-overflow-scrolling: touch;
 }
 
-.off-canvas__content > .widget_nav_menu {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .off-canvas__content .widget-title {
     color: #90a4ae;
 }
 
 .off-canvas__content .widget {
     background-color: transparent;
-    padding: 0;
+    padding: 0 1rem;
+}
+
+.off-canvas__content .widget_nav_menu {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .off-canvas__content .menu__link {
@@ -1748,22 +1691,6 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.off-canvas__content .widget_search {
-    padding: 0 !important;
-    margin-top: -1rem;
-}
-
-.off-canvas__content .search-field {
-    width: 100%;
-    margin-bottom: 0;
-    border-radius: 0;
-    min-height: 3rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border-left: 0;
-    border-right: 0;
 }
 
 .animating {
@@ -3753,6 +3680,20 @@ html .opacity-hover:hover {
 
 .u-shadow0 {
     box-shadow: none !important;
+}
+
+#menu-primary {
+    display: none;
+}
+
+@media (min-width: 62em) {
+    #menu-primary {
+        display: inline-block;
+    }
+
+    #nav_menu-5 {
+        display: none;
+    }
 }
 
 /* Custom media queries */

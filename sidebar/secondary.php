@@ -14,12 +14,12 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 
 
 
-		<header class="off-canvas__header u-flex u-flex-wrap u-bg-2 u-shadow1">
-			<div class="off-canvas__title u-1of1 u-flex u-flex-center u-px1 u-py2">
+		<header class="off-canvas__header u-flex u-flex-wrap u-bg-2-light u-shadow1">
+			<div class="off-canvas__title u-1of1 u-flex u-bg-2 u-flex-center u-p1 u-mb1">
 				<button class="js-menu-hide off-canvas__hide u-z1 btn-round u-h3 u-inline-flex">
 					<?php abe_do_svg( 'arrow-left', 'sm' ); ?>
 				</button>
-				<h2 class="u-h3 u-m0 u-text-display u-inline-block u-flexed-auto u-text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+				<h2 class="u-h4 u-m0 u-text-display u-inline-block u-flexed-auto u-text-center"><a class="opacity-hover" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
 			</div>
 			<?php get_search_form(); ?>
 		</header>
