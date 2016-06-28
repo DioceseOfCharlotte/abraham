@@ -1678,7 +1678,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 }
 
 .off-canvas__container {
-    width: 90%;
+    width: 80%;
     max-width: 400px;
     -webkit-transform: translateX(-102%);
     transform: translateX(-102%);
