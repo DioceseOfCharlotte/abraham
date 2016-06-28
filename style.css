@@ -3178,6 +3178,16 @@ body:not(.search) .trail-end > span, .search .archive-title {
     }
 }
 
+.u-h0 {
+    font-size: 2.2rem;
+}
+
+@media (min-width: 48em) {
+    .u-h0 {
+        font-size: 4.4rem;
+    }
+}
+
 .u-lh-1 {
     line-height: 1;
 }

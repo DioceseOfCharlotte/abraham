@@ -78,6 +78,14 @@
 	}
 }
 
+.u-h0 {
+	font-size: var(--h0-mobile);
+
+	@media (--md) {
+		font-size: var(--h0);
+	}
+}
+
 .u-lh-1 {
 	line-height: 1;
 }
