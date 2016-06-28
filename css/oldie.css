@@ -1659,6 +1659,10 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 
 .off-canvas__content .menu__link {
     padding-left: 10%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .off-canvas__content .widget_search {
