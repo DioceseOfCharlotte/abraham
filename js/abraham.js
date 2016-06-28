@@ -160,10 +160,30 @@ var SideNav = function () {
     this.currentX = 0;
     this.touchingSideNav = false;
 
+    this.supportsPassive = undefined;
     this.addEventListeners();
   }
 
+  // apply passive event listening if it's supported
+
+
   _createClass(SideNav, [{
+    key: 'applyPassive',
+    value: function applyPassive() {
+      if (this.supportsPassive !== undefined) {
+        return this.supportsPassive ? { passive: true } : false;
+      }
+      // feature detect
+      var isSupported = false;
+      try {
+        document.addEventListener('test', null, { get passive() {
+            isSupported = true;
+          } });
+      } catch (e) {}
+      this.supportsPassive = isSupported;
+      return this.applyPassive();
+    }
+  }, {
     key: 'addEventListeners',
     value: function addEventListeners() {
       this.showButtonEl.addEventListener('click', this.showSideNav);
@@ -171,8 +191,8 @@ var SideNav = function () {
       this.sideNavEl.addEventListener('click', this.hideSideNav);
       this.sideNavContainerEl.addEventListener('click', this.blockClicks);
 
-      this.sideNavEl.addEventListener('touchstart', this.onTouchStart);
-      this.sideNavEl.addEventListener('touchmove', this.onTouchMove);
+      this.sideNavEl.addEventListener('touchstart', this.onTouchStart, this.applyPassive());
+      this.sideNavEl.addEventListener('touchmove', this.onTouchMove, this.applyPassive());
       this.sideNavEl.addEventListener('touchend', this.onTouchEnd);
     }
   }, {

@@ -38,7 +38,24 @@ class SideNav {
     this.currentX = 0;
     this.touchingSideNav = false;
 
+	this.supportsPassive = undefined;
     this.addEventListeners();
+  }
+
+  // apply passive event listening if it's supported
+  applyPassive () {
+    if (this.supportsPassive !== undefined) {
+      return this.supportsPassive ? {passive: true} : false;
+    }
+    // feature detect
+    let isSupported = false;
+    try {
+      document.addEventListener('test', null, {get passive () {
+        isSupported = true;
+      }});
+    } catch (e) { }
+    this.supportsPassive = isSupported;
+    return this.applyPassive();
   }
 
   addEventListeners () {
@@ -47,8 +64,8 @@ class SideNav {
     this.sideNavEl.addEventListener('click', this.hideSideNav);
     this.sideNavContainerEl.addEventListener('click', this.blockClicks);
 
-	this.sideNavEl.addEventListener('touchstart', this.onTouchStart);
-    this.sideNavEl.addEventListener('touchmove', this.onTouchMove);
+	this.sideNavEl.addEventListener('touchstart', this.onTouchStart, this.applyPassive());
+    this.sideNavEl.addEventListener('touchmove', this.onTouchMove, this.applyPassive());
     this.sideNavEl.addEventListener('touchend', this.onTouchEnd);
   }
 
