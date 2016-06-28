@@ -721,18 +721,18 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
     border-radius: 0.5px;
-    box-shadow: inset 0 -1px 0 0 rgba(192, 205, 211, 0.4);
+    box-shadow: inset 0 -1px 0 0 rgba(162, 181, 190, 0.4);
 }
 
 a:hover {
     color: rgb(0, 157, 219);
-    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.2);
+    box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
     transition-duration: 0.3s;
 }
 
 a:active, a:focus {
     color: rgb(0, 128, 179);
-    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.4);
+    box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.4);
 }
 
 a:before, a:after {
@@ -862,7 +862,8 @@ input[type="submit"] {
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
-    padding: 4px 10px;
+    padding: 0.5em 0.75em;
+    line-height: 1.5;
     border-width: 0;
     border-radius: 0.2rem;
     font-size: inherit;
@@ -937,7 +938,7 @@ th {
     text-align: left;
     font-weight: 700;
     vertical-align: bottom;
-    border-bottom: 1px solid rgb(192, 205, 211);
+    border-bottom: 1px solid rgb(162, 181, 190);
 }
 
 td {
@@ -998,13 +999,14 @@ form {
 textarea {
     max-width: 100%;
     border-radius: 0.2rem !important;
-    padding: 4px 10px !important;
+    padding: 0.5em 0.625em !important;
     border-width: 0 !important;
+    line-height: 1.5;
     margin: 0;
-    vertical-align: baseline;
+    vertical-align: baseline !important;
     font-size: inherit;
     font-family: inherit;
-    box-shadow: inset 0 0 0 1px rgba(192, 205, 211, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(162, 181, 190, 0.5);
     transition-duration: 0.1s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, background-color, box-shadow;
@@ -1341,7 +1343,7 @@ a[href*="tel:"], a[href*="mailto:"] {
     margin-right: 16px;
     font-size: 16px;
     line-height: 1;
-    background-color: rgb(192, 205, 211);
+    background-color: rgb(162, 181, 190);
     color: #fff;
     font-weight: bold;
     padding: 5px 10px;
@@ -1359,7 +1361,7 @@ a[href*="tel:"], a[href*="mailto:"] {
     display: block;
     padding: 12px 20px;
     background-color: #fff;
-    border-bottom: 1px solid rgb(192, 205, 211);
+    border-bottom: 1px solid rgb(162, 181, 190);
 }
 
 .u-list-group > li:last-child {
@@ -1664,7 +1666,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 }
 
 .off-canvas__content .widget-title {
-    color: rgb(29, 38, 42);
+    color: #90a4ae;
 }
 
 .off-canvas__content .widget {
@@ -2684,7 +2686,7 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 
 .u-table-light th, .u-table-light td {
     border-bottom-width: 1px;
-    border-bottom-color: rgb(192, 205, 211);
+    border-bottom-color: rgb(162, 181, 190);
 }
 
 .u-table-light tr:last-child td {
@@ -3357,7 +3359,7 @@ html .opacity-hover:hover {
 
 .u-border {
     border-style: solid;
-    border-color: rgb(192, 205, 211);
+    border-color: rgb(162, 181, 190);
 }
 
 .u-border-t {

@@ -9,7 +9,8 @@ input[type="submit"] {
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;
-	padding: 0.25rem 0.625rem;
+	padding: 0.5em 0.75em;
+	line-height: 1.5;
 	border-width: 0;
 	border-radius: var(--border-radius);
 	font-size: inherit;
