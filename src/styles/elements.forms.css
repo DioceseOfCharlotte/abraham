@@ -13,7 +13,7 @@ textarea {
 	border-radius: var(--border-radius) !important;
 	padding: 0.25rem 0.625rem !important;
 	border-width: 0 !important;
-	margin: 0 0 var(--space-2);
+	margin: 0;
 	vertical-align: baseline;
 	font-size: inherit;
 	font-family: inherit;

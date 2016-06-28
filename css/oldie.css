@@ -896,7 +896,7 @@ input[type="submit"].is-active {
 ul, ol, dl {
     list-style-type: none;
     margin-bottom: 16px;
-    line-height: 2;
+    line-height: 1.6;
 }
 
 ol ol, ul ul, ol ul, ul ol {
@@ -1000,7 +1000,7 @@ textarea {
     border-radius: 0.2rem !important;
     padding: 4px 10px !important;
     border-width: 0 !important;
-    margin: 0 0 16px;
+    margin: 0;
     vertical-align: baseline;
     font-size: inherit;
     font-family: inherit;
@@ -1642,6 +1642,16 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
         transform: none;
 }
 
+.off-canvas__header .search-form {
+    margin: 0 8px;
+    width: 100%;
+}
+
+.off-canvas__header .search-field {
+    width: 100%;
+    border-radius: 0;
+}
+
 .off-canvas__content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -1654,11 +1664,17 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 }
 
 .off-canvas__content .widget-title {
-    padding-left: 5%;
+    color: rgb(29, 38, 42);
+}
+
+.off-canvas__content .widget {
+    background-color: transparent;
+    padding: 0;
 }
 
 .off-canvas__content .menu__link {
-    padding-left: 10%;
+    display: block;
+    padding: 0.7em 16px;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;

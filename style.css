@@ -740,18 +740,18 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: all;
     border-radius: 0.5px;
-    box-shadow: inset 0 -1px 0 0 rgba(192, 205, 211, 0.4);
+    box-shadow: inset 0 -1px 0 0 rgba(162, 181, 190, 0.4);
 }
 
 a:hover {
     color: rgb(0, 157, 219);
-    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.2);
+    box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
     transition-duration: 0.3s;
 }
 
 a:active, a:focus {
     color: rgb(0, 128, 179);
-    box-shadow: inset 0 0 0 20rem rgba(192, 205, 211, 0.4);
+    box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.4);
 }
 
 a::before, a::after {
@@ -931,7 +931,7 @@ input[type="submit"].is-active {
 ul, ol, dl {
     list-style-type: none;
     margin-bottom: 1rem;
-    line-height: 2;
+    line-height: 1.6;
 }
 
 ol ol, ul ul, ol ul, ul ol {
@@ -972,7 +972,7 @@ th {
     text-align: left;
     font-weight: 700;
     vertical-align: bottom;
-    border-bottom: 1px solid rgb(192, 205, 211);
+    border-bottom: 1px solid rgb(162, 181, 190);
 }
 
 td {
@@ -1035,11 +1035,11 @@ textarea {
     border-radius: 0.2rem !important;
     padding: 0.25rem 0.625rem !important;
     border-width: 0 !important;
-    margin: 0 0 1rem;
+    margin: 0;
     vertical-align: baseline;
     font-size: inherit;
     font-family: inherit;
-    box-shadow: inset 0 0 0 1px rgba(192, 205, 211, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(162, 181, 190, 0.5);
     transition-duration: 0.1s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, background-color, box-shadow;
@@ -1391,7 +1391,7 @@ a[href*="tel:"], a[href*="mailto:"] {
     margin-right: 1rem;
     font-size: 1rem;
     line-height: 1;
-    background-color: rgb(192, 205, 211);
+    background-color: rgb(162, 181, 190);
     color: #fff;
     font-weight: bold;
     padding: 5px 10px;
@@ -1409,7 +1409,7 @@ a[href*="tel:"], a[href*="mailto:"] {
     display: block;
     padding: 0.75rem 1.25rem;
     background-color: #fff;
-    border-bottom: 1px solid rgb(192, 205, 211);
+    border-bottom: 1px solid rgb(162, 181, 190);
 }
 
 .u-list-group > li:last-child {
@@ -1708,6 +1708,16 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     transform: none;
 }
 
+.off-canvas__header .search-form {
+    margin: 0 0.5rem;
+    width: 100%;
+}
+
+.off-canvas__header .search-field {
+    width: 100%;
+    border-radius: 0;
+}
+
 .off-canvas__content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -1720,11 +1730,17 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 }
 
 .off-canvas__content .widget-title {
-    padding-left: 5%;
+    color: #90a4ae;
+}
+
+.off-canvas__content .widget {
+    background-color: transparent;
+    padding: 0;
 }
 
 .off-canvas__content .menu__link {
-    padding-left: 10%;
+    display: block;
+    padding: 0.7em 1rem;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2767,7 +2783,7 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 .u-table-light th, .u-table-light td {
     border-bottom-width: 1px;
-    border-bottom-color: rgb(192, 205, 211);
+    border-bottom-color: rgb(162, 181, 190);
 }
 
 .u-table-light tr:last-child td {
@@ -3552,7 +3568,7 @@ html .opacity-hover:hover {
 
 .u-border {
     border-style: solid;
-    border-color: rgb(192, 205, 211);
+    border-color: rgb(162, 181, 190);
 }
 
 .u-border-t {

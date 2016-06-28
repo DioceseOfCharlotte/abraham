@@ -44,6 +44,18 @@
 	transform: none;
 }
 
+.off-canvas__header {
+	.search-form {
+		margin: 0 0.5rem;
+		width: 100%;
+	}
+
+	.search-field {
+		width: 100%;
+		border-radius: 0;
+	}
+}
+
 .off-canvas__content {
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -58,11 +70,18 @@
 .off-canvas__content {
 
 	.widget-title {
-		padding-left: 5%;
+		color: var(--grey-nuetral);
+
+	}
+
+	.widget {
+		background-color: transparent;
+		padding: 0;
 	}
 
 	.menu__link {
-		padding-left: 10%;
+		display: block;
+		padding: 0.7em 1rem;
 		max-width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
