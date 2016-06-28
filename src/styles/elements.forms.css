@@ -1,6 +1,7 @@
 /* -------------------------------------------------------------
 # Forms
 -------------------------------------------------------------- */
+
 form {
 	margin-bottom: var(--space-2);
 }
@@ -10,13 +11,12 @@ select,
 textarea {
 	max-width: 100%;
 	border-radius: var(--border-radius) !important;
-	//line-height: 1.5;
-    padding: 0.25rem 0.625rem !important;
-    border-width: 0 !important;
-    margin: 0 0 var(--space-2);
-    vertical-align: baseline;
-    font-size: inherit;
-    font-family: inherit;
+	padding: 0.25rem 0.625rem !important;
+	border-width: 0 !important;
+	margin: 0 0 var(--space-2);
+	vertical-align: baseline;
+	font-size: inherit;
+	font-family: inherit;
 	box-shadow: inset 0 0 0 1px color(var(--color-grey-ui) a(50%));
 	transition-duration: 0.1s;
 	transition-timing-function: var(--animation-curve);

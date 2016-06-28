@@ -43,14 +43,17 @@
 		background-color: transparent;
 	}
 }
+
 .menu-primary .v-icon {
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: transform;
 }
+
 .menu-primary.toggled .v-icon {
 	transform: rotate(180deg);
 }
+
 /* Small menu. */
 .menu-toggle,
 .menu-primary.toggled ul {

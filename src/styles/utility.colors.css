@@ -2,19 +2,6 @@
 \*------------------ */
 
 /* Text Colors */
-.u-color-inherit,
-.u-color-inherit * {
-	color: inherit;
-}
-
-.u-currentcolor_a a {
-	color: currentColor;
-}
-
-.u-currentcolor {
-	color: currentColor;
-}
-
 .u-text-color {
 	color: var(--root-color);
 }
@@ -191,13 +178,4 @@
 
 .u-fill-2-dark {
 	background-color: var(--color-2-dark);
-}
-
-/* Opacity */
-.u-opacity {
-	opacity: var(--opacity);
-}
-
-.u-opacity1 {
-	opacity: 1;
 }

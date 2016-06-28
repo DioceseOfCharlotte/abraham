@@ -18,7 +18,7 @@
 	li {
 		counter-increment: step-counter;
 
-		&:before {
+		&::before {
 			content: counter(step-counter);
 			margin-right: 1rem;
 			font-size: 1rem;
@@ -48,7 +48,7 @@
 			border-bottom: 0;
 		}
 
-		&:before {
+		&::before {
 			width: 1em;
 			height: 1em;
 			min-width: 1em;
@@ -59,10 +59,10 @@
 	}
 }
 
-.u-list-group.bullet-cross > li:before {
+.u-list-group.bullet-cross > li::before {
 	@mixin icon cross;
 }
 
-.u-list-group.bullet-heart > li:before {
+.u-list-group.bullet-heart > li::before {
 	@mixin icon heart;
 }

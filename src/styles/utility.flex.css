@@ -1,5 +1,5 @@
 /* #FLEXBOX
-\*------------------------------------*/
+\*------------------------------------ */
 
 .u-flex {
 	display: flex;
@@ -121,7 +121,7 @@
 	order: 99999;
 }
 
-/*// small*/
+/* small */
 @media (--sm) {
 
 	.u-flex-sm {
@@ -133,7 +133,7 @@
 	}
 }
 
-/*// medium*/
+/* medium */
 @media (--md) {
 
 	.u-flex-md {
@@ -145,7 +145,7 @@
 	}
 }
 
-/*// large*/
+/* large */
 @media (--lg) {
 
 	.u-flex-lg {

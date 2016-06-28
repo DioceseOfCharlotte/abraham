@@ -1,8 +1,7 @@
 /* #LINKS
 \*------------------------------------ */
 
-a,
-.link {
+a {
 	color: var(--color-links);
 	text-decoration: none;
 	transition-duration: 0.2s;
@@ -24,8 +23,8 @@ a,
 	}
 }
 
-a:before,
-a:after {
+a::before,
+a::after {
 	background-size: contain;
 	min-width: 1em;
 	line-height: 1;
@@ -34,12 +33,12 @@ a:after {
 	vertical-align: inherit;
 }
 
-a:before {
+a::before {
 	margin-right: 0.2em;
 	margin-left: 0.3em;
 }
 
-a:after {
+a::after {
 	margin-right: 0.3em;
 	margin-left: 0.2em;
 }

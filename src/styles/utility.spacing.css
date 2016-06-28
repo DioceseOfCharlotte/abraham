@@ -1,5 +1,5 @@
 /* #WHITE SPACE
-\*------------------------------------*/
+\*------------------------------------ */
 .u-m1 {
 	margin: var(--space-1);
 }
@@ -336,7 +336,7 @@
 	padding-top: 0;
 }
 
-@include md {
+@media (--md) {
 	.u-m2-md {
 		margin: var(--space-2);
 	}
@@ -481,7 +481,7 @@
 	}
 }
 
-@include lg {
+@media (--lg) {
 	.u-mx4-lg {
 		margin-right: var(--space-4);
 		margin-left: var(--space-4);

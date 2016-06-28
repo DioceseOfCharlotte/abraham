@@ -10,15 +10,10 @@
 	max-width: 50%;
 }
 
-/*.icon-xs {
-	font-size: 1rem;
-}
-*/
-
 .icon-sm {
 	line-height: 1;
-    margin: 0;
-    display: inline-flex;
+	margin: 0;
+	display: inline-flex;
 }
 
 .icon-md {
@@ -91,68 +86,67 @@
 
 .icon-edit {
 	background-size: contain;
-	@mixin icon edit, #36474f;
 
+	@mixin icon edit, #36474f;
 	width: 2em;
 	height: 2em;
 }
 
-.icon-info:before {
+.icon-info::before {
 	@mixin icon info;
 }
 
-.icon-heart:before {
+.icon-heart::before {
 	@mixin icon heart;
 }
 
-.icon-twitter:before,
-a[href*="twitter.com"]:before {
+.icon-twitter::before,
+a[href*="twitter.com"]::before {
 	@mixin icon twitter, #1DA1F2;
 }
 
-.icon-facebook:before,
-a[href*="facebook.com"]:before {
+.icon-facebook::before,
+a[href*="facebook.com"]::before {
 	@mixin icon facebook, #3B5998;
 }
 
-.icon-youtube:before,
-a[href*="youtube.com"]:before,
-a[href*="youtu.be"]:before {
+.icon-youtube::before,
+a[href*="youtube.com"]::before,
+a[href*="youtu.be"]::before {
 	@mixin icon youtube, #cd201f;
 }
 
-.icon-instagram:before {
+.icon-instagram::before {
 	@mixin icon instagram;
 }
 
-.icon-pdf:before,
-a[href*=".pdf"]:not(.btn):before {
+.icon-pdf::before,
+a[href*=".pdf"]:not(.btn)::before {
 	@mixin icon file-pdf;
 }
 
-.icon-map:before,
-a[href*="maps.google.com"]:before {
+.icon-map::before,
+a[href*="maps.google.com"]::before {
 	@mixin icon map_pin;
 }
 
-a[href*=".doc"]:not(.btn):before,
-a[href*=".docx"]:not(.btn):before {
+a[href*=".doc"]:not(.btn)::before,
+a[href*=".docx"]:not(.btn)::before {
 	@mixin icon file-word;
 }
 
-a[href*=".xls"]:not(.btn):before,
-a[href*=".xlsx"]:not(.btn):before {
+a[href*=".xls"]:not(.btn)::before,
+a[href*=".xlsx"]:not(.btn)::before {
 	@mixin icon file-excel;
 }
 
-a[href*="tel:"]:before {
+a[href*="tel:"]::before {
 	@mixin icon call;
 }
 
-a[href*="mailto:"]:before {
+a[href*="mailto:"]::before {
 	@mixin icon mail;
 }
-
 
 a[href*="twitter.com"],
 a[href*="facebook.com"],

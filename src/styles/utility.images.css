@@ -1,3 +1,6 @@
+/* #UTILITY LAYOUT
+\*------------------------------------ */
+
 .u-of-cover {
 	object-fit: cover;
 	font-family: 'object-fit: cover;'
@@ -52,8 +55,8 @@
 	}
 }
 
-.u-frosted-image:before,
-.u-tinted-image:before {
+.u-frosted-image::before,
+.u-tinted-image::before {
 	content: "";
 	height: 100%;
 	left: 0;
@@ -64,7 +67,7 @@
 
 .u-frosted-image {
 
-	&:before {
+	&::before {
 		background-color: var(--color-frost-3);
 	}
 	color: var(--root-color);
@@ -72,7 +75,7 @@
 
 .u-tinted-image {
 
-	&:before {
+	&::before {
 		background-color: var(--color-tint-3);
 	}
 	color: white;
@@ -80,7 +83,7 @@
 
 .u-grad-overlay {
 
-	&:after {
+	&::after {
 		background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
 		background: -o-linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
 		background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
@@ -94,16 +97,12 @@
 	color: white;
 }
 
-
-
-
 .o-crop {
 	position: relative;
 	display: block;
 	overflow: hidden;
 	width: 100%;
 }
-
 
 .o-crop--1x1 {
 	padding-top: 100%;

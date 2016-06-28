@@ -11,7 +11,7 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/m-e-h/abraham
 */
 
-@import "settings.icons.css";
+@import "settings.mixins.css";
 @import "normalize.css";
 @import "sanitized.css";
 @import "elements.page.css";
@@ -32,16 +32,14 @@ GitHub Theme URI: https://github.com/m-e-h/abraham
 @import "objects.off-canvas.css";
 @import "objects.animations";
 @import "components.breadcrumbs.css";
-@import "utility.links";
 @import "utility.colors";
 @import "utility.widths";
 @import "utility.spacing";
-@import "utility.helpers";
 @import "utility.tables";
 @import "utility.flex";
 @import "utility.images";
 @import "utility.typography";
 @import "utility.layout-states";
 @import "utility.borders";
-@import "utility.animations";
+@import "utility.helpers";
 @import "defaults.css";

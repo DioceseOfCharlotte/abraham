@@ -76,6 +76,7 @@
 .u-4of5 {
 	width: calc(80% - var(--gutter));
 }
+
 @media (--md) {
 	.u-1of1-md {
 		width: 100%;
@@ -136,6 +137,7 @@
 		width: auto;
 	}
 }
+
 @media (--lg) {
 	.u-1of1-lg {
 		width: 100%;
@@ -196,6 +198,7 @@
 		width: auto;
 	}
 }
+
 @media (--sm) {
 	.u-1of1-sm {
 		width: 100%;

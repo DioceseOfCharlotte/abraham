@@ -1,5 +1,5 @@
 /* #TYPOGRAPHY UTILITY
-\*------------------------------------*/
+\*------------------------------------ */
 
 .u-text-display {
 	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Liberation Serif", Georgia, "Times New Roman", serif;
@@ -144,7 +144,7 @@
 	opacity: 0.8;
 }
 
-.u-dropcap:first-letter {
+.u-dropcap::first-letter {
 	float: left;
 	margin: 0;
 	padding: 0.1rem 0.125rem 0 0;

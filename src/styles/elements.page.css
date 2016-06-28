@@ -1,6 +1,5 @@
 /* #PAGE
-\*------------------------------------*/
-
+\*------------------------------------ */
 
 * {
 	flex-basis: auto;
@@ -25,12 +24,6 @@ body {
 		font-size: 0.95rem;
 	}
 }
-
-/*span,
-i,
-a {
-	vertical-align: initial;
-}*/
 
 article,
 aside,
@@ -83,7 +76,7 @@ article ol {
 	padding-left: var(--space-4);
 
 	li {
-		    padding-left: 0.5rem;
+		padding-left: 0.5rem;
 	}
 }
 
@@ -109,8 +102,7 @@ iframe[src*="google.com/maps"] {
 	max-width: 100%;
 }
 
-
 ::-webkit-input-placeholder {
 	color: inherit;
-	opacity: .54;
+	opacity: 0.54;
 }
