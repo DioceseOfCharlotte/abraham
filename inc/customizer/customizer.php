@@ -92,36 +92,55 @@ function abraham_customize_register( $wp_customize ) {
 	);
 
 	// Add our Footer Customization section section.
-    $wp_customize->add_section(
-        'abe_footer_section',
-        array(
-            'title'    => esc_html__( 'Footer Customization', 'abe' ),
-            'priority' => 90,
-        )
-    );
+	$wp_customize->add_section(
+		'abe_footer_section',
+		array(
+			'title'    => esc_html__( 'Analytics & Owner Info', 'abe' ),
+			'priority' => 90,
+		)
+	);
 
-    // Add our copyright text field.
-    $wp_customize->add_setting(
-        'abe_copyright_text',
-        array(
-            'default' => ''
-        )
-    );
-    $wp_customize->add_control(
-        'abe_copyright_text',
-        array(
-            'label'       => esc_html__( 'Copyright Text', 'abe' ),
-            'description' => esc_html__( 'Displayed in the sites footer.  &#169; 20** will be prepended to this text.', 'abe' ),
-            'section'     => 'abe_footer_section',
-            'type'        => 'text',
-            'sanitize'    => 'html'
-        )
-    );
+	// Add our copyright text field.
+	$wp_customize->add_setting(
+		'abe_copyright_text',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control(
+		'abe_copyright_text',
+		array(
+			'label'       => esc_html__( 'Copyright Text', 'abe' ),
+			'description' => esc_html__( 'Displayed in the sites footer.  &#169; 20** will be prepended to this text.', 'abe' ),
+			'section'     => 'abe_footer_section',
+			'type'        => 'text',
+			'sanitize'    => 'html',
+		)
+	);
+
+	// Add our copyright text field.
+	$wp_customize->add_setting(
+		'abe_analytics_id',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control(
+		'abe_analytics_id',
+		array(
+			'label'       		=> esc_html__( 'Google Analytics ID', 'abe' ),
+			'description' 		=> esc_html__( 'UA-XXXXX-Y', 'abe' ),
+			'section'     		=> 'abe_footer_section',
+			'type'        		=> 'text',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		)
+	);
 }
 
+
 /**
- * Custom js for theme customizer
- */
+* Custom js for theme customizer
+*/
 function abraham_customizer_js() {
 
 	/* Use the .min script if SCRIPT_DEBUG is turned off. */
@@ -134,17 +153,4 @@ function abraham_customizer_js() {
 		null,
 		true
 	);
-}
-
-/**
- * Enqueue Google Fonts.
- */
-function abraham_google_fonts() {
-	$fonts = array(
-		get_theme_mod( 'heading_font', 'default' ),
-		get_theme_mod( 'body_font', 'default' ),
-	);
-	$font_uri = customizer_library_get_google_font_uri( $fonts );
-
-	wp_enqueue_style( 'google_font_headings', $font_uri, array(), null, 'screen' );
 }

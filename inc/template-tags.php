@@ -8,17 +8,6 @@
 use Mexitek\PHPColors\Color;
 
 /**
- * Featured Posts
- */
-function abe_has_multiple_featured_posts() {
-	$featured_posts = apply_filters( 'abe_get_featured_posts', array() );
-	if ( is_array( $featured_posts ) && 1 < count( $featured_posts ) ) {
-		return true;
-	}
-	return false;
-}
-
-/**
  * Display the SVG.
  *
  * @param string $icon name of the icon.

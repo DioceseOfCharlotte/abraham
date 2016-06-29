@@ -18,12 +18,7 @@ $video = hybrid_media_grabber(
 
 	<?php get_template_part( 'components/img', 'thumb' ); ?>
 	<div class="flag-body u-flexed-auto">
-		<header <?php hybrid_attr( 'entry-header' ); ?>>
-
-			<?php arch_title(); ?>
-
-		</header>
-
+		<?php arch_title(); ?>
 		<?php arch_excerpt(); ?>
 	</div>
 
