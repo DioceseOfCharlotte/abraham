@@ -48,7 +48,7 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER.
-			'header'              		   => 'u-abs u-px1 is-top animating u-bg-1-glass u-1of1 u-z3 u-flex u-flex-wrap u-flex-center',
+			'header'              		   => 'u-abs u-px1 is-top animating u-z1 u-bg-1-glass u-1of1 u-flex u-flex-wrap u-flex-center',
 			'branding'            		   => 'u-flexed-auto u-text-center u-mln1',
 			'site_title'          		   => 'u-text-display u-color-inherit u-m0',
 			'site_description'        	   => 'u-text-display u-m0 u-text-3',
@@ -66,7 +66,7 @@ class Attr_Trumps {
 			'post_wide'               	=> 'u-fit u-1of1',
 
 			'post_archive'            	=> 'o-cell u-flexed-auto u-1of2-md u-1of3-xl u-bg-white u-overflow-hidden u-shadow1 u-br',
-			'entry_header'            	=> 'u-z1 u-1of1',
+			'entry_header'            	=> 'u-1of1',
 			'entry_title'             	=> 'u-px2 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p2 u-p4-md',
 			'entry_content_wide'      	=> '',
@@ -83,7 +83,7 @@ class Attr_Trumps {
 
 			// NAVIGATION.
 			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-z2 u-mx-auto-md u-text-center u-1of1 u-bg-1 u-width-auto-lg',
+			'menu_primary'            	=> 'u-mx-auto-md u-text-center u-1of1 u-bg-1 u-width-auto-lg',
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR.

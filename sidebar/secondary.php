@@ -9,7 +9,7 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 	return;
 }
 ?>
-<aside class="js-off-canvas off-canvas u-z4 u-fix u-left0 u-top0 u-1of1 u-height100 if-admin-bar u-overflow-hidden">
+<aside class="js-off-canvas off-canvas u-fix u-left0 u-top0 u-1of1 u-height100 if-admin-bar u-overflow-hidden">
 	<nav class="js-off-canvas-container off-canvas__container u-rel u-bg-white u-height100 u-flex u-flex-col u-shadow3">
 
 

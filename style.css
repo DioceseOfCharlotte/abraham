@@ -1605,8 +1605,13 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
     pointer-events: none;
 }
 
+.off-canvas--animatable {
+    z-index: 1;
+}
+
 .off-canvas--visible {
     pointer-events: auto;
+    z-index: 1;
 }
 
 .off-canvas::before {

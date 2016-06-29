@@ -78,7 +78,7 @@ function abraham_setup() {
 	* Register Google font.
 	*
 	*/
-	function abe_font_list( $display_name ) {
+	function abe_font_list( $display_name = 'false' ) {
 		$fonts_list = '';
 		$body_font = '';
 		$display_font = 'Cormorant Garamond';
