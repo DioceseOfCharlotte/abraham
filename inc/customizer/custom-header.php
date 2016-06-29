@@ -58,5 +58,5 @@ if (get_header_image()) {
 	$style .= ".archive-header{background-image:url({$bg_image});}.page-head-text{min-height:20vw;}";
  }
 
-	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+	echo "\n" . '<style id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 }

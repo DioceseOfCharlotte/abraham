@@ -1,6 +1,6 @@
 <?php
 /**
- * Clean up wp_head()
+ * Clean up wp_head() and add some meta
  *
  */
 
@@ -14,9 +14,6 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // remove random post 
 remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); // remove parent post link
 remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // remove the next and previous post links
 remove_action( 'wp_head', 'rel_canonical', 10, 0 ); // remove canonical link
-
-
-
 
 // https://github.com/roots/soil/blob/master/modules/clean-up.php
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
@@ -32,3 +29,19 @@ remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 add_filter( 'use_default_gallery_style', '__return_false' );
+add_action( 'wp_head','abe_head_meta', 1 );
+
+function abe_head_meta() {
+	$p_color = get_theme_mod( 'primary_color', '' );
+	$hex = '#' .$p_color;
+
+	$output = '	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="msapplication-TileColor" content="' . $hex . '">
+	<meta id="theme-color" name="theme-color" content="' . $hex . '">
+	';
+
+	echo $output;
+}
