@@ -1,5 +1,6 @@
 <?php
 
+add_action( 'wp_head', 'abe_add_google_analytics', 30 );
 
 function abe_add_google_analytics() {
 	if ( ( defined( 'WP_DEBUG' ) && WP_DEBUG ) || current_user_can( 'manage_options' ) ) {
@@ -16,4 +17,3 @@ function abe_add_google_analytics() {
 	<?php
 	}
 }
-	add_action( 'wp_footer', 'abe_add_google_analytics', 30 );
