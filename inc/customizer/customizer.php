@@ -19,6 +19,7 @@ function abraham_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 
@@ -36,8 +37,6 @@ function abraham_customize_register( $wp_customize ) {
 	    ) );
 	}
 
-	// Theme layouts.
-	$wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
 
 	// Add the primary color setting.
 	$wp_customize->add_setting(
