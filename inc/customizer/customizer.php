@@ -5,7 +5,7 @@
  * @package Abraham
  */
 
-add_action( 'customize_register', 'abraham_customize_register' );
+add_action( 'customize_register', 'abraham_customize_register', 11 );
 add_action( 'customize_preview_init', 'abraham_customizer_js' );
 
 /**
