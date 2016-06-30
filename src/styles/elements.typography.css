@@ -58,9 +58,6 @@ h6 {
 	font-weight: inherit;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-
-	/* remove when merged into normalize */
-	line-height: 1.15;
 }
 
 p,
