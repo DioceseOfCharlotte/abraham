@@ -114,17 +114,11 @@ function abraham_setup() {
 			// Load active theme stylesheet.
 			wp_enqueue_style( 'hybrid-style' );
 
-			// Google fonts
-			// wp_register_style( 'abe-google-font', abe_font_url(), array(), null );
-			// wp_enqueue_style( 'abe-google-font' );
-
 			wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() )."css/oldie{$suffix}.css", array( 'hybrid-style' ) );
 			wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
 
 			// Scripts.
 			wp_enqueue_script( 'abraham_js', trailingslashit( get_template_directory_uri() )."js/abraham{$suffix}.js", false, false, true );
-
-			// wp_enqueue_script( 'webfont', 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js', array( 'abraham_js' ), false, true );
 
 			// polyfills
 			wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() ).'js/polyfill/ofi.browser.js', false, false, true );

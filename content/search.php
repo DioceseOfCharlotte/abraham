@@ -10,17 +10,23 @@
 
 	<?php tha_entry_top(); ?>
 
-		<header <?php hybrid_attr( 'entry-header' ); ?>>
-			<h4 <?php hybrid_attr( 'entry-title' ); ?>>
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h4>
+	<?php get_template_part( 'components/img', 'thumb' ); ?>
 
-			<?php get_template_part( 'components/entry-meta' ); ?>
-		</header>
+	<div class="flag-body u-flexed-auto">
 
+		<?php get_template_part( 'components/entry', 'header' ); ?>
+
+		<?php if ( has_excerpt() ) { ?>
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
-		<?php the_excerpt(); ?>
+			<?php tha_entry_content_before(); ?>
+			<?php the_excerpt(); ?>
+			<?php tha_entry_content_after(); ?>
 		</div>
+		<?php } ?>
+
+	</div>
+
+		<?php get_template_part( 'components/entry', 'footer' ); ?>
 
 	<?php tha_entry_bottom(); ?>
 
