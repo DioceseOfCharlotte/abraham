@@ -1526,6 +1526,10 @@ a.btn-hollow, .btn-hollow, input[type="reset"], input[type="button"] {
 * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
 */
 
+.entry-content .FlexEmbed {
+    margin-bottom: 1.5rem;
+}
+
 .FlexEmbed {
     display: block;
     overflow: hidden;
