@@ -4,7 +4,7 @@ Theme URI: https://github.com/DioceseOfCharlotte/abraham
 Author: Marty Helmick
 Author URI: https://github.com/m-e-h
 Description: Abraham is a Parent theme with many children.
-Version: 0.8.1
+Version: 0.9.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: abraham
@@ -871,6 +871,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
+    line-height: 1.15;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -3474,10 +3475,6 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 .shadow-hover {
     overflow: visible;
-}
-
-.shadow-hover:hover {
-    z-index: 2;
 }
 
 .shadow-hover::after {

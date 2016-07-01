@@ -195,10 +195,6 @@
 	overflow: visible;
 }
 
-.shadow-hover:hover {
-	z-index: 2;
-}
-
 .shadow-hover::after {
 	content: "";
 	border-radius: 3px;
