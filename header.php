@@ -7,9 +7,7 @@
 
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
-<head <?php hybrid_attr( 'head' ); ?>>
-	<?php wp_head(); ?>
-</head>
+<?php get_template_part( 'components/head' ); ?>
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
