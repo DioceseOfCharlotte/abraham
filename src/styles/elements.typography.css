@@ -57,8 +57,9 @@ h5,
 h6 {
 	font-weight: inherit;
 	line-height: 1.15;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 p,

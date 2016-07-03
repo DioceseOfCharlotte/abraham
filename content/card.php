@@ -16,18 +16,15 @@ $video = hybrid_media_grabber(
 
 	<?php tha_entry_top(); ?>
 
-			<?php
-			if ( $video ) {
-				echo $video;
+	<?php if ( $video ) {
+		echo $video;
+	} else {
+		get_template_part( 'components/img', 'hd' );
+	} ?>
 
-			} else {
-				get_template_part( 'components/img', 'hd' );
-			}
-			?>
-
-		<?php arch_title(); ?>
-
-		<?php arch_excerpt(); ?>
+	<?php arch_title(); ?>
+	<?php arch_excerpt(); ?>
+	<?php get_template_part( 'components/entry', 'footer' ); ?>
 
 	<?php tha_entry_bottom(); ?>
 

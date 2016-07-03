@@ -17,12 +17,7 @@
 			<?php tha_entry_content_after(); ?>
 		</div>
 
-		<footer <?php hybrid_attr( 'entry-footer' ); ?>>
-			<?php wp_link_pages(array(
-				'before' => '<nav class="page-nav"><p>'.__( 'Pages:', 'abraham' ),
-				'after'  => '</p></nav>',
-			)); ?>
-		</footer>
+		<?php get_template_part( 'components/entry', 'footer' ); ?>
 
 	<?php tha_entry_bottom(); ?>
 

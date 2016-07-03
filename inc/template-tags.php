@@ -34,21 +34,9 @@ function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 /**
  * Display the Edit Post Link
  */
-function abe_do_edit_link() {
+function abe_edit_link() {
 	edit_post_link( abe_get_svg( 'edit', 'sm' ) );
 }
-add_action( 'tha_entry_bottom', 'abe_do_edit_link' );
-
-/**
- * Customize the html of the edit link
- *
- * @param string $output Link html.
- */
-function meh_edit_post_link( $output ) {
-	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn u-z2 btn-round u-opacity u-abs u-right0 u-bottom0"', $output );
-	return $output;
-}
-add_filter( 'edit_post_link', 'meh_edit_post_link' );
 
 
 /**

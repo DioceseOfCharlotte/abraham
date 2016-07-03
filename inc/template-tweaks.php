@@ -5,15 +5,16 @@
  * @package Abraham
  */
 
-add_filter( 'hybrid_content_template_hierarchy', 'meh_template_hierarchy' );
-add_filter( 'excerpt_more', 'meh_excerpt_more' );
-add_filter( 'excerpt_length', 'meh_excerpt_length' );
+add_filter( 'hybrid_content_template_hierarchy', 'abe_template_hierarchy' );
+add_filter( 'excerpt_more', 'abe_excerpt_more' );
+add_filter( 'excerpt_length', 'abe_excerpt_length' );
 add_filter( 'get_custom_logo', 'abe_custom_logo' );
+add_filter( 'edit_post_link', 'abe_edit_post_link' );
 
 /**
  * Add templates to hybrid_get_content_template()
  */
-function meh_template_hierarchy( $templates ) {
+function abe_template_hierarchy( $templates ) {
 	$post_type = get_post_type();
 	$post_format = get_post_format() ? get_post_format() : 'standard';
 
@@ -37,14 +38,14 @@ function meh_template_hierarchy( $templates ) {
 /**
  * Clean up the_excerpt().
  */
-function meh_excerpt_more() {
+function abe_excerpt_more() {
 	return '<a class="btn btn-sm u-p0 u-round u-mx1 u-h3 u-opacity u-lh-1 u-text-2 btn-readmore" href="'.get_permalink().'">'.abe_get_svg( 'ellipsis-circle', 'sm' ).'</a>';
 }
 
 /**
  * Define the_excerpt() character length.
  */
-function meh_excerpt_length( $length ) {
+function abe_excerpt_length( $length ) {
 	return 40;
 }
 
@@ -56,4 +57,14 @@ function abe_custom_logo() {
         )
     );
 	return $html;
+}
+
+/**
+ * Customize the html of the edit link
+ *
+ * @param string $output Link html.
+ */
+function abe_edit_post_link( $output ) {
+	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-opacity u-abs u-right0 u-bottom0"', $output );
+	return $output;
 }
