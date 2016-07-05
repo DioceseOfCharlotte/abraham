@@ -14,6 +14,28 @@
 	color: currentColor;
 }
 
+.u-link {
+	color: var(--color-links);
+	text-decoration: none;
+	transition-duration: 0.2s;
+	transition-timing-function: var(--animation-curve);
+	transition-property: all;
+	border-radius: 0.5px;
+	box-shadow: inset 0 -1px 0 0 color(var(--color-grey-ui) a(40%));
+
+	&:hover {
+		color: var(--color-links-hover);
+		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(20%));
+		transition-duration: var(--transition-time);
+	}
+
+	&:active,
+	&:focus {
+		color: var(--color-links-active);
+		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(40%));
+	}
+}
+
 /* Opacity */
 .u-opacity {
 	opacity: var(--opacity);
