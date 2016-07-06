@@ -139,7 +139,7 @@ function doc_logout_link() {
 // Shortcode
 function doc_pass_reset_link() {
 	$passresetlink = wp_lostpassword_url( get_permalink() );
-	return '<a class="u-f-minus u-link u-bottom0 u-right0 u-abs" href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
+	return '<a href="' . $passresetlink . '" title="Lost Password">Lost your password?</a>';
 }
 
 // Permalink
