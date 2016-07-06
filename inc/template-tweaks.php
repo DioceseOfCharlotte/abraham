@@ -18,7 +18,9 @@ function abe_template_hierarchy( $templates ) {
 	$post_type = get_post_type();
 	$post_format = get_post_format() ? get_post_format() : 'standard';
 
-	if ( is_search() ) {
+	if ( ! members_can_current_user_view_post() ) {
+		$templates = array_merge( array( 'content/restricted.php' ), $templates );
+	} elseif ( is_search() ) {
 		$templates = array_merge( array( 'content/search.php' ), $templates );
 	} elseif ( is_404() ) {
 		$templates = array_merge( array( 'content/404.php' ), $templates );
