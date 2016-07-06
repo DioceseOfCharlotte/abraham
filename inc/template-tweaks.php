@@ -22,8 +22,6 @@ function abe_template_hierarchy( $templates ) {
 		$templates = array_merge( array( 'content/restricted.php' ), $templates );
 	} elseif ( is_search() ) {
 		$templates = array_merge( array( 'content/search.php' ), $templates );
-	} elseif ( is_404() ) {
-		$templates = array_merge( array( 'content/404.php' ), $templates );
 	} elseif ( is_single( get_the_ID() ) ) {
 		$templates = array_merge(
 			array(

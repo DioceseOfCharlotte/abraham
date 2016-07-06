@@ -6,8 +6,9 @@
  */
 
 ?>
-<article class="no-results not-found u-mx-auto u-mb2">
-	<div class="page-content">
+<article class="u-fit o-cell u-bg-white u-mb3 u-1of1 u-br u-shadow2">
+
+	<div <?php hybrid_attr( 'entry-content' ); ?>>
 
 		<?php if ( is_search() ) : ?>
 
