@@ -43,8 +43,8 @@ class Attr_Trumps {
 			'layout'                 	  => 'u-flex u-flex-col',
 			'layout_wide'            	  => '',
 			'grid'                   	  => 'o-grid u-container u-rel',
-			'grid_1-wide'               => 'o-grid u-1of1  u-rel u-p0',
-			'grid_2c-r'                 => 'o-grid u-container  u-rel u-flex-rev',
+			'grid_1-wide'               => 'o-grid u-1of1 u-rel u-p0',
+			'grid_2c-r'                 => 'o-grid u-container u-rel u-flex-rev',
 			'grid_2c-l'                 => 'o-grid u-container u-rel',
 
 			// SITE HEADER.
