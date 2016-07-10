@@ -94,7 +94,7 @@ function abraham_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'abe_footer_section',
 		array(
-			'title'    => esc_html__( 'Analytics & Owner Info', 'abe' ),
+			'title'    => esc_html__( 'Owner Info and APIs', 'abe' ),
 			'priority' => 90,
 		)
 	);
@@ -117,7 +117,7 @@ function abraham_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add our copyright text field.
+	// Add ga text field.
 	$wp_customize->add_setting(
 		'abe_analytics_id',
 		array(
@@ -129,6 +129,24 @@ function abraham_customize_register( $wp_customize ) {
 		array(
 			'label'       		=> esc_html__( 'Google Analytics ID', 'abe' ),
 			'description' 		=> esc_html__( 'UA-XXXXX-Y', 'abe' ),
+			'section'     		=> 'abe_footer_section',
+			'type'        		=> 'text',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		)
+	);
+
+	// Add maps api text field.
+	$wp_customize->add_setting(
+		'abe_maps_api',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control(
+		'abe_maps_api',
+		array(
+			'label'       		=> esc_html__( 'Google Maps JS API', 'abe' ),
+			'description' 		=> esc_html__( 'YOUR_API_KEY', 'abe' ),
 			'section'     		=> 'abe_footer_section',
 			'type'        		=> 'text',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
