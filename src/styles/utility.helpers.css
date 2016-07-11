@@ -14,7 +14,7 @@
 	color: currentColor;
 }
 
-.u-link {
+.u-link[class] {
 	color: var(--color-links);
 	text-decoration: none;
 	transition-duration: 0.2s;
