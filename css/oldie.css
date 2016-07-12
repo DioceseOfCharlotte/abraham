@@ -767,13 +767,7 @@ a:after {
 }
 
 [class*="u-bg-1"] a, [class*="u-bg-2"] a {
-    filter: alpha(opacity=80);
     color: inherit;
-}
-
-[class*="u-bg-1"] a:hover, [class*="u-bg-1"] a:active, [class*="u-bg-1"] a:focus,
-[class*="u-bg-2"] a:hover, [class*="u-bg-2"] a:active, [class*="u-bg-2"] a:focus {
-    filter: alpha(opacity=100);
 }
 
 a[class] {

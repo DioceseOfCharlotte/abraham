@@ -52,14 +52,7 @@ a::after {
 
 [class*="u-bg-1"] a,
 [class*="u-bg-2"] a {
-	opacity: var(--opacity);
 	color: inherit;
-
-	&:hover,
-	&:active,
-	&:focus {
-		opacity: 1;
-	}
 }
 
 a[class] {
