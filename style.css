@@ -2240,6 +2240,22 @@ body:not(.search) .trail-end > span, .search .archive-title {
     padding: 0.5rem;
 }
 
+.u-p2 {
+    padding: 1rem;
+}
+
+.u-p3 {
+    padding: 1.5rem;
+}
+
+.u-p4 {
+    padding: 2.5rem;
+}
+
+.u-p0 {
+    padding: 0;
+}
+
 .u-py1 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -2258,10 +2274,6 @@ body:not(.search) .trail-end > span, .search .archive-title {
     padding-bottom: 0.5rem;
 }
 
-.u-p2 {
-    padding: 1rem;
-}
-
 .u-py2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -2278,10 +2290,6 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 .u-pb2 {
     padding-bottom: 1rem;
-}
-
-.u-p3 {
-    padding: 1.5rem;
 }
 
 .u-pl3 {
@@ -2306,10 +2314,6 @@ body:not(.search) .trail-end > span, .search .archive-title {
     padding-bottom: 1.5rem;
 }
 
-.u-p4 {
-    padding: 2.5rem;
-}
-
 .u-pl4 {
     padding-left: 2.5rem;
 }
@@ -2330,10 +2334,6 @@ body:not(.search) .trail-end > span, .search .archive-title {
 
 .u-pb4 {
     padding-bottom: 2.5rem;
-}
-
-.u-p0 {
-    padding: 0;
 }
 
 .u-py0 {
