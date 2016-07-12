@@ -57,10 +57,14 @@ hr {
 	border-bottom-color: var(--grey-nuetral);
 }
 
+article a {
+	font-weight: bold;
+}
+
 article p,
 article ul,
 article ol {
-	max-width: 900px;
+	max-width: var(--paragraph-width);
 	margin-left: auto;
 	margin-right: auto;
 }

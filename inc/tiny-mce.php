@@ -156,6 +156,34 @@ function abraham_tiny_mce_formats( $initArray ) {
 				),
 			),
 		),
+
+		array(
+			'title'   => __( 'Alert', 'abraham' ),
+			'items' => array(
+				array(
+					'title'    => __( 'Information', 'abraham' ),
+					'block'   => 'div',
+					'classes' => 'u-p2 u-bg-info u-currentcolor_a u-text-wrap u-br u-mb2 u-shadow1',
+					'wrapper' => true,
+					'exact'   => true,
+				),
+				array(
+					'title'    => __( 'Success', 'abraham' ),
+					'block'   => 'div',
+					'classes' => 'u-p2 u-bg-success u-currentcolor_a u-text-wrap u-br u-mb2 u-shadow1',
+					'wrapper' => true,
+					'exact'   => true,
+				),
+				array(
+					'title'    => __( 'Warning', 'abraham' ),
+					'block'   => 'div',
+					'classes' => 'u-p2 u-bg-warning u-currentcolor_a u-text-wrap u-br u-mb2 u-shadow1',
+					'wrapper' => true,
+					'exact'   => true,
+				),
+			),
+		),
+
 		array(
 			'title'   => __( 'Flex Grid', 'abraham' ),
 			'block'   => 'div',

@@ -32,7 +32,6 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "objects.off-canvas.css";
 @import "objects.animations";
 @import "components.breadcrumbs.css";
-@import "utility.colors";
 @import "utility.widths";
 @import "utility.spacing";
 @import "utility.tables";
@@ -41,6 +40,7 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "utility.typography";
 @import "utility.layout-states";
 @import "utility.borders";
+@import "utility.colors";
 @import "utility.helpers";
 @import "shame.css";
 @import "defaults.css";

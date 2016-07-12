@@ -110,6 +110,17 @@
 	--grey-nuetral: #90a4ae;
 	--black: #111;
 
+	--color-info: var(--aqua);
+	--color-success: var(--olive);
+	--color-warning: var(--red);
+
+	--color-info-light: color(var(--aqua) lightness(+22%));
+	--color-info-dark: color(var(--aqua) lightness(-50%));
+	--color-success-light: color(var(--olive) lightness(+50%));
+	--color-success-dark: color(var(--olive) lightness(-15%));
+	--color-warning-light: color(var(--red) lightness(+35%));
+	--color-warning-dark: color(var(--red) lightness(-30%));
+
 	--color-1: var(--blue);
 	--color-1-light: color(var(--color-1) lightness(+20%));
 	--color-1-dark: color(var(--color-1) lightness(-20%));

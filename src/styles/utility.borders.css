@@ -2,8 +2,9 @@
 \*------------------------------------ */
 
 .u-border {
+	border-width: 1px;
 	border-style: solid;
-	border-color: var(--color-grey-ui);
+	border-color: currentColor;
 }
 
 .u-border-t {

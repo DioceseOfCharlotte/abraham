@@ -83,6 +83,25 @@
 	background-color: var(--white);
 }
 
+/* Alerts */
+.u-bg-info {
+	background-color: var(--color-info-light);
+	color: var(--color-info-dark);
+	border-color: color(var(--color-info-dark) a(0.3));
+}
+
+.u-bg-success {
+	background-color: var(--color-success-light);
+	color: var(--color-success-dark);
+	border-color: color(var(--color-success-dark) a(0.3));
+}
+
+.u-bg-warning {
+	background-color: var(--color-warning-light);
+	color: var(--color-warning-dark);
+	border-color: color(var(--color-warning-dark) a(0.3));
+}
+
 .u-bg-transparent {
 	background-color: transparent;
 }
