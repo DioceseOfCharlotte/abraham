@@ -19,10 +19,10 @@ input[type="submit"] {
 	margin: 0;
 	vertical-align: baseline;
 	cursor: pointer;
+	box-shadow: none;
 
 	&:hover {
 		box-shadow: inset 0 0 0 20rem color(var(--grey-nuetral) a(30%));
-		transition-duration: var(--transition-time);
 	}
 
 	&:focus,

@@ -12,14 +12,14 @@ a {
 
 	&:hover {
 		color: var(--color-links-hover);
-		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(20%));
+		background-color: color(var(--color-grey-ui) a(20%));
 		transition-duration: var(--transition-time);
 	}
 
 	&:active,
 	&:focus {
 		color: var(--color-links-active);
-		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(40%));
+		background-color: color(var(--color-grey-ui) a(40%));
 	}
 }
 
@@ -46,6 +46,7 @@ a::after {
 .entry-title > a {
 	width: 100%;
 	display: inline-flex;
+	justify-content: space-between;
 	align-items: center;
 	padding: 0.25rem;
 }
@@ -56,7 +57,6 @@ a::after {
 }
 
 a[class] {
-	box-shadow: none;
 	color: inherit;
 	text-decoration: none;
 }

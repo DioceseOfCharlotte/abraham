@@ -1,5 +1,5 @@
 <div <?php hybrid_attr( 'branding' ); ?>>
-<a class="site-home-link opacity-hover u-inline-flex u-flex-center" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<a class="site-home-link u-inline-flex u-no-link u-flex-center" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	<?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
 		<?php the_custom_logo(); ?>
 	<?php endif; // End check for custom logo. ?>

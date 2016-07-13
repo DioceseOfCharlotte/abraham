@@ -14,6 +14,10 @@
 	color: currentColor;
 }
 
+.u-no-link {
+	box-shadow: none;
+}
+
 .u-link[class] {
 	color: var(--color-links);
 	text-decoration: none;
