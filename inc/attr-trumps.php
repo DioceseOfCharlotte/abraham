@@ -110,8 +110,6 @@ class Attr_Trumps {
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
 			'gv_post'                   => 'u-bg-transparent u-shadow0',
-			'gv_container'              => 'o-grid',
-			'gv_entry'                  => 'o-cell u-1of1 u-p1 u-br u-bg-white u-rel u-mb3-md u-1of2-md u-1of3-lg u-border0 u-shadow1',
 		);
 
 		$this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
@@ -165,8 +163,6 @@ class Attr_Trumps {
 		add_filter( 'wp_nav_menu',                       array( $this, 'nav_menu_filters' ) );
 		add_filter( 'nav_menu_css_class',                array( $this, 'menu_item' ), 10, 2 );
 
-		add_filter( 'gravityview/render/container/class',            array( $this, 'gv_container' ), 10, 1 );
-		add_filter( 'gravityview_entry_class',                       array( $this, 'gv_entry' ), 10, 3 );
 	}
 
 	/* === OBJECTS === */
@@ -740,37 +736,6 @@ class Attr_Trumps {
 		return $text;
 	}
 
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function gv_container( $attr ) {
-		if ( ! $this->args['gv_container'] ) {
-			return $attr;
-		}
-
-		$attr     .= " {$this->args['gv_container']}";
-
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param string           $attr Existing class.
-	 * @param array            $entry Current entry being displayed.
-	 * @param GravityView_View $instance Current GravityView_View object.
-	 */
-	public function gv_entry( $attr, $entry, $instance ) {
-		if ( ! $this->args['gv_entry'] ) {
-			return $attr;
-		}
-		$attr     .= " {$this->args['gv_entry']}";
-
-		return $attr;
-	}
 }
 
 new Attr_Trumps();
