@@ -138,21 +138,21 @@ function abraham_tiny_mce_formats( $initArray ) {
 					'block'   => 'div',
 					'classes' => 'u-p3 u-pt1 u-bg-1 u-text-wrap u-br u-mb3 u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 				array(
 					'title'    => __( 'Secondary color', 'abraham' ),
 					'block'   => 'div',
 					'classes' => 'u-p3 u-pt1 u-bg-2 u-text-wrap u-br u-mb3 u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 				array(
 					'title'    => __( 'Grey', 'abraham' ),
 					'block'   => 'div',
 					'classes' => 'u-p3 u-pt1 u-bg-silver u-text-wrap u-br u-mb3 u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 			),
 		),
@@ -165,21 +165,21 @@ function abraham_tiny_mce_formats( $initArray ) {
 					'block'   => 'div',
 					'classes' => 'u-p2 u-bg-info u-currentcolor_a u-text-wrap u-br u-mb3 u-border u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 				array(
 					'title'    => __( 'Success', 'abraham' ),
 					'block'   => 'div',
 					'classes' => 'u-p2 u-bg-success u-currentcolor_a u-text-wrap u-br u-mb3 u-border u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 				array(
 					'title'    => __( 'Warning', 'abraham' ),
 					'block'   => 'div',
 					'classes' => 'u-p2 u-bg-warning u-currentcolor_a u-text-wrap u-br u-mb3 u-border u-shadow1',
 					'wrapper' => true,
-					'exact'   => true,
+					//'exact'   => true,
 				),
 			),
 		),
@@ -189,7 +189,7 @@ function abraham_tiny_mce_formats( $initArray ) {
 			'block'   => 'div',
 			'classes' => 'o-grid u-flex-ja',
 			'wrapper' => true,
-			'exact'   => true,
+			//'exact'   => true,
 		),
 	);
 
@@ -201,12 +201,12 @@ function abraham_tiny_mce_formats( $initArray ) {
 
 	$initArray[ 'style_formats' ] = json_encode( $style_formats );
 	$initArray[ 'block_formats' ] = 'Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Paragraph=p';
-	$initArray[ 'toolbar1' ] = 'bold italic | formatselect styleselect | alignleft aligncenter alignright | bullist numlist indent outdent | blockquote hr table | link unlink | undo redo | wp_more | wp_help'; // you can easily add/remove buttons by editing this row, as you feel appropriate
-	$initArray[ 'toolbar2' ] = '';
-	$initArray[ 'paste_text_use_dialog' ] = 'false';
-	$initArray[ 'paste_auto_cleanup_on_paste' ] = 'true';
-	$initArray[ 'paste_remove_styles' ] = 'true';
-	$initArray[ 'paste_as_text' ] = 'true';
-	$initArray[ 'paste_text_sticky' ] = 'true';
+	// $initArray[ 'toolbar1' ] = 'bold italic | formatselect styleselect | alignleft aligncenter alignright | bullist numlist indent outdent | blockquote hr table | link unlink | undo redo | wp_more | wp_help'; // you can easily add/remove buttons by editing this row, as you feel appropriate
+	//$initArray[ 'toolbar2' ] = '';
+	// $initArray[ 'paste_text_use_dialog' ] = 'false';
+	// $initArray[ 'paste_auto_cleanup_on_paste' ] = 'true';
+	// $initArray[ 'paste_remove_styles' ] = 'true';
+	// $initArray[ 'paste_as_text' ] = 'true';
+	// $initArray[ 'paste_text_sticky' ] = 'true';
 	return $initArray;
 }
