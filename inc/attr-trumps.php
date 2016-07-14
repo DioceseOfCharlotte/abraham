@@ -109,7 +109,6 @@ class Attr_Trumps {
 			'current-menu-item'         => 'is-active',
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
-			'gv_post'                   => 'u-bg-transparent u-shadow0',
 		);
 
 		$this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
@@ -550,9 +549,6 @@ class Attr_Trumps {
 		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) {
 			$classes[]      = "{$this->args['post_wide']}"; }
 
-		if ( is_singular( 'gravityview' ) && 'edit' !== gravityview_get_context() ) {
-			$classes[]      = "{$this->args['gv_post']}"; }
-
 		return $classes;
 	}
 
@@ -632,8 +628,8 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) || is_singular( 'gravityview' ) && 'edit' !== gravityview_get_context() ) :
-			$attr['class']      .= " {$this->args['entry_content_wide']}";
+			if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+				$attr['class']      .= " {$this->args['entry_content_wide']}";
 			else :
 				$attr['class']      .= " {$this->args['entry_content']}";
 			endif;
