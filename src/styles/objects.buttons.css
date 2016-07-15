@@ -6,11 +6,6 @@ a.btn,
 a.button {
 	opacity: 1;
 	text-decoration: none;
-
-	&:hover {
-		opacity: 1;
-		text-decoration: none;
-	}
 }
 
 input[type="submit"] {
@@ -56,6 +51,15 @@ input[type="reset"]:active {
 
 	> i {
 		line-height: 2.4rem;
+	}
+
+	&:hover {
+		opacity: 0.9;
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+	}
+
+	&:focus {
+    	box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
 	}
 }
 

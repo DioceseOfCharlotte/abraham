@@ -4,7 +4,7 @@
 a {
 	color: var(--color-links);
 	text-decoration: none;
-	transition-duration: 0.2s;
+	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;
 	border-radius: 0.5px;
@@ -13,7 +13,6 @@ a {
 	&:hover {
 		color: var(--color-links-hover);
 		background-color: color(var(--color-grey-ui) a(20%));
-		transition-duration: var(--transition-time);
 	}
 
 	&:active,

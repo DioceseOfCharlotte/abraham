@@ -13,7 +13,9 @@ html {
 	box-sizing: var(--root-box-sizing);
 	color: var(--root-color);
 	cursor: var(--root-cursor);
-	font: var(--root-font-size)/var(--root-line-height) var(--root-font-family);
+	font-size: var(--root-font-size);
+	line-height: var(--root-line-height);
+	font-family: var(--root-font-family);
 }
 
 body {

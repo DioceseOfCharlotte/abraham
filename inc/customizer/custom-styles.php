@@ -211,7 +211,7 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-text-2-dark{color:#{$colorDark}}";
 		$style .= "#page .u-text-2-light{color:#{$colorLight}}";
 		$style .= "#page .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
-		$style .= "#page .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
+		$style .= "#page .u-bg-2-light,.btn-round,.btn-round:hover,.btn-round:focus,.btn-round:active{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "#page .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
 		$style .= "#page .u-bg-2-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
 		$style .= "#page .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";

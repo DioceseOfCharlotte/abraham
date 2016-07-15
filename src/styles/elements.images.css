@@ -17,3 +17,14 @@ svg {
 		max-width: 130px;
 	}
 }
+
+a > img {
+	transition-duration: var(--transition-time);
+	transition-timing-function: var(--animation-curve);
+	transition-property: opacity;
+	backface-visibility: hidden;
+
+	&:hover {
+		opacity: var(--opacity);
+	}
+}
