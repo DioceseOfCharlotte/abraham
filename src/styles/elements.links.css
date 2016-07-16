@@ -4,6 +4,7 @@
 a {
 	color: var(--color-links);
 	text-decoration: none;
+	letter-spacing: 0.02em;
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;

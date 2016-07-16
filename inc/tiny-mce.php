@@ -105,15 +105,21 @@ function abraham_tiny_mce_formats( $initArray ) {
 					'wrapper'  => true,
 				),
 				array(
-					'title'    => __( 'Ordered Steps', 'abraham' ),
-					'selector' => 'ol',
-					'classes'  => 'u-list-steps',
+					'title'    => __( 'Bordered', 'abraham' ),
+					'selector' => 'ul',
+					'classes'  => 'u-list-group',
 					'wrapper'  => true,
 				),
 				array(
-					'title'    => __( 'Segmented', 'abraham' ),
+					'title'    => __( 'Bordered Links', 'abraham' ),
 					'selector' => 'ul',
 					'classes'  => 'u-list-group',
+					'wrapper'  => true,
+				),
+				array(
+					'title'    => __( 'Ordered Steps', 'abraham' ),
+					'selector' => 'ol',
+					'classes'  => 'u-list-steps',
 					'wrapper'  => true,
 				),
 				array(

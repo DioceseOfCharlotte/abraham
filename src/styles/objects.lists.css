@@ -11,7 +11,7 @@
 	}
 }
 
-.u-list-steps {
+.o-list-steps {
 	list-style-type: none;
 	padding-left: 0;
 
@@ -32,37 +32,59 @@
 	}
 }
 
-.u-list-group {
+.u-list-group,
+.o-list-group,
+.o-list-group-links {
 	padding-left: 0;
+	max-width: 100%;
+	font-size: 1.1rem;
 	list-style-type: none;
+	background-color: #fff;
+	box-shadow: var(--shadow-1);
+	border-radius: var(--border-radius);
 
 	> li {
-		letter-spacing: 0.02em;
 		position: relative;
 		display: block;
-		padding: 0.75rem 1.25rem;
-		background-color: #fff;
-		border-bottom: 1px solid var(--color-grey-ui);
+		letter-spacing: 0.02em;
+		width: 100%;
+		border-bottom: 1px solid var(--color-grey-ui-light);
 
 		&:last-child {
 			border-bottom: 0;
 		}
-
-		&::before {
-			width: 1em;
-			height: 1em;
-			min-width: 1em;
-			background-size: contain;
-			margin-right: 0.5em;
-			margin-left: -1.5em;
-		}
 	}
 }
 
-.u-list-group.bullet-cross > li::before {
+.u-list-group > li,
+.o-list-group > li {
+	padding: 0.75rem 1rem;
+}
+
+.o-list-group-links > li a {
+	display: block;
+	padding: 0.75rem 1rem;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: inherit;
+	font-weight: inherit;
+}
+
+.o-list-group > li::before {
+	width: 1em;
+	height: 1em;
+	min-width: 1em;
+	background-size: contain;
+	margin-right: 0.5em;
+	margin-left: -1.5em;
+}
+
+.o-list-group.bullet-cross > li::before {
 	@mixin icon cross;
 }
 
-.u-list-group.bullet-heart > li::before {
+.o-list-group.bullet-heart > li::before {
 	@mixin icon heart;
 }
