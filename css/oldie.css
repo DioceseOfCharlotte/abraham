@@ -842,12 +842,16 @@ a:after {
 	margin-left: 0.2em;
 }
 
+ {
+    padding: 0;
+}
+
 .entry-title > a {
 	width: 100%;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4px;
+	padding: 12px;
 }
 
 [class*="u-bg-1"] a,
@@ -3438,6 +3442,7 @@ html .opacity-hover:hover {
 
 .u-bg-white {
 	background-color: #fff;
+	color: rgb(29, 38, 42);
 }
 
 /* Alerts */

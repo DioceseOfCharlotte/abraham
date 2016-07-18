@@ -10,7 +10,7 @@
 
 	<?php get_template_part( 'components/img', 'thumb' ); ?>
 
-	<div class="flag-body u-flexed-auto">
+	<div class="flag-body u-flex u-flex-wrap u-flexed-auto">
 		<?php tha_entry_top(); ?>
 		<?php arch_title(); ?>
 		<?php tha_entry_content_before(); ?>
