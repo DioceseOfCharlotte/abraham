@@ -45,7 +45,8 @@
 
 	> li {
 		position: relative;
-		display: block;
+		display: flex;
+		align-items: center;
 		letter-spacing: 0.02em;
 		width: 100%;
 		border-bottom: 1px solid var(--color-grey-ui-light);
@@ -58,12 +59,13 @@
 
 .u-list-group > li,
 .o-list-group > li {
-	padding: 0.75rem 1rem;
+	padding: 0.5rem 0.75rem;
 }
 
 .o-list-group-links > li a {
-	display: block;
-	padding: 0.75rem 1rem;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0.75rem;
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -72,13 +74,17 @@
 	font-weight: inherit;
 }
 
-.o-list-group > li::before {
-	width: 1em;
-	height: 1em;
-	min-width: 1em;
-	background-size: contain;
-	margin-right: 0.5em;
-	margin-left: -1.5em;
+.o-list-group[class*=" bullet-"] > li {
+	padding-left: 2em;
+
+	&::before {
+		width: 1em;
+		height: 1em;
+		min-width: 1em;
+		background-size: contain;
+		margin-right: 0.5em;
+		margin-left: -1.5em;
+	}
 }
 
 .o-list-group.bullet-cross > li::before {

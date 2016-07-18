@@ -1577,7 +1577,12 @@ a[href*="mailto:"] {
 .o-list-group > li,
 .o-list-group-links > li {
 	position: relative;
-	display: block;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 	letter-spacing: 0.02em;
 	width: 100%;
 	border-bottom: 1px solid rgb(237, 241, 242);
@@ -1591,12 +1596,17 @@ a[href*="mailto:"] {
 
 .u-list-group > li,
 .o-list-group > li {
-	padding: 0.75rem 1rem;
+	padding: 0.5rem 0.75rem;
 }
 
 .o-list-group-links > li a {
-	display: block;
-	padding: 0.75rem 1rem;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 0.5rem 0.75rem;
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1605,7 +1615,11 @@ a[href*="mailto:"] {
 	font-weight: inherit;
 }
 
-.o-list-group > li::before {
+.o-list-group[class*=" bullet-"] > li {
+	padding-left: 2em;
+}
+
+.o-list-group[class*=" bullet-"] > li::before {
 	width: 1em;
 	height: 1em;
 	min-width: 1em;
