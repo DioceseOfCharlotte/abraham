@@ -77,10 +77,12 @@
 
 .u-bg-silver {
 	background-color: var(--silver);
+	color: var(--root-color);
 }
 
 .u-bg-white {
 	background-color: var(--white);
+	color: var(--root-color);
 }
 
 /* Alerts */

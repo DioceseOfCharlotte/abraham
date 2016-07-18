@@ -99,11 +99,14 @@ function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
 	) );
 	// Merge patterns to run in a single preg_match call.
 	$video_patterns = '(' . implode( '|', $video_patterns ) . ')';
+
 	$is_video       = preg_match( $video_patterns, $url );
+
 	// If the oEmbed is a video, wrap it in the responsive wrapper.
 	if ( false === $already_wrapped && 1 === $is_video ) {
 		return meh_responsive_videos_embed_html( $html );
 	}
+
 	return $html;
 }
 
@@ -181,9 +184,7 @@ function abe_get_default_image() {
 	if ( is_child_theme() && file_exists( "{$child_dir}images/default-thumb.jpg" ) ) {
 
 		$image_uri = "{$child_uri}images/default-thumb.jpg";
-	}
-
-	else if ( file_exists( "{$dir}images/default-thumb.jpg" ) ) {
+	} else if ( file_exists( "{$dir}images/default-thumb.jpg" ) ) {
 
 		$image_uri = "{$uri}images/default-thumb.jpg";
 	}

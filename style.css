@@ -3638,10 +3638,12 @@ html .opacity-hover:hover {
 
 .u-bg-silver {
 	background-color: #edeff3;
+	color: rgb(29, 38, 42);
 }
 
 .u-bg-white {
 	background-color: #fff;
+	color: rgb(29, 38, 42);
 }
 
 /* Alerts */
