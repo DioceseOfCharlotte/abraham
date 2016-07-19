@@ -1600,14 +1600,11 @@ a[href*="mailto:"] {
 }
 
 .o-list-group-links > li a {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+	display: inline-block;
+	vertical-align: baseline;
 	padding: 0.5rem 0.75rem;
 	max-width: 100%;
+	width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

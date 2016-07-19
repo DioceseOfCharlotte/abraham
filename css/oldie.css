@@ -1550,11 +1550,11 @@ a[href*="mailto:"] {
 }
 
 .o-list-group-links > li a {
-	-js-display: flex;
-	display: flex;
-	align-items: center;
+	display: inline-block;
+	vertical-align: baseline;
 	padding: 8px 12px;
 	max-width: 100%;
+	width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

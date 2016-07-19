@@ -63,10 +63,11 @@
 }
 
 .o-list-group-links > li a {
-	display: flex;
-	align-items: center;
+	display: inline-block;
+	vertical-align: baseline;
 	padding: 0.5rem 0.75rem;
 	max-width: 100%;
+	width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
