@@ -18,9 +18,7 @@ function abe_template_hierarchy( $templates ) {
 	$post_type = get_post_type();
 	$post_format = get_post_format() ? get_post_format() : 'standard';
 
-	if ( ! members_can_current_user_view_post() ) {
-		$templates = array_merge( array( 'content/restricted.php' ), $templates );
-	} elseif ( is_search() ) {
+	if ( is_search() ) {
 		$templates = array_merge( array( 'content/search.php' ), $templates );
 	} elseif ( is_single( get_the_ID() ) ) {
 		$templates = array_merge(
