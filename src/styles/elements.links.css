@@ -16,8 +16,8 @@ a {
 		background-color: color(var(--color-grey-ui) a(20%));
 	}
 
-	&:active,
-	&:focus {
+	&.active,
+	&:active {
 		color: var(--color-links-active);
 		background-color: color(var(--color-grey-ui) a(40%));
 	}

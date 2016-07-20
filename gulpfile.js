@@ -2,41 +2,31 @@
  * MEH gulp
  */
 
-// 'use strict';
+'use strict';
 
-var fs = require('graceful-fs');
-var path = require('path');
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var svgmin = require('gulp-svgmin');
-var postcss = require('gulp-postcss');
-var babel = require('gulp-babel');
-var oldie = require('oldie');
-var autoPrefixer = require('autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
+const fs = require('graceful-fs');
+const path = require('path');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const runSequence = require('run-sequence');
 
-var atImport = require("postcss-import");
-var pcMixins = require("postcss-mixins");
-var pcColor = require('postcss-color-function');
-var pcVars = require("postcss-advanced-variables");
-var pcNested = require("postcss-nested");
-var pcMedia = require("postcss-custom-media");
-var pcProperties = require("postcss-custom-properties");
-var pcCalc = require('postcss-calc');
-var pcFlex = require('postcss-flexibility');
-var pcSvg = require('postcss-inline-svg');
-var pcNoDups = require('postcss-discard-duplicates');
-var syntax = require('postcss-scss');
-var stylefmt = require('gulp-stylefmt');
+const autoPrefixer = require('autoprefixer');
+const atImport = require("postcss-import");
+const pcMixins = require("postcss-mixins");
+const pcColor = require('postcss-color-function');
+const pcVars = require("postcss-simple-vars");
+const pcNested = require("postcss-nested");
+const pcMedia = require("postcss-custom-media");
+const pcProperties = require("postcss-custom-properties");
+const pcCalc = require('postcss-calc');
+const pcSvg = require('postcss-inline-svg');
 
-var $ = gulpLoadPlugins();
-var reload = browserSync.reload;
+const oldie = require('oldie');
 
-var AUTOPREFIXER_BROWSERS = [
+const $ = require('gulp-load-plugins')();
+const reload = browserSync.reload;
+
+const AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
 	'ie_mob >= 10',
 	'last 2 ff versions',
@@ -49,7 +39,7 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-var POSTCSS_PLUGINS = [
+const POSTCSS_PLUGINS = [
 	atImport,
 	pcMixins,
 	pcProperties,
@@ -66,15 +56,14 @@ var POSTCSS_PLUGINS = [
 	})
 ];
 
-var POSTCSS_IE = [
+const POSTCSS_IE = [
 	autoPrefixer({
 		browsers: ['IE 8', 'IE 9']
 	}),
-	pcFlex,
 	oldie
 ];
 
-var SOURCESJS = [
+const SOURCESJS = [
 	'src/scripts/navigation.js',
 	'src/scripts/off-canvas.js',
 	'src/scripts/main.js'
@@ -82,16 +71,16 @@ var SOURCESJS = [
 
 // ***** Development tasks ****** //
 // Lint JavaScript
-gulp.task('lint', function() {
+gulp.task('lint', () => {
 	gulp.src('src/scripts/*.js')
 		.pipe(xo())
 });
 
 // ***** Production build tasks ****** //
 // Optimize images
-gulp.task('images', function() {
+gulp.task('images', () => {
 	gulp.src('src/images/icons/*.svg')
-		.pipe(svgmin({
+		.pipe($.svgmin({
 			plugins: [{
 				cleanupIDs: true
 			}, {
@@ -123,45 +112,45 @@ gulp.task('images', function() {
 });
 
 // Copy from node-modules
-gulp.task('vendors', function () {
+gulp.task('vendors', () => {
   gulp.src([
   	'node_modules/normalize.css/normalize.css'
   	])
     .pipe(gulp.dest('src/styles'));
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', () => {
 	gulp.src('src/styles/index.css')
-		.pipe(sourcemaps.init())
+		.pipe($.sourcemaps.init())
 
-		.pipe(postcss(POSTCSS_PLUGINS))
+		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('.tmp'))
 		.pipe($.if('*.css', $.concat('style.css')))
-		.pipe(stylefmt())
+		.pipe($.stylefmt())
 		.pipe(gulp.dest('./'))
-		.pipe($.if('*.css', cssnano()))
+		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('style.min.css'))
 		.pipe($.size({
 			title: 'styles'
 		}))
-		.pipe(sourcemaps.write('.'))
+		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 });
 
-gulp.task('oldie', function() {
+gulp.task('oldie', () => {
 	gulp.src('.tmp/index.css')
-		.pipe(postcss(POSTCSS_IE))
+		.pipe($.postcss(POSTCSS_IE))
 		.pipe($.concat('oldie.css'))
 		.pipe(gulp.dest('css'))
-		.pipe($.if('*.css', cssnano()))
+		.pipe($.if('*.css', $.cssnano()))
 		.pipe($.concat('oldie.min.css'))
 		.pipe(gulp.dest('css'))
 });
 
 // Concatenate And Minify JavaScript
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
 	gulp.src(SOURCESJS)
-		.pipe(babel({
+		.pipe($.babel({
 			"presets": ["es2015"]
 		}))
 		.pipe($.concat('abraham.js'))
@@ -178,21 +167,20 @@ gulp.task('scripts', function() {
  * Defines the list of resources to watch for changes.
  */
 // Build and serve the output
-gulp.task('serve', ['scripts', 'styles'], function() {
-	browserSync.init({
-		// proxy: "local.wordpress.dev"
+gulp.task('serve', ['scripts', 'styles'], () => {
+	$.browserSync.init({
+		proxy: "local.wordpress.dev"
 		// proxy: "local.wordpress-trunk.dev"
-		proxy: 'rcdoc.dev'
-			// proxy: "127.0.0.1:8080/wordpress/"
+		// proxy: "127.0.0.1:8080/wordpress/"
 	});
 
 	gulp.watch(['*/**/*.php'], reload);
-	gulp.watch(['src/**/*.{scss,css}'], ['styles', reload]);
-	gulp.watch(['src/**/*.js'], ['lint', 'scripts']);
+	gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
+	gulp.watch(['src/scripts/**/*.js'], ['lint', 'scripts']);
 	gulp.watch(['src/images/**/*'], reload);
 });
 
 // Build production files, the default task
-gulp.task('default', function(cb) {
+gulp.task('default', cb => {
 	runSequence('vendors', 'images', 'styles', 'oldie', 'scripts', cb);
 });

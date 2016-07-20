@@ -835,8 +835,8 @@ a:hover {
 	background-color: rgba(162, 181, 190, 0.2);
 }
 
-a:active,
-a:focus {
+a.active,
+a:active {
 	color: rgb(0, 128, 179);
 	background-color: rgba(162, 181, 190, 0.4);
 }
