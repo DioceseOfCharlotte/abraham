@@ -12,7 +12,7 @@ add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
 add_filter( 'show_admin_bar' , 'abe_show_admin_bar' );
-add_action( 'wp_head', 'abe_font_loader' );
+add_action( 'wp_head', 'abe_display_font' );
 
 
 function abe_show_admin_bar( $content ) {
@@ -72,33 +72,6 @@ function abraham_setup() {
 	}
 
 	/**
-	* Register Google font.
-	*
-	*/
-	function abe_font_list( $display_name = false ) {
-		$fonts_list = '';
-		$body_font = '';
-		$display_font = 'Cormorant Garamond';
-
-		if ( true === $display_name ) {
-			return $display_font;
-		}
-
-		if ( $body_font || $display_font ) {
-			$font_families = array();
-			if ( $body_font ) {
-				$font_families[] = "'{$body_font}:400,500,700'";
-			}
-			if ( $display_font ) {
-				$font_families[] = "'{$display_font}:400,500,600'";
-			}
-			$fonts_list = wp_kses_post( implode( ',', $font_families ) );
-		}
-
-		return $fonts_list;
-	}
-
-	/**
 	* Scripts and stylesheets
 	*/
 	function abraham_assets() {
@@ -130,38 +103,17 @@ function abraham_setup() {
 			wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 		}
 
-		function abe_font_loader() {
-			?>
-			<script type="text/javascript">
-			WebFontConfig = {
-				google: {
-					families: [ <?= abe_font_list() ?> ]
-				}
-			};
-
-			(function(d) {
-				var wf = d.createElement('script'), s = d.scripts[0];
-				wf.src = 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js';
-				wf.type = 'text/javascript';
-				wf.async = 'true';
-				s.parentNode.insertBefore(wf, s);
-			})(document);
-			</script>
+		function abe_display_font() {
+			echo '<link rel="preload" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500" as="font" type="font/woff2" crossorigin>'; ?>
 
 			<style type="text/css">
-			.u-text-display {
-				opacity: 0.3;
-			}
-			.wf-active .u-text-display {
-				font-family: <?= abe_font_list( $display_name = true ) ?>, serif;
+				.u-text-display,.u-text-display>a {
+				font-family: "Cormorant Garamond", serif;
 				opacity: 1;
-				font-weight: 600;
-			}
-			.wf-inactive .u-text-display {
-				opacity: 1;
+				font-weight: 500;
 			}
 			</style>
-			<?php }
+		<?php }
 
 			/**
 			* Styles for the editor.
