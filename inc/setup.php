@@ -42,7 +42,6 @@ function abraham_setup() {
 		) );
 
 		add_theme_support( 'post-formats', array(
-			'gallery',
 			'image',
 			'video',
 			'audio',
