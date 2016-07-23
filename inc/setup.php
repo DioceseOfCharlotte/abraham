@@ -12,7 +12,6 @@ add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
 add_filter( 'show_admin_bar' , 'abe_show_admin_bar' );
-add_action( 'wp_head', 'abe_display_font' );
 
 
 function abe_show_admin_bar( $content ) {
@@ -79,7 +78,8 @@ function abraham_setup() {
 
 		// Load parent theme stylesheet if child theme is active.
 		if ( is_child_theme() ) {
-			wp_enqueue_style( 'hybrid-parent' ); }
+			wp_enqueue_style( 'hybrid-parent' );
+		}
 
 			// Load active theme stylesheet.
 			wp_enqueue_style( 'hybrid-style' );
@@ -102,18 +102,6 @@ function abraham_setup() {
 			wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ).'js/polyfill/flexibility.js',  false, false, false );
 			wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 		}
-
-		function abe_display_font() {
-			echo '<link rel="preload" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500" as="font" type="font/woff2" crossorigin>'; ?>
-
-			<style type="text/css">
-				.u-text-display,.u-text-display>a {
-				font-family: "Cormorant Garamond", serif;
-				opacity: 1;
-				font-weight: 500;
-			}
-			</style>
-		<?php }
 
 			/**
 			* Styles for the editor.
