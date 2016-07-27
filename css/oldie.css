@@ -816,8 +816,8 @@ a:hover {
   background-color: #a2b5be;
 }
 
-a:active,
-	a:focus {
+a.active,
+	a:active {
   color: rgb(0, 128, 179);
   background-color: #a2b5be;
 }
@@ -1234,7 +1234,6 @@ a > img:hover {
 \*------------------------------------*/
 
 .o-grid {
-	-js-display: flex;
 	display: flex;
 	flex-wrap: wrap;
 	margin-right: auto;
@@ -1532,7 +1531,6 @@ a[href*="mailto:"] {
 
 .u-list-group > li, .o-list-group > li, .o-list-group-links > li {
   position: relative;
-  -js-display: flex;
   display: flex;
   align-items: center;
   letter-spacing: 0.02em;
@@ -1635,7 +1633,6 @@ input[type="reset"]:active {
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
-	-js-display: flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1761,7 +1758,6 @@ input[type="reset"]:active {
 }
 
 .menu-primary ul {
-	-js-display: flex;
 	display: flex;
 }
 
@@ -1902,7 +1898,6 @@ input[type="reset"]:active {
 \*------------------------------------ */
 
 .breadcrumbs ul {
-  -js-display: flex;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -2657,7 +2652,6 @@ input[type="reset"]:active {
 \*------------------------------------ */
 
 .u-flex {
-	-js-display: flex;
 	display: flex;
 }
 
@@ -2782,7 +2776,6 @@ align-items: flex-end;
 /* medium */
 
 .u-flex-md {
-  -js-display: flex;
   display: flex;
 }
 
@@ -2793,7 +2786,6 @@ align-items: flex-end;
 /* large */
 
 .u-flex-lg {
-  -js-display: flex;
   display: flex;
 }
 
@@ -2923,11 +2915,6 @@ align-items: flex-end;
 
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
-
-.u-text-display {
-	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Liberation Serif", Georgia, "Times New Roman", serif;
-	font-weight: normal;
-}
 
 .u-small {
 	font-size: 80%;
@@ -3072,14 +3059,12 @@ align-items: flex-end;
 }
 
 .u-dropcap:first-letter {
+	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
-	margin: 0;
-	padding: 1.6px 2px 0 0;
-	font-size: 64px;
-	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-	line-height: 0.7;
-	text-indent: 0;
-	margin-left: -3.2px;
+	font-weight: 400;
+	font-size: 73px;
+	line-height: 70px;
+	margin-right: 10px;
 	background: transparent;
 	color: inherit;
 	filter: alpha(opacity=60) !important;

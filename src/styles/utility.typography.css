@@ -1,11 +1,6 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
-.u-text-display {
-	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Liberation Serif", Georgia, "Times New Roman", serif;
-	font-weight: normal;
-}
-
 .u-small {
 	font-size: 80%;
 }
@@ -153,14 +148,12 @@
 }
 
 .u-dropcap::first-letter {
+	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
-	margin: 0;
-	padding: 0.1rem 0.125rem 0 0;
-	font-size: 4rem;
-	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-	line-height: 0.7;
-	text-indent: 0;
-	margin-left: -0.2rem;
+	font-weight: 400;
+	font-size: 73px;
+	line-height: 70px;
+	margin-right: 10px;
 	background: transparent;
 	color: inherit;
 	opacity: 0.6 !important;
