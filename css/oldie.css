@@ -610,7 +610,7 @@ input,
 select,
 textarea {
 	background-color: #edf1f2;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 /* specify the minimum height of form elements */
@@ -699,7 +699,7 @@ textarea {
 html {
 	background-color: #fff;
 	box-sizing: border-box;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 	cursor: default;
 	font-size: 100%;
 	line-height: 1.6;
@@ -1193,7 +1193,7 @@ input[type=search] {
 }
 
  {
-	color: #1d262a;
+	color: #324148;
 }
 
 /* #IMAGES
@@ -1779,7 +1779,7 @@ input[type="reset"]:active {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: #1d262a;
+	background: #324148;
 	filter: alpha(opacity=0);
 	will-change: opacity;
 	transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -2860,7 +2860,7 @@ align-items: flex-end;
 }
 
 .u-frosted-image {
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-frosted-image:before {
@@ -2872,7 +2872,7 @@ align-items: flex-end;
 }
 
 .u-tinted-image:before {
-  background-color: #1d262a;
+  background-color: #324148;
 }
 
 .u-grad-overlay {
@@ -3022,7 +3022,7 @@ align-items: flex-end;
 }
 
 .u-text-shadow {
-	text-shadow: 1px 1px 5px rgba(29, 38, 42, 0.6);
+	text-shadow: 1px 1px 5px rgba(50, 65, 72, 0.6);
 }
 
 .u-text-left {
@@ -3056,9 +3056,15 @@ align-items: flex-end;
 	white-space: nowrap;
 }
 
-.u-lead {
-	font-size: 19.2px;
-	filter: alpha(opacity=80);
+.u-lead,
+.intro-paragraph {
+	font-weight: 300;
+	font-size: 17.6px;
+}
+
+.u-lead,
+.intro-paragraph {
+  font-size: 20px;
 }
 
 .u-dropcap:first-letter {
@@ -3361,7 +3367,7 @@ html .opacity-hover:hover {
 /* Text Colors */
 
 .u-text-color {
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-text-black {
@@ -3381,7 +3387,7 @@ html .opacity-hover:hover {
 }
 
 .u-text-muted {
-	color: #1d262a;
+	color: #324148;
 }
 
 .u-text-1 {
@@ -3436,12 +3442,12 @@ html .opacity-hover:hover {
 
 .u-bg-silver {
 	background-color: #edeff3;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-bg-white {
 	background-color: #fff;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 /* Alerts */
@@ -3485,23 +3491,23 @@ html .opacity-hover:hover {
 }
 
 .u-bg-tint-1 {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 .u-bg-tint-2 {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 .u-bg-tint-3 {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 .u-bg-tint-4 {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 .u-bg-mask {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 .u-bg-1-glass {
@@ -3533,7 +3539,7 @@ html .opacity-hover:hover {
 }
 
 .u-hover-tint:hover {
-	background-color: #1d262a;
+	background-color: #324148;
 }
 
 /* Fill Colors */

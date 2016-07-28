@@ -611,7 +611,7 @@ input,
 select,
 textarea {
 	background-color: rgba(237, 241, 242, 0.8);
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 /* specify the minimum height of form elements */
@@ -712,7 +712,7 @@ textarea {
 html {
 	background-color: #fff;
 	box-sizing: border-box;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 	cursor: default;
 	font-size: 100%;
 	line-height: 1.6;
@@ -1237,7 +1237,7 @@ input[type=search] {
 }
 
 input[value=Other]:not(:focus) {
-	color: rgba(29, 38, 42, 0.5);
+	color: rgba(50, 65, 72, 0.5);
 }
 
 /* #IMAGES
@@ -1841,7 +1841,7 @@ input[type="reset"]:active {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(29, 38, 42, 0.6);
+	background: rgba(50, 65, 72, 0.6);
 	opacity: 0;
 	will-change: opacity;
 	transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -3054,7 +3054,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-frosted-image {
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-frosted-image::before {
@@ -3066,7 +3066,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-tinted-image::before {
-	background-color: rgba(29, 38, 42, 0.6);
+	background-color: rgba(50, 65, 72, 0.6);
 }
 
 .u-grad-overlay {
@@ -3238,7 +3238,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-text-shadow {
-	text-shadow: 1px 1px 5px rgba(29, 38, 42, 0.6);
+	text-shadow: 1px 1px 5px rgba(50, 65, 72, 0.6);
 }
 
 .u-text-left {
@@ -3272,9 +3272,17 @@ body:not(.search) .trail-end > span,
 	white-space: nowrap;
 }
 
-.u-lead {
-	font-size: 1.2rem;
-	opacity: 0.8;
+.u-lead,
+.intro-paragraph {
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+
+@media (min-width: 48em) {
+	.u-lead,
+	.intro-paragraph {
+		font-size: 1.25rem;
+	}
 }
 
 .u-dropcap::first-letter {
@@ -3583,7 +3591,7 @@ html .opacity-hover:hover {
 /* Text Colors */
 
 .u-text-color {
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-text-black {
@@ -3603,7 +3611,7 @@ html .opacity-hover:hover {
 }
 
 .u-text-muted {
-	color: rgba(29, 38, 42, 0.6);
+	color: rgba(50, 65, 72, 0.6);
 }
 
 .u-text-1 {
@@ -3658,12 +3666,12 @@ html .opacity-hover:hover {
 
 .u-bg-silver {
 	background-color: #edeff3;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 .u-bg-white {
 	background-color: #fff;
-	color: rgb(29, 38, 42);
+	color: rgb(50, 65, 72);
 }
 
 /* Alerts */
@@ -3707,23 +3715,23 @@ html .opacity-hover:hover {
 }
 
 .u-bg-tint-1 {
-	background-color: rgba(29, 38, 42, 0.15);
+	background-color: rgba(50, 65, 72, 0.15);
 }
 
 .u-bg-tint-2 {
-	background-color: rgba(29, 38, 42, 0.3);
+	background-color: rgba(50, 65, 72, 0.3);
 }
 
 .u-bg-tint-3 {
-	background-color: rgba(29, 38, 42, 0.6);
+	background-color: rgba(50, 65, 72, 0.6);
 }
 
 .u-bg-tint-4 {
-	background-color: rgba(29, 38, 42, 0.9);
+	background-color: rgba(50, 65, 72, 0.9);
 }
 
 .u-bg-mask {
-	background-color: rgba(29, 38, 42, 0.6);
+	background-color: rgba(50, 65, 72, 0.6);
 }
 
 .u-bg-1-glass {
@@ -3755,7 +3763,7 @@ html .opacity-hover:hover {
 }
 
 .u-hover-tint:hover {
-	background-color: rgba(29, 38, 42, 0.3);
+	background-color: rgba(50, 65, 72, 0.3);
 }
 
 /* Fill Colors */

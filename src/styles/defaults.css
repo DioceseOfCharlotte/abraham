@@ -135,7 +135,7 @@
 
 	--color-grey-ui: color(var(--blue-grey) lightness(+20%));
 	--color-grey-ui-light: color(var(--blue-grey) lightness(+45%));
-	--color-grey-ui-dark: color(var(--blue-grey) lightness(-35%));
+	--color-grey-ui-dark: color(var(--blue-grey) lightness(-25%));
 
 	--color-frost-1: color(var(--color-grey-ui-light) a(0.15));
 	--color-frost-2: color(var(--color-grey-ui-light) a(0.3));
