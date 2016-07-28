@@ -8,11 +8,18 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+
+		font-size: var(--h5-mobile);
+
+		@media (--md) {
+			font-size: var(--h5);
+		}
 	}
 
 	li {
 		display: inline-flex;
 		align-items: center;
+		font-style: italic;
 
 		&:not(:last-of-type)::after {
 			padding: 0.5em;

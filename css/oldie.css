@@ -1899,11 +1899,17 @@ input[type="reset"]:active {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  font-size: 17.6px;
+}
+
+.breadcrumbs ul {
+  font-size: 20px;
 }
 
 .breadcrumbs li {
   display: inline-flex;
   align-items: center;
+  font-style: italic;
 }
 
  {

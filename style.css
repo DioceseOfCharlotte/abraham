@@ -1977,6 +1977,13 @@ input[type="reset"]:active {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+	font-size: 1.1rem;
+}
+
+@media (min-width: 48em) {
+	.breadcrumbs ul {
+		font-size: 1.25rem;
+	}
 }
 
 .breadcrumbs li {
@@ -1986,6 +1993,7 @@ input[type="reset"]:active {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+	font-style: italic;
 }
 
 .breadcrumbs li:not(:last-of-type)::after {
