@@ -3061,13 +3061,16 @@ align-items: flex-end;
 .u-dropcap:first-letter {
 	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
-	font-weight: 400;
-	font-size: 73px;
-	line-height: 70px;
+	font-size: 57.6px;
+	line-height: 54.4px;
 	margin-right: 10px;
 	background: transparent;
 	color: inherit;
-	filter: alpha(opacity=60) !important;
+}
+
+.u-dropcap:first-letter {
+  font-size: 73.6px;
+  line-height: 70.4px;
 }
 
 /* #UTILITY LAYOUT
