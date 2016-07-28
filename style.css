@@ -762,10 +762,6 @@ hr {
 	border-bottom-color: #90a4ae;
 }
 
-article a {
-	font-weight: bold;
-}
-
 article p,
 article ul,
 article ol {
@@ -822,11 +818,12 @@ iframe[src*="google.com/maps"] {
 a {
 	color: rgb(0, 110, 153);
 	text-decoration: none;
+	font-weight: 500;
 	letter-spacing: 0.02em;
 	transition-duration: 0.3s;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-property: all;
-	border-radius: 0.5px;
+	border-radius: 0.2rem;
 	box-shadow: inset 0 -1px 0 0 rgba(162, 181, 190, 0.4);
 }
 
@@ -1580,10 +1577,12 @@ a[href*="mailto:"] {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
-	letter-spacing: 0.02em;
 	width: 100%;
 	border-bottom: 1px solid rgb(237, 241, 242);
 }

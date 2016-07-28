@@ -46,8 +46,8 @@
 	> li {
 		position: relative;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		letter-spacing: 0.02em;
 		width: 100%;
 		border-bottom: 1px solid var(--color-grey-ui-light);
 

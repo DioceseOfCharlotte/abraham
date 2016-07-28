@@ -59,10 +59,6 @@ hr {
 	border-bottom-color: var(--grey-nuetral);
 }
 
-article a {
-	font-weight: bold;
-}
-
 article p,
 article ul,
 article ol {
