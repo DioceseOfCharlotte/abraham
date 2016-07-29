@@ -10,4 +10,12 @@ pre {
 	tab-width: 4;
 	width: 100%;
 	white-space: pre-wrap;
+	overflow: auto; /* Internet Explorer 11- */
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--monospace-font-family), monospace;
 }

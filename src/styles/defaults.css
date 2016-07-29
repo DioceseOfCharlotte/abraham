@@ -31,13 +31,9 @@
 
 	--media-element-vertical-align: middle;
 
-	--monospace-font-family: Roboto Mono, Fira Code, Menlo, Consolas, Liberation Mono;
-
-	--nav-list-style: none;
+	--monospace-font-family: Menlo, Consolas, Liberation Mono;
 
 	--selection-background-color: #b3d4fc;
-
-	--selection-color: inherit;
 
 	--selection-text-shadow: none;
 
@@ -46,8 +42,6 @@
 	--table-border-collapse: collapse;
 
 	--table-border-spacing: 0;
-
-	--textarea-resize: vertical;
 
 	--paragraph-width: 64rem;
 	--container: 74rem;

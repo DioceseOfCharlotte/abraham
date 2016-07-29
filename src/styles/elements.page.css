@@ -1,29 +1,51 @@
 /* #PAGE
 \*------------------------------------ */
 
+/* specify the root styles of the document */
+html {
+	font-size: var(--root-font-size);
+	color: var(--root-background-color);
+	background-color: var(--root-background-color);
+	cursor: var(--root-cursor);
+	box-sizing: var(--root-box-sizing);
+}
+
+/*
+* Universal inheritance
+*/
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	border-style: solid;
+	border-width: 0;
+}
+
 * {
 	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
+	margin: 0;
+	padding: 0;
+	background-repeat: var(--background-repeat);
 }
 
-/* specify the root styles of the document */
-html {
-	background-color: var(--root-background-color);
-	box-sizing: var(--root-box-sizing);
-	color: var(--root-color);
-	cursor: var(--root-cursor);
-	font-size: var(--root-font-size);
-	line-height: var(--root-line-height);
-	font-family: var(--root-font-family);
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: initial;
 }
 
 body {
-	font-family: inherit;
+	font-family: var(--root-font-family);
+	font-weight: normal;
+	line-height: var(--root-line-height);
+    color: var(--root-background-color);
+    background-color: var(--root-background-color);
 
-	@media (--sm) {
+	/*@media (--sm) {
 		font-size: 0.95rem;
-	}
+	}*/
 }
 
 article,
@@ -57,6 +79,11 @@ hr {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: var(--grey-nuetral);
+}
+
+::selection {
+	background-color: var(--selection-background-color);
+	text-shadow: none;
 }
 
 article p,
@@ -103,7 +130,28 @@ iframe[src*="google.com/maps"] {
 	max-width: 100%;
 }
 
-::-webkit-input-placeholder {
-	color: inherit;
-	opacity: 0.54;
+/* specify the progress cursor of updating elements */
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+/* specify the pointer cursor of trigger elements */
+[aria-controls] {
+	cursor: pointer;
+}
+
+/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+	cursor: default;
+}
+
+/* specify the style of visually hidden yet accessible elements */
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+
+	&:focus {
+		clip: auto;
+	}
 }

@@ -1,13 +1,24 @@
 /* #IMAGES
 \*------------------------------------ */
 
-img {
+/* specify the alignment of media elements */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: var(--media-element-vertical-align);
 	max-width: 100%;
+}
+
+img {
 	height: auto;
 }
 
 svg {
 	max-height: 100%;
+	fill: currentColor;
 }
 
 .taxonomy-agency .thumbnail {

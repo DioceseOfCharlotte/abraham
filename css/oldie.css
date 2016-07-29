@@ -437,32 +437,17 @@ textarea {
   font: inherit; /* 2 */
 }
 
-/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/* #PAGE
+\*------------------------------------ */
 
-/* Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1 */
+/* specify the root styles of the document */
 
-/*
-* Normalization
-*/
-
-input {
-	-webkit-border-radius: 0;
-}
-
-/* iOS 8+ */
-
-input[type="button"],
-	input[type="reset"],
-	input[type="submit"] {
-  -webkit-appearance: button;/* iOS 8+ */
-}
-
-input[type="number"] {
-  width: auto;/* Firefox 36+ */
-}
-
-pre {
-	overflow: auto; /* Internet Explorer 11- */
+html {
+	font-size: 100%;
+	color: #fff;
+	background-color: #fff;
+	cursor: default;
+	box-sizing: border-box;
 }
 
 /*
@@ -473,11 +458,17 @@ pre {
 :before,
 :after {
 	box-sizing: inherit;
+	border-style: solid;
+	border-width: 0;
 }
 
 * {
-	font-size: inherit;
-	line-height: inherit;
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
 }
 
 :before,
@@ -486,228 +477,16 @@ pre {
 	vertical-align: initial;
 }
 
-button,
-input,
-select,
-textarea {
-	font-family: inherit;
-	font-style: inherit;
-	font-weight: inherit;
-}
-
-/*
-* Opinionated defaults
-*/
-
-/* specify the margin and padding of all elements */
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-/* specify the border style and width of all elements */
-
-/**,
-::before,
-::after {
-	border-style: solid;
-	border-width: 0;
-}*/
-
-/* remove the tapping delay from clickable elements */
-
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-	touch-action: manipulation;
-}
-
-/* specify the standard appearance of selects */
-
-select {
-	-moz-appearance: none; /* Firefox 40+ */
-	-webkit-appearance: none;
-}
-
-/* Chrome 45+ */
-
-select::-ms-expand {
-  display: none;/* Edge 12+, Internet Explorer 11- */
-}
-
-select::-ms-value {
-  color: currentColor;/* Edge 12+, Internet Explorer 11- */
-}
-
-/* use current current as the default fill of svg elements */
-
-svg {
-	fill: currentColor;
-}
-
-/* specify the progress cursor of updating elements */
-
-[aria-busy="true"] {
-	cursor: progress;
-}
-
-/* specify the pointer cursor of trigger elements */
-
-[aria-controls] {
-	cursor: pointer;
-}
-
-/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-
-[aria-disabled] {
-	cursor: default;
-}
-
-/* specify the style of visually hidden yet accessible elements */
-
-[hidden][aria-hidden="false"] {
-	clip: rect(0 0 0 0);
-	display: inherit;
-	position: absolute;
-}
-
-[hidden][aria-hidden="false"]:focus {
-  clip: auto;
-}
-
-/*
-* Configurable defaults
-*/
-
-/* specify the background repeat of all elements */
-
-* {
-	background-repeat: no-repeat;
-}
-
-/* specify the alignment of media elements */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-	vertical-align: middle;
-	max-width: 100%;
-}
-
-/* specify the coloring of form elements */
-
-button,
-input,
-select,
-textarea {
-	background-color: #edf1f2;
-	color: rgb(50, 65, 72);
-}
-
-/* specify the minimum height of form elements */
-
-button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
-	min-height: 40px;
-}
-
-/* specify the font family of code elements */
-
-code,
-kbd,
-pre,
-samp {
-	font-family: Roboto Mono, Fira Code, Menlo, Consolas, Liberation Mono, monospace;
-}
-
-/* specify the list style of nav lists */
-
-nav ol,
-nav ul {
-	list-style: none;
-}
-
-/* specify the font size of small elements */
-
-small {
-	font-size: 75%;
-}
-
-/* specify the border styling of tables */
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* specify the resizability of textareas */
-
-textarea {
-	resize: vertical;
-}
-
-/* specify the background color, font color, and drop shadow of text selections */
-
-::selection {
-	background-color: #b3d4fc; /* required when declaring ::selection */
-	color: inherit;
-	text-shadow: none;
-}
-
-::-webkit-input-placeholder {
-	color: inherit;
-	filter: alpha(opacity=54);
-}
-
-/* #PAGE
-\*------------------------------------ */
-
-* {
-	flex-basis: auto;
-	flex-grow: 0;
-	flex-shrink: 1;
-}
-
-/* specify the root styles of the document */
-
-html {
-	background-color: #fff;
-	box-sizing: border-box;
-	color: rgb(50, 65, 72);
-	cursor: default;
-	font-size: 100%;
-	line-height: 1.6;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
 body {
-	font-family: inherit;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-weight: normal;
+	line-height: 1.6;
+    color: #fff;
+    background-color: #fff;
+
+	/*@media (--sm) {
+		font-size: 0.95rem;
+	}*/
 }
 
 article,
@@ -741,6 +520,11 @@ hr {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #90a4ae;
+}
+
+::selection {
+	background-color: #b3d4fc;
+	text-shadow: none;
 }
 
 article p,
@@ -788,9 +572,34 @@ iframe[src*="google.com/maps"] {
 	max-width: 100%;
 }
 
-::-webkit-input-placeholder {
-	color: inherit;
-	filter: alpha(opacity=54);
+/* specify the progress cursor of updating elements */
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+/* specify the pointer cursor of trigger elements */
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+
+[aria-disabled] {
+	cursor: default;
+}
+
+/* specify the style of visually hidden yet accessible elements */
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0 0 0 0);
+	display: inherit;
+	position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+  clip: auto;
 }
 
 /* #LINKS
@@ -1045,6 +854,8 @@ nav li a {
 table {
 	max-width: 100%;
 	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 th,
@@ -1114,10 +925,14 @@ textarea {
 	padding: 0.5em 0.625em !important;
 	border-width: 0 !important;
 	line-height: 1.5;
+	background-color: #edf1f2;
+	color: rgb(50, 65, 72);
 	margin: 0;
 	vertical-align: baseline;
 	font-size: inherit;
 	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
 	box-shadow: inset 0 0 0 1px rgba(162, 181, 190, 0.5);
 	transition-duration: 0.1s;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1128,6 +943,28 @@ textarea {
   outline: 0;
   background-color: #ffffff;
   box-shadow: inset 0 0 0 1px rgb(0, 157, 219) !important;
+}
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	min-height: 40px;
 }
 
 input[aria-invalid=true],
@@ -1144,6 +981,7 @@ legend {
 textarea {
 	display: block;
 	width: 100%;
+	resize: vertical;
 }
 
 label {
@@ -1160,6 +998,10 @@ input[type=radio] {
 	margin: 0 8px 0 0;
 }
 
+input[type="number"] {
+	width: auto; /* Firefox 36+ */
+}
+
 select {
 	content: " ";
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' class='v-icon' fill='%23678695' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M8.422 15.664c.32.446.836.45 1.158 0l2.763-3.86c.32-.447.135-.81-.414-.81h-5.86c-.579 0-.714.36-.416.81l2.767 3.86zm0-13.328c.32-.446.836-.45 1.158 0l2.763 3.86c.32.447.135.81-.414.81h-5.86c-.579 0-.714-.36-.416-.81l2.77-3.86z'/%3E%3C/svg%3E");
@@ -1168,6 +1010,19 @@ select {
 	background-size: 1em;
 	background-position: 98% 50%;
 	padding-right: 1.5em;
+
+	-moz-appearance: none; /* Firefox 40+ */
+	-webkit-appearance: none;
+}
+
+/* Chrome 45+ */
+
+select::-ms-expand {
+  display: none;/* Edge 12+, Internet Explorer 11- */
+}
+
+select::-ms-value {
+  color: currentColor;/* Edge 12+, Internet Explorer 11- */
 }
 
 input[type=search] {
@@ -1196,16 +1051,33 @@ input[type=search] {
 	color: #324148;
 }
 
+::-webkit-input-placeholder {
+	color: inherit;
+	filter: alpha(opacity=54);
+}
+
 /* #IMAGES
 \*------------------------------------ */
 
-img {
+/* specify the alignment of media elements */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
 	max-width: 100%;
+}
+
+img {
 	height: auto;
 }
 
 svg {
 	max-height: 100%;
+	fill: currentColor;
 }
 
 .taxonomy-agency .thumbnail {

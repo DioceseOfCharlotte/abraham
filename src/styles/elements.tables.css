@@ -4,6 +4,8 @@
 table {
 	max-width: 100%;
 	width: 100%;
+	border-collapse: var(--table-border-collapse);
+	border-spacing: var(--table-border-spacing);
 }
 
 th,
