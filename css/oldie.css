@@ -2860,7 +2860,7 @@ align-items: flex-end;
 }
 
 .u-h0 {
-	font-size: 35.2px;
+	font-size: 40px;
 }
 
 .u-h0 {
@@ -2942,16 +2942,15 @@ align-items: flex-end;
 .u-dropcap:first-letter {
 	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
-	font-size: 57.6px;
-	line-height: 54.4px;
-	margin-right: 10px;
+	margin-right: 0.15em;
 	background: transparent;
 	color: inherit;
+	font-size: 56px;
+	line-height: 0.9;
 }
 
 .u-dropcap:first-letter {
-  font-size: 73.6px;
-  line-height: 70.4px;
+  font-size: 70.4px;
 }
 
 /* #UTILITY LAYOUT
