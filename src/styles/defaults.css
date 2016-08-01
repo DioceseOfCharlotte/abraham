@@ -9,9 +9,9 @@
 :root {
 	--root-background-color: #fff;
 
-	--root-box-sizing: border-box;
-
 	--root-color: var(--color-grey-ui-dark);
+
+	--root-box-sizing: border-box;
 
 	--root-cursor: default;
 

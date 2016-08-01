@@ -40,7 +40,7 @@ body {
 	font-family: var(--root-font-family);
 	font-weight: normal;
 	line-height: var(--root-line-height);
-    color: var(--root-background-color);
+    color: var(--root-color);
     background-color: var(--root-background-color);
 
 	/*@media (--sm) {

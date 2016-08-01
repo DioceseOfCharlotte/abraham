@@ -487,7 +487,7 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-weight: normal;
 	line-height: 1.6;
-	color: #fff;
+	color: rgb(50, 65, 72);
 	background-color: #fff;
 
 	/*@media (--sm) {
