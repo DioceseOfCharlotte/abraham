@@ -92,8 +92,31 @@
 	height: 2em;
 }
 
+.o-alert {
+	display: flex;
+	align-items: center;
+}
+
+.o-alert::before {
+	background-size: contain;
+	width: 2.5em;
+	height: 2.5em;
+	margin-right: 0.5em;
+	margin-left: -0.5em;
+	flex-shrink: 0;
+	opacity: 0.7;
+}
+
 .icon-info::before {
-	@mixin icon info;
+	@mixin icon info, #005B80;
+}
+
+.icon-warning::before {
+	@mixin icon warning, #9E0800;
+}
+
+.icon-success::before {
+	@mixin icon success, #276248;
 }
 
 .icon-heart::before {
