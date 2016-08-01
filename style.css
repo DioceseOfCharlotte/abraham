@@ -1274,7 +1274,7 @@ a > img:hover {
 
 .icon-info::before {
 	content: " ";
-	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2390a4ae' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M16.25 4.807c0 1.673 1.286 2.807 2.874 2.807S22 6.479 22 4.807C22 3.133 20.713 2 19.124 2c-1.587 0-2.874 1.133-2.874 2.807zm-6.225 9.578c0 .332-.062 1.156.008 1.651l2.509-2.963c.52-.558 1.12-.949 1.426-.843.307.105.476.46.375.79l-4.152 13.5c-.479 1.577.426 3.126 2.63 3.48 3.228 0 5.145-2.144 7.032-4.922 0-.332.112-1.205.044-1.702l-2.509 2.962c-.52.559-1.164.95-1.472.845-.283-.098-.45-.407-.394-.716l4.182-13.563c.348-1.722-.597-3.29-2.595-3.49-2.1 0-5.197 2.194-7.084 4.971z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 23.999998' class='v-icon' fill='%2390a4ae' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	display: inline-block;
 }
