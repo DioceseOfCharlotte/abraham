@@ -35,7 +35,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
     "run-sequence": "^1.2.2",
-    "stylefmt": "^4.2.1",
+    "stylefmt": "^4.2.3",
     "stylelint": "^7.0.3",
     "stylelint-config-standard": "^11.0.0"
   },
