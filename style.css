@@ -907,7 +907,7 @@ th {
 
 td {
 	vertical-align: middle;
-	border-bottom: 1px solid rgb(237, 241, 242);
+	border-bottom: 1px solid rgb(243, 245, 247);
 }
 
 td > ul {
@@ -959,7 +959,7 @@ textarea {
 	padding: 0.5em 0.625em !important;
 	border-width: 0 !important;
 	line-height: 1.5;
-	background-color: rgba(237, 241, 242, 0.8);
+	background-color: rgba(243, 245, 247, 0.8);
 	color: rgb(50, 65, 72);
 	margin: 0;
 	vertical-align: baseline;
@@ -1482,7 +1482,7 @@ a[href*="mailto:"] {
 	-ms-flex-align: center;
 	align-items: center;
 	width: 100%;
-	border-bottom: 1px solid rgb(237, 241, 242);
+	border-bottom: 1px solid rgb(243, 245, 247);
 }
 
 .u-list-group > li:last-child,
@@ -1556,7 +1556,7 @@ a.btn-hollow,
 input[type="reset"],
 input[type="button"] {
 	color: rgb(0, 63, 117);
-	background-color: rgba(237, 241, 242, 0.3);
+	background-color: rgba(243, 245, 247, 0.3);
 	box-shadow: inset 0 0 0 2px rgb(0, 63, 117);
 }
 
@@ -2956,7 +2956,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-frosted-image::before {
-	background-color: rgba(237, 241, 242, 0.6);
+	background-color: rgba(243, 245, 247, 0.6);
 }
 
 .u-tinted-image {
@@ -3496,7 +3496,7 @@ html .opacity-hover:hover {
 }
 
 .u-text-grey {
-	color: #90a4ae;
+	color: rgb(162, 181, 190);
 }
 
 .u-text-silver {
@@ -3558,11 +3558,11 @@ html .opacity-hover:hover {
 }
 
 .u-bg-grey {
-	background-color: #aaa;
+	background-color: rgb(162, 181, 190);
 }
 
 .u-bg-silver {
-	background-color: #edeff3;
+	background-color: rgb(243, 245, 247);
 	color: rgb(50, 65, 72);
 }
 
@@ -3596,19 +3596,19 @@ html .opacity-hover:hover {
 }
 
 .u-bg-frost-1 {
-	background-color: rgba(237, 241, 242, 0.15);
+	background-color: rgba(243, 245, 247, 0.15);
 }
 
 .u-bg-frost-2 {
-	background-color: rgba(237, 241, 242, 0.3);
+	background-color: rgba(243, 245, 247, 0.3);
 }
 
 .u-bg-frost-3 {
-	background-color: rgba(237, 241, 242, 0.6);
+	background-color: rgba(243, 245, 247, 0.6);
 }
 
 .u-bg-frost-4 {
-	background-color: rgba(237, 241, 242, 0.9);
+	background-color: rgba(243, 245, 247, 0.9);
 }
 
 .u-bg-tint-1 {
@@ -3656,7 +3656,7 @@ html .opacity-hover:hover {
 }
 
 .u-hover-frost:hover {
-	background-color: rgba(237, 241, 242, 0.3);
+	background-color: rgba(243, 245, 247, 0.3);
 }
 
 .u-hover-tint:hover {

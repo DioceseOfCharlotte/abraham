@@ -11,7 +11,7 @@
 }
 
 .u-text-grey {
-	color: var(--grey-nuetral);
+	color: var(--color-grey-ui);
 }
 
 .u-text-silver {
@@ -72,11 +72,11 @@
 }
 
 .u-bg-grey {
-	background-color: var(--grey);
+	background-color: var(--color-grey-ui);
 }
 
 .u-bg-silver {
-	background-color: var(--silver);
+	background-color: var(--color-grey-ui-light);
 	color: var(--root-color);
 }
 

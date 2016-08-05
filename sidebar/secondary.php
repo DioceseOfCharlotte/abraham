@@ -26,7 +26,7 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 
     <div class="off-canvas__content u-py2 u-flexed-1 ">
 		<?php dynamic_sidebar( 'secondary' ); ?>
-  </div>
+	</div>
 
 	</nav>
 </aside>

@@ -146,7 +146,7 @@ function abraham_setup() {
 						'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 						'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 						'after_widget'  => '</section>',
-						'before_title'  => '<h3 class="widget-title u-text-display">',
+						'before_title'  => '<h3 class="widget-title u-px1 u-text-display">',
 						'after_title'   => '</h3>',
 						)
 					);
