@@ -1716,9 +1716,9 @@ input[type="reset"]:active {
   width: 100%;
 }
 
-.off-canvas__header .search-field {
+.off-canvas__header input[type="search"].search-field {
   width: 100%;
-  border-radius: 0;
+  background-color: #fff;
 }
 
 .off-canvas__content {

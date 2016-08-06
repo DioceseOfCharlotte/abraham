@@ -54,9 +54,9 @@
 		width: 100%;
 	}
 
-	.search-field {
+	input[type="search"].search-field {
 		width: 100%;
-		border-radius: 0;
+		background-color: #fff;
 	}
 }
 
