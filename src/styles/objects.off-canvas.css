@@ -67,12 +67,6 @@
 }
 
 .off-canvas__content {
-
-	.widget-title {
-		color: var(--grey-nuetral);
-
-	}
-
 	.widget {
 		background-color: transparent;
 		padding: 0 1rem;

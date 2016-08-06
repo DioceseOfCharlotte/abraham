@@ -873,7 +873,7 @@ th {
 
 td {
 	vertical-align: middle;
-	border-bottom: 1px solid rgb(252, 253, 253);
+	border-bottom: 1px solid rgb(243, 245, 247);
 }
 
 td > ul {
@@ -925,7 +925,7 @@ textarea {
 	padding: 0.5em 0.625em !important;
 	border-width: 0 !important;
 	line-height: 1.5;
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 	color: rgb(50, 65, 72);
 	margin: 0;
 	vertical-align: baseline;
@@ -1433,7 +1433,7 @@ a[href*="mailto:"] {
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid rgb(252, 253, 253);
+  border-bottom: 1px solid rgb(243, 245, 247);
 }
 
 .u-list-group > li:last-child, .o-list-group > li:last-child, .o-list-group-links > li:last-child {
@@ -1505,7 +1505,7 @@ a.btn-hollow,
 input[type="reset"],
 input[type="button"] {
 	color: rgb(0, 63, 117);
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 	box-shadow: inset 0 0 0 2px rgb(0, 63, 117);
 }
 
@@ -1725,10 +1725,6 @@ input[type="reset"]:active {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-}
-
-.off-canvas__content .widget-title {
-  color: #90a4ae;
 }
 
 .off-canvas__content .widget {
@@ -2765,7 +2761,7 @@ align-items: flex-end;
 }
 
 .u-frosted-image:before {
-  background-color: #fcfdfd;
+  background-color: #f3f5f7;
 }
 
 .u-tinted-image {
@@ -3341,7 +3337,7 @@ html .opacity-hover:hover {
 }
 
 .u-bg-silver {
-	background-color: rgb(252, 253, 253);
+	background-color: rgb(243, 245, 247);
 	color: rgb(50, 65, 72);
 }
 
@@ -3375,19 +3371,19 @@ html .opacity-hover:hover {
 }
 
 .u-bg-frost-1 {
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 }
 
 .u-bg-frost-2 {
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 }
 
 .u-bg-frost-3 {
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 }
 
 .u-bg-frost-4 {
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 }
 
 .u-bg-tint-1 {
@@ -3435,7 +3431,7 @@ html .opacity-hover:hover {
 }
 
 .u-hover-frost:hover {
-	background-color: #fcfdfd;
+	background-color: #f3f5f7;
 }
 
 .u-hover-tint:hover {

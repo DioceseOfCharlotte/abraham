@@ -1790,10 +1790,6 @@ input[type="reset"]:active {
 	-webkit-overflow-scrolling: touch;
 }
 
-.off-canvas__content .widget-title {
-	color: #90a4ae;
-}
-
 .off-canvas__content .widget {
 	background-color: transparent;
 	padding: 0 1rem;
