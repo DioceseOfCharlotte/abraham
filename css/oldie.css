@@ -655,7 +655,6 @@ a:after {
 .entry-title > a {
 	width: 100%;
 	display: inline-flex;
-	justify-content: space-between;
 	align-items: center;
 	padding: 12px;
 }

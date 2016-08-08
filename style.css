@@ -668,13 +668,14 @@ article:not(.arch-no-link-title) .entry-title {
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 0.75rem;
+}
+
+.entry-title .icon-sm {
+	margin-left: auto;
 }
 
 [class*="u-bg-1"] a,
