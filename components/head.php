@@ -9,7 +9,7 @@ $p_color = get_theme_mod( 'primary_color', '' );
 $hex = '#' .$p_color;
 ?>
 
-<head>
+<head <?php hybrid_attr( 'head' ); ?>>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
