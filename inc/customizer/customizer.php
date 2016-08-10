@@ -90,9 +90,9 @@ function abraham_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add our Footer Customization section section.
+	// Add our API Customization section section.
 	$wp_customize->add_section(
-		'abe_footer_section',
+		'meh_api_section',
 		array(
 			'title'    => esc_html__( 'Owner Info and APIs', 'abe' ),
 			'priority' => 90,
@@ -111,7 +111,7 @@ function abraham_customize_register( $wp_customize ) {
 		array(
 			'label'       => esc_html__( 'Copyright Text', 'abe' ),
 			'description' => esc_html__( 'Displayed in the sites footer.  &#169; 20** will be prepended to this text.', 'abe' ),
-			'section'     => 'abe_footer_section',
+			'section'     => 'meh_api_section',
 			'type'        => 'text',
 			'sanitize'    => 'html',
 		)
@@ -129,25 +129,7 @@ function abraham_customize_register( $wp_customize ) {
 		array(
 			'label'       		=> esc_html__( 'Google Analytics ID', 'abe' ),
 			'description' 		=> esc_html__( 'UA-XXXXX-Y', 'abe' ),
-			'section'     		=> 'abe_footer_section',
-			'type'        		=> 'text',
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
-		)
-	);
-
-	// Add maps api text field.
-	$wp_customize->add_setting(
-		'abe_maps_api',
-		array(
-			'default' => '',
-		)
-	);
-	$wp_customize->add_control(
-		'abe_maps_api',
-		array(
-			'label'       		=> esc_html__( 'Google Maps JS API', 'abe' ),
-			'description' 		=> esc_html__( 'YOUR_API_KEY', 'abe' ),
-			'section'     		=> 'abe_footer_section',
+			'section'     		=> 'meh_api_section',
 			'type'        		=> 'text',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
 		)
