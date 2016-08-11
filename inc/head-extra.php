@@ -9,7 +9,7 @@ add_action( 'init', 'abe_head_cleanup' );
 // https://github.com/roots/soil/blob/master/modules/clean-up.php
 function abe_head_cleanup() {
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
-	remove_action( 'wp_head', 'rsd_link' );
+	// remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 	remove_action( 'wp_head', 'wp_generator' );
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
