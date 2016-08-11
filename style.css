@@ -901,7 +901,7 @@ td {
 
 th {
 	text-align: left;
-	font-weight: 700;
+	font-weight: 500;
 	vertical-align: bottom;
 	border-bottom: 1px solid rgb(162, 181, 190);
 }
@@ -3141,8 +3141,12 @@ body:not(.search) .trail-end > span,
 	line-height: 2;
 }
 
+.u-light {
+	font-weight: 300;
+}
+
 .u-bold {
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .u-regular,

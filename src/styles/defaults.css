@@ -71,7 +71,9 @@
 	--gutter: var(--space-3);
 	--gutter-mobile: var(--space-2);
 
-	--font-bold: 700;
+	--font-light: 300;
+	--font-normal: 400;
+	--font-bold: 500;
 	--border-radius: 0.2rem;
 
 	--transition-time: 0.3s;

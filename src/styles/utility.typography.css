@@ -89,13 +89,17 @@
 	line-height: 2;
 }
 
+.u-light {
+	font-weight: var(--font-light);
+}
+
 .u-bold {
 	font-weight: var(--font-bold);
 }
 
 .u-regular,
 .u-normal {
-	font-weight: 400;
+	font-weight: var(--font-normal);
 }
 
 .u-italic {

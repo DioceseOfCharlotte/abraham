@@ -653,10 +653,14 @@ a:after {
 }
 
 .entry-title > a {
-	width: 100%;
-	display: inline-flex;
-	align-items: center;
-	padding: 12px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.entry-title .icon-sm {
+  margin-left: auto;
 }
 
 [class*="u-bg-1"] a,
@@ -865,7 +869,7 @@ td {
 
 th {
 	text-align: left;
-	font-weight: 700;
+	font-weight: 500;
 	vertical-align: bottom;
 	border-bottom: 1px solid rgb(162, 181, 190);
 }
@@ -2926,8 +2930,12 @@ align-items: flex-end;
 	line-height: 2;
 }
 
+.u-light {
+	font-weight: 300;
+}
+
 .u-bold {
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .u-regular,
