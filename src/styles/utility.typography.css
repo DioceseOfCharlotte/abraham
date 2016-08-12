@@ -1,27 +1,11 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
-.u-small {
-	font-size: 80%;
-}
-
 .u-f1 {
 	font-size: 1rem;
 
 	@media (--sm) {
 		font-size: 0.95rem;
-	}
-}
-
-.u-f-minus {
-	font-size: var(--h6);
-}
-
-.u-f-plus {
-	font-size: var(--h5-mobile);
-
-	@media (--md) {
-		font-size: var(--h5);
 	}
 }
 
@@ -57,6 +41,7 @@
 	}
 }
 
+.u-f-plus,
 .u-h5 {
 	font-size: var(--h5-mobile);
 
@@ -65,6 +50,7 @@
 	}
 }
 
+.u-f-minus,
 .u-h6 {
 	font-size: var(--h6-mobile);
 

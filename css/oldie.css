@@ -2846,24 +2846,8 @@ align-items: flex-end;
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
-.u-small {
-	font-size: 80%;
-}
-
 .u-f1 {
 	font-size: 16px;
-}
-
-.u-f-minus {
-	font-size: 14.4px;
-}
-
-.u-f-plus {
-	font-size: 17.6px;
-}
-
-.u-f-plus {
-  font-size: 20px;
 }
 
 .u-h1 {
@@ -2898,18 +2882,22 @@ align-items: flex-end;
   font-size: 24px;
 }
 
+.u-f-plus,
 .u-h5 {
 	font-size: 17.6px;
 }
 
+.u-f-plus,
 .u-h5 {
   font-size: 20px;
 }
 
+.u-f-minus,
 .u-h6 {
 	font-size: 14.4px;
 }
 
+.u-f-minus,
 .u-h6 {
   font-size: 14.4px;
 }

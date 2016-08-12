@@ -3035,10 +3035,6 @@ body:not(.search) .trail-end > span,
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
-.u-small {
-	font-size: 80%;
-}
-
 .u-f1 {
 	font-size: 1rem;
 }
@@ -3046,20 +3042,6 @@ body:not(.search) .trail-end > span,
 @media (max-width: 47em) {
 	.u-f1 {
 		font-size: 0.95rem;
-	}
-}
-
-.u-f-minus {
-	font-size: 0.9rem;
-}
-
-.u-f-plus {
-	font-size: 1.1rem;
-}
-
-@media (min-width: 48em) {
-	.u-f-plus {
-		font-size: 1.25rem;
 	}
 }
 
@@ -3103,21 +3085,25 @@ body:not(.search) .trail-end > span,
 	}
 }
 
+.u-f-plus,
 .u-h5 {
 	font-size: 1.1rem;
 }
 
 @media (min-width: 48em) {
+	.u-f-plus,
 	.u-h5 {
 		font-size: 1.25rem;
 	}
 }
 
+.u-f-minus,
 .u-h6 {
 	font-size: 0.9rem;
 }
 
 @media (min-width: 48em) {
+	.u-f-minus,
 	.u-h6 {
 		font-size: 0.9rem;
 	}
