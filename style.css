@@ -1173,6 +1173,23 @@ a > img:hover {
 	fill: currentColor;
 }
 
+.icon-line {
+	width: 1em;
+	height: 1em;
+	fill: none;
+	stroke: currentcolor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 6.25%;
+}
+
+.icon-solid {
+	width: 1em;
+	height: 1em;
+	fill: none;
+	stroke: currentcolor;
+}
+
 .o-cell > .v-icon {
 	width: 100%;
 	height: auto;

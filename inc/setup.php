@@ -170,7 +170,7 @@ function abraham_setup() {
 					set_post_thumbnail_size(     	150, 150, true );
 					add_image_size( 'abe-icon', 	80, 80, true );
 					add_image_size( 'abe-hd', 		640, 360, true );
-					add_image_size( 'abe-hd', 		1200, 675, true );
+					add_image_size( 'abe-hd-lg', 	1200, 675, true );
 					add_image_size( 'abe-card', 	380,  506, true );
 					add_image_size( 'abe-card-lg', 	760, 1012, true );
 				}
