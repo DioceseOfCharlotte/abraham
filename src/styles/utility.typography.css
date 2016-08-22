@@ -9,6 +9,10 @@
 	}
 }
 
+.u-f-fluid {
+	font-size: calc(1em + 1vw);
+}
+
 .u-h1 {
 	font-size: var(--h1-mobile);
 
