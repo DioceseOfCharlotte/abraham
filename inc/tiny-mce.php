@@ -63,7 +63,13 @@ function abraham_tiny_mce_formats( $initArray ) {
 		array(
 			'title'    => __( 'Intro Paragraph', 'abraham' ),
 			'selector' => 'p',
-			'classes'  => 'intro-paragraph u-lead u-dropcap',
+			'classes'  => 'intro-paragraph u-lead',
+			'wrapper'  => true,
+		),
+		array(
+			'title'    => __( 'Dropcap', 'abraham' ),
+			'selector' => 'p',
+			'classes'  => 'u-dropcap',
 			'wrapper'  => true,
 		),
 		array(

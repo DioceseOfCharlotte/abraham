@@ -150,7 +150,7 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "#page .u-text-1,.u-dropcap:first-letter{color:#{$colorBase}}";
+		$style .= "#page .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase}}";
 		$style .= "#page .u-text-1-dark{color:#{$colorDark}}";
 		$style .= "#page .u-text-1-light{color:#{$colorLight}}";
 		$style .= "#page .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";

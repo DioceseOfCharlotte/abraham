@@ -4,7 +4,7 @@
 /* specify the root styles of the document */
 html {
 	font-size: var(--root-font-size);
-	color: var(--root-background-color);
+	color: var(--root-color);
 	background-color: var(--root-background-color);
 	cursor: var(--root-cursor);
 	box-sizing: var(--root-box-sizing);
@@ -46,6 +46,10 @@ body {
 	/*@media (--sm) {
 		font-size: 0.95rem;
 	}*/
+}
+
+article {
+	background-color: #fff;
 }
 
 article,
