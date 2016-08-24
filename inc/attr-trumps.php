@@ -332,21 +332,21 @@ class Attr_Trumps {
 			elseif ( '1-column' === hybrid_get_theme_layout( 'theme_layout' ) ) :
 				$attr['class']      .= " {$this->args['content']}";
 
-				elseif ( 'sidebar-right' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-					$attr['class']      .= " {$this->args['content_with_sidebar']}";
+			elseif ( 'sidebar-right' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+				$attr['class']      .= " {$this->args['content_with_sidebar']}";
 
-					elseif ( 'sidebar-left' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-						$attr['class']      .= " {$this->args['content_with_sidebar']}";
-					endif;
+			elseif ( 'sidebar-left' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+				$attr['class']      .= " {$this->args['content_with_sidebar']}";
+		endif;
 
-					if ( hybrid_is_plural() ) {
-						$attr['class']      .= " {$this->args['content_archive']}";
-					}
-					if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
-						$attr['class']   .= ' facetwp-template';
-					}
+		if ( hybrid_is_plural() ) {
+			$attr['class']      .= " {$this->args['content_archive']}";
+		}
+		if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
+			$attr['class']   .= ' facetwp-template';
+		}
 
-					return $attr;
+		return $attr;
 	}
 
 	/**
