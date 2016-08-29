@@ -160,7 +160,7 @@ a[href*="youtu.be"]::before {
 	@mixin icon instagram;
 }
 
-a[href*="/departments/"]::before,
+a[href*="/documents/"]::before,
 .icon-pdf::before,
 a[href*=".pdf"]:not(.btn)::before {
 	@mixin icon file-pdf;

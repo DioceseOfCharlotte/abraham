@@ -1375,7 +1375,7 @@ a[href*="youtu.be"]::before {
 	display: inline-block;
 }
 
-a[href*="/departments/"]::before,
+a[href*="/documents/"]::before,
 .icon-pdf::before,
 a[href*=".pdf"]:not(.btn)::before {
 	content: " ";
