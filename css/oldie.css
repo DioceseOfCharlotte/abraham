@@ -3393,6 +3393,45 @@ html .opacity-hover:hover {
 	color: rgb(50, 65, 72);
 }
 
+/* Border Colors */
+
+.u-b-1 {
+	border-color: #0074d9;
+}
+
+.u-b-2 {
+	border-color: #3d9970;
+}
+
+.u-b-1-light {
+	border-color: rgb(66, 167, 255);
+}
+
+.u-b-2-light {
+	border-color: rgb(116, 200, 162);
+}
+
+.u-b-1-dark {
+	border-color: rgb(0, 63, 117);
+}
+
+.u-b-2-dark {
+	border-color: rgb(32, 80, 59);
+}
+
+.u-b-black {
+	border-color: #111;
+}
+
+.u-b-grey {
+	border-color: rgb(162, 181, 190);
+}
+
+.u-b-silver {
+	border-color: rgb(243, 245, 247);
+	color: rgb(50, 65, 72);
+}
+
 /* Alerts */
 
 .u-bg-info {
