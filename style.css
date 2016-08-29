@@ -3067,6 +3067,14 @@ body:not(.search) .trail-end > span,
 	}
 }
 
+.u-f-minus {
+	font-size: .9em;
+}
+
+.u-f-plus {
+	font-size: 1.1em;
+}
+
 .u-f-fluid {
 	font-size: calc(1em + 1vw);
 }
@@ -3111,25 +3119,21 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-.u-f-plus,
 .u-h5 {
 	font-size: 1.1rem;
 }
 
 @media (min-width: 48em) {
-	.u-f-plus,
 	.u-h5 {
 		font-size: 1.25rem;
 	}
 }
 
-.u-f-minus,
 .u-h6 {
 	font-size: 0.9rem;
 }
 
 @media (min-width: 48em) {
-	.u-f-minus,
 	.u-h6 {
 		font-size: 0.9rem;
 	}
