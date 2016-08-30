@@ -2077,6 +2077,16 @@ input[type="reset"]:active {
 /* #WHITE SPACE
 \*------------------------------------ */
 
+.u-fluid-xp {
+	padding-right: calc(0.25em + 1vw);
+	padding-left: calc(0.25em + 1vw);
+}
+
+.u-fluid-yp {
+	padding-top: calc(1em + 1vw);
+	padding-bottom: calc(1em + 1vw);
+}
+
 .u-m1 {
 	margin: 8px;
 }
@@ -2559,6 +2569,26 @@ input[type="reset"]:active {
 .u-mx4-lg {
   margin-right: 40px;
   margin-left: 40px;
+}
+
+.u-fluid-xp {
+  padding-right: calc(0.5em + 1vw);
+  padding-left: calc(0.5em + 1vw);
+}
+
+.u-fluid-yp {
+  padding-top: calc(0.5em + 1vw);
+  padding-bottom: calc(0.5em + 1vw);
+}
+
+.u-fluid-xp {
+  padding-right: calc(1em + 1vw);
+  padding-left: calc(1em + 1vw);
+}
+
+.u-fluid-yp {
+  padding-top: calc(1em + 1vw);
+  padding-bottom: calc(1em + 1vw);
 }
 
 .u-strip-space {

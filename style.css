@@ -2170,6 +2170,16 @@ body:not(.search) .trail-end > span,
 /* #WHITE SPACE
 \*------------------------------------ */
 
+.u-fluid-xp {
+	padding-right: calc(0.25em + 1vw);
+	padding-left: calc(0.25em + 1vw);
+}
+
+.u-fluid-yp {
+	padding-top: calc(1em + 1vw);
+	padding-bottom: calc(1em + 1vw);
+}
+
 .u-m1 {
 	margin: 0.5rem;
 }
@@ -2655,6 +2665,42 @@ body:not(.search) .trail-end > span,
 	.u-mx4-lg {
 		margin-right: 2.5rem;
 		margin-left: 2.5rem;
+	}
+}
+
+@media (min-width: 48em) {
+	.u-fluid-xp {
+		padding-right: calc(0.5em + 1vw);
+		padding-left: calc(0.5em + 1vw);
+	}
+
+	.u-fluid-yp {
+		padding-top: calc(0.5em + 1vw);
+		padding-bottom: calc(0.5em + 1vw);
+	}
+}
+
+@media (min-width: 62em) {
+	.u-fluid-xp {
+		padding-right: calc(1em + 1vw);
+		padding-left: calc(1em + 1vw);
+	}
+
+	.u-fluid-yp {
+		padding-top: calc(1em + 1vw);
+		padding-bottom: calc(1em + 1vw);
+	}
+}
+
+@media (min-width: 92em) {
+	.u-fluid-xp {
+		padding-right: calc(1em + 10vw);
+		padding-left: calc(1em + 10vw);
+	}
+
+	.u-fluid-yp {
+		padding-top: calc(1em + 10vw);
+		padding-bottom: calc(1em + 10vw);
 	}
 }
 
