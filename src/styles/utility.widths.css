@@ -37,6 +37,15 @@
 	width: auto;
 }
 
+.u-1of1-break {
+	min-width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw !important;
+	margin-right: -50vw !important;
+}
+
 .u-1of1 {
 	width: 100%;
 }
@@ -133,6 +142,15 @@
 }
 
 @media (--lg) {
+	.u-1of1-break-lg {
+		min-width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw !important;
+		margin-right: -50vw !important;
+	}
+
 	.u-1of1-lg {
 		width: 100%;
 	}
