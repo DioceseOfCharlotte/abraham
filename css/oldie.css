@@ -2054,8 +2054,8 @@ input[type="reset"]:active {
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
 }
 
 .u-1of1-lg {
