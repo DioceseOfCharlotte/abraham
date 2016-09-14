@@ -506,6 +506,10 @@ article {
   max-width: calc(50% - 2rem);
 }
 
+main {
+    width: 100%;
+}
+
 article,
 aside,
 details,

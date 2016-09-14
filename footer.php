@@ -14,7 +14,7 @@
 
 		<?php hybrid_get_sidebar( 'footer' ); ?>
 
-		<p class="credit u-py1 u-bg-tint-1 u-text-center mdl-mega-footer--bottom-section">
+		<p class="credit u-py1 u-bg-tint-1 u-text-center">
 			<?php abe_do_copyright_text(); ?>
 		</p><!-- .credit -->
 

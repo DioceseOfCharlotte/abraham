@@ -64,6 +64,10 @@ article {
 	}*/
 }
 
+main {
+    width: 100%;
+}
+
 article,
 aside,
 details,
