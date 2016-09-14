@@ -190,3 +190,10 @@ function abe_get_default_image() {
 	}
 		return $image_uri;
 }
+
+
+function abe_yoast_seo_remove_metabox() {
+    if ( ! current_user_can( 'edit_others_posts' ) )
+        remove_meta_box( 'wpseo_meta', 'post', 'normal' );
+}
+add_action( 'add_meta_boxes', 'abe_yoast_seo_remove_metabox', 11 );
