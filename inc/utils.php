@@ -11,6 +11,7 @@ add_filter( 'jetpack_get_default_modules', '__return_empty_array' );
 add_shortcode( 'doc_logout', 'doc_logout_link' );
 add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
 add_shortcode( 'abe_permalink', 'abe_do_permalink' );
+add_action( 'add_meta_boxes', 'abe_yoast_seo_remove_metabox', 11 );
 
 function abe_hierarchy_cpts() {
 	$cpts = array( 'page' );
@@ -53,7 +54,7 @@ function meh_responsive_videos_embed_html( $html ) {
 		return $html;
 	}
 
-	return '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div><div class="FlexEmbed-content">'.$html.'</div></div>';
+	return '<div class="FlexEmbed"><div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div><div class="FlexEmbed-content">' . $html . '</div></div>';
 }
 
 /**
@@ -184,7 +185,7 @@ function abe_get_default_image() {
 	if ( is_child_theme() && file_exists( "{$child_dir}images/default-thumb.jpg" ) ) {
 
 		$image_uri = "{$child_uri}images/default-thumb.jpg";
-	} else if ( file_exists( "{$dir}images/default-thumb.jpg" ) ) {
+	} elseif ( file_exists( "{$dir}images/default-thumb.jpg" ) ) {
 
 		$image_uri = "{$uri}images/default-thumb.jpg";
 	}
@@ -193,7 +194,8 @@ function abe_get_default_image() {
 
 
 function abe_yoast_seo_remove_metabox() {
-    if ( ! current_user_can( 'edit_others_posts' ) )
-        remove_meta_box( 'wpseo_meta', 'post', 'normal' );
+	if ( ! current_user_can( 'edit_others_posts' ) ) {
+		$cpt = get_post_type();
+		remove_meta_box( 'wpseo_meta', $cpt, 'normal' );
+	}
 }
-add_action( 'add_meta_boxes', 'abe_yoast_seo_remove_metabox', 11 );
