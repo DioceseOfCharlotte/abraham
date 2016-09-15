@@ -11,27 +11,27 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
-@import "settings.mixins.css";
-@import "normalize.css";
-@import "elements.page.css";
-@import "elements.links.css";
-@import "elements.typography.css";
-@import "elements.buttons.css";
-@import "elements.lists.css";
-@import "elements.tables.css";
-@import "elements.quotes.css";
-@import "elements.forms.css";
-@import "elements.images.css";
-@import "objects.grid.css";
-@import "objects.icons.css";
-@import "objects.lists.css";
-@import "objects.buttons.css";
-@import "objects.embeds.css";
-@import "objects.nav.css";
-@import "objects.off-canvas.css";
+@import "settings.mixins";
+@import "normalize";
+@import "elements.page";
+@import "elements.links";
+@import "elements.typography";
+@import "elements.buttons";
+@import "elements.lists";
+@import "elements.tables";
+@import "elements.quotes";
+@import "elements.forms";
+@import "elements.images";
+@import "objects.grid";
+@import "objects.icons";
+@import "objects.lists";
+@import "objects.buttons";
+@import "objects.embeds";
+@import "objects.nav";
+@import "objects.off-canvas";
 @import "objects.animations";
-@import "objects.shadows.css";
-@import "components.breadcrumbs.css";
+@import "objects.shadows";
+@import "components.breadcrumbs";
 @import "utility.widths";
 @import "utility.spacing";
 @import "utility.tables";
@@ -42,5 +42,5 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "utility.borders";
 @import "utility.colors";
 @import "utility.helpers";
-@import "shame.css";
-@import "defaults.css";
+@import "shame";
+@import "defaults";

@@ -122,7 +122,6 @@ gulp.task('vendors', () => {
 gulp.task('styles', () => {
 	gulp.src('src/styles/index.css')
 		.pipe($.sourcemaps.init())
-
 		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe(gulp.dest('.tmp'))
 		.pipe($.if('*.css', $.concat('style.css')))
