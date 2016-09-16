@@ -644,8 +644,8 @@ a {
 	text-decoration: none;
 	font-weight: 500;
 	letter-spacing: 0.02em;
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: all;
 	border-radius: 0.2rem;
 	box-shadow: inset 0 -1px 0 0 rgba(162, 181, 190, 0.4);
@@ -654,6 +654,8 @@ a {
 a:hover {
 	color: rgb(0, 157, 219);
 	background-color: rgba(162, 181, 190, 0.2);
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 a.active,
@@ -822,8 +824,8 @@ input[type="reset"],
 input[type="submit"] {
 	color: inherit;
 	background-color: transparent;
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: all;
 	padding: 0.5em 0.75em;
 	line-height: 1.5;
@@ -844,7 +846,9 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.3);
+	box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .btn:focus,
@@ -865,7 +869,7 @@ input[type="reset"].is-active,
 input[type="submit"]:focus,
 input[type="submit"]:active,
 input[type="submit"].is-active {
-	box-shadow: inset 0 0 0 20rem rgba(144, 164, 174, 0.5);
+	box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.4);
 	outline: 0;
 }
 
@@ -983,7 +987,7 @@ textarea {
 	padding: 0.5em 0.625em !important;
 	border-width: 0 !important;
 	line-height: 1.5;
-	background-color: rgba(243, 245, 247, 0.8);
+	background-color: rgba(50, 65, 72, 0.1);
 	color: rgb(50, 65, 72);
 	margin: 0;
 	vertical-align: baseline;
@@ -991,9 +995,9 @@ textarea {
 	font-family: inherit;
 	font-style: inherit;
 	font-weight: inherit;
-	box-shadow: inset 0 0 0 1px rgba(162, 181, 190, 0.5);
-	transition-duration: 0.1s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: inset 0 0 0 1px rgba(50, 65, 72, 0.1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: color, background-color, box-shadow;
 }
 
@@ -1002,6 +1006,8 @@ select:focus,
 textarea:focus {
 	outline: 0;
 	background-color: rgba(255, 255, 255, 0.95);
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 	box-shadow: inset 0 0 0 1px rgb(0, 157, 219) !important;
 }
 
@@ -1150,9 +1156,7 @@ svg {
 }
 
 a > img {
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: opacity;
+	transition: inherit;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -1852,8 +1856,8 @@ input[type="reset"]:active {
 }
 
 .animating {
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	/*animation-fill-mode: both;
     backface-visibility: hidden;*/
 }
@@ -3531,8 +3535,8 @@ body:not(.search) .trail-end > span,
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: opacity;
 	box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px currentColor;
 }
@@ -3543,8 +3547,8 @@ body:not(.search) .trail-end > span,
 
 html .opacity-hover {
 	opacity: 1;
-	transition-duration: 0.3s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.16s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: opacity;
 }
 
@@ -3879,7 +3883,7 @@ html .opacity-hover:hover {
 	color: rgb(0, 110, 153);
 	text-decoration: none;
 	transition-duration: 0.2s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: all;
 	border-radius: 0.5px;
 	box-shadow: inset 0 -1px 0 0 rgba(162, 181, 190, 0.4);
@@ -3888,7 +3892,7 @@ html .opacity-hover:hover {
 .u-link[class]:hover {
 	color: rgb(0, 157, 219);
 	box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
-	transition-duration: 0.3s;
+	transition-duration: 0.16s;
 }
 
 .u-link[class]:active,

@@ -15,6 +15,8 @@ a {
 	&:hover {
 		color: var(--color-links-hover);
 		background-color: color(var(--color-grey-ui) a(20%));
+		transition-duration: var(--transition-time-out);
+		transition-timing-function: var(--animation-curve-out);
 	}
 
 	&.active,

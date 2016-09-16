@@ -24,7 +24,7 @@
 
 	--background-repeat: no-repeat;
 
-	--form-element-background-color: color(var(--color-grey-ui-light) a(80%));
+	--form-element-background-color: color(var(--color-grey-ui-dark) a(10%));
 
 	--form-element-color: var(--root-color);
 
@@ -80,8 +80,10 @@
 	--font-bold: 500;
 	--border-radius: 0.2rem;
 
-	--transition-time: 0.3s;
-	--animation-curve: cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-time: 0.16s;
+	--transition-time-out: 0.2s;
+	--animation-curve: cubic-bezier(0.4, 0, 1, 1);
+	--animation-curve-out: cubic-bezier(0, 0, 0.2, 1);
 
 	--opacity: 0.8;
 

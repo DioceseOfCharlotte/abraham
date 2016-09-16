@@ -30,9 +30,7 @@ svg {
 }
 
 a > img {
-	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-curve);
-	transition-property: opacity;
+	transition: inherit;
 	backface-visibility: hidden;
 
 	&:hover {
