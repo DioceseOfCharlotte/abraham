@@ -137,3 +137,16 @@ input[value=Other]:not(:focus) {
 	color: inherit;
 	opacity: 0.54;
 }
+
+[class*="u-bg-"]:not(.u-bg-white) {
+
+	input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+	select,
+	textarea {
+		background-color: var(--color-frost-4);
+		&:focus {
+			background-color: color(#fff a(95%));
+		}
+	}
+
+}
