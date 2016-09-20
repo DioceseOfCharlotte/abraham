@@ -1131,6 +1131,13 @@ input[value=Other]:not(:focus) {
 	background-color: rgba(255, 255, 255, 0.95);
 }
 
+input:disabled,
+input[readonly] {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
 /* #IMAGES
 \*------------------------------------ */
 

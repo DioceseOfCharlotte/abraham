@@ -150,3 +150,10 @@ input[value=Other]:not(:focus) {
 	}
 
 }
+
+input:disabled,
+input[readonly] {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
