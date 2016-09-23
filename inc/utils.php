@@ -13,26 +13,6 @@ add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
 add_shortcode( 'abe_permalink', 'abe_do_permalink' );
 add_action( 'add_meta_boxes', 'abe_yoast_seo_remove_metabox', 11 );
 
-function abe_hierarchy_cpts() {
-	$cpts = array( 'page' );
-
-	if ( has_filter( 'abe_add_hierarchy_cpts' ) ) {
-		$cpts = apply_filters( 'abe_add_hierarchy_cpts', $cpts );
-	}
-
-	return $cpts;
-}
-
-function abe_non_hierarchy_cpts() {
-	$cpts = array( 'post' );
-
-	if ( has_filter( 'abe_add_non_hierarchy_cpts' ) ) {
-		$cpts = apply_filters( 'abe_add_non_hierarchy_cpts', $cpts );
-	}
-
-	return $cpts;
-}
-
 function meh_responsive_videos() {
 
 	/* Wrap the videos */

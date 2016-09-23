@@ -23,7 +23,6 @@ require_once $abe_inc . 'customizer/customizer.php';    	// Customizer.
 require_once $abe_inc . 'customizer/custom-background.php'; // Customizer.
 require_once $abe_inc . 'template-tweaks.php';
 require_once $abe_inc . 'template-tags.php';
-//require_once $abe_inc . 'metaboxes.php';
 require_once $abe_inc . 'attr-trumps.php';              // Css class selectors.
 require_once $abe_inc . 'utils.php';                    // Utility functions.
 require_once $abe_inc . 'tiny-mce.php';                 // Extra wysiwyg actions.
