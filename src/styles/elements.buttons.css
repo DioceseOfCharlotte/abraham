@@ -22,7 +22,6 @@ input[type="submit"] {
 	box-shadow: none;
 
 	&:hover {
-		color: inherit;
 		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(20%));
 		transition-duration: var(--transition-time-out);
 		transition-timing-function: var(--animation-curve-out);
@@ -34,4 +33,9 @@ input[type="submit"] {
 		box-shadow: inset 0 0 0 20rem color(var(--color-grey-ui) a(40%));
 		outline: 0;
 	}
+}
+
+a.btn:hover,
+a.button:hover {
+	color: inherit;
 }

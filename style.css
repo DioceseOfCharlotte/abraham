@@ -844,7 +844,6 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	color: inherit;
 	box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
 	transition-duration: 0.2s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -870,6 +869,11 @@ input[type="submit"]:active,
 input[type="submit"].is-active {
 	box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.4);
 	outline: 0;
+}
+
+a.btn:hover,
+a.button:hover {
+	color: inherit;
 }
 
 /* #LISTS
