@@ -21,14 +21,6 @@ svg {
 	fill: currentColor;
 }
 
-.taxonomy-agency .thumbnail {
-	max-width: 100px;
-
-	@media (--md) {
-		max-width: 130px;
-	}
-}
-
 a > img {
 	transition: inherit;
 	backface-visibility: hidden;
