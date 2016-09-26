@@ -11,6 +11,18 @@
 	padding-bottom: calc(1em + 1vw);
 }
 
+.u-m05 {
+	margin: var(--space-05);
+}
+
+.u-m15 {
+	margin: var(--space-15);
+}
+
+.u-m25 {
+	margin: var(--space-25);
+}
+
 .u-m1 {
 	margin: var(--space-1);
 }

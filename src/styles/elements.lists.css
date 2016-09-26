@@ -21,6 +21,10 @@ ul:last-child {
 	margin-bottom: 0;
 }
 
+li {
+    padding: .2em 0;
+}
+
 /* specify the list style of nav lists */
 nav ol,
 nav ul,

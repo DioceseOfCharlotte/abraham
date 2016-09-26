@@ -57,7 +57,7 @@ class Attr_Trumps {
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-ja',
 
-			'page_header'             	=> 'u-p4 u-1of1 u-rel u-text-shadow u-text-center',
+			'page_header'             	=> 'u-px1 u-py3 u-1of1 u-rel u-text-shadow u-text-center',
 			'page_title'              	=> 'u-h0 u-m0 u-text-display',
 			'archive_description'     	=> 'u-1of1 u-p2 u-p4-md u-text-left u-br u-container u-mb2 u-mb3-md u-bg-white u-rel u-shadow2',
 

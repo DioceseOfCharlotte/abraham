@@ -810,6 +810,7 @@ input[type="submit"] {
 }
 
 .btn:hover, .button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  color: inherit;
   box-shadow: inset 0 0 0 20rem rgba(162, 181, 190, 0.2);
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -858,6 +859,10 @@ ul ol {
 
 ul:last-child {
 	margin-bottom: 0;
+}
+
+li {
+    padding: .2em 0;
 }
 
 /* specify the list style of nav lists */
@@ -2129,6 +2134,18 @@ input[type="reset"]:active {
 .u-fluid-yp {
 	padding-top: calc(1em + 1vw);
 	padding-bottom: calc(1em + 1vw);
+}
+
+.u-m05 {
+	margin: 8px;
+}
+
+.u-m15 {
+	margin: 24px;
+}
+
+.u-m25 {
+	margin: 40px;
 }
 
 .u-m1 {
@@ -3508,7 +3525,6 @@ html .opacity-hover:hover {
 
 .u-b-silver {
 	border-color: rgb(243, 245, 247);
-	color: rgb(50, 65, 72);
 }
 
 /* Alerts */
