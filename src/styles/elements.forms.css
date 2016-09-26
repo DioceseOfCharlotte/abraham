@@ -97,7 +97,7 @@ select {
 	@mixin icon select-arrows, #678695;
 	background-size: 1em;
 	background-position: 98% 50%;
-	padding-right: 1.5em;
+	padding-right: 1.25em;
 
 	-moz-appearance: none; /* Firefox 40+ */
 	-webkit-appearance: none; /* Chrome 45+ */

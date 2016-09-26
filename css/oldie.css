@@ -1037,7 +1037,7 @@ select {
 	display: inline-block;
 	background-size: 1em;
 	background-position: 98% 50%;
-	padding-right: 1.5em;
+	padding-right: 1.25em;
 
 	-moz-appearance: none; /* Firefox 40+ */
 	-webkit-appearance: none;
@@ -1128,8 +1128,8 @@ a > img {
 	backface-visibility: hidden;
 }
 
-a > img:hover {
-  filter: alpha(opacity=80);
+a:hover > img {
+	filter: alpha(opacity=80);
 }
 
 /* #GRID
@@ -2947,7 +2947,7 @@ align-items: flex-end;
 }
 
 .u-f-minus {
-	font-size: .8em;
+	font-size: .9em;
 }
 
 .u-f-plus {

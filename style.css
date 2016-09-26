@@ -1073,7 +1073,7 @@ select {
 	display: inline-block;
 	background-size: 1em;
 	background-position: 98% 50%;
-	padding-right: 1.5em;
+	padding-right: 1.25em;
 	-moz-appearance: none; /* Firefox 40+ */
 	-webkit-appearance: none;
 }
@@ -1168,7 +1168,7 @@ a > img {
 	backface-visibility: hidden;
 }
 
-a > img:hover {
+a:hover > img {
 	opacity: 0.8;
 }
 
@@ -3162,7 +3162,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-f-minus {
-	font-size: .8em;
+	font-size: .9em;
 }
 
 .u-f-plus {

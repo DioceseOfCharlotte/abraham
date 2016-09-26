@@ -24,8 +24,8 @@ svg {
 a > img {
 	transition: inherit;
 	backface-visibility: hidden;
+}
 
-	&:hover {
-		opacity: var(--opacity);
-	}
+a:hover > img {
+	opacity: var(--opacity);
 }
