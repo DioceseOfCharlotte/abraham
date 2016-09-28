@@ -1622,15 +1622,18 @@ input[type="button"] {
 	box-shadow: inset 0 0 0 2px rgb(0, 63, 117);
 }
 
+a.btn-hollow:hover,
+a.btn-hollow:focus,
+a.btn-hollow:active,
 .btn-hollow:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
 .btn-hollow:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
 .btn-hollow:active,
-input[type="button"]:active,
-input[type="reset"]:active {
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:active,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="button"]:active {
 	color: #fff;
 	background-color: rgb(0, 63, 117);
 	box-shadow: none;
@@ -2872,35 +2875,30 @@ body:not(.search) .trail-end > span,
 .u-flex-center {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
-	-ms-grid-row-align: center;
 	align-items: center;
 }
 
 .u-flex-baseline {
 	-webkit-align-items: baseline;
 	-ms-flex-align: baseline;
-	-ms-grid-row-align: baseline;
 	align-items: baseline;
 }
 
 .u-flex-stretch {
 	-webkit-align-items: stretch;
 	-ms-flex-align: stretch;
-	-ms-grid-row-align: stretch;
 	align-items: stretch;
 }
 
 .u-flex-start {
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
-	-ms-grid-row-align: flex-start;
 	align-items: flex-start;
 }
 
 .u-flex-end {
 	-webkit-align-items: flex-end;
 	-ms-flex-align: end;
-	-ms-grid-row-align: flex-end;
 	align-items: flex-end;
 }
 
@@ -2949,12 +2947,14 @@ body:not(.search) .trail-end > span,
 .u-flexed-center {
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
 	align-self: center;
 }
 
 .u-flexed-stretch {
 	-webkit-align-self: stretch;
 	-ms-flex-item-align: stretch;
+	-ms-grid-row-align: stretch;
 	align-self: stretch;
 }
 

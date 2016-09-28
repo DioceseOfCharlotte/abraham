@@ -32,7 +32,7 @@ function abraham_custom_header_setup() {
 			'default-text-color'     => 'ffffff',
 			'header-text'            => true,
 			'uploads'                => true,
-			'wp-head-callback'       => 'abraham_custom_header_wp_head'
+			'wp-head-callback'       => 'abraham_custom_header_wp_head',
 		)
 	);
 }
@@ -45,18 +45,28 @@ function abraham_custom_header_setup() {
  * @return void
  */
 function abraham_custom_header_wp_head() {
-$style = '';
-if ( display_header_text() ) {
-	$hex = get_header_textcolor();
-	if ( ! $hex )
-		return;
+		$style = '';
+		$bg_image = '';
 
-	$style .= ".site-header,.archive-header{color:#{$hex};}";
-}
-if (get_header_image()) {
-	$bg_image = get_header_image();
-	$style .= ".archive-header{background-image:url({$bg_image});}.page-head-text{min-height:20vw;}";
- }
+		$hex = get_header_textcolor();
+		$style .= ".site-header,.archive-header{color:#{$hex};}";
 
-	echo "\n" . '<style id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+		$queried_object_id = get_queried_object_id();
+		$post_image = get_post_meta( $queried_object_id, 'header_image', true );
+
+		$term_image = get_term_meta( $queried_object_id, 'image', true );
+
+	if ( $post_image ) {
+		$bg_image = wp_get_attachment_image_url( $post_image, 'abe-hd-lg' );
+
+	} elseif ( has_post_thumbnail() ) {
+		$bg_image = wp_get_attachment_image_url( get_post_thumbnail_id(), 'abe-hd-lg' );
+
+	} elseif ( get_header_image() ) {
+		$bg_image = get_header_image();
+	}
+	if ( $bg_image ) {
+		$style .= ".article-hero{background-image:url({$bg_image});}";
+	}
+	   echo "\n" . '<style id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 }

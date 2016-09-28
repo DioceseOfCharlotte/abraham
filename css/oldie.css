@@ -837,8 +837,8 @@ input[type="submit"] {
   outline: 0;
 }
 
-.btn:hover,
-.button:hover {
+a.btn:hover,
+a.button:hover {
 	color: inherit;
 }
 
@@ -1569,18 +1569,21 @@ input[type="button"] {
 	box-shadow: inset 0 0 0 2px rgb(0, 63, 117);
 }
 
-.btn-hollow:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.btn-hollow:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-.btn-hollow:active,
-input[type="button"]:active,
-input[type="reset"]:active {
-	color: #fff;
-	background-color: rgb(0, 63, 117);
-	box-shadow: none;
+a.btn-hollow:hover,
+	a.btn-hollow:focus,
+	a.btn-hollow:active,
+	.btn-hollow:hover,
+	.btn-hollow:focus,
+	.btn-hollow:active,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	input[type="reset"]:active,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="button"]:active {
+  color: #fff;
+  background-color: rgb(0, 63, 117);
+  box-shadow: none;
 }
 
 .btn-round {
@@ -2735,23 +2738,23 @@ input[type="reset"]:active {
 }
 
 .u-flex-center {
-align-items: center;
+	align-items: center;
 }
 
 .u-flex-baseline {
-align-items: baseline;
+	align-items: baseline;
 }
 
 .u-flex-stretch {
-align-items: stretch;
+	align-items: stretch;
 }
 
 .u-flex-start {
-align-items: flex-start;
+	align-items: flex-start;
 }
 
 .u-flex-end {
-align-items: flex-end;
+	align-items: flex-end;
 }
 
 .u-flex-jb {
@@ -2783,11 +2786,11 @@ align-items: flex-end;
 }
 
 .u-flexed-center {
-	align-self: center;
+align-self: center;
 }
 
 .u-flexed-stretch {
-	align-self: stretch;
+align-self: stretch;
 }
 
 .u-flexed-1 {
