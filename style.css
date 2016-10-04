@@ -3280,6 +3280,16 @@ body:not(.search) .trail-end > span,
 	font-weight: 500;
 }
 
+.u-text-read {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.u-text-display,
+.u-text-display > a,
+.u-dropcap::first-letter {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 .u-regular,
 .u-normal {
 	font-weight: 400;

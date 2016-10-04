@@ -93,6 +93,16 @@
 	font-weight: var(--font-bold);
 }
 
+.u-text-read {
+	font-family: var(--root-font-family);
+}
+
+.u-text-display,
+.u-text-display>a,
+.u-dropcap::first-letter {
+	font-family: var(--display-font-family);
+}
+
 .u-regular,
 .u-normal {
 	font-weight: var(--font-normal);
