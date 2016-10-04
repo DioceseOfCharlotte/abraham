@@ -37,7 +37,7 @@ function abe_template_hierarchy( $templates ) {
  * Clean up the_excerpt().
  */
 function abe_excerpt_more() {
-	return '<a class="btn btn-sm u-p0 u-round u-mx1 u-h3 u-opacity u-lh-1 u-text-2 btn-readmore" href="'.get_permalink().'">'.abe_get_svg( 'ellipsis-circle', 'sm' ).'</a>';
+	return '<a class="btn btn-sm u-p0 u-round u-mx1 u-h3 u-opacity u-lh-1 u-text-2 btn-readmore" href="' . get_permalink() . '">' . abe_get_svg( 'ellipsis-circle', 'sm' ) . '</a>';
 }
 
 /**
@@ -50,10 +50,10 @@ function abe_excerpt_length( $length ) {
 function abe_custom_logo() {
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 	$html = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
-            'class'    => 'custom-logo',
-            'itemprop' => 'logo',
-        )
-    );
+			'class'    => 'custom-logo',
+			'itemprop' => 'logo',
+		)
+	);
 	return $html;
 }
 
