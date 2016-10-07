@@ -50,6 +50,7 @@ body {
 
 article {
 	background-color: #fff;
+	color: var(--root-color);
 }
 
 article {
