@@ -501,7 +501,7 @@ article {
 }
 
 article,
-article:last-of-type {
+article:last-of-type:not(:first-of-type) {
 	width: 100%;
 	/*@media (--xl) {
 		width: calc(33% - var(--gutter));
@@ -511,7 +511,7 @@ article:last-of-type {
 
 @media (min-width: 48em) {
 	article,
-	article:last-of-type {
+	article:last-of-type:not(:first-of-type) {
 		width: calc(50% - 2rem);
 		max-width: calc(50% - 2rem);
 	}

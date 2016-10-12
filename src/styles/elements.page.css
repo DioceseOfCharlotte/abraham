@@ -54,7 +54,7 @@ article {
 }
 
 article,
-article:last-of-type {
+article:last-of-type:not(:first-of-type) {
 	width: 100%;
 	@media (--md) {
 		width: calc(50% - var(--gutter));
