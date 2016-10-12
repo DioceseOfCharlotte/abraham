@@ -13,8 +13,8 @@ use Mexitek\PHPColors\Color;
  * @param string $icon name of the icon.
  * @param string $size css class for icon size.
  */
-function abe_do_svg( $icon, $size ) {
-	echo abe_get_svg( $icon, $size );
+function abe_do_svg( $icon = 'info', $height = '1em', $width = '' ) {
+		echo abe_get_svg( $icon, $height, $width );
 }
 
 /**
@@ -23,25 +23,23 @@ function abe_do_svg( $icon, $size ) {
  * @param string $icon name of the icon.
  * @param string $size css class for icon size.
  */
-function abe_get_svg( $icon = 'info', $size = 'sm' ) {
-
-	ob_start(); ?>
-	<span class="icon-<?= $size ?>"><?php include( locate_template( 'images/icons/' . esc_attr( $icon ) . '.svg' ) ); ?></span>
-	<?php return ob_get_clean();
-
-}
-
-
-
-function meh_get_svg( $icon = 'info', $size = '1em' ) {
+function abe_get_svg( $icon = 'info', $height = '1em', $width = '' ) {
 
 	// Set ARIA.
 	$aria_label = ' aria-label="' . esc_html( $icon ) . '"';
 
+	if ( $height == 'sm' ) {
+		$height = '1em';
+	}
+
+	if ( $width == '' ) {
+		$width = $height;
+	}
+
 	// Begin SVG markup
 	$svg = file_get_contents( locate_template( 'images/icons/' . esc_html( $icon ) . '.svg' ) );
 
-	$svg = str_replace( '<svg', '<svg class="icon-' . $icon . '" height="' . $size . '" width="' . $size . '" ' . $aria_label, $svg );
+	$svg = str_replace( '<svg', '<svg class="doc-icon doc-icon-' . $icon . '" height="' . $height . '" width="' . $width . '" aria-label="' . esc_html( $icon ) . '"', $svg );
 
 	return $svg;
 }
@@ -51,9 +49,7 @@ function meh_get_svg( $icon = 'info', $size = '1em' ) {
  *
  * @param  array  $args  Parameters needed to display an SVG.
  */
-function meh_do_svg( $icon = 'info', $size = '1em' ) {
-	echo meh_get_svg( $icon, $size );
-}
+
 
 /**
  * Display the Edit Post Link

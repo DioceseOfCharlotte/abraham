@@ -16,11 +16,13 @@ $video = hybrid_media_grabber(
 
 	<?php tha_entry_top(); ?>
 
-	<?php if ( $video ) {
-		echo $video;
-	} else {
-		get_template_part( 'components/img', 'hd' );
-	} ?>
+	<?php
+		if ( $video ) {
+			echo $video;
+		} else {
+			get_template_part( 'components/img', 'hd' );
+		}
+	?>
 
 	<?php arch_title(); ?>
 	<?php arch_excerpt(); ?>

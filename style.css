@@ -500,7 +500,8 @@ article {
 	color: rgb(50, 65, 72);
 }
 
-article {
+article,
+article:last-of-type {
 	width: 100%;
 	/*@media (--xl) {
 		width: calc(33% - var(--gutter));
@@ -509,7 +510,8 @@ article {
 }
 
 @media (min-width: 48em) {
-	article {
+	article,
+	article:last-of-type {
 		width: calc(50% - 2rem);
 		max-width: calc(50% - 2rem);
 	}
@@ -1232,6 +1234,10 @@ a:hover > img {
 	height: 1em;
 	fill: none;
 	stroke: currentcolor;
+}
+
+.entry-title .doc-icon {
+	margin-left: auto;
 }
 
 .o-cell > .v-icon {

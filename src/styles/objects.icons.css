@@ -21,6 +21,10 @@
 	stroke: currentcolor;
 }
 
+.entry-title .doc-icon {
+    margin-left: auto;
+}
+
 .o-cell > .v-icon {
 	width: 100%;
 	height: auto;
