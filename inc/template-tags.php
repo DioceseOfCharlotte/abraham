@@ -26,9 +26,33 @@ function abe_do_svg( $icon, $size ) {
 function abe_get_svg( $icon = 'info', $size = 'sm' ) {
 
 	ob_start(); ?>
-	<span class="icon-<?= $size ?>"><?php include( locate_template( 'images/icons/'.esc_attr( $icon ).'.svg' ) ); ?></span>
+	<span class="icon-<?= $size ?>"><?php include( locate_template( 'images/icons/' . esc_attr( $icon ) . '.svg' ) ); ?></span>
 	<?php return ob_get_clean();
 
+}
+
+
+
+function meh_get_svg( $icon = 'info', $size = '1em' ) {
+
+	// Set ARIA.
+	$aria_label = ' aria-label="' . esc_html( $icon ) . '"';
+
+	// Begin SVG markup
+	$svg = file_get_contents( locate_template( 'images/icons/' . esc_html( $icon ) . '.svg' ) );
+
+	$svg = str_replace( '<svg', '<svg class="icon-' . $icon . '" height="' . $size . '" width="' . $size . '" ' . $aria_label, $svg );
+
+	return $svg;
+}
+
+/**
+ * Display an SVG.
+ *
+ * @param  array  $args  Parameters needed to display an SVG.
+ */
+function meh_do_svg( $icon = 'info', $size = '1em' ) {
+	echo meh_get_svg( $icon, $size );
 }
 
 /**
@@ -75,7 +99,7 @@ function doc_prime_hex() {
 function doc_prime_rgb( $alpha = '1' ) {
 	$doc_hex = doc_prime_hex();
 	$doc_rgb = implode( ',', hybrid_hex_to_rgb( $doc_hex ) );
-	return 'rgba('. $doc_rgb .','. $alpha .')';
+	return 'rgba(' . $doc_rgb . ',' . $alpha . ')';
 }
 
 function doc_prime_text() {
@@ -102,7 +126,7 @@ function abe_second_hex() {
 function abe_second_rgb( $alpha = '1' ) {
 	$abe_hex = abe_second_hex();
 	$abe_rgb = implode( ',', hybrid_hex_to_rgb( $abe_hex ) );
-	return 'rgba('. $abe_rgb .','. $alpha .')';
+	return 'rgba(' . $abe_rgb . ',' . $alpha . ')';
 }
 
 function abe_second_text() {
