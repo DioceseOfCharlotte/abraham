@@ -5,7 +5,7 @@
   "repository": "https://github.com/m-e-h/abraham",
   "license": "GNU General Public License v2 or later",
   "devDependencies": {
-    "autoprefixer": "^6.5.0",
+    "autoprefixer": "^6.5.1",
     "babel-preset-es2015": "^6.16.0",
     "browser-sync": "^2.17.3",
     "graceful-fs": "^4.1.9",

@@ -37,102 +37,111 @@
 	width: auto;
 }
 
-.u-1of1-break {
-	min-width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw !important;
-	margin-right: -50vw !important;
+[class*="u-1of"],
+[class*="u-2of"],
+[class*="u-3of"],
+[class*="u-4of"] {
+	width: 100%;
 }
 
 .u-1of1 {
 	width: 100%;
+	max-width: 100%;
 }
 
 .u-1of2 {
-	width: calc(50% - var(--gutter));
+	flex: 0 0 calc(50% - var(--gutter));
+	max-width: calc(50% - var(--gutter));
 }
 
 .u-1of3 {
-	width: calc(33.33% - var(--gutter));
+	flex: 0 0 calc(33.33% - var(--gutter));
+	max-width: calc(33.33% - var(--gutter));
 }
 
 .u-2of3 {
-	width: calc(66.66% - var(--gutter));
+	flex: 0 0 calc(66.66% - var(--gutter));
+	max-width: calc(66.66% - var(--gutter));
 }
 
 .u-1of4 {
-	width: calc(25% - var(--gutter));
+	flex: 0 0 calc(25% - var(--gutter));
+	max-width: calc(25% - var(--gutter));
 }
 
 .u-3of4 {
-	width: calc(75% - var(--gutter));
+	flex: 0 0 calc(75% - var(--gutter));
+	max-width: calc(75% - var(--gutter));
 }
 
 .u-1of5 {
-	width: calc(20% - var(--gutter));
+	flex: 0 0 calc(20% - var(--gutter));
+	max-width: calc(20% - var(--gutter));
 }
 
 .u-2of5 {
-	width: calc(40% - var(--gutter));
+	flex: 0 0 calc(40% - var(--gutter));
+	max-width: calc(40% - var(--gutter));
 }
 
 .u-3of5 {
-	width: calc(60% - var(--gutter));
+	flex: 0 0 calc(60% - var(--gutter));
+	max-width: calc(60% - var(--gutter));
 }
 
 .u-4of5 {
-	width: calc(80% - var(--gutter));
+	flex: 0 0 calc(80% - var(--gutter));
+	max-width: calc(80% - var(--gutter));
 }
 
 @media (--md) {
 	.u-1of1-md {
 		width: 100%;
+		max-width: 100%;
 	}
 
 	.u-1of2-md {
-		width: calc(50% - var(--gutter));
+		flex: 0 0 calc(50% - var(--gutter));
 		max-width: calc(50% - var(--gutter));
 	}
 
 	.u-1of3-md {
-		width: calc(33.33% - var(--gutter));
+		flex: 0 0 calc(33.33% - var(--gutter));
 		max-width: calc(33.33% - var(--gutter));
 	}
 
 	.u-2of3-md {
-		width: calc(66.66% - var(--gutter));
+		flex: 0 0 calc(66.66% - var(--gutter));
 		max-width: calc(66.66% - var(--gutter));
 	}
 
 	.u-1of4-md {
-		width: calc(25% - var(--gutter));
+		flex: 0 0 calc(25% - var(--gutter));
 		max-width: calc(25% - var(--gutter));
 	}
 
 	.u-3of4-md {
-		width: calc(75% - var(--gutter));
+		flex: 0 0 calc(75% - var(--gutter));
 		max-width: calc(75% - var(--gutter));
 	}
 
 	.u-1of5-md {
-		width: calc(20% - var(--gutter));
+		flex: 0 0 calc(20% - var(--gutter));
 		max-width: calc(20% - var(--gutter));
 	}
 
 	.u-2of5-md {
-		width: calc(40% - var(--gutter));
+		flex: 0 0 calc(40% - var(--gutter));
 		max-width: calc(40% - var(--gutter));
 	}
 
 	.u-3of5-md {
-		width: calc(60% - var(--gutter));
+		flex: 0 0 calc(60% - var(--gutter));
 		max-width: calc(60% - var(--gutter));
 	}
 
 	.u-4of5-md {
-		width: calc(80% - var(--gutter));
+		flex: 0 0 calc(80% - var(--gutter));
 		max-width: calc(80% - var(--gutter));
 	}
 
@@ -142,56 +151,54 @@
 }
 
 @media (--lg) {
-	.u-1of1-break-lg {
-		min-width: 100vw;
-		position: relative;
-		left: 50%;
-		right: 50%;
-		margin-left: -50vw !important;
-		margin-right: -50vw !important;
-	}
-
 	.u-1of1-lg {
 		width: 100%;
+		max-width: 100%;
 	}
 
 	.u-1of2-lg {
-		width: calc(50% - var(--gutter));
+		flex: 0 0 calc(50% - var(--gutter));
 		max-width: calc(50% - var(--gutter));
 	}
 
 	.u-1of3-lg {
-		width: calc(33.33% - var(--gutter));
+		flex: 0 0 calc(33.33% - var(--gutter));
 		max-width: calc(33.33% - var(--gutter));
 	}
 
 	.u-2of3-lg {
-		width: calc(66.66% - var(--gutter));
+		flex: 0 0 calc(66.66% - var(--gutter));
+		max-width: calc(66.66% - var(--gutter));
 	}
 
 	.u-1of4-lg {
-		width: calc(25% - var(--gutter));
+		flex: 0 0 calc(25% - var(--gutter));
 		max-width: calc(25% - var(--gutter));
 	}
 
 	.u-3of4-lg {
-		width: calc(75% - var(--gutter));
+		flex: 0 0 calc(75% - var(--gutter));
+		max-width: calc(75% - var(--gutter));
 	}
 
 	.u-1of5-lg {
-		width: calc(20% - var(--gutter));
+		flex: 0 0 calc(20% - var(--gutter));
+		max-width: calc(20% - var(--gutter));
 	}
 
 	.u-2of5-lg {
-		width: calc(40% - var(--gutter));
+		flex: 0 0 calc(40% - var(--gutter));
+		max-width: calc(40% - var(--gutter));
 	}
 
 	.u-3of5-lg {
-		width: calc(60% - var(--gutter));
+		flex: 0 0 calc(60% - var(--gutter));
+		max-width: calc(60% - var(--gutter));
 	}
 
 	.u-4of5-lg {
-		width: calc(80% - var(--gutter));
+		flex: 0 0 calc(80% - var(--gutter));
+		max-width: calc(80% - var(--gutter));
 	}
 
 	.u-width-auto-lg {
@@ -202,9 +209,11 @@
 @media (--sm) {
 	.u-1of1-sm {
 		width: 100%;
+		max-width: 100%;
 	}
 
 	.u-1of2-sm {
-		width: calc(50% - var(--gutter));
+		flex: 0 0 calc(50% - var(--gutter));
+		max-width: calc(50% - var(--gutter));
 	}
 }

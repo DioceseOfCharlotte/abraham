@@ -53,18 +53,14 @@ article {
 	color: var(--root-color);
 }
 
-article,
-article:last-of-type:not(:first-of-type) {
+article {
 	width: 100%;
 	@media (--md) {
 		width: calc(50% - var(--gutter));
-		max-width: calc(50% - var(--gutter));
 	}
-	/*@media (--xl) {
-		width: calc(33% - var(--gutter));
-		max-width: calc(33% - var(--gutter));
-	}*/
 }
+
+
 
 main {
     width: 100%;

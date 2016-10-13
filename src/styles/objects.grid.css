@@ -6,12 +6,11 @@
 	flex-wrap: wrap;
 	margin-right: auto;
 	margin-left: auto;
-	align-items: stretch;
-	list-style: none;
+	/*margin-right: -15px;
+    margin-left: -15px;*/
 }
 
 .o-cell {
-	max-width: 100%;
 	margin: 0 calc(0.5 * var(--gutter-mobile)) calc(0.5 * var(--gutter));
 }
 

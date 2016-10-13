@@ -65,7 +65,7 @@ class Attr_Trumps {
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb3 u-1of1 u-br u-shadow2',
 			'post_wide'               	=> 'u-fit u-1of1',
 
-			'post_archive'            	=> 'o-cell u-flexed-auto u-overflow-hidden u-shadow1 u-br',
+			'post_archive'            	=> 'o-cell u-overflow-hidden u-shadow1 u-br',
 			'entry_header'            	=> 'u-1of1',
 			'entry_title'             	=> 'u-px2 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p2 u-p4-md',
@@ -83,7 +83,7 @@ class Attr_Trumps {
 
 			// NAVIGATION.
 			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-mx-auto-md u-text-center u-1of1 u-bg-1 u-width-auto-lg',
+			'menu_primary'            	=> 'u-mx-auto-md u-text-center',
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR.
