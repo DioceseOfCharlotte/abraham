@@ -1504,7 +1504,7 @@ a[href*="mailto:"] {
 
 .o-list-group-links > li a {
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: middle;
 	padding: 8px 12px;
 	max-width: 100%;
 	width: 100%;
