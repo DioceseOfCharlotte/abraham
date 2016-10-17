@@ -2,18 +2,18 @@
 \*------------------------------------ */
 
 h1 {
-	font-size: var(--h1-mobile);
-
-	@media (--md) {
-		font-size: var(--h1);
-	}
-}
-
-h2 {
 	font-size: var(--h2-mobile);
 
 	@media (--md) {
 		font-size: var(--h2);
+	}
+}
+
+h2 {
+	font-size: var(--h3-mobile);
+
+	@media (--md) {
+		font-size: var(--h3);
 	}
 }
 
@@ -42,10 +42,10 @@ h5 {
 }
 
 h6 {
-	font-size: var(--h6-mobile);
+	font-size: var(--h5-mobile);
 
 	@media (--md) {
-		font-size: var(--h6);
+		font-size: var(--h5);
 	}
 }
 
@@ -56,7 +56,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
-	line-height: 1.15;
+	line-height: 1.16;
 	margin: 0;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;

@@ -495,21 +495,6 @@ body {
 	}*/
 }
 
-article {
-	background-color: #fff;
-	color: rgb(50, 65, 72);
-}
-
-article {
-	width: 100%;
-}
-
-@media (min-width: 48em) {
-	article {
-		width: calc(50% - 2rem);
-	}
-}
-
 main {
 	width: 100%;
 }
@@ -529,6 +514,21 @@ summary,
 legend {
 	display: block;
 	position: relative;
+}
+
+article {
+	background-color: #fff;
+	color: rgb(50, 65, 72);
+}
+
+article {
+	width: 100%;
+}
+
+@media (min-width: 48em) {
+	article {
+		width: calc(50% - 2rem);
+	}
 }
 
 .site {
@@ -719,22 +719,22 @@ h3 > a {
 \*------------------------------------ */
 
 h1 {
-	font-size: 2rem;
-}
-
-@media (min-width: 48em) {
-	h1 {
-		font-size: 3rem;
-	}
-}
-
-h2 {
 	font-size: 1.75rem;
 }
 
 @media (min-width: 48em) {
-	h2 {
+	h1 {
 		font-size: 2.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+@media (min-width: 48em) {
+	h2 {
+		font-size: 2rem;
 	}
 }
 
@@ -764,17 +764,17 @@ h5 {
 
 @media (min-width: 48em) {
 	h5 {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 }
 
 h6 {
-	font-size: 0.9rem;
+	font-size: 1.1rem;
 }
 
 @media (min-width: 48em) {
 	h6 {
-		font-size: 0.9rem;
+		font-size: 1.125rem;
 	}
 }
 
@@ -785,7 +785,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
-	line-height: 1.15;
+	line-height: 1.16;
 	margin: 0;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
@@ -1531,15 +1531,7 @@ a[href*="mailto:"] {
 .o-list-group > li,
 .o-list-group-links > li {
 	position: relative;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+	display: inline-block;
 	width: 100%;
 	border-bottom: 1px solid rgb(243, 245, 247);
 }
@@ -1965,7 +1957,7 @@ input[type="button"]:active {
 
 @media (min-width: 48em) {
 	.breadcrumbs ul {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 }
 
@@ -3302,7 +3294,7 @@ body:not(.search) .trail-end > span,
 
 @media (min-width: 48em) {
 	.u-h5 {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 }
 
@@ -3410,7 +3402,7 @@ body:not(.search) .trail-end > span,
 @media (min-width: 48em) {
 	.u-lead,
 	.intro-paragraph {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 }
 

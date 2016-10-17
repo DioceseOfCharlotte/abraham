@@ -48,20 +48,6 @@ body {
 	}*/
 }
 
-article {
-	background-color: #fff;
-	color: var(--root-color);
-}
-
-article {
-	width: 100%;
-	@media (--md) {
-		width: calc(50% - var(--gutter));
-	}
-}
-
-
-
 main {
     width: 100%;
 }
@@ -81,6 +67,18 @@ summary,
 legend {
 	display: block;
 	position: relative;
+}
+
+article {
+	background-color: #fff;
+	color: var(--root-color);
+}
+
+article {
+	width: 100%;
+	@media (--md) {
+		width: calc(50% - var(--gutter));
+	}
 }
 
 .site {

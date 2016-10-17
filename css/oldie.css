@@ -489,19 +489,6 @@ body {
 	}*/
 }
 
-article {
-	background-color: #fff;
-	color: rgb(50, 65, 72);
-}
-
-article {
-	width: 100%;
-}
-
-article {
-  width: calc(50% - 2rem);
-}
-
 main {
     width: 100%;
 }
@@ -521,6 +508,20 @@ summary,
 legend {
 	display: block;
 	position: relative;
+}
+
+article {
+	background-color: #fff;
+	color: rgb(50, 65, 72);
+}
+
+article {
+	display: flex;
+	width: 100%;
+}
+
+article {
+  width: calc(50% - 2rem);
 }
 
 .site {
@@ -702,19 +703,19 @@ h3 > a {
 \*------------------------------------ */
 
 h1 {
-	font-size: 32px;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
 	font-size: 28px;
 }
 
-h2 {
+h1 {
   font-size: 40px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 h3 {
@@ -738,15 +739,15 @@ h5 {
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h6 {
-	font-size: 14.4px;
+	font-size: 17.6px;
 }
 
 h6 {
-  font-size: 14.4px;
+  font-size: 18px;
 }
 
 h1,
@@ -756,7 +757,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
-	line-height: 1.15;
+	line-height: 1.16;
 	margin: 0;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
@@ -1488,9 +1489,7 @@ a[href*="mailto:"] {
 
 .u-list-group > li, .o-list-group > li, .o-list-group-links > li {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: inline-block;
   width: 100%;
   border-bottom: 1px solid rgb(243, 245, 247);
 }
@@ -1889,7 +1888,7 @@ a.btn-hollow:hover,
 }
 
 .breadcrumbs ul {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .breadcrumbs li {
@@ -3025,7 +3024,7 @@ align-self: stretch;
 }
 
 .u-h5 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .u-h6 {
@@ -3127,7 +3126,7 @@ align-self: stretch;
 
 .u-lead,
 .intro-paragraph {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .u-dropcap:first-letter {
@@ -3810,4 +3809,5 @@ html {
 	/* Grey */
 
 	/* Box Shadows */
+
 }
