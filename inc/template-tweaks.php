@@ -6,6 +6,10 @@
  */
 
 add_filter( 'hybrid_content_template_hierarchy', 'abe_template_hierarchy' );
+add_filter( 'login_redirect', 'abe_login_redirect', 10, 3 );
+add_action( 'login_enqueue_scripts', 'abe_login_logo' );
+add_filter( 'login_headerurl', 'abe_login_logo_url' );
+add_filter( 'login_headertitle', 'abe_login_logo_url_title' );
 add_filter( 'excerpt_more', 'abe_excerpt_more' );
 add_filter( 'excerpt_length', 'abe_excerpt_length' );
 add_filter( 'get_custom_logo', 'abe_custom_logo' );
@@ -31,6 +35,61 @@ function abe_template_hierarchy( $templates ) {
 	}
 
 	return $templates;
+}
+
+function abe_login_logo() {
+	if ( ! has_custom_logo() ) { return; }
+
+	$bg_image = get_background_image();
+	$logo_image = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ) ); ?>
+
+		<style id="login-custom-logo">
+			body.login {
+				background-image: url(<?php echo $bg_image ?>);
+				background-size: cover;
+			}
+			#login:after {
+			    content: "";
+			    background-color: #fff;
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    opacity: .9;
+			    z-index: -1;
+			}
+			#login h1 a {
+				background-image: url(<?php echo $logo_image ?>);
+			}
+			#backtoblog {
+				display: none;
+			}
+			.login .login-links {
+				width: 272px;
+				margin: 12px auto 0;
+				font-size: 13px;
+			}
+			.login a {
+				text-decoration: none;
+				color: #555d66;
+			}
+		</style>
+	<?php }
+
+function abe_login_logo_url() {
+	return home_url();
+}
+
+
+function abe_login_logo_url_title() {
+	ob_start();
+	bloginfo( 'name' );
+	return ob_get_clean();
+}
+
+function abe_login_redirect( $url, $request, $user ) {
+	return $request;
 }
 
 /**
