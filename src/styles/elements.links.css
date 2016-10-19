@@ -4,7 +4,7 @@
 a {
 	color: var(--color-links);
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.02em;
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
