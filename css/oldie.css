@@ -3834,6 +3834,24 @@ html .opacity-hover:hover {
   display: none;
 }
 
+ {
+  height: calc(150px + 5vw);
+  width: calc(90px + 5vw);
+}
+
+ {
+  height: calc(140px + 5vw);
+  width: calc(90px + 5vw);
+}
+
+.entry-title {
+    width: 100%;
+}
+
+.singular-parish .gv-list-view {
+    max-width: calc(33.33% - 1.5rem);
+}
+
 /* Custom media queries */
 
 /* sanitize.css vars */
