@@ -8,7 +8,7 @@
  */
 
 get_the_image(array(
-	'size'               => 'thumbnail',
+	'size'               => 'arch-sd',
 	'image_class'        => 'u-of-cover',
 	'default_image' 	=> abe_get_default_image(),
 	'link_to_post'		=> false,

@@ -70,7 +70,7 @@ class Attr_Trumps {
 			'entry_title'             	=> 'u-px1 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p2 u-p4-md',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-p2 u-p3-md show-icons',
+			'entry_summary'           	=> 'u-p2 u-pt1 show-icons',
 			'entry_footer'            	=> 'u-mt-auto u-rel u-1of1',
 
 			'nav_single'              	=> '',
