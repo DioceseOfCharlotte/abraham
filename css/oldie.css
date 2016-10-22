@@ -3834,16 +3834,6 @@ html .opacity-hover:hover {
   display: none;
 }
 
- {
-  height: calc(150px + 5vw);
-  width: calc(90px + 5vw);
-}
-
- {
-  height: calc(140px + 5vw);
-  width: calc(90px + 5vw);
-}
-
 .entry-title {
     width: 100%;
 }

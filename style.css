@@ -4131,29 +4131,6 @@ html .opacity-hover:hover {
 	}
 }
 
-@media (max-width: 47em) {
-}
-
-@media (min-width: 48em) {
-	.arch-flag:not(.arch-none) > .portrait {
-		height: calc(150px + 5vw);
-		width: calc(90px + 5vw);
-	}
-}
-
-@media (min-width: 62em) {
-	.arch-flag:not(.arch-none) > .portrait {
-		height: calc(140px + 5vw);
-		width: calc(90px + 5vw);
-	}
-}
-
-@media (min-width: 92em) {
-	.arch-flag:not(.arch-none) > .portrait {
-		height: calc(92px + 5vw);
-	}
-}
-
 .entry-title {
 	width: 100%;
 }
