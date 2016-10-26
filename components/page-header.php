@@ -5,7 +5,7 @@
 
 <div <?php hybrid_attr( 'archive-header' ); ?>>
 
-	<?php hybrid_get_menu( 'breadcrumbs' ); ?>
+	<?php get_template_part( 'components/breadcrumbs' ); ?>
 
 	<h1 <?php hybrid_attr( 'archive-title' ); ?>>
 		<?php
@@ -20,11 +20,5 @@
 		}
 		?>
 	</h1>
-	<?php if ( ! is_paged() && $desc = get_the_archive_description() ) : // Check if we're on page/1. ?>
 
-		<article <?php hybrid_attr( 'archive-description' ); ?>>
-			<?php echo $desc; ?>
-		</article><!-- .archive-description -->
-
-	<?php endif; // End paged check. ?>
 </div>

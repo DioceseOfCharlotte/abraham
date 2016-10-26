@@ -11,6 +11,14 @@ get_header(); ?>
 
 <div <?php hybrid_attr( 'grid' ); ?>>
 
+	<?php if ( ! is_paged() && $desc = get_the_archive_description() ) : // Check if we're on page/1. ?>
+
+		<article <?php hybrid_attr( 'archive-description' ); ?>>
+			<?php echo $desc; ?>
+		</article><!-- .archive-description -->
+
+	<?php endif; // End paged check. ?>
+
 	<?php tha_content_before(); ?>
 
 	<main <?php hybrid_attr( 'content' ); ?>>
@@ -42,6 +50,10 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php tha_content_bottom(); ?>
+
+		<?php if ( is_singular() ) {
+			get_template_part( 'components/post', 'children' );
+		} ?>
 
 	</main><!-- /.content -->
 
