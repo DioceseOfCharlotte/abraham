@@ -666,6 +666,7 @@ a {
 	text-decoration: none;
 	font-weight: 600;
 	letter-spacing: 0.02em;
+	vertical-align: middle;
 	transition-duration: 0.16s;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: all;
@@ -839,7 +840,7 @@ input[type="submit"] {
 	font-family: inherit;
 	display: inline-block;
 	margin: 0;
-	vertical-align: baseline;
+	//vertical-align: baseline;
 	cursor: pointer;
 	box-shadow: none;
 }
@@ -1220,7 +1221,7 @@ a:hover > img {
 }
 
 .entry-title .doc-icon {
-    margin-left: auto;
+	margin-left: auto;
 }
 
 .o-cell > .v-icon {
@@ -1474,7 +1475,6 @@ a[href*="tel:"],
 a[href*="mailto:"] {
 	display: inline-flex;
 	align-items: center;
-	vertical-align: middle;
 }
 
 .u-list-naked,
@@ -3832,16 +3832,6 @@ html .opacity-hover:hover {
 
 #nav_menu-5 {
   display: none;
-}
-
- {
-  height: calc(150px + 5vw);
-  width: calc(90px + 5vw);
-}
-
- {
-  height: calc(140px + 5vw);
-  width: calc(90px + 5vw);
 }
 
 .entry-title {

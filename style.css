@@ -869,7 +869,7 @@ input[type="submit"] {
 	font-family: inherit;
 	display: inline-block;
 	margin: 0;
-	vertical-align: baseline;
+	//vertical-align: baseline;
 	cursor: pointer;
 	box-shadow: none;
 }
