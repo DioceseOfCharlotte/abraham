@@ -6,6 +6,7 @@ a {
 	text-decoration: none;
 	font-weight: 600;
 	letter-spacing: 0.02em;
+	vertical-align: top;
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;
