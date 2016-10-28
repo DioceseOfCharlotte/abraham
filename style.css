@@ -679,7 +679,7 @@ a {
 	text-decoration: none;
 	font-weight: 600;
 	letter-spacing: 0.02em;
-	vertical-align: top;
+	vertical-align: middle;
 	transition-duration: 0.16s;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 	transition-property: all;
