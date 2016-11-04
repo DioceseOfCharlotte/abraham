@@ -2567,6 +2567,18 @@ body:not(.search) .trail-end > span,
 	margin-left: 0;
 }
 
+.u-p05 {
+	padding: 0.5rem;
+}
+
+.u-p15 {
+	padding: 1.5rem;
+}
+
+.u-p25 {
+	padding: 2.5rem;
+}
+
 .u-p1 {
 	padding: 1rem;
 }

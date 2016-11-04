@@ -2420,6 +2420,18 @@ a.btn-hollow:hover,
 	margin-left: 0;
 }
 
+.u-p05 {
+	padding: 8px;
+}
+
+.u-p15 {
+	padding: 24px;
+}
+
+.u-p25 {
+	padding: 40px;
+}
+
 .u-p1 {
 	padding: 16px;
 }

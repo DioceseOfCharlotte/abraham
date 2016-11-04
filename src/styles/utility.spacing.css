@@ -245,6 +245,18 @@
 	margin-left: 0;
 }
 
+.u-p05 {
+	padding: var(--space-05);
+}
+
+.u-p15 {
+	padding: var(--space-15);
+}
+
+.u-p25 {
+	padding: var(--space-25);
+}
+
 .u-p1 {
 	padding: var(--space-1);
 }
