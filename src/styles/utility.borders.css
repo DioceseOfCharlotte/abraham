@@ -2,25 +2,25 @@
 \*------------------------------------ */
 
 .u-border {
-	border-width: 1px;
+	border-width: 0.063rem;
 	border-style: solid;
 	border-color: currentColor;
 }
 
 .u-border-t {
-	border-top-width: 1px;
+	border-top-width: 0.063rem;
 }
 
 .u-border-r {
-	border-right-width: 1px;
+	border-right-width: 0.063rem;
 }
 
 .u-border-b {
-	border-bottom-width: 1px;
+	border-bottom-width: 0.063rem;
 }
 
 .u-border-l {
-	border-left-width: 1px;
+	border-left-width: 0.063rem;
 }
 
 .u-border0 {

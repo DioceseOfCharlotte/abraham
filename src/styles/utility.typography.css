@@ -118,7 +118,7 @@
 }
 
 .u-text-shadow {
-	text-shadow: 1px 1px 5px var(--color-tint-3);
+	text-shadow: 0.063rem 0.063rem 0.313rem var(--color-tint-3);
 }
 
 .u-text-left {

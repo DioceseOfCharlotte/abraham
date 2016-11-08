@@ -27,7 +27,7 @@
 
 .off-canvas__container {
 	width: 80%;
-	max-width: 400px;
+	max-width: 25rem;
 	transform: translateX(-102%);
 	will-change: transform;
 }

@@ -197,7 +197,7 @@
 
 .shadow-hover::after {
 	content: "";
-	border-radius: 3px;
+	border-radius: var(--border-radius);
 	position: absolute;
 	top: 0;
 	left: 0;

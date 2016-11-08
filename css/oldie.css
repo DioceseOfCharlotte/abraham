@@ -2694,26 +2694,6 @@ a.btn-hollow:hover,
   margin-left: 64px;
 }
 
-.u-fluid-xp {
-  padding-right: calc(0.5em + 1vw);
-  padding-left: calc(0.5em + 1vw);
-}
-
-.u-fluid-yp {
-  padding-top: calc(0.5em + 1vw);
-  padding-bottom: calc(0.5em + 1vw);
-}
-
-.u-fluid-xp {
-  padding-right: calc(1em + 1vw);
-  padding-left: calc(1em + 1vw);
-}
-
-.u-fluid-yp {
-  padding-top: calc(1em + 1vw);
-  padding-bottom: calc(1em + 1vw);
-}
-
 .u-strip-space {
 	margin: 0;
 	padding: 0;

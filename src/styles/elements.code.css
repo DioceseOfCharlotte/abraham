@@ -4,7 +4,7 @@ pre {
 	font-size: 0.9rem;
 	line-height: 1.5rem;
 	font-weight: 400;
-	border: 1px solid var(--color-grey-ui-light);
+	border: 0.063rem solid var(--color-grey-ui-light);
 	border-radius: var(--border-radius);
 	background: var(--color-frost-3);
 	tab-width: 4;

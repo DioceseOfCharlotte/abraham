@@ -44,7 +44,6 @@ const POSTCSS_PLUGINS = [
 	pcMixins,
 	pcProperties,
 	pcVars,
-	pcCalc,
 	pcColor,
 	pcMedia,
 	pcNested,
@@ -123,8 +122,7 @@ gulp.task('styles', () => {
 	gulp.src('src/styles/index.css')
 		.pipe($.sourcemaps.init())
 		.pipe($.postcss(POSTCSS_PLUGINS))
-		.pipe(gulp.dest('.tmp'))
-		.pipe($.if('*.css', $.concat('style.css')))
+		.pipe($.concat('style.css'))
 		.pipe($.stylefmt())
 		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
@@ -136,15 +134,15 @@ gulp.task('styles', () => {
 		.pipe(gulp.dest('./'))
 });
 
-gulp.task('oldie', () => {
-	gulp.src('.tmp/index.css')
-		.pipe($.postcss(POSTCSS_IE))
-		.pipe($.concat('oldie.css'))
-		.pipe(gulp.dest('css'))
-		.pipe($.if('*.css', $.cssnano()))
-		.pipe($.concat('oldie.min.css'))
-		.pipe(gulp.dest('css'))
-});
+// gulp.task('oldie', () => {
+// 	gulp.src('.tmp/index.css')
+// 		.pipe($.postcss(POSTCSS_IE))
+// 		.pipe($.concat('oldie.css'))
+// 		.pipe(gulp.dest('css'))
+// 		.pipe($.if('*.css', $.cssnano()))
+// 		.pipe($.concat('oldie.min.css'))
+// 		.pipe(gulp.dest('css'))
+// });
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', () => {
@@ -181,5 +179,5 @@ gulp.task('serve', ['scripts', 'styles'], () => {
 
 // Build production files, the default task
 gulp.task('default', cb => {
-	runSequence('vendors', 'images', 'styles', 'oldie', 'scripts', cb);
+	runSequence('vendors', 'images', 'styles', 'scripts', cb);
 });

@@ -10,7 +10,7 @@ a {
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;
-	border-radius: var(--border-radius);
+	border-radius: 0.125rem;
 	box-shadow: inset 0 -1px 0 0 color(var(--color-grey-ui) a(40%));
 
 	&:hover {

@@ -1,10 +1,11 @@
 
 
 /* Custom media queries */
-@custom-media --sm (max-width: 47em);
-@custom-media --md (min-width: 48em);
-@custom-media --lg (min-width: 62em);
-@custom-media --xl (min-width: 92em);
+@custom-media --xs (max-width: 20rem);
+@custom-media --sm (max-width: 47rem);
+@custom-media --md (min-width: 48rem);
+@custom-media --lg (min-width: 62rem);
+@custom-media --xl (min-width: 92rem);
 
 /* sanitize.css vars */
 :root {
@@ -20,7 +21,15 @@
 
 	--display-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-	--root-font-size: 100%;
+	--root-font-size: 0.95rem;
+
+	--min-font-size: 0.95rem;
+
+	--max-font-size: 1.125rem;
+
+	--min-font-thresh: 20rem;
+
+	--max-font-thresh: 92rem;
 
 	--root-line-height: 1.6;
 

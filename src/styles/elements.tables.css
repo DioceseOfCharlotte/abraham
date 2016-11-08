@@ -18,12 +18,12 @@ th {
 	text-align: left;
 	font-weight: var(--font-bold);
 	vertical-align: bottom;
-	border-bottom: 1px solid var(--color-grey-ui);
+	border-bottom: 0.063rem solid var(--color-grey-ui);
 }
 
 td {
 	vertical-align: middle;
-	border-bottom: 1px solid var(--color-grey-ui-light);
+	border-bottom: 0.063rem solid var(--color-grey-ui-light);
 }
 
 td > ul {
