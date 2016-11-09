@@ -2,7 +2,7 @@
 \*------------------ */
 
 /* Text Colors */
-.u-text-color {
+.u-text-color.u-text-color {
 	color: var(--root-color);
 }
 
@@ -153,11 +153,11 @@
 	background-color: var(--color-frost-2);
 }
 
-.u-bg-frost-3 {
+.u-bg-frost-3.u-bg-frost-3 {
 	background-color: var(--color-frost-3);
 }
 
-.u-bg-frost-4 {
+.u-bg-frost-4.u-bg-frost-4 {
 	background-color: var(--color-frost-4);
 }
 
@@ -205,7 +205,11 @@
 	background-color: color(var(--color-2-dark) a(0.96));
 }
 
-.u-hover-frost:hover {
+.u-hover-white.u-hover-white:hover {
+	background-color: var(--white);
+}
+
+.u-hover-frost.u-hover-frost:hover {
 	background-color: var(--color-frost-2);
 }
 

@@ -122,6 +122,6 @@ function abe_custom_logo() {
  * @param string $output Link html.
  */
 function abe_edit_post_link( $output ) {
-	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-opacity u-abs u-right0 u-bottom0"', $output );
+	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-bg-frost-4 u-text-color u-border u-b-grey u-hover-white u-abs u-right0 u-bottom0"', $output );
 	return $output;
 }

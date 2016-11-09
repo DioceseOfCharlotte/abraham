@@ -3725,7 +3725,7 @@ html .opacity-hover:hover {
 
 /* Text Colors */
 
-.u-text-color {
+.u-text-color.u-text-color {
 	color: rgb(50, 65, 72);
 }
 
@@ -3879,11 +3879,11 @@ html .opacity-hover:hover {
 	background-color: rgba(243, 245, 247, 0.3);
 }
 
-.u-bg-frost-3 {
+.u-bg-frost-3.u-bg-frost-3 {
 	background-color: rgba(243, 245, 247, 0.6);
 }
 
-.u-bg-frost-4 {
+.u-bg-frost-4.u-bg-frost-4 {
 	background-color: rgba(243, 245, 247, 0.9);
 }
 
@@ -3931,7 +3931,11 @@ html .opacity-hover:hover {
 	background-color: rgba(32, 80, 59, 0.96);
 }
 
-.u-hover-frost:hover {
+.u-hover-white.u-hover-white:hover {
+	background-color: #fff;
+}
+
+.u-hover-frost.u-hover-frost:hover {
 	background-color: rgba(243, 245, 247, 0.3);
 }
 
