@@ -11,7 +11,7 @@
 :root {
 	--root-background-color: #fff;
 
-	--root-color: var(--color-grey-ui-dark);
+	--root-color: var(--oc-gray-8);
 
 	--root-box-sizing: border-box;
 
@@ -45,7 +45,7 @@
 
 	--monospace-font-family: Menlo, Consolas, Liberation Mono;
 
-	--selection-background-color: #b3d4fc;
+	--selection-background-color: var(--oc-indigo-2);
 
 	--selection-text-shadow: none;
 
@@ -99,56 +99,56 @@
 	--opacity: 0.8;
 
 	/* Cool */
-	--aqua: #7fdbff;
-	--blue: #0074d9;
+	--aqua: var(--oc-cyan-4);
+	--blue: var(--oc-blue-7);
 	--navy: #001f3f;
 	--teal: #39cccc;
-	--green: #2ecc40;
-	--olive: #3d9970;
-	--lime: #01ff70;
+	--green: var(--oc-green-7);
+	--olive: var(--oc-teal-7);
+	--lime: var(--oc-lime-7);
 
 	/* Warm */
-	--yellow: #ffdc00;
-	--orange: #ff851b;
-	--red: #ff4136;
-	--fuchsia: #f012be;
-	--purple: #b10dc9;
+	--yellow: var(--oc-yellow-4);
+	--orange: var(--oc-orange-4);
+	--red: var(--oc-red-7);
+	--fuchsia: var(--oc-pink-7);
+	--purple: var(--oc-grape-7);
 	--maroon: #85144b;
 
 	/* Grey */
 	--white: #fff;
-	--silver: #edeff3;
-	--grey: #aaa;
+	--silver: var(--oc-gray-0);
+	--grey: var(--oc-gray-4);
 	--blue-grey: #678695;
 	--grey-nuetral: #90a4ae;
 	--black: #111;
 
-	--color-info: var(--aqua);
-	--color-success: var(--olive);
-	--color-warning: var(--red);
+	--color-info: var(--oc-blue-5);
+	--color-success: var(--oc-teal-5);
+	--color-warning: var(--oc-red-5);
 
-	--color-info-light: color(var(--aqua) lightness(+22%));
-	--color-info-dark: color(var(--aqua) lightness(-50%));
-	--color-success-light: color(var(--olive) lightness(+50%));
-	--color-success-dark: color(var(--olive) lightness(-15%));
-	--color-warning-light: color(var(--red) lightness(+35%));
-	--color-warning-dark: color(var(--red) lightness(-30%));
+	--color-info-light: var(--oc-blue-1);
+	--color-info-dark: var(--oc-blue-9);
+	--color-success-light: var(--oc-teal-1);
+	--color-success-dark: var(--oc-teal-9);
+	--color-warning-light: var(--oc-red-1);
+	--color-warning-dark: var(--oc-red-9);
 
 	--color-1: var(--blue);
-	--color-1-light: color(var(--color-1) lightness(+20%));
-	--color-1-dark: color(var(--color-1) lightness(-20%));
+	--color-1-light: var(--oc-blue-5);
+	--color-1-dark: var(--oc-blue-9);
 
 	--color-2: var(--olive);
-	--color-2-light: color(var(--color-2) lightness(+20%));
-	--color-2-dark: color(var(--color-2) lightness(-20%));
+	--color-2-light: var(--oc-teal-5);
+	--color-2-dark: var(--oc-teal-9);
 
-	--color-links: color(var(--aqua) lightness(-45%));
-	--color-links-hover: color(var(--aqua) lightness(-32%));
-	--color-links-active: color(var(--aqua) lightness(-40%));
+	--color-links: var(--oc-indigo-7);
+	--color-links-hover: var(--oc-indigo-5);
+	--color-links-active: var(--oc-indigo-9);
 
-	--color-grey-ui: color(var(--blue-grey) lightness(+20%));
-	--color-grey-ui-light: color(var(--blue-grey) lightness(+47%));
-	--color-grey-ui-dark: color(var(--blue-grey) lightness(-25%));
+	--color-grey-ui: var(--oc-gray-4);
+	--color-grey-ui-light: var(--oc-gray-3);
+	--color-grey-ui-dark: var(--oc-gray-7);
 
 	--color-frost-1: color(var(--color-grey-ui-light) a(0.15));
 	--color-frost-2: color(var(--color-grey-ui-light) a(0.3));
