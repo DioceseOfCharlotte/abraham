@@ -124,15 +124,17 @@
 	--black: #111;
 
 	--color-info: var(--oc-blue-5);
-	--color-success: var(--oc-teal-5);
-	--color-warning: var(--oc-red-5);
-
 	--color-info-light: var(--oc-blue-1);
 	--color-info-dark: var(--oc-blue-9);
+
+	--color-success: var(--oc-teal-5);
 	--color-success-light: var(--oc-teal-1);
 	--color-success-dark: var(--oc-teal-9);
+
+	--color-warning: var(--oc-red-5);
 	--color-warning-light: var(--oc-red-1);
 	--color-warning-dark: var(--oc-red-9);
+
 
 	--color-1: var(--blue);
 	--color-1-light: var(--oc-blue-5);
