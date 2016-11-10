@@ -11,6 +11,8 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
+@import "settings.colors";
+@import "settings.defaults";
 @import "settings.mixins";
 @import "normalize";
 @import "elements.page";
@@ -43,4 +45,3 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "utility.colors";
 @import "utility.helpers";
 @import "shame";
-@import "defaults";
