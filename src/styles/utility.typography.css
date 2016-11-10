@@ -3,22 +3,14 @@
 
 .u-f1 {
 	font-size: 1rem;
-
-	@media (--sm) {
-		font-size: 0.95rem;
-	}
 }
 
 .u-f-minus {
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
 
 .u-f-plus {
 	font-size: 1.125rem;
-}
-
-.u-f-fluid {
-	font-size: calc(1em + 1vw);
 }
 
 .u-h1 {

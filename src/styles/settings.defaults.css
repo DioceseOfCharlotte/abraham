@@ -148,9 +148,9 @@
 	--color-links-hover: var(--oc-indigo-5);
 	--color-links-active: var(--oc-indigo-9);
 
-	--color-grey-ui: var(--oc-gray-4);
-	--color-grey-ui-light: var(--oc-gray-3);
-	--color-grey-ui-dark: var(--oc-gray-7);
+	--color-grey-ui: var(--oc-gray-3);
+	--color-grey-ui-light: var(--oc-gray-2);
+	--color-grey-ui-dark: var(--oc-gray-8);
 
 	--color-frost-1: color(var(--color-grey-ui-light) a(0.15));
 	--color-frost-2: color(var(--color-grey-ui-light) a(0.3));

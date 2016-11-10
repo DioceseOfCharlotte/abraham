@@ -14,6 +14,10 @@
 	color: var(--color-grey-ui);
 }
 
+.u-text-grey-sub {
+	color: var(--oc-gray-6);
+}
+
 .u-text-silver {
 	color: var(--silver);
 }
@@ -76,7 +80,7 @@
 }
 
 .u-bg-silver {
-	background-color: var(--color-grey-ui-light);
+	background-color: var(--silver);
 	color: var(--root-color);
 }
 
