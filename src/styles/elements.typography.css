@@ -4,23 +4,35 @@
 h1 {
 	font-size: var(--h2-mobile);
 
-	@media (--md) {
+	@media (--sm) {
+		font-size: var(--h2-fluid);
+	}
+
+	@media (--xl) {
 		font-size: var(--h2);
 	}
 }
 
 h2 {
-	font-size: var(--h3-mobile);
+	font-size: var(--h2-mobile);
 
-	@media (--md) {
-		font-size: var(--h3);
+	@media (--sm) {
+		font-size: var(--h2-fluid);
+	}
+
+	@media (--xl) {
+		font-size: var(--h2);
 	}
 }
 
 h3 {
 	font-size: var(--h3-mobile);
 
-	@media (--md) {
+	@media (--sm) {
+		font-size: var(--h3-fluid);
+	}
+
+	@media (--xl) {
 		font-size: var(--h3);
 	}
 }
