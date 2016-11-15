@@ -19,7 +19,7 @@ if ( ! has_nav_menu( 'primary' ) ) {
 				'menu_id'         => 'menu-primary-items',
 				'menu_class'      => 'menu-items nav-menu u-f-minus',
 				'fallback_cb'     => '',
-				'items_wrap'      => '<div class="menu-main-container u-bg-tint-1"><ul id="%s" class="%s">%s</ul></div>'
+				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
 			)
 		); ?>
 
