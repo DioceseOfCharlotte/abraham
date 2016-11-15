@@ -569,13 +569,13 @@ html {
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 20rem) {
+@media (min-width: 21rem) {
 	html {
 		font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	html {
 		font-size: 1.125rem;
 	}
@@ -620,10 +620,6 @@ body {
 	line-height: 1.6;
 	color: #343a40;
 	background-color: #fff;
-
-	/*@media (--sm) {
-		font-size: 0.95rem;
-	}*/
 }
 
 main {
@@ -656,7 +652,7 @@ article {
 	width: 100%;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	article {
 		width: calc(50% - 2rem);
 	}
@@ -728,9 +724,19 @@ canvas {
 	-ms-touch-action: double-tap-zoom;
 }
 
+iframe,
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+	max-width: none !important;
 }
 
 /* specify the progress cursor of updating elements */
@@ -860,7 +866,7 @@ h1 {
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	h1 {
 		font-size: 2.5rem;
 	}
@@ -876,7 +882,7 @@ h2 {
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	h2 {
 		font-size: 2.5rem;
 	}
@@ -892,7 +898,7 @@ h3 {
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	h3 {
 		font-size: 2rem;
 	}
@@ -902,7 +908,7 @@ h4 {
 	font-size: 1.25rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	h4 {
 		font-size: 1.5rem;
 	}
@@ -912,7 +918,7 @@ h5 {
 	font-size: 1.1rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	h5 {
 		font-size: 1.125rem;
 	}
@@ -922,7 +928,7 @@ h6 {
 	font-size: 1.1rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	h6 {
 		font-size: 1.125rem;
 	}
@@ -1345,7 +1351,7 @@ a:hover > img {
 	margin: 0 calc(0.5 * 1rem) calc(0.5 * 2rem);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.o-cell {
 		margin: 0 calc(0.5 * 2rem) 2rem;
 	}
@@ -2102,7 +2108,7 @@ input[type="button"]:active {
 	font-size: 1.1rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.breadcrumbs ul {
 		font-size: 1.125rem;
 	}
@@ -2266,7 +2272,7 @@ body:not(.search) .trail-end > span,
 	max-width: calc(80% - 2rem);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-1of1-md {
 		width: 100%;
 		max-width: 100%;
@@ -2340,7 +2346,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 64rem) {
 	.u-1of1-lg {
 		width: 100%;
 		max-width: 100%;
@@ -2414,7 +2420,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 21rem) {
+@media (max-width: 20rem) {
 	.u-1of1-sm {
 		width: 100%;
 		max-width: 100%;
@@ -2791,7 +2797,7 @@ body:not(.search) .trail-end > span,
 	padding-top: 0;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-m2-md {
 		margin: 2rem;
 	}
@@ -2936,7 +2942,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 64rem) {
 	.u-mx4-lg {
 		margin-right: 4rem;
 		margin-left: 4rem;
@@ -3169,7 +3175,7 @@ body:not(.search) .trail-end > span,
 
 /* small */
 
-@media (min-width: 21rem) {
+@media (max-width: 20rem) {
 	.u-flex-sm {
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -3185,7 +3191,7 @@ body:not(.search) .trail-end > span,
 
 /* medium */
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-flex-md {
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -3201,7 +3207,7 @@ body:not(.search) .trail-end > span,
 
 /* large */
 
-@media (min-width: 62rem) {
+@media (min-width: 64rem) {
 	.u-flex-lg {
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -3361,7 +3367,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	.u-h0 {
 		font-size: 4.4rem;
 	}
@@ -3377,7 +3383,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	.u-h1 {
 		font-size: 3rem;
 	}
@@ -3393,7 +3399,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	.u-h2 {
 		font-size: 2.5rem;
 	}
@@ -3409,7 +3415,7 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 90rem) {
 	.u-h3 {
 		font-size: 2rem;
 	}
@@ -3419,7 +3425,7 @@ body:not(.search) .trail-end > span,
 	font-size: 1.25rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-h4 {
 		font-size: 1.5rem;
 	}
@@ -3429,7 +3435,7 @@ body:not(.search) .trail-end > span,
 	font-size: 1.1rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-h5 {
 		font-size: 1.125rem;
 	}
@@ -3439,7 +3445,7 @@ body:not(.search) .trail-end > span,
 	font-size: 0.9rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-h6 {
 		font-size: 0.9rem;
 	}
@@ -3526,7 +3532,7 @@ body:not(.search) .trail-end > span,
 	font-size: 1.1rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-lead,
 	.intro-paragraph {
 		font-size: 1.125rem;
@@ -3543,7 +3549,7 @@ body:not(.search) .trail-end > span,
 	line-height: 0.9;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-dropcap::first-letter {
 		font-size: 4.4rem;
 	}
@@ -3715,7 +3721,7 @@ body:not(.search) .trail-end > span,
 	visibility: visible;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.u-relative-md {
 		position: relative;
 	}
@@ -4142,6 +4148,13 @@ html .opacity-hover:hover {
 	visibility: hidden;
 }
 
+@media (max-width: 20rem) {
+	.hidden-xs {
+		display: none;
+		visibility: hidden;
+	}
+}
+
 @media (min-width: 21rem) {
 	.hidden-sm {
 		display: none;
@@ -4149,14 +4162,14 @@ html .opacity-hover:hover {
 	}
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
 	.hidden-md {
 		display: none;
 		visibility: hidden;
 	}
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 64rem) {
 	.hidden-lg {
 		display: none;
 		visibility: hidden;
@@ -4217,7 +4230,7 @@ html .opacity-hover:hover {
 	display: none;
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 64rem) {
 	#menu-primary {
 		display: inline-block;
 	}

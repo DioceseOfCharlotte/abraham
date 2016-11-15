@@ -3,9 +3,9 @@
 /* Custom media queries */
 @custom-media --xs (max-width: 20rem);
 @custom-media --sm (min-width: 21rem);
-@custom-media --md (min-width: 48rem);
-@custom-media --lg (min-width: 62rem);
-@custom-media --xl (min-width: 92rem);
+@custom-media --md (min-width: 40rem);
+@custom-media --lg (min-width: 64rem);
+@custom-media --xl (min-width: 90rem);
 
 /* sanitize.css vars */
 :root {

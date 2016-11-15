@@ -54,6 +54,13 @@
 	visibility: hidden;
 }
 
+@media (--xs) {
+	.hidden-xs {
+		display: none;
+		visibility: hidden;
+	}
+}
+
 @media (--sm) {
 	.hidden-sm {
 		display: none;

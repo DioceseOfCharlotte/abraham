@@ -14,14 +14,11 @@ const autoPrefixer = require('autoprefixer');
 const atImport = require("postcss-import");
 const pcMixins = require("postcss-mixins");
 const pcColor = require('postcss-color-function');
-const pcVars = require("postcss-simple-vars");
 const pcNested = require("postcss-nested");
 const pcMedia = require("postcss-custom-media");
 const pcProperties = require("postcss-custom-properties");
-const pcCalc = require('postcss-calc');
 const pcSvg = require('postcss-inline-svg');
-
-const oldie = require('oldie');
+const pcStrip = require('postcss-strip-units');
 
 const $ = require('gulp-load-plugins')();
 const reload = browserSync.reload;
@@ -41,9 +38,9 @@ const AUTOPREFIXER_BROWSERS = [
 
 const POSTCSS_PLUGINS = [
 	atImport,
+	pcStrip,
 	pcMixins,
 	pcProperties,
-	pcVars,
 	pcColor,
 	pcMedia,
 	pcNested,
@@ -53,13 +50,6 @@ const POSTCSS_PLUGINS = [
 	autoPrefixer({
 		browsers: AUTOPREFIXER_BROWSERS
 	})
-];
-
-const POSTCSS_IE = [
-	autoPrefixer({
-		browsers: ['IE 8', 'IE 9']
-	}),
-	oldie
 ];
 
 const SOURCESJS = [
@@ -133,16 +123,6 @@ gulp.task('styles', () => {
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 });
-
-// gulp.task('oldie', () => {
-// 	gulp.src('.tmp/index.css')
-// 		.pipe($.postcss(POSTCSS_IE))
-// 		.pipe($.concat('oldie.css'))
-// 		.pipe(gulp.dest('css'))
-// 		.pipe($.if('*.css', $.cssnano()))
-// 		.pipe($.concat('oldie.min.css'))
-// 		.pipe(gulp.dest('css'))
-// });
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', () => {

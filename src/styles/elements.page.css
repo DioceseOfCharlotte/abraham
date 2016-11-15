@@ -10,16 +10,16 @@ html {
 	box-sizing: var(--root-box-sizing);
 }
 
-@media screen and (min-width: 20rem) {
-  html {
-	font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
-  }
+@media (--sm) {
+	html {
+		font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
+	}
 }
 
 @media (--xl) {
-  html {
-    font-size: var(--max-font-size);
-  }
+	html {
+		font-size: var(--max-font-size);
+	}
 }
 
 /*
@@ -52,16 +52,12 @@ body {
 	font-family: var(--root-font-family);
 	font-weight: normal;
 	line-height: var(--root-line-height);
-    color: var(--root-color);
-    background-color: var(--root-background-color);
-
-	/*@media (--sm) {
-		font-size: 0.95rem;
-	}*/
+	color: var(--root-color);
+	background-color: var(--root-background-color);
 }
 
 main {
-    width: 100%;
+	width: 100%;
 }
 
 article,
@@ -153,9 +149,19 @@ canvas {
 	-ms-touch-action: double-tap-zoom;
 }
 
+iframe,
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
+}
+
+#map_canvas,
+.map_canvas {
+	img,
+	embed,
+	object {
+		max-width: none !important;
+	}
 }
 
 /* specify the progress cursor of updating elements */

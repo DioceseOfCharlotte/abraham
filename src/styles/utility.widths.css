@@ -206,7 +206,7 @@
 	}
 }
 
-@media (--sm) {
+@media (--xs) {
 	.u-1of1-sm {
 		width: 100%;
 		max-width: 100%;
