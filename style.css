@@ -571,7 +571,7 @@ html {
 
 @media (min-width: 21rem) {
 	html {
-		font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
+		font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 21rem) / (90 - 21)));
 	}
 }
 
@@ -728,15 +728,6 @@ iframe,
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
-}
-
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-	max-width: none !important;
 }
 
 /* specify the progress cursor of updating elements */
@@ -1234,7 +1225,7 @@ select {
 	display: inline-block;
 	background-size: 1em;
 	background-position: 98% 50%;
-	padding-right: 1.25em;
+	padding-right: 1.25em !important;
 	-moz-appearance: none; /* Firefox 40+ */
 	-webkit-appearance: none;
 }
@@ -1801,17 +1792,9 @@ input[type="button"]:active {
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.btn-round > i {
-	line-height: 2.4rem;
-}
-
 .btn-round:hover {
 	opacity: 0.9;
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-}
-
-.btn-round:focus {
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
 }
 
 .btn-sm {
@@ -4145,34 +4128,29 @@ html .opacity-hover:hover {
 
 .hidden {
 	display: none;
-	visibility: hidden;
 }
 
 @media (max-width: 20rem) {
 	.hidden-xs {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (min-width: 21rem) {
 	.hidden-sm {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (min-width: 40rem) {
 	.hidden-md {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (min-width: 64rem) {
 	.hidden-lg {
 		display: none;
-		visibility: hidden;
 	}
 }
 
@@ -4237,6 +4215,16 @@ html .opacity-hover:hover {
 
 	#nav_menu-5 {
 		display: none;
+	}
+}
+
+.toggle-text {
+	display: none;
+}
+
+@media (min-width: 40rem) {
+	.toggle-text {
+		display: inline-block;
 	}
 }
 

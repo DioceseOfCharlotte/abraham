@@ -9,7 +9,7 @@
 	if ( is_front_page() ) : ?>
 		<h1 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h1>
 	<?php else : ?>
-		<h3 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h3>
+		<h2 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h2>
 	<?php
 	endif; ?>
 

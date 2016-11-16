@@ -51,34 +51,29 @@
 
 .hidden {
 	display: none;
-	visibility: hidden;
 }
 
 @media (--xs) {
 	.hidden-xs {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (--sm) {
 	.hidden-sm {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (--md) {
 	.hidden-md {
 		display: none;
-		visibility: hidden;
 	}
 }
 
 @media (--lg) {
 	.hidden-lg {
 		display: none;
-		visibility: hidden;
 	}
 }
 

@@ -3,16 +3,16 @@
 
 /* specify the root styles of the document */
 html {
-	font-size: var(--root-font-size);
+	font-size: var(--min-font-size);
 	color: var(--root-color);
-	background-color: var(--root-background-color);
-	cursor: var(--root-cursor);
-	box-sizing: var(--root-box-sizing);
+	background-color: #fff;
+	cursor: default;
+	box-sizing: border-box;
 }
 
 @media (--sm) {
 	html {
-		font-size: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
+		font-size: var(--fluid-font);
 	}
 }
 
@@ -39,7 +39,7 @@ html {
 	flex-shrink: 1;
 	margin: 0;
 	padding: 0;
-	background-repeat: var(--background-repeat);
+	background-repeat: no-repeat;
 }
 
 ::before,
@@ -53,7 +53,7 @@ body {
 	font-weight: normal;
 	line-height: var(--root-line-height);
 	color: var(--root-color);
-	background-color: var(--root-background-color);
+	background-color: #fff;
 }
 
 main {
@@ -106,7 +106,7 @@ hr {
 }
 
 ::selection {
-	background-color: var(--selection-background-color);
+	background-color: var(--oc-indigo-2);
 	text-shadow: none;
 }
 
@@ -153,15 +153,6 @@ iframe,
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
-}
-
-#map_canvas,
-.map_canvas {
-	img,
-	embed,
-	object {
-		max-width: none !important;
-	}
 }
 
 /* specify the progress cursor of updating elements */

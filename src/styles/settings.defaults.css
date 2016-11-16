@@ -9,23 +9,20 @@
 
 /* sanitize.css vars */
 :root {
-	--root-background-color: #fff;
 
 	--root-color: var(--oc-gray-8);
-
-	--root-box-sizing: border-box;
-
-	--root-cursor: default;
 
 	--root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 	--display-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-	--root-font-size: 0.95rem;
+	--min-font-size: 0.95rem;
+
+	--max-font-size: 1.125rem;
+
+	--root-font-size: 1rem;
 
 	--root-line-height: 1.6;
-
-	--background-repeat: no-repeat;
 
 	--form-element-background-color: color(var(--color-grey-ui-dark) a(10%));
 
@@ -33,19 +30,7 @@
 
 	--form-element-min-height: 2.5rem;
 
-	--media-element-vertical-align: middle;
-
 	--monospace-font-family: Menlo, Consolas, Liberation Mono;
-
-	--selection-background-color: var(--oc-indigo-2);
-
-	--selection-text-shadow: none;
-
-	--small-font-size: 75%;
-
-	--table-border-collapse: collapse;
-
-	--table-border-spacing: 0;
 
 	--paragraph-width: 64rem;
 	--container: 74rem;
@@ -72,16 +57,13 @@
 	--h2-fluid: calc(var(--h2-mobile) + (2.5 - 1.75) * (100vw - 20rem) / (92 - 20));
 	--h3-fluid: calc(var(--h3-mobile) + (2 - 1.5) * (100vw - 20rem) / (92 - 20));
 
+	--mq-xs: 20rem;
+	--mq-sm: 21rem;
+	--mq-md: 40rem;
+	--mq-lg: 64rem;
+	--mq-xl: 90rem;
 
-	--fluid-font: calc(0.95rem + (1.125 - 0.95) * ((100vw - 20rem) / (92 - 20)));
-
-	--min-font-size: 0.95rem;
-
-	--max-font-size: 1.125rem;
-
-	--min-font-thresh: 20rem;
-
-	--max-font-thresh: 92rem;
+	--fluid-font: calc(var(--min-font-size) + ( strip(var(--max-font-size)) - strip(var(--min-font-size)) ) * ((100vw - var(--mq-sm)) / (strip(var(--mq-xl)) - strip(var(--mq-sm)))));
 
 	--space-05: 0.5rem;
 	--space-1: 1rem;

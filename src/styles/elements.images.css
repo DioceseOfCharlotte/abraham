@@ -8,7 +8,7 @@ iframe,
 img,
 svg,
 video {
-	vertical-align: var(--media-element-vertical-align);
+	vertical-align: middle;
 	max-width: 100%;
 }
 

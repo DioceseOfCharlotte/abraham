@@ -4,7 +4,6 @@
 }
 
 @media (--lg) {
-
 	#menu-primary {
 		display: inline-block;
 	}
@@ -14,8 +13,15 @@
 	}
 }
 
+.toggle-text {
+	display: none;
+}
 
-
+@media (--md) {
+	.toggle-text {
+	    display: inline-block;
+	}
+}
 
 .entry-title {
     width: 100%;

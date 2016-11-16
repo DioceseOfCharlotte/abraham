@@ -210,7 +210,7 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-text-2-dark{color:#{$colorDark}}";
 		$style .= "#page .u-text-2-light{color:#{$colorLight}}";
 		$style .= "#page .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
-		$style .= "#page .u-bg-2-light,.btn-round,.btn-round:hover,.btn-round:focus,.btn-round:active{background-color:#{$colorLight};color:#{$textOnLight};}";
+		$style .= "#page .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "#page .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
 		$style .= "#page .u-bg-2-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
 		$style .= "#page .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
@@ -218,8 +218,6 @@ final class Abraham_Custom_Styles {
 		$style .= "#page .u-fill-2{fill:#{$colorBase}}";
 		$style .= "#page .u-fill-2-light{fill:#{$colorLight}}";
 		$style .= "#page .u-fill-2-dark{fill:#{$colorDark}}";
-		$style .= "a:not(.btn):before,a:not(.btn):after{color:#{$colorLight}}";
-		$style .= "a:not(.btn):hover:before,a:not(.btn):hover:after{color:#{$colorDark}}";
 
 		/* Return the styles. */
 		return str_replace( array( "\r", "\n", "\t" ), '', $style );

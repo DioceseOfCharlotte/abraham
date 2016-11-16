@@ -38,9 +38,9 @@ const AUTOPREFIXER_BROWSERS = [
 
 const POSTCSS_PLUGINS = [
 	atImport,
+	pcProperties,
 	pcStrip,
 	pcMixins,
-	pcProperties,
 	pcColor,
 	pcMedia,
 	pcNested,
