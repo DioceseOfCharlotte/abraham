@@ -7,14 +7,14 @@
 @custom-media --lg (min-width: 64rem);
 @custom-media --xl (min-width: 90rem);
 
-/* sanitize.css vars */
+/* global vars */
 :root {
 
-	--root-color: var(--oc-gray-8);
+	--root-color: var(--color-text);
 
-	--root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 
-	--display-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--display-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 
 	--min-font-size: 0.95rem;
 
@@ -24,9 +24,9 @@
 
 	--root-line-height: 1.6;
 
-	--form-element-background-color: color(var(--color-grey-ui-dark) a(10%));
+	--form-element-background-color: var(--color-frost-4);
 
-	--form-element-color: var(--root-color);
+	--form-element-color: var(--color-text);
 
 	--form-element-min-height: 2.5rem;
 
@@ -89,10 +89,10 @@
 	--opacity: 0.8;
 
 	/* Cool */
-	--aqua: var(--oc-cyan-4);
 	--blue: var(--oc-blue-7);
-	--navy: #001f3f;
-	--teal: #39cccc;
+	--navy: color(var(--oc-blue-9) lightness(-15%));
+	--teal: var(--oc-cyan-6);
+
 	--green: var(--oc-green-7);
 	--olive: var(--oc-teal-7);
 	--lime: var(--oc-lime-7);
@@ -103,7 +103,6 @@
 	--red: var(--oc-red-7);
 	--fuchsia: var(--oc-pink-7);
 	--purple: var(--oc-grape-7);
-	--maroon: #85144b;
 
 	/* Grey */
 	--white: #fff;
@@ -111,7 +110,7 @@
 	--grey: var(--oc-gray-4);
 	--blue-grey: #678695;
 	--grey-nuetral: #90a4ae;
-	--black: #111;
+	--black: #000;
 
 	--color-info: var(--oc-blue-5);
 	--color-info-light: var(--oc-blue-1);
@@ -126,31 +125,42 @@
 	--color-warning-dark: var(--oc-red-9);
 
 
-	--color-1: var(--blue);
+	--color-1: var(--oc-blue-7);
 	--color-1-light: var(--oc-blue-5);
 	--color-1-dark: var(--oc-blue-9);
 
-	--color-2: var(--olive);
+	--color-2: var(--oc-teal-7);
 	--color-2-light: var(--oc-teal-5);
 	--color-2-dark: var(--oc-teal-9);
 
-	--color-links: var(--oc-indigo-7);
-	--color-links-hover: var(--oc-indigo-5);
-	--color-links-active: var(--oc-indigo-9);
+	--color-links: var(--oc-blue-8);
+	--color-links-hover: var(--oc-blue-5);
 
-	--color-grey-ui: var(--oc-gray-3);
-	--color-grey-ui-light: var(--oc-gray-2);
-	--color-grey-ui-dark: var(--oc-gray-8);
+	--color-text: var(--oc-gray-7);
+	--color-text-light: var(--oc-gray-6);
+	--color-text-dark: var(--oc-gray-8);
 
-	--color-frost-1: color(var(--color-grey-ui-light) a(0.15));
-	--color-frost-2: color(var(--color-grey-ui-light) a(0.3));
-	--color-frost-3: color(var(--color-grey-ui-light) a(0.6));
-	--color-frost-4: color(var(--color-grey-ui-light) a(0.9));
+	--color-grey-bg: var(--oc-gray-1);
+	--color-grey-bg-light: var(--oc-gray-0);
+	--color-grey-bg-dark: var(--oc-gray-2);
 
-	--color-tint-1: color(var(--color-grey-ui-dark) a(0.15));
-	--color-tint-2: color(var(--color-grey-ui-dark) a(0.3));
-	--color-tint-3: color(var(--color-grey-ui-dark) a(0.6));
-	--color-tint-4: color(var(--color-grey-ui-dark) a(0.9));
+	--color-grey-ui: var(--oc-gray-4);
+	--color-grey-ui-light: var(--oc-gray-3);
+	--color-grey-ui-dark: var(--oc-gray-5);
+
+	--color-grey-char: var(--oc-gray-8);
+	--color-grey-char-light: var(--oc-gray-7);
+	--color-grey-char-dark: var(--oc-gray-9);
+
+	--color-frost-1: color(var(--color-grey-bg-dark) a(0.15));
+	--color-frost-2: color(var(--color-grey-bg-dark) a(0.3));
+	--color-frost-3: color(var(--color-grey-bg-dark) a(0.5));
+	--color-frost-4: color(var(--color-grey-bg-dark) a(0.9));
+
+	--color-tint-1: color(var(--color-grey-char-dark) a(0.15));
+	--color-tint-2: color(var(--color-grey-char-dark) a(0.3));
+	--color-tint-3: color(var(--color-grey-char-dark) a(0.5));
+	--color-tint-4: color(var(--color-grey-char-dark) a(0.9));
 
 	/* Box Shadows */
 	--shadow-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);

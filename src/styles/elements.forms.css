@@ -131,7 +131,7 @@ input[type=search] {
 }
 
 input[value=Other]:not(:focus) {
-	color: color(var(--root-color) a(50%));
+	color: var(--color-grey-ui);
 }
 
 ::-webkit-input-placeholder {
