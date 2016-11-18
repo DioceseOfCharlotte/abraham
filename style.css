@@ -650,6 +650,7 @@ article {
 
 article {
 	width: 100%;
+	min-width: 270px;
 }
 
 @media (min-width: 40rem) {
