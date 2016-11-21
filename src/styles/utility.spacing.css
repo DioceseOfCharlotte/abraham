@@ -267,6 +267,11 @@
 	padding: 0;
 }
 
+.u-py05 {
+	padding-top: var(--space-05);
+	padding-bottom: var(--space-05);
+}
+
 .u-py1 {
 	padding-top: var(--space-1);
 	padding-bottom: var(--space-1);

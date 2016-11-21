@@ -4,6 +4,11 @@
 	fill: currentColor;
 }
 
+svg[stroke-width] {
+	fill: transparent;
+	stroke: currentColor;
+}
+
 .icon-line {
 	width: 1em;
 	height: 1em;
@@ -34,7 +39,6 @@
 .icon-sm {
 	line-height: 1;
 	margin: 0;
-	display: inline-flex;
 }
 
 .icon-md {
@@ -193,7 +197,11 @@ a[href*="mailto:"]::before {
 	@mixin icon mail;
 }
 
-a[href*="twitter.com"],
+.contact-info a::before {
+	content: none;
+}
+
+/*a[href*="twitter.com"],
 a[href*="facebook.com"],
 a[href*="youtube.com"],
 a[href*="youtu.be"],
@@ -207,4 +215,4 @@ a[href*="tel:"],
 a[href*="mailto:"] {
 	display: inline-flex;
 	align-items: center;
-}
+}*/

@@ -4,20 +4,23 @@
 a {
 	color: var(--color-links);
 	text-decoration: none;
-	font-weight: 600;
+	//font-weight: 600;
 	letter-spacing: 0.02em;
 	transition-duration: var(--transition-time);
 	transition-timing-function: var(--animation-curve);
 	transition-property: all;
 	border-radius: 0.125rem;
-	box-shadow: inset 0 -0.063rem 0 0 var(--color-frost-3);
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+	//box-shadow: inset 0 -0.063rem 0 0 var(--color-frost-3);
 
 	&:hover,
 	&.active,
 	&:active,
 	&:focus {
 		color: var(--color-links-hover);
-		background-color: var(--color-frost-2);
+		background-color: var(--color-shade-2);
 		transition-duration: var(--transition-time-out);
 		transition-timing-function: var(--animation-curve-out);
 	}
@@ -30,7 +33,8 @@ a::after {
 	line-height: 1;
 	width: 1em;
 	height: 1em;
-	vertical-align: inherit;
+	vertical-align: middle;
+	margin-bottom: .1em;
 }
 
 a::before {
@@ -71,6 +75,7 @@ article:not(.arch-no-link-title) .entry-title {
 li > a,
 h1 > a,
 h2 > a,
-h3 > a {
-	box-shadow: none;
+h3 > a,
+a[class] {
+	background-image: none;
 }
