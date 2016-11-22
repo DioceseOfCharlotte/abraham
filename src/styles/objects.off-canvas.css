@@ -1,17 +1,17 @@
-.off-canvas {
+.side-nav {
 	pointer-events: none;
 }
 
-.off-canvas--animatable {
+.side-nav--animatable {
 	z-index: 1;
 }
 
-.off-canvas--visible {
+.side-nav--visible {
 	pointer-events: auto;
 	z-index: 2;
 }
 
-.off-canvas::before {
+.side-nav::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -25,30 +25,30 @@
 	transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
 
-.off-canvas__container {
+.side-nav__container {
 	width: 80%;
 	max-width: 25rem;
 	transform: translateX(-102%);
 	will-change: transform;
 }
 
-.off-canvas--animatable .off-canvas__container {
+.side-nav--animatable .side-nav__container {
 	transition: transform 0.13s cubic-bezier(0, 0, 0.3, 1);
 }
 
-.off-canvas--visible.off-canvas--animatable .off-canvas__container {
+.side-nav--visible.side-nav--animatable .side-nav__container {
 	transition: transform 0.33s cubic-bezier(0, 0, 0.3, 1);
 }
 
-.off-canvas--visible::before {
+.side-nav--visible::before {
 	opacity: 1;
 }
 
-.off-canvas--visible .off-canvas__container {
+.side-nav--visible .side-nav__container {
 	transform: none;
 }
 
-.off-canvas__header {
+.side-nav__header {
 	.search-form {
 		margin: 0 0.5rem;
 		width: 100%;
@@ -60,13 +60,13 @@
 	}
 }
 
-.off-canvas__content {
+.side-nav__content {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
 
-.off-canvas__content {
+.side-nav__content {
 	.widget {
 		background-color: transparent;
 		padding: 0 1rem;

@@ -19,11 +19,16 @@
 
 class SideNav {
   constructor () {
-	this.body = document.body;
+	  // Prevent scrolling body when open
+	  this.body = document.body;
     this.showButtonEl = document.querySelector('.js-menu-show');
     this.hideButtonEl = document.querySelector('.js-menu-hide');
-    this.sideNavEl = document.querySelector('.js-off-canvas');
-    this.sideNavContainerEl = document.querySelector('.js-off-canvas-container');
+    this.sideNavEl = document.querySelector('.js-side-nav');
+    this.sideNavContainerEl = document.querySelector('.js-side-nav-container');
+    // Control whether the container's children can be focused
+    // Set initial state to inert since the drawer is offscreen
+    this.detabinator = new Detabinator(this.sideNavContainerEl);
+    this.detabinator.inert = true;
 
     this.showSideNav = this.showSideNav.bind(this);
     this.hideSideNav = this.hideSideNav.bind(this);
@@ -38,7 +43,7 @@ class SideNav {
     this.currentX = 0;
     this.touchingSideNav = false;
 
-	this.supportsPassive = undefined;
+    this.supportsPassive = undefined;
     this.addEventListeners();
   }
 
@@ -64,13 +69,13 @@ class SideNav {
     this.sideNavEl.addEventListener('click', this.hideSideNav);
     this.sideNavContainerEl.addEventListener('click', this.blockClicks);
 
-	this.sideNavEl.addEventListener('touchstart', this.onTouchStart, this.applyPassive());
+    this.sideNavEl.addEventListener('touchstart', this.onTouchStart, this.applyPassive());
     this.sideNavEl.addEventListener('touchmove', this.onTouchMove, this.applyPassive());
     this.sideNavEl.addEventListener('touchend', this.onTouchEnd);
   }
 
   onTouchStart (evt) {
-    if (!this.sideNavEl.classList.contains('off-canvas--visible'))
+    if (!this.sideNavEl.classList.contains('side-nav--visible'))
       return;
 
     this.startX = evt.touches[0].pageX;
@@ -85,11 +90,6 @@ class SideNav {
       return;
 
     this.currentX = evt.touches[0].pageX;
-    const translateX = Math.min(0, this.currentX - this.startX);
-
-    if (translateX < -100) {
-      evt.preventDefault();
-    }
   }
 
   onTouchEnd (evt) {
@@ -121,21 +121,23 @@ class SideNav {
   }
 
   onTransitionEnd (evt) {
-    this.sideNavEl.classList.remove('off-canvas--animatable');
+    this.sideNavEl.classList.remove('side-nav--animatable');
     this.sideNavEl.removeEventListener('transitionend', this.onTransitionEnd);
   }
 
   showSideNav () {
-    this.sideNavEl.classList.add('off-canvas--animatable');
-    this.sideNavEl.classList.add('off-canvas--visible');
-	this.body.classList.add('u-overflow-hidden');
+	  this.body.classList.add('u-overflow-hidden');
+    this.sideNavEl.classList.add('side-nav--animatable');
+    this.sideNavEl.classList.add('side-nav--visible');
+    this.detabinator.inert = false;
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
   }
 
   hideSideNav () {
-    this.sideNavEl.classList.add('off-canvas--animatable');
-    this.sideNavEl.classList.remove('off-canvas--visible');
-	this.body.classList.remove('u-overflow-hidden');
+	  this.body.classList.remove('u-overflow-hidden');
+    this.sideNavEl.classList.add('side-nav--animatable');
+    this.sideNavEl.classList.remove('side-nav--visible');
+    this.detabinator.inert = true;
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
   }
 }
