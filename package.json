@@ -30,6 +30,7 @@
     "postcss-inline-svg": "^2.2.0",
     "postcss-mixins": "^5.4.0",
     "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
     "postcss-strip-units": "^1.2.0",
     "run-sequence": "^1.2.2",
     "stylefmt": "^4.3.1",

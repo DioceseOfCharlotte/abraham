@@ -75,46 +75,23 @@ svg[stroke-width] {
 }
 
 .icon-refresh {
-	background-size: contain;
-
-	@mixin icon refresh, #36474f;
-	width: 2em;
-	height: 2em;
+	@mixin fa $refresh;
 }
 
 .icon-account {
-	background-size: 1.5em;
-	background-position: center;
-
-	@mixin icon account_circle, #fff;
-	width: 2em;
-	height: 2em;
+	@mixin fa $user-circle-o;
 }
 
 .icon-menu {
-	background-size: 1.5em;
-	background-position: center;
-
-	@mixin icon menu, #fff;
-	width: 2em;
-	height: 2em;
+	@mixin fa $navicon;
 }
 
 .icon-close {
-	background-size: 1.5em;
-	background-position: center;
-
-	@mixin icon close, #fff;
-	width: 2em;
-	height: 2em;
+	@mixin fa $times;
 }
 
 .icon-edit {
-	background-size: contain;
-
-	@mixin icon edit, #36474f;
-	width: 2em;
-	height: 2em;
+	@mixin fa $pencil-square-o;
 }
 
 .o-alert {
@@ -122,7 +99,7 @@ svg[stroke-width] {
 	align-items: center;
 }
 
-.o-alert::before {
+/*.o-alert::before {
 	background-size: contain;
 	width: 2.5em;
 	height: 2.5em;
@@ -130,89 +107,100 @@ svg[stroke-width] {
 	margin-left: -0.5em;
 	flex-shrink: 0;
 	opacity: 0.7;
-}
+}*/
 
 .icon-info::before {
-	@mixin icon info, #005B80;
+	@mixin fa $info-circle;
+
+	color: #005B80;
 }
 
 .icon-warning::before {
-	@mixin icon warning, #9E0800;
+	@mixin fa $exclamation-triangle;
+
+	color: #9E0800;
 }
 
 .icon-success::before {
-	@mixin icon success, #276248;
+	@mixin fa $check-circle;
+
+	color: #276248;
 }
 
 .icon-heart::before {
-	@mixin icon heart;
+	@mixin fa $heart;
 }
 
 .icon-twitter::before,
 a[href*="twitter.com"]::before {
-	@mixin icon twitter, #1DA1F2;
+	@mixin fa $twitter;
+
+	color: #1DA1F2;
+	opacity: 1;
 }
+
+a[href*="twitter.com"]::after {
+	content: none !important;
+}
+
 
 .icon-facebook::before,
 a[href*="facebook.com"]::before {
-	@mixin icon facebook, #3B5998;
+	@mixin fa $facebook-official;
+
+	color: #3B5998;
+	opacity: 1;
+}
+
+a[href*="facebook.com"]::after {
+	content: none !important;
 }
 
 .icon-youtube::before,
 a[href*="youtube.com"]::before,
 a[href*="youtu.be"]::before {
-	@mixin icon youtube, #cd201f;
+	@mixin fa $youtube-play;
+
+	color: #cd201f;
+	opacity: 1;
+}
+
+a[href*="youtube.com"]::after,
+a[href*="youtu.be"]::after {
+	content: none !important;
 }
 
 .icon-instagram::before {
-	@mixin icon instagram;
+	@mixin fa $instagram;
+
+	opacity: 1;
 }
 
 a[href*="/documents/"]::before,
 .icon-pdf::before,
 a[href*=".pdf"]:not(.btn)::before {
-	@mixin icon file-pdf;
+	@mixin fa $file-text-o;
 }
 
 .icon-map::before,
 a[href*="maps.google.com"]::before {
-	@mixin icon map_pin;
+	@mixin fa $map-marker;
 }
 
 a[href*=".doc"]:not(.btn)::before,
 a[href*=".docx"]:not(.btn)::before {
-	@mixin icon file-word;
+	@mixin fa $file-word-o;
 }
 
 a[href*=".xls"]:not(.btn)::before,
 a[href*=".xlsx"]:not(.btn)::before {
-	@mixin icon file-excel;
+	@mixin fa $file-excel-o;
 }
 
 a[href*="tel:"]::before {
-	@mixin icon call;
+	@mixin fa $phone;
 }
 
 a[href*="mailto:"]::before {
-	@mixin icon mail;
+	@mixin fa $envelope;
 }
-
-.contact-info a::before {
-	content: none;
-}
-
-/*a[href*="twitter.com"],
-a[href*="facebook.com"],
-a[href*="youtube.com"],
-a[href*="youtu.be"],
-a[href*=".pdf"],
-a[href*="maps.google.com"],
-a[href*=".doc"],
-a[href*=".docx"],
-a[href*=".xls"],
-a[href*=".xlsx"],
-a[href*="tel:"],
-a[href*="mailto:"] {
-	display: inline-flex;
-	align-items: center;
-}*/

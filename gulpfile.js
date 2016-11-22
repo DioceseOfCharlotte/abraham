@@ -18,6 +18,7 @@ const pcNested = require("postcss-nested");
 const pcMedia = require("postcss-custom-media");
 const pcProperties = require("postcss-custom-properties");
 const pcSvg = require('postcss-inline-svg');
+const pcSvar = require('postcss-simple-vars');
 const pcStrip = require('postcss-strip-units');
 
 const $ = require('gulp-load-plugins')();
@@ -41,6 +42,7 @@ const POSTCSS_PLUGINS = [
 	pcProperties,
 	pcStrip,
 	pcMixins,
+	pcSvar,
 	pcColor,
 	pcMedia,
 	pcNested,
@@ -53,6 +55,7 @@ const POSTCSS_PLUGINS = [
 ];
 
 const SOURCESJS = [
+	'src/scripts/detabinator.js',
 	'src/scripts/navigation.js',
 	'src/scripts/off-canvas.js',
 	'src/scripts/main.js'
