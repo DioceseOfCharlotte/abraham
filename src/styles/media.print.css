@@ -22,6 +22,10 @@
 		text-shadow: none !important;
 	}
 
+	body > *:not(main) {
+	    display: none;
+	}
+
 	a,
 	a:visited {
 		text-decoration: underline;
