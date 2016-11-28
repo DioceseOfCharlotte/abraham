@@ -35,8 +35,7 @@ const AUTOPREFIXER_BROWSERS = [
 	'last 2 safari versions',
 	'last 2 opera versions',
 	'ios >= 7',
-	'android >= 4.4',
-	'bb >= 10'
+	'android >= 4.4'
 ];
 
 const POSTCSS_PLUGINS = [
@@ -122,28 +121,32 @@ gulp.task('styles', () => {
 			title: 'styles'
 		}))
 		.pipe(rev.manifest({
-            merge: true
-        }))
+			merge: true
+		}))
 		.pipe(gulp.dest('./'))
 });
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', () => {
 	gulp.src(SOURCESJS)
+		.pipe($.sourcemaps.init())
 		.pipe($.babel({
 			"presets": ["es2015"]
 		}))
 		.pipe($.concat('abraham.js'))
 		.pipe(gulp.dest('js'))
-		.pipe($.uglify())
+		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('js'))
+		.pipe($.if('*.js', $.uglify()))
+		.pipe(ignore.exclude('*.map'))
 		.pipe(rev())
 		.pipe(gulp.dest('js'))
 		.pipe($.size({
 			title: 'scripts'
 		}))
 		.pipe(rev.manifest({
-            merge: true // merge with the existing manifest if one exists
-        }))
+			merge: true
+		}))
 		.pipe(gulp.dest('./'))
 });
 
@@ -154,8 +157,8 @@ gulp.task('scripts', () => {
 gulp.task('serve', ['scripts', 'styles'], () => {
 	$.browserSync.init({
 		proxy: "local.wordpress.dev"
-		// proxy: "local.wordpress-trunk.dev"
-		// proxy: "127.0.0.1:8080/wordpress/"
+			// proxy: "local.wordpress-trunk.dev"
+			// proxy: "127.0.0.1:8080/wordpress/"
 	});
 
 	gulp.watch(['*/**/*.php'], reload);
