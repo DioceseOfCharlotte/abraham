@@ -36,27 +36,42 @@ function abraham_setup() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	add_theme_support( 'custom-logo', array(
+		'height'      => 78,
+		'flex-width' => true,
+	) );
+
 	register_nav_menus( array(
 		'primary' => __( 'Primary', 'abraham' ),
 	) );
 
-	// add_theme_support( 'post-formats', array(
-	// 	'image',
-	// 	'video',
-	// 	'audio',
-	// ) );
+	// Tell the TinyMCE editor to use a custom stylesheet.
+	add_editor_style( abraham_get_editor_styles() );
+}
 
-		/*
-		* Enable support for custom logo.
-		*
-		*/
-		add_theme_support( 'custom-logo', array(
-			'height'      => 78,
-			'flex-width' => true,
-		) );
+/**
+ * Append Hash to assets filename to purge the browser cache when changed.
+ */
+function get_asset_rev( $filename ) {
 
-		// Tell the TinyMCE editor to use a custom stylesheet.
-		add_editor_style( abraham_get_editor_styles() );
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		return $filename;
+	}
+
+	// Cache the decoded manifest so that we only read it in once.
+	static $manifest = null;
+	if ( null === $manifest ) {
+		$manifest_path = trailingslashit( get_template_directory() ) . 'rev-manifest.json';
+		$manifest = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
+	}
+
+	// If the manifest contains the requested file, return the hashed name.
+	if ( array_key_exists( $filename, $manifest ) ) {
+		return $manifest[ $filename ];
+	}
+
+	// File hash wasn't found.
+	return $filename;
 }
 
 	/**
@@ -76,23 +91,17 @@ function abraham_content_width() {
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
-	// Load parent theme stylesheet if child theme is active.
-	if ( is_child_theme() ) {
-		wp_enqueue_style( 'hybrid-parent' );
-	}
+	wp_enqueue_style( 'abe-style', trailingslashit( get_template_directory_uri() ) . get_asset_rev( 'style.css' ) );
 
-	// Load active theme stylesheet.
-	wp_enqueue_style( 'hybrid-style' );
-
-	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ) . "css/oldie{$suffix}.css", array( 'hybrid-style' ) );
+	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ) . "css/oldie{$suffix}.css", array( 'abe-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
 
 	// Scripts.
-	wp_enqueue_script( 'abraham_js', trailingslashit( get_template_directory_uri() ) . "js/abraham{$suffix}.js", false, false, true );
+	wp_enqueue_script( 'abraham-js', trailingslashit( get_template_directory_uri() ) . 'js/' . get_asset_rev( 'abraham.js' ), false, false, true );
 
 	// polyfills
-	wp_enqueue_script( 'object_fit_js', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/ofi.browser.js', false, false, true );
-	wp_add_inline_script( 'object_fit_js', 'objectFitImages();' );
+	wp_enqueue_script( 'object-fit-js', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/ofi.browser.js', false, false, true );
+	wp_add_inline_script( 'object-fit-js', 'objectFitImages();' );
 
 	wp_enqueue_script( 'html5shiv', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/html5shiv.min.js',  false, false, false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );

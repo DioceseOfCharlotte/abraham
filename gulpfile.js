@@ -8,6 +8,7 @@ const fs = require('graceful-fs');
 const path = require('path');
 const gulp = require('gulp');
 const rev = require('gulp-rev');
+const ignore = require('gulp-ignore');
 const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
 
@@ -106,21 +107,22 @@ gulp.task('images', () => {
 
 gulp.task('styles', () => {
 	gulp.src('src/styles/index.css')
-		// .pipe($.sourcemaps.init())
+		.pipe($.sourcemaps.init())
 		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
 		.pipe($.stylefmt())
 		.pipe(gulp.dest('./'))
-		// .pipe($.sourcemaps.write('.'))
-		// .pipe(gulp.dest('./'))
+		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
+		.pipe(ignore.exclude('*.map'))
 		.pipe(rev())
+		.pipe(gulp.dest('./'))
 		.pipe($.size({
 			title: 'styles'
 		}))
-		.pipe(gulp.dest('./'))
 		.pipe(rev.manifest({
-            merge: true // merge with the existing manifest if one exists
+            merge: true
         }))
 		.pipe(gulp.dest('./'))
 });
@@ -135,26 +137,15 @@ gulp.task('scripts', () => {
 		.pipe(gulp.dest('js'))
 		.pipe($.uglify())
 		.pipe(rev())
+		.pipe(gulp.dest('js'))
 		.pipe($.size({
 			title: 'scripts'
 		}))
-		.pipe(gulp.dest('js'))
 		.pipe(rev.manifest({
             merge: true // merge with the existing manifest if one exists
         }))
 		.pipe(gulp.dest('./'))
 });
-
-// gulp.task('rev', () =>
-//     // by default, gulp would pick `assets/css` as the base,
-//     // so we need to set it explicitly:
-//     gulp.src(['style.css', 'js/abraham.js'], {base: './'})
-//         .pipe(gulp.dest('./'))  // copy original assets to build dir
-//         .pipe(rev())
-//         .pipe(gulp.dest('./'))  // write rev'd assets to build dir
-//         .pipe(rev.manifest())
-//         .pipe(gulp.dest('./'))  // write manifest to build dir
-// );
 
 /**
  * Defines the list of resources to watch for changes.
