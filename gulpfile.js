@@ -7,6 +7,7 @@
 const fs = require('graceful-fs');
 const path = require('path');
 const gulp = require('gulp');
+const rev = require('gulp-rev');
 const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
 
@@ -103,27 +104,24 @@ gulp.task('images', () => {
 		}))
 });
 
-// Copy from node-modules
-gulp.task('vendors', () => {
-  gulp.src([
-  	'node_modules/normalize.css/normalize.css'
-  	])
-    .pipe(gulp.dest('src/styles'));
-});
-
 gulp.task('styles', () => {
 	gulp.src('src/styles/index.css')
-		.pipe($.sourcemaps.init())
+		// .pipe($.sourcemaps.init())
 		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
 		.pipe($.stylefmt())
 		.pipe(gulp.dest('./'))
+		// .pipe($.sourcemaps.write('.'))
+		// .pipe(gulp.dest('./'))
 		.pipe($.if('*.css', $.cssnano()))
-		.pipe($.concat('style.min.css'))
+		.pipe(rev())
 		.pipe($.size({
 			title: 'styles'
 		}))
-		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('./'))
+		.pipe(rev.manifest({
+            merge: true // merge with the existing manifest if one exists
+        }))
 		.pipe(gulp.dest('./'))
 });
 
@@ -136,12 +134,27 @@ gulp.task('scripts', () => {
 		.pipe($.concat('abraham.js'))
 		.pipe(gulp.dest('js'))
 		.pipe($.uglify())
-		.pipe($.concat('abraham.min.js'))
-		.pipe(gulp.dest('js'))
+		.pipe(rev())
 		.pipe($.size({
 			title: 'scripts'
 		}))
+		.pipe(gulp.dest('js'))
+		.pipe(rev.manifest({
+            merge: true // merge with the existing manifest if one exists
+        }))
+		.pipe(gulp.dest('./'))
 });
+
+// gulp.task('rev', () =>
+//     // by default, gulp would pick `assets/css` as the base,
+//     // so we need to set it explicitly:
+//     gulp.src(['style.css', 'js/abraham.js'], {base: './'})
+//         .pipe(gulp.dest('./'))  // copy original assets to build dir
+//         .pipe(rev())
+//         .pipe(gulp.dest('./'))  // write rev'd assets to build dir
+//         .pipe(rev.manifest())
+//         .pipe(gulp.dest('./'))  // write manifest to build dir
+// );
 
 /**
  * Defines the list of resources to watch for changes.
@@ -162,5 +175,5 @@ gulp.task('serve', ['scripts', 'styles'], () => {
 
 // Build production files, the default task
 gulp.task('default', cb => {
-	runSequence('vendors', 'images', 'styles', 'scripts', cb);
+	runSequence('images', 'styles', 'scripts', cb);
 });
