@@ -10,5 +10,5 @@
 # Generated theme files
 .tmp
 *.map
-*.lock
+composer.lock
 vendor
