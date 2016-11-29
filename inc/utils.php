@@ -6,7 +6,6 @@
  */
 
 add_action( 'after_setup_theme', 'meh_responsive_videos', 99 );
-add_filter( 'jetpack_get_default_modules', '__return_empty_array' );
 // add_filter( 'page_css_class', 'meh_doc_page_css_class', 10, 2 );
 add_shortcode( 'doc_logout', 'doc_logout_link' );
 add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );

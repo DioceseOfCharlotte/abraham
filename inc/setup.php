@@ -74,20 +74,20 @@ function get_asset_rev( $filename ) {
 	return $filename;
 }
 
-	/**
-	* Set the content width in pixels, based on the theme's design and stylesheet.
-	*
-	* Priority 0 to make it available to lower priority callbacks.
-	*
-	* @global int $content_width
-	*/
+/**
+* Set the content width in pixels, based on the theme's design and stylesheet.
+*
+* Priority 0 to make it available to lower priority callbacks.
+*
+* @global int $content_width
+*/
 function abraham_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'abe_content_width', 1184 );
 }
 
-	/**
-	* Scripts and stylesheets
-	*/
+/**
+* Scripts and stylesheets
+*/
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
@@ -113,9 +113,9 @@ function abraham_assets() {
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
-			/**
-			* Styles for the editor.
-			*/
+/**
+* Styles for the editor.
+*/
 function abraham_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
@@ -131,51 +131,45 @@ function abraham_get_editor_styles() {
 		return $editor_styles;
 }
 
-				/**
-				* Registers sidebars.
-				*
-				* @access public
-				* @return void
-				*/
+/**
+* Registers sidebars.
+*
+* @access public
+* @return void
+*/
 function abraham_widgets() {
-	register_sidebar(
-		array(
+	register_sidebar( array(
 		'id'          	=> 'primary',
-		'name'        	=> esc_html__( 'Primary', 'sidebar', 'abraham' ),
+		'name'        	=> esc_html__( 'Primary', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title u-text-display u-opacity">',
-		'after_title'   => '</h3>',
-		)
-	);
-	register_sidebar(
-		array(
+		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-opacity">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'id'          	=> 'secondary',
-		'name'        	=> esc_html__( 'Secondary', 'sidebar', 'abraham' ),
+		'name'        	=> esc_html__( 'Secondary', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title u-px1 u-text-display u-opacity u-text-center">',
-		'after_title'   => '</h3>',
-		)
-	);
-	register_sidebar(
-		array(
+		'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-opacity u-text-center">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'id'          	=> 'footer',
-		'name'        	=> esc_html__( 'Footer', 'sidebar', 'abraham' ),
+		'name'        	=> esc_html__( 'Footer', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-tint-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title u-text-display u-opacity">',
-		'after_title'   => '</h3>',
-		)
-	);
+		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-opacity">',
+		'after_title'   => '</h2>',
+	) );
 }
 
-				/**
-				* Create additional sizes.
-				*/
+/**
+* Create additional sizes.
+*/
 function abraham_image_sizes() {
 	set_post_thumbnail_size( 150, 150, true );
 	add_image_size( 'abe-icon', 	80, 80, true );
@@ -185,9 +179,9 @@ function abraham_image_sizes() {
 	add_image_size( 'abe-card-lg', 	760, 1012, true );
 }
 
-				/**
-				* Hybrid Theme Layouts
-				*/
+/**
+* Hybrid Theme Layouts
+*/
 function abraham_layouts() {
 
 	hybrid_register_layout('1-column', array(
