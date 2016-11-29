@@ -24,7 +24,6 @@ require_once $abe_inc . 'template-tags.php';
 require_once $abe_inc . 'attr-trumps.php';              // Css class selectors.
 require_once $abe_inc . 'utils.php';                    // Utility functions.
 require_once $abe_inc . 'tiny-mce.php';                 // Extra wysiwyg actions.
-require_once $abe_inc . 'head-extra.php';				// head meta.
 require_once $abe_inc . 'g-analytics.php';				// Google Analytics.
 
 define( 'HYBRID_DIR', trailingslashit( get_template_directory() ) . 'lib/hybrid-core/' );
