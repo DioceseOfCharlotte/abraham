@@ -86,3 +86,11 @@
 		white-space: nowrap;
 	}
 }
+
+.side-nav:not(.side-nav--visible) {
+	max-width: 0;
+}
+
+.tile {
+    position: relative;
+}

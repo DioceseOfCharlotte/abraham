@@ -94,7 +94,7 @@ function abraham_assets() {
 	wp_enqueue_style( 'abe-style', trailingslashit( get_template_directory_uri() ) . get_asset_rev( 'style.css' ) );
 
 	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ) . "css/oldie{$suffix}.css", array( 'abe-style' ) );
-	wp_style_add_data( 'oldie', 'conditional', 'lt IE 9' );
+	wp_style_add_data( 'oldie', 'conditional', 'IE' );
 
 	// Scripts.
 	wp_enqueue_script( 'abraham-js', trailingslashit( get_template_directory_uri() ) . 'js/' . get_asset_rev( 'abraham.js' ), false, false, true );

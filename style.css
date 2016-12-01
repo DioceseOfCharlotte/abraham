@@ -2177,6 +2177,14 @@ input[type="button"]:active {
 	white-space: nowrap;
 }
 
+.side-nav:not(.side-nav--visible) {
+	max-width: 0;
+}
+
+.tile {
+	position: relative;
+}
+
 .animating {
 	transition-duration: 0.16s;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
