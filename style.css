@@ -4360,6 +4360,17 @@ html .opacity-hover:hover {
 	white-space: nowrap;
 }
 
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+	white-space: inherit;
+}
+
 .clear::before,
 .clear::after {
 	content: "";
@@ -4433,6 +4444,11 @@ html .opacity-hover:hover {
 .contact-info svg {
 	opacity: 0.7;
 	margin-right: 0.25rem;
+}
+
+.site-wrap {
+	min-height: 100vh;
+	padding-top: 3.5rem;
 }
 
 /* ==========================================================================

@@ -91,6 +91,17 @@
     white-space: nowrap;
 }
 
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
 .clear::before,
 .clear::after {
 	content: "";

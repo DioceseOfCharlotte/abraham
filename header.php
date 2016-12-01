@@ -13,7 +13,8 @@
 
 	<?php tha_body_top(); ?>
 
-	<div <?php hybrid_attr( 'site_container' ); ?>>
+	<div id="page" class="site">
+		<a class="skip-link visuallyhidden focusable" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 		<?php tha_header_before(); ?>
 
@@ -40,4 +41,4 @@
 
 		<?php tha_header_after(); ?>
 
-		<div <?php hybrid_attr( 'layout' ); ?>>
+		<div class="site-wrap u-flex u-flex-col">

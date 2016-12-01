@@ -19,19 +19,24 @@
 
 @media (--md) {
 	.toggle-text {
-	    display: inline-block;
+		display: inline-block;
 	}
 }
 
 .entry-title {
-    width: 100%;
+	width: 100%;
 }
 
 .singular-parish .gv-list-view {
-    max-width: calc(33.33% - 1.5rem);
+	max-width: calc(33.33% - 1.5rem);
 }
 
 .contact-info svg {
 	opacity: var(--opacity);
 	margin-right: 0.25rem;
+}
+
+.site-wrap {
+	min-height: 100vh;
+	padding-top: 3.5rem;
 }
