@@ -111,8 +111,8 @@ function abraham_assets() {
 	// wp_enqueue_script( 'classlist', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/classList.min.js',  false, false, false );
 	// wp_script_add_data( 'classlist', 'conditional', 'IE' );
 
-	wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/flexibility.js',  false, false, false );
-	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
+	// wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/flexibility.js',  false, false, false );
+	// wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
 /**
