@@ -38,10 +38,6 @@ class Attr_Trumps {
 	public function __construct( $args = array() ) {
 
 		$defaults = array(
-			'body'                   	  => '',
-			'site_container'         	  => '',
-			'layout'                 	  => 'u-flex u-flex-col',
-			'layout_wide'            	  => '',
 			'grid'                   	  => 'o-grid u-container u-rel',
 			'grid_1-wide'               => 'o-grid u-1of1 u-rel u-p0',
 			'grid_2c-r'                 => 'o-grid u-container u-rel u-flex-rev',
@@ -73,14 +69,6 @@ class Attr_Trumps {
 			'entry_summary'           	=> 'u-p2 u-pt1 show-icons',
 			'entry_footer'            	=> 'u-mt-auto u-rel u-1of1',
 
-			'nav_single'              	=> '',
-			'nav_archive'             	=> '',
-
-			// ENTRY META.
-			'entry_author'            	=> '',
-			'entry_published'         	=> '',
-			'entry_terms'             	=> '',
-
 			// NAVIGATION.
 			'menu_all'                	=> '',
 			'menu_primary'            	=> 'u-mx-auto-md u-bg-1-glass u-text-center',
@@ -92,9 +80,6 @@ class Attr_Trumps {
 			'sidebar_horizontal'      	=> 'u-1of1',
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
-			'widgets'                 	=> '',
-			'primary_widgets'         	=> '',
-			'footer_widgets'          	=> '',
 
 			// COMMENTS.
 			'comments_area'           	=> 'u-p3',
@@ -114,9 +99,6 @@ class Attr_Trumps {
 		$this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
 
 		// CONTAINERS.
-		add_filter( 'hybrid_attr_body',                  array( $this, 'body' ) );
-		add_filter( 'hybrid_attr_site_container',        array( $this, 'site_container' ) );
-		add_filter( 'hybrid_attr_layout',                array( $this, 'layout' ) );
 		add_filter( 'hybrid_attr_grid',                  array( $this, 'grid' ) );
 
 		// SITE HEADER.
@@ -139,17 +121,11 @@ class Attr_Trumps {
 		add_filter( 'hybrid_attr_entry-summary',         array( $this, 'entry_summary' ) );
 		add_filter( 'hybrid_attr_entry-footer',          array( $this, 'entry_footer' ) );
 
-		// ENTRY META.
-		add_filter( 'hybrid_attr_entry-author',          array( $this, 'entry_author' ) );
-		add_filter( 'hybrid_attr_entry-published',       array( $this, 'entry_published' ) );
-		add_filter( 'hybrid_attr_entry-terms',           array( $this, 'entry_terms' ) );
-
 		// NAVIGATION.
 		add_filter( 'hybrid_attr_menu',                  array( $this, 'menu' ), 10, 2 );
 
 		// SIDEBAR.
 		add_filter( 'hybrid_attr_sidebar',               array( $this, 'sidebar' ), 10, 2 );
-		add_filter( 'hybrid_attr_widgets',               array( $this, 'widgets' ), 10, 2 );
 
 		// FOOTER.
 		add_filter( 'hybrid_attr_footer',                array( $this, 'footer' ) );
@@ -165,62 +141,6 @@ class Attr_Trumps {
 	}
 
 	/* === OBJECTS === */
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function body( $attr ) {
-		if ( ! $this->args['body'] ) {
-			return $attr;
-		}
-		$attr['class']      .= " {$this->args['body']}";
-
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function site_container( $attr ) {
-		$attr['id']        = 'page';
-		$attr['class']     = 'site';
-
-		if ( ! $this->args['site_container'] ) {
-			return $attr;
-		}
-
-		$attr['class'] .= " {$this->args['site_container']}";
-
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function layout( $attr ) {
-		$attr['id']       = 'content';
-		$attr['class']    = 'site-content';
-		if ( ! $this->args['layout'] ) {
-			return $attr;
-		}
-
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-			$attr['class']   .= " {$this->args['layout_wide']}";
-			else :
-				$attr['class']   .= " {$this->args['layout']}";
-			endif;
-
-			return $attr;
-	}
 
 	/**
 	 * Class selectors added to the element.
@@ -247,22 +167,6 @@ class Attr_Trumps {
 					return $attr;
 	}
 
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array  $attr Adds classes to hybrid_attr.
-	 * @param  string $context A specific context (e.g., 'primary').
-	 */
-	public function nav( $attr, $context ) {
-
-		if ( 'single' === $context ) {
-			$attr['class']      .= " {$this->args['nav_single']}";
-		}
-		if ( 'archive' === $context ) {
-			$attr['class']      .= " {$this->args['nav_archive']}";
-		}
-		return $attr;
-	}
 
 	/**
 	 * Class selectors added to the element.
@@ -378,30 +282,6 @@ class Attr_Trumps {
 			$attr['class']      .= " {$this->args['sidebar_footer']}";
 		}
 		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array  $attr Adds classes to hybrid_attr.
-	 * @param  string $context A specific context (e.g., 'primary').
-	 */
-	public function widgets( $attr, $context ) {
-		if ( empty( $context ) ) {
-			return $attr;
-		}
-		if ( $this->args['widgets'] ) {
-			$attr['class']      = $this->args['widgets'];
-
-			if ( 'footer' === $context ) {
-				$attr['class']      .= " {$this->args['footer_widgets']}";
-			}
-			if ( 'primary' === $context ) {
-				$attr['class']      .= " {$this->args['primary_widgets']}";
-			}
-
-			return $attr;
-		}
 	}
 
 	/**
@@ -574,38 +454,6 @@ class Attr_Trumps {
 	 * @param  array $attr Adds classes to hybrid_attr.
 	 * @return array
 	 */
-	public function entry_author( $attr ) {
-		if ( ! $this->args['entry_author'] ) {
-			return $attr;
-		}
-
-		$attr['class']      .= " {$this->args['entry_author']}";
-
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function entry_published( $attr ) {
-		if ( ! $this->args['entry_published'] ) {
-			return $attr;
-		}
-
-		$attr['class']      .= " {$this->args['entry_published']}";
-
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
 	public function entry_header( $attr ) {
 		$attr['class']     = 'entry-header';
 		if ( ! $this->args['entry_header'] ) {
@@ -666,22 +514,6 @@ class Attr_Trumps {
 		}
 
 		$attr['class']      .= " {$this->args['entry_footer']}";
-		return $attr;
-	}
-
-	/**
-	 * Class selectors added to the element.
-	 *
-	 * @param  array $attr Adds classes to hybrid_attr.
-	 * @return array
-	 */
-	public function entry_terms( $attr ) {
-		if ( ! $this->args['entry_terms'] ) {
-			return $attr;
-		}
-
-		$attr['class']      .= " {$this->args['entry_terms']}";
-
 		return $attr;
 	}
 
