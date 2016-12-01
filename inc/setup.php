@@ -100,14 +100,16 @@ function abraham_assets() {
 	wp_enqueue_script( 'abraham-js', trailingslashit( get_template_directory_uri() ) . 'js/' . get_asset_rev( 'abraham.js' ), false, false, true );
 
 	// polyfills
+	wp_enqueue_script( 'polyfill-io', 'https://cdn.polyfill.io/v2/polyfill.min.js', false, false, false );
+
 	wp_enqueue_script( 'object-fit-js', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/ofi.browser.js', false, false, true );
 	wp_add_inline_script( 'object-fit-js', 'objectFitImages();' );
 
 	wp_enqueue_script( 'html5shiv', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/html5shiv.min.js',  false, false, false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'classlist', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/classList.min.js',  false, false, false );
-	wp_script_add_data( 'classlist', 'conditional', 'IE' );
+	//
+	// wp_enqueue_script( 'classlist', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/classList.min.js',  false, false, false );
+	// wp_script_add_data( 'classlist', 'conditional', 'IE' );
 
 	wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/flexibility.js',  false, false, false );
 	wp_script_add_data( 'flexibility', 'conditional', 'IE' );
