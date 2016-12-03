@@ -2294,15 +2294,22 @@ input[type="button"]:active {
 }
 
 .breadcrumbs li:not(:last-of-type)::after {
-	padding: 0.5em;
 	margin: 0 0.25em;
-	background-size: cover;
-	width: 1em;
-	height: 1em;
-	content: " ";
-	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23fff' stroke='%23444' stroke-width='2%25' width='1em' height='1em'%3E%3Cpath d='M8.283 2L6 4.35 13.417 12 6 19.65 8.283 22 18 12z'/%3E%3C/svg%3E");
-	background-repeat: no-repeat;
-	display: inline-block;
+	opacity: 0.8;
+	content: "\f054";
+	font-family: FontAwesome !important;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 0.9em;
+	font-weight: normal !important;
+	font-style: normal !important;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .breadcrumbs a {
