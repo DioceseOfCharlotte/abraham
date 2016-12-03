@@ -146,7 +146,7 @@ function abraham_widgets() {
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-opacity">',
+		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-mt0 u-opacity">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
@@ -155,7 +155,7 @@ function abraham_widgets() {
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-opacity u-text-center">',
+		'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-mt0 u-opacity u-text-center">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
@@ -164,7 +164,7 @@ function abraham_widgets() {
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p2 u-mb3 u-bg-tint-1 u-br %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-opacity">',
+		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-mt0 u-opacity">',
 		'after_title'   => '</h2>',
 	) );
 }
