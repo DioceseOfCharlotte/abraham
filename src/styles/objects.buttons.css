@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Buttons
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 a.btn,
 a.button {
@@ -19,7 +19,6 @@ input[type="reset"],
 input[type="button"] {
 	color: var(--color-1-dark);
 	background-color: var(--color-frost-4);
-	//border: 2px solid var(--color-1-dark);
 	box-shadow: inset 0 0 0 0.125rem var(--color-1-dark);
 
 	&:hover,
@@ -46,7 +45,7 @@ input[type="button"] {
 
 	&:hover {
 		opacity: 0.9;
-		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 	}
 }
 

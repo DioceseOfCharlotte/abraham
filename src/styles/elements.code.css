@@ -1,21 +1,23 @@
 pre {
 	margin-bottom: var(--space-2);
-	padding: var(--space-2);
+	padding: var(--space-1);
+	overflow: auto;
 	font-size: 0.9rem;
-	line-height: 1.5rem;
-	font-weight: 400;
-	border: 0.063rem solid var(--color-grey-ui-light);
-	border-radius: var(--border-radius);
-	background: var(--color-frost-3);
-	tab-width: 4;
+	line-height: 1.5;
+	white-space: pre;
+	word-wrap: normal;
+	background-color: var(--color-frost-3);
+	color: var(--color-grey-char);
+	border-left: 0.25rem solid var(--color-shade-3);
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 	width: 100%;
-	white-space: pre-wrap;
-	overflow: auto; /* Internet Explorer 11- */
+	max-height: 60vh;
+	tab-size: 4;
 }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: var(--monospace-font-family), monospace;
+	font-family: var(--monospace-font-family);
 }

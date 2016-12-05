@@ -99,16 +99,6 @@ svg[stroke-width] {
 	align-items: center;
 }
 
-/*.o-alert::before {
-	background-size: contain;
-	width: 2.5em;
-	height: 2.5em;
-	margin-right: 0.5em;
-	margin-left: -0.5em;
-	flex-shrink: 0;
-	opacity: 0.7;
-}*/
-
 .icon-info::before {
 	@mixin fa $info-circle;
 
@@ -142,7 +132,6 @@ a[href*="twitter.com"]::before {
 a[href*="twitter.com"]::after {
 	content: none !important;
 }
-
 
 .icon-facebook::before,
 a[href*="facebook.com"]::before {

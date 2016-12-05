@@ -6,32 +6,32 @@
 }
 
 .fadeIn {
-    opacity: 0;
-    transition-property: opacity;
+	opacity: 0;
+	transition-property: opacity;
 }
 
 .fadeIn.animating {
-    opacity: 1;
+	opacity: 1;
 }
 
 .fadeInDown {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition-property: transform, opacity;
+	opacity: 0;
+	transform: translateY(-100%);
+	transition-property: transform, opacity;
 }
 
 .fadeInDown.animating {
-    transform: translateY(0);
-    opacity: 1;
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .fadeOutUp {
-    opacity: 1;
-    transform: translateY(0);
-    transition-property: transform, opacity;
+	opacity: 1;
+	transform: translateY(0);
+	transition-property: transform, opacity;
 }
 
 .fadeOutUp.animating {
-    opacity: 0;
-    transform: translateY(-100%);
+	opacity: 0;
+	transform: translateY(-100%);
 }

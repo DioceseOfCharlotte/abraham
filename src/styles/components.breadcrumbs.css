@@ -2,13 +2,11 @@
 \*------------------------------------ */
 
 .breadcrumbs {
-
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-
 		font-size: var(--h5-mobile);
 
 		@media (--md) {
@@ -25,7 +23,7 @@
 			margin: 0 0.25em;
 			opacity: 0.8;
 
-			@mixin fa $chevron-right;
+			@mixin fa $chevron-right ;
 		}
 	}
 }

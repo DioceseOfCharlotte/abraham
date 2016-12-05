@@ -19,6 +19,7 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "elements.page";
 @import "elements.links";
 @import "elements.typography";
+@import "elements.code";
 @import "elements.buttons";
 @import "elements.lists";
 @import "elements.tables";

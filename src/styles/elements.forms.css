@@ -94,8 +94,7 @@ input[type="number"] {
 }
 
 select {
-	@mixin icon select-arrows, #678695;
-
+	@mixin icon select-arrows, #678695 ;
 	background-size: 1em;
 	background-position: 98% 50%;
 	padding-right: 1.25em !important;
@@ -112,7 +111,7 @@ select {
 }
 
 input[type=search] {
-	@mixin icon search, #678695;
+	@mixin icon search, #678695 ;
 	background-size: 1.4em;
 	background-position: 97% 50%;
 	padding-right: 1.5em;
@@ -140,16 +139,15 @@ input[value=Other]:not(:focus) {
 }
 
 [class*="u-bg-"]:not(.u-bg-white) {
-
 	input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 	select,
 	textarea {
 		background-color: var(--color-frost-4);
+
 		&:focus {
 			background-color: color(#fff a(95%));
 		}
 	}
-
 }
 
 input:disabled,

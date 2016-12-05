@@ -30,7 +30,7 @@
 
 	--form-element-min-height: 2.5rem;
 
-	--monospace-font-family: Menlo, Consolas, Liberation Mono;
+	--monospace-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 	--paragraph-width: 64rem;
 	--container: 74rem;
