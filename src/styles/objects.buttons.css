@@ -33,8 +33,8 @@ input[type="button"] {
 .btn-round {
 	border-radius: 50%;
 	overflow: hidden;
-	height: 2.5rem;
-	width: 2.5rem;
+	height: var(--form-element-min-height);
+	width: var(--form-element-min-height);
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
@@ -46,6 +46,17 @@ input[type="button"] {
 	&:hover {
 		opacity: 0.9;
 		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	}
+
+	a {
+		color: inherit;
+		width: var(--form-element-min-height);
+		height: var(--form-element-min-height);
+		display: inline-block;
+		text-align: center;
+		border-radius: 50%;
+		padding: .5rem 0;
+		background-image: none;
 	}
 }
 
