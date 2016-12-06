@@ -6,7 +6,7 @@
  */
 
 $p_color = get_theme_mod( 'primary_color', '' );
-$hex = '#' .$p_color;
+$hex = maybe_hash_hex_color( $p_color );
 ?>
 
 <head <?php hybrid_attr( 'head' ); ?>>
@@ -17,8 +17,8 @@ $hex = '#' .$p_color;
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="msapplication-TileColor" content="<?= $hex ?>">
-<meta name="theme-color" content="<?= $hex ?>">
+<meta name="msapplication-TileColor" content="<?php echo $hex ?>">
+<meta name="theme-color" content="<?php echo $hex ?>">
 
 <?php wp_head(); ?>
 </head>

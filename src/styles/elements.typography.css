@@ -82,13 +82,3 @@ pre,
 blockquote {
 	margin-bottom: 1em;
 }
-
-p:empty {
-	margin: 0 !important;
-	padding: 0 !important;
-	line-height: 0 !important;
-}
-
-p:last-child {
-	margin-bottom: 0;
-}

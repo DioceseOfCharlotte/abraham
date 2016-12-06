@@ -95,6 +95,14 @@ article {
 	}
 }
 
+p:empty {
+	display: none;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
 .site {
 	max-width: 100%;
 	width: 100%;

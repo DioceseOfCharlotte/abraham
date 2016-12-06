@@ -37,7 +37,8 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "objects.shadows";
 @import "components.breadcrumbs";
 @import "utility.widths";
-@import "utility.spacing";
+@import 'utility.margin';
+@import 'utility.padding';
 @import "utility.tables";
 @import "utility.flex";
 @import "utility.images";
