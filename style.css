@@ -4467,6 +4467,11 @@ html .opacity-hover:hover {
 	padding-top: 3.5rem;
 }
 
+.comments-area {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+
 /* ==========================================================================
 	HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/
    Print styles.

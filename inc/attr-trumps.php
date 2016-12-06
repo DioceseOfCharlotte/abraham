@@ -12,8 +12,8 @@
  */
 function attr_trumps( $args = array() ) {
 
-	if ( is_admin() )
-		return;
+	if ( is_admin() ) {
+		return; }
 
 	$trump = apply_filters( 'attr_trumps_object', null, $args );
 	if ( ! is_object( $trump ) ) {
@@ -81,8 +81,8 @@ class Attr_Trumps {
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
 
-			// COMMENTS.
-			'comments_area'           	=> 'u-p3',
+			// COMMENTS. Same as post by default
+			// 'comments_area'           	=> '',
 
 			// FOOTER.
 			'footer'                    => 'u-mt-auto u-bg-2',
@@ -175,11 +175,14 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function comments_area( $attr ) {
-		if ( ! $this->args['comments_area'] ) {
+		$attr['id']        = 'comments';
+		$attr['class']     = 'comments-area';
+
+		if ( ! $this->args['post'] ) {
 			return $attr;
 		}
 
-		$attr['class']      .= " {$this->args['comments_area']}";
+		$attr['class']      .= " {$this->args['post']}";
 
 		return $attr;
 	}
@@ -243,14 +246,14 @@ class Attr_Trumps {
 				$attr['class']      .= " {$this->args['content_with_sidebar']}";
 		endif;
 
-		if ( hybrid_is_plural() ) {
-			$attr['class']      .= " {$this->args['content_archive']}";
-		}
-		if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
-			$attr['class']   .= ' facetwp-template';
-		}
+			if ( hybrid_is_plural() ) {
+				$attr['class']      .= " {$this->args['content_archive']}";
+			}
+			if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
+				$attr['class']   .= ' facetwp-template';
+			}
 
-		return $attr;
+			return $attr;
 	}
 
 	/**
@@ -476,8 +479,8 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-			if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-				$attr['class']      .= " {$this->args['entry_content_wide']}";
+		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+			$attr['class']      .= " {$this->args['entry_content_wide']}";
 			else :
 				$attr['class']      .= " {$this->args['entry_content']}";
 			endif;

@@ -2,7 +2,7 @@
 
 hybrid_post_terms(array(
 	'taxonomy' => 'category',
-	'text'     => __('Posted in %s', 'abraham'),
+	//'text'     => __('Posted in %s', 'abraham'),
 ));
 
 hybrid_post_terms(array(

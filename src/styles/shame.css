@@ -1,4 +1,3 @@
-
 #menu-primary {
 	display: none;
 }
@@ -39,4 +38,9 @@
 .site-wrap {
 	min-height: 100vh;
 	padding-top: 3.5rem;
+}
+
+.comments-area {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
 }

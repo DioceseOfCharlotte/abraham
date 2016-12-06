@@ -22,8 +22,11 @@ if ( ! hybrid_post_has_content() && ! is_singular( 'gravityview' ) ) {
 
 		<?php get_template_part( 'components/entry', 'footer' ); ?>
 
-		<?php comments_template( '', true ); ?>
-
 	<?php tha_entry_bottom(); ?>
 
 </article>
+
+<?php
+if ( comments_open() || get_comments_number() ) :
+	comments_template( '/content/comments.php' );
+endif;
