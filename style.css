@@ -907,7 +907,7 @@ h5 {
 
 @media (min-width: 40rem) {
 	h5 {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -917,7 +917,7 @@ h6 {
 
 @media (min-width: 40rem) {
 	h6 {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -2288,7 +2288,7 @@ input[type="button"]:active {
 
 @media (min-width: 40rem) {
 	.breadcrumbs ul {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -3627,7 +3627,7 @@ body:not(.search) .trail-end > span,
 
 @media (min-width: 40rem) {
 	.u-h5 {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -3726,7 +3726,7 @@ body:not(.search) .trail-end > span,
 @media (min-width: 40rem) {
 	.u-lead,
 	.intro-paragraph {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
