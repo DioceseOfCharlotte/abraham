@@ -3550,14 +3550,6 @@ body:not(.search) .trail-end > span,
 	font-size: 1rem;
 }
 
-.u-f-minus {
-	font-size: 0.9rem;
-}
-
-.u-f-plus {
-	font-size: 1.125rem;
-}
-
 .u-h0 {
 	font-size: 2.5rem;
 }
@@ -3632,24 +3624,21 @@ body:not(.search) .trail-end > span,
 	}
 }
 
+.u-f-plus,
 .u-h5 {
 	font-size: 1.1rem;
 }
 
 @media (min-width: 40rem) {
+	.u-f-plus,
 	.u-h5 {
 		font-size: 1.25rem;
 	}
 }
 
+.u-f-minus,
 .u-h6 {
 	font-size: 0.9rem;
-}
-
-@media (min-width: 40rem) {
-	.u-h6 {
-		font-size: 0.9rem;
-	}
 }
 
 .u-lh-1 {
