@@ -1,5 +1,6 @@
 /* #WHITE SPACE
 \*------------------------------------ */
+@context pcSpec {
 
 .u-m05 {
 	margin: var(--space-05);
@@ -323,4 +324,6 @@
 		margin-right: var(--space-4);
 		margin-left: var(--space-4);
 	}
+}
+
 }

@@ -1,5 +1,6 @@
 /* #WHITE SPACE
 \*------------------------------------ */
+@context pcSpec {
 
 .u-p05 {
 	padding: var(--space-05);
@@ -195,4 +196,6 @@
 	.u-pb4-md {
 		padding-bottom: var(--space-4);
 	}
+}
+
 }

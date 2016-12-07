@@ -13,15 +13,18 @@ const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
 
 const autoPrefixer = require('autoprefixer');
-const atImport = require("postcss-import");
+const pcImport = require("postcss-import");
 const pcMixins = require("postcss-mixins");
 const pcColor = require('postcss-color-function');
 const pcNested = require("postcss-nested");
 const pcMedia = require("postcss-custom-media");
 const pcProperties = require("postcss-custom-properties");
+const pcRoot = require("postcss-remove-root");
 const pcSvg = require('postcss-inline-svg');
 const pcSvar = require('postcss-simple-vars');
 const pcStrip = require('postcss-strip-units');
+const pcSpec = require('postcss-increase-specificity');
+const context = require('postcss-plugin-context');
 
 const $ = require('gulp-load-plugins')();
 const reload = browserSync.reload;
@@ -39,7 +42,8 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 
 const POSTCSS_PLUGINS = [
-	atImport,
+	pcImport,
+	context({ pcSpec: pcSpec({ repeat: 1 }) }),
 	pcProperties,
 	pcStrip,
 	pcMixins,
