@@ -106,7 +106,7 @@
 
 	/* Grey */
 	--white: #fff;
-	--silver: var(--oc-gray-1);
+	--silver: var(--oc-gray-0);
 	--grey: var(--oc-gray-4);
 	--blue-grey: #678695;
 	--grey-nuetral: #90a4ae;

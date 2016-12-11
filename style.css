@@ -951,29 +951,69 @@ blockquote {
 	margin-bottom: 1em;
 }
 
-pre {
-	margin-bottom: 2rem;
-	padding: 1rem;
-	overflow: auto;
-	font-size: 0.9rem;
-	line-height: 1.5;
-	white-space: pre;
-	word-wrap: normal;
-	background-color: rgba(233, 236, 239, 0.5);
-	color: #343a40;
-	border-left: 0.25rem solid rgba(206, 212, 218, 0.5);
-	border-radius: 0 0.2rem 0.2rem 0;
-	width: 100%;
-	max-height: 60vh;
-	-moz-tab-size: 4;
-	tab-size: 4;
-}
-
 code,
 kbd,
 pre,
 samp {
 	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Github Style */
+
+code {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(233, 236, 239, 0.5);
+	border-radius: 0.2rem;
+}
+
+code::before,
+code::after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: rgba(233, 236, 239, 0.5);
+	border-radius: 0.2rem;
+	word-wrap: normal;
+	max-height: 60vh;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	border: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+}
+
+pre code::before,
+pre code::after {
+	content: normal;
 }
 
 .btn,
@@ -4028,7 +4068,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-text-silver {
-	color: #f1f3f5;
+	color: #f8f9fa;
 }
 
 .u-text-white {
@@ -4090,7 +4130,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-bg-silver {
-	background-color: #f1f3f5;
+	background-color: #f8f9fa;
 	color: #495057;
 }
 
