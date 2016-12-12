@@ -1,6 +1,7 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
+@context pcSpec {
 .u-f1 {
 	font-size: 1rem;
 }
@@ -95,13 +96,6 @@
 	font-family: var(--root-font-family);
 }
 
-.u-text-display,
-.u-text-display > a,
-.u-dropcap::first-letter {
-	font-family: var(--display-font-family);
-	color: inherit;
-}
-
 .u-regular,
 .u-normal {
 	font-weight: var(--font-normal);
@@ -173,4 +167,13 @@
 	@media (--md) {
 		font-size: var(--h0);
 	}
+}
+}
+
+
+.u-text-display,
+.u-text-display > a,
+.u-dropcap::first-letter {
+	font-family: var(--display-font-family);
+	color: inherit;
 }

@@ -3563,191 +3563,184 @@ body:not(.search) .trail-end > span,
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
-.u-f1 {
+:root .u-f1 {
 	font-size: 1rem;
 }
 
-.u-h0 {
+:root .u-h0 {
 	font-size: 2.5rem;
 }
 
 @media (min-width: 21rem) {
-	.u-h0 {
+	:root .u-h0 {
 		font-size: calc(2.5rem + (4.4 - 2.5) * (100vw - 20rem) / (92 - 20));
 	}
 }
 
 @media (min-width: 90rem) {
-	.u-h0 {
+	:root .u-h0 {
 		font-size: 4.4rem;
 	}
 }
 
-.u-h1 {
+:root .u-h1 {
 	font-size: 2rem;
 }
 
 @media (min-width: 21rem) {
-	.u-h1 {
+	:root .u-h1 {
 		font-size: calc(2rem + (3 - 2) * (100vw - 20rem) / (92 - 20));
 	}
 }
 
 @media (min-width: 90rem) {
-	.u-h1 {
+	:root .u-h1 {
 		font-size: 3rem;
 	}
 }
 
-.u-h2 {
+:root .u-h2 {
 	font-size: 1.75rem;
 }
 
 @media (min-width: 21rem) {
-	.u-h2 {
+	:root .u-h2 {
 		font-size: calc(1.75rem + (2.5 - 1.75) * (100vw - 20rem) / (92 - 20));
 	}
 }
 
 @media (min-width: 90rem) {
-	.u-h2 {
+	:root .u-h2 {
 		font-size: 2.5rem;
 	}
 }
 
-.u-h3 {
+:root .u-h3 {
 	font-size: 1.5rem;
 }
 
 @media (min-width: 21rem) {
-	.u-h3 {
+	:root .u-h3 {
 		font-size: calc(1.5rem + (2 - 1.5) * (100vw - 20rem) / (92 - 20));
 	}
 }
 
 @media (min-width: 90rem) {
-	.u-h3 {
+	:root .u-h3 {
 		font-size: 2rem;
 	}
 }
 
-.u-h4 {
+:root .u-h4 {
 	font-size: 1.25rem;
 }
 
 @media (min-width: 40rem) {
-	.u-h4 {
+	:root .u-h4 {
 		font-size: 1.5rem;
 	}
 }
 
-.u-f-plus,
-.u-h5 {
+:root .u-f-plus,
+:root .u-h5 {
 	font-size: 1.1rem;
 }
 
 @media (min-width: 40rem) {
-	.u-f-plus,
-	.u-h5 {
+	:root .u-f-plus,
+	:root .u-h5 {
 		font-size: 1.25rem;
 	}
 }
 
-.u-f-minus,
-.u-h6 {
+:root .u-f-minus,
+:root .u-h6 {
 	font-size: 0.9rem;
 }
 
-.u-lh-1 {
+:root .u-lh-1 {
 	line-height: 1;
 }
 
-.u-lh-2 {
+:root .u-lh-2 {
 	line-height: 2;
 }
 
-.u-light {
+:root .u-light {
 	font-weight: 300;
 }
 
-.u-bold {
+:root .u-bold {
 	font-weight: 600;
 }
 
-.u-text-read {
+:root .u-text-read {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 }
 
-.u-text-display,
-.u-text-display > a,
-.u-dropcap::first-letter {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
-	color: inherit;
-}
-
-.u-regular,
-.u-normal {
+:root .u-regular,
+:root .u-normal {
 	font-weight: 400;
 }
 
-.u-italic {
+:root .u-italic {
 	font-style: italic;
 }
 
-.u-caps {
+:root .u-caps {
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
 
-.u-text-shadow {
+:root .u-text-shadow {
 	text-shadow: 0.063rem 0.063rem 0.313rem rgba(33, 37, 41, 0.5);
 }
 
-.u-text-left {
+:root .u-text-left {
 	text-align: left;
 }
 
-.u-text-center {
+:root .u-text-center {
 	text-align: center;
 }
 
-.u-text-right {
+:root .u-text-right {
 	text-align: right;
 }
 
-.u-text-justify {
+:root .u-text-justify {
 	text-align: justify;
 }
 
-.u-nowrap {
+:root .u-nowrap {
 	white-space: nowrap;
 }
 
-.u-break-word {
+:root .u-break-word {
 	word-wrap: break-word;
 }
 
-.u-truncate {
+:root .u-truncate {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.u-lead,
-.intro-paragraph {
+:root .u-lead,
+:root .intro-paragraph {
 	font-weight: 300;
 	font-size: 1.1rem;
 }
 
 @media (min-width: 40rem) {
-	.u-lead,
-	.intro-paragraph {
+	:root .u-lead,
+	:root .intro-paragraph {
 		font-size: 1.25rem;
 	}
 }
 
-.u-dropcap::first-letter {
+:root .u-dropcap::first-letter {
 	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
 	margin-right: 0.15em;
@@ -3758,9 +3751,16 @@ body:not(.search) .trail-end > span,
 }
 
 @media (min-width: 40rem) {
-	.u-dropcap::first-letter {
+	:root .u-dropcap::first-letter {
 		font-size: 4.4rem;
 	}
+}
+
+.u-text-display,
+.u-text-display > a,
+.u-dropcap::first-letter {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
+	color: inherit;
 }
 
 /* #UTILITY LAYOUT
@@ -4302,24 +4302,24 @@ body:not(.search) .trail-end > span,
 /* #HELPERS
 \*------------------------------------ */
 
-.u-color-inherit,
-.u-color-inherit * {
+:root .u-color-inherit,
+:root .u-color-inherit * {
 	color: inherit;
 }
 
-.u-currentcolor_a a {
+:root .u-currentcolor_a a {
 	color: currentColor;
 }
 
-.u-currentcolor {
+:root .u-currentcolor {
 	color: currentColor;
 }
 
-.u-no-link {
+:root .u-no-link {
 	box-shadow: none;
 }
 
-.u-link[class] {
+:root .u-link[class] {
 	color: #1862ab;
 	text-decoration: none;
 	font-weight: 600;
@@ -4332,82 +4332,82 @@ body:not(.search) .trail-end > span,
 	box-shadow: inset 0 -1px 0 0 rgba(206, 212, 218, 0.4);
 }
 
-.u-link[class]:hover,
-.u-link[class].active,
-.u-link[class]:active,
-.u-link[class]:focus {
+:root .u-link[class]:hover,
+:root .u-link[class].active,
+:root .u-link[class]:active,
+:root .u-link[class]:focus {
 	color: #329af0;
 	background-color: rgba(206, 212, 218, 0.2);
 	transition-duration: 0.2s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.u-strip-space {
+:root .u-strip-space {
 	margin: 0;
 	padding: 0;
 }
 
-.u-strip-space > * {
+:root .u-strip-space :root > * {
 	margin: 0;
 	padding: 0;
 }
 
-.u-spacer1 {
+:root .u-spacer1 {
 	min-height: 1rem;
 }
 
-.u-spacer16 {
+:root .u-spacer16 {
 	min-height: 1.6rem;
 }
 
-.u-spacer20 {
+:root .u-spacer20 {
 	min-height: 2rem;
 }
 
-.u-spacer3 {
+:root .u-spacer3 {
 	min-height: 3rem;
 }
 
 /* Opacity */
 
-.u-opacity {
+:root .u-opacity {
 	opacity: 0.7;
 }
 
-.u-opacity1 {
+:root .u-opacity1 {
 	opacity: 1;
 }
 
-.hidden {
+:root .hidden {
 	display: none;
 }
 
 @media (max-width: 20rem) {
-	.hidden-xs {
+	:root .hidden-xs {
 		display: none;
 	}
 }
 
 @media (min-width: 21rem) {
-	.hidden-sm {
+	:root .hidden-sm {
 		display: none;
 	}
 }
 
 @media (min-width: 40rem) {
-	.hidden-md {
+	:root .hidden-md {
 		display: none;
 	}
 }
 
 @media (min-width: 64rem) {
-	.hidden-lg {
+	:root .hidden-lg {
 		display: none;
 	}
 }
 
-.screen-reader-text,
-.visuallyhidden {
+:root .screen-reader-text,
+:root .visuallyhidden {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -4419,8 +4419,8 @@ body:not(.search) .trail-end > span,
 	white-space: nowrap;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+:root .visuallyhidden.focusable:active,
+:root .visuallyhidden.focusable:focus {
 	clip: auto;
 	height: auto;
 	margin: 0;
@@ -4430,41 +4430,41 @@ body:not(.search) .trail-end > span,
 	white-space: inherit;
 }
 
-.clear::before,
-.clear::after {
+:root .clear::before,
+:root .clear::after {
 	content: "";
 	display: table;
 }
 
-.clear::after {
+:root .clear::after {
 	clear: both;
 }
 
-.alignleft {
+:root .alignleft {
 	float: left;
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
-.alignright {
+:root .alignright {
 	float: right;
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
 }
 
-.aligncenter {
+:root .aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto;
 }
 
-.disabled {
+:root .disabled {
 	pointer-events: none;
 	cursor: default;
 	opacity: 0.5;
 }
 
-.admin-bar .if-admin-bar {
+:root .admin-bar .if-admin-bar {
 	margin-top: 32px;
 }
 

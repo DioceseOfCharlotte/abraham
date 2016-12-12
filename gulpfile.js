@@ -43,8 +43,8 @@ const AUTOPREFIXER_BROWSERS = [
 
 const POSTCSS_PLUGINS = [
 	pcImport,
-	context({ pcSpec: pcSpec({ repeat: 1 }) }),
 	pcProperties,
+	context({ pcSpec: pcSpec({ repeat: 1 }) }),
 	pcStrip,
 	pcMixins,
 	pcSvar,
