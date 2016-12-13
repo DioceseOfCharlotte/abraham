@@ -4496,10 +4496,6 @@ body:not(.search) .trail-end > span,
 	width: 100%;
 }
 
-.singular-parish .gv-list-view {
-	max-width: calc(33.33% - 1.5rem);
-}
-
 .contact-info svg {
 	opacity: 0.7;
 	margin-right: 0.25rem;

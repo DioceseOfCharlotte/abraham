@@ -26,10 +26,6 @@
 	width: 100%;
 }
 
-.singular-parish .gv-list-view {
-	max-width: calc(33.33% - 1.5rem);
-}
-
 .contact-info svg {
 	opacity: var(--opacity);
 	margin-right: 0.25rem;
