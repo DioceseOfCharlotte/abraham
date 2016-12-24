@@ -51,14 +51,14 @@ function abe_display_font() {
 			font-family: "Source Sans ProFB", sans-serif;
 			font-weight: 400;
 		}
-		.u-text-display,.u-text-display>a,.u-dropcap::first-letter {
+		.u-text-display,.u-dropcap::first-letter {
 			font-family: CormorantFB, serif;
 			font-weight: 400;
 		}
 		.fontB body, .fontB .u-text-read {
 			font-family: "Source Sans Pro", sans-serif;
 		}
-		.fontA .u-text-display,.fontA .u-text-display>a,.fontA .u-dropcap::first-letter {
+		.fontA .u-text-display,.fontA .u-dropcap::first-letter {
 			font-family: "Cormorant Garamond", serif;
 		}
 	</style>

@@ -170,10 +170,7 @@
 }
 }
 
-
 .u-text-display,
-.u-text-display > a,
 .u-dropcap::first-letter {
 	font-family: var(--display-font-family);
-	color: inherit;
 }

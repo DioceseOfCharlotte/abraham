@@ -5,6 +5,21 @@
    ========================================================================== */
 
 @media print {
+	html {
+		font-size: 12pt;
+		-ms-overflow-style: none;
+	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	body {
+		font-family: var(--root-font-family);
+		color: #000 !important;
+		font-size: 12pt;
+	}
+
 	*,
 	*:before,
 	*:after,
@@ -22,18 +37,27 @@
 		text-shadow: none !important;
 	}
 
-	body > *:not(main) {
+	nav,
+	#header,
+	#footer {
 		display: none;
 	}
 
-	a,
-	a:visited {
+	#page a {
 		text-decoration: underline;
+		border-radius: 0;
+		opacity: 1;
+		overflow: visible;
 	}
 
-	li a[href]:after,
-	p a[href]:after {
+	#page li a[href]:after,
+	#page p a[href]:after {
 		content: " (" attr(href) ")";
+		color: var(--color-links-hover);
+		opacity: 1;
+		font-size: 11pt;
+		font-style: italic;
+		font-weight: normal;
 	}
 
 	abbr[title]:after {
@@ -85,4 +109,71 @@
 	h3 {
 		page-break-after: avoid;
 	}
+
+	#page h1,
+	#page h2,
+	#page h3,
+	#page h4,
+	#page h5 {
+		font-weight: bold;
+		padding: 0;
+		font-family: var(--display-font-family);
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+
+	h1 + p,
+	h2 + p,
+	h3 + p {
+		page-break-before: avoid;
+	}
+
+	#page h1 {
+	    font-size: 2em;
+	    margin: 0.67em 0;
+	}
+
+	#page h2 {
+	    font-size: 1.5em;
+	    margin: 0.83em 0;
+	}
+
+	#page h3 {
+	    font-size: 1.17em;
+	    margin: 1em 0;
+	}
+
+	#page h4 {
+	    font-size: 1em;
+	    margin: 1.33em 0;
+	}
+
+	#page h5 {
+	    font-size: 0.83em;
+	    margin: 1.67em 0;
+	}
+
+	#page h6 {
+	    font-size: 0.67em;
+	    margin: 2.33em 0;
+	}
+
+	.archive-header {
+		padding: 0!important;
+	}
+	.archive-title {
+		display: inline-block!important;
+		margin-top: 0!important;
+		line-height: 1!important;
+	}
+
+	table,
+	figure {
+		page-break-inside: avoid;
+	}
+}
+
+@page  {
+	size: letter;
+	margin: 36pt;
 }
