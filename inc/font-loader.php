@@ -26,21 +26,11 @@ function abe_font_scripts() {
 }
 
 function abe_display_font() {
-	$font_dir = trailingslashit( get_template_directory_uri() ) . 'fonts/'; ?>
-
-	<link rel="preload" href="<?php echo $font_dir ?>cormorant-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
+?>
 
 	<style type="text/css">
-		@font-face {
-			font-family: 'CormorantFB';
-			font-style: normal;
-			font-weight: 400;
-			src:url('<?php echo $font_dir ?>cormorant-garamond-regular.woff2') format('woff2'),
-				url('<?php echo $font_dir ?>cormorant-garamond-regular.woff') format('woff');
-		}
 		.u-text-display,.u-dropcap::first-letter {
-			font-family: CormorantFB, serif;
-			font-weight: 400;
+			font-weight: normal;
 		}
 		.fontB body, .fontB .u-text-read {
 			font-family: 'Open Sans', sans-serif;

@@ -3713,7 +3713,7 @@ body:not(.search) .trail-end > span,
 
 .u-text-display,
 .u-dropcap::first-letter {
-	font-family: "Times", "Times New Roman", "Liberation Serif", serif;
+	font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 }
 
 /* #UTILITY LAYOUT
@@ -4582,7 +4582,7 @@ body:not(.search) .trail-end > span,
 	#page h5 {
 		font-weight: bold;
 		padding: 0;
-		font-family: "Times", "Times New Roman", "Liberation Serif", serif;
+		font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}
