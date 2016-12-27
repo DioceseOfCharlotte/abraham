@@ -904,30 +904,12 @@ h4 {
 	font-size: 1.25rem;
 }
 
-@media (min-width: 40rem) {
-	h4 {
-		font-size: 1.5rem;
-	}
-}
-
 h5 {
-	font-size: 1.1rem;
-}
-
-@media (min-width: 40rem) {
-	h5 {
-		font-size: 1.25rem;
-	}
+	font-size: 1.125rem;
 }
 
 h6 {
-	font-size: 1.1rem;
-}
-
-@media (min-width: 40rem) {
-	h6 {
-		font-size: 1.25rem;
-	}
+	font-size: 1.125rem;
 }
 
 h1,
@@ -2343,13 +2325,7 @@ input[type="button"]:active {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	font-size: 1.1rem;
-}
-
-@media (min-width: 40rem) {
-	.breadcrumbs ul {
-		font-size: 1.25rem;
-	}
+	font-size: 1.125rem;
 }
 
 .breadcrumbs li {
@@ -2364,21 +2340,9 @@ input[type="button"]:active {
 
 .breadcrumbs li:not(:last-of-type)::after {
 	margin: 0 0.25em;
-	opacity: 0.8;
-	content: "\f054";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	content: '/';
+	font-size: 1.25em;
+	vertical-align: middle;/*@mixin fa $chevron-right ;*/
 }
 
 .breadcrumbs a {
@@ -3646,22 +3610,9 @@ body:not(.search) .trail-end > span,
 	font-size: 1.25rem;
 }
 
-@media (min-width: 40rem) {
-	:root .u-h4 {
-		font-size: 1.5rem;
-	}
-}
-
 :root .u-f-plus,
 :root .u-h5 {
-	font-size: 1.1rem;
-}
-
-@media (min-width: 40rem) {
-	:root .u-f-plus,
-	:root .u-h5 {
-		font-size: 1.25rem;
-	}
+	font-size: 1.125rem;
 }
 
 :root .u-f-minus,
@@ -3741,14 +3692,7 @@ body:not(.search) .trail-end > span,
 :root .u-lead,
 :root .intro-paragraph {
 	font-weight: 300;
-	font-size: 1.1rem;
-}
-
-@media (min-width: 40rem) {
-	:root .u-lead,
-	:root .intro-paragraph {
-		font-size: 1.25rem;
-	}
+	font-size: 1.125rem;
 }
 
 :root .u-dropcap::first-letter {
