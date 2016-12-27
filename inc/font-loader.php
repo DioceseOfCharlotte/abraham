@@ -12,7 +12,7 @@ add_action( 'wp_head', 'abe_display_font' );
 */
 function abe_font_scripts() {
 
-	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,600,600i|Open+Sans:300,400,400i,600,700' );
+	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,600,600i|Open+Sans:300,300i,400,400i,600,600i' );
 
 	wp_enqueue_style( 'abe_font_awesome', 'https://use.fontawesome.com/1397c1e607.css' );
 
