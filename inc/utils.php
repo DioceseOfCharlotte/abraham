@@ -155,20 +155,7 @@ if ( function_exists( 'arch_excerpt' ) ) {
 }
 
 function abe_get_default_image() {
-	$image_uri = '';
-	$dir       = trailingslashit( get_template_directory() );
-	$uri       = trailingslashit( get_template_directory_uri() );
-	$child_dir   = trailingslashit( get_stylesheet_directory() );
-	$child_uri   = trailingslashit( get_stylesheet_directory_uri() );
-
-	if ( is_child_theme() && file_exists( "{$child_dir}images/default-thumb.jpg" ) ) {
-
-		$image_uri = "{$child_uri}images/default-thumb.jpg";
-	} elseif ( file_exists( "{$dir}images/default-thumb.jpg" ) ) {
-
-		$image_uri = "{$uri}images/default-thumb.jpg";
-	}
-		return $image_uri;
+	return get_theme_file_uri( 'images/default-thumb.jpg' );
 }
 
 

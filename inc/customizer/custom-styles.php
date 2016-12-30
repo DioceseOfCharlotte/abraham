@@ -30,9 +30,6 @@ final class Abraham_Custom_Styles {
 		/* Output CSS into <head>. */
 		add_action( 'wp_head', array( $this, 'wp_head_callback' ) );
 
-		/* Add a '.custom-styles' <body> class. */
-		add_filter( 'body_class', array( $this, 'body_class' ) );
-
 		/* Filter the default colors late. */
 		add_filter( 'theme_mod_primary_color', array( $this, 'primary_color_default' ), 95 );
 		add_filter( 'theme_mod_secondary_color', array( $this, 'secondary_color_default' ), 95 );
@@ -82,21 +79,6 @@ final class Abraham_Custom_Styles {
 	}
 
 	/**
-	 * Adds the 'custom-styles' class to the <body> element.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @param array $classes
-	 *
-	 * @return array
-	 */
-	public function body_class( $classes ) {
-		$classes[] = 'custom-styles';
-
-		return $classes;
-	}
-
-	/**
 	 * Callback for 'wp_head' that outputs the CSS for this feature.
 	 *
 	 * @since  1.0.0
@@ -105,7 +87,7 @@ final class Abraham_Custom_Styles {
 		$style = $this->get_primary_styles();
 		$style .= $this->get_secondary_styles();
 		/* Put the final style output together. */
-		$style = "\n".'<style id="custom-colors-css">'.trim( $style ).'</style>'."\n";
+		$style = "\n" . '<style id="custom-colors-css">' . trim( $style ) . '</style>' . "\n";
 
 		/* Output the custom style. */
 		echo $style;
@@ -150,18 +132,18 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "#page .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase}}";
-		$style .= "#page .u-text-1-dark{color:#{$colorDark}}";
-		$style .= "#page .u-text-1-light{color:#{$colorLight}}";
-		$style .= "#page .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
-		$style .= "#page .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
-		$style .= "#page .u-bg-1-dark,input[type=submit]{background-color:#{$colorDark};color:#{$textOnDark};}";
-		$style .= "#page .u-bg-1-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
-		$style .= "#page .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
-		$style .= "#page .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
-		$style .= "#page .u-fill-1{fill:#{$colorBase}}";
-		$style .= "#page .u-fill-1-light{fill:#{$colorLight}}";
-		$style .= "#page .u-fill-1-dark{fill:#{$colorDark}}";
+		$style .= "html .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
+		$style .= "html .u-text-1-dark{color:#{$colorDark};}";
+		$style .= "html .u-text-1-light{color:#{$colorLight};}";
+		$style .= "html .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
+		$style .= "html .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
+		$style .= "html .u-bg-1-dark,input[type=submit]{background-color:#{$colorDark};color:#{$textOnDark};}";
+		$style .= "html .u-bg-1-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
+		$style .= "html .u-bg-1-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
+		$style .= "html .u-bg-1-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
+		$style .= "html .u-fill-1{fill:#{$colorBase};}";
+		$style .= "html .u-fill-1-light{fill:#{$colorLight};}";
+		$style .= "html .u-fill-1-dark{fill:#{$colorDark};}";
 
 		/* Return the styles. */
 		return str_replace( array( "\r", "\n", "\t" ), '', $style );
@@ -206,18 +188,18 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "#page .u-text-2{color:#{$colorBase}}";
-		$style .= "#page .u-text-2-dark{color:#{$colorDark}}";
-		$style .= "#page .u-text-2-light{color:#{$colorLight}}";
-		$style .= "#page .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
-		$style .= "#page .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
-		$style .= "#page .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
-		$style .= "#page .u-bg-2-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
-		$style .= "#page .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
-		$style .= "#page .u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
-		$style .= "#page .u-fill-2{fill:#{$colorBase}}";
-		$style .= "#page .u-fill-2-light{fill:#{$colorLight}}";
-		$style .= "#page .u-fill-2-dark{fill:#{$colorDark}}";
+		$style .= "html .u-text-2{color:#{$colorBase};}";
+		$style .= "html .u-text-2-dark{color:#{$colorDark};}";
+		$style .= "html .u-text-2-light{color:#{$colorLight};}";
+		$style .= "html .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
+		$style .= "html .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
+		$style .= "html .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
+		$style .= "html .u-bg-2-glass{background-color:rgba( {$glass}, 0.98 );color:#{$textBase};}";
+		$style .= "html .u-bg-2-glass-light{background-color:rgba( {$glass_light}, 0.98 );color:#{$textOnLight};}";
+		$style .= "html .u-bg-2-glass-dark{background-color:rgba( {$glass_dark}, 0.98 );color:#{$textOnDark};}";
+		$style .= "html .u-fill-2{fill:#{$colorBase};}";
+		$style .= "html .u-fill-2-light{fill:#{$colorLight};}";
+		$style .= "html .u-fill-2-dark{fill:#{$colorDark};}";
 
 		/* Return the styles. */
 		return str_replace( array( "\r", "\n", "\t" ), '', $style );

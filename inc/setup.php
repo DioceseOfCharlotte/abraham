@@ -61,7 +61,32 @@ function get_asset_rev( $filename ) {
 	// Cache the decoded manifest so that we only read it in once.
 	static $manifest = null;
 	if ( null === $manifest ) {
-		$manifest_path = trailingslashit( get_template_directory() ) . 'rev-manifest.json';
+		$manifest_path = get_parent_theme_file_path( 'rev-manifest.json' );
+		$manifest = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
+	}
+
+	// If the manifest contains the requested file, return the hashed name.
+	if ( array_key_exists( $filename, $manifest ) ) {
+		return $manifest[ $filename ];
+	}
+
+	// File hash wasn't found.
+	return $filename;
+}
+
+/**
+ * Append Hash to assets filename to purge the browser cache when changed.
+ */
+function get_child_asset_rev( $filename ) {
+
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		return $filename;
+	}
+
+	// Cache the decoded manifest so that we only read it in once.
+	static $manifest = null;
+	if ( null === $manifest ) {
+		$manifest_path = get_theme_file_path( 'rev-manifest.json' );
 		$manifest = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
 	}
 
@@ -91,28 +116,26 @@ function abraham_content_width() {
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_style( 'abe-style', trailingslashit( get_template_directory_uri() ) . get_asset_rev( 'style.css' ) );
+	wp_enqueue_style( 'abe-style', get_parent_theme_file_uri( get_asset_rev( 'style.css' ) ) );
 
-	wp_enqueue_style( 'oldie', trailingslashit( get_template_directory_uri() ) . "css/oldie{$suffix}.css", array( 'abe-style' ) );
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'abe-child-style', get_theme_file_uri( get_child_asset_rev( 'style.css' ) ) );
+	}
+
+	wp_enqueue_style( 'oldie', get_theme_file_uri( "css/oldie{$suffix}.css" ), array( 'abe-style' ) );
 	wp_style_add_data( 'oldie', 'conditional', 'IE' );
 
 	// Scripts.
-	wp_enqueue_script( 'abraham-js', trailingslashit( get_template_directory_uri() ) . 'js/' . get_asset_rev( 'abraham.js' ), false, false, true );
+	wp_enqueue_script( 'abraham-js', get_parent_theme_file_uri( 'js/' . get_asset_rev( 'abraham.js' ) ), false, false, true );
 
 	// polyfills
 	wp_enqueue_script( 'polyfill-io', 'https://cdn.polyfill.io/v2/polyfill.min.js', false, false, false );
 
-	wp_enqueue_script( 'object-fit-js', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/ofi.browser.js', false, false, true );
+	wp_enqueue_script( 'object-fit-js', get_theme_file_uri( 'js/polyfill/ofi.browser.js' ), false, false, true );
 	wp_add_inline_script( 'object-fit-js', 'objectFitImages();' );
 
-	wp_enqueue_script( 'html5shiv', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/html5shiv.min.js',  false, false, false );
+	wp_enqueue_script( 'html5shiv', get_theme_file_uri( 'js/polyfill/html5shiv.min.js' ),  false, false, false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
-	//
-	// wp_enqueue_script( 'classlist', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/classList.min.js',  false, false, false );
-	// wp_script_add_data( 'classlist', 'conditional', 'IE' );
-
-	// wp_enqueue_script( 'flexibility', trailingslashit( get_template_directory_uri() ) . 'js/polyfill/flexibility.js',  false, false, false );
-	// wp_script_add_data( 'flexibility', 'conditional', 'IE' );
 }
 
 /**
@@ -123,11 +146,12 @@ function abraham_get_editor_styles() {
 	$editor_styles = array();
 
 	/* Add the theme's editor styles. */
-	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'style.css';
+	$editor_styles[] = get_theme_file_uri( 'style.css' );
 
-	/* If a child theme, add its editor styles. */
+	/* If child theme, add its parent editor styles. */
 	if ( is_child_theme() ) {
-		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'style.css'; }
+		$editor_styles[] = get_parent_theme_file_uri( 'style.css' );
+	}
 
 		/* Return the styles. */
 		return $editor_styles;
