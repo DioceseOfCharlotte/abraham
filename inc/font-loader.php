@@ -18,21 +18,46 @@ function abe_font_scripts() {
 
 	wp_enqueue_script( 'font_face', get_theme_file_uri( 'js/vendors/fontfaceobserver.js' ), false, false, true );
 
-	wp_add_inline_script( 'font_face', 'var fontA = new FontFaceObserver("Cormorant Garamond");var fontB = new FontFaceObserver("Open Sans");fontA.load().then(function () {document.documentElement.className += " fontA";});fontB.load().then(function () {document.documentElement.className += " fontB";});' );
+	wp_add_inline_script( 'font_face', get_font_load_script() );
 
+}
+
+function get_font_load_script() {
+
+	return "
+	(function () {
+	var titleFont = new FontFaceObserver('Cormorant Garamond', {weight: 600});
+	var bodyFont = new FontFaceObserver('Open Sans');
+	Promise.all([
+		titleFont.load(),
+		bodyFont.load()
+	]).then(function () {
+		document.documentElement.classList.add('fonts-loaded');
+		sessionStorage.fontsLoaded = true;
+	}).catch(function () {
+	  sessionStorage.fontsLoaded = false;
+	});
+	}());";
 }
 
 function abe_display_font() {
 ?>
+	<script>
+		(function () {
+			if (sessionStorage.fontsLoaded) {
+				document.documentElement.classList.add('fonts-loaded');
+			}
+		}());
+	</script>
 
 	<style type="text/css">
 		.u-text-display,.u-dropcap::first-letter {
 			font-weight: normal;
 		}
-		.fontB body, .fontB .u-text-read {
+		.fonts-loaded body, .fonts-loaded .u-text-read {
 			font-family: 'Open Sans', sans-serif;
 		}
-		.fontA .u-text-display,.fontA .u-dropcap::first-letter {
+		.fonts-loaded .u-text-display,.fonts-loaded .u-dropcap::first-letter {
 			font-family: "Cormorant Garamond", serif;
 			font-weight: 600;
 		}
