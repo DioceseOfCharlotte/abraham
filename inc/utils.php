@@ -116,7 +116,7 @@ function get_the_slug( $id = null ) {
 // Shortcode
 function doc_logout_link() {
 	$logoutlink = wp_logout_url( home_url() );
-	return '<a class="btn btn-small u-br u-mt2" href="' . $logoutlink . '">Logout</a>';
+	return '<a class="btn btn-small u-br u-mt" href="' . $logoutlink . '">Logout</a>';
 }
 
 // Shortcode

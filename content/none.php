@@ -6,7 +6,7 @@
  */
 
 ?>
-<article class="u-fit o-cell u-bg-white u-text-center u-mb3 u-1of1 u-br u-shadow2">
+<article class="u-fit o-cell u-bg-white u-text-center u-mb u-1of1 u-br u-shadow2">
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>
 

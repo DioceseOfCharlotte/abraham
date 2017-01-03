@@ -2,7 +2,7 @@
 \*------------------------------------ */
 
 blockquote {
-	padding: var(--space-1) var(--space-2);
+	padding: var(--space-1);
 	font-size: var(--h3);
 	line-height: 1.6;
 	text-align: center;

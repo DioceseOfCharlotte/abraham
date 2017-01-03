@@ -40,3 +40,7 @@
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
 }
+
+.entry-header + .entry-summary {
+	padding-top: 0;
+}

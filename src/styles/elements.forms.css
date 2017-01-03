@@ -3,7 +3,7 @@
 -------------------------------------------------------------- */
 
 form {
-	margin-bottom: var(--space-2);
+	margin-bottom: var(--base-space);
 }
 
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),

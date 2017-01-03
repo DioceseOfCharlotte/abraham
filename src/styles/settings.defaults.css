@@ -70,8 +70,10 @@
 	--space-3: 3rem;
 	--space-4: 4rem;
 	--space-5: 5rem;
-	--gutter: var(--space-2);
+	--gutter: var(--base-space);
 	--gutter-mobile: var(--space-1);
+
+	--base-space: var(--space-15);
 
 	--font-light: 300;
 	--font-normal: 400;

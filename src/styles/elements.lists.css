@@ -5,19 +5,15 @@ ul,
 ol,
 dl {
 	list-style-type: none;
-	margin-bottom: var(--space-2);
-	line-height: 1.6;
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 
+ul:last-child,
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-	padding-left: 2.5rem;
-	margin-bottom: 0;
-}
-
-ul:last-child {
 	margin-bottom: 0;
 }
 
@@ -29,7 +25,6 @@ li {
 nav ol,
 nav ul,
 nav li {
-	list-style: none;
 	padding: 0;
 	margin: 0;
 }

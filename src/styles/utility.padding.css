@@ -1,6 +1,25 @@
 /* #WHITE SPACE
 \*------------------------------------ */
 @context pcSpec {
+	.u-p {
+		padding: var(--base-space);
+	}
+
+	.u-pt {
+		padding-top: var(--base-space);
+	}
+
+	.u-pb {
+		padding-bottom: var(--base-space);
+	}
+
+	.u-pr {
+		padding-right: var(--base-space);
+	}
+
+	.u-pl {
+		padding-left: var(--base-space);
+	}
 
 	.u-p05 {
 		padding: var(--space-05);

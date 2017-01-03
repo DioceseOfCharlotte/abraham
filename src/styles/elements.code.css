@@ -24,7 +24,7 @@ code::after {
 
 pre {
 	margin-top: 0;
-	margin-bottom: var(--space-1);
+	margin-bottom: var(--base-space);
 	padding: var(--space-1);
 	overflow: auto;
 	font-size: 85%;

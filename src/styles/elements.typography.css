@@ -57,9 +57,8 @@ h5,
 h6 {
 	font-weight: inherit;
 	line-height: 1.16;
-	margin: 0;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
 
 	> a {
 		color: inherit;
@@ -67,11 +66,9 @@ h6 {
 	}
 }
 
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-	margin-bottom: 1em;
+h1[class],
+h2[class],
+h3[class],
+h4[class] {
+	margin: 0;
 }

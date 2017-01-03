@@ -2,6 +2,7 @@
 \*------------------------------------ */
 
 .breadcrumbs {
+	margin-bottom: var(--space-1);
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -20,7 +21,6 @@
 			content: '/';
 		    font-size: 1.25em;
 		    vertical-align: middle;
-			/*@mixin fa $chevron-right ;*/
 		}
 	}
 }

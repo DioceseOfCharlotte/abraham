@@ -53,20 +53,20 @@ class Attr_Trumps {
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-ja',
 
-			'page_header'             	=> 'u-px1 u-py3 u-1of1 u-rel u-text-shadow u-text-center',
+			'page_header'             	=> 'u-p3 u-1of1 u-rel u-text-shadow u-text-center',
 			'page_title'              	=> 'u-h0 u-m0 u-text-display',
-			'archive_description'     	=> 'u-1of1 u-p25 u-text-left u-br u-container u-mb2 u-bg-white u-rel u-shadow2',
+			'archive_description'     	=> 'u-1of1 u-p u-p2-md u-text-left u-br u-mb u-bg-white u-rel u-shadow2',
 
 			// ENTRY.
-			'post'                    	=> 'u-fit o-cell u-bg-white u-mb2 u-1of1 u-br u-shadow2',
+			'post'                    	=> 'u-fit o-cell u-bg-white u-mb u-1of1 u-br u-shadow2',
 			'post_wide'               	=> 'u-fit u-1of1',
 
 			'post_archive'            	=> 'o-cell u-overflow-hidden u-shadow1 u-br',
 			'entry_header'            	=> 'u-1of1',
-			'entry_title'             	=> 'u-px1 u-h3 u-flexed-auto u-text-display',
+			'entry_title'             	=> 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p25',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-p2 u-pt1 show-icons',
+			'entry_summary'           	=> 'u-p u-p2-md show-icons',
 			'entry_footer'            	=> 'u-mt-auto u-rel u-1of1',
 
 			// NAVIGATION.
@@ -75,8 +75,8 @@ class Attr_Trumps {
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR.
-			'sidebar_primary'         	=> 'o-cell o-grid u-bg-white u-shadow2 u-p1 u-mb2 u-br',
-			'sidebar_footer'          	=> 'o-grid u-pt3 u-container-wide',
+			'sidebar_primary'         	=> 'o-cell o-grid u-bg-white u-shadow2 u-p1 u-mb u-br',
+			'sidebar_footer'          	=> 'o-grid u-pt u-container-wide',
 			'sidebar_horizontal'      	=> 'u-1of1',
 			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
