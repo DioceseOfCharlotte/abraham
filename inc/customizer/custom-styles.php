@@ -86,6 +86,7 @@ final class Abraham_Custom_Styles {
 	public function wp_head_callback() {
 		$style = $this->get_primary_styles();
 		$style .= $this->get_secondary_styles();
+		$style .= $this->get_additional_styles();
 		/* Put the final style output together. */
 		$style = "\n" . '<style id="custom-colors-css">' . trim( $style ) . '</style>' . "\n";
 
@@ -103,7 +104,6 @@ final class Abraham_Custom_Styles {
 	public function get_primary_styles() {
 		$style = '';
 		$hex   = get_theme_mod( 'primary_color', '' );
-		$rgb   = implode( ', ', hybrid_hex_to_rgb( $hex ) );
 
 		$primaryColor = new Color( $hex );
 		$color50      = $primaryColor->lighten( 45 );
@@ -121,9 +121,9 @@ final class Abraham_Custom_Styles {
 		$colorDark = $primaryColor->isDark( $color300 ) ? $color400 : $color600;
 		$colorLight = $primaryColor->isDark( $color300 ) ? $color100 : $color300;
 
-		$textBase = $primaryColor->isDark( $colorBase ) ? 'fff' : '333';
-		$textOnDark = $primaryColor->isDark( $colorDark ) ? 'fff' : '333';
-		$textOnLight = $primaryColor->isDark( $colorLight ) ? 'fff' : '333';
+		$textBase = $primaryColor->isDark( $colorBase ) ? 'fff' : '212529';
+		$textOnDark = $primaryColor->isDark( $colorDark ) ? 'fff' : '212529';
+		$textOnLight = $primaryColor->isDark( $colorLight ) ? 'fff' : '212529';
 
 		$glass          = implode( ', ', hybrid_hex_to_rgb( $colorBase ) );
 		$glass_dark     = implode( ', ', hybrid_hex_to_rgb( $colorDark ) );
@@ -159,7 +159,6 @@ final class Abraham_Custom_Styles {
 	public function get_secondary_styles() {
 		$style = '';
 		$hex   = get_theme_mod( 'secondary_color', '' );
-		$rgb   = implode( ', ', hybrid_hex_to_rgb( $hex ) );
 
 		$secondaryColor = new Color( $hex );
 		$color50        = $secondaryColor->lighten( 45 );
@@ -177,9 +176,9 @@ final class Abraham_Custom_Styles {
 		$colorDark = $secondaryColor->isDark( $color300 ) ? $color400 : $color600;
 		$colorLight = $secondaryColor->isDark( $color300 ) ? $color100 : $color300;
 
-		$textBase = $secondaryColor->isDark( $colorBase ) ? 'fff' : '333';
-		$textOnDark = $secondaryColor->isDark( $colorDark ) ? 'fff' : '333';
-		$textOnLight = $secondaryColor->isDark( $colorLight ) ? 'fff' : '333';
+		$textBase = $secondaryColor->isDark( $colorBase ) ? 'fff' : '212529';
+		$textOnDark = $secondaryColor->isDark( $colorDark ) ? 'fff' : '212529';
+		$textOnLight = $secondaryColor->isDark( $colorLight ) ? 'fff' : '212529';
 
 		$glass          = implode( ', ', hybrid_hex_to_rgb( $colorBase ) );
 		$glass_dark     = implode( ', ', hybrid_hex_to_rgb( $colorDark ) );
@@ -200,6 +199,26 @@ final class Abraham_Custom_Styles {
 		$style .= "html .u-fill-2{fill:#{$colorBase};}";
 		$style .= "html .u-fill-2-light{fill:#{$colorLight};}";
 		$style .= "html .u-fill-2-dark{fill:#{$colorDark};}";
+
+		/* Return the styles. */
+		return str_replace( array( "\r", "\n", "\t" ), '', $style );
+	}
+
+	/**
+	 * Formats the secondary styles for output.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_additional_styles() {
+		$style = '';
+		$internal_link = url_shorten( get_home_url() );
+
+		$style .= '.entry-header a>svg>.outlink{display:none;}';
+		$style .= ".entry-header a[href*='//']:not([href*='{$internal_link}'])>svg>.outlink{display:block;}";
+		$style .= ".entry-header a[href*='//']:not([href*='{$internal_link}'])>svg>.inlink{display:none;}";
+
 
 		/* Return the styles. */
 		return str_replace( array( "\r", "\n", "\t" ), '', $style );

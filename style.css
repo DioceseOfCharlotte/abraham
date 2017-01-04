@@ -736,7 +736,7 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	font-weight: normal;
-	color: #495057;
+	color: #212529;
 	background-color: #fff;
 }
 
@@ -769,7 +769,7 @@ main a {
 
 article {
 	background-color: #fff;
-	color: #495057;
+	color: #212529;
 	width: 100%;
 	min-width: 270px;
 }
@@ -1255,7 +1255,7 @@ textarea {
 	border-width: 0 !important;
 	line-height: 1.5;
 	background-color: rgba(233, 236, 239, 0.9);
-	color: #495057;
+	color: #212529;
 	margin: 0;
 	vertical-align: baseline;
 	font-size: inherit;
@@ -3583,7 +3583,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-frosted-image {
-	color: #495057;
+	color: #212529;
 }
 
 .u-frosted-image::before {
@@ -4109,7 +4109,7 @@ body:not(.search) .trail-end > span,
 /* Text Colors */
 
 .u-text-color.u-text-color {
-	color: #495057;
+	color: #212529;
 }
 
 .u-text-black {
@@ -4121,7 +4121,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-text-grey-sub {
-	color: #868e96;
+	color: #495057;
 }
 
 .u-text-silver {
@@ -4188,12 +4188,12 @@ body:not(.search) .trail-end > span,
 
 .u-bg-silver {
 	background-color: #f8f9fa;
-	color: #495057;
+	color: #212529;
 }
 
 .u-bg-white {
 	background-color: #fff;
-	color: #495057;
+	color: #212529;
 }
 
 /* Border Colors */

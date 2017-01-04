@@ -135,9 +135,9 @@
 	--color-links: var(--oc-blue-9);
 	--color-links-hover: var(--oc-blue-5);
 
-	--color-text: var(--oc-gray-7);
-	--color-text-light: var(--oc-gray-6);
-	--color-text-dark: var(--oc-gray-8);
+	--color-text: var(--oc-gray-9);
+	--color-text-light: var(--oc-gray-7);
+	--color-text-dark: var(--black);
 
 	--color-grey-bg: var(--oc-gray-1);
 	--color-grey-bg-light: var(--oc-gray-0);
