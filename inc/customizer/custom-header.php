@@ -22,8 +22,7 @@ add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
 function abraham_custom_header_setup() {
 
 	// Adds support for WordPress' "custom-header" feature.
-	add_theme_support(
-		'custom-header',
+	add_theme_support( 'custom-header',
 		array(
 			'width'                  => 1920,
 			'height'                 => 560,

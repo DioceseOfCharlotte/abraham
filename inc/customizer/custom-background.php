@@ -18,8 +18,7 @@ add_filter( 'theme_mod_background_color', 'abraham_background_color', 95 );
  */
 function abraham_custom_background_setup() {
 
-	add_theme_support(
-		'custom-background',
+	add_theme_support( 'custom-background',
 		array(
 			'default-color'    => 'F2F1EF',
 			'default-image'    => '',
@@ -61,7 +60,7 @@ function abraham_custom_background_callback() {
 	$image = get_background_image();
 
 	// If there's an image, just call the normal WordPress callback. We won't do anything here.
-	if ( !empty( $image ) ) {
+	if ( ! empty( $image ) ) {
 		_custom_background_cb();
 		return;
 	}
@@ -70,8 +69,9 @@ function abraham_custom_background_callback() {
 	$color = get_background_color();
 
 	// If no background color, return.
-	if ( empty( $color ) )
+	if ( empty( $color ) ) {
 		return;
+	}
 
 	$style = "background-color:#{$color};";
 
