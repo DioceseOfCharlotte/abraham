@@ -11,11 +11,11 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
-@import "settings.colors";
-@import "settings.defaults";
-@import "settings.icons";
-@import "settings.mixins";
-@import "sanitize";
+@import "appliance.colors";
+@import "appliance.defaults";
+@import "appliance.icons";
+@import "appliance.mixins";
+@import "appliance.sanitize";
 @import "elements.page";
 @import "elements.links";
 @import "elements.typography";
@@ -35,7 +35,7 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 @import "objects.off-canvas";
 @import "objects.animations";
 @import "objects.shadows";
-@import "components.breadcrumbs";
+@import "objects.breadcrumbs";
 @import "utility.widths";
 @import 'utility.margin';
 @import 'utility.padding';
