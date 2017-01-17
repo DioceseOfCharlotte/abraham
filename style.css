@@ -11,6 +11,8 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
+/* vowel.css v0.1.0 | CC0 License | github.com/m-e-h/vowel.css */
+
 /*
  *
  *  𝗖 𝗢 𝗟 𝗢 𝗥
@@ -96,7 +98,7 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 /* #MIXINS
 \*------------------------------------ */
 
-/*! sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/* sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
 /* Elements of HTML (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
    ========================================================================== */
@@ -293,8 +295,8 @@ dfn {
  */
 
 mark {
-	background-color: #ffff00;
-	color: #000000;
+	background-color: #ff0;
+	color: #000;
 }
 
 /**
@@ -1359,7 +1361,7 @@ select::-ms-value {
 
 input[type=search] {
 	content: " ";
-	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23678695' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M16.294 14.579h-0.93l-0.32-0.31a7.4 7.4 0 0 0 1.795-4.836 7.433 7.433 0 1 0-7.433 7.433 7.4 7.4 0 0 0 4.837-1.796l0.39.32v0.94L20.296 22 22 20.296l-5.76-5.717zm-6.861 0a5.139 5.139 0 0 1-5.146-5.146 5.139 5.139 0 0 1 5.146-5.146 5.139 5.139 0 0 1 5.146 5.146 5.139 5.139 0 0 1-5.146 5.146z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='v-icon' fill='%23678695' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M16.294 14.579h-0.903l-0.32-0.31a7.4 7.4 0 0 0 1.795-4.836 7.433 7.433 0 1 0-7.433 7.433 7.4 7.4 0 0 0 4.837-1.796l0.309.32v0.904L20.296 22 22 20.296l-5.706-5.717zm-6.861 0a5.139 5.139 0 0 1-5.146-5.146 5.139 5.139 0 0 1 5.146-5.146 5.139 5.139 0 0 1 5.146 5.146 5.139 5.139 0 0 1-5.146 5.146z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	display: inline-block;
 	background-size: 1.4em;
@@ -2008,7 +2010,7 @@ a[href*="mailto:"]::before {
 
 .o-list-group.bullet-heart > li::before {
 	content: " ";
-	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2390a4ae' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M22.65 2.75c-2.943 0-5.476 2.424-6.65 4.955-1.173-2.531-3.77-4.955-6.65-4.955C5.293 2.75 2 6.084 2 10.192 2 18.548 10.326 20.739 16 29c5.365-8.21 14-10.719 14-18.88 0-4.18-3.293-7.442-7.35-7.442z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='v-icon' fill='%2390a4ae' stroke='%23fff' stroke-width='0' width='1em' height='1em'%3E%3Cpath d='M22.65 2.75c-2.943 0-5.476 2.424-6.65 4.955-1.173-2.531-3.707-4.955-6.65-4.955C5.293 2.75 2 6.084 2 10.192 2 18.548 10.326 20.739 16 29c5.365-8.21 14-10.719 14-18.808 0-4.108-3.293-7.442-7.35-7.442z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	display: inline-block;
 }

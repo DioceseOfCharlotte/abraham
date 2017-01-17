@@ -9,6 +9,7 @@
  * Define constants and load the Hybrid Core library.
  */
 require get_parent_theme_file_path( 'lib/hybrid-core/hybrid.php' );
+
 define( 'HYBRID_DIR', get_parent_theme_file_path( 'lib/hybrid-core/' ) );
 define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
 new Hybrid();

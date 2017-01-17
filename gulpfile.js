@@ -13,12 +13,12 @@ const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
 
 const autoPrefixer = require('autoprefixer');
-const pcImport = require("postcss-import");
-const pcMixins = require("postcss-mixins");
+const pcImport = require('postcss-import');
+const pcMixins = require('postcss-mixins');
 const pcColor = require('postcss-color-function');
-const pcNested = require("postcss-nested");
-const pcMedia = require("postcss-custom-media");
-const pcProperties = require("postcss-custom-properties");
+const pcNested = require('postcss-nested');
+const pcMedia = require('postcss-custom-media');
+const pcProperties = require('postcss-custom-properties');
 const pcRoot = require("postcss-remove-root");
 const pcSvg = require('postcss-inline-svg');
 const pcSvar = require('postcss-simple-vars');
