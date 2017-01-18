@@ -55,7 +55,7 @@ input[type="button"] {
 		display: inline-block;
 		text-align: center;
 		border-radius: 50%;
-		padding: .5rem 0;
+		padding: 0.5rem 0;
 		background-image: none;
 	}
 }

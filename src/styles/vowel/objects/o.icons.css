@@ -75,23 +75,23 @@ svg[stroke-width] {
 }
 
 .icon-refresh {
-	@mixin fa $refresh;
+	@mixin fa $refresh ;
 }
 
 .icon-account {
-	@mixin fa $user-circle-o;
+	@mixin fa $user-circle-o ;
 }
 
 .icon-menu {
-	@mixin fa $navicon;
+	@mixin fa $navicon ;
 }
 
 .icon-close {
-	@mixin fa $times;
+	@mixin fa $times ;
 }
 
 .icon-edit {
-	@mixin fa $pencil-square-o;
+	@mixin fa $pencil-square-o ;
 }
 
 .o-alert {
@@ -100,32 +100,28 @@ svg[stroke-width] {
 }
 
 .icon-info::before {
-	@mixin fa $info-circle;
-
-	color: #005B80;
+	@mixin fa $info-circle ;
+	color: #005b80;
 }
 
 .icon-warning::before {
-	@mixin fa $exclamation-triangle;
-
-	color: #9E0800;
+	@mixin fa $exclamation-triangle ;
+	color: #9e0800;
 }
 
 .icon-success::before {
-	@mixin fa $check-circle;
-
+	@mixin fa $check-circle ;
 	color: #276248;
 }
 
 .icon-heart::before {
-	@mixin fa $heart;
+	@mixin fa $heart ;
 }
 
 .icon-twitter::before,
 a[href*="twitter.com"]::before {
-	@mixin fa $twitter;
-
-	color: #1DA1F2;
+	@mixin fa $twitter ;
+	color: #1da1f2;
 	opacity: 1;
 }
 
@@ -135,9 +131,8 @@ a[href*="twitter.com"]::after {
 
 .icon-facebook::before,
 a[href*="facebook.com"]::before {
-	@mixin fa $facebook-official;
-
-	color: #3B5998;
+	@mixin fa $facebook-official ;
+	color: #3b5998;
 	opacity: 1;
 }
 
@@ -148,8 +143,7 @@ a[href*="facebook.com"]::after {
 .icon-youtube::before,
 a[href*="youtube.com"]::before,
 a[href*="youtu.be"]::before {
-	@mixin fa $youtube-play;
-
+	@mixin fa $youtube-play ;
 	color: #cd201f;
 	opacity: 1;
 }
@@ -160,36 +154,35 @@ a[href*="youtu.be"]::after {
 }
 
 .icon-instagram::before {
-	@mixin fa $instagram;
-
+	@mixin fa $instagram ;
 	opacity: 1;
 }
 
 a[href*="/documents/"]::before,
 .icon-pdf::before,
 a[href*=".pdf"]:not(.btn)::before {
-	@mixin fa $file-text-o;
+	@mixin fa $file-text-o ;
 }
 
 .icon-map::before,
 a[href*="maps.google.com"]::before {
-	@mixin fa $map-marker;
+	@mixin fa $map-marker ;
 }
 
 a[href*=".doc"]:not(.btn)::before,
 a[href*=".docx"]:not(.btn)::before {
-	@mixin fa $file-word-o;
+	@mixin fa $file-word-o ;
 }
 
 a[href*=".xls"]:not(.btn)::before,
 a[href*=".xlsx"]:not(.btn)::before {
-	@mixin fa $file-excel-o;
+	@mixin fa $file-excel-o ;
 }
 
 a[href*="tel:"]::before {
-	@mixin fa $phone;
+	@mixin fa $phone ;
 }
 
 a[href*="mailto:"]::before {
-	@mixin fa $envelope;
+	@mixin fa $envelope ;
 }

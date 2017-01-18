@@ -87,9 +87,9 @@
 }
 
 .o-list-group.bullet-cross > li::before {
-	@mixin icon cross;
+	@mixin icon cross ;
 }
 
 .o-list-group.bullet-heart > li::before {
-	@mixin icon heart;
+	@mixin icon heart ;
 }

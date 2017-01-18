@@ -1,4 +1,4 @@
-/* sanitize.css v4.1.0 | LGPL v2.1 | github.com/jonathantneal/sanitize.css */
+/* sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
 /* Elements of HTML (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
    ========================================================================== */
@@ -73,7 +73,7 @@ body {
 
 h1 {
 	font-size: 2em;
-	margin: .67em 0;
+	margin: 0.67em 0;
 }
 
 /* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
@@ -195,8 +195,8 @@ dfn {
  */
 
 mark {
-	background-color: #ffff00;
-	color: #000000;
+	background-color: #ff0;
+	color: #000;
 }
 
 /**
@@ -221,11 +221,11 @@ sup {
 }
 
 sub {
-	bottom: -.25em;
+	bottom: -0.25em;
 }
 
 sup {
-	top: -.5em;
+	top: -0.5em;
 }
 
 /*
@@ -364,7 +364,7 @@ select { /* 1 */
  */
 
 button,
-html [type="button"], /* 1 */
+html [type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button; /* 2 */
@@ -486,7 +486,7 @@ textarea {
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
-details, /* 1 */
+details,
 menu {
 	display: block;
 }

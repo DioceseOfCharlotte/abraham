@@ -129,42 +129,43 @@
 	}
 
 	#page h1 {
-	    font-size: 2em;
-	    margin: 0.67em 0;
+		font-size: 2em;
+		margin: 0.67em 0;
 	}
 
 	#page h2 {
-	    font-size: 1.5em;
-	    margin: 0.83em 0;
+		font-size: 1.5em;
+		margin: 0.83em 0;
 	}
 
 	#page h3 {
-	    font-size: 1.17em;
-	    margin: 1em 0;
+		font-size: 1.17em;
+		margin: 1em 0;
 	}
 
 	#page h4 {
-	    font-size: 1em;
-	    margin: 1.33em 0;
+		font-size: 1em;
+		margin: 1.33em 0;
 	}
 
 	#page h5 {
-	    font-size: 0.83em;
-	    margin: 1.67em 0;
+		font-size: 0.83em;
+		margin: 1.67em 0;
 	}
 
 	#page h6 {
-	    font-size: 0.67em;
-	    margin: 2.33em 0;
+		font-size: 0.67em;
+		margin: 2.33em 0;
 	}
 
 	.archive-header {
-		padding: 0!important;
+		padding: 0 !important;
 	}
+
 	.archive-title {
-		display: inline-block!important;
-		margin-top: 0!important;
-		line-height: 1!important;
+		display: inline-block !important;
+		margin-top: 0 !important;
+		line-height: 1 !important;
 	}
 
 	table,

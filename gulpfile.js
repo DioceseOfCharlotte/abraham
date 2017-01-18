@@ -19,15 +19,32 @@ const pcColor = require('postcss-color-function');
 const pcNested = require('postcss-nested');
 const pcMedia = require('postcss-custom-media');
 const pcProperties = require('postcss-custom-properties');
-const pcRoot = require("postcss-remove-root");
 const pcSvg = require('postcss-inline-svg');
 const pcSvar = require('postcss-simple-vars');
 const pcStrip = require('postcss-strip-units');
 const pcSpec = require('postcss-increase-specificity');
+const pcDisComments = require('postcss-discard-comments');
+const pcDisEmpty = require('postcss-discard-empty');
 const context = require('postcss-plugin-context');
 
 const $ = require('gulp-load-plugins')();
 const reload = browserSync.reload;
+
+const BANNER = [
+	'/*',
+	'Theme Name: Abraham',
+	'Theme URI: https://github.com/DioceseOfCharlotte/abraham',
+	'Author: Marty Helmick',
+	'Author URI: https://github.com/m-e-h',
+	'Description: Abraham is a Parent theme with many children.',
+	'Version: 0.9.6',
+	'License: GNU General Public License v2 or later',
+	'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
+	'Text Domain: abraham',
+	'GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham',
+	'*/',
+  	'\n'
+].join('\n');
 
 const AUTOPREFIXER_BROWSERS = [
 	'ie >= 10',
@@ -51,6 +68,8 @@ const POSTCSS_PLUGINS = [
 	pcColor,
 	pcMedia,
 	pcNested,
+	pcDisComments,
+	pcDisEmpty,
 	pcSvg({
 		path: './images/icons'
 	}),
@@ -114,6 +133,7 @@ gulp.task('styles', () => {
 		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
 		.pipe($.stylefmt())
+		.pipe($.header(BANNER))
 		.pipe(gulp.dest('./'))
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
