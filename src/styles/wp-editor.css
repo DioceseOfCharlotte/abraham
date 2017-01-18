@@ -1,0 +1,36 @@
+body.wp-editor {
+	min-height: 50px;
+	margin: 0 auto !important;
+	padding: 1.5rem 1.5rem 0 !important;
+	border: none !important;
+}
+
+body.wp-editor .wpview-wrap .gallery-cell {
+	display: inline-block;
+}
+
+.wp-editor ul {
+	list-style-type: disc;
+}
+
+.wp-editor ol {
+	list-style-type: upper-roman;
+
+	li {
+		padding-left: var(--space-05);
+	}
+}
+
+.wp-editor * + h1,
+.wp-editor * + h2,
+.wp-editor * + h3,
+.wp-editor * + h4 {
+	margin-top: 0.5em;
+}
+
+.wp-editor a {
+	background-image: linear-gradient(to bottom, var(--color-shade-3) 50%, rgba(0, 0, 0, 0) 50%);
+	background-repeat: repeat-x;
+	background-size: 0.125rem 0.2rem;
+	background-position: 0 1.1em;
+}

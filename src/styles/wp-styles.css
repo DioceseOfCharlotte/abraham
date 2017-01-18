@@ -1,0 +1,120 @@
+:root .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.admin-bar .if-admin-bar {
+	margin-top: 32px;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.aligncenter,
+.alignright,
+.alignleft {
+	display: block;
+	margin: 0 auto 1.5rem;
+}
+
+.aligncenter {
+	clear: both;
+	float: none;
+}
+
+@media (--md) {
+	.alignleft {
+		float: left;
+		margin-right: var(--gutter);
+	}
+
+	.alignright {
+		float: right;
+		margin-left: var(--gutter);
+	}
+}
+
+img.alignleft,
+img.alignright {
+	display: inline;
+}
+
+blockquote.alignleft,
+blockquote.alignright {
+	width: 33%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: var(--base-space);
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto 0.5rem;
+	line-height: 1;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0 0 0.5rem;
+}
+
+.wp-caption-text {
+	font-size: var(--h6);
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: var(--base-space);
+}
+
+.gallery-item {
+	display: inline-block;
+	margin: 0 calc(0.5 * var(--gutter)) var(--gutter);
+	text-align: center;
+	width: 100%;
+}
+
+@media (--md) {
+	.gallery-columns-2 .gallery-item {
+		max-width: calc(50% - var(--gutter));
+	}
+
+	.gallery-columns-3 .gallery-item {
+		max-width: calc(33.33% - var(--gutter));
+	}
+
+	.gallery-columns-4 .gallery-item {
+		max-width: calc(25% - var(--gutter));
+	}
+
+	.gallery-columns-5 .gallery-item {
+		max-width: calc(20% - var(--gutter));
+	}
+
+	.gallery-columns-6 .gallery-item {
+		max-width: calc(16.66% - var(--gutter));
+	}
+
+	.gallery-columns-7 .gallery-item {
+		max-width: calc(14.28% - var(--gutter));
+	}
+
+	.gallery-columns-8 .gallery-item {
+		max-width: calc(12.5% - var(--gutter));
+	}
+
+	.gallery-columns-9 .gallery-item {
+		max-width: calc(11.11% - var(--gutter));
+	}
+}

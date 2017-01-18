@@ -145,13 +145,15 @@ function abraham_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
 
-	/* Add the theme's editor styles. */
-	$editor_styles[] = get_theme_file_uri( 'style.css' );
-
 	/* If child theme, add its parent editor styles. */
 	if ( is_child_theme() ) {
 		$editor_styles[] = get_parent_theme_file_uri( 'style.css' );
 	}
+
+	/* Add the theme's editor styles. */
+	$editor_styles[] = get_theme_file_uri( 'style.css' );
+
+	$editor_styles[] = 'https://use.fontawesome.com/1397c1e607.css';
 
 		/* Return the styles. */
 		return $editor_styles;
