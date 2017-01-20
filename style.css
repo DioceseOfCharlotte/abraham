@@ -800,24 +800,20 @@ table {
 	max-width: 100%;
 	width: 100%;
 	border-collapse: collapse;
+	margin-bottom: 1.5rem;
 }
 
-th,
-td {
-	padding: 1rem 0;
-	line-height: inherit;
-}
-
-th {
+thead th {
 	text-align: left;
 	font-weight: 600;
 	vertical-align: bottom;
-	border-bottom: 0.063rem solid #ced4da;
+	border-bottom: 2px solid #ced4da;
 }
 
 td {
 	vertical-align: middle;
-	border-bottom: 0.063rem solid #dee2e6;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #dee2e6;
 }
 
 td > ul {
@@ -1137,370 +1133,6 @@ svg[stroke-width] {
 .icon-xl svg {
 	height: auto;
 	width: 100%;
-}
-
-.icon-refresh {
-	content: "\f021";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-account {
-	content: "\f2be";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-menu {
-	content: "\f0c9";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-close {
-	content: "\f00d";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-edit {
-	content: "\f044";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.o-alert {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.icon-info::before {
-	content: "\f05a";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #005b80;
-}
-
-.icon-warning::before {
-	content: "\f071";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #9e0800;
-}
-
-.icon-success::before {
-	content: "\f058";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #276248;
-}
-
-.icon-heart::before {
-	content: "\f004";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-twitter::before,
-a[href*="twitter.com"]::before {
-	content: "\f099";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #1da1f2;
-	opacity: 1;
-}
-
-a[href*="twitter.com"]::after {
-	content: none !important;
-}
-
-.icon-facebook::before,
-a[href*="facebook.com"]::before {
-	content: "\f230";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #3b5998;
-	opacity: 1;
-}
-
-a[href*="facebook.com"]::after {
-	content: none !important;
-}
-
-.icon-youtube::before,
-a[href*="youtube.com"]::before,
-a[href*="youtu.be"]::before {
-	content: "\f16a";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #cd201f;
-	opacity: 1;
-}
-
-a[href*="youtube.com"]::after,
-a[href*="youtu.be"]::after {
-	content: none !important;
-}
-
-.icon-instagram::before {
-	content: "\f16d";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	opacity: 1;
-}
-
-a[href*="/documents/"]::before,
-.icon-pdf::before,
-a[href*=".pdf"]:not(.btn)::before {
-	content: "\f0f6";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-map::before,
-a[href*="maps.google.com"]::before {
-	content: "\f041";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a[href*=".doc"]:not(.btn)::before,
-a[href*=".docx"]:not(.btn)::before {
-	content: "\f1c2";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a[href*=".xls"]:not(.btn)::before,
-a[href*=".xlsx"]:not(.btn)::before {
-	content: "\f1c3";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a[href*="tel:"]::before {
-	content: "\f095";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a[href*="mailto:"]::before {
-	content: "\f0e0";
-	font-family: FontAwesome !important;
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-size: 0.9em;
-	font-weight: normal !important;
-	font-style: normal !important;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .u-list-naked,
@@ -4006,6 +3638,552 @@ body:not(.search) .trail-end > span,
 	opacity: 0.5;
 }
 
+@font-face {
+	font-family: 'icomeh';
+	src: url('/fonts/icomeh.ttf') format('truetype'), url('/fonts/icomeh.woff') format('woff'), url('/fonts/icomeh.svg#icomeh') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="fi-"],
+[class*=" fi-"] {
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-add_circle:before {
+	content: "\e147";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="tel:"]:before,
+.fi-phone:before {
+	content: "\e0cd";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-check_box:before {
+	content: "\e834";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-check_box_outline_blank:before {
+	content: "\e835";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-remove_circle:before {
+	content: "\e15c";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-get_app:before {
+	content: "\e884";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="mailto:"]:before,
+.fi-mail_outline:before {
+	content: "\e0e1";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-more_horiz:before {
+	content: "\e5d3";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-radio_button_unchecked:before {
+	content: "\e836";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-phone_iphone:before {
+	content: "\e325";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-radio_button_checked:before {
+	content: "\e837";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-save:before {
+	content: "\e161";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-external-link:before {
+	content: "\f08e";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-alert:before {
+	content: "\f02d";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-chevron-down:before {
+	content: "\f0a3";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-info:before {
+	content: "\f059";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="maps.google.com"]:before,
+.fi-location:before {
+	content: "\f060";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-pencil:before {
+	content: "\f058";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-sync:before {
+	content: "\f087";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-three-bars:before {
+	content: "\f05e";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-newspaper:before {
+	content: "\e904";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="/documents/"]:before,
+.fi-file-text2:before {
+	content: "\e926";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-heart:before {
+	content: "\e9da";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-checkmark:before {
+	content: "\ea10";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-down:before {
+	content: "\ea36";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-right2:before {
+	content: "\ea3c";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-facebook2:before {
+	content: "\ea91";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-instagram:before {
+	content: "\ea92";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-twitter:before {
+	content: "\ea96";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-rss:before {
+	content: "\ea9b";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a[href*="youtube.com"]:before,
+a[href*="youtu.be"]:before,
+.fi-youtube:before {
+	content: "\ea9d";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-wordpress:before {
+	content: "\eab4";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-linkedin:before {
+	content: "\eac9";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-pinterest:before {
+	content: "\ead1";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-chrome:before {
+	content: "\ead9";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-firefox:before {
+	content: "\eada";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-edge:before {
+	content: "\eadc";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-file-pdf:before {
+	content: "\eadf";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-file-word:before {
+	content: "\eae1";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-file-excel:before {
+	content: "\eae2";
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 :root .wp-smiley {
 	border: none;
 	margin-bottom: 0;
@@ -4021,12 +4199,13 @@ body:not(.search) .trail-end > span,
 .alignright,
 .alignleft {
 	display: block;
-	margin: 0 auto 1.5rem;
 }
 
 .aligncenter {
 	clear: both;
 	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media (min-width: 40rem) {
@@ -4052,23 +4231,20 @@ blockquote.alignright {
 }
 
 .wp-caption {
+	font-size: 0.9rem;
+	font-style: italic;
 	margin-bottom: 1.5rem;
 	max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 0 auto 0.5rem;
+	margin: 0 auto 1rem;
 	line-height: 1;
 }
 
-.wp-caption .wp-caption-text {
-	margin: 0 0 0.5rem;
-}
-
 .wp-caption-text {
-	font-size: 0.9rem;
-	text-align: center;
+	margin-top: 0.5rem;
 }
 
 .gallery {

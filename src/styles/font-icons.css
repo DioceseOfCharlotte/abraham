@@ -1,0 +1,330 @@
+/* --------------------------------------------------------------
+## Icon Font Variables
+-------------------------------------------------------------- */
+$fi-add_circle: "\e147";
+$fi-phone: "\e0cd";
+$fi-check_box: "\e834";
+$fi-check_box_outline_blank: "\e835";
+$fi-remove_circle: "\e15c";
+$fi-get_app: "\e884";
+$fi-mail_outline: "\e0e1";
+$fi-more_horiz: "\e5d3";
+$fi-radio_button_unchecked: "\e836";
+$fi-phone_iphone: "\e325";
+$fi-radio_button_checked: "\e837";
+$fi-save: "\e161";
+$fi-external-link: "\f08e";
+$fi-alert: "\f02d";
+$fi-chevron-down: "\f0a3";
+$fi-info: "\f059";
+$fi-location: "\f060";
+$fi-pencil: "\f058";
+$fi-sync: "\f087";
+$fi-three-bars: "\f05e";
+$fi-newspaper: "\e904";
+$fi-file-text2: "\e926";
+$fi-heart: "\e9da";
+$fi-checkmark: "\ea10";
+$fi-arrow-down: "\ea36";
+$fi-arrow-right2: "\ea3c";
+$fi-facebook2: "\ea91";
+$fi-instagram: "\ea92";
+$fi-twitter: "\ea96";
+$fi-rss: "\ea9b";
+$fi-youtube: "\ea9d";
+$fi-wordpress: "\eab4";
+$fi-linkedin: "\eac9";
+$fi-pinterest: "\ead1";
+$fi-chrome: "\ead9";
+$fi-firefox: "\eada";
+$fi-edge: "\eadc";
+$fi-file-pdf: "\eadf";
+$fi-file-word: "\eae1";
+$fi-file-excel: "\eae2";
+
+@define-mixin fi $icon {
+	content: $icon;
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------
+## Icon Font load
+-------------------------------------------------------------- */
+@font-face {
+	font-family: 'icomeh';
+	src: url('/fonts/icomeh.ttf') format('truetype'),
+			url('/fonts/icomeh.woff') format('woff'),
+			url('/fonts/icomeh.svg#icomeh') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="fi-"],
+[class*=" fi-"] {
+	font-family: 'icomeh' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------
+## Icon Font Classes
+-------------------------------------------------------------- */
+.fi-add_circle {
+	&:before {
+		@mixin fi $fi-add_circle;
+	}
+}
+
+a[href*="tel:"],
+.fi-phone {
+	&:before {
+		@mixin fi $fi-phone;
+	}
+}
+
+.fi-check_box {
+	&:before {
+		@mixin fi $fi-check_box;
+	}
+}
+
+.fi-check_box_outline_blank {
+	&:before {
+		@mixin fi $fi-check_box_outline_blank;
+	}
+}
+
+.fi-remove_circle {
+	&:before {
+		@mixin fi $fi-remove_circle;
+	}
+}
+
+.fi-get_app {
+	&:before {
+		@mixin fi $fi-get_app;
+	}
+}
+
+a[href*="mailto:"],
+.fi-mail_outline {
+	&:before {
+		@mixin fi $fi-mail_outline;
+	}
+}
+
+.fi-more_horiz {
+	&:before {
+		@mixin fi $fi-more_horiz;
+	}
+}
+
+.fi-radio_button_unchecked {
+	&:before {
+		@mixin fi $fi-radio_button_unchecked;
+	}
+}
+
+.fi-phone_iphone {
+	&:before {
+		@mixin fi $fi-phone_iphone;
+	}
+}
+
+.fi-radio_button_checked {
+	&:before {
+		@mixin fi $fi-radio_button_checked;
+	}
+}
+
+.fi-save {
+	&:before {
+		@mixin fi $fi-save;
+	}
+}
+
+.fi-external-link {
+	&:before {
+		@mixin fi $fi-external-link;
+	}
+}
+
+.fi-alert {
+	&:before {
+		@mixin fi $fi-alert;
+	}
+}
+
+.fi-chevron-down {
+	&:before {
+		@mixin fi $fi-chevron-down;
+	}
+}
+
+.fi-info {
+	&:before {
+		@mixin fi $fi-info;
+	}
+}
+
+a[href*="maps.google.com"],
+.fi-location {
+	&:before {
+		@mixin fi $fi-location;
+	}
+}
+
+.fi-pencil {
+	&:before {
+		@mixin fi $fi-pencil;
+	}
+}
+
+.fi-sync {
+	&:before {
+		@mixin fi $fi-sync;
+	}
+}
+
+.fi-three-bars {
+	&:before {
+		@mixin fi $fi-three-bars;
+	}
+}
+
+.fi-newspaper {
+	&:before {
+		@mixin fi $fi-newspaper;
+	}
+}
+
+a[href*="/documents/"],
+.fi-file-text2 {
+	&:before {
+		@mixin fi $fi-file-text2;
+	}
+}
+
+.fi-heart {
+	&:before {
+		@mixin fi $fi-heart;
+	}
+}
+
+.fi-checkmark {
+	&:before {
+		@mixin fi $fi-checkmark;
+	}
+}
+
+.fi-arrow-down {
+	&:before {
+		@mixin fi $fi-arrow-down;
+	}
+}
+
+.fi-arrow-right2 {
+	&:before {
+		@mixin fi $fi-arrow-right2;
+	}
+}
+
+.fi-facebook2 {
+	&:before {
+		@mixin fi $fi-facebook2;
+	}
+}
+
+.fi-instagram {
+	&:before {
+		@mixin fi $fi-instagram;
+	}
+}
+
+.fi-twitter {
+	&:before {
+		@mixin fi $fi-twitter;
+	}
+}
+
+.fi-rss {
+	&:before {
+		@mixin fi $fi-rss;
+	}
+}
+
+a[href*="youtube.com"],
+a[href*="youtu.be"],
+.fi-youtube {
+	&:before {
+		@mixin fi $fi-youtube;
+	}
+}
+
+.fi-wordpress {
+	&:before {
+		@mixin fi $fi-wordpress;
+	}
+}
+
+.fi-linkedin {
+	&:before {
+		@mixin fi $fi-linkedin;
+	}
+}
+
+.fi-pinterest {
+	&:before {
+		@mixin fi $fi-pinterest;
+	}
+}
+
+.fi-chrome {
+	&:before {
+		@mixin fi $fi-chrome;
+	}
+}
+
+.fi-firefox {
+	&:before {
+		@mixin fi $fi-firefox;
+	}
+}
+
+.fi-edge {
+	&:before {
+		@mixin fi $fi-edge;
+	}
+}
+
+.fi-file-pdf {
+	&:before {
+		@mixin fi $fi-file-pdf;
+	}
+}
+
+.fi-file-word {
+	&:before {
+		@mixin fi $fi-file-word;
+	}
+}
+
+.fi-file-excel {
+	&:before {
+		@mixin fi $fi-file-excel;
+	}
+}

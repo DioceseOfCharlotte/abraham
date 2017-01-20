@@ -53,6 +53,7 @@
 	--space-4: 4rem;
 	--space-5: 5rem;
 	--gutter: var(--base-space);
+	--gutter-half: 0.75rem;
 	--gutter-mobile: var(--space-1);
 	--base-space: var(--space-15);
 	--font-light: 300;

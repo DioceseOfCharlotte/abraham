@@ -73,7 +73,7 @@ svg[stroke-width] {
 		width: 100%;
 	}
 }
-
+/*
 .icon-refresh {
 	@mixin fa $refresh ;
 }
@@ -185,4 +185,4 @@ a[href*="tel:"]::before {
 
 a[href*="mailto:"]::before {
 	@mixin fa $envelope ;
-}
+}*/

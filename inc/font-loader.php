@@ -14,7 +14,7 @@ function abe_font_scripts() {
 
 	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,600,600i|Open+Sans:300,300i,400,400i,600,600i' );
 
-	wp_enqueue_style( 'abe_font_awesome', 'https://use.fontawesome.com/1397c1e607.css' );
+	//wp_enqueue_script( 'abe_font_awesome', 'https://use.fortawesome.com/11b0b571.js', false, false, false );
 
 	wp_enqueue_script( 'font_face', get_theme_file_uri( 'js/vendors/fontfaceobserver.js' ), false, false, true );
 

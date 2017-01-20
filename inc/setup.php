@@ -153,7 +153,7 @@ function abraham_get_editor_styles() {
 	/* Add the theme's editor styles. */
 	$editor_styles[] = get_theme_file_uri( 'style.css' );
 
-	$editor_styles[] = 'https://use.fontawesome.com/1397c1e607.css';
+	//$editor_styles[] = 'https://use.fontawesome.com/1397c1e607.css';
 
 		/* Return the styles. */
 		return $editor_styles;
