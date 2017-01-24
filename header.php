@@ -24,9 +24,11 @@
 
 			<?php if ( is_active_sidebar( 'secondary' ) ) { ?>
 
-				<button class="js-menu-show header__menu-toggle u-h3 u-p05 u-inline-flex u-flex-center u-mr1 u-z2">
+				<button class="js-menu-show header__menu-toggle u-flex u-mr1 u-p0 u-z2">
+					<div class="u-inline-flex u-flex-center u-h3 u-p05">
 					<span class="u-h6 toggle-text u-align-middle"><?php esc_html_e( 'menu', '_s' ); ?></span>
 						<?php abe_do_svg( 'side-toggle', 'sm' ); ?>
+					</div>
 				</button>
 
 			<?php } ?>
