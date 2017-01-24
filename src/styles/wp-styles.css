@@ -21,8 +21,8 @@
 .aligncenter {
 	clear: both;
 	float: none;
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media (--md) {
@@ -52,14 +52,14 @@ blockquote.alignright {
 -------------------------------------------------------------- */
 .wp-caption {
 	font-size: var(--h6);
-    font-style: italic;
-    margin-bottom: var(--base-space);
-    max-width: 100%;
+	font-style: italic;
+	margin-bottom: var(--base-space);
+	max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-    margin: 0 auto 1rem;
+	margin: 0 auto 1rem;
 	line-height: 1;
 }
 
@@ -115,4 +115,16 @@ blockquote.alignright {
 	.gallery-columns-9 .gallery-item {
 		max-width: calc(11.11% - var(--gutter));
 	}
+}
+
+/* --------------------------------------------------------------
+## Embeds
+-------------------------------------------------------------- */
+.FlexEmbed-content > .wp-video {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }

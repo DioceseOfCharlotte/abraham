@@ -34,7 +34,6 @@
     "postcss-discard-empty": "^2.1.0",
     "postcss-import": "^9.1.0",
     "postcss-increase-specificity": "^0.3.0",
-    "postcss-inline-svg": "^2.3.0",
     "postcss-mixins": "^5.4.1",
     "postcss-nested": "^1.0.0",
     "postcss-plugin-context": "^2.0.0",

@@ -60,9 +60,9 @@ $fi-file-excel: "\eae2";
 -------------------------------------------------------------- */
 @font-face {
 	font-family: 'icomeh';
-	src: url('/fonts/icomeh.ttf') format('truetype'),
-			url('/fonts/icomeh.woff') format('woff'),
-			url('/fonts/icomeh.svg#icomeh') format('svg');
+	src: url('fonts/icomeh.ttf') format('truetype'),
+			url('fonts/icomeh.woff') format('woff'),
+			url('fonts/icomeh.svg#icomeh') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -167,6 +167,10 @@ a[href*="mailto:"],
 	&:before {
 		@mixin fi $fi-alert;
 	}
+}
+
+.fi-refresh {
+	@mixin fi $fi-sync ;
 }
 
 .fi-chevron-down {

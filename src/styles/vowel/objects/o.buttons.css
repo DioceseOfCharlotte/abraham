@@ -60,6 +60,10 @@ input[type="button"] {
 	}
 }
 
+.btn-round > svg {
+	margin: 0 auto;
+}
+
 .btn-sm {
 	font-size: 0.9rem;
 }
