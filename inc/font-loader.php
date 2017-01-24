@@ -26,11 +26,17 @@ function get_font_load_script() {
 
 	return "
 	(function () {
-	var titleFont = new FontFaceObserver('Cormorant Garamond', {weight: 600});
-	var bodyFont = new FontFaceObserver('Open Sans');
+	var titleBold = new FontFaceObserver('Cormorant Garamond', {weight: 600});
+	var bodyFont = new FontFaceObserver('Open Sans', {weight: 400});
+	var bodyItalic = new FontFaceObserver('Open Sans', {style: 'italic'});
+	var bodyLight = new FontFaceObserver('Open Sans', {weight: 300});
+	var bodyBold = new FontFaceObserver('Open Sans', {weight: 600});
 	Promise.all([
-		titleFont.load(),
-		bodyFont.load()
+		titleBold.load(),
+		bodyFont.load(),
+		bodyItalic.load(),
+		bodyLight.load(),
+		bodyBold.load()
 	]).then(function () {
 		document.documentElement.classList.add('fonts-loaded');
 		sessionStorage.fontsLoaded = true;
