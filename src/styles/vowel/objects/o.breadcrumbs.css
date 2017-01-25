@@ -18,7 +18,7 @@
 		font-style: italic;
 
 		&:not(:last-of-type)::after {
-			margin: 0 0.3em -0.2em;
+			margin: 0 0.3em -0.05em;
 			content: '/';
 			font-size: 1.25em;
 		}

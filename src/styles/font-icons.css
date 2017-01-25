@@ -1,32 +1,33 @@
 /* --------------------------------------------------------------
 ## Icon Font Variables
 -------------------------------------------------------------- */
-$fi-add_circle: "\e147";
-$fi-phone: "\e0cd";
-$fi-check_box: "\e834";
-$fi-check_box_outline_blank: "\e835";
-$fi-remove_circle: "\e15c";
-$fi-get_app: "\e884";
-$fi-mail_outline: "\e0e1";
-$fi-more_horiz: "\e5d3";
-$fi-radio_button_unchecked: "\e836";
-$fi-phone_iphone: "\e325";
-$fi-radio_button_checked: "\e837";
-$fi-save: "\e161";
-$fi-external-link: "\f08e";
+$fi-mail: "\e900";
+$fi-plus-alt: "\e901";
+$fi-minus-alt: "\e902";
+$fi-read-more: "\e905";
+$fi-download: "\e903";
 $fi-alert: "\f02d";
 $fi-chevron-down: "\f0a3";
 $fi-info: "\f059";
+$fi-link-external: "\f07f";
 $fi-location: "\f060";
 $fi-pencil: "\f058";
+$fi-search: "\f02e";
 $fi-sync: "\f087";
 $fi-three-bars: "\f05e";
 $fi-newspaper: "\e904";
 $fi-file-text2: "\e926";
+$fi-phone: "\e942";
+$fi-mobile: "\e958";
+$fi-floppy-disk: "\e962";
 $fi-heart: "\e9da";
 $fi-checkmark: "\ea10";
 $fi-arrow-down: "\ea36";
 $fi-arrow-right2: "\ea3c";
+$fi-checkbox-checked: "\ea52";
+$fi-checkbox-unchecked: "\ea53";
+$fi-radio-checked: "\ea54";
+$fi-radio-unchecked: "\ea56";
 $fi-facebook2: "\ea91";
 $fi-instagram: "\ea92";
 $fi-twitter: "\ea96";
@@ -45,14 +46,6 @@ $fi-file-excel: "\eae2";
 @define-mixin fi $icon {
 	content: $icon;
 	font-family: 'icomeh' !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 /* --------------------------------------------------------------
@@ -67,9 +60,10 @@ $fi-file-excel: "\eae2";
 	font-style: normal;
 }
 
-[class^="fi-"],
-[class*=" fi-"] {
+[class^="fi-"]::before,
+[class*=" fi-"]::before {
 	font-family: 'icomeh' !important;
+	margin-right: 0.3em;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -83,9 +77,15 @@ $fi-file-excel: "\eae2";
 /* --------------------------------------------------------------
 ## Icon Font Classes
 -------------------------------------------------------------- */
-.fi-add_circle {
+.fi-plus-alt {
 	&:before {
-		@mixin fi $fi-add_circle;
+		@mixin fi $fi-plus-alt;
+	}
+}
+
+.fi-search {
+	&:before {
+		@mixin fi $fi-search;
 	}
 }
 
@@ -96,70 +96,70 @@ a[href*="tel:"],
 	}
 }
 
-.fi-check_box {
+.fi-checkbox-checked {
 	&:before {
-		@mixin fi $fi-check_box;
+		@mixin fi $fi-checkbox-checked;
 	}
 }
 
-.fi-check_box_outline_blank {
+.fi-checkbox-unchecked {
 	&:before {
-		@mixin fi $fi-check_box_outline_blank;
+		@mixin fi $fi-checkbox-unchecked;
 	}
 }
 
-.fi-remove_circle {
+.fi-minus-alt {
 	&:before {
-		@mixin fi $fi-remove_circle;
+		@mixin fi $fi-minus-alt;
 	}
 }
 
-.fi-get_app {
+.fi-download {
 	&:before {
-		@mixin fi $fi-get_app;
+		@mixin fi $fi-download;
 	}
 }
 
 a[href*="mailto:"],
-.fi-mail_outline {
+.fi-mail {
 	&:before {
-		@mixin fi $fi-mail_outline;
+		@mixin fi $fi-mail;
 	}
 }
 
-.fi-more_horiz {
+.fi-read-more {
 	&:before {
-		@mixin fi $fi-more_horiz;
+		@mixin fi $fi-read-more;
 	}
 }
 
-.fi-radio_button_unchecked {
+.fi-radio-unchecked {
 	&:before {
-		@mixin fi $fi-radio_button_unchecked;
+		@mixin fi $fi-radio-unchecked;
 	}
 }
 
-.fi-phone_iphone {
+.fi-mobile {
 	&:before {
-		@mixin fi $fi-phone_iphone;
+		@mixin fi $fi-mobile;
 	}
 }
 
-.fi-radio_button_checked {
+.fi-radio-checked {
 	&:before {
-		@mixin fi $fi-radio_button_checked;
+		@mixin fi $fi-radio-checked;
 	}
 }
 
-.fi-save {
+.fi-floppy-disk {
 	&:before {
-		@mixin fi $fi-save;
+		@mixin fi $fi-floppy-disk;
 	}
 }
 
-.fi-external-link {
+.fi-link-external {
 	&:before {
-		@mixin fi $fi-external-link;
+		@mixin fi $fi-link-external;
 	}
 }
 

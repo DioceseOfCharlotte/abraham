@@ -128,3 +128,19 @@ blockquote.alignright {
 	top: 0;
 	width: 100%;
 }
+
+/* --------------------------------------------------------------
+## Plugins
+-------------------------------------------------------------- */
+.facetwp-type-alpha {
+	text-align: center;
+}
+
+.facet-reset {
+	float: right;
+}
+
+.facet-search > p,
+.facet-geo > p {
+	margin: 0;
+}
