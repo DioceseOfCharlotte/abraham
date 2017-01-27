@@ -406,6 +406,7 @@ article {
 	color: #212529;
 	width: 100%;
 	min-width: 270px;
+	max-width: 64rem;
 }
 
 @media (min-width: 40rem) {
@@ -453,13 +454,6 @@ hr {
 	text-shadow: none;
 }
 
-@media (min-height: 400px) {
-	article p:first-of-type:last-of-type {
-		-webkit-columns: 2 590px;
-		columns: 2 590px;
-	}
-}
-
 article ul {
 	list-style-type: disc;
 }
@@ -487,6 +481,11 @@ iframe,
 iframe[src*="google.com/maps"] {
 	width: 100%;
 	max-width: 100%;
+}
+
+.gm-style [aria-hidden='true'] {
+	display: block;
+	display: initial;
 }
 
 a {
@@ -1605,7 +1604,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-max-width {
-	max-width: 84rem;
+	max-width: 80rem;
 }
 
 .u-text-wrap {
@@ -1616,20 +1615,20 @@ body:not(.search) .trail-end > span,
 
 .u-container {
 	width: 100%;
-	max-width: 74rem;
+	max-width: 70rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-container-wide {
 	width: 100%;
-	max-width: 84rem;
+	max-width: 80rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-max-center {
-	max-width: 84rem;
+	max-width: 80rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -2965,7 +2964,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-content-wrap > * {
-	max-width: 74rem;
+	max-width: 70rem;
 	margin-left: auto;
 	margin-right: auto;
 }
