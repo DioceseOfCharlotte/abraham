@@ -757,11 +757,6 @@ input[type="submit"].is-active {
 	outline: 0;
 }
 
-a.btn:hover,
-a.button:hover {
-	color: inherit;
-}
-
 ul,
 ol,
 dl {
