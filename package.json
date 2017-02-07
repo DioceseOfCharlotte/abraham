@@ -27,7 +27,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-uglify": "^2.0.0",
     "postcss-animation": "0.0.11",
-    "postcss-color-function": "^2.0.1",
+    "postcss-color-function": "^3.0.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",
     "postcss-discard-comments": "^2.0.4",
@@ -42,7 +42,7 @@
     "run-sequence": "^1.2.2",
     "stylefmt": "^5.1.1",
     "stylelint": "^7.7.1",
-    "stylelint-config-standard": "^15.0.1"
+    "stylelint-config-standard": "^16.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",

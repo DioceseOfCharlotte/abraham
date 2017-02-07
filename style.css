@@ -397,8 +397,8 @@ legend {
 main a {
 	background-image: linear-gradient(to bottom, rgba(206, 212, 218, 0.5) 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: repeat-x;
-	background-size: 0.125rem 0.2rem;
-	background-position: 0 1.1em;
+	background-size: 0.125rem 0.3rem;
+	background-position: 0 1.15em;
 }
 
 article {
@@ -1169,7 +1169,7 @@ svg[stroke-width] {
 	font-size: 1.1rem;
 	list-style-type: none;
 	background-color: #fff;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 	border-radius: 0.2rem;
 }
 
@@ -1273,12 +1273,12 @@ input[type="button"]:active {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .btn-round:hover {
 	opacity: 0.9;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .btn-round a {
@@ -1512,23 +1512,23 @@ input[type="button"]:active {
 }
 
 .u-shadow1 {
-	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow2 {
-	box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow3 {
-	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow4 {
-	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow5 {
-	box-shadow: 0 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 9px 12px -6px rgba(0, 0, 0, 0.2), 0 19px 29px 2px rgba(0, 0, 0, 0.14), 0 7px 36px 6px rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow0 {
@@ -3641,165 +3641,197 @@ body:not(.search) .trail-end > span,
 .fi-plus-alt:before {
 	content: "\e901";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-search:before {
 	content: "\f02e";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 a[href*="tel:"]:before,
 .fi-phone:before {
 	content: "\e942";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-checkbox-checked:before {
 	content: "\ea52";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-checkbox-unchecked:before {
 	content: "\ea53";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-minus-alt:before {
 	content: "\e902";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-download:before {
 	content: "\e903";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 a[href*="mailto:"]:before,
 .fi-mail:before {
 	content: "\e900";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-read-more:before {
 	content: "\e905";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-radio-unchecked:before {
 	content: "\ea56";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-mobile:before {
 	content: "\e958";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-radio-checked:before {
 	content: "\ea54";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-floppy-disk:before {
 	content: "\e962";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-link-external:before {
 	content: "\f07f";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-alert:before {
 	content: "\f02d";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-refresh {
 	content: "\f087";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-chevron-down:before {
 	content: "\f0a3";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-info:before {
 	content: "\f059";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 a[href*="maps.google.com"]:before,
 .fi-location:before {
 	content: "\f060";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-pencil:before {
 	content: "\f058";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-sync:before {
 	content: "\f087";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-three-bars:before {
 	content: "\f05e";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-newspaper:before {
 	content: "\e904";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 a[href*="/documents/"]:before,
 .fi-file-text2:before {
 	content: "\e926";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-heart:before {
 	content: "\e9da";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-checkmark:before {
 	content: "\ea10";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-arrow-down:before {
 	content: "\ea36";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-arrow-right2:before {
 	content: "\ea3c";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-facebook2:before {
 	content: "\ea91";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-instagram:before {
 	content: "\ea92";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-twitter:before {
 	content: "\ea96";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-rss:before {
 	content: "\ea9b";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 a[href*="youtube.com"]:before,
@@ -3807,51 +3839,61 @@ a[href*="youtu.be"]:before,
 .fi-youtube:before {
 	content: "\ea9d";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-wordpress:before {
 	content: "\eab4";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-linkedin:before {
 	content: "\eac9";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-pinterest:before {
 	content: "\ead1";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-chrome:before {
 	content: "\ead9";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-firefox:before {
 	content: "\eada";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-edge:before {
 	content: "\eadc";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-file-pdf:before {
 	content: "\eadf";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-file-word:before {
 	content: "\eae1";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 .fi-file-excel:before {
 	content: "\eae2";
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 :root .wp-smiley {
@@ -4020,11 +4062,11 @@ body.wp-editor .wpview-wrap .gallery-cell {
 	margin-top: 0.5em;
 }
 
-.wp-editor a {
+.wp-editor a:not([class]) {
 	background-image: linear-gradient(to bottom, rgba(206, 212, 218, 0.5) 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: repeat-x;
-	background-size: 0.125rem 0.2rem;
-	background-position: 0 1.1em;
+	background-size: 0.125rem 0.3rem;
+	background-position: 0 1.15em;
 }
 
 #menu-primary {

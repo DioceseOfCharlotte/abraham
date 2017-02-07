@@ -46,6 +46,7 @@ $fi-file-excel: "\eae2";
 @define-mixin fi $icon {
 	content: $icon;
 	font-family: 'icomeh' !important;
+	font-style: normal !important;
 }
 
 /* --------------------------------------------------------------

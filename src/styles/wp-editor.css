@@ -28,9 +28,9 @@ body.wp-editor .wpview-wrap .gallery-cell {
 	margin-top: 0.5em;
 }
 
-.wp-editor a {
+.wp-editor a:not([class]) {
 	background-image: linear-gradient(to bottom, var(--color-shade-3) 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: repeat-x;
-	background-size: 0.125rem 0.2rem;
-	background-position: 0 1.1em;
+	background-size: 0.125rem 0.3rem;
+	background-position: 0 1.15em;
 }
