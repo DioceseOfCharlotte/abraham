@@ -70,7 +70,7 @@ $fi-file-excel: "\eae2";
 [class^="fi-"]::before,
 [class*=" fi-"]::before {
 	font-family: 'icomeh' !important;
-	margin-right: 0.3em;
+	margin-right: 0.4em;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

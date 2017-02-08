@@ -519,11 +519,13 @@ a::after {
 }
 
 a::before {
-	margin-right: 0.5em;
+	margin-right: 0.4em;
+	margin-left: 0.1em;
 }
 
 a::after {
-	margin-left: 0.5em;
+	margin-left: 0.4em;
+	margin-right: 0.1em;
 }
 
 [class*="u-bg-1"] a,
@@ -3619,7 +3621,7 @@ body:not(.search) .trail-end > span,
 [class^="fi-"]::before,
 [class*=" fi-"]::before {
 	font-family: 'icomeh' !important;
-	margin-right: 0.3em;
+	margin-right: 0.4em;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
