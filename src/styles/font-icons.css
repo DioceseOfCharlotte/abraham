@@ -47,6 +47,12 @@ $fi-file-excel: "\eae2";
 	content: $icon;
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* --------------------------------------------------------------
@@ -316,18 +322,23 @@ a[href*="youtu.be"],
 	}
 }
 
+a[href*=".pdf"],
 .fi-file-pdf {
 	&:before {
 		@mixin fi $fi-file-pdf;
 	}
 }
 
+a[href*=".docx"],
+a[href*=".doc"],
 .fi-file-word {
 	&:before {
 		@mixin fi $fi-file-word;
 	}
 }
 
+a[href*=".xlsx"],
+a[href*=".xls"],
 .fi-file-excel {
 	&:before {
 		@mixin fi $fi-file-excel;

@@ -28,25 +28,15 @@ a {
 
 a::before,
 a::after {
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 a::before {
-	margin-right: 0.3em;
+	margin-right: 0.5em;
 }
 
 a::after {
-	margin-left: 0.3em;
-}
-
-article:not(.arch-no-link-title) .entry-title {
-	padding: 0;
-}
-
-.entry-title {
-	.icon-sm {
-		margin-left: auto;
-	}
+	margin-left: 0.5em;
 }
 
 [class*="u-bg-1"] a,

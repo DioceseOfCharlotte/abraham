@@ -9,6 +9,16 @@
 	margin-top: 32px;
 }
 
+article:not(.arch-no-link-title) .entry-title {
+	padding: 0;
+}
+
+.entry-title {
+	.icon-sm {
+		margin-left: auto;
+	}
+}
+
 /* --------------------------------------------------------------
 # Alignments
 -------------------------------------------------------------- */

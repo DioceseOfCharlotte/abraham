@@ -515,23 +515,15 @@ a:focus {
 
 a::before,
 a::after {
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 a::before {
-	margin-right: 0.3em;
+	margin-right: 0.5em;
 }
 
 a::after {
-	margin-left: 0.3em;
-}
-
-article:not(.arch-no-link-title) .entry-title {
-	padding: 0;
-}
-
-.entry-title .icon-sm {
-	margin-left: auto;
+	margin-left: 0.5em;
 }
 
 [class*="u-bg-1"] a,
@@ -3642,12 +3634,24 @@ body:not(.search) .trail-end > span,
 	content: "\e901";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-search:before {
 	content: "\f02e";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a[href*="tel:"]:before,
@@ -3655,30 +3659,60 @@ a[href*="tel:"]:before,
 	content: "\e942";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-checkbox-checked:before {
 	content: "\ea52";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-checkbox-unchecked:before {
 	content: "\ea53";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-minus-alt:before {
 	content: "\e902";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-download:before {
 	content: "\e903";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a[href*="mailto:"]:before,
@@ -3686,66 +3720,132 @@ a[href*="mailto:"]:before,
 	content: "\e900";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-read-more:before {
 	content: "\e905";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-radio-unchecked:before {
 	content: "\ea56";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-mobile:before {
 	content: "\e958";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-radio-checked:before {
 	content: "\ea54";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-floppy-disk:before {
 	content: "\e962";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-link-external:before {
 	content: "\f07f";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-alert:before {
 	content: "\f02d";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-refresh {
 	content: "\f087";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-chevron-down:before {
 	content: "\f0a3";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-info:before {
 	content: "\f059";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a[href*="maps.google.com"]:before,
@@ -3753,30 +3853,60 @@ a[href*="maps.google.com"]:before,
 	content: "\f060";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-pencil:before {
 	content: "\f058";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-sync:before {
 	content: "\f087";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-three-bars:before {
 	content: "\f05e";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-newspaper:before {
 	content: "\e904";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a[href*="/documents/"]:before,
@@ -3784,54 +3914,108 @@ a[href*="/documents/"]:before,
 	content: "\e926";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-heart:before {
 	content: "\e9da";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-checkmark:before {
 	content: "\ea10";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-arrow-down:before {
 	content: "\ea36";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-arrow-right2:before {
 	content: "\ea3c";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-facebook2:before {
 	content: "\ea91";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-instagram:before {
 	content: "\ea92";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-twitter:before {
 	content: "\ea96";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-rss:before {
 	content: "\ea9b";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a[href*="youtube.com"]:before,
@@ -3840,60 +4024,125 @@ a[href*="youtu.be"]:before,
 	content: "\ea9d";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-wordpress:before {
 	content: "\eab4";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-linkedin:before {
 	content: "\eac9";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-pinterest:before {
 	content: "\ead1";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-chrome:before {
 	content: "\ead9";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-firefox:before {
 	content: "\eada";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .fi-edge:before {
 	content: "\eadc";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+a[href*=".pdf"]:before,
 .fi-file-pdf:before {
 	content: "\eadf";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+a[href*=".docx"]:before,
+a[href*=".doc"]:before,
 .fi-file-word:before {
 	content: "\eae1";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+a[href*=".xlsx"]:before,
+a[href*=".xls"]:before,
 .fi-file-excel:before {
 	content: "\eae2";
 	font-family: 'icomeh' !important;
 	font-style: normal !important;
+	font-weight: normal !important;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 :root .wp-smiley {
@@ -3905,6 +4154,14 @@ a[href*="youtu.be"]:before,
 
 .admin-bar .if-admin-bar {
 	margin-top: 32px;
+}
+
+article:not(.arch-no-link-title) .entry-title {
+	padding: 0;
+}
+
+.entry-title .icon-sm {
+	margin-left: auto;
 }
 
 .aligncenter,
