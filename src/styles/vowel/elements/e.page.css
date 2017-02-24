@@ -67,7 +67,7 @@ main a {
 	background-image: linear-gradient(to bottom, var(--color-shade-3) 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: repeat-x;
 	background-size: 0.125rem 0.3rem;
-	background-position: 0 1.15em;
+	background-position: 0 110%;
 }
 
 article {
@@ -87,7 +87,7 @@ p:empty {
 }
 
 p:last-child,
-:root article *:last-child {
+:root article > :last-child {
 	margin-bottom: 0;
 }
 
@@ -112,7 +112,7 @@ hr {
 }
 
 ::selection {
-	background-color: var(--oc-indigo-2);
+	background-color: var(--indigo1);
 	text-shadow: none;
 }
 

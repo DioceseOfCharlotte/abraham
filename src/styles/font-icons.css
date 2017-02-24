@@ -70,7 +70,21 @@ $fi-file-excel: "\eae2";
 [class^="fi-"]::before,
 [class*=" fi-"]::before {
 	font-family: 'icomeh' !important;
-	margin-right: 0.4em;
+	margin-right: 0.3em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="fi-"]::after,
+[class*=" fi-"]::after {
+	font-family: 'icomeh' !important;
+	margin-left: 0.3em;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -164,9 +178,10 @@ a[href*="mailto:"],
 	}
 }
 
-.fi-link-external {
-	&:before {
+:not(h2) > .fi-link-external {
+	&:after {
 		@mixin fi $fi-link-external;
+		font-size: 0.9em;
 	}
 }
 

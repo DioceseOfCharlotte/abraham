@@ -38,9 +38,7 @@ input[type="button"] {
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 	box-shadow: var(--shadow-1);
 
 	&:hover {
@@ -61,7 +59,8 @@ input[type="button"] {
 }
 
 .btn-round > svg {
-	margin: 0 auto;
+	height: var(--form-element-min-height);
+	vertical-align: baseline;
 }
 
 .btn-sm {

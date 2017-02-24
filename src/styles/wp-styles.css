@@ -19,6 +19,14 @@ article:not(.arch-no-link-title) .entry-title {
 	}
 }
 
+a.site-home-link {
+	opacity: 1;
+
+	& > .custom-logo {
+		opacity: 1;
+	}
+}
+
 /* --------------------------------------------------------------
 # Alignments
 -------------------------------------------------------------- */

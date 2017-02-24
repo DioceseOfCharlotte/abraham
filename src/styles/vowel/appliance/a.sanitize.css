@@ -233,15 +233,15 @@ sup {
  * 1. Restore the coloring undone by defining the text shadow (opinionated).
  */
 
-::-moz-selection {
-	background-color: var(--oc-indigo-2); /* 1 */
+/*::-moz-selection {
+	background-color: var(--indigo1);
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: var(--oc-indigo-2); /* 1 */
+	background-color: var(--indigo1);
 	text-shadow: none;
-}
+}*/
 
 /* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
    ========================================================================== */
