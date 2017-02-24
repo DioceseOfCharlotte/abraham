@@ -139,6 +139,14 @@ function abraham_assets() {
 }
 
 /**
+* Admin styles and fixes.
+*/
+function abe_admin_styles() {
+	wp_enqueue_style( 'abe-admin-fixes', get_theme_file_uri( 'css/abe-admin.css' ), false, false );
+}
+add_action( 'admin_enqueue_scripts', 'abe_admin_styles' );
+
+/**
 * Styles for the editor.
 */
 function abraham_get_editor_styles() {
