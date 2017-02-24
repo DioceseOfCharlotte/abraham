@@ -121,9 +121,9 @@ final class Abraham_Custom_Styles {
 		$colorDark = $primaryColor->isDark( $color300 ) ? $color400 : $color600;
 		$colorLight = $primaryColor->isDark( $color300 ) ? $color100 : $color300;
 
-		$textBase = $primaryColor->isDark( $colorBase ) ? 'fff' : '212529';
-		$textOnDark = $primaryColor->isDark( $colorDark ) ? 'fff' : '212529';
-		$textOnLight = $primaryColor->isDark( $colorLight ) ? 'fff' : '212529';
+		$textBase = $primaryColor->isDark( $colorBase ) ? 'fff' : '212629';
+		$textOnDark = $primaryColor->isDark( $colorDark ) ? 'fff' : '212629';
+		$textOnLight = $primaryColor->isDark( $colorLight ) ? 'fff' : '212629';
 
 		$glass          = implode( ', ', hybrid_hex_to_rgb( $colorBase ) );
 		$glass_dark     = implode( ', ', hybrid_hex_to_rgb( $colorDark ) );
@@ -132,9 +132,9 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "html .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
-		$style .= "html .u-text-1-dark{color:#{$colorDark};}";
-		$style .= "html .u-text-1-light{color:#{$colorLight};}";
+		$style .= "html .u-text-1,.u-b-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
+		$style .= "html .u-text-1-dark,.u-b-1-dark{color:#{$colorDark};}";
+		$style .= "html .u-text-1-light,.u-b-1-light{color:#{$colorLight};}";
 		$style .= "html .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "html .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "html .u-bg-1-dark,input[type=submit]{background-color:#{$colorDark};color:#{$textOnDark};}";
@@ -176,9 +176,9 @@ final class Abraham_Custom_Styles {
 		$colorDark = $secondaryColor->isDark( $color300 ) ? $color400 : $color600;
 		$colorLight = $secondaryColor->isDark( $color300 ) ? $color100 : $color300;
 
-		$textBase = $secondaryColor->isDark( $colorBase ) ? 'fff' : '212529';
-		$textOnDark = $secondaryColor->isDark( $colorDark ) ? 'fff' : '212529';
-		$textOnLight = $secondaryColor->isDark( $colorLight ) ? 'fff' : '212529';
+		$textBase = $secondaryColor->isDark( $colorBase ) ? 'fff' : '212629';
+		$textOnDark = $secondaryColor->isDark( $colorDark ) ? 'fff' : '212629';
+		$textOnLight = $secondaryColor->isDark( $colorLight ) ? 'fff' : '212629';
 
 		$glass          = implode( ', ', hybrid_hex_to_rgb( $colorBase ) );
 		$glass_dark     = implode( ', ', hybrid_hex_to_rgb( $colorDark ) );
@@ -187,9 +187,9 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "html .u-text-2{color:#{$colorBase};}";
-		$style .= "html .u-text-2-dark{color:#{$colorDark};}";
-		$style .= "html .u-text-2-light{color:#{$colorLight};}";
+		$style .= "html .u-text-2,.u-b-2{color:#{$colorBase};}";
+		$style .= "html .u-text-2-dark,.u-b-2-dark{color:#{$colorDark};}";
+		$style .= "html .u-text-2-light,.u-b-2-light{color:#{$colorLight};}";
 		$style .= "html .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "html .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "html .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
