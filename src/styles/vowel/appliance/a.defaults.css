@@ -60,7 +60,7 @@
 	--font-light: 300;
 	--font-normal: 400;
 	--font-bold: 600;
-	--border-radius: 0.2rem;
+	--border-radius: 0.1rem;
 	--transition-time: 0.16s;
 	--transition-time-out: 0.2s;
 	--animation-curve: cubic-bezier(0.4, 0, 1, 1);
