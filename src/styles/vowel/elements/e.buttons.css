@@ -16,6 +16,7 @@ input[type="submit"] {
 	border-radius: var(--border-radius);
 	font-size: inherit;
 	font-family: inherit;
+	//font-weight: normal;
 	display: inline-block;
 	margin: 0;
 	vertical-align: middle;

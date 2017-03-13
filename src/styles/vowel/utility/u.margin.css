@@ -25,6 +25,14 @@
 		margin: var(--space-05);
 	}
 
+	.u-mt05 {
+		margin-top: var(--space-05);
+	}
+
+	.u-mb05 {
+		margin-bottom: var(--space-05);
+	}
+
 	.u-mr05 {
 		margin-right: var(--space-05);
 	}

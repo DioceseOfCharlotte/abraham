@@ -66,7 +66,7 @@ class Attr_Trumps {
 			'entry_title'             	=> 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p25',
 			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-p u-p2-md show-icons',
+			'entry_summary'           	=> 'u-p u-pt1 show-icons',
 			'entry_footer'            	=> 'u-mt-auto u-rel u-1of1',
 
 			// NAVIGATION.

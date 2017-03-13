@@ -41,6 +41,6 @@
 	padding-right: 2.5rem;
 }
 
-.entry-header + .entry-summary {
+.arch-no-link-title .entry-summary {
 	padding-top: 0;
 }

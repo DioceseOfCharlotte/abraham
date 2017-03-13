@@ -10,6 +10,10 @@
 	color: var(--black);
 }
 
+.u-text-link {
+	color: var(--color-links);
+}
+
 .u-text-grey {
 	color: var(--color-grey-ui);
 }
@@ -76,7 +80,15 @@
 }
 
 .u-bg-grey {
-	background-color: var(--color-grey-ui);
+	background-color: var(--color-grey-bg);
+}
+
+.u-bg-grey-light {
+	background-color: var(--color-grey-bg-light);
+}
+
+.u-bg-grey-dark {
+	background-color: var(--color-grey-bg-dark);
 }
 
 .u-bg-silver {

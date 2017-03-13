@@ -132,9 +132,12 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "html .u-text-1,.u-b-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
-		$style .= "html .u-text-1-dark,.u-b-1-dark{color:#{$colorDark};}";
-		$style .= "html .u-text-1-light,.u-b-1-light{color:#{$colorLight};}";
+		$style .= "html .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
+		$style .= ".u-b-1{border-color:#{$colorBase};}";
+		$style .= "html .u-text-1-dark{color:#{$colorDark};}";
+		$style .= ".u-b-1-dark{color:#{$colorDark};}";
+		$style .= "html .u-text-1-light{color:#{$colorLight};}";
+		$style .= ".u-b-1-light{border-color:#{$colorLight};}";
 		$style .= "html .u-bg-1{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "html .u-bg-1-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "html .u-bg-1-dark,input[type=submit]{background-color:#{$colorDark};color:#{$textOnDark};}";
@@ -187,9 +190,12 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= "html .u-text-2,.u-b-2{color:#{$colorBase};}";
-		$style .= "html .u-text-2-dark,.u-b-2-dark{color:#{$colorDark};}";
-		$style .= "html .u-text-2-light,.u-b-2-light{color:#{$colorLight};}";
+		$style .= "html .u-text-2{color:#{$colorBase};}";
+		$style .= ".u-b-2{border-color:#{$colorBase};}";
+		$style .= "html .u-text-2-dark{color:#{$colorDark};}";
+		$style .= ".u-b-2-dark{border-color:#{$colorDark};}";
+		$style .= "html .u-text-2-light{color:#{$colorLight};}";
+		$style .= ".u-b-2-light{border-color:#{$colorLight};}";
 		$style .= "html .u-bg-2{background-color:#{$colorBase};color:#{$textBase};}";
 		$style .= "html .u-bg-2-light{background-color:#{$colorLight};color:#{$textOnLight};}";
 		$style .= "html .u-bg-2-dark{background-color:#{$colorDark};color:#{$textOnDark};}";
