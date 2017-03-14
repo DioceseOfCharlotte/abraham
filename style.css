@@ -856,12 +856,11 @@ select,
 textarea {
 	max-width: 100%;
 	border-radius: 0.1rem 0.1rem 0 0;
-	padding: 0.5em 0.625em;
+	padding: 0.5em 0.625em !important;
 	border-width: 0;
 	line-height: 1.5;
 	background-color: rgba(248, 249, 249, 0.9);
 	color: #212629;
-	//margin:0;
 	vertical-align: baseline;
 	font-size: inherit;
 	font-family: inherit;
@@ -1909,8 +1908,8 @@ body:not(.search) .trail-end > span,
 	margin-right: 0.5rem;
 }
 
-:root .u-m15 {
-	margin: 1.5rem;
+:root .u-ml05 {
+	margin-left: 0.5rem;
 }
 
 :root .u-m25 {

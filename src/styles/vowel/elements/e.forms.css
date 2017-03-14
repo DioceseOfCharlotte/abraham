@@ -11,12 +11,11 @@ select,
 textarea {
 	max-width: 100%;
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
-	padding: 0.5em 0.625em;
+	padding: 0.5em 0.625em !important;
 	border-width: 0;
 	line-height: 1.5;
 	background-color: var(--form-element-background-color);
 	color: var(--color-text);
-	//margin: 0;
 	vertical-align: baseline;
 	font-size: inherit;
 	font-family: inherit;
