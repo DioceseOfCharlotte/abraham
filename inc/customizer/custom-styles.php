@@ -118,7 +118,7 @@ final class Abraham_Custom_Styles {
 		$color900     = $primaryColor->darken( 40 );
 
 		$colorBase = $color500;
-		$colorDark = $primaryColor->isDark( $color300 ) ? $color400 : $color600;
+		$colorDark = $primaryColor->isDark( $color300 ) ? $color600 : $color700;
 		$colorLight = $primaryColor->isDark( $color300 ) ? $color100 : $color300;
 
 		$textBase = $primaryColor->isDark( $colorBase ) ? 'fff' : '212629';
@@ -177,7 +177,7 @@ final class Abraham_Custom_Styles {
 		$color900       = $secondaryColor->darken( 40 );
 
 		$colorBase = $color500;
-		$colorDark = $secondaryColor->isDark( $color300 ) ? $color400 : $color600;
+		$colorDark = $secondaryColor->isDark( $color300 ) ? $color600 : $color700;
 		$colorLight = $secondaryColor->isDark( $color300 ) ? $color100 : $color300;
 
 		$textBase = $secondaryColor->isDark( $colorBase ) ? 'fff' : '212629';
@@ -191,6 +191,7 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
+		$style .= ":root{--color-2:#{$colorBase};--color-2-light:#{$colorLight};--color-2-dark: #{$colorDark};}";
 		$style .= "html .u-text-2{color:#{$colorBase};}";
 		$style .= ".u-b-2{border-color:#{$colorBase};}";
 		$style .= "html .u-text-2-dark{color:#{$colorDark};}";
