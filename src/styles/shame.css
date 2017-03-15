@@ -291,5 +291,5 @@ article.arch-none a.u-border-b {
 .arch-post:not(.arch-none) .entry-title > a:hover {
 	box-shadow: var(--shadow-2);
 	color: black;
-	background-color: #fff;
+	background-color: var(--color-frost-4);
 }
