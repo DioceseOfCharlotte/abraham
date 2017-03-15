@@ -39,7 +39,7 @@
 	max-width: 100%;
 	font-size: var(--h5);
 	list-style-type: none;
-	background-color: var(--color-frost-3);
+	background-color: var(--color-frost-1);
 	border-radius: var(--border-radius);
 
 	> li {

@@ -1173,7 +1173,7 @@ svg[stroke-width] {
 	max-width: 100%;
 	font-size: 1.125rem;
 	list-style-type: none;
-	background-color: rgba(248, 249, 249, 0.5);
+	background-color: rgba(248, 249, 249, 0.15);
 	border-radius: 0.1rem;
 }
 
