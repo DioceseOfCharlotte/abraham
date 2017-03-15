@@ -8,7 +8,7 @@ a {
 	font-weight: var(--font-bold);
 	letter-spacing: 0.02em;
 	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-curve);
+	transition-timing-function: var(--animation-base);
 	transition-property: all;
 	border-radius: 0.125rem;
 	overflow-wrap: break-word;
@@ -21,8 +21,8 @@ a {
 	&:focus {
 		color: var(--color-links-hover);
 		background-color: var(--color-shade-2);
-		transition-duration: var(--transition-time-out);
-		transition-timing-function: var(--animation-curve-out);
+		transition-duration: var(--transition-time-slow);
+		transition-timing-function: var(--animation-enter);
 	}
 }
 

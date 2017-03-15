@@ -14,7 +14,7 @@
 	<?php tha_body_top(); ?>
 
 	<div id="page" class="site">
-		<a class="skip-link visuallyhidden focusable" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+		<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 		<?php tha_header_before(); ?>
 

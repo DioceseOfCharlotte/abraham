@@ -205,7 +205,7 @@
 	height: 100%;
 	opacity: 0;
 	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-curve);
+	transition-timing-function: var(--animation-base);
 	transition-property: opacity;
 	box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px currentColor;
 }
@@ -217,7 +217,7 @@
 .opacity-hover {
 	opacity: 1;
 	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-curve);
+	transition-timing-function: var(--animation-base);
 	transition-property: opacity;
 }
 

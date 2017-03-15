@@ -1,6 +1,6 @@
 .animating {
 	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-curve);
+	transition-timing-function: var(--animation-base);
 	/*animation-fill-mode: both;
     backface-visibility: hidden;*/
 }
