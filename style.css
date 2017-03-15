@@ -12,6 +12,7 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
 :root {
+
 	//--black:#000;
 }
 
@@ -1050,13 +1051,7 @@ a:hover > img {
 }
 
 .o-cell {
-	margin: 0 calc(0.5 * 1rem) calc(0.5 * 1.5rem);
-}
-
-@media (min-width: 40rem) {
-	.o-cell {
-		margin: 0 calc(0.5 * 1.5rem) 1.5rem;
-	}
+	margin: 0 calc(0.5 * 1.5rem) 1.5rem;
 }
 
 .v-icon {
@@ -1176,10 +1171,9 @@ svg[stroke-width] {
 .o-list-group-links {
 	padding-left: 0;
 	max-width: 100%;
-	font-size: 1.1rem;
+	font-size: 1.125rem;
 	list-style-type: none;
-	background-color: #fff;
-	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	background-color: rgba(248, 249, 249, 0.5);
 	border-radius: 0.1rem;
 }
 
@@ -1189,6 +1183,7 @@ svg[stroke-width] {
 	position: relative;
 	display: inline-block;
 	width: 100%;
+	padding: 0.5rem 0.75rem;
 	border-bottom: 0.063rem solid #ced3d7;
 }
 
@@ -1198,9 +1193,8 @@ svg[stroke-width] {
 	border-bottom: 0;
 }
 
-.u-list-group > li,
-.o-list-group > li {
-	padding: 0.5rem 0.75rem;
+.o-list-group-links > li {
+	padding: 0;
 }
 
 .o-list-group-links > li a {
@@ -1245,7 +1239,7 @@ a.btn-hollow,
 input[type="reset"],
 input[type="button"] {
 	color: #206691;
-	background-color: rgba(248, 249, 249, 0.9);
+	background-color: rgba(248, 249, 249, 0.5);
 	box-shadow: inset 0 0 0 0.125rem #206691;
 }
 
@@ -1275,7 +1269,7 @@ input[type="button"]:active {
 	margin-right: 0;
 	padding: 0;
 	text-align: center;
-	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .btn-round:hover {
@@ -1300,11 +1294,11 @@ input[type="button"]:active {
 }
 
 .btn-sm {
-	font-size: 0.9rem;
+	font-size: 0.875em;
 }
 
 .btn-lg {
-	font-size: 1.1rem;
+	font-size: 1.25em;
 }
 
 .media-img > a {
@@ -1515,7 +1509,7 @@ input[type="button"]:active {
 }
 
 .u-shadow1 {
-	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow2 {

@@ -37,16 +37,16 @@
 .o-list-group-links {
 	padding-left: 0;
 	max-width: 100%;
-	font-size: 1.1rem;
+	font-size: var(--h5);
 	list-style-type: none;
-	background-color: #fff;
-	box-shadow: var(--shadow-1);
+	background-color: var(--color-frost-3);
 	border-radius: var(--border-radius);
 
 	> li {
 		position: relative;
 		display: inline-block;
 		width: 100%;
+		padding: 0.5rem 0.75rem;
 		border-bottom: 0.063rem solid var(--color-grey-ui-light);
 
 		&:last-child {
@@ -55,9 +55,8 @@
 	}
 }
 
-.u-list-group > li,
-.o-list-group > li {
-	padding: 0.5rem 0.75rem;
+.o-list-group-links > li {
+	padding: 0;
 }
 
 .o-list-group-links > li a {
