@@ -2,7 +2,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: var(--monospace-font-family);
+	font-family: $monospace-font-family;
 }
 
 /* Github Style */
@@ -12,8 +12,8 @@ code {
 	padding-bottom: 0.2em;
 	margin: 0;
 	font-size: 85%;
-	background-color: var(--color-frost-3);
-	border-radius: var(--border-radius);
+	background-color: $color-frost-3;
+	border-radius: $border-radius;
 }
 
 code::before,
@@ -24,13 +24,13 @@ code::after {
 
 pre {
 	margin-top: 0;
-	margin-bottom: var(--base-space);
-	padding: var(--space-1);
+	margin-bottom: $base-space;
+	padding: $space-1;
 	overflow: auto;
 	font-size: 85%;
 	line-height: 1.45;
-	background-color: var(--color-frost-3);
-	border-radius: var(--border-radius);
+	background-color: $color-frost-3;
+	border-radius: $border-radius;
 	word-wrap: normal;
 	max-height: 60vh;
 	tab-size: 4;

@@ -3,36 +3,36 @@
 -------------------------------------------------------------- */
 
 form {
-	margin-bottom: var(--base-space);
+	margin-bottom: $base-space;
 }
 
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 select,
 textarea {
 	max-width: 100%;
-	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	border-radius: $border-radius $border-radius 0 0;
 	padding: 0.5em 0.625em !important;
 	border-width: 0;
 	line-height: 1.5;
-	background-color: var(--form-element-background-color);
-	color: var(--color-text);
+	background-color: $form-element-background-color;
+	color: $color-text;
 	vertical-align: baseline;
 	font-size: inherit;
 	font-family: inherit;
 	font-style: inherit;
 	font-weight: inherit;
-	box-shadow: inset 0 -2px 0 0 var(--color-links);
-	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-base);
+	box-shadow: inset 0 -2px 0 0 $color-links;
+	transition-duration: $transition-time;
+	transition-timing-function: $animation-base;
 	transition-property: color, background-color, box-shadow;
 
 	&:focus {
 		outline: 0;
 		background-color: color(#fff a(95%));
-		border-radius: var(--border-radius);
-		transition-duration: var(--transition-time-slow);
-		transition-timing-function: var(--animation-enter);
-		box-shadow: inset 0 0 0 2px var(--color-links-hover);
+		border-radius: $border-radius;
+		transition-duration: $transition-time-slow;
+		transition-timing-function: $animation-enter;
+		box-shadow: inset 0 0 0 2px $color-links-hover;
 	}
 }
 
@@ -55,13 +55,13 @@ button,
 [type="week"],
 select,
 textarea {
-	min-height: var(--form-element-min-height);
+	min-height: $form-element-min-height;
 }
 
 input[aria-invalid=true],
 select[aria-invalid=true],
 textarea[aria-invalid=true] {
-	box-shadow: inset 0 0 0 0.063rem var(--red5) !important;
+	box-shadow: inset 0 0 0 0.063rem $red5 !important;
 }
 
 legend {
@@ -86,10 +86,10 @@ input[type=checkbox],
 input[type=radio] {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 var(--space-1) 0 0;
+	margin: 0 $space-1 0 0;
 	width: 1rem;
 	height: 1rem;
-	box-shadow: inset 0 0 0 2px var(--color-links-hover) !important;
+	box-shadow: inset 0 0 0 2px $color-links-hover !important;
 }
 
 input[type="number"] {
@@ -137,14 +137,14 @@ input[type=search] {
 }
 
 input[value=Other]:not(:focus) {
-	color: var(--color-grey-ui);
+	color: $color-grey-ui;
 }
 
 [class*="u-bg-"]:not(.u-bg-white) {
 	input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 	select,
 	textarea {
-		background-color: var(--color-frost-4);
+		background-color: $color-frost-4;
 
 		&:focus {
 			background-color: color(#fff a(95%));
@@ -161,7 +161,7 @@ input[readonly]:focus,
 textarea[readonly]:focus {
 	pointer-events: none;
 	border-color: transparent !important;
-	background-color: var(--form-element-background-color) !important;
+	background-color: $form-element-background-color !important;
 	cursor: default;
 	opacity: 0.5;
 }

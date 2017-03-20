@@ -11,10 +11,7 @@ Text Domain: abraham
 GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 */
 
-:root {
-
-	//--black:#000;
-}
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
 *,
 ::before,
@@ -32,8 +29,6 @@ GitHub Theme URI: https://github.com/DioceseOfCharlotte/abraham
 html {
 	box-sizing: border-box;
 	cursor: default;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
-	line-height: 1.6;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -137,6 +132,18 @@ sub {
 
 sup {
 	top: -0.5em;
+}
+
+::-moz-selection {
+	background-color: #b3d4fc;
+	color: #000;
+	text-shadow: none;
+}
+
+::selection {
+	background-color: #b3d4fc;
+	color: #000;
+	text-shadow: none;
 }
 
 audio,
@@ -311,14 +318,10 @@ textarea,
 	cursor: pointer;
 }
 
-[aria-hidden="false"][hidden] {
+[aria-hidden="false"][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
-}
-
-[aria-hidden="false"][hidden]:focus {
-	clip: auto;
 }
 
 [aria-disabled] {
@@ -364,9 +367,10 @@ html {
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 	font-size: 1rem;
-	font-weight: normal;
+	font-weight: 400;
 	color: #212629;
 	background-color: #fff;
+	line-height: 1.5;
 }
 
 main {
@@ -439,16 +443,6 @@ hr {
 	border-bottom: 1px solid #90a4ae;
 }
 
-::-moz-selection {
-	background-color: #d3d7f0;
-	text-shadow: none;
-}
-
-::selection {
-	background-color: #d3d7f0;
-	text-shadow: none;
-}
-
 article ul {
 	list-style-type: disc;
 }
@@ -466,16 +460,6 @@ article * + h2,
 article * + h3,
 article * + h4 {
 	margin-top: 0.5em;
-}
-
-canvas {
-	-ms-touch-action: double-tap-zoom;
-}
-
-iframe,
-iframe[src*="google.com/maps"] {
-	width: 100%;
-	max-width: 100%;
 }
 
 .gm-style [aria-hidden='true'] {
@@ -710,7 +694,6 @@ input[type="submit"] {
 	border-radius: 0.1rem;
 	font-size: inherit;
 	font-family: inherit;
-	//font-weight:normal;
 	display: inline-block;
 	margin: 0;
 	vertical-align: middle;
@@ -1241,9 +1224,11 @@ a.btn-hollow,
 .btn-hollow,
 input[type="reset"],
 input[type="button"] {
+	background-color: rgba(255, 255, 255, 0.4);
 	color: #206691;
-	background-color: rgba(248, 249, 249, 0.6);
+	color: var(--color-1-dark);
 	box-shadow: inset 0 0 0 0.125rem #206691;
+	box-shadow: inset 0 0 0 0.125rem var(--color-1-dark);
 }
 
 a.btn-hollow:hover,
@@ -1259,8 +1244,9 @@ input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="button"]:active {
 	color: #fff;
-	background-color: #206691;
 	box-shadow: none;
+	background-color: #206691;
+	background-color: var(--color-1-dark);
 }
 
 .btn-round {
@@ -1272,7 +1258,7 @@ input[type="button"]:active {
 	margin-right: 0;
 	padding: 0;
 	text-align: center;
-	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .btn-round:hover {
@@ -1512,7 +1498,7 @@ input[type="button"]:active {
 }
 
 .u-shadow1 {
-	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow2 {
@@ -4678,7 +4664,7 @@ article.arch-none a.u-border-b {
 .arch-post:not(.arch-none) .entry-title > a:not(:hover) {
 	color: #212629;
 	background-color: rgba(248, 249, 249, 0.6);
-	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .archive-school .entry-title > a:hover,

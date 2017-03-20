@@ -46,12 +46,12 @@ a.site-home-link {
 @media (--md) {
 	.alignleft {
 		float: left;
-		margin-right: var(--gutter);
+		margin-right: $gutter;
 	}
 
 	.alignright {
 		float: right;
-		margin-left: var(--gutter);
+		margin-left: $gutter;
 	}
 }
 
@@ -69,9 +69,9 @@ blockquote.alignright {
 ## Captions
 -------------------------------------------------------------- */
 .wp-caption {
-	font-size: var(--h6);
+	font-size: $h6;
 	font-style: italic;
-	margin-bottom: var(--base-space);
+	margin-bottom: $base-space;
 	max-width: 100%;
 }
 
@@ -91,47 +91,47 @@ blockquote.alignright {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: var(--base-space);
+	margin-bottom: $base-space;
 }
 
 .gallery-item {
 	display: inline-block;
-	margin: 0 calc(0.5 * var(--gutter)) var(--gutter);
+	margin: 0 calc(0.5 * $gutter) $gutter;
 	text-align: center;
 	width: 100%;
 }
 
 @media (--md) {
 	.gallery-columns-2 .gallery-item {
-		max-width: calc(50% - var(--gutter));
+		max-width: calc(50% - $gutter);
 	}
 
 	.gallery-columns-3 .gallery-item {
-		max-width: calc(33.33% - var(--gutter));
+		max-width: calc(33.33% - $gutter);
 	}
 
 	.gallery-columns-4 .gallery-item {
-		max-width: calc(25% - var(--gutter));
+		max-width: calc(25% - $gutter);
 	}
 
 	.gallery-columns-5 .gallery-item {
-		max-width: calc(20% - var(--gutter));
+		max-width: calc(20% - $gutter);
 	}
 
 	.gallery-columns-6 .gallery-item {
-		max-width: calc(16.66% - var(--gutter));
+		max-width: calc(16.66% - $gutter);
 	}
 
 	.gallery-columns-7 .gallery-item {
-		max-width: calc(14.28% - var(--gutter));
+		max-width: calc(14.28% - $gutter);
 	}
 
 	.gallery-columns-8 .gallery-item {
-		max-width: calc(12.5% - var(--gutter));
+		max-width: calc(12.5% - $gutter);
 	}
 
 	.gallery-columns-9 .gallery-item {
-		max-width: calc(11.11% - var(--gutter));
+		max-width: calc(11.11% - $gutter);
 	}
 }
 

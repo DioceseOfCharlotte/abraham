@@ -66,14 +66,14 @@
 
 .u-frosted-image {
 	&::before {
-		background-color: var(--color-frost-3);
+		background-color: $color-frost-3;
 	}
-	color: var(--root-color);
+	color: $root-color;
 }
 
 .u-tinted-image {
 	&::before {
-		background-color: var(--color-tint-3);
+		background-color: $color-tint-3;
 	}
 	color: white;
 }

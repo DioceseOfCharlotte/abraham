@@ -19,10 +19,10 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: var(--color-tint-3);
+	background: $color-tint-3;
 	opacity: 0;
 	will-change: opacity;
-	transition: opacity 0.3s var(--animation-enter);
+	transition: opacity 0.3s $animation-enter;
 }
 
 .side-nav__container {
@@ -33,11 +33,11 @@
 }
 
 .side-nav--visible.side-nav--animatable .side-nav__container {
-	transition: transform var(--transition-time-slow) var(--animation-enter);
+	transition: transform $transition-time-slow $animation-enter;
 }
 
 .side-nav--animatable .side-nav__container {
-	transition: transform var(--transition-time) var(--animation-enter);
+	transition: transform $transition-time $animation-enter;
 }
 
 .side-nav--visible::before {

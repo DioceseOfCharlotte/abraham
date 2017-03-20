@@ -26,5 +26,5 @@ a > img {
 }
 
 a:hover > img {
-	opacity: var(--opacity);
+	opacity: $opacity;
 }

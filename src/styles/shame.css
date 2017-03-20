@@ -27,7 +27,7 @@
 }
 
 .contact-info svg {
-	opacity: var(--opacity);
+	opacity: $opacity;
 	margin-right: 0.25rem;
 }
 
@@ -48,20 +48,20 @@
 a.skip-link {
 	position: absolute;
 	top: -100px;
-	background-color: var(--color-frost-4);
-	box-shadow: var(--shadow-3);
-	color: var(--color-links);
+	background-color: $color-frost-4;
+	box-shadow: $shadow-3;
+	color: $color-links;
 	border-radius: 2px;
 	display: block;
-	font-size: var(--h6);
-	font-weight: var(--font-bold);
+	font-size: $h6;
+	font-weight: $font-bold;
 	height: auto;
 	left: 0.5rem;
-	padding: 0.5rem var(--base-space);
+	padding: 0.5rem $base-space;
 	text-decoration: none;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
-	transition: top 0.25s 0ms var(--animation-base);
+	transition: top 0.25s 0ms $animation-base;
 }
 
 a.skip-link:focus {
@@ -281,15 +281,15 @@ article.arch-none a.u-border-b {
 .archive-school .entry-title > a:not(:hover),
 .archive-parish .entry-title > a:not(:hover),
 .arch-post:not(.arch-none) .entry-title > a:not(:hover) {
-	color: var(--color-text);
-	background-color: var(--color-frost-3);
-	box-shadow: var(--shadow-1);
+	color: $color-text;
+	background-color: $color-frost-3;
+	box-shadow: $shadow-1;
 }
 
 .archive-school .entry-title > a:hover,
 .archive-parish .entry-title > a:hover,
 .arch-post:not(.arch-none) .entry-title > a:hover {
-	box-shadow: var(--shadow-2);
+	box-shadow: $shadow-2;
 	color: black;
-	background-color: var(--color-frost-4);
+	background-color: $color-frost-4;
 }

@@ -15,7 +15,7 @@
 	}
 
 	body {
-		font-family: var(--root-font-family);
+		font-family: $root-font-family;
 		color: #000 !important;
 		font-size: 12pt;
 	}
@@ -53,7 +53,7 @@
 	#page li a[href]:after,
 	#page p a[href]:after {
 		content: " (" attr(href) ")";
-		color: var(--color-links-hover);
+		color: $color-links-hover;
 		opacity: 1;
 		font-size: 11pt;
 		font-style: italic;
@@ -117,7 +117,7 @@
 	#page h5 {
 		font-weight: bold;
 		padding: 0;
-		font-family: var(--display-font-family);
+		font-family: $display-font-family;
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}

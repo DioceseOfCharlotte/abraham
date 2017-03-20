@@ -2,13 +2,13 @@
 \*------------------------------------ */
 
 a {
-	color: var(--color-links);
+	color: $color-links;
 	text-decoration: none;
 	font-family: inherit;
-	font-weight: var(--font-bold);
+	font-weight: $font-bold;
 	letter-spacing: 0.02em;
-	transition-duration: var(--transition-time);
-	transition-timing-function: var(--animation-base);
+	transition-duration: $transition-time;
+	transition-timing-function: $animation-base;
 	transition-property: all;
 	border-radius: 0.125rem;
 	overflow-wrap: break-word;
@@ -19,10 +19,10 @@ a {
 	&.active,
 	&:active,
 	&:focus {
-		color: var(--color-links-hover);
-		background-color: var(--color-shade-2);
-		transition-duration: var(--transition-time-slow);
-		transition-timing-function: var(--animation-enter);
+		color: $color-links-hover;
+		background-color: $color-shade-2;
+		transition-duration: $transition-time-slow;
+		transition-timing-function: $animation-enter;
 	}
 }
 

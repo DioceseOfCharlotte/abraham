@@ -1,6 +1,6 @@
-/* sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
-/* Elements of HTML (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
    ========================================================================== */
 
 /**
@@ -29,17 +29,14 @@
 /**
  * 1. Add border box sizing in all browsers (opinionated).
  * 2. Add the default cursor in all browsers (opinionated).
- * 3. Add a flattened line height in all browsers (opinionated).
- * 4. Prevent font size adjustments after orientation changes in IE and iOS.
+ * 3. Prevent font size adjustments after orientation changes in IE and iOS.
  */
 
 html {
 	box-sizing: border-box; /* 1 */
 	cursor: default; /* 2 */
-	font-family: var(--root-font-family); /* 3 */
-	line-height: var(--root-line-height); /* 3 */
-	-ms-text-size-adjust: 100%; /* 4 */
-	-webkit-text-size-adjust: 100%; /* 4 */
+	-ms-text-size-adjust: 100%; /* 3 */
+	-webkit-text-size-adjust: 100%; /* 3 */
 }
 
 /* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
@@ -73,7 +70,7 @@ body {
 
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
+	margin: .67em 0;
 }
 
 /* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
@@ -195,8 +192,8 @@ dfn {
  */
 
 mark {
-	background-color: #ff0;
-	color: #000;
+	background-color: #ffff00;
+	color: #000000;
 }
 
 /**
@@ -221,11 +218,11 @@ sup {
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -.25em;
 }
 
 sup {
-	top: -0.5em;
+	top: -.5em;
 }
 
 /*
@@ -233,15 +230,17 @@ sup {
  * 1. Restore the coloring undone by defining the text shadow (opinionated).
  */
 
-/*::-moz-selection {
-	background-color: var(--indigo1);
+::-moz-selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: var(--indigo1);
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
 	text-shadow: none;
-}*/
+}
 
 /* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
    ========================================================================== */
@@ -304,6 +303,10 @@ svg:not(:root) {
 /* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
    ========================================================================== */
 
+/**
+ * Collapse border spacing
+ */
+
 table {
 	border-collapse: collapse;
 }
@@ -324,7 +327,7 @@ textarea {
 }
 
 /**
- * Remove the default styling in all browsers (opinionated).
+ * Inherit styling in all browsers (opinionated).
  */
 
 button,
@@ -364,7 +367,7 @@ select { /* 1 */
  */
 
 button,
-html [type="button"],
+html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button; /* 2 */
@@ -486,7 +489,7 @@ textarea {
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
-details,
+details, /* 1 */
 menu {
 	display: block;
 }
@@ -547,7 +550,7 @@ textarea,
 	display: none;
 }
 
-/* ARIA in HTML (https://w3c.github.io/html-aria/)
+/* ARIA (https://w3c.github.io/html-aria/)
    ========================================================================== */
 
 /**
@@ -570,14 +573,10 @@ textarea,
  * Change the display on visually hidden accessible elements (opinionated).
  */
 
-[aria-hidden="false"][hidden] {
+[aria-hidden="false"][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
-}
-
-[aria-hidden="false"][hidden]:focus {
-	clip: auto;
 }
 
 /*

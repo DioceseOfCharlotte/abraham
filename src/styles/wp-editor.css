@@ -17,7 +17,7 @@ body.wp-editor .wpview-wrap .gallery-cell {
 	list-style-type: upper-roman;
 
 	li {
-		padding-left: var(--space-05);
+		padding-left: $space-05;
 	}
 }
 
@@ -29,7 +29,7 @@ body.wp-editor .wpview-wrap .gallery-cell {
 }
 
 .wp-editor a:not([class]) {
-	background-image: linear-gradient(to bottom, var(--color-shade-3) 50%, rgba(0, 0, 0, 0) 50%);
+	background-image: linear-gradient(to bottom, $color-shade-3 50%, rgba(0, 0, 0, 0) 50%);
 	background-repeat: repeat-x;
 	background-size: 0.125rem 0.3rem;
 	background-position: 0 1.15em;

@@ -29,7 +29,6 @@
     "postcss-animation": "0.0.12",
     "postcss-color-function": "^3.0.0",
     "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.2",
     "postcss-discard-comments": "^2.0.4",
     "postcss-discard-empty": "^2.1.0",
     "postcss-import": "^9.1.0",

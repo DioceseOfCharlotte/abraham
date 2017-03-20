@@ -7,65 +7,65 @@
 	}
 
 	.u-h0 {
-		font-size: var(--h0-mobile);
+		font-size: $h0-mobile;
 
 		@media (--sm) {
-			font-size: var(--h0-fluid);
+			font-size: $h0-fluid;
 		}
 
 		@media (--xl) {
-			font-size: var(--h0);
+			font-size: $h0;
 		}
 	}
 
 	.u-h1 {
-		font-size: var(--h1-mobile);
+		font-size: $h1-mobile;
 
 		@media (--sm) {
-			font-size: var(--h1-fluid);
+			font-size: $h1-fluid;
 		}
 
 		@media (--xl) {
-			font-size: var(--h1);
+			font-size: $h1;
 		}
 	}
 
 	.u-h2 {
-		font-size: var(--h2-mobile);
+		font-size: $h2-mobile;
 
 		@media (--sm) {
-			font-size: var(--h2-fluid);
+			font-size: $h2-fluid;
 		}
 
 		@media (--xl) {
-			font-size: var(--h2);
+			font-size: $h2;
 		}
 	}
 
 	.u-h3 {
-		font-size: var(--h3-mobile);
+		font-size: $h3-mobile;
 
 		@media (--sm) {
-			font-size: var(--h3-fluid);
+			font-size: $h3-fluid;
 		}
 
 		@media (--xl) {
-			font-size: var(--h3);
+			font-size: $h3;
 		}
 	}
 
 	.u-h4 {
-		font-size: var(--h4);
+		font-size: $h4;
 	}
 
 	.u-f-plus,
 	.u-h5 {
-		font-size: var(--h5);
+		font-size: $h5;
 	}
 
 	.u-f-minus,
 	.u-h6 {
-		font-size: var(--h6);
+		font-size: $h6;
 	}
 
 	.u-lh-1 {
@@ -77,20 +77,20 @@
 	}
 
 	.u-light {
-		font-weight: var(--font-light);
+		font-weight: $font-light;
 	}
 
 	.u-bold {
-		font-weight: var(--font-bold);
+		font-weight: $font-bold;
 	}
 
 	.u-text-read {
-		font-family: var(--root-font-family);
+		font-family: $root-font-family;
 	}
 
 	.u-regular,
 	.u-normal {
-		font-weight: var(--font-normal);
+		font-weight: $font-normal;
 	}
 
 	.u-italic {
@@ -103,7 +103,7 @@
 	}
 
 	.u-text-shadow {
-		text-shadow: 0.063rem 0.063rem 0.313rem var(--color-tint-3);
+		text-shadow: 0.063rem 0.063rem 0.313rem $color-tint-3;
 	}
 
 	.u-text-left {
@@ -140,7 +140,7 @@
 	.u-lead,
 	.intro-paragraph {
 		font-weight: 300;
-		font-size: var(--h5);
+		font-size: $h5;
 	}
 
 	.u-dropcap::first-letter {
@@ -153,12 +153,12 @@
 		line-height: 0.9;
 
 		@media (--md) {
-			font-size: var(--h0);
+			font-size: $h0;
 		}
 	}
 }
 
 .u-text-display,
 .u-dropcap::first-letter {
-	font-family: var(--display-font-family);
+	font-family: $display-font-family;
 }

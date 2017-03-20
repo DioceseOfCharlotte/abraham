@@ -2,14 +2,14 @@
 \*------------------------------------ */
 
 .breadcrumbs {
-	margin-bottom: var(--space-1);
+	margin-bottom: $space-1;
 
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		font-size: var(--h5);
+		font-size: $h5;
 	}
 
 	li {

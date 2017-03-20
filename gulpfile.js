@@ -18,7 +18,6 @@ const pcMixins = require('postcss-mixins');
 const pcColor = require('postcss-color-function');
 const pcNested = require('postcss-nested');
 const pcMedia = require('postcss-custom-media');
-const pcProperties = require('postcss-custom-properties');
 const pcSvar = require('postcss-simple-vars');
 const pcStrip = require('postcss-strip-units');
 const pcSpec = require('postcss-increase-specificity');
@@ -59,11 +58,10 @@ const AUTOPREFIXER_BROWSERS = [
 
 const POSTCSS_PLUGINS = [
 	pcImport,
-	pcProperties,
-	context({ pcSpec: pcSpec({ repeat: 1 }) }),
-	pcStrip,
 	pcMixins,
 	pcSvar,
+	context({ pcSpec: pcSpec({ repeat: 1 }) }),
+	pcStrip,
 	pcColor,
 	pcMedia,
 	pcNested,
