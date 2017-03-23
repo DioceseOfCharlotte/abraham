@@ -278,18 +278,14 @@ article.arch-none a.u-border-b {
 	height: 100%;
 }
 
-.archive-school .entry-title > a:not(:hover),
-.archive-parish .entry-title > a:not(:hover),
-.arch-post:not(.arch-none) .entry-title > a:not(:hover) {
+.entry:not(.arch-none) .entry-title > a:not(:hover) {
 	color: $color-text;
 	background-color: $color-frost-3;
-	box-shadow: $shadow-1;
+	box-shadow: $shadow;
 }
 
-.archive-school .entry-title > a:hover,
-.archive-parish .entry-title > a:hover,
-.arch-post:not(.arch-none) .entry-title > a:hover {
-	box-shadow: $shadow-2;
+.entry:not(.arch-none) .entry-title > a:hover {
+	box-shadow: $shadow-3;
 	color: black;
 	background-color: $color-frost-4;
 }

@@ -432,6 +432,9 @@ class Attr_Trumps {
 		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) {
 			$classes[]      = "{$this->args['post_wide']}"; }
 
+		if ( is_search() ) {
+			$classes[]      = 'u-1of1 u-flex u-flex-wrap u-mb1'; }
+
 		return $classes;
 	}
 
