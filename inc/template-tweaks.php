@@ -125,3 +125,39 @@ function abe_edit_post_link( $output ) {
 	$output = str_replace( 'class="post-edit-link"', 'class="post-edit-link btn btn-round u-bg-frost-4 u-text-color u-border u-b-grey u-hover-white u-abs u-right0 u-bottom0"', $output );
 	return $output;
 }
+
+
+
+function abe_get_picture_source( $post_id = '', $args = array() ) {
+	$post_id   = empty( $post_id ) ? get_the_ID() : $post_id;
+
+	$defaults = array(
+		'size'   => 'thumbnail',
+		'thumb_url' => get_the_post_thumbnail_url( $post_id, $args['size'] ),
+		'thumb_id'  => get_post_thumbnail_id( $post_id ),
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$thumb_base_url = rtrim( $args['thumb_url'], 'jpengifco' );
+	$webp_url = "{$thumb_base_url}webp";
+	//$webp_dir = wp_parse_url( $webp_url );
+	//$webp_path = untrailingslashit( ABSPATH ) . $webp_dir['path'];
+
+	$thumb_src = wp_get_attachment_image_src( $args['thumb_id'], $args['size'] );
+
+	$upload_dir = wp_upload_dir();
+
+	$replace = array(
+	home_url( $upload_dir['baseurl'] ),
+	$upload_dir['baseurl'],
+	);
+
+	$image_abs = str_replace( $replace, '', $webp_url );
+
+	if ( file_exists( trailingslashit( $upload_dir['basedir'] ) . $image_abs ) ) { ?>
+		<source srcset="<?php echo $webp_url ?>" class="picture-image webp-image" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>" type="image/webp">
+		<img src="<?php echo $args['thumb_url'] ?>" class="picture-image" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>">
+		<?php }
+
+}

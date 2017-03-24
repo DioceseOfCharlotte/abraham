@@ -42,5 +42,3 @@
 		</header>
 
 		<?php tha_header_after(); ?>
-
-		<div class="site-wrap u-flex u-flex-col">

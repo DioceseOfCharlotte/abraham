@@ -20,5 +20,5 @@
 		}
 		?>
 	</h1>
-
+<?php get_template_part( 'components/header', 'image' ); ?>
 </div>

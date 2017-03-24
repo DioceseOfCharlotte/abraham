@@ -6,6 +6,13 @@
  */
 $obj = get_post_type_object( get_post_type() );
 
+$video = hybrid_media_grabber(
+	array(
+		'type'        => 'video',
+		'split_media' => true,
+	)
+);
+
 $parent_post = wp_get_post_parent_id( get_the_ID() );
 if ( $parent_post > 0 ) {
 	$parent_crumb = get_the_title( $parent_post );
@@ -34,8 +41,19 @@ if ( $parent_post > 0 ) {
 
 	</div>
 
-	<div class="u-p05 u-inline-block">
-		<?php the_post_thumbnail(); ?>
+<?php if ( $video ) { ?>
+	<div class="u-p05 u-1of5-md u-inline-block">
+		<?php echo $video; ?>
 	</div>
+<?php } else {
+	get_the_image(array(
+		'size' 				=> 'thumbnail',
+		'before'   			=> '<div class="u-p05 u-inline-block">',
+		'after' 			=> '</div>',
+		'attachment' 		=> false,
+		'link_to_post' 		=> false,
+	));
+} ?>
+
 <?php abe_edit_link() ?>
 </article>
