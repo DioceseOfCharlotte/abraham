@@ -9,6 +9,8 @@ get_header(); ?>
 
 <?php get_template_part( 'components/page', 'header' ); ?>
 
+<div class="site-wrap u-flex u-flex-col">
+
 <div <?php hybrid_attr( 'grid' ); ?>>
 
 	<?php if ( ! is_paged() && $desc = get_the_archive_description() ) : // Check if we're on page/1. ?>
@@ -53,7 +55,7 @@ get_header(); ?>
 
 		<?php if ( is_singular() ) {
 			get_template_part( 'components/post', 'children' );
-		} ?>
+} ?>
 
 	</main><!-- /.content -->
 

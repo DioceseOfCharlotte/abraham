@@ -11,7 +11,7 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<?php tha_body_top(); ?>
+	<?php get_template_part( 'components/header', 'image' ); ?>
 
 	<div id="page" class="site">
 		<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>

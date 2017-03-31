@@ -133,7 +133,8 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 
 	$defaults = array(
 		'size'   => 'thumbnail',
-		'thumb_url' => get_the_post_thumbnail_url( $post_id, $args['size'] ),
+		'class'   => 'src-img',
+		'thumb_url' => get_the_post_thumbnail_url( $post_id ),
 		'thumb_id'  => get_post_thumbnail_id( $post_id ),
 	);
 
@@ -156,8 +157,8 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 	$image_abs = str_replace( $replace, '', $webp_url );
 
 	if ( file_exists( trailingslashit( $upload_dir['basedir'] ) . $image_abs ) ) { ?>
-		<source srcset="<?php echo $webp_url ?>" class="picture-image webp-image" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>" type="image/webp">
-		<img src="<?php echo $args['thumb_url'] ?>" class="picture-image" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>">
+		<source srcset="<?php echo $webp_url ?>" class="picture-image webp-image <?php echo $args['class'] ?>" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>" type="image/webp">
+		<img src="<?php echo $args['thumb_url'] ?>" class="picture-image <?php echo $args['class'] ?>" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>">
 		<?php }
 
 }

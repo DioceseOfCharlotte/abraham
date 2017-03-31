@@ -1,71 +1,135 @@
 <?php
 /**
- * Handles the setup and usage of the WordPress custom headers feature.
- *
- * @package    Stargazer
- * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2013 - 2016, Justin Tadlock
- * @link       http://themehybrid.com/themes/abraham
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- */
+* Handles the setup and usage of the WordPress custom headers feature.
+*
+* @package    Abraham
+*/
 
-# Call late so child themes can override.
+// Call late so child themes can override.
 add_action( 'after_setup_theme', 'abraham_custom_header_setup', 15 );
 
 /**
- * Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
+* Adds support for the WordPress 'custom-header' theme feature and registers custom headers.
+*
+* @since  1.0.0
+* @access public
+* @return void
+*/
 function abraham_custom_header_setup() {
 
 	// Adds support for WordPress' "custom-header" feature.
 	add_theme_support( 'custom-header',
 		array(
-			'width'                  => 1920,
-			'height'                 => 560,
-			'flex-width'             => true,
+			'width'                  => 2000,
+			'height'                 => 1200,
 			'flex-height'            => true,
 			'default-text-color'     => 'ffffff',
-			'header-text'            => true,
-			'uploads'                => true,
-			'wp-head-callback'       => 'abraham_custom_header_wp_head',
+			'video' 				=> true,
+			'video-active-callback' => 'is_front_page',
+			'wp-head-callback'       => 'abraham_header_style',
 		)
 	);
 }
 
 /**
- * Callback function for outputting the custom header CSS to `wp_head`.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function abraham_custom_header_wp_head() {
-		$style = '';
-		$bg_image = '';
+* Callback function for outputting the custom header CSS to `wp_head`.
+*
+* @since  1.0.0
+* @access public
+* @return void
+*/
+if ( ! function_exists( 'abraham_header_style' ) ) :
 
-		$hex = get_header_textcolor();
-		$style .= ".site-header,.archive-header{color:#{$hex};}";
+	function abraham_header_style() {
+		$header_text_color = get_header_textcolor();
+		$bg_color = get_theme_mod( 'background_color', 'F7EDE7' );
+		$bg_rgb = join( ', ', hybrid_hex_to_rgb( $bg_color ) );
 
-		$queried_object_id = get_queried_object_id();
-		$post_image = get_post_meta( $queried_object_id, 'header_image', true );
+		// Has the text been hidden?
+		if ( ! display_header_text() ) :
+			$style = "
+			.site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}";
+			// If the user has set a custom color for the text use that.
+		else :
+			$style = "
+			.home .site-header.is-top > * {
+				color: #{$header_text_color};
+			}";
+		endif;
 
-		$term_image = get_term_meta( $queried_object_id, 'image', true );
+			$style .= "
+			.custom-header-media > source, .custom-header-media > img {
+				height: 100%;
+				left: 0;
+				-o-object-fit: cover;
+				object-fit: cover;
+				top: 0;
+				-ms-transform: none;
+				-moz-transform: none;
+				-webkit-transform: none;
+				transform: none;
+				width: 100%;
+				position: fixed;
+			}
+			.home .section-row__content.tile-row {
+				padding-top: 7.5rem;
+			}
+			.site {
+				background-color: #{$bg_color};
+				background: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.2) 20vh, rgba( {$bg_rgb}, 0.4) 40vh, rgba( {$bg_rgb}, 0.6) 60vh, rgba( {$bg_rgb}, 0.8) 80vh, rgba( {$bg_rgb}, 0.95) 99vh);
+			}
+			.site-wrap {
+				padding-top: 0;
+				min-height: 64.9vh;
+			}
+			.custom-header {
+				position: relative;
+				z-index: -1;
+			}
+			.archive-header {
+				margin-top: 3.5rem;
+			}
+			.archive-header {
+				color: #fff;
+			}
+			.custom-header-media::before {
+				height: 110vh;
+				top: -4rem;
+				position: fixed;
+				z-index: 1;
+			}
+			";
 
-	if ( $post_image ) {
-		$bg_image = wp_get_attachment_image_url( $post_image, 'abe-hd-lg' );
+			echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+		}
+	endif; // End of abraham_header_style.
 
-	} elseif ( has_post_thumbnail() ) {
-		$bg_image = wp_get_attachment_image_url( get_post_thumbnail_id(), 'abe-hd-lg' );
+	if ( ! function_exists( 'abe_custom_header_image' ) ) :
 
-	} elseif ( get_header_image() ) {
-		$bg_image = get_header_image();
-	}
-	if ( $bg_image ) {
-		$style .= ".article-hero{background-image:url({$bg_image});}";
-	}
-	   echo "\n" . '<style id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
-}
+		function abe_custom_header_image( $size = 'large' ) {
+			$bg_image = '';
+
+			$queried_object_id = get_queried_object_id();
+			$post_image = get_post_meta( $queried_object_id, 'header_image', true );
+
+			$term_image = get_term_meta( $queried_object_id, 'image', true );
+
+			if ( $post_image ) {
+				$bg_image = wp_get_attachment_image_url( $post_image, 'abe-hd-lg' );
+
+			} elseif ( has_post_thumbnail() ) {
+				$bg_image = wp_get_attachment_image_url( get_post_thumbnail_id(), 'abe-hd-lg' );
+
+			} elseif ( get_header_image() ) {
+				$bg_image = get_header_image();
+			}
+			if ( $bg_image ) {
+				return $bg_image;
+			}
+		}
+
+	endif; // End of abe_custom_header_image.

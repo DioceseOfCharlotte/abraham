@@ -60,7 +60,7 @@ require_once get_theme_file_path( 'inc/font-loader.php' );
 
 // Custom template part styles.
 require_once get_theme_file_path( 'inc/customizer/custom-header.php' );
-require_once get_theme_file_path( 'inc/customizer/custom-background.php' );
+//require_once get_theme_file_path( 'inc/customizer/custom-background.php' );
 
 // Custom Css class selectors.
 require_once get_theme_file_path( 'inc/attr-trumps.php' );

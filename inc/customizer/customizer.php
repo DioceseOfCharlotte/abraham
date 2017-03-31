@@ -26,13 +26,13 @@ function abraham_customize_register( $wp_customize ) {
 	    $wp_customize->selective_refresh->add_partial( 'blogname', array(
 	        'selector' => '#site-title',
 	        'render_callback' => function() {
-	            return get_bloginfo( 'name', 'display' );
+	            return bloginfo( 'name' );
 	        },
 	    ) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 	        'selector' => '#site-description',
 	        'render_callback' => function() {
-	            return get_bloginfo( 'description', 'display' );
+	            return bloginfo( 'description' );
 	        },
 	    ) );
 	}
@@ -46,7 +46,7 @@ function abraham_customize_register( $wp_customize ) {
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			// 'transport'            => 'postMessage',
+			'transport'            => 'postMessage',
 		)
 	);
 
@@ -64,6 +64,32 @@ function abraham_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add the primary color setting.
+	$wp_customize->add_setting(
+		'background_color',
+		array(
+			'default'              => apply_filters( 'theme_mod_background_color', '' ),
+			'type'                 => 'theme_mod',
+			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+			'sanitize_js_callback' => 'maybe_hash_hex_color',
+			'transport'            => 'refresh',
+		)
+	);
+
+	// Add secondary color control.
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'custom-background-color',
+			array(
+				'label'    => esc_html__( 'Background Color', 'abraham' ),
+				'section'  => 'colors',
+				'settings' => 'background_color',
+				'priority' => 10,
+			)
+		)
+	);
+
 	// Add the secondary color setting.
 	$wp_customize->add_setting(
 		'secondary_color',
@@ -72,7 +98,7 @@ function abraham_customize_register( $wp_customize ) {
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			// 'transport'            => 'postMessage',
+			'transport'            => 'postMessage',
 		)
 	);
 
@@ -147,7 +173,7 @@ function abraham_customizer_js() {
 
 	wp_enqueue_script(
 		'abraham_theme_customizer',
-		trailingslashit( get_template_directory_uri() ) . "js/customizer{$suffix}.js",
+		trailingslashit( get_template_directory_uri() ) . "js/customizer.js",
 		array( 'customize-preview' ),
 		null,
 		true
