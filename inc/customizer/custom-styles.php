@@ -31,6 +31,7 @@ final class Abraham_Custom_Styles {
 		add_action( 'wp_head', array( $this, 'wp_head_callback' ) );
 
 		/* Filter the default colors late. */
+		add_filter( 'theme_mod_background_color', array( $this, 'background_color_default' ), 95 );
 		add_filter( 'theme_mod_primary_color', array( $this, 'primary_color_default' ), 95 );
 		add_filter( 'theme_mod_secondary_color', array( $this, 'secondary_color_default' ), 95 );
 	}
@@ -45,6 +46,9 @@ final class Abraham_Custom_Styles {
 	 *
 	 * @return string
 	 */
+	public function background_color_default( $hex ) {
+		return $hex ? $hex : 'f5f5f5';
+	}
 	public function primary_color_default( $hex ) {
 		global $cptarchives;
 		if ( $GLOBALS['cptarchives'] ) {
