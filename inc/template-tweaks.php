@@ -158,7 +158,6 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 
 	if ( file_exists( trailingslashit( $upload_dir['basedir'] ) . $image_abs ) ) { ?>
 		<source srcset="<?php echo $webp_url ?>" class="picture-image webp-image <?php echo $args['class'] ?>" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>" type="image/webp">
+		<?php } ?>
 		<img src="<?php echo $args['thumb_url'] ?>" class="picture-image <?php echo $args['class'] ?>" width="<?php echo $thumb_src['1'] ?>" height="<?php echo $thumb_src['2'] ?>">
-		<?php }
-
-}
+	<?php }
