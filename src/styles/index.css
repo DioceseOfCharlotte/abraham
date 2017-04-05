@@ -1,6 +1,7 @@
 @import "vowel";
 @import "font-icons";
 @import "wp-styles";
+@import "components.header";
 @import "wp-editor";
 @import "shame";
 @import "media.print";

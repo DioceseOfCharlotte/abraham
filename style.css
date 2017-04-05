@@ -4338,6 +4338,50 @@ blockquote.alignright {
 	margin: 0;
 }
 
+.custom-header-media > source,
+.custom-header-media > img {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	top: 0;
+	-webkit-transform: none;
+	transform: none;
+	width: 100%;
+	position: fixed;
+}
+
+.home .section-row__content.tile-row {
+	padding-top: 7.5rem;
+}
+
+.site-wrap {
+	padding-top: 0;
+	min-height: 64.9vh;
+}
+
+.custom-header {
+	position: relative;
+	z-index: -1;
+}
+
+.archive-header {
+	margin-top: 3.5rem;
+}
+
+.archive-header {
+	color: #fff;
+}
+
+.custom-header-media::before {
+	content: '';
+	height: 110vh;
+	top: -4rem;
+	position: fixed;
+	z-index: 1;
+	background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.4) 25vh, rgba(255, 255, 255, 0));
+	opacity: 0.5;
+}
+
 body.wp-editor {
 	min-height: 50px;
 	margin: 0 auto !important;

@@ -62,45 +62,8 @@ if ( ! function_exists( 'abraham_header_style' ) ) :
 		endif;
 
 			$style .= "
-			.custom-header-media > source, .custom-header-media > img {
-				height: 100%;
-				left: 0;
-				-o-object-fit: cover;
-				object-fit: cover;
-				top: 0;
-				-ms-transform: none;
-				-moz-transform: none;
-				-webkit-transform: none;
-				transform: none;
-				width: 100%;
-				position: fixed;
-			}
-			.home .section-row__content.tile-row {
-				padding-top: 7.5rem;
-			}
 			.site {
-				background-color: #{$bg_color};
-				background: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.2) 20vh, rgba( {$bg_rgb}, 0.4) 40vh, rgba( {$bg_rgb}, 0.6) 60vh, rgba( {$bg_rgb}, 0.8) 80vh, rgba( {$bg_rgb}, 0.95) 99vh);
-			}
-			.site-wrap {
-				padding-top: 0;
-				min-height: 64.9vh;
-			}
-			.custom-header {
-				position: relative;
-				z-index: -1;
-			}
-			.archive-header {
-				margin-top: 3.5rem;
-			}
-			.archive-header {
-				color: #fff;
-			}
-			.custom-header-media::before {
-				height: 110vh;
-				top: -4rem;
-				position: fixed;
-				z-index: 1;
+				background-image: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.3) 40vh, rgba( {$bg_rgb}, 0.7) 80vh, rgba( {$bg_rgb}, 0.9) 95vh, rgba( {$bg_rgb}, 0.99) 99vh);
 			}
 			";
 
