@@ -2,39 +2,15 @@
 \*------------------------------------ */
 
 h1 {
-	font-size: $h2-mobile;
-
-	@media (--sm) {
-		font-size: $h2-fluid;
-	}
-
-	@media (--xl) {
-		font-size: $h2;
-	}
+	font-size: $h2;
 }
 
 h2 {
-	font-size: $h2-mobile;
-
-	@media (--sm) {
-		font-size: $h2-fluid;
-	}
-
-	@media (--xl) {
-		font-size: $h2;
-	}
+	font-size: $h2;
 }
 
 h3 {
-	font-size: $h3-mobile;
-
-	@media (--sm) {
-		font-size: $h3-fluid;
-	}
-
-	@media (--xl) {
-		font-size: $h3;
-	}
+	font-size: $h3;
 }
 
 h4 {

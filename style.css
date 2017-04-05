@@ -525,63 +525,27 @@ a[class] {
 }
 
 h1 {
-	font-size: 1.75rem;
-}
-
-@media (min-width: 21rem) {
-	h1 {
-		font-size: calc(1.75rem + (2.5 - 1.75) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	h1 {
-		font-size: 2.5rem;
-	}
+	font-size: 2rem;
 }
 
 h2 {
-	font-size: 1.75rem;
-}
-
-@media (min-width: 21rem) {
-	h2 {
-		font-size: calc(1.75rem + (2.5 - 1.75) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	h2 {
-		font-size: 2.5rem;
-	}
+	font-size: 2rem;
 }
 
 h3 {
-	font-size: 1.5rem;
-}
-
-@media (min-width: 21rem) {
-	h3 {
-		font-size: calc(1.5rem + (2 - 1.5) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	h3 {
-		font-size: 2rem;
-	}
+	font-size: 1.75rem;
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 h5 {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 h6 {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 h1,
@@ -811,7 +775,7 @@ span.sorting-indicator {
 
 blockquote {
 	padding: 1rem;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	line-height: 1.6;
 	text-align: center;
 	font-style: italic;
@@ -1157,7 +1121,7 @@ svg[stroke-width] {
 .o-list-group-links {
 	padding-left: 0;
 	max-width: 100%;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	list-style-type: none;
 	background-color: rgba(248, 249, 249, 0.15);
 	border-radius: 0.1rem;
@@ -1538,7 +1502,7 @@ input[type="button"]:active {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 .breadcrumbs li {
@@ -2786,78 +2750,40 @@ body:not(.search) .trail-end > span,
 	font-size: 2.5rem;
 }
 
-@media (min-width: 21rem) {
+@media (min-width: 40rem) {
 	:root .u-h0 {
-		font-size: calc(2.5rem + (4.4 - 2.5) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	:root .u-h0 {
-		font-size: 4.4rem;
+		font-size: 3.75rem;
 	}
 }
 
 :root .u-h1 {
-	font-size: 2rem;
-}
-
-@media (min-width: 21rem) {
-	:root .u-h1 {
-		font-size: calc(2rem + (3 - 2) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	:root .u-h1 {
-		font-size: 3rem;
-	}
+	font-size: 2.5rem;
 }
 
 :root .u-h2 {
-	font-size: 1.75rem;
-}
-
-@media (min-width: 21rem) {
-	:root .u-h2 {
-		font-size: calc(1.75rem + (2.5 - 1.75) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	:root .u-h2 {
-		font-size: 2.5rem;
-	}
+	font-size: 2rem;
 }
 
 :root .u-h3 {
-	font-size: 1.5rem;
-}
-
-@media (min-width: 21rem) {
-	:root .u-h3 {
-		font-size: calc(1.5rem + (2 - 1.5) * (100vw - 20rem) / (92 - 20));
-	}
-}
-
-@media (min-width: 90rem) {
-	:root .u-h3 {
-		font-size: 2rem;
-	}
+	font-size: 1.75rem;
 }
 
 :root .u-h4 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 :root .u-f-plus,
 :root .u-h5 {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 :root .u-f-minus,
 :root .u-h6 {
 	font-size: 0.9rem;
+}
+
+:root .u-lh {
+	line-height: 1.5;
 }
 
 :root .u-lh-1 {
@@ -2932,7 +2858,7 @@ body:not(.search) .trail-end > span,
 :root .u-lead,
 :root .intro-paragraph {
 	font-weight: 300;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 :root .u-dropcap::first-letter {
@@ -2947,7 +2873,7 @@ body:not(.search) .trail-end > span,
 
 @media (min-width: 40rem) {
 	:root .u-dropcap::first-letter {
-		font-size: 4.4rem;
+		font-size: 3.75rem;
 	}
 }
 
@@ -4375,7 +4301,7 @@ blockquote.alignright {
 
 .custom-header-media::before {
 	content: '';
-	height: 110vh;
+	height: 100vh;
 	width: 100%;
 	z-index: 1;
 	position: absolute;
@@ -4872,6 +4798,10 @@ article.arch-none a.u-border-b {
 	table,
 	figure {
 		page-break-inside: avoid;
+	}
+
+	.site {
+		background-color: #fff !important;
 	}
 }
 

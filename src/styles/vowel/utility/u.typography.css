@@ -9,49 +9,21 @@
 	.u-h0 {
 		font-size: $h0-mobile;
 
-		@media (--sm) {
-			font-size: $h0-fluid;
-		}
-
-		@media (--xl) {
+		@media (--md) {
 			font-size: $h0;
 		}
 	}
 
 	.u-h1 {
-		font-size: $h1-mobile;
-
-		@media (--sm) {
-			font-size: $h1-fluid;
-		}
-
-		@media (--xl) {
-			font-size: $h1;
-		}
+		font-size: $h1;
 	}
 
 	.u-h2 {
-		font-size: $h2-mobile;
-
-		@media (--sm) {
-			font-size: $h2-fluid;
-		}
-
-		@media (--xl) {
-			font-size: $h2;
-		}
+		font-size: $h2;
 	}
 
 	.u-h3 {
-		font-size: $h3-mobile;
-
-		@media (--sm) {
-			font-size: $h3-fluid;
-		}
-
-		@media (--xl) {
-			font-size: $h3;
-		}
+		font-size: $h3;
 	}
 
 	.u-h4 {
@@ -66,6 +38,10 @@
 	.u-f-minus,
 	.u-h6 {
 		font-size: $h6;
+	}
+
+	.u-lh {
+		line-height: 1.5;
 	}
 
 	.u-lh-1 {
