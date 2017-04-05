@@ -15,11 +15,6 @@ define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
 new Hybrid();
 
 /**
- * Template hooks.
- */
-require get_parent_theme_file_path( 'lib/tha-theme-hooks.php' );
-
-/**
  * Initial theme setup.
  */
 require get_parent_theme_file_path( 'inc/setup.php' );

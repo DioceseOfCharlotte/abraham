@@ -16,11 +16,7 @@
 	<div id="page" class="site">
 		<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-		<?php tha_header_before(); ?>
-
 		<header <?php hybrid_attr( 'header' ); ?>>
-
-			<?php tha_header_top(); ?>
 
 			<?php if ( is_active_sidebar( 'secondary' ) ) { ?>
 
@@ -37,8 +33,4 @@
 
 			<?php hybrid_get_menu( 'primary' ); ?>
 
-			<?php tha_header_bottom(); ?>
-
 		</header>
-
-		<?php tha_header_after(); ?>
