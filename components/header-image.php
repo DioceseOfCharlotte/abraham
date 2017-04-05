@@ -5,9 +5,9 @@
  * @package Abraham
  */
 ?>
-<div class="custom-header">
+<div class="custom-header-wrap">
 
-		<picture class="custom-header-media u-tinted-image">
+		<picture class="custom-header-media">
 			<?php echo abe_get_picture_source( get_the_ID(),
 				array(
 				'size'   => 'abe-hd-lg',

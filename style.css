@@ -4359,7 +4359,8 @@ blockquote.alignright {
 	min-height: 64.9vh;
 }
 
-.custom-header {
+.custom-header,
+.custom-header-wrap {
 	position: relative;
 	z-index: -1;
 }
@@ -4375,9 +4376,10 @@ blockquote.alignright {
 .custom-header-media::before {
 	content: '';
 	height: 110vh;
-	top: -4rem;
-	position: fixed;
+	width: 100%;
 	z-index: 1;
+	position: absolute;
+	top: 0;
 	background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.4) 25vh, rgba(255, 255, 255, 0));
 	opacity: 0.5;
 }
@@ -4453,8 +4455,7 @@ body.wp-editor .wpview-wrap .gallery-cell {
 }
 
 .site-wrap {
-	min-height: 100vh;
-	padding-top: 3.5rem;
+	min-height: 68vh;
 }
 
 .comments-area {
