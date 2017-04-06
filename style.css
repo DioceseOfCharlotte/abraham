@@ -3937,6 +3937,7 @@ a[href*="/documents/"]:before,
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a[href*="facebook.com"]:not([class]):before,
 .fi-facebook2:before {
 	content: "\ea91";
 	font-family: 'icomeh' !important;
@@ -3947,8 +3948,10 @@ a[href*="/documents/"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #3b5998;
 }
 
+a[href*="instagram.com"]:not([class]):before,
 .fi-instagram:before {
 	content: "\ea92";
 	font-family: 'icomeh' !important;
@@ -3959,8 +3962,10 @@ a[href*="/documents/"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #ab4d9d;
 }
 
+a[href*="twitter.com"]:not([class]):before,
 .fi-twitter:before {
 	content: "\ea96";
 	font-family: 'icomeh' !important;
@@ -3971,6 +3976,7 @@ a[href*="/documents/"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #55acee;
 }
 
 .fi-rss:before {
@@ -3985,8 +3991,8 @@ a[href*="/documents/"]:before,
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a[href*="youtube.com"]:before,
-a[href*="youtu.be"]:before,
+a[href*="youtube.com"]:not[class]:before,
+a[href*="youtu.be"]:not[class]:before,
 .fi-youtube:before {
 	content: "\ea9d";
 	font-family: 'icomeh' !important;
@@ -3997,6 +4003,7 @@ a[href*="youtu.be"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #cd201f;
 }
 
 .fi-wordpress:before {
@@ -4011,6 +4018,7 @@ a[href*="youtu.be"]:before,
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a[href*="linkedin.com"]:not([class]):before,
 .fi-linkedin:before {
 	content: "\eac9";
 	font-family: 'icomeh' !important;
@@ -4021,8 +4029,10 @@ a[href*="youtu.be"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #0077b5;
 }
 
+a[href*="pinterest.com"]:not([class]):before,
 .fi-pinterest:before {
 	content: "\ead1";
 	font-family: 'icomeh' !important;
@@ -4033,6 +4043,7 @@ a[href*="youtu.be"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #bd081c;
 }
 
 .fi-chrome:before {
@@ -4082,6 +4093,7 @@ a[href*=".pdf"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #db4437;
 }
 
 a[href*=".docx"]:before,
@@ -4096,6 +4108,7 @@ a[href*=".doc"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #4285f4;
 }
 
 a[href*=".xlsx"]:before,
@@ -4110,6 +4123,7 @@ a[href*=".xls"]:before,
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #0f9d58;
 }
 
 :root .wp-smiley {
@@ -4266,7 +4280,8 @@ blockquote.alignright {
 
 .custom-header-media > source,
 .custom-header-media > img {
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 	left: 0;
 	object-fit: cover;
 	top: 0;
@@ -4633,6 +4648,59 @@ article.arch-none a.u-border-b {
 	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 	color: black;
 	background-color: rgba(248, 249, 249, 0.9);
+}
+
+.arch-slides.arch-slides.u-bg-transparent {
+	background-color: transparent;
+}
+
+svg.doc-icon-side-toggle {
+	min-width: 32px;
+	min-height: 32px;
+}
+
+.btn-round > svg {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	box-shadow: inset 0 0 0 2px rgba(31, 45, 143, 0.6) !important;
+}
+
+input[type=radio] {
+	border-radius: 50%;
+}
+
+.side-nav__container {
+	width: 85%;
+}
+
+.home .site {
+	background-color: #f7ede7;
+	background: linear-gradient(to bottom, rgba(247, 237, 231, 0) 0, rgba(247, 237, 231, 0.1) 20vh, rgba(247, 237, 231, 0.2) 40vh, rgba(247, 237, 231, 0.3) 60vh, rgba(247, 237, 231, 0.4) 80vh, rgba(247, 237, 231, 0.55) 99vh) !important;
+}
+
+.sd-button:before {
+	margin: 0;
+}
+
+.o-alert {
+	display: block !important;
+	padding-left: 4rem !important;
+}
+
+.o-alert:before {
+	padding: 0 1rem;
+	float: left;
+	margin-left: -4rem;
+}
+
+article {
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
 }
 
 @media print {

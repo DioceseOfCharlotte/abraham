@@ -61,7 +61,7 @@ class Attr_Trumps {
 			'post'                    	=> 'u-fit o-cell u-bg-white u-mb u-1of1 u-br u-shadow2',
 			'post_wide'               	=> 'u-fit u-1of1',
 
-			'post_archive'            	=> 'o-cell u-overflow-hidden u-shadow1 u-br',
+			'post_archive'            	=> 'o-cell u-shadow1 u-br',
 			'entry_header'            	=> 'u-1of1',
 			'entry_title'             	=> 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
 			'entry_content'           	=> 'u-p25',

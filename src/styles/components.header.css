@@ -1,6 +1,7 @@
 .custom-header-media > source,
 .custom-header-media > img {
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 	left: 0;
 	object-fit: cover;
 	top: 0;

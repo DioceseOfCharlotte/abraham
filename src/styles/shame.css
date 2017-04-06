@@ -288,3 +288,54 @@ article.arch-none a.u-border-b {
 	color: black;
 	background-color: $color-frost-4;
 }
+
+
+/* 4-6-17 Customizer styles */
+.arch-slides.arch-slides.u-bg-transparent {
+    background-color: transparent;
+}
+
+svg.doc-icon-side-toggle {
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.btn-round>svg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-shadow: inset 0 0 0 2px rgba(31, 45, 143, 0.6)!important;
+}
+
+input[type=radio] {
+border-radius: 50%;
+}
+.side-nav__container {
+    width: 85%;
+}
+
+.home .site {
+    background-color: #f7ede7;
+    background: linear-gradient(to bottom, rgba( 247, 237, 231, 0.0) 0, rgba( 247, 237, 231, 0.1) 20vh, rgba( 247, 237, 231, 0.2) 40vh, rgba( 247, 237, 231, 0.3) 60vh, rgba( 247, 237, 231, 0.4) 80vh, rgba( 247, 237, 231, 0.55) 99vh)!important;
+}
+
+.sd-button:before {
+    margin: 0;
+}
+
+.o-alert {
+    display: block!important;
+    padding-left: 4rem!important;
+}
+
+.o-alert:before {
+    padding: 0 1rem;
+    float: left;
+    margin-left: -4rem;
+}
+
+article {
+	align-self: flex-start;
+}
