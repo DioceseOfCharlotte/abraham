@@ -63,6 +63,7 @@ if ( ! function_exists( 'abraham_header_style' ) ) :
 
 			$style .= "
 			.site {
+				position: relative;
 				background-image: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.3) 40vh, rgba( {$bg_rgb}, 0.7) 80vh, rgba( {$bg_rgb}, 0.9) 95vh, rgba( {$bg_rgb}, 0.99) 99vh);
 			}
 			";

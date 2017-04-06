@@ -21,12 +21,6 @@
 	min-height: 64.9vh;
 }
 
-.custom-header,
-.custom-header-wrap {
-	position: relative;
-	z-index: -1;
-}
-
 .archive-header {
 	margin-top: 3.5rem;
 }
@@ -35,29 +29,12 @@
 	color: #fff;
 }
 
-.custom-header-media::before {
+.custom-header-media::after {
 	content: '';
 	height: 100vh;
 	width: 100%;
-	z-index: 1;
 	position: absolute;
 	top: 0;
 	background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.4) 25vh, rgba(255, 255, 255, 0));
 	opacity: .5;
 }
-
-/*
-.custom-header-media::before {
-height: 110vh;
-width: 100%;
-z-index: 1;
-content: '';
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.4) 25vh, rgba(255, 255, 255, 0));
-opacity: .5;
-}
-*/

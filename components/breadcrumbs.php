@@ -1,4 +1,9 @@
 <?php
+/**
+ * Breadcrumbs.
+ *
+ * @package Abraham
+ */
 
 if ( function_exists( 'breadcrumb_trail' ) ) :
 
