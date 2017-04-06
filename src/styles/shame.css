@@ -339,3 +339,27 @@ border-radius: 50%;
 article {
 	align-self: flex-start;
 }
+
+.entry-title > a {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+	transition-duration: $transition-time-slow;
+	transition-timing-function: $animation-base;
+	transition-property: all;
+}
+
+.entry-title > a:hover {
+	background-color: $color-frost-1;
+	opacity: .8;
+	color: inherit;
+    box-shadow: $shadow-4;
+}
+
+.arch-card.arch-link-title {
+	display: flex;
+    flex-wrap: wrap;
+
+	.entry-title > a,
+	.entry-title {
+    	height: 100%;
+	}
+}
