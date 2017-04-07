@@ -16,13 +16,15 @@ a {
 	word-break: break-word;
 
 	&:hover,
-	&.active,
-	&:active,
-	&:focus {
+	&:active {
 		color: $color-links-hover;
 		background-color: $color-shade-2;
 		transition-duration: $transition-time-slow;
 		transition-timing-function: $animation-enter;
+	}
+
+	&:focus {
+		box-shadow: inset 0 0 0 20rem $color-shade-2;
 	}
 }
 

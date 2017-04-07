@@ -216,14 +216,17 @@ html [type="button"],
 	-webkit-appearance: button;
 }
 
+a::-moz-focus-inner,
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
+	outline: none;
 }
 
+a:-moz-focusring,
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -483,13 +486,15 @@ a {
 }
 
 a:hover,
-a.active,
-a:active,
-a:focus {
+a:active {
 	color: #293ab9;
 	background-color: rgba(189, 196, 201, 0.3);
 	transition-duration: 0.25s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+a:focus {
+	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
 }
 
 a::before {
@@ -636,7 +641,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	color: inherit;
-	overflow: hidden;
 	background-color: transparent;
 	transition-duration: 0.16s;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -655,36 +659,27 @@ input[type="submit"] {
 }
 
 .btn:hover,
+.btn:active,
+.btn.is-active,
 .button:hover,
+.button:active,
+.button.is-active,
 button:hover,
+button:active,
+button.is-active,
 input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"].is-active,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="reset"]:active,
+input[type="reset"].is-active,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"].is-active {
+	color: inherit;
 	box-shadow: inset 0 0 0 20rem rgba(248, 249, 249, 0.3);
 	transition-duration: 0.25s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.btn:focus,
-.btn:active,
-.btn.is-active,
-.button:focus,
-.button:active,
-.button.is-active,
-button:focus,
-button:active,
-button.is-active,
-input[type="button"]:focus,
-input[type="button"]:active,
-input[type="button"].is-active,
-input[type="reset"]:focus,
-input[type="reset"]:active,
-input[type="reset"].is-active,
-input[type="submit"]:focus,
-input[type="submit"]:active,
-input[type="submit"].is-active {
-	box-shadow: inset 0 0 0 20rem rgba(248, 249, 249, 0.15);
-	outline: 0;
 }
 
 ul,
@@ -4140,6 +4135,10 @@ a.site-home-link {
 
 a.site-home-link > .custom-logo {
 	opacity: 1;
+}
+
+body:not(.home) .is-active {
+	background-color: rgba(189, 196, 201, 0.3);
 }
 
 .aligncenter,
