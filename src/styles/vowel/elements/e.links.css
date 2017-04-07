@@ -26,10 +26,10 @@ a {
 	}
 }
 
-a::before,
+/*a::before,
 a::after {
 	opacity: 0.8;
-}
+}*/
 
 a::before {
 	margin-right: 0.3em;
@@ -44,11 +44,11 @@ a::after {
 [class*="u-bg-1"] a,
 [class*="u-bg-2"] a {
 	color: inherit;
-	opacity: 0.8;
+	/*opacity: 0.8;
 
 	&:hover {
 		opacity: 1;
-	}
+	}*/
 }
 
 table a,

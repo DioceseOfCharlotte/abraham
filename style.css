@@ -492,11 +492,6 @@ a:focus {
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-a::before,
-a::after {
-	opacity: 0.8;
-}
-
 a::before {
 	margin-right: 0.3em;
 	margin-left: 0.1em;
@@ -510,12 +505,6 @@ a::after {
 [class*="u-bg-1"] a,
 [class*="u-bg-2"] a {
 	color: inherit;
-	opacity: 0.8;
-}
-
-[class*="u-bg-1"] a:hover,
-[class*="u-bg-2"] a:hover {
-	opacity: 1;
 }
 
 table a,
@@ -1474,7 +1463,7 @@ input[type="button"]:active {
 }
 
 .u-shadow4 {
-	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .u-shadow5 {
@@ -4638,18 +4627,6 @@ article.arch-none a.u-border-b {
 	height: 100%;
 }
 
-.entry:not(.arch-none) .entry-title > a:not(:hover) {
-	color: #212629;
-	background-color: rgba(248, 249, 249, 0.6);
-	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-}
-
-.entry:not(.arch-none) .entry-title > a:hover {
-	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-	color: black;
-	background-color: rgba(248, 249, 249, 0.9);
-}
-
 .arch-slides.arch-slides.u-bg-transparent {
 	background-color: transparent;
 }
@@ -4703,18 +4680,45 @@ article {
 	align-self: flex-start;
 }
 
+.entry:not(.arch-none) .entry-title > a:not(:hover) {
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	background-color: rgba(189, 196, 201, 0.15);
+}
+
 .entry-title > a {
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+	position: relative;
+	color: inherit;
 	transition-duration: 0.25s;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-property: all;
 }
 
-.entry-title > a:hover {
+.entry-title > a::after {
+	content: "";
+	margin: 0;
+	position: absolute;
+	//z-index:-1;
+	border-radius: 0.1rem;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+	opacity: 0;
+	transition-duration: 0.25s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: opacity;
+}
+
+.entry-title > a:hover,
+.entry-title > a:active {
 	background-color: rgba(248, 249, 249, 0.15);
-	opacity: 0.8;
 	color: inherit;
-	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+
+.entry-title > a:hover::after,
+.entry-title > a:active::after {
+	opacity: 1;
 }
 
 .arch-card.arch-link-title {
