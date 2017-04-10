@@ -4,6 +4,8 @@
  *
  * @package abraham
  */
+abe_edit_link();
+
 if ( 'post' !== get_post_type() || ! is_single( 'get_the_ID' ) )
 	return;
 ?>
@@ -16,5 +18,4 @@ if ( 'post' !== get_post_type() || ! is_single( 'get_the_ID' ) )
 		wp_link_pages();
 	} ?>
 
-	<?php abe_edit_link() ?>
 </footer><!-- .entry-footer -->
