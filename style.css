@@ -1180,16 +1180,12 @@ input[type="button"] {
 }
 
 a.btn-hollow:hover,
-a.btn-hollow:focus,
 a.btn-hollow:active,
 .btn-hollow:hover,
-.btn-hollow:focus,
 .btn-hollow:active,
 input[type="reset"]:hover,
-input[type="reset"]:focus,
 input[type="reset"]:active,
 input[type="button"]:hover,
-input[type="button"]:focus,
 input[type="button"]:active {
 	color: #fff;
 	box-shadow: none;
@@ -1236,6 +1232,16 @@ input[type="button"]:active {
 
 .btn-lg {
 	font-size: 1.25em;
+}
+
+a[class*="u-bg-1"]:hover,
+a[class*="u-bg-1"]:active {
+	color: var(--bg-1-text);
+}
+
+a[class*="u-bg-2"]:hover,
+a[class*="u-bg-2"]:active {
+	color: var(--bg-2-text);
 }
 
 .media-img > a {

@@ -136,7 +136,7 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= ":root{--color-1:#{$colorBase};--color-1-light:#{$colorLight};--color-1-dark: #{$colorDark};}";
+		$style .= ":root{--color-1:#{$colorBase};--color-1-light:#{$colorLight};--color-1-dark: #{$colorDark};--bg-1-text:#{$textBase};}";
 		$style .= "html .u-text-1,article.u-bg-white .u-dropcap:first-letter{color:#{$colorBase};}";
 		$style .= ".u-b-1{border-color:#{$colorBase};}";
 		$style .= "html .u-text-1-dark{color:#{$colorDark};}";
@@ -195,7 +195,7 @@ final class Abraham_Custom_Styles {
 
 		/* === Color === */
 
-		$style .= ":root{--color-2:#{$colorBase};--color-2-light:#{$colorLight};--color-2-dark: #{$colorDark};}";
+		$style .= ":root{--color-2:#{$colorBase};--color-2-light:#{$colorLight};--color-2-dark: #{$colorDark};--bg-2-text:#{$textBase};}";
 		$style .= "html .u-text-2{color:#{$colorBase};}";
 		$style .= ".u-b-2{border-color:#{$colorBase};}";
 		$style .= "html .u-text-2-dark{color:#{$colorDark};}";
