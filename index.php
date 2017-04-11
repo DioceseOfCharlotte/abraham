@@ -9,7 +9,7 @@ get_header(); ?>
 
 <?php get_template_part( 'components/page', 'header' ); ?>
 
-<div class="site-wrap u-flex u-flex-col">
+<!-- <div class="site-wrap u-flex u-flex-col"> -->
 
 <div <?php hybrid_attr( 'grid' ); ?>>
 

@@ -2,6 +2,10 @@
 	box-shadow: none;
 }
 
+.card-img {
+    width: 100%;
+}
+
 /**
 * Flexible media embeds
 *

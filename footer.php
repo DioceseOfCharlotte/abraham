@@ -16,7 +16,7 @@
 
 	</footer>
 
-</div><!-- /.layout -->
+<!-- </div> --><!-- /.layout -->
 <?php hybrid_get_sidebar( 'secondary' ); ?>
 </div><!-- /.site-container -->
 

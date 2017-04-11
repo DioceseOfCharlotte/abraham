@@ -8,13 +8,16 @@ a.button {
 	text-decoration: none;
 }
 
+.btn:not([class*="u-bg-"]):hover {
+	color: inherit;
+}
+
 input[type="submit"] {
 	background-color: $color-1;
 	color: #fff;
 }
 
-a.btn-hollow,
-.btn-hollow,
+.btn-hollow.btn-hollow,
 input[type="reset"],
 input[type="button"] {
 	background-color: rgba(255, 255, 255, 0.4);
@@ -71,18 +74,4 @@ input[type="button"] {
 
 .btn-lg {
 	font-size: 1.25em;
-}
-
-a[class*="u-bg-1"] {
-	&:hover,
-	&:active {
-		color: var(--bg-1-text);
-	}
-}
-
-a[class*="u-bg-2"] {
-	&:hover,
-	&:active {
-		color: var(--bg-2-text);
-	}
 }
