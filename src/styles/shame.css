@@ -376,3 +376,10 @@ article {
     	height: 100%;
 	}
 }
+
+a[href*="usccb.org"]:before {
+	@mixin fi $fi-plus;
+	color: white;
+	background-color: #008061;
+	border-radius: 50%;
+}

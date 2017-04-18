@@ -1,15 +1,17 @@
 /* --------------------------------------------------------------
 ## Icon Font Variables
 -------------------------------------------------------------- */
-$fi-mail: "\e900";
-$fi-plus-alt: "\e901";
-$fi-minus-alt: "\e902";
+$fi-plus: "\e907";
+$fi-list: "\e900";
+$fi-list2: "\e9ba";
+$fi-mail: "\e901";
+$fi-plus-alt: "\e902";
+$fi-minus-alt: "\e903";
 $fi-read-more: "\e905";
-$fi-download: "\e903";
+$fi-download: "\e906";
 $fi-alert: "\f02d";
 $fi-chevron-down: "\f0a3";
 $fi-info: "\f059";
-$fi-link-external: "\f07f";
 $fi-location: "\f060";
 $fi-pencil: "\f058";
 $fi-search: "\f02e";
@@ -42,6 +44,7 @@ $fi-edge: "\eadc";
 $fi-file-pdf: "\eadf";
 $fi-file-word: "\eae1";
 $fi-file-excel: "\eae2";
+$fi-link-external: "\f07f";
 
 @define-mixin fi $icon {
 	content: $icon;
@@ -242,6 +245,19 @@ a[href*="/documents/"],
 .fi-file-text2 {
 	&:before {
 		@mixin fi $fi-file-text2;
+	}
+}
+
+a[href*="/forms/"],
+.fi-wpforms {
+	&:before {
+		@mixin fi $fi-list;
+		padding: 2px;
+	    font-size: .8em;
+	    border: 1px solid currentColor;
+	    display: inline-block;
+	    border-radius: .1rem;
+	    opacity: .8;
 	}
 }
 
