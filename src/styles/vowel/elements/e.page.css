@@ -83,6 +83,10 @@ article {
 	}
 }
 
+p {
+	line-height: 1.6;
+}
+
 p:empty {
 	display: none;
 }

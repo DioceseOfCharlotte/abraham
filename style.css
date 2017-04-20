@@ -417,6 +417,10 @@ article {
 	}
 }
 
+p {
+	line-height: 1.6;
+}
+
 p:empty {
 	display: none;
 }
@@ -4163,6 +4167,28 @@ a.site-home-link > .custom-logo {
 
 body:not(.home) .is-active {
 	background-color: rgba(189, 196, 201, 0.3);
+}
+
+.layout-1-column-wide .archive-description {
+	margin-bottom: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+@media (min-width: 40rem) {
+	.layout-1-column-wide .arch-row,
+	.layout-1-column-wide .archive-description {
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
+}
+
+@media (min-width: 90rem) {
+	.layout-1-column-wide .arch-row,
+	.layout-1-column-wide .archive-description {
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
 }
 
 .aligncenter,
