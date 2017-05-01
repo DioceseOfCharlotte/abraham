@@ -5,6 +5,12 @@
 	padding: 0;
 }
 
+/* Inline image background hides Query-monitor background */
+#qm {
+	z-index: 999;
+	position: relative;
+}
+
 .admin-bar .if-admin-bar {
 	margin-top: 32px;
 }
@@ -40,7 +46,7 @@ body:not(.home) .is-active {
 @media (--md) {
 	.layout-1-column-wide .arch-row,
 	.layout-1-column-wide .archive-description {
-	    padding-left: 5vw;
+		padding-left: 5vw;
 		padding-right: 5vw;
 	}
 }
@@ -48,7 +54,7 @@ body:not(.home) .is-active {
 @media (--xl) {
 	.layout-1-column-wide .arch-row,
 	.layout-1-column-wide .archive-description {
-	    padding-left: 10vw;
+		padding-left: 10vw;
 		padding-right: 10vw;
 	}
 }

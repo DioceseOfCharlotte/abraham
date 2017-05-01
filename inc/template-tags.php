@@ -39,7 +39,7 @@ function abe_get_svg( $icon = 'info', $height = '1em', $width = '' ) {
 	// Begin SVG markup
 	$svg = file_get_contents( locate_template( 'images/icons/' . esc_html( $icon ) . '.svg' ) );
 
-	$svg = str_replace( '<svg', '<svg class="u-flexed-s0 doc-icon doc-icon-' . $icon . '" height="' . $height . '" width="' . $width . '" aria-label="' . esc_html( $icon ) . '"', $svg );
+	$svg = str_replace( '<svg', '<svg class="doc-icon doc-icon-' . $icon . '" height="' . $height . '" width="' . $width . '" aria-label="' . esc_html( $icon ) . '"', $svg );
 
 	return $svg;
 }

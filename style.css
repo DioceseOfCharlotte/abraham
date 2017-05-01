@@ -4145,6 +4145,11 @@ a[href*=".xls"]:before,
 	padding: 0;
 }
 
+#qm {
+	z-index: 999;
+	position: relative;
+}
+
 .admin-bar .if-admin-bar {
 	margin-top: 32px;
 }
@@ -4788,6 +4793,146 @@ a[href*="usccb.org"]:before {
 	color: white;
 	background-color: #008061;
 	border-radius: 50%;
+}
+
+#page input[type=checkbox] {
+	width: 1rem !important;
+}
+
+div.goog-te-gadget {
+	font-family: inherit;
+}
+
+div.goog-te-gadget-simple {
+	min-height: 2.5rem;
+	font-size: 0.9rem;
+	font-weight: normal;
+	max-width: 100%;
+	border-radius: 0.1rem 0.1rem 0 0;
+	padding: 0.5em 0.625em !important;
+	border-width: 0;
+	line-height: 1.5;
+	background-color: hsla(180, 8%, 97%, 0.9);
+	color: #212629;
+	vertical-align: baseline;
+	box-shadow: inset 0 -2px 0 0 #1f2d8f;
+}
+
+.jp-relatedposts-items {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	font-size: 0.9rem;
+	border-radius: 0.1rem;
+	padding: 1.5rem;
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+	background-color: #f8f9f9;
+	margin-top: 1rem;
+}
+
+.jp-relatedposts-items:before {
+	content: 'You may also be interested in:';
+	width: 100%;
+	font-weight: 600;
+}
+
+.jp-relatedposts-post {
+	margin: 0.5rem;
+}
+
+.jp-relatedposts-post span {
+	display: block;
+}
+
+.jp-relatedposts-post-context {
+	opacity: 0.7;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+#row-give .tab-header {
+	display: none;
+}
+
+#row-give .tab-content > .o-grid {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.arch-card:not(.arch-none) .card-img ~ .entry-header {
+	-webkit-order: -1;
+	-ms-flex-order: -1;
+	order: -1;
+	margin-bottom: 0 !important;
+}
+
+html .tab-content.is-active {
+	background-color: white;
+}
+
+.tile-link {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.tile-link:hover {
+	-webkit-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+.tile * {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tiled-icon {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	transition: inherit;
+	transition-property: -webkit-filter;
+	transition-property: filter;
+	transition-property: filter, -webkit-filter;
+}
+
+.tile-link:hover .tiled-icon {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+.tiled-icon > .v-icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gform_19 input:not(:focus)::-webkit-input-placeholder {
+	color: #1f2d8f;
+	opacity: 1;
+}
+
+#gform_19 :-ms-input-placeholder {
+	color: #1f2d8f;
+	opacity: 1;
+}
+
+#gform_19 ::-moz-placeholder {
+	color: #1f2d8f;
+	opacity: 1;
+}
+
+#gform_19 :-moz-placeholder {
+	color: #1f2d8f;
+	opacity: 1;
 }
 
 @media print {

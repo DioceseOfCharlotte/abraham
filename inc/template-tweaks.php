@@ -24,7 +24,7 @@ function abe_template_hierarchy( $templates ) {
 
 	if ( is_search() ) {
 		$templates = array_merge( array( 'content/search.php' ), $templates );
-	} elseif ( is_single( get_the_ID() ) ) {
+	} elseif ( ! is_attachment() && is_single( get_the_ID() ) ) {
 		$templates = array_merge(
 			array(
 				"content/single-{$post_type}.php",
@@ -96,7 +96,15 @@ function abe_login_redirect( $url, $request, $user ) {
  * Clean up the_excerpt().
  */
 function abe_excerpt_more() {
-	return '<a class="btn btn-sm u-p0 u-round u-mx1 u-h3 u-opacity u-lh-1 u-text-2 btn-readmore" href="' . get_permalink() . '">' . abe_get_svg( 'ellipsis-circle', 'sm' ) . '</a>';
+	if ( is_admin() )
+		return;
+
+		$link = sprintf( '<a href="%1$s" class="more-link btn btn-sm u-p0 u-round u-mx1 u-opacity u-lh-1 btn-readmore">%2$s</a>',
+			esc_url( get_permalink( get_the_ID() ) ),
+			/* translators: %s: Name of current post */
+			sprintf( abe_get_svg( 'ellipsis-circle', '1.75rem' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			);
+		return $link;
 }
 
 /**
