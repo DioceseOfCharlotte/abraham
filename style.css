@@ -4915,24 +4915,32 @@ html .tab-content.is-active {
 	margin-right: auto;
 }
 
+#gform_19 input[name] {
+	color: #1f2d8f;
+}
+
 #gform_19 input:not(:focus)::-webkit-input-placeholder {
-	color: #1f2d8f;
+	color: black;
 	opacity: 1;
 }
 
-#gform_19 :-ms-input-placeholder {
-	color: #1f2d8f;
+#gform_19 input:not(:focus):-ms-input-placeholder {
+	color: black;
 	opacity: 1;
 }
 
-#gform_19 ::-moz-placeholder {
-	color: #1f2d8f;
+#gform_19 input:not(:focus)::-moz-placeholder {
+	color: black;
 	opacity: 1;
 }
 
-#gform_19 :-moz-placeholder {
-	color: #1f2d8f;
+#gform_19 input:not(:focus):-moz-placeholder {
+	color: black;
 	opacity: 1;
+}
+
+.gfield_error input {
+	box-shadow: inset 0 0 0 2px #b9293a;
 }
 
 @media print {
