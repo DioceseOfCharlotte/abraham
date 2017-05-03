@@ -791,7 +791,21 @@ form {
 	margin-bottom: 1.5rem;
 }
 
-input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 select,
 textarea {
 	max-width: 100%;
@@ -812,7 +826,21 @@ textarea {
 	transition-property: color, background-color, box-shadow;
 }
 
-input:not([type="button"]):not([type="reset"]):not([type="submit"]):focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
 select:focus,
 textarea:focus {
 	outline: 0;
@@ -876,7 +904,6 @@ input[type=radio] {
 	margin: 0 1rem 0 0;
 	width: 1rem;
 	height: 1rem;
-	box-shadow: inset 0 0 0 2px #293ab9 !important;
 }
 
 input[type="number"] {
@@ -4686,13 +4713,12 @@ svg.doc-icon-side-toggle {
 	margin-right: auto;
 }
 
-input[type=checkbox],
-input[type=radio] {
-	box-shadow: inset 0 0 0 2px rgba(31, 45, 143, 0.6) !important;
+input[type=checkbox] {
+	box-shadow: inset 0 0 0 2px #1f2d8f;
 }
 
-input[type=radio] {
-	border-radius: 50%;
+input[type=checkbox]:checked {
+	box-shadow: inset 0 0 0 2px #293ab9;
 }
 
 .side-nav__container {

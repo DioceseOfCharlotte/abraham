@@ -288,13 +288,14 @@ svg.doc-icon-side-toggle {
 	margin-right: auto;
 }
 
-input[type=checkbox], input[type=radio] {
-	box-shadow: inset 0 0 0 2px rgba(31, 45, 143, 0.6)!important;
+input[type=checkbox] {
+	box-shadow: inset 0 0 0 2px $color-links;
 }
 
-input[type=radio] {
-	border-radius: 50%;
+input[type=checkbox]:checked {
+	box-shadow: inset 0 0 0 2px $color-links-hover;
 }
+
 .side-nav__container {
 	width: 85%;
 }
