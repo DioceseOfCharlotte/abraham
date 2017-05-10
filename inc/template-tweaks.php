@@ -102,7 +102,7 @@ function abe_excerpt_more() {
 		$link = sprintf( '<a href="%1$s" class="more-link btn btn-sm u-p0 u-round u-mx1 u-opacity u-lh-1 btn-readmore">%2$s</a>',
 			esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Name of current post */
-			sprintf( abe_get_svg( 'ellipsis-circle', '1.75rem' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			sprintf( abe_get_svg( 'ellipsis-circle', '1.75em' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
 			);
 		return $link;
 }
