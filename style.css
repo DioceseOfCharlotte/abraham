@@ -4921,20 +4921,6 @@ html .tab-content.is-active {
 	backface-visibility: hidden;
 }
 
-.tiled-icon {
-	-webkit-filter: blur(3px);
-	filter: blur(3px);
-	transition: inherit;
-	transition-property: -webkit-filter;
-	transition-property: filter;
-	transition-property: filter, -webkit-filter;
-}
-
-.tile-link:hover .tiled-icon {
-	-webkit-filter: blur(0);
-	filter: blur(0);
-}
-
 .tiled-icon > .v-icon {
 	display: block;
 	margin-left: auto;
