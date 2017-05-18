@@ -8,16 +8,16 @@
 ?>
 <article <?php hybrid_attr( 'post' ); ?>>
 
-		<?php get_template_part( 'components/img', 'hd' ); ?>
+	<?php get_template_part( 'components/img', 'hd' ); ?>
 
-		<?php get_template_part( 'components/entry', 'header' ); ?>
+	<?php get_template_part( 'components/entry', 'header' ); ?>
 
-		<?php if ( has_excerpt() ) { ?>
+	<?php if ( has_excerpt() ) { ?>
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_content(); ?>
 		</div>
-		<?php } ?>
+	<?php } ?>
 
-		<?php get_template_part( 'components/entry', 'footer' ); ?>
+	<?php get_template_part( 'components/entry', 'footer' ); ?>
 
 </article>

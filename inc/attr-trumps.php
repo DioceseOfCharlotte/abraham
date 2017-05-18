@@ -38,13 +38,13 @@ class Attr_Trumps {
 	public function __construct( $args = array() ) {
 
 		$defaults = array(
-			'grid'                   	  => 'o-grid u-container u-rel',
-			'grid_1-wide'               => 'o-grid u-1of1 u-rel u-p0',
-			'grid_2c-r'                 => 'o-grid u-container u-rel u-flex-rev',
-			'grid_2c-l'                 => 'o-grid u-container u-rel',
+			'grid'                   	  => 'o-grid u-pt u-container u-rel',
+			'grid_1-wide'               => 'o-grid u-pt u-1of1 u-rel u-p0',
+			'grid_2c-r'                 => 'o-grid u-pt u-container u-rel u-flex-rev',
+			'grid_2c-l'                 => 'o-grid u-pt u-container u-rel',
 
 			// SITE HEADER.
-			'header'              		   => 'u-px1-md is-top animating u-z1 u-bg-1-glass u-1of1 u-flex u-flex-wrap u-flex-center',
+			'header'              		   => 'u-px1-md is-top animating u-z1 u-bg-1 u-1of1 u-flex u-flex-wrap u-flex-center',
 			'branding'            		   => 'u-flexed-auto u-text-center u-mln1',
 			'site_title'          		   => 'u-text-display u-h3 u-color-inherit u-p0',
 			'site_description'        	   => 'u-text-display u-h4 u-p0 u-text-3',
@@ -53,7 +53,7 @@ class Attr_Trumps {
 			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
 			'content_archive'         	=> 'u-flex u-flex-ja',
 
-			'page_header'             	=> 'u-py3 u-1of1 u-rel u-text-shadow u-text-center',
+			'page_header'             	=> 'u-py u-1of1 u-rel u-text-shadow u-text-center',
 			'page_title'              	=> 'u-h0 u-m0 u-text-display',
 			'archive_description'     	=> 'u-1of1 u-p u-p2-md u-text-left u-br u-mb u-bg-white u-rel u-shadow2',
 
@@ -71,7 +71,7 @@ class Attr_Trumps {
 
 			// NAVIGATION.
 			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-mx-auto-md u-bg-1-glass u-text-center',
+			'menu_primary'            	=> 'u-mx-auto-md u-bg-1 u-text-center',
 			'menu_secondary'          	=> '',
 
 			// SIDEBAR.
@@ -82,7 +82,7 @@ class Attr_Trumps {
 			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
 
 			// COMMENTS. Same as post by default
-			// 'comments_area'           	=> '',
+			'comments_area'           	=> 'u-p',
 
 			// FOOTER.
 			'footer'                    => 'u-mt-auto u-bg-2',
@@ -178,11 +178,10 @@ class Attr_Trumps {
 		$attr['id']        = 'comments';
 		$attr['class']     = 'comments-area';
 
-		if ( ! $this->args['post'] ) {
-			return $attr;
+		if ( $this->args['post'] && $this->args['entry_content'] ) {
+			$attr['class']      .= " {$this->args['post']}";
+			$attr['class']      .= " {$this->args['entry_content']}";
 		}
-
-		$attr['class']      .= " {$this->args['post']}";
 
 		return $attr;
 	}

@@ -14,12 +14,12 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-	<h2 class="comments-title u-h3 u-text-display">
+	<h2 class="comments-title u-h3 u-mb u-text-display">
 		<?php
 		$comments_number = get_comments_number();
 		if ( '1' === $comments_number ) {
 			/* translators: %s: post title */
-			printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'abe' ), get_the_title() );
+			printf( _x( 'One response to &ldquo;%s&rdquo;', 'comments title', 'abe' ), get_the_title() );
 		} else {
 			printf(
 				/* translators: 1: number of comments, 2: post title */
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 		?>
 	</h2>
 
-	<ol class="comment-list">
+	<ol class="comment-list u-mb">
 		<?php
 		wp_list_comments( array(
 			//'avatar_size' => 50,
