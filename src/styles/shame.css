@@ -472,13 +472,13 @@ html .tab-content.is-active {
 }
 
 /*.tiled-icon {
-	filter: blur(3px);
-	transition: inherit;
-	transition-property: filter;
+filter: blur(3px);
+transition: inherit;
+transition-property: filter;
 }
 
 .tile-link:hover .tiled-icon {
-	filter: blur(0);
+filter: blur(0);
 }*/
 
 .tiled-icon>.v-icon {
@@ -513,4 +513,14 @@ html .tab-content.is-active {
 
 .gfield_error input {
 	box-shadow: inset 0 0 0 2px $color-warning;
+}
+
+.tile {
+	min-height: 250px;
+}
+
+.tiled-icon {
+	min-height: 250px;
+	display: flex;
+	align-items: center;
 }

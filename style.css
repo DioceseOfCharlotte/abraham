@@ -2736,8 +2736,8 @@ body:not(.search) .trail-end > span,
 }
 
 .u-grad-overlay::after {
-	background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
-	content: "";
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.65) 100%);
+	content: " ";
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -3109,6 +3109,7 @@ body:not(.search) .trail-end > span,
 	content: "";
 	border-radius: 0.1rem;
 	position: absolute;
+	margin: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -4965,6 +4966,20 @@ html .tab-content.is-active {
 
 .gfield_error input {
 	box-shadow: inset 0 0 0 2px #b9293a;
+}
+
+.tile {
+	min-height: 250px;
+}
+
+.tiled-icon {
+	min-height: 250px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 @media print {
