@@ -37,7 +37,7 @@ final class Abraham_Custom_Styles {
 	}
 
 	/**
-	 * Returns a default colors if there is none set.  We use this instead of
+	 * Returns the default colors if there is none set.  We use this instead of
 	 * setting a default so that child themes can overwrite the default early.
 	 *
 	 * @since  1.0.0
@@ -226,10 +226,13 @@ final class Abraham_Custom_Styles {
 	public function get_additional_styles() {
 		$style = '';
 		$internal_link = url_shorten( get_home_url() );
+		$bg_color = get_theme_mod( 'background_color', 'F7EDE7' );
+		$bg_rgb = join( ', ', hybrid_hex_to_rgb( $bg_color ) );
 
 		$style .= '.entry-header a>svg>.outlink{display:none;}';
 		$style .= ".entry-header a[href*='//']:not([href*='{$internal_link}'])>svg>.outlink{display:block;}";
 		$style .= ".entry-header a[href*='//']:not([href*='{$internal_link}'])>svg>.inlink{display:none;}";
+		$style .= ":root{--site-bg:linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.3) 40vh, rgba( {$bg_rgb}, 0.85) 99vh, rgba( {$bg_rgb}, .99) 100%);";
 
 
 		/* Return the styles. */

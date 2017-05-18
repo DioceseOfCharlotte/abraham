@@ -53,10 +53,12 @@
 /* Background Colors */
 .u-bg-1 {
 	background-color: $color-1;
+	background-color: var(--color-1) !important;
 }
 
 .u-bg-2 {
 	background-color: $color-2;
+	background-color: var(--color-2) !important;
 }
 
 .u-bg-1-light {

@@ -72,7 +72,7 @@ function abraham_customize_register( $wp_customize ) {
 			'type'                 => 'theme_mod',
 			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
-			'transport'            => 'refresh',
+			'transport'            => 'postMessage',
 		)
 	);
 

@@ -2214,6 +2214,16 @@ body:not(.search) .trail-end > span,
 	padding-left: 1.5rem;
 }
 
+:root .u-py {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+:root .u-px {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+}
+
 :root .u-p05 {
 	padding: 0.5rem;
 }
@@ -3229,10 +3239,12 @@ body:not(.search) .trail-end > span,
 
 .u-bg-1 {
 	background-color: #2982b9;
+	background-color: var(--color-1) !important;
 }
 
 .u-bg-2 {
 	background-color: #29b960;
+	background-color: var(--color-2) !important;
 }
 
 .u-bg-1-light {

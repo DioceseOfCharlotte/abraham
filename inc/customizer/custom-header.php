@@ -64,7 +64,8 @@ if ( ! function_exists( 'abraham_header_style' ) ) :
 			$style .= "
 			.site {
 				position: relative;
-				background-image: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.3) 40vh, rgba( {$bg_rgb}, 0.7) 80vh, rgba( {$bg_rgb}, 0.9) 95vh, rgba( {$bg_rgb}, 0.99) 99vh);
+				background-image: linear-gradient(to bottom, rgba( {$bg_rgb}, 0.0) 0, rgba( {$bg_rgb}, 0.3) 40vh, rgba( {$bg_rgb}, 0.85) 99vh, rgba( {$bg_rgb}, .99) 100%);
+				background-image: var(--site-bg);
 			}
 			";
 
@@ -75,25 +76,13 @@ if ( ! function_exists( 'abraham_header_style' ) ) :
 	if ( ! function_exists( 'abe_custom_header_image' ) ) :
 
 		function abe_custom_header_image( $size = 'large' ) {
-			$bg_image = '';
-
-			$queried_object_id = get_queried_object_id();
-			$post_image = get_post_meta( $queried_object_id, 'header_image', true );
-
-			$term_image = get_term_meta( $queried_object_id, 'image', true );
-
-			if ( $post_image ) {
-				$bg_image = wp_get_attachment_image_url( $post_image, 'abe-hd-lg' );
-
-			} elseif ( has_post_thumbnail() ) {
-				$bg_image = wp_get_attachment_image_url( get_post_thumbnail_id(), 'abe-hd-lg' );
-
-			} elseif ( get_header_image() ) {
-				$bg_image = get_header_image();
+			$post_id = get_the_ID();
+			if ( has_post_thumbnail( $post_id ) && is_singular() ) {
+				return get_the_post_thumbnail_url( $post_id, $size );
+			} else {
+				return get_header_image();
 			}
-			if ( $bg_image ) {
-				return $bg_image;
-			}
+			return;
 		}
 
 	endif; // End of abe_custom_header_image.

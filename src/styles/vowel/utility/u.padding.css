@@ -21,6 +21,16 @@
 		padding-left: $base-space;
 	}
 
+	.u-py {
+		padding-top: $base-space;
+		padding-bottom: $base-space;
+	}
+
+	.u-px {
+		padding-right: $base-space;
+		padding-left: $base-space;
+	}
+
 	.u-p05 {
 		padding: $space-05;
 	}
