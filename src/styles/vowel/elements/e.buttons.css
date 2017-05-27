@@ -16,6 +16,7 @@ input[type="submit"] {
 	font-family: inherit;
 	display: inline-block;
 	margin: 0;
+	word-break: normal;
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
