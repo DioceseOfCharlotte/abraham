@@ -406,6 +406,7 @@ main a {
 article {
 	background-color: #fff;
 	color: #212629;
+	margin-bottom: 1.5rem;
 	width: 100%;
 	min-width: 270px;
 	max-width: 64rem;
@@ -415,6 +416,11 @@ article {
 	article {
 		width: calc(50% - 1.5rem);
 	}
+}
+
+article:first-of-type:last-of-type {
+	width: 100%;
+	max-width: 100%;
 }
 
 p {
@@ -665,6 +671,7 @@ input[type="submit"] {
 	font-family: inherit;
 	display: inline-block;
 	margin: 0;
+	word-break: normal;
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
@@ -1317,11 +1324,6 @@ input[type="button"]:active {
 	position: absolute;
 	top: 0;
 	width: 100%;
-}
-
-.home #header.is-top .menu-main-container,
-.home #header.is-top > .menu-primary {
-	background-color: transparent;
 }
 
 #menu-primary .menu-main-container {
@@ -4738,11 +4740,6 @@ input[type=checkbox]:checked {
 	width: 85%;
 }
 
-.home .site {
-	background-color: #f7ede7;
-	background: linear-gradient(to bottom, rgba(247, 237, 231, 0) 0, rgba(247, 237, 231, 0.1) 20vh, rgba(247, 237, 231, 0.2) 40vh, rgba(247, 237, 231, 0.3) 60vh, rgba(247, 237, 231, 0.4) 80vh, rgba(247, 237, 231, 0.55) 99vh) !important;
-}
-
 .sd-button:before {
 	margin: 0;
 }
@@ -4980,6 +4977,12 @@ html .tab-content.is-active {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+}
+
+.home #header.is-top .menu-main-container,
+.home #header.is-top > .menu-primary {
+	background-color: transparent;
+	--color-1: transparent;
 }
 
 @media print {
