@@ -74,6 +74,7 @@ main a {
 article {
 	background-color: #fff;
 	color: $root-color;
+	margin-bottom: $base-space;
 	width: 100%;
 	min-width: 270px;
 	max-width: $paragraph-width;
@@ -81,6 +82,11 @@ article {
 	@media (--md) {
 		width: calc(50% - $gutter);
 	}
+}
+
+article:first-of-type:last-of-type {
+	width: 100%;
+	max-width: 100%;
 }
 
 p {
