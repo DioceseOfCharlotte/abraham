@@ -37,6 +37,19 @@ function abe_template_hierarchy( $templates ) {
 	return $templates;
 }
 
+add_filter( 'body_class','abe_sidebar_body_class' );
+function abe_sidebar_body_class( $classes ) {
+
+    if ( is_active_sidebar( 'secondary' ) ) {
+
+        $classes[] = 'has-oc-sidebar';
+
+    }
+
+    return $classes;
+
+}
+
 function abe_login_logo() {
 	if ( ! has_custom_logo() ) { return; }
 
