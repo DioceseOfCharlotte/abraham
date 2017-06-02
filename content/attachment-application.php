@@ -1,6 +1,6 @@
 <?php
 /**
- * General fallback template for post archives.
+ * Template used mostly for documents.
  *
  * @package abraham
  */

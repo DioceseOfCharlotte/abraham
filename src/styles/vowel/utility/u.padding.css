@@ -162,6 +162,10 @@
 		padding-top: 0;
 	}
 
+	.u-pb0 {
+		padding-bottom: 0;
+	}
+
 	@media (--md) {
 		.u-px1-md {
 			padding-right: $space-1;

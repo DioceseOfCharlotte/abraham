@@ -81,6 +81,8 @@ textarea[aria-invalid=true] {
 legend {
 	font-size: 1.25rem;
 	font-weight: 700;
+	margin-bottom: 0.5rem;
+	line-height: inherit;
 }
 
 textarea {
