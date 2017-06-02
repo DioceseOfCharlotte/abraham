@@ -38,51 +38,51 @@ class Attr_Trumps {
 	public function __construct( $args = array() ) {
 
 		$defaults = array(
-			'grid'                   	  => 'o-grid u-pt u-container u-rel',
+			'grid'                      => 'o-grid u-pt u-container u-rel',
 			'grid_1-wide'               => 'o-grid u-pt u-1of1 u-rel u-p0',
 			'grid_2c-r'                 => 'o-grid u-pt u-container u-rel u-flex-rev',
 			'grid_2c-l'                 => 'o-grid u-pt u-container u-rel',
 
 			// SITE HEADER.
-			'header'              		   => 'u-px1-md is-top animating u-z1 u-bg-1 u-1of1 u-flex u-flex-wrap u-flex-center',
-			'branding'            		   => 'u-flexed-auto u-text-center u-mln1',
-			'site_title'          		   => 'u-text-display u-h3 u-color-inherit u-p0',
-			'site_description'        	   => 'u-text-display u-h4 u-p0 u-text-3',
+			'header'                    => 'u-px1-md is-top animating u-z1 u-bg-1 u-1of1 u-flex u-flex-wrap u-flex-center',
+			'branding'                  => 'u-flexed-auto u-text-center u-mln1',
+			'site_title'                => 'u-text-display u-h3 u-color-inherit u-p0',
+			'site_description'          => 'u-text-display u-h4 u-p0 u-text-3',
 			// CONTENT.
-			'content'                 	=> 'o-cell o-grid u-m0 u-p0 u-1of1',
-			'content_with_sidebar'    	=> 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
-			'content_archive'         	=> 'u-flex u-flex-ja',
+			'content'                   => 'o-cell o-grid u-m0 u-p0 u-1of1',
+			'content_with_sidebar'      => 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
+			'content_archive'           => 'u-flex u-flex-ja',
 
-			'page_header'             	=> 'u-py u-1of1 u-rel u-text-shadow u-text-center',
-			'page_title'              	=> 'u-h0 u-m0 u-text-display',
-			'archive_description'     	=> 'u-1of1 u-p u-p2-md u-text-left u-br u-mb u-bg-white u-rel u-shadow2',
+			'page_header'               => 'u-py u-1of1 u-rel u-text-shadow u-text-center',
+			'page_title'                => 'u-h0 u-m0 u-text-display',
+			'archive_description'       => 'u-1of1 u-p u-p2-md u-text-left u-br u-mb u-bg-white u-rel u-shadow2',
 
 			// ENTRY.
-			'post'                    	=> 'u-fit o-cell u-bg-white u-mb u-1of1 u-br u-shadow2',
-			'post_wide'               	=> 'u-fit u-1of1',
+			'post'                      => 'u-fit o-cell u-bg-white u-mb u-1of1 u-br u-shadow2',
+			'post_wide'                 => 'u-fit u-1of1 u-m0 u-shadow0',
 
-			'post_archive'            	=> 'o-cell u-shadow1 u-br',
-			'entry_header'            	=> 'u-1of1',
-			'entry_title'             	=> 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
-			'entry_content'           	=> 'u-p25',
-			'entry_content_wide'      	=> '',
-			'entry_summary'           	=> 'u-p u-pt1 show-icons',
-			'entry_footer'            	=> 'u-mt-auto u-p1 u-pt0 u-rel u-1of1',
+			'post_archive'              => 'o-cell u-shadow1 u-br',
+			'entry_header'              => 'u-1of1',
+			'entry_title'               => 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
+			'entry_content'             => 'u-p25',
+			'entry_content_wide'        => '',
+			'entry_summary'             => 'u-p u-pt1 show-icons',
+			'entry_footer'              => 'u-mt-auto u-p1 u-pt0 u-rel u-1of1',
 
 			// NAVIGATION.
-			'menu_all'                	=> '',
-			'menu_primary'            	=> 'u-mx-auto-md u-bg-1 u-text-center',
-			'menu_secondary'          	=> '',
+			'menu_all'                  => '',
+			'menu_primary'              => 'u-mx-auto-md u-bg-1 u-text-center',
+			'menu_secondary'            => '',
 
 			// SIDEBAR.
-			'sidebar_primary'         	=> 'o-cell o-grid u-bg-white u-shadow2 u-p1 u-mb u-br',
-			'sidebar_footer'          	=> 'o-grid u-pt u-container-wide',
-			'sidebar_horizontal'      	=> 'u-1of1',
-			'sidebar_right'           	=> 'u-1of1 u-1of3-md',
-			'sidebar_left'            	=> 'u-1of1 u-1of3-md',
+			'sidebar_primary'           => 'o-cell o-grid u-bg-white u-shadow2 u-p u-pb0 u-mb u-br',
+			'sidebar_footer'            => 'o-grid u-pt u-container-wide',
+			'sidebar_horizontal'        => 'u-1of1 u-flex-ja',
+			'sidebar_right'             => 'u-1of1 u-1of3-md u-flex-col',
+			'sidebar_left'              => 'u-1of1 u-1of3-md u-flex-col',
 
 			// COMMENTS. Same as post by default
-			'comments_area'           	=> 'u-p',
+			'comments_area'             => 'u-p',
 
 			// FOOTER.
 			'footer'                    => 'u-mt-auto u-bg-2',
@@ -154,17 +154,17 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( 'sidebar-right' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+		if ( abe_has_layout( 'sidebar-right' ) ) :
 			$attr['class']      .= " {$this->args['grid_2c-l']}";
-			elseif ( 'sidebar-left' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-				$attr['class']      .= " {$this->args['grid_2c-r']}";
-				elseif ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-					$attr['class']      .= " {$this->args['grid_1-wide']}";
-					else :
-						$attr['class']      .= " {$this->args['grid']}";
-						endif;
+		elseif ( abe_has_layout( 'sidebar-left' ) ) :
+			$attr['class']      .= " {$this->args['grid_2c-r']}";
+		elseif ( abe_is_wide_layout() ) :
+			$attr['class']      .= " {$this->args['grid_1-wide']}";
+		else :
+			$attr['class']      .= " {$this->args['grid']}";
+		endif;
 
-					return $attr;
+		return $attr;
 	}
 
 
@@ -232,27 +232,25 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+		if ( abe_is_wide_layout() || abe_has_layout( '1-column' ) ) :
 			$attr['class']      .= " {$this->args['content']}";
 
-			elseif ( '1-column' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-				$attr['class']      .= " {$this->args['content']}";
+		elseif ( abe_has_layout( 'sidebar-right' ) ) :
+			$attr['class']      .= " {$this->args['content_with_sidebar']}";
 
-			elseif ( 'sidebar-right' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-				$attr['class']      .= " {$this->args['content_with_sidebar']}";
+		elseif ( abe_has_layout( 'sidebar-left' ) ) :
+			$attr['class']      .= " {$this->args['content_with_sidebar']}";
 
-			elseif ( 'sidebar-left' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-				$attr['class']      .= " {$this->args['content_with_sidebar']}";
 		endif;
 
-			if ( hybrid_is_plural() ) {
-				$attr['class']      .= " {$this->args['content_archive']}";
-			}
-			if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
-				$attr['class']   .= ' facetwp-template';
-			}
+		if ( hybrid_is_plural() ) {
+			$attr['class']      .= " {$this->args['content_archive']}";
+		}
+		if ( function_exists( 'doc_get_facet_cpts' ) && is_post_type_archive( doc_get_facet_cpts() ) ) {
+			$attr['class']   .= ' facetwp-template';
+		}
 
-			return $attr;
+		return $attr;
 	}
 
 	/**
@@ -268,18 +266,17 @@ class Attr_Trumps {
 
 		if ( 'primary' === $context ) {
 
-			if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+			if ( abe_is_wide_layout() ||  abe_has_layout( '1-column' ) ) :
 				$attr['class']      .= " {$this->args['sidebar_horizontal']}";
-				elseif ( '1-column' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-					$attr['class']      .= " {$this->args['sidebar_horizontal']}";
-					elseif ( 'sidebar-right' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-						$attr['class']      .= " {$this->args['sidebar_right']}";
-						elseif ( 'sidebar-left' === hybrid_get_theme_layout( 'theme_layout' ) ) :
-							$attr['class']      .= " {$this->args['sidebar_left']}";
-						endif;
-						$attr['class']      .= " {$this->args['sidebar_primary']}";
+			elseif ( abe_has_layout( 'sidebar-right' ) ) :
+				$attr['class']      .= " {$this->args['sidebar_right']}";
+			elseif ( abe_has_layout( 'sidebar-left' ) ) :
+				$attr['class']      .= " {$this->args['sidebar_left']}";
+			endif;
+				$attr['class']      .= " {$this->args['sidebar_primary']}";
 
 		}
+
 		if ( 'footer' === $context ) {
 			$attr['class']      .= " {$this->args['sidebar_footer']}";
 		}
@@ -421,14 +418,14 @@ class Attr_Trumps {
 		if ( is_admin() ) {
 			return $classes; }
 
-		if ( is_singular() && ! is_front_page() ) {
+		if ( is_singular() && ! abe_has_layout( 'blank-canvas' ) ) {
 			is_single( $post_id ) || is_page() ? $classes[] = "{$this->args['post']}" : $classes[] = "{$this->args['post_archive']}";
 		}
 
 		if ( is_archive() || is_search() || is_home() ) {
 			$classes[]      = "{$this->args['post_archive']}"; }
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) {
+		if ( abe_is_wide_layout() ) {
 			$classes[]      = "{$this->args['post_wide']}"; }
 
 		if ( is_search() ) {
@@ -481,13 +478,15 @@ class Attr_Trumps {
 			return $attr;
 		}
 
-		if ( '1-column-wide' === hybrid_get_theme_layout( 'theme_layout' ) ) :
+		if ( abe_is_wide_layout() ) :
 			$attr['class']      .= " {$this->args['entry_content_wide']}";
-			else :
-				$attr['class']      .= " {$this->args['entry_content']}";
-			endif;
+		endif;
 
-			return $attr;
+		if ( ! abe_has_layout( 'blank-canvas' ) ) :
+			$attr['class']      .= " {$this->args['entry_content']}";
+		endif;
+
+		return $attr;
 	}
 
 	/**

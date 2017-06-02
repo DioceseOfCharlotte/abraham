@@ -1,9 +1,9 @@
 <?php
 /**
-* Theme Setup.
-*
-* @package Abraham
-*/
+ * Theme Setup.
+ *
+ * @package Abraham
+ */
 
 add_action( 'after_setup_theme', 'abraham_setup', 5 );
 add_action( 'after_setup_theme', 'abraham_content_width', 0 );
@@ -20,8 +20,8 @@ function abe_show_admin_bar( $content ) {
 
 
 /**
-* Sets up theme defaults and registers support for various WordPress features.
-*/
+ * Sets up theme defaults and registers support for various WordPress features.
+ */
 function abraham_setup() {
 
 	add_theme_support( 'automatic-feed-links' );
@@ -32,7 +32,9 @@ function abraham_setup() {
 
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	add_theme_support( 'theme-layouts', array( 'default' => '1-column' ) );
+	add_theme_support( 'theme-layouts', array(
+		'default' => '1-column',
+	) );
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -100,19 +102,19 @@ function get_child_asset_rev( $filename ) {
 }
 
 /**
-* Set the content width in pixels, based on the theme's design and stylesheet.
-*
-* Priority 0 to make it available to lower priority callbacks.
-*
-* @global int $content_width
-*/
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
 function abraham_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'abe_content_width', 1184 );
 }
 
 /**
-* Scripts and stylesheets
-*/
+ * Scripts and stylesheets
+ */
 function abraham_assets() {
 	$suffix = hybrid_get_min_suffix();
 
@@ -139,16 +141,16 @@ function abraham_assets() {
 }
 
 /**
-* Admin styles and fixes.
-*/
+ * Admin styles and fixes.
+ */
 function abe_admin_styles() {
 	wp_enqueue_style( 'abe-admin-fixes', get_theme_file_uri( 'css/abe-admin.css' ), false, false );
 }
 add_action( 'admin_enqueue_scripts', 'abe_admin_styles' );
 
 /**
-* Styles for the editor.
-*/
+ * Styles for the editor.
+ */
 function abraham_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
@@ -161,22 +163,20 @@ function abraham_get_editor_styles() {
 	/* Add the theme's editor styles. */
 	$editor_styles[] = get_theme_file_uri( 'style.css' );
 
-	//$editor_styles[] = 'https://use.fontawesome.com/1397c1e607.css';
-
 		/* Return the styles. */
 		return $editor_styles;
 }
 
 /**
-* Registers sidebars.
-*
-* @access public
-* @return void
-*/
+ * Registers sidebars.
+ *
+ * @access public
+ * @return void
+ */
 function abraham_widgets() {
 	register_sidebar( array(
-		'id'          	=> 'primary',
-		'name'        	=> esc_html__( 'Primary', 'abraham' ),
+		'id'            => 'primary',
+		'name'          => esc_html__( 'Primary', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
@@ -184,8 +184,8 @@ function abraham_widgets() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'id'          	=> 'secondary',
-		'name'        	=> esc_html__( 'Secondary', 'abraham' ),
+		'id'            => 'secondary',
+		'name'          => esc_html__( 'Secondary', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
@@ -193,8 +193,8 @@ function abraham_widgets() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'id'          	=> 'footer',
-		'name'        	=> esc_html__( 'Footer', 'abraham' ),
+		'id'            => 'footer',
+		'name'          => esc_html__( 'Footer', 'abraham' ),
 		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p1 u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
@@ -204,20 +204,20 @@ function abraham_widgets() {
 }
 
 /**
-* Create additional sizes.
-*/
+ * Create additional sizes.
+ */
 function abraham_image_sizes() {
 	set_post_thumbnail_size( 150, 150, true );
-	add_image_size( 'abe-icon', 	80, 80, true );
-	add_image_size( 'abe-hd', 		640, 360, true );
-	add_image_size( 'abe-hd-lg', 	1200, 675, true );
-	add_image_size( 'abe-card', 	380, 506, true );
-	add_image_size( 'abe-card-lg', 	760, 1012, true );
+	add_image_size( 'abe-icon',     80, 80, true );
+	add_image_size( 'abe-hd',       640, 360, true );
+	add_image_size( 'abe-hd-lg',    1200, 675, true );
+	add_image_size( 'abe-card',     380, 506, true );
+	add_image_size( 'abe-card-lg',  760, 1012, true );
 }
 
 /**
-* Hybrid Theme Layouts
-*/
+ * Hybrid Theme Layouts
+ */
 function abraham_layouts() {
 
 	hybrid_register_layout('1-column', array(
@@ -242,5 +242,11 @@ function abraham_layouts() {
 		'label'            => _x( 'Sidebar Left', 'theme layout', 'abraham' ),
 		'is_global_layout' => true,
 		'image'            => '%s/images/sidebar-left.svg',
+	));
+
+	hybrid_register_layout('blank-canvas', array(
+		'label'            => _x( 'Blank Canvas', 'theme layout', 'abraham' ),
+		'is_global_layout' => true,
+		'image'            => '%s/images/single-column-clear.svg',
 	));
 }

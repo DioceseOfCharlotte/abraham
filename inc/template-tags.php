@@ -130,3 +130,14 @@ function abe_second_text() {
 	$text_color = $second->isDark() ? 'fff':'333';
 	return "#{$text_color}";
 }
+
+// Layout helpers.
+function abe_is_wide_layout() {
+
+    return abe_has_layout( 'blank-canvas' ) || abe_has_layout( '1-column-wide' );
+}
+
+function abe_has_layout( $layout ) {
+
+	return $layout === hybrid_get_theme_layout( 'theme_layout' );
+}

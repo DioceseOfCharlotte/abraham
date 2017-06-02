@@ -24,7 +24,7 @@ require get_parent_theme_file_path( 'inc/setup.php' );
  */
 require get_parent_theme_file_path( 'inc/customizer/Color.php' );
 require get_parent_theme_file_path( 'inc/customizer/custom-styles.php' );
-require get_parent_theme_file_path( 'inc/customizer/customizer.php' );
+require get_parent_theme_file_path( 'inc/class-customize.php' );
 
 /**
  * Custom template adjustments.
