@@ -1843,587 +1843,587 @@ body:not(.search) .trail-end > span,
 	}
 }
 
-:root .u-m {
+:not(#\9) .u-m {
 	margin: 1.5rem;
 }
 
-:root .u-mt {
+:not(#\9) .u-mt {
 	margin-top: 1.5rem;
 }
 
-:root .u-mb {
+:not(#\9) .u-mb {
 	margin-bottom: 1.5rem;
 }
 
-:root .u-mr {
+:not(#\9) .u-mr {
 	margin-right: 1.5rem;
 }
 
-:root .u-ml {
+:not(#\9) .u-ml {
 	margin-left: 1.5rem;
 }
 
-:root .u-m05 {
+:not(#\9) .u-m05 {
 	margin: 0.5rem;
 }
 
-:root .u-mt05 {
+:not(#\9) .u-mt05 {
 	margin-top: 0.5rem;
 }
 
-:root .u-mb05 {
+:not(#\9) .u-mb05 {
 	margin-bottom: 0.5rem;
 }
 
-:root .u-mr05 {
+:not(#\9) .u-mr05 {
 	margin-right: 0.5rem;
 }
 
-:root .u-ml05 {
+:not(#\9) .u-ml05 {
 	margin-left: 0.5rem;
 }
 
-:root .u-m25 {
+:not(#\9) .u-m25 {
 	margin: 2.5rem;
 }
 
-:root .u-m1 {
+:not(#\9) .u-m1 {
 	margin: 1rem;
 }
 
-:root .u-mt1 {
+:not(#\9) .u-mt1 {
 	margin-top: 1rem;
 }
 
-:root .u-mr1 {
+:not(#\9) .u-mr1 {
 	margin-right: 1rem;
 }
 
-:root .u-mb1 {
+:not(#\9) .u-mb1 {
 	margin-bottom: 1rem;
 }
 
-:root .u-ml1 {
+:not(#\9) .u-ml1 {
 	margin-left: 1rem;
 }
 
-:root .u-m2 {
+:not(#\9) .u-m2 {
 	margin: 2rem;
 }
 
-:root .u-mt2 {
+:not(#\9) .u-mt2 {
 	margin-top: 2rem;
 }
 
-:root .u-mr2 {
+:not(#\9) .u-mr2 {
 	margin-right: 2rem;
 }
 
-:root .u-mb2 {
+:not(#\9) .u-mb2 {
 	margin-bottom: 2rem;
 }
 
-:root .u-ml2 {
+:not(#\9) .u-ml2 {
 	margin-left: 2rem;
 }
 
-:root .u-m3 {
+:not(#\9) .u-m3 {
 	margin: 3rem;
 }
 
-:root .u-mt3 {
+:not(#\9) .u-mt3 {
 	margin-top: 3rem;
 }
 
-:root .u-mr3 {
+:not(#\9) .u-mr3 {
 	margin-right: 3rem;
 }
 
-:root .u-mb3 {
+:not(#\9) .u-mb3 {
 	margin-bottom: 3rem;
 }
 
-:root .u-ml3 {
+:not(#\9) .u-ml3 {
 	margin-left: 3rem;
 }
 
-:root .u-m4 {
+:not(#\9) .u-m4 {
 	margin: 4rem;
 }
 
-:root .u-mt4 {
+:not(#\9) .u-mt4 {
 	margin-top: 4rem;
 }
 
-:root .u-mr4 {
+:not(#\9) .u-mr4 {
 	margin-right: 4rem;
 }
 
-:root .u-mb4 {
+:not(#\9) .u-mb4 {
 	margin-bottom: 4rem;
 }
 
-:root .u-ml4 {
+:not(#\9) .u-ml4 {
 	margin-left: 4rem;
 }
 
-:root .u-mx1 {
+:not(#\9) .u-mx1 {
 	margin-right: 1rem;
 	margin-left: 1rem;
 }
 
-:root .u-mx2 {
+:not(#\9) .u-mx2 {
 	margin-right: 2rem;
 	margin-left: 2rem;
 }
 
-:root .u-mx3 {
+:not(#\9) .u-mx3 {
 	margin-right: 3rem;
 	margin-left: 3rem;
 }
 
-:root .u-mx4 {
+:not(#\9) .u-mx4 {
 	margin-right: 4rem;
 	margin-left: 4rem;
 }
 
-:root .u-mtn1 {
+:not(#\9) .u-mtn1 {
 	margin-top: -1rem;
 }
 
-:root .u-mbn1 {
+:not(#\9) .u-mbn1 {
 	margin-bottom: -1rem;
 }
 
-:root .u-mln1 {
+:not(#\9) .u-mln1 {
 	margin-left: -1rem;
 }
 
-:root .u-mrn1 {
+:not(#\9) .u-mrn1 {
 	margin-right: -1rem;
 }
 
-:root .u-mxn1 {
+:not(#\9) .u-mxn1 {
 	margin-right: -1rem;
 	margin-left: -1rem;
 }
 
-:root .u-mtn2 {
+:not(#\9) .u-mtn2 {
 	margin-top: -2rem;
 }
 
-:root .u-mbn2 {
+:not(#\9) .u-mbn2 {
 	margin-bottom: -2rem;
 }
 
-:root .u-mtn3 {
+:not(#\9) .u-mtn3 {
 	margin-top: -3rem;
 }
 
-:root .u-mbn3 {
+:not(#\9) .u-mbn3 {
 	margin-bottom: -3rem;
 }
 
-:root .u-mtn4 {
+:not(#\9) .u-mtn4 {
 	margin-top: -4rem;
 }
 
-:root .u-mbn4 {
+:not(#\9) .u-mbn4 {
 	margin-bottom: -4rem;
 }
 
-:root .u-mxn2 {
+:not(#\9) .u-mxn2 {
 	margin-right: -2rem;
 	margin-left: -2rem;
 }
 
-:root .u-mrn3 {
+:not(#\9) .u-mrn3 {
 	margin-right: -3rem;
 }
 
-:root .u-mrn4 {
+:not(#\9) .u-mrn4 {
 	margin-right: -4rem;
 }
 
-:root .u-mln3 {
+:not(#\9) .u-mln3 {
 	margin-left: -3rem;
 }
 
-:root .u-mln4 {
+:not(#\9) .u-mln4 {
 	margin-left: -4rem;
 }
 
-:root .u-mxn3 {
+:not(#\9) .u-mxn3 {
 	margin-right: -3rem;
 	margin-left: -3rem;
 }
 
-:root .u-mxn4 {
+:not(#\9) .u-mxn4 {
 	margin-right: -4rem;
 	margin-left: -4rem;
 }
 
-:root .u-ml-auto {
+:not(#\9) .u-ml-auto {
 	margin-left: auto;
 }
 
-:root .u-mr-auto {
+:not(#\9) .u-mr-auto {
 	margin-right: auto;
 }
 
-:root .u-mt-auto {
+:not(#\9) .u-mt-auto {
 	margin-top: auto;
 }
 
-:root .u-mb-auto {
+:not(#\9) .u-mb-auto {
 	margin-bottom: auto;
 }
 
-:root .u-mx-auto {
+:not(#\9) .u-mx-auto {
 	margin-right: auto;
 	margin-left: auto;
 }
 
-:root .u-m0 {
+:not(#\9) .u-m0 {
 	margin: 0;
 }
 
-:root .u-mt0 {
+:not(#\9) .u-mt0 {
 	margin-top: 0;
 }
 
-:root .u-mr0 {
+:not(#\9) .u-mr0 {
 	margin-right: 0;
 }
 
-:root .u-mb0 {
+:not(#\9) .u-mb0 {
 	margin-bottom: 0;
 }
 
-:root .u-ml0 {
+:not(#\9) .u-ml0 {
 	margin-left: 0;
 }
 
-:root .u-mx0 {
+:not(#\9) .u-mx0 {
 	margin-right: 0;
 	margin-left: 0;
 }
 
 @media (min-width: 40rem) {
-	:root .u-m2-md {
+	:not(#\9) .u-m2-md {
 		margin: 2rem;
 	}
 
-	:root .u-mt2-md {
+	:not(#\9) .u-mt2-md {
 		margin-top: 2rem;
 	}
 
-	:root .u-mr2-md {
+	:not(#\9) .u-mr2-md {
 		margin-right: 2rem;
 	}
 
-	:root .u-mb2-md {
+	:not(#\9) .u-mb2-md {
 		margin-bottom: 2rem;
 	}
 
-	:root .u-ml2-md {
+	:not(#\9) .u-ml2-md {
 		margin-left: 2rem;
 	}
 
-	:root .u-m3-md {
+	:not(#\9) .u-m3-md {
 		margin: 3rem;
 	}
 
-	:root .u-mt3-md {
+	:not(#\9) .u-mt3-md {
 		margin-top: 3rem;
 	}
 
-	:root .u-mr3-md {
+	:not(#\9) .u-mr3-md {
 		margin-right: 3rem;
 	}
 
-	:root .u-mb3-md {
+	:not(#\9) .u-mb3-md {
 		margin-bottom: 3rem;
 	}
 
-	:root .u-ml3-md {
+	:not(#\9) .u-ml3-md {
 		margin-left: 3rem;
 	}
 
-	:root .u-m4-md {
+	:not(#\9) .u-m4-md {
 		margin: 4rem;
 	}
 
-	:root .u-mt4-md {
+	:not(#\9) .u-mt4-md {
 		margin-top: 4rem;
 	}
 
-	:root .u-mr4-md {
+	:not(#\9) .u-mr4-md {
 		margin-right: 4rem;
 	}
 
-	:root .u-mb4-md {
+	:not(#\9) .u-mb4-md {
 		margin-bottom: 4rem;
 	}
 
-	:root .u-ml4-md {
+	:not(#\9) .u-ml4-md {
 		margin-left: 4rem;
 	}
 
-	:root .u-mxn2-md {
+	:not(#\9) .u-mxn2-md {
 		margin-right: -2rem;
 		margin-left: -2rem;
 	}
 
-	:root .u-mxn3-md {
+	:not(#\9) .u-mxn3-md {
 		margin-right: -3rem;
 		margin-left: -3rem;
 	}
 
-	:root .u-mxn4-md {
+	:not(#\9) .u-mxn4-md {
 		margin-right: -4rem;
 		margin-left: -4rem;
 	}
 
-	:root .u-mx-auto-md {
+	:not(#\9) .u-mx-auto-md {
 		margin-right: auto;
 		margin-left: auto;
 	}
 }
 
 @media (min-width: 64rem) {
-	:root .u-mx4-lg {
+	:not(#\9) .u-mx4-lg {
 		margin-right: 4rem;
 		margin-left: 4rem;
 	}
 }
 
-:root .u-p {
+:not(#\9) .u-p {
 	padding: 1.5rem;
 }
 
-:root .u-pt {
+:not(#\9) .u-pt {
 	padding-top: 1.5rem;
 }
 
-:root .u-pb {
+:not(#\9) .u-pb {
 	padding-bottom: 1.5rem;
 }
 
-:root .u-pr {
+:not(#\9) .u-pr {
 	padding-right: 1.5rem;
 }
 
-:root .u-pl {
+:not(#\9) .u-pl {
 	padding-left: 1.5rem;
 }
 
-:root .u-py {
+:not(#\9) .u-py {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 }
 
-:root .u-px {
+:not(#\9) .u-px {
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
 }
 
-:root .u-p05 {
+:not(#\9) .u-p05 {
 	padding: 0.5rem;
 }
 
-:root .u-p15 {
+:not(#\9) .u-p15 {
 	padding: 1.5rem;
 }
 
-:root .u-p25 {
+:not(#\9) .u-p25 {
 	padding: 2.5rem;
 }
 
-:root .u-p1 {
+:not(#\9) .u-p1 {
 	padding: 1rem;
 }
 
-:root .u-p2 {
+:not(#\9) .u-p2 {
 	padding: 2rem;
 }
 
-:root .u-p3 {
+:not(#\9) .u-p3 {
 	padding: 3rem;
 }
 
-:root .u-p4 {
+:not(#\9) .u-p4 {
 	padding: 4rem;
 }
 
-:root .u-p0 {
+:not(#\9) .u-p0 {
 	padding: 0;
 }
 
-:root .u-py05 {
+:not(#\9) .u-py05 {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 }
 
-:root .u-py1 {
+:not(#\9) .u-py1 {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
 
-:root .u-px1 {
+:not(#\9) .u-px1 {
 	padding-right: 1rem;
 	padding-left: 1rem;
 }
 
-:root .u-pt1 {
+:not(#\9) .u-pt1 {
 	padding-top: 1rem;
 }
 
-:root .u-pb1 {
+:not(#\9) .u-pb1 {
 	padding-bottom: 1rem;
 }
 
-:root .u-py2 {
+:not(#\9) .u-py2 {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
 
-:root .u-px2 {
+:not(#\9) .u-px2 {
 	padding-right: 2rem;
 	padding-left: 2rem;
 }
 
-:root .u-pt2 {
+:not(#\9) .u-pt2 {
 	padding-top: 2rem;
 }
 
-:root .u-pb2 {
+:not(#\9) .u-pb2 {
 	padding-bottom: 2rem;
 }
 
-:root .u-pl3 {
+:not(#\9) .u-pl3 {
 	padding-left: 3rem;
 }
 
-:root .u-py3 {
+:not(#\9) .u-py3 {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
 
-:root .u-px3 {
+:not(#\9) .u-px3 {
 	padding-right: 3rem;
 	padding-left: 3rem;
 }
 
-:root .u-pt3 {
+:not(#\9) .u-pt3 {
 	padding-top: 3rem;
 }
 
-:root .u-pb3 {
+:not(#\9) .u-pb3 {
 	padding-bottom: 3rem;
 }
 
-:root .u-pl4 {
+:not(#\9) .u-pl4 {
 	padding-left: 4rem;
 }
 
-:root .u-py4 {
+:not(#\9) .u-py4 {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 }
 
-:root .u-px4 {
+:not(#\9) .u-px4 {
 	padding-right: 4rem;
 	padding-left: 4rem;
 }
 
-:root .u-pt4 {
+:not(#\9) .u-pt4 {
 	padding-top: 4rem;
 }
 
-:root .u-pb4 {
+:not(#\9) .u-pb4 {
 	padding-bottom: 4rem;
 }
 
-:root .u-py0 {
+:not(#\9) .u-py0 {
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
-:root .u-px0 {
+:not(#\9) .u-px0 {
 	padding-right: 0;
 	padding-left: 0;
 }
 
-:root .u-pt0 {
+:not(#\9) .u-pt0 {
 	padding-top: 0;
 }
 
-:root .u-pb0 {
+:not(#\9) .u-pb0 {
 	padding-bottom: 0;
 }
 
 @media (min-width: 40rem) {
-	:root .u-px1-md {
+	:not(#\9) .u-px1-md {
 		padding-right: 1rem;
 		padding-left: 1rem;
 	}
 
-	:root .u-p2-md {
+	:not(#\9) .u-p2-md {
 		padding: 2rem;
 	}
 
-	:root .u-py2-md {
+	:not(#\9) .u-py2-md {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 	}
 
-	:root .u-px2-md {
+	:not(#\9) .u-px2-md {
 		padding-right: 2rem;
 		padding-left: 2rem;
 	}
 
-	:root .u-p3-md {
+	:not(#\9) .u-p3-md {
 		padding: 3rem;
 	}
 
-	:root .u-py3-md {
+	:not(#\9) .u-py3-md {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
 
-	:root .u-px3-md {
+	:not(#\9) .u-px3-md {
 		padding-right: 3rem;
 		padding-left: 3rem;
 	}
 
-	:root .u-pt3-md {
+	:not(#\9) .u-pt3-md {
 		padding-top: 3rem;
 	}
 
-	:root .u-pb3-md {
+	:not(#\9) .u-pb3-md {
 		padding-bottom: 3rem;
 	}
 
-	:root .u-p4-md {
+	:not(#\9) .u-p4-md {
 		padding: 4rem;
 	}
 
-	:root .u-py4-md {
+	:not(#\9) .u-py4-md {
 		padding-top: 4rem;
 		padding-bottom: 4rem;
 	}
 
-	:root .u-px4-md {
+	:not(#\9) .u-px4-md {
 		padding-right: 4rem;
 		padding-left: 4rem;
 	}
 
-	:root .u-pt4-md {
+	:not(#\9) .u-pt4-md {
 		padding-top: 4rem;
 	}
 
-	:root .u-pb4-md {
+	:not(#\9) .u-pb4-md {
 		padding-bottom: 4rem;
 	}
 }
@@ -2567,14 +2567,12 @@ body:not(.search) .trail-end > span,
 .u-flexed-center {
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
 	align-self: center;
 }
 
 .u-flexed-stretch {
 	-webkit-align-self: stretch;
 	-ms-flex-item-align: stretch;
-	-ms-grid-row-align: stretch;
 	align-self: stretch;
 }
 
@@ -2780,126 +2778,126 @@ body:not(.search) .trail-end > span,
 	width: 100%;
 }
 
-:root .u-f1 {
+:not(#\9) .u-f1 {
 	font-size: 1rem;
 }
 
-:root .u-h0 {
+:not(#\9) .u-h0 {
 	font-size: 2.5rem;
 }
 
 @media (min-width: 40rem) {
-	:root .u-h0 {
+	:not(#\9) .u-h0 {
 		font-size: 3.75rem;
 	}
 }
 
-:root .u-h1 {
+:not(#\9) .u-h1 {
 	font-size: 2.5rem;
 }
 
-:root .u-h2 {
+:not(#\9) .u-h2 {
 	font-size: 2rem;
 }
 
-:root .u-h3 {
+:not(#\9) .u-h3 {
 	font-size: 1.75rem;
 }
 
-:root .u-h4 {
+:not(#\9) .u-h4 {
 	font-size: 1.5rem;
 }
 
-:root .u-f-plus,
-:root .u-h5 {
+:not(#\9) .u-f-plus,
+:not(#\9) .u-h5 {
 	font-size: 1.25rem;
 }
 
-:root .u-f-minus,
-:root .u-h6 {
+:not(#\9) .u-f-minus,
+:not(#\9) .u-h6 {
 	font-size: 0.9rem;
 }
 
-:root .u-lh {
+:not(#\9) .u-lh {
 	line-height: 1.5;
 }
 
-:root .u-lh-1 {
+:not(#\9) .u-lh-1 {
 	line-height: 1;
 }
 
-:root .u-lh-2 {
+:not(#\9) .u-lh-2 {
 	line-height: 2;
 }
 
-:root .u-light {
+:not(#\9) .u-light {
 	font-weight: 300;
 }
 
-:root .u-bold {
+:not(#\9) .u-bold {
 	font-weight: 600;
 }
 
-:root .u-text-read {
+:not(#\9) .u-text-read {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Liberation Sans", "Helvetica Neue", sans-serif;
 }
 
-:root .u-regular,
-:root .u-normal {
+:not(#\9) .u-regular,
+:not(#\9) .u-normal {
 	font-weight: 400;
 }
 
-:root .u-italic {
+:not(#\9) .u-italic {
 	font-style: italic;
 }
 
-:root .u-caps {
+:not(#\9) .u-caps {
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
 
-:root .u-text-shadow {
+:not(#\9) .u-text-shadow {
 	text-shadow: 0.063rem 0.063rem 0.313rem rgba(55, 64, 70, 0.5);
 }
 
-:root .u-text-left {
+:not(#\9) .u-text-left {
 	text-align: left;
 }
 
-:root .u-text-center {
+:not(#\9) .u-text-center {
 	text-align: center;
 }
 
-:root .u-text-right {
+:not(#\9) .u-text-right {
 	text-align: right;
 }
 
-:root .u-text-justify {
+:not(#\9) .u-text-justify {
 	text-align: justify;
 }
 
-:root .u-nowrap {
+:not(#\9) .u-nowrap {
 	white-space: nowrap;
 }
 
-:root .u-break-word {
+:not(#\9) .u-break-word {
 	word-wrap: break-word;
 }
 
-:root .u-truncate {
+:not(#\9) .u-truncate {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-:root .u-lead,
-:root .intro-paragraph {
+:not(#\9) .u-lead,
+:not(#\9) .intro-paragraph {
 	font-weight: 300;
 	font-size: 1.25rem;
 }
 
-:root .u-dropcap::first-letter {
+:not(#\9) .u-dropcap::first-letter {
 	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 	float: left;
 	margin-right: 0.15em;
@@ -2910,7 +2908,7 @@ body:not(.search) .trail-end > span,
 }
 
 @media (min-width: 40rem) {
-	:root .u-dropcap::first-letter {
+	:not(#\9) .u-dropcap::first-letter {
 		font-size: 3.75rem;
 	}
 }
@@ -3452,32 +3450,32 @@ body:not(.search) .trail-end > span,
 	background-color: #20924c;
 }
 
-:root .u-color-inherit,
-:root .u-color-inherit * {
+:not(#\9) .u-color-inherit,
+:not(#\9) .u-color-inherit * {
 	color: inherit;
 }
 
-:root .u-currentcolor_a a {
+:not(#\9) .u-currentcolor_a a {
 	color: currentColor;
 }
 
-:root .u-currentcolor {
+:not(#\9) .u-currentcolor {
 	color: currentColor;
 }
 
-:root .u-no-link {
+:not(#\9) .u-no-link {
 	box-shadow: none;
 }
 
-:root .no-pseudo:before {
+:not(#\9) .no-pseudo:before {
 	content: none;
 }
 
-:root .no-pseudo:after {
+:not(#\9) .no-pseudo:after {
 	content: none;
 }
 
-:root .u-link[class] {
+:not(#\9) .u-link[class] {
 	color: #1f2d8f;
 	text-decoration: none;
 	font-weight: 600;
@@ -3490,80 +3488,80 @@ body:not(.search) .trail-end > span,
 	box-shadow: inset 0 -1px 0 0 rgba(189, 196, 201, 0.4);
 }
 
-:root .u-link[class]:hover,
-:root .u-link[class].active,
-:root .u-link[class]:active,
-:root .u-link[class]:focus {
+:not(#\9) .u-link[class]:hover,
+:not(#\9) .u-link[class].active,
+:not(#\9) .u-link[class]:active,
+:not(#\9) .u-link[class]:focus {
 	color: #293ab9;
 	background-color: rgba(189, 196, 201, 0.2);
 	transition-duration: 0.25s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-:root .u-strip-space {
+:not(#\9) .u-strip-space {
 	margin: 0;
 	padding: 0;
 }
 
-:root .u-strip-space :root > * {
+:not(#\9) .u-strip-space :not(#\9) > * {
 	margin: 0;
 	padding: 0;
 }
 
-:root .u-spacer1 {
+:not(#\9) .u-spacer1 {
 	min-height: 1rem;
 }
 
-:root .u-spacer16 {
+:not(#\9) .u-spacer16 {
 	min-height: 1.6rem;
 }
 
-:root .u-spacer20 {
+:not(#\9) .u-spacer20 {
 	min-height: 2rem;
 }
 
-:root .u-spacer3 {
+:not(#\9) .u-spacer3 {
 	min-height: 3rem;
 }
 
-:root .u-opacity {
+:not(#\9) .u-opacity {
 	opacity: 0.7;
 }
 
-:root .u-opacity1 {
+:not(#\9) .u-opacity1 {
 	opacity: 1;
 }
 
-:root .hidden {
+:not(#\9) .hidden {
 	display: none;
 }
 
 @media (max-width: 20rem) {
-	:root .hidden-xs {
+	:not(#\9) .hidden-xs {
 		display: none;
 	}
 }
 
 @media (min-width: 21rem) {
-	:root .hidden-sm {
+	:not(#\9) .hidden-sm {
 		display: none;
 	}
 }
 
 @media (min-width: 40rem) {
-	:root .hidden-md {
+	:not(#\9) .hidden-md {
 		display: none;
 	}
 }
 
 @media (min-width: 64rem) {
-	:root .hidden-lg {
+	:not(#\9) .hidden-lg {
 		display: none;
 	}
 }
 
-:root .screen-reader-text,
-:root .visuallyhidden {
+:not(#\9) .screen-reader-text,
+:not(#\9) .visuallyhidden {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -3575,8 +3573,8 @@ body:not(.search) .trail-end > span,
 	white-space: nowrap;
 }
 
-:root .visuallyhidden.focusable:active,
-:root .visuallyhidden.focusable:focus {
+:not(#\9) .visuallyhidden.focusable:active,
+:not(#\9) .visuallyhidden.focusable:focus {
 	clip: auto;
 	height: auto;
 	margin: 0;
@@ -3586,17 +3584,17 @@ body:not(.search) .trail-end > span,
 	white-space: inherit;
 }
 
-:root .clear::before,
-:root .clear::after {
+:not(#\9) .clear::before,
+:not(#\9) .clear::after {
 	content: "";
 	display: table;
 }
 
-:root .clear::after {
+:not(#\9) .clear::after {
 	clear: both;
 }
 
-:root .disabled {
+:not(#\9) .disabled {
 	pointer-events: none;
 	cursor: default;
 	opacity: 0.5;
@@ -4572,7 +4570,6 @@ a.skip-link:focus {
 	max-height: 5rem;
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
 	align-self: center;
 	padding: 0.5rem;
 }
