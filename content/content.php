@@ -14,7 +14,7 @@
 
 	<?php if ( has_excerpt() ) { ?>
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
-			<?php the_content(); ?>
+			<?php the_excerpt(); ?>
 		</div>
 	<?php } ?>
 
