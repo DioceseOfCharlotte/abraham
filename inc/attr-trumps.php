@@ -48,6 +48,7 @@ class Attr_Trumps {
 			'branding'                  => 'u-flexed-auto u-text-center u-mln1',
 			'site_title'                => 'u-text-display u-h3 u-color-inherit u-p0',
 			'site_description'          => 'u-text-display u-h4 u-p0 u-text-3',
+
 			// CONTENT.
 			'content'                   => 'o-cell o-grid u-m0 u-p0 u-1of1',
 			'content_with_sidebar'      => 'o-cell o-grid u-m0 u-p0 u-1of1 u-2of3-md',
@@ -63,7 +64,7 @@ class Attr_Trumps {
 
 			'post_archive'              => 'o-cell u-shadow1 u-br',
 			'entry_header'              => 'u-1of1',
-			'entry_title'               => 'u-p u-py1 u-h3 u-flexed-auto u-text-display',
+			'entry_title'               => 'u-h3 u-flexed-auto u-text-display',
 			'entry_content'             => 'u-p25',
 			'entry_content_wide'        => '',
 			'entry_summary'             => 'u-p u-pt1 show-icons',
@@ -77,7 +78,7 @@ class Attr_Trumps {
 			// SIDEBAR.
 			'sidebar_primary'           => 'o-cell o-grid u-bg-white u-shadow2 u-p u-pb0 u-mb u-br',
 			'sidebar_footer'            => 'o-grid u-pt u-container-wide',
-			'sidebar_horizontal'        => 'u-1of1 u-flex-ja',
+			'sidebar_horizontal'        => 'u-1of1 u-flex-ja u-mx0',
 			'sidebar_right'             => 'u-1of1 u-1of3-md u-flex-col',
 			'sidebar_left'              => 'u-1of1 u-1of3-md u-flex-col',
 
@@ -149,6 +150,8 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function grid( $attr ) {
+
+		$attr['id']     = 'content';
 		$attr['class']     = 'content-layout';
 		if ( ! $this->args['grid'] ) {
 			return $attr;
@@ -193,6 +196,12 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function header( $attr ) {
+
+		$attr['id']        = 'header';
+		$attr['class']     = 'site-header';
+		$attr['itemscope'] = 'itemscope';
+		$attr['itemtype']  = 'http://schema.org/WPHeader';
+
 		if ( ! $this->args['header'] ) {
 			return $attr;
 		}
@@ -209,6 +218,12 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function footer( $attr ) {
+
+		$attr['id']        = 'footer';
+		$attr['class']     = 'site-footer';
+		$attr['itemscope'] = 'itemscope';
+		$attr['itemtype']  = 'http://schema.org/WPFooter';
+
 		if ( ! $this->args['footer'] ) {
 			return $attr;
 		}
@@ -227,6 +242,9 @@ class Attr_Trumps {
 	public function content( $attr ) {
 		$attr['id']       = 'main';
 		$attr['class']    = 'site-main';
+		if ( ! is_singular( 'post' ) && ! is_home() && ! is_archive() ) {
+			$attr['itemprop'] = 'mainContentOfPage';
+		}
 
 		if ( ! $this->args['content'] ) {
 			return $attr;
@@ -260,8 +278,19 @@ class Attr_Trumps {
 	 * @param  string $context A specific context (e.g., 'primary').
 	 */
 	public function sidebar( $attr, $context ) {
+
+		$attr['class'] = 'sidebar';
+
 		if ( empty( $context ) ) {
 			return $attr;
+		}
+
+		$attr['class'] .= " sidebar-{$context}";
+		$attr['id']     = "sidebar-{$context}";
+		$sidebar_name = hybrid_get_sidebar_name( $context );
+		if ( $sidebar_name ) {
+			// Translators: The %s is the sidebar name. This is used for the 'aria-label' attribute.
+			$attr['aria-label'] = esc_attr( sprintf( _x( '%s Sidebar', 'sidebar aria label', 'hybrid-core' ), $sidebar_name ) );
 		}
 
 		if ( 'primary' === $context ) {
@@ -290,11 +319,28 @@ class Attr_Trumps {
 	 * @param  string $context A specific context (e.g., 'primary').
 	 */
 	public function menu( $attr, $context ) {
+		$attr['class'] = 'menu';
+
+		$attr['itemscope']  = 'itemscope';
+		$attr['itemtype']   = 'http://schema.org/SiteNavigationElement';
+
 		if ( empty( $context ) ) {
 			return $attr;
 		}
 
-		$attr['class']      .= " {$this->args['menu_all']}";
+		$attr['class'] .= " menu-{$context}";
+		$attr['id']     = "menu-{$context}";
+
+		$menu_name = hybrid_get_menu_location_name( $context );
+
+		if ( $menu_name ) {
+			// Translators: The %s is the menu name. This is used for the 'aria-label' attribute.
+			$attr['aria-label'] = esc_attr( sprintf( _x( '%s Menu', 'nav menu aria label', 'hybrid-core' ), $menu_name ) );
+		}
+
+		if ( $this->args['menu_all'] ) {
+			$attr['class']      .= " {$this->args['menu_all']}";
+		}
 
 		if ( 'primary' === $context ) {
 			$attr['class']      .= " {$this->args['menu_primary']}";
@@ -314,6 +360,10 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function branding( $attr ) {
+
+		$attr['id']    = 'branding';
+		$attr['class'] = 'site-branding';
+
 		if ( ! $this->args['branding'] ) {
 			return $attr;
 		}
@@ -330,6 +380,11 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function site_title( $attr ) {
+
+		$attr['id']       = 'site-title';
+		$attr['class']    = 'site-title';
+		$attr['itemprop'] = 'name';
+
 		if ( ! $this->args['site_title'] ) {
 			return $attr;
 		}
@@ -346,6 +401,10 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function site_description( $attr ) {
+
+		$attr['id']       = 'site-description';
+		$attr['class']    = 'site-description';
+
 		if ( ! $this->args['site_description'] ) {
 			return $attr;
 		}
@@ -364,6 +423,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function page_header( $attr ) {
+
+		$attr['class']     = 'archive-header';
+
 		if ( ! $this->args['page_header'] ) {
 			return $attr;
 		}
@@ -380,6 +442,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function page_title( $attr ) {
+
+		$attr['class']     = 'archive-title';
+
 		if ( ! $this->args['page_title'] ) {
 			return $attr;
 		}
@@ -396,6 +461,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function archive_description( $attr ) {
+
+		$attr['class']     = 'archive-description';
+
 		if ( ! $this->args['archive_description'] ) {
 			return $attr;
 		}
@@ -441,6 +509,10 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function entry_title( $attr ) {
+
+		$attr['class']    = 'entry-title';
+		$attr['itemprop'] = 'headline';
+
 		if ( ! $this->args['entry_title'] ) {
 			return $attr;
 		}
@@ -457,7 +529,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function entry_header( $attr ) {
+
 		$attr['class']     = 'entry-header';
+
 		if ( ! $this->args['entry_header'] ) {
 			return $attr;
 		}
@@ -474,6 +548,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function entry_content( $attr ) {
+
+		$attr['class'] = 'entry-content';
+
 		if ( ! $this->args['entry_content'] ) {
 			return $attr;
 		}
@@ -496,6 +573,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function entry_summary( $attr ) {
+
+		$attr['class']    = 'entry-summary';
+
 		if ( ! $this->args['entry_summary'] ) {
 			return $attr;
 		}
@@ -512,7 +592,9 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function entry_footer( $attr ) {
+
 		$attr['class']     = 'entry-footer';
+
 		if ( ! $this->args['entry_footer'] ) {
 			return $attr;
 		}

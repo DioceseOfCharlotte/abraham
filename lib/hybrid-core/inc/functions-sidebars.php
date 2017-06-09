@@ -6,7 +6,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -61,4 +61,18 @@ function hybrid_get_sidebar_name( $sidebar_id ) {
 	global $wp_registered_sidebars;
 
 	return isset( $wp_registered_sidebars[ $sidebar_id ] ) ? $wp_registered_sidebars[ $sidebar_id ]['name'] : '';
+}
+
+/**
+ * Checks if a widget exists.  Pass in the widget class name.  This function is useful for
+ * checking if the widget exists before directly calling `the_widget()` within a template.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  string  $widget
+ * @return bool
+ */
+function hybrid_widget_exists( $widget ) {
+
+	return isset( $GLOBALS['wp_widget_factory']->widgets[ $widget ] );
 }

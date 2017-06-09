@@ -6,7 +6,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -48,10 +48,26 @@ function hybrid_add_post_type_support() {
 
 	add_post_type_support( 'forum',             'theme-layouts' );
 	add_post_type_support( 'literature',        'theme-layouts' );
-	add_post_type_support( 'portfolio_item',    'theme-layouts' );
 	add_post_type_support( 'portfolio_project', 'theme-layouts' );
 	add_post_type_support( 'product',           'theme-layouts' );
 	add_post_type_support( 'restaurant_item',   'theme-layouts' );
+}
+
+/**
+ * This is a wrapper function for core WP's `get_theme_mod()` function.  Core doesn't
+ * provide a filter hook for the default value (useful for child themes).  The purpose
+ * of this function is to provide that additional filter hook.  To filter the final
+ * theme mod, use the core `theme_mod_{$name}` filter hook.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  string  $name
+ * @param  mixed   $default
+ * @return mixed
+ */
+function hybrid_get_theme_mod( $name, $default = false ) {
+
+	return get_theme_mod( $name, apply_filters( "hybrid_theme_mod_{$name}_default", $default ) );
 }
 
 /**
@@ -116,14 +132,14 @@ function hybrid_locate_theme_file( $file_names ) {
 	foreach ( (array) $file_names as $file ) {
 
 		// If the file exists in the stylesheet (child theme) directory.
-		if ( is_child_theme() && file_exists( HYBRID_CHILD . $file ) ) {
-			$located = HYBRID_CHILD_URI . $file;
+		if ( is_child_theme() && file_exists( hybrid()->child_dir . $file ) ) {
+			$located = hybrid()->child_uri . $file;
 			break;
 		}
 
 		// If the file exists in the template (parent theme) directory.
-		elseif ( file_exists( HYBRID_PARENT . $file ) ) {
-			$located = HYBRID_PARENT_URI . $file;
+		elseif ( file_exists( hybrid()->parent_dir . $file ) ) {
+			$located = hybrid()->parent_uri . $file;
 			break;
 		}
 	}
@@ -197,7 +213,47 @@ function hybrid_get_menu_name( $location ) {
  * @return string
  */
 function hybrid_get_min_suffix() {
-	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+	return hybrid_is_script_debug() ? '' : '.min';
+}
+
+/**
+ * Conditional check to determine if we are in script debug mode.  This is generally used
+ * to decide whether to load development versions of scripts/styles.
+ *
+ * @since  4.0.0
+ * @access public
+ * @return bool
+ */
+function hybrid_is_script_debug() {
+
+	return apply_filters( 'hybrid_is_script_debug', defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG );
+}
+
+/**
+ * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  string  $value
+ * @return string
+ */
+function hybrid_sprintf_theme_dir( $value ) {
+
+	return sprintf( $value, get_template_directory(), get_stylesheet_directory() );
+}
+
+/**
+ * Replaces `%1$s` and `%2$s` with the template and stylesheet directory URIs.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  string  $value
+ * @return string
+ */
+function hybrid_sprintf_theme_uri( $value ) {
+
+	return sprintf( $value, get_template_directory_uri(), get_stylesheet_directory_uri() );
 }
 
 /**
@@ -312,7 +368,7 @@ function hybrid_archive_description_filter( $desc ) {
 /**
  * Filters `get_the_archve_description` to add custom formatting.
  *
- * @since  3.1.0
+ * @since  4.0.0
  * @access public
  * @param  string  $desc
  * @return string
@@ -320,4 +376,22 @@ function hybrid_archive_description_filter( $desc ) {
 function hybrid_archive_description_format( $desc ) {
 
 	return apply_filters( 'hybrid_archive_description', $desc );
+}
+
+/**
+ * Compatibility function that stores the old post template using the core WP
+ * post template naming scheme added in WordPress 4.7.0.  Deletes the old
+ * meta.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  int     $post_id
+ * @param  string  $template
+ * @return void
+ */
+function hybrid_post_template_compat( $post_id, $template ) {
+
+	update_post_meta( $post_id, '_wp_page_template', $template );
+
+	delete_post_meta( $post_id, sprintf( '_wp_%s_template', get_post_type( $post_id ) ) );
 }

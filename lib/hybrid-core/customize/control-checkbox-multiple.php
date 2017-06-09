@@ -6,7 +6,7 @@
  * @package    Hybrid
  * @subpackage Customize
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -54,6 +54,15 @@ class Hybrid_Customize_Control_Checkbox_Multiple extends WP_Customize_Control {
 		$this->json['link']    = $this->get_link();
 		$this->json['id']      = $this->id;
 	}
+
+	/**
+	 * Don't render the content via PHP.  This control is handled with a JS template.
+	 *
+	 * @since  4.0.0
+	 * @access public
+	 * @return bool
+	 */
+	protected function render_content() {}
 
 	/**
 	 * Underscore JS template to handle the control's output.

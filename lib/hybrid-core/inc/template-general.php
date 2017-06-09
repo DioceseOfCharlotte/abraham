@@ -6,7 +6,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -396,8 +396,8 @@ function hybrid_search_title() {
  */
 function hybrid_get_search_title() {
 
-	// Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
-	return sprintf( esc_html__( 'Search results for &#8220;%s&#8221;', 'hybrid-core' ), get_search_query() );
+	// Translators: %s is the search query.
+	return sprintf( esc_html__( 'Search results for: %s', 'hybrid-core' ), get_search_query() );
 }
 
 /**

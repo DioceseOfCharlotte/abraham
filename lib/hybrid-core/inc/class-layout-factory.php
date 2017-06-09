@@ -7,7 +7,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -69,7 +69,7 @@ class Hybrid_Layout_Factory {
 	 */
 	public function unregister_layout( $name ) {
 
-		if ( $this->layout_exists( $name ) && false === $this->get( $name )->_internal )
+		if ( $this->layout_exists( $name ) && false === $this->get_layout( $name )->_internal )
 			unset( $this->layouts[ $name ] );
 	}
 

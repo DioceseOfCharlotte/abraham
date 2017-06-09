@@ -8,11 +8,10 @@
 /**
  * Define constants and load the Hybrid Core library.
  */
-require get_parent_theme_file_path( 'lib/hybrid-core/hybrid.php' );
+ define( 'HYBRID_DIR', get_parent_theme_file_path( 'lib/hybrid-core/' ) );
+ define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
 
-define( 'HYBRID_DIR', get_parent_theme_file_path( 'lib/hybrid-core/' ) );
-define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
-new Hybrid();
+require get_parent_theme_file_path( 'lib/hybrid-core/hybrid.php' );
 
 /**
  * Initial theme setup.
@@ -55,7 +54,6 @@ require_once get_theme_file_path( 'inc/font-loader.php' );
 
 // Custom template part styles.
 require_once get_theme_file_path( 'inc/customizer/custom-header.php' );
-//require_once get_theme_file_path( 'inc/customizer/custom-background.php' );
 
 // Custom Css class selectors.
 require_once get_theme_file_path( 'inc/attr-trumps.php' );

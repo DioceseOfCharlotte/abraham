@@ -9,7 +9,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -145,7 +145,7 @@ function hybrid_get_theme_layout() {
  * @return string
  */
 function hybrid_get_global_layout() {
-	return get_theme_mod( 'theme_layout', hybrid_get_default_layout() );
+	return hybrid_get_theme_mod( 'theme_layout', hybrid_get_default_layout() );
 }
 
 /**
@@ -159,6 +159,19 @@ function hybrid_get_default_layout() {
 	$support = get_theme_support( 'theme-layouts' );
 
 	return isset( $support[0] ) && isset( $support[0]['default'] ) ? $support[0]['default'] : 'default';
+}
+
+/**
+ * Checks if the current layout matches the layout to check against.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  string  $layout
+ * @return bool
+ */
+function hybrid_is_layout( $layout ) {
+
+	return $layout === hybrid_get_theme_layout();
 }
 
 /**
@@ -212,6 +225,59 @@ function hybrid_has_post_layout( $layout, $post_id = '' ) {
 		$post_id = get_the_ID();
 
 	return $layout == hybrid_get_post_layout( $post_id ) ? true : false;
+}
+
+/**
+ * Gets a term layout.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  int     $term_id
+ * @return bool
+ */
+function hybrid_get_term_layout( $term_id ) {
+	return get_term_meta( $term_id, hybrid_get_layout_meta_key(), true );
+}
+
+/**
+ * Sets a term layout.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  int     $term_id
+ * @param  string  $layout
+ * @return bool
+ */
+function hybrid_set_term_layout( $term_id, $layout ) {
+	return 'default' !== $layout ? update_term_meta( $term_id, hybrid_get_layout_meta_key(), $layout ) : hybrid_delete_term_layout( $term_id );
+}
+
+/**
+ * Deletes a term layout.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  int     $term_id
+ * @return bool
+ */
+function hybrid_delete_term_layout( $term_id ) {
+	return delete_term_meta( $term_id, hybrid_get_layout_meta_key() );
+}
+
+/**
+ * Checks a term if it has a specific layout.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  int     $term_id
+ * @return bool
+ */
+function hybrid_has_term_layout( $layout, $term_id = '' ) {
+
+	if ( ! $term_id )
+		$term_id = get_queried_object_id();
+
+	return $layout == hybrid_get_term_layout( $term_id ) ? true : false;
 }
 
 /**
@@ -288,7 +354,11 @@ function hybrid_filter_layout( $theme_layout ) {
 	elseif ( is_author() )
 		$layout = hybrid_get_user_layout( get_queried_object_id() );
 
-	return !empty( $layout ) && 'default' !== $layout ? $layout : $theme_layout;
+	// If viewing a term archive, get the term layout.
+	elseif ( is_tax() || is_category() || is_tag() )
+		$layout = hybrid_get_term_layout( get_queried_object_id() );
+
+	return !empty( $layout ) && hybrid_layout_exists( $layout ) && 'default' !== $layout ? $layout : $theme_layout;
 }
 
 /**
@@ -303,7 +373,7 @@ function hybrid_filter_layout( $theme_layout ) {
  */
 function hybrid_theme_layouts_support( $supports, $args, $feature ) {
 
-	if ( isset( $args[0] ) && in_array( $args[0], array( 'customize', 'post_meta' ) ) ) {
+	if ( isset( $args[0] ) && in_array( $args[0], array( 'customize', 'post_meta', 'term_meta' ) ) ) {
 
 		if ( is_array( $feature[0] ) && isset( $feature[0][ $args[0] ] ) && false === $feature[0][ $args[0] ] )
 			$supports = false;

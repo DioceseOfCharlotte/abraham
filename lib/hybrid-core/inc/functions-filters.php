@@ -7,7 +7,7 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -36,10 +36,13 @@ add_filter( 'wp_link_pages_link', 'hybrid_link_pages_link', 5 );
 add_filter( 'the_author_posts_link',          'hybrid_the_author_posts_link',          5 );
 add_filter( 'get_comment_author_link',        'hybrid_get_comment_author_link',        5 );
 add_filter( 'get_comment_author_url_link',    'hybrid_get_comment_author_url_link',    5 );
-add_filter( 'comment_reply_link',             'hybrid_comment_reply_link_filter',      5 );
 add_filter( 'get_avatar',                     'hybrid_get_avatar',                     5 );
 add_filter( 'post_thumbnail_html',            'hybrid_post_thumbnail_html',            5 );
 add_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
+
+# Adds custom CSS classes to nav menu items.
+add_filter( 'nav_menu_css_class', 'hybrid_nav_menu_css_class', 5, 2 );
+
 
 /**
  * Filters the excerpt more output with internationalized text and a link to the post.
@@ -155,18 +158,6 @@ function hybrid_get_comment_author_url_link( $link ) {
 }
 
 /**
- * Adds microdata to the comment reply link.
- *
- * @since  2.0.0
- * @access public
- * @param  string  $link
- * @return string
- */
-function hybrid_comment_reply_link_filter( $link ) {
-	return preg_replace( '/(<a\s)/i', '$1itemprop="replyToUrl" ', $link );
-}
-
-/**
  * Adds microdata to avatars.
  *
  * @since  2.0.0
@@ -200,4 +191,23 @@ function hybrid_post_thumbnail_html( $html ) {
  */
 function hybrid_comments_popup_link_attributes( $attr ) {
 	return 'itemprop="discussionURL"';
+}
+
+/**
+ * Adds a custom class to nav menu items that correspond to a post type archive.  The
+ * `menu-item-parent-archive` class is shown when viewing a single post of that belongs
+ * to the given post type.
+ *
+ * @since  4.0.0
+ * @access public
+ * @param  array   $classes
+ * @param  object  $item
+ * @return array
+ */
+function hybrid_nav_menu_css_class( $classes, $item ) {
+
+	if ( 'post_type' === $item->type && is_singular( $item->object ) )
+		$classes[] = 'menu-item-parent-archive';
+
+	return $classes;
 }

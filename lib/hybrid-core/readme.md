@@ -22,7 +22,6 @@ The most basic method is to add the framework folder to your theme folder.  Assu
 
 	// Launch the Hybrid Core framework.
 	require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.php' );
-	new Hybrid();
 
 That will load and initialize the framework.  You'll have to learn the ins-and-outs of the framework though to actually make use of it.  The code itself is very well documented.
 
@@ -56,4 +55,4 @@ I make little money directly from Hybrid Core.  Developers (those who use the fr
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2008&thinsp;&ndash;&thinsp;2015 &copy; [Justin Tadlock](http://justintadlock.com).
+2008&thinsp;&ndash;&thinsp;2017 &copy; [Justin Tadlock](http://justintadlock.com).

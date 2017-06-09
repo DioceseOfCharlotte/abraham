@@ -6,10 +6,38 @@
  * @package    HybridCore
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
+
+/**
+ * Prints the post media from the media grabber.
+ *
+ * @see    Hybrid_Media_Grabber
+ * @since  4.0.0
+ * @access public
+ * @param  array   $args
+ * @return void
+ */
+function hybrid_post_media( $args = array() ) {
+
+	echo hybrid_get_post_media( $args );
+}
+
+/**
+ * Getter function for grabbing the post media.
+ *
+ * @see    Hybrid_Media_Grabber
+ * @since  4.0.0
+ * @access public
+ * @param  array   $args
+ * @return string
+ */
+function hybrid_get_post_media( $args = array() ) {
+
+	return hybrid_media_grabber( $args );
+}
 
 /**
  * Prints media meta directly to the screen.  The `$property` parameter can be any of the public
@@ -171,7 +199,11 @@ function hybrid_get_image_size_links() {
 			// Translators: Media dimensions - 1 is width and 2 is height.
 			$label = sprintf( esc_html__( '%1$s &#215; %2$s', 'hybrid-core' ), number_format_i18n( absint( $image[1] ) ), number_format_i18n( absint( $image[2] ) ) );
 
-			$links[] = sprintf( '<a class="image-size-link">%s</a>', $label );
+			$links[] = sprintf(
+				'<a href="%s" class="image-size-link">%s</a>',
+				esc_url( $image[0] ),
+				$label
+			);
 		}
 	}
 
