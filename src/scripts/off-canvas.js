@@ -18,6 +18,7 @@
 'use strict';
 
 class SideNav {
+
 	constructor() {
 		// Prevent scrolling body when open
 		this.body = document.body;
@@ -142,4 +143,6 @@ class SideNav {
 	}
 }
 
+if (document.body.classList.contains('has-oc-sidebar')) {
 new SideNav();
+}

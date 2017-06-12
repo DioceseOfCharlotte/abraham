@@ -355,7 +355,9 @@ var SideNav = function () {
 	return SideNav;
 }();
 
-new SideNav();
+if (document.body.classList.contains('has-oc-sidebar')) {
+	new SideNav();
+}
 /**
  * eventually
  */
