@@ -73,6 +73,10 @@ const POSTCSS_PLUGINS = [
 ];
 
 const SOURCESJS = [
+	'src/scripts/helpers/element-closest.js',
+	'src/scripts/helpers/js-focus-ring.js',
+	'src/scripts/helpers/onClickOrTap.js',
+	//'src/scripts/helpers/helpers.js',
 	'src/scripts/detabinator.js',
 	'src/scripts/navigation.js',
 	'src/scripts/off-canvas.js',
