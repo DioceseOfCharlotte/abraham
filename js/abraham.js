@@ -1,5 +1,152 @@
 'use strict';
 
+(function (ElementProto) {
+	if (typeof ElementProto.matches !== 'function') {
+		ElementProto.matches = ElementProto.msMatchesSelector || ElementProto.mozMatchesSelector || ElementProto.webkitMatchesSelector || function matches(selector) {
+			var element = this;
+			var elements = (element.document || element.ownerDocument).querySelectorAll(selector);
+			var index = 0;
+
+			while (elements[index] && elements[index] !== element) {
+				++index;
+			}
+
+			return Boolean(elements[index]);
+		};
+	}
+
+	if (typeof ElementProto.closest !== 'function') {
+		ElementProto.closest = function closest(selector) {
+			var element = this;
+
+			while (element && element.nodeType === 1) {
+				if (element.matches(selector)) {
+					return element;
+				}
+
+				element = element.parentNode;
+			}
+
+			return null;
+		};
+	}
+})(window.Element.prototype);
+"use strict";
+
+var jsFocusRing = function (scope) {
+	scope = scope || window;
+
+	var inputTypesWhitelist = {
+		text: 1,
+		search: 1,
+		url: 1,
+		tel: 1,
+		email: 1,
+		password: 1,
+		number: 1,
+		date: 1,
+		month: 1,
+		week: 1,
+		time: 1,
+		datetime: 1,
+		"datetime-local": 1
+	};
+
+	var keyboardThrottleTimeoutID = void 0;
+
+	scope.addEventListener("blur", function (event) {
+		if (event.target instanceof Element) {
+			event.target.removeAttribute("js-focus");
+			event.target.removeAttribute("js-focus-ring");
+		}
+	}, true);
+
+	scope.addEventListener("focus", function (event) {
+		var activeElement = document.activeElement;
+
+		if (activeElement instanceof Element && "BODY" !== activeElement.tagName) {
+			activeElement.setAttribute("js-focus", "");
+
+			if (keyboardThrottleTimeoutID || scope === event.target || "INPUT" === activeElement.tagName && inputTypesWhitelist[activeElement.type] && !activeElement.readonly || "TEXTAREA" === activeElement.tagName && !activeElement.readonly || "true" === activeElement.contentEditable) {
+				activeElement.setAttribute("js-focus-ring", "");
+			}
+		}
+	}, true);
+
+	scope.addEventListener("keydown", function () {
+		keyboardThrottleTimeoutID = clearTimeout(keyboardThrottleTimeoutID) || setTimeout(function () {
+			keyboardThrottleTimeoutID = 0;
+		}, 100);
+	}, true);
+}();
+'use strict';
+
+/*! onClickOrTap.js | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/onClickOrTap */
+/**
+ * Run a callback after a click or tap, without running duplicate callbacks for the same event
+ * @param  {Node}   elem       The element to listen for clicks and taps on
+ * @param  {Function} callback The callback function to run on a click or tap
+ */
+var onClickOrTap = function onClickOrTap(elem, callback) {
+
+    // Make sure a callback is provided
+    if (!callback || typeof callback !== 'function') return;
+
+    // Variables
+    var isTouch, startX, startY, distX, distY;
+
+    /**
+     * touchstart handler
+     * @param  {event} event The touchstart event
+     */
+    var onTouchStartEvent = function onTouchStartEvent(event) {
+        // Disable click event
+        isTouch = true;
+
+        // Get the starting location and time when finger first touches surface
+        startX = event.changedTouches[0].pageX;
+        startY = event.changedTouches[0].pageY;
+    };
+
+    /**
+     * touchend handler
+     * @param  {event} event The touchend event
+     */
+    var onTouchEndEvent = function onTouchEndEvent(event) {
+
+        // Get the distance travelled and how long it took
+        distX = event.changedTouches[0].pageX - startX;
+        distY = event.changedTouches[0].pageY - startY;
+
+        // If a swipe happened, do nothing
+        if (Math.abs(distX) >= 7 || Math.abs(distY) >= 10) return;
+
+        // Run callback
+        callback(event);
+    };
+
+    /**
+     * click handler
+     * @param  {event} event The click event
+     */
+    var onClickEvent = function onClickEvent(event) {
+        // If touch is active, reset and bail
+        if (isTouch) {
+            isTouch = false;
+            return;
+        }
+
+        // Run our callback
+        callback(event);
+    };
+
+    // Event listeners
+    elem.addEventListener('touchstart', onTouchStartEvent, false);
+    elem.addEventListener('touchend', onTouchEndEvent, false);
+    elem.addEventListener('click', onClickEvent, false);
+};
+'use strict';
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -86,7 +233,7 @@ var Detabinator = function () {
  * navigation support for dropdown menus.
  */
 (function () {
-	var container, button, menu, links, subMenus, i, len;
+	var container, button, menu, links, i, len;
 
 	container = document.getElementById('menu-primary');
 	if (!container) {
@@ -125,12 +272,6 @@ var Detabinator = function () {
 
 	// Get all the link elements within the menu.
 	links = menu.getElementsByTagName('a');
-	subMenus = menu.getElementsByTagName('ul');
-
-	// Set menu items with submenus to aria-haspopup="true".
-	for (i = 0, len = subMenus.length; i < len; i++) {
-		subMenus[i].parentNode.setAttribute('aria-haspopup', 'true');
-	}
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for (i = 0, len = links.length; i < len; i++) {

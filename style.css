@@ -505,7 +505,6 @@ a {
 a:hover,
 a:active {
 	color: #293ab9;
-	outline: 0;
 	background-color: rgba(189, 196, 201, 0.3);
 	transition-duration: 0.25s;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -513,7 +512,6 @@ a:active {
 
 a:focus {
 	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	outline: thin dotted;
 }
 
 a::before {
@@ -850,7 +848,6 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-	outline: 0;
 	background-color: rgba(255, 255, 255, 0.95);
 	border-radius: 0.1rem;
 	transition-duration: 0.25s;
@@ -987,6 +984,11 @@ textarea[readonly]:focus {
 	background-color: rgba(248, 249, 249, 0.9) !important;
 	cursor: default;
 	opacity: 0.5;
+}
+
+a:not([js-focus-ring]),
+[js-focus]:not([js-focus-ring]) {
+	outline-width: 0;
 }
 
 audio,
@@ -1375,6 +1377,9 @@ input[type="button"]:active {
 	-webkit-transform: translateX(-102%);
 	transform: translateX(-102%);
 	will-change: transform;
+	transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+	transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+	transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .side-nav--visible.side-nav--animatable .side-nav__container {
