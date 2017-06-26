@@ -30,6 +30,7 @@
 	max-width: 25rem;
 	transform: translateX(-102%);
 	will-change: transform;
+	transition: transform $transition-time-slow $animation-enter;
 }
 
 .side-nav--visible.side-nav--animatable .side-nav__container {
