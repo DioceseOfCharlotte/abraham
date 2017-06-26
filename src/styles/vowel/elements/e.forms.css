@@ -41,7 +41,6 @@ textarea {
 	transition-property: color, background-color, box-shadow;
 
 	&:focus {
-		outline: 0;
 		background-color: color(#fff a(95%));
 		border-radius: $border-radius;
 		transition-duration: $transition-time-slow;
@@ -179,4 +178,10 @@ textarea[readonly]:focus {
 	background-color: $form-element-background-color !important;
 	cursor: default;
 	opacity: 0.5;
+}
+
+/*https://github.com/jonathantneal/js-focus-ring*/
+a:not([js-focus-ring]),
+[js-focus]:not([js-focus-ring]) {
+  outline-width: 0;
 }
