@@ -82,17 +82,17 @@ class Attr_Trumps {
 			'sidebar_right'             => 'u-1of1 u-1of3-md u-flex-col',
 			'sidebar_left'              => 'u-1of1 u-1of3-md u-flex-col',
 
-			// COMMENTS. Same as post by default
+			// COMMENTS. Same as post by default.
 			'comments_area'             => 'u-p',
 
 			// FOOTER.
 			'footer'                    => 'u-mt-auto u-bg-2',
 			'menu_item'                 => '',
-			'menu_link'                 => 'menu__link btn u-1of1 u-text-left u-br0',
-			'current_page_item'         => 'is-active',
-			'current_page_parent'       => 'is-active',
-			'current_page_ancestor'     => 'is-active',
-			'current-menu-item'         => 'is-active',
+			'menu_link'                 => 'menu__link btn u-1of1 u-text-left u-br0 u-flex u-flex-wrap u-flex-jb u-flex-center',
+			'current_page_item'         => '',
+			'current_page_parent'       => '',
+			'current_page_ancestor'     => '',
+			'current-menu-item'         => '',
 			'menu-item-has-children'    => '',
 			'sub-menu'                  => '',
 		);
@@ -638,13 +638,20 @@ class Attr_Trumps {
 	 * @return array
 	 */
 	public function nav_menu_filters( $text ) {
+		$current_page_item = $this->args['current_page_item'] ? 'current_page_item' : null;
+		$current_page_parent = $this->args['current_page_parent'] ? 'current_page_parent' : null;
+		$current_page_ancestor = $this->args['current_page_ancestor'] ? 'current_page_ancestor' : null;
+		$current_menu_item = $this->args['current-menu-item'] ? 'current-menu-item' : null;
+		$menu_item_has_children = $this->args['menu-item-has-children'] ? 'menu-item-has-children' : null;
+		$sub_menu = $this->args['sub-menu'] ? 'sub-menu' : null;
+
 		$replace = array(
-			'current_page_item'      => $this->args['current_page_item'],
-			'current_page_parent'    => $this->args['current_page_parent'],
-			'current_page_ancestor'  => $this->args['current_page_ancestor'],
-			'current-menu-item'      => $this->args['current-menu-item'],
-			'menu-item-has-children' => $this->args['menu-item-has-children'],
-			'sub-menu'               => $this->args['sub-menu'],
+			$current_page_item      => "current_page_item {$this->args['current_page_item']}",
+			$current_page_parent    => "current_page_parent {$this->args['current_page_parent']}",
+			$current_page_ancestor  => "current_page_ancestor {$this->args['current_page_ancestor']}",
+			$current_menu_item      => "current-menu-item {$this->args['current-menu-item']}",
+			$menu_item_has_children => "menu-item-has-children {$this->args['menu-item-has-children']}",
+			$sub_menu               => "sub-menu {$this->args['sub-menu']}",
 		);
 		$text = str_replace( array_keys( $replace ), $replace, $text );
 		return $text;
