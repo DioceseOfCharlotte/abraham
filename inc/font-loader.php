@@ -12,9 +12,7 @@ add_action( 'wp_head', 'abe_display_font' );
 */
 function abe_font_scripts() {
 
-	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,600,600i|Open+Sans:300,300i,400,400i,600,600i' );
-
-	//wp_enqueue_script( 'abe_font_awesome', 'https://use.fortawesome.com/11b0b571.js', false, false, false );
+	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Spectral:400,400i|Open+Sans:300,300i,400,400i,600,600i' );
 
 	wp_enqueue_script( 'font_face', get_theme_file_uri( 'js/vendors/fontfaceobserver.js' ), false, false, true );
 
@@ -26,7 +24,7 @@ function get_font_load_script() {
 
 	return "
 	(function () {
-	var titleBold = new FontFaceObserver('Cormorant Garamond', {weight: 600});
+	var titleBold = new FontFaceObserver('Spectral', {weight: 400});
 	var bodyFont = new FontFaceObserver('Open Sans', {weight: 400});
 	var bodyItalic = new FontFaceObserver('Open Sans', {style: 'italic'});
 	var bodyLight = new FontFaceObserver('Open Sans', {weight: 300});
@@ -57,15 +55,12 @@ function abe_display_font() {
 	</script>
 
 	<style type="text/css">
-		.u-text-display,.u-dropcap::first-letter {
-			font-weight: normal;
-		}
 		.fonts-loaded body, .fonts-loaded .u-text-read {
 			font-family: 'Open Sans', sans-serif;
 		}
 		.fonts-loaded .u-text-display,.fonts-loaded .u-dropcap::first-letter {
-			font-family: "Cormorant Garamond", serif;
-			font-weight: 600;
+			font-family: 'Spectral', serif;
+			font-weight: normal;
 		}
 	</style>
 <?php }
