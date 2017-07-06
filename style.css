@@ -677,18 +677,23 @@ input[type="submit"] {
 
 .btn:hover,
 .btn:active,
+.btn:focus,
 .btn.is-active,
 button:hover,
 button:active,
+button:focus,
 button.is-active,
 input[type="button"]:hover,
 input[type="button"]:active,
+input[type="button"]:focus,
 input[type="button"].is-active,
 input[type="reset"]:hover,
 input[type="reset"]:active,
+input[type="reset"]:focus,
 input[type="reset"].is-active,
 input[type="submit"]:hover,
 input[type="submit"]:active,
+input[type="submit"]:focus,
 input[type="submit"].is-active {
 	box-shadow: inset 0 0 0 20rem rgba(248, 249, 249, 0.3);
 	transition-duration: 0.25s;
@@ -4924,27 +4929,6 @@ html .tab-content.is-active {
 	background-color: white;
 }
 
-.tile-link {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.tile-link:hover {
-	-webkit-transform: scale(1.01);
-	transform: scale(1.01);
-}
-
-.tile * {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.tiled-icon > .v-icon {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 #gform_19 input[name] {
 	color: #1f2d8f;
 }
@@ -4971,20 +4955,6 @@ html .tab-content.is-active {
 
 .gfield_error input {
 	box-shadow: inset 0 0 0 2px #b9293a;
-}
-
-.tile {
-	min-height: 250px;
-}
-
-.tiled-icon {
-	min-height: 250px;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
 }
 
 .home #header.is-top .menu-main-container,
