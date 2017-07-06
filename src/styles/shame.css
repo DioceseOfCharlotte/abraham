@@ -459,7 +459,7 @@ html .tab-content.is-active {
 	background-color: white;
 }
 
-.tile-link {
+/*.tile-link {
 	transform: scale(1);
 }
 
@@ -469,7 +469,7 @@ html .tab-content.is-active {
 
 .tile * {
 	backface-visibility: hidden;
-}
+}*/
 
 /*.tiled-icon {
 filter: blur(3px);
@@ -481,11 +481,11 @@ transition-property: filter;
 filter: blur(0);
 }*/
 
-.tiled-icon>.v-icon {
+/*.tiled-icon>.v-icon {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 
 #gform_19 input[name] {
 	color: #1f2d8f;
@@ -515,7 +515,7 @@ filter: blur(0);
 	box-shadow: inset 0 0 0 2px $color-warning;
 }
 
-.tile {
+/*.tile {
 	min-height: 250px;
 }
 
@@ -523,7 +523,7 @@ filter: blur(0);
 	min-height: 250px;
 	display: flex;
 	align-items: center;
-}
+}*/
 
 /**
 * SITE-HEADER
