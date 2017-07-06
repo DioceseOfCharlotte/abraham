@@ -56,7 +56,7 @@ require_once get_theme_file_path( 'inc/font-loader.php' );
 require_once get_theme_file_path( 'inc/customizer/custom-header.php' );
 
 // Custom Css class selectors.
-require_once get_theme_file_path( 'inc/attr-trumps.php' );
+require_once get_theme_file_path( 'inc/html-atts.php' );
 
 // Extra wysiwyg actions.
 require_once get_theme_file_path( 'inc/tiny-mce.php' );

@@ -15,9 +15,9 @@ function attr_trumps( $args = array() ) {
 	if ( is_admin() ) {
 		return; }
 
-	$trump = apply_filters( 'attr_trumps_object', null, $args );
-	if ( ! is_object( $trump ) ) {
-		$trump = new Attr_Trumps( $args ); }
+	$html_att_inserts = apply_filters( 'attr_trumps_object', null, $args );
+	if ( ! is_object( $html_att_inserts ) ) {
+		$html_att_inserts = new Attr_Trumps( $args ); }
 }
 
 /**
@@ -44,7 +44,7 @@ class Attr_Trumps {
 			'grid_2c-l'                 => 'o-grid u-pt u-container u-rel',
 
 			// SITE HEADER.
-			'header'                    => 'u-px1-md is-top animating u-z1 u-bg-1 u-1of1 u-flex u-flex-wrap u-flex-center',
+			'header'                    => 'u-px1-md u-z2 is-top animating u-z1 u-bg-1 u-1of1 u-flex u-flex-wrap u-flex-center',
 			'branding'                  => 'u-flexed-auto u-text-center u-mln1',
 			'site_title'                => 'u-text-display u-h3 u-color-inherit u-p0',
 			'site_description'          => 'u-text-display u-h4 u-p0 u-text-3',
