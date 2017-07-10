@@ -40,9 +40,24 @@ function abe_template_hierarchy( $templates ) {
 add_filter( 'body_class','abe_sidebar_body_class' );
 function abe_sidebar_body_class( $classes ) {
 
+$logo_position = get_theme_mod( 'logo_position' );
+$nav_position = get_theme_mod( 'nav_position' );
+
     if ( is_active_sidebar( 'secondary' ) ) {
 
         $classes[] = 'has-oc-sidebar';
+
+    }
+
+	if ( $logo_position ) {
+
+        $classes[] = $logo_position;
+
+    }
+
+	if ( $nav_position ) {
+
+        $classes[] = $nav_position;
 
     }
 
