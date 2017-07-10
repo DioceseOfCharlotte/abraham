@@ -10,15 +10,6 @@
  *
  * @param  array $args Arguments to pass to hybrid_attr.
  */
-function attr_trumps( $args = array() ) {
-
-	if ( is_admin() ) {
-		return; }
-
-	$html_att_inserts = apply_filters( 'attr_trumps_object', null, $args );
-	if ( ! is_object( $html_att_inserts ) ) {
-		$html_att_inserts = new Attr_Trumps( $args ); }
-}
 
 /**
  * Add class selectors to hybrid attributes.
@@ -140,8 +131,6 @@ class Attr_Trumps {
 		add_filter( 'nav_menu_css_class',                array( $this, 'menu_item' ), 10, 2 );
 
 	}
-
-	/* === OBJECTS === */
 
 	/**
 	 * Class selectors added to the element.
