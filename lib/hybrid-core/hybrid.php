@@ -19,10 +19,10 @@
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   HybridCore
- * @version   4.0.0-dev
- * @author    Justin Tadlock <justin@justintadlock.com>
+ * @version   4.0.0
+ * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2008 - 2017, Justin Tadlock
- * @link      http://themehybrid.com/hybrid-core
+ * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -201,11 +201,10 @@ if ( ! class_exists( 'Hybrid' ) ) {
 		private function core() {
 
 			// Load the class files.
-			require_once( $this->dir . 'inc/class-media-meta.php'         );
-			require_once( $this->dir . 'inc/class-media-meta-factory.php' );
-			require_once( $this->dir . 'inc/class-media-grabber.php'      );
-			require_once( $this->dir . 'inc/class-template.php'           );
-			require_once( $this->dir . 'inc/class-template-factory.php'   );
+			require_once( $this->dir . 'inc/class-media-meta.php'    );
+			require_once( $this->dir . 'inc/class-media-grabber.php' );
+			require_once( $this->dir . 'inc/class-registry.php'      );
+			require_once( $this->dir . 'inc/class-template.php'      );
 
 			// Load the functions files.
 			require_once( $this->dir . 'inc/functions-attr.php'      );
@@ -232,7 +231,6 @@ if ( ! class_exists( 'Hybrid' ) ) {
 			// Load admin files.
 			if ( is_admin() )
 				require_once( $this->dir . 'admin/functions-admin.php' );
-
 		}
 
 		/**
@@ -298,9 +296,8 @@ if ( ! class_exists( 'Hybrid' ) ) {
 			require_if_theme_supports( 'post-formats', $this->dir . 'inc/class-chat.php'        );
 
 			// Load the Theme Layouts extension if supported.
-			require_if_theme_supports( 'theme-layouts', $this->dir . 'inc/class-layout.php'         );
-			require_if_theme_supports( 'theme-layouts', $this->dir . 'inc/class-layout-factory.php' );
-			require_if_theme_supports( 'theme-layouts', $this->dir . 'inc/functions-layouts.php'    );
+			require_if_theme_supports( 'theme-layouts', $this->dir . 'inc/class-layout.php'      );
+			require_if_theme_supports( 'theme-layouts', $this->dir . 'inc/functions-layouts.php' );
 
 			// Load the deprecated functions if supported.
 			require_if_theme_supports( 'hybrid-core-deprecated', $this->dir . 'inc/functions-deprecated.php' );

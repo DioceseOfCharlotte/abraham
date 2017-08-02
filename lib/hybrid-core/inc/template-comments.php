@@ -4,9 +4,9 @@
  *
  * @package    HybridCore
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -22,6 +22,7 @@ add_filter( 'comments_template', 'hybrid_comments_template', 5 );
  * @return void
  */
 function hybrid_comment_reply_link( $args = array() ) {
+
 	echo hybrid_get_comment_reply_link( $args );
 }
 
@@ -163,6 +164,7 @@ function hybrid_comments_callback( $comment ) {
  * @return void
  */
 function hybrid_comments_end_callback() {
+
 	echo '</li><!-- .comment -->';
 }
 

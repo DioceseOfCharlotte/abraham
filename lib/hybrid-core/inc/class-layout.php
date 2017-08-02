@@ -1,14 +1,13 @@
 <?php
 /**
- * Layout class.  This class is for creating new layout objects.  Layout registration is handled via
- * the `Hybrid_Layout_Factory` class in `inc/class-layout-factory.php`.  Theme authors should utilize
- * the API functions in `inc/layouts.php`.
+ * Layout class.  This class is for creating new layout objects.  Theme authors should utilize
+ * the API functions in `inc/functions-layouts.php`.
  *
  * @package    HybridCore
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -131,6 +130,7 @@ class Hybrid_Layout {
 	 * @return string
 	 */
 	public function __toString() {
+
 		return $this->name;
 	}
 

@@ -1,15 +1,13 @@
 <?php
 /**
- * Template class.  This class is for creating new template objects.  Template
- * registration is handled via the `Hybrid_Template_Factory` class in
- * `inc/class-template-factory.php`.  Theme authors should utilize the API functions
- * in `inc/functions-templates.php`.
+ * Template object.  This class defines the structure for template objects.  Theme
+ * authors should utilize the wrapper functions within `inc/functions-templates.php.
  *
  * @package    HybridCore
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -114,6 +112,7 @@ class Hybrid_Template {
 	 * @return string
 	 */
 	public function __toString() {
+
 		return $this->name;
 	}
 
@@ -152,10 +151,10 @@ class Hybrid_Template {
 	 * Adds filters for the theme post templates.
 	 *
 	 * @since  4.0.0
-	 * @access private
+	 * @access protected
 	 * @return void
 	 */
-	private function post_templates() {
+	protected function post_templates() {
 
 		$types = $this->post_types ? $this->post_types : get_post_types( array( 'publicly_queryable' => true ) );
 

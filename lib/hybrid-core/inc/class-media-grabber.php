@@ -11,26 +11,11 @@
  *
  * @package    Hybrid
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-
-/**
- * Wrapper function for the Hybrid_Media_Grabber class.  Returns the HTML output for the found media.
- *
- * @since  1.6.0
- * @access public
- * @param  array   $args
- * @return string
- */
-function hybrid_media_grabber( $args = array() ) {
-
-	$media = new Hybrid_Media_Grabber( $args );
-
-	return $media->get_media();
-}
 
 /**
  * Grabs media related to the post.
@@ -148,6 +133,7 @@ class Hybrid_Media_Grabber {
 	 * @return void
 	 */
 	public function __destruct() {
+
 		remove_filter( 'embed_maybe_make_link', '__return_false' );
 		remove_filter( 'the_content', array( $this, 'split_media' ), 5 );
 	}
@@ -161,6 +147,7 @@ class Hybrid_Media_Grabber {
 	 * @return string
 	 */
 	public function get_media() {
+
 		return apply_filters( 'hybrid_media_grabber_media', $this->media, $this );
 	}
 
@@ -254,11 +241,11 @@ class Hybrid_Media_Grabber {
 	}
 
 	/**
-	 * Handles the output of the WordPress playlist feature.  This searches for the [playlist] shortcode
-	 * if it's used in the content.
+	 * Method for handling shortcodes.
 	 *
 	 * @since  4.0.0
 	 * @access public
+	 * @param  array  $shortcode
 	 * @return void
 	 */
 	public function _do_shortcode_media( $shortcode ) {
@@ -274,6 +261,7 @@ class Hybrid_Media_Grabber {
 	 *
 	 * @since  2.0.0
 	 * @access public
+	 * @param  array  $shortcode
 	 * @return void
 	 */
 	public function do_playlist_shortcode_media( $shortcode ) {

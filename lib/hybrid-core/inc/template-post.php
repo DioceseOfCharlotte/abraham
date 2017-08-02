@@ -5,9 +5,9 @@
  *
  * @package    HybridCore
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -22,6 +22,7 @@
  */
 function hybrid_post_has_content( $post_id = 0 ) {
 	$post = get_post( $post_id );
+
 	return ! empty( $post->post_content );
 }
 
@@ -33,6 +34,7 @@ function hybrid_post_has_content( $post_id = 0 ) {
  * @return void
  */
 function hybrid_post_format_link() {
+
 	echo hybrid_get_post_format_link();
 }
 
@@ -61,6 +63,7 @@ function hybrid_get_post_format_link() {
  * @return void
  */
 function hybrid_post_author( $args = array() ) {
+
 	echo hybrid_get_post_author( $args );
 }
 
@@ -112,6 +115,7 @@ function hybrid_get_post_author( $args = array() ) {
  * @return void
  */
 function hybrid_post_terms( $args = array() ) {
+
 	echo hybrid_get_post_terms( $args );
 }
 

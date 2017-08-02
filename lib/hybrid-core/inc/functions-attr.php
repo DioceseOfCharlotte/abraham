@@ -8,9 +8,9 @@
  *
  * @package    HybridCore
  * @subpackage Includes
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2008 - 2017, Justin Tadlock
- * @link       http://themehybrid.com/hybrid-core
+ * @link       https://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -31,6 +31,7 @@ add_filter( 'hybrid_attr_comment', 'hybrid_attr_comment', 5 );
  * @return void
  */
 function hybrid_attr( $slug, $context = '', $attr = array()  ) {
+
 	echo hybrid_get_attr( $slug, $context, $attr );
 }
 
@@ -55,13 +56,25 @@ function hybrid_get_attr( $slug, $context = '', $attr = array() ) {
 	$defaults = array( 'class' => $context ? "{$slug} {$slug}-{$context}" : $slug );
 
 	// Filtered attributes.
-	$filtered = apply_filters( "hybrid_attr_{$slug}", array(), $context );
+	$filtered = apply_filters( 'hybrid_attr', $defaults, $slug, $context  );
+	$filtered = apply_filters( "hybrid_attr_{$slug}", $filtered, $context );
 
 	// Merge the attributes with those input.
-	$attr = array_merge( $defaults, $filtered, $attr );
+	$attr = wp_parse_args( $attr, $filtered );
 
-	foreach ( $attr as $name => $value )
+	foreach ( $attr as $name => $value ) {
+
+		// Provide a filter hook for the class attribute directly. The classes are
+		// split up into an array for easier filtering. Note that theme authors
+		// should still utilize the core WP body, post, and comment class filter
+		// hooks. This should only be used for custom attributes.
+		if ( 'class' === $name && has_filter( "hybrid_attr_{$slug}_class" ) ) {
+
+			$value = join( ' ', apply_filters( "hybrid_attr_{$slug}_class", explode( ' ', $value ) ) );
+		}
+
 		$out .= false !== $value ? sprintf( ' %s="%s"', esc_html( $name ), esc_attr( $value ) ) : esc_html( " {$name}" );
+	}
 
 	return trim( $out );
 }
