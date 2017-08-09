@@ -148,3 +148,15 @@ function abe_hint( $text, $position ) {
 
 	return $tooltip;
 }
+
+/**
+ * Semantic <sidebar> hooks
+ */
+
+function abe_sidenav_before() {
+	do_action( 'abe_sidenav_before' );
+}
+
+function abe_sidenav_after() {
+	do_action( 'abe_sidenav_after' );
+}
