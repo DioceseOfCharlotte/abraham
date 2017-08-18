@@ -31,6 +31,7 @@
 
 			<?php get_template_part( 'components/site', 'branding' ); ?>
 
-			<?php hybrid_get_menu( 'primary' ); ?>
+			<?php get_template_part( 'components/menu', 'primary' ); ?>
 
+			<?php get_template_part( 'components/menu', 'secondary' ); ?>
 		</header>

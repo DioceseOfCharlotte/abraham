@@ -45,6 +45,7 @@ function abraham_setup() {
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary', 'abraham' ),
+		'secondary' => __( 'Secondary', 'abraham' ),
 	) );
 
 	// Tell the TinyMCE editor to use a custom stylesheet.

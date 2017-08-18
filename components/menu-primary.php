@@ -19,7 +19,7 @@ if ( ! has_nav_menu( 'primary' ) ) {
 				'menu_id'         => 'menu-primary-items',
 				'menu_class'      => 'menu-items nav-menu u-f-minus',
 				'fallback_cb'     => '',
-				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
+				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>',
 			)
 		); ?>
 
