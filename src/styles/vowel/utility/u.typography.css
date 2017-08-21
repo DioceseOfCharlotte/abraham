@@ -127,6 +127,8 @@
 		color: inherit;
 		font-size: 3.5rem;
 		line-height: 0.9;
+		text-transform: uppercase;
+		font-style: normal;
 
 		@media (--md) {
 			font-size: $h0;
