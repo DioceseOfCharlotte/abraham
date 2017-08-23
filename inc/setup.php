@@ -178,7 +178,7 @@ function abraham_widgets() {
 	register_sidebar( array(
 		'id'            => 'primary',
 		'name'          => esc_html__( 'Primary', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+		'description'   => esc_html__( 'Add widgets to main sidebar located beside or below the content depending on layout.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
@@ -187,7 +187,7 @@ function abraham_widgets() {
 	register_sidebar( array(
 		'id'            => 'secondary',
 		'name'          => esc_html__( 'Secondary', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+		'description'   => esc_html__( 'Add widgets to the left slide-out sidebar.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-pt0 u-opacity u-text-center">',
@@ -196,7 +196,7 @@ function abraham_widgets() {
 	register_sidebar( array(
 		'id'            => 'footer',
 		'name'          => esc_html__( 'Footer', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets here.', 'abraham' ),
+		'description'   => esc_html__( 'Add widgets to the footer area.', 'abraham' ),
 		'before_widget' => '<section id="%1$s" class="widget u-p1 u-mb u-bg-frost-1 u-br %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
