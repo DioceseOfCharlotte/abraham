@@ -12,23 +12,19 @@ if ( ! is_active_sidebar( 'secondary' ) ) {
 <aside class="js-side-nav side-nav u-fix u-left0 u-top0 u-1of1 u-height100 if-admin-bar u-overflow-hidden">
 	<nav class="js-side-nav-container side-nav__container u-rel u-bg-white u-height100 u-flex u-flex-col u-shadow3">
 
-		<header class="side-nav__header u-flex u-flex-wrap u-bg-2 u-p1 u-shadow1">
-
-			<div class="side-nav__close-button u-pr">
-				<button class="js-menu-hide side-nav__hide u-z1 btn-round u-bg-2-light u-h3 u-inline-flex">
-					<?php abe_do_svg( 'arrow-left', 'sm' ); ?>
-				</button>
-
-			</div>
-
-			<?php get_template_part( 'components/sidenav-header' ); ?>
-
-		</header>
+		<div class="sidebar-actions u-rel u-flex u-f1 u-p05 u-shadow1 u-bg-2-light">
+			<button class="js-menu-hide side-nav__hide u-z1 u-top0 u-left0">
+				<?php abe_do_svg( 'close', '1em' ); ?>
+			</button>
+			<?php get_search_form() ?>
+		</div>
 
 		<div class="side-nav__content u-py2 u-flexed-1 ">
+
 			<?php abe_sidenav_before() ?>
 			<?php dynamic_sidebar( 'secondary' ); ?>
 			<?php abe_sidenav_after() ?>
+
 		</div>
 
 	</nav>
