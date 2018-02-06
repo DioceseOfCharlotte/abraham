@@ -11,6 +11,7 @@ const rev = require('gulp-rev');
 const ignore = require('gulp-ignore');
 const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
+const gulpStylelint = require('gulp-stylelint');
 
 const autoPrefixer = require('autoprefixer');
 const pcImport = require('postcss-import');
@@ -35,7 +36,7 @@ const BANNER = [
 	'Author: Marty Helmick',
 	'Author URI: https://github.com/m-e-h',
 	'Description: Abraham is a Parent theme with many children.',
-	'Version: 0.9.7',
+	'Version: 1.0.0',
 	'License: GNU General Public License v2 or later',
 	'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
 	'Text Domain: abraham',
@@ -130,7 +131,9 @@ gulp.task('styles', () => {
 		.pipe($.sourcemaps.init())
 		.pipe($.postcss(POSTCSS_PLUGINS))
 		.pipe($.concat('style.css'))
-		.pipe($.stylefmt())
+		.pipe(gulpStylelint({
+			fix: true
+		  }))
 		.pipe($.header(BANNER))
 		.pipe(gulp.dest('./'))
 		.pipe($.sourcemaps.write('.'))
@@ -140,7 +143,7 @@ gulp.task('styles', () => {
 		.pipe(rev())
 		.pipe(gulp.dest('./'))
 		.pipe($.size({
-			title: 'styles'
+			title: 'styleCss'
 		}))
 		.pipe(rev.manifest({
 			merge: true

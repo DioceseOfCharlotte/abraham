@@ -11,4 +11,6 @@
 .tmp
 *.map
 composer.lock
+yarn.lock
+package-lock.json
 vendor
