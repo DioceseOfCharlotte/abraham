@@ -36,7 +36,7 @@ const BANNER = [
 	'Author: Marty Helmick',
 	'Author URI: https://github.com/m-e-h',
 	'Description: Abraham is a Parent theme with many children.',
-	'Version: 1.0.0',
+	'Version: 1.0.1',
 	'License: GNU General Public License v2 or later',
 	'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
 	'Text Domain: abraham',
@@ -156,7 +156,7 @@ gulp.task('scripts', () => {
 	gulp.src(SOURCESJS)
 		.pipe($.sourcemaps.init())
 		.pipe($.babel({
-			"presets": ["es2015"]
+			"presets": ["env"]
 		}))
 		.pipe($.concat('abraham.js'))
 		.pipe(gulp.dest('js'))
