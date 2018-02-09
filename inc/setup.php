@@ -125,20 +125,14 @@ function abraham_assets() {
 		wp_enqueue_style( 'abe-child-style', get_theme_file_uri( get_child_asset_rev( 'style.css' ) ) );
 	}
 
-	wp_enqueue_style( 'oldie', get_theme_file_uri( "css/oldie{$suffix}.css" ), array( 'abe-style' ) );
-	wp_style_add_data( 'oldie', 'conditional', 'IE' );
-
 	// Scripts.
-	wp_enqueue_script( 'abraham-js', get_parent_theme_file_uri( 'js/' . get_asset_rev( 'abraham.js' ) ), false, false, true );
+	wp_enqueue_script( 'abraham-js', get_parent_theme_file_uri( 'js/' . get_asset_rev( 'main.js' ) ), false, false, true );
 
 	// polyfills
 	wp_enqueue_script( 'polyfill-io', 'https://cdn.polyfill.io/v2/polyfill.min.js', false, false, false );
 
 	wp_enqueue_script( 'object-fit-js', get_theme_file_uri( 'js/polyfill/ofi.browser.js' ), false, false, true );
 	wp_add_inline_script( 'object-fit-js', 'objectFitImages();' );
-
-	wp_enqueue_script( 'html5shiv', get_theme_file_uri( 'js/polyfill/html5shiv.min.js' ),  false, false, false );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 }
 
 /**
