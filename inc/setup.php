@@ -43,6 +43,15 @@ function abraham_setup() {
 		'flex-width' => true,
 	) );
 
+	add_theme_support( 'editor-color-palette',
+		get_theme_mod( 'primary_color', '' ),
+		get_theme_mod( 'secondary_color', '' ),
+		'#eee',
+		'#444'
+	);
+
+	add_theme_support( 'align-wide' );
+
 	register_nav_menus( array(
 		'primary' => __( 'Primary', 'abraham' ),
 		'secondary' => __( 'Secondary', 'abraham' ),
