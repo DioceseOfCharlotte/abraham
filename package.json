@@ -1,8 +1,8 @@
 {
-  "name": "abraham",
+  "name": "meh-gulp",
   "version": "1.0.0",
-  "description": "Starter Theme focused on OOCSS and such.",
-  "repository": "https://github.com/m-e-h/abraham",
+  "description": "Build process for WP projects.",
+  "repository": "https://github.com/m-e-h",
   "private": true,
   "license": "GNU General Public License v2 or later",
   "devDependencies": {
