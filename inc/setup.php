@@ -43,11 +43,27 @@ function abraham_setup() {
 		'flex-width' => true,
 	) );
 
+	$meh_color1 = get_theme_mod( 'primary_color', '0693e3' );
+	$meh_color2 = get_theme_mod( 'secondary_color', 'cf2e2e' );
+	$header_text_color = get_header_textcolor() ?: '212629';
+	$meh_bg_color = get_theme_mod( 'background_color', 'F7EDE7' );
+
 	add_theme_support( 'editor-color-palette',
-		get_theme_mod( 'primary_color', '' ),
-		get_theme_mod( 'secondary_color', '' ),
+		"#{$meh_color1}",
+		"#{$meh_color2}",
+		"#{$header_text_color}",
+		"#{$meh_bg_color}",
+		'#f78da7',
+		'#cf2e2e',
+		'#ff6900',
+		'#fcb900',
+		'#7bdcb5',
+		'#00d084',
+		'#8ed1fc',
+		'#0693e3',
 		'#eee',
-		'#444'
+		'#abb8c3',
+		'#313131'
 	);
 
 	add_theme_support( 'align-wide' );
