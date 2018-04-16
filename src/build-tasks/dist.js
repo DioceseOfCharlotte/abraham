@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
-const doIf = require("gulp-if");
 const size = require("gulp-size");
 const rev = require("gulp-rev");
 
