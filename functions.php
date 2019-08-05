@@ -8,8 +8,8 @@
 /**
  * Define constants and load the Hybrid Core library.
  */
- define( 'HYBRID_DIR', get_parent_theme_file_path( 'lib/hybrid-core/' ) );
- define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
+define( 'HYBRID_DIR', get_parent_theme_file_path( 'lib/hybrid-core/' ) );
+define( 'HYBRID_URI', get_parent_theme_file_uri( 'lib/hybrid-core/' ) );
 
 require get_parent_theme_file_path( 'lib/hybrid-core/hybrid.php' );
 
@@ -38,12 +38,13 @@ require get_parent_theme_file_path( 'inc/template-tags.php' );
 /**
  * Utility functions.
  */
+require get_parent_theme_file_path( 'inc/cleanup.php' );
 require get_parent_theme_file_path( 'inc/utils.php' );
 
 /**
  * Google Analytics.
  */
-require get_parent_theme_file_path( 'inc/g-analytics.php' );
+// require get_parent_theme_file_path( 'inc/g-analytics.php' );
 
 
 /**

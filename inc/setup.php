@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'abraham_assets' );
 add_action( 'widgets_init', 'abraham_widgets', 5 );
 add_action( 'init', 'abraham_image_sizes', 5 );
 add_action( 'hybrid_register_layouts', 'abraham_layouts' );
-add_filter( 'show_admin_bar' , 'abe_show_admin_bar' );
+add_filter( 'show_admin_bar', 'abe_show_admin_bar' );
 
 
 function abe_show_admin_bar( $content ) {
@@ -32,23 +32,30 @@ function abraham_setup() {
 
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	add_theme_support( 'theme-layouts', array(
-		'default' => '1-column',
-	) );
+	add_theme_support(
+		'theme-layouts',
+		array(
+			'default' => '1-column',
+		)
+	);
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	add_theme_support( 'custom-logo', array(
-		'height'      => 78,
-		'flex-width' => true,
-	) );
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'     => 78,
+			'flex-width' => true,
+		)
+	);
 
-	$meh_color1 = get_theme_mod( 'primary_color', '0693e3' );
-	$meh_color2 = get_theme_mod( 'secondary_color', 'cf2e2e' );
+	$meh_color1        = get_theme_mod( 'primary_color', '0693e3' );
+	$meh_color2        = get_theme_mod( 'secondary_color', 'cf2e2e' );
 	$header_text_color = get_header_textcolor() ?: '212629';
-	$meh_bg_color = get_theme_mod( 'background_color', 'F7EDE7' );
+	$meh_bg_color      = get_theme_mod( 'background_color', 'F7EDE7' );
 
-	add_theme_support( 'editor-color-palette',
+	add_theme_support(
+		'editor-color-palette',
 		"#{$meh_color1}",
 		"#{$meh_color2}",
 		"#{$header_text_color}",
@@ -68,10 +75,12 @@ function abraham_setup() {
 
 	add_theme_support( 'align-wide' );
 
-	register_nav_menus( array(
-		'primary' => __( 'Primary', 'abraham' ),
-		'secondary' => __( 'Secondary', 'abraham' ),
-	) );
+	register_nav_menus(
+		array(
+			'primary'   => __( 'Primary', 'abraham' ),
+			'secondary' => __( 'Secondary', 'abraham' ),
+		)
+	);
 
 	// Tell the TinyMCE editor to use a custom stylesheet.
 	add_editor_style( abraham_get_editor_styles() );
@@ -90,7 +99,7 @@ function get_asset_rev( $filename ) {
 	static $manifest = null;
 	if ( null === $manifest ) {
 		$manifest_path = get_parent_theme_file_path( 'rev-manifest.json' );
-		$manifest = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
+		$manifest      = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
 	}
 
 	// If the manifest contains the requested file, return the hashed name.
@@ -115,7 +124,7 @@ function get_child_asset_rev( $filename ) {
 	static $manifest = null;
 	if ( null === $manifest ) {
 		$manifest_path = get_theme_file_path( 'rev-manifest.json' );
-		$manifest = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
+		$manifest      = file_exists( $manifest_path ) ? json_decode( file_get_contents( $manifest_path ), true ) : [];
 	}
 
 	// If the manifest contains the requested file, return the hashed name.
@@ -154,7 +163,7 @@ function abraham_assets() {
 	wp_enqueue_script( 'abraham-js', get_parent_theme_file_uri( 'js/' . get_asset_rev( 'main.js' ) ), false, false, true );
 
 	// polyfills
-	wp_enqueue_script( 'polyfill-io', 'https://cdn.polyfill.io/v2/polyfill.min.js', false, false, false );
+	// wp_enqueue_script( 'polyfill-io', 'https://cdn.polyfill.io/v2/polyfill.min.js', false, false, false );
 
 	wp_enqueue_script( 'object-fit-js', get_theme_file_uri( 'js/polyfill/ofi.browser.js' ), false, false, true );
 	wp_add_inline_script( 'object-fit-js', 'objectFitImages();' );
@@ -194,33 +203,39 @@ function abraham_get_editor_styles() {
  * @return void
  */
 function abraham_widgets() {
-	register_sidebar( array(
-		'id'            => 'primary',
-		'name'          => esc_html__( 'Primary', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets to main sidebar located beside or below the content depending on layout.', 'abraham' ),
-		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'id'            => 'secondary',
-		'name'          => esc_html__( 'Secondary', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets to the left slide-out sidebar.', 'abraham' ),
-		'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-pt0 u-opacity u-text-center">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'id'            => 'footer',
-		'name'          => esc_html__( 'Footer', 'abraham' ),
-		'description'   => esc_html__( 'Add widgets to the footer area.', 'abraham' ),
-		'before_widget' => '<section id="%1$s" class="widget u-p1 u-mb u-bg-frost-1 u-br %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		array(
+			'id'            => 'primary',
+			'name'          => esc_html__( 'Primary', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets to main sidebar located beside or below the content depending on layout.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'secondary',
+			'name'          => esc_html__( 'Secondary', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets to the left slide-out sidebar.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-mb u-bg-frost-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title u-h3 u-px1 u-text-display u-pt0 u-opacity u-text-center">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'footer',
+			'name'          => esc_html__( 'Footer', 'abraham' ),
+			'description'   => esc_html__( 'Add widgets to the footer area.', 'abraham' ),
+			'before_widget' => '<section id="%1$s" class="widget u-p1 u-mb u-bg-frost-1 u-br %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title u-h3 u-text-display u-pt0 u-opacity">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 
 /**
@@ -228,11 +243,11 @@ function abraham_widgets() {
  */
 function abraham_image_sizes() {
 	set_post_thumbnail_size( 150, 150, true );
-	add_image_size( 'abe-icon',     80, 80, true );
-	add_image_size( 'abe-hd',       640, 360, true );
-	add_image_size( 'abe-hd-lg',    1200, 675, true );
-	add_image_size( 'abe-card',     380, 506, true );
-	add_image_size( 'abe-card-lg',  760, 1012, true );
+	add_image_size( 'abe-icon', 80, 80, true );
+	add_image_size( 'abe-hd', 640, 360, true );
+	add_image_size( 'abe-hd-lg', 1200, 675, true );
+	add_image_size( 'abe-card', 380, 506, true );
+	add_image_size( 'abe-card-lg', 760, 1012, true );
 }
 
 /**
@@ -240,33 +255,48 @@ function abraham_image_sizes() {
  */
 function abraham_layouts() {
 
-	hybrid_register_layout('1-column', array(
-		'label'            => _x( 'Single Column', 'theme layout', 'abraham' ),
-		'is_global_layout' => true,
-		'image'            => '%s/images/single-column.svg',
-	));
+	hybrid_register_layout(
+		'1-column',
+		array(
+			'label'            => _x( 'Single Column', 'theme layout', 'abraham' ),
+			'is_global_layout' => true,
+			'image'            => '%s/images/single-column.svg',
+		)
+	);
 
-	hybrid_register_layout('1-column-wide', array(
-		'label'            => _x( 'Single Column Wide', 'theme layout', 'abraham' ),
-		'is_global_layout' => true,
-		'image'            => '%s/images/single-column-wide.svg',
-	));
+	hybrid_register_layout(
+		'1-column-wide',
+		array(
+			'label'            => _x( 'Single Column Wide', 'theme layout', 'abraham' ),
+			'is_global_layout' => true,
+			'image'            => '%s/images/single-column-wide.svg',
+		)
+	);
 
-	hybrid_register_layout('sidebar-right', array(
-		'label'            => _x( 'Sidebar Right', 'theme layout', 'abraham' ),
-		'is_global_layout' => true,
-		'image'            => '%s/images/sidebar-right.svg',
-	));
+	hybrid_register_layout(
+		'sidebar-right',
+		array(
+			'label'            => _x( 'Sidebar Right', 'theme layout', 'abraham' ),
+			'is_global_layout' => true,
+			'image'            => '%s/images/sidebar-right.svg',
+		)
+	);
 
-	hybrid_register_layout('sidebar-left', array(
-		'label'            => _x( 'Sidebar Left', 'theme layout', 'abraham' ),
-		'is_global_layout' => true,
-		'image'            => '%s/images/sidebar-left.svg',
-	));
+	hybrid_register_layout(
+		'sidebar-left',
+		array(
+			'label'            => _x( 'Sidebar Left', 'theme layout', 'abraham' ),
+			'is_global_layout' => true,
+			'image'            => '%s/images/sidebar-left.svg',
+		)
+	);
 
-	hybrid_register_layout('blank-canvas', array(
-		'label'            => _x( 'Blank Canvas', 'theme layout', 'abraham' ),
-		'is_global_layout' => true,
-		'image'            => '%s/images/single-column-clear.svg',
-	));
+	hybrid_register_layout(
+		'blank-canvas',
+		array(
+			'label'            => _x( 'Blank Canvas', 'theme layout', 'abraham' ),
+			'is_global_layout' => true,
+			'image'            => '%s/images/single-column-clear.svg',
+		)
+	);
 }
