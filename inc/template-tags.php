@@ -23,10 +23,11 @@ function abe_do_svg( $icon = 'info', $height = '1em', $width = '' ) {
  * @param string $icon name of the icon.
  * @param string $size css class for icon size.
  */
-function abe_get_svg( $icon = 'info', $height = '1em', $width = '' ) {
+function abe_get_svg( $icon = 'info', $height = '1em', $width = '', $is_info = false ) {
 
 	// Set ARIA.
-	$aria_label = ' aria-label="' . esc_html( $icon ) . '"';
+	$aria_label  = ' role="img" aria-label="' . esc_html( $icon ) . '"';
+	$aria_hidden = ' aria-hidden="true"';
 
 	if ( $height == 'sm' ) {
 		$height = '1em';
@@ -36,10 +37,12 @@ function abe_get_svg( $icon = 'info', $height = '1em', $width = '' ) {
 		$width = $height;
 	}
 
+	$is_info = $is_info ? $aria_label : $aria_hidden;
+
 	// Begin SVG markup
 	$svg = file_get_contents( locate_template( 'images/icons/' . esc_html( $icon ) . '.svg' ) );
 
-	$svg = str_replace( '<svg', '<svg class="doc-icon doc-icon-' . $icon . '" height="' . $height . '" width="' . $width . '" aria-label="' . esc_html( $icon ) . '"', $svg );
+	$svg = str_replace( '<svg', '<svg focusable="false" class="doc-icon doc-icon-' . $icon . '" height="' . $height . '" width="' . $width . '"' . $is_info, $svg );
 
 	return $svg;
 }
@@ -77,7 +80,7 @@ function abe_do_copyright_text() {
  * Colors
  */
 function doc_prime_style( $alpha ) {
-	$style = '';
+	$style  = '';
 	$style .= 'background-color:';
 	$style .= doc_prime_rgb( $alpha );
 	$style .= ';color:';
@@ -87,7 +90,7 @@ function doc_prime_style( $alpha ) {
 }
 
 function doc_prime_hex() {
-	$prime = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
+	$prime     = get_post_meta( get_the_ID(), 'doc_page_primary_color', true );
 	$hex_color = $prime ? trim( $prime, '#' ) : get_theme_mod( 'primary_color', '' );
 	return "#{$hex_color}";
 }
@@ -99,8 +102,8 @@ function doc_prime_rgb( $alpha = '1' ) {
 }
 
 function doc_prime_text() {
-	$prime = new Color( doc_prime_hex() );
-	$text_color = $prime->isDark() ? 'fff':'333';
+	$prime      = new Color( doc_prime_hex() );
+	$text_color = $prime->isDark() ? 'fff' : '333';
 	return "#{$text_color}";
 }
 
@@ -114,7 +117,7 @@ function abe_second_style( $alpha ) {
 }
 
 function abe_second_hex() {
-	$second = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
+	$second    = get_post_meta( get_the_ID(), 'doc_page_secondary_color', true );
 	$hex_color = $second ? trim( $second, '#' ) : get_theme_mod( 'secondary_color', '' );
 	return "#{$hex_color}";
 }
@@ -126,8 +129,8 @@ function abe_second_rgb( $alpha = '1' ) {
 }
 
 function abe_second_text() {
-	$second = new Color( abe_second_hex() );
-	$text_color = $second->isDark() ? 'fff':'333';
+	$second     = new Color( abe_second_hex() );
+	$text_color = $second->isDark() ? 'fff' : '333';
 	return "#{$text_color}";
 }
 
@@ -144,7 +147,7 @@ function abe_has_layout( $layout ) {
 
 function abe_hint( $text, $position = 0 ) {
 	$position = $position ? "hint--{$position}" : 'hint--top-left';
-	$tooltip = '<span class="abe-tip ' . $position . '" aria-label="' . $text . '"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 16h-2v-2h2v2zm0-4.14V15h-2v-2c0-.552.448-1 1-1 1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.862-1.278 3.413-3 3.86z"/></svg></span>';
+	$tooltip  = '<span class="abe-tip ' . $position . '" aria-label="' . $text . '"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 16h-2v-2h2v2zm0-4.14V15h-2v-2c0-.552.448-1 1-1 1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.862-1.278 3.413-3 3.86z"/></svg></span>';
 
 	return $tooltip;
 }

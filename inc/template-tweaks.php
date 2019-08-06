@@ -130,10 +130,9 @@ function abe_excerpt_more() {
 	}
 
 		$link = sprintf(
-			'<a href="%1$s" class="more-link btn btn-sm u-p0 u-round u-mx1 u-opacity u-lh-1 btn-readmore">%2$s</a>',
+			'<a href="%1$s" aria-label="Read more" class="more-link btn btn-sm u-p0 u-round u-mx1 u-opacity u-lh-1 btn-readmore">%2$s</a>',
 			esc_url( get_permalink( get_the_ID() ) ),
-			/* translators: %s: Name of current post */
-			sprintf( __( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.5em" height="1.5em" class="doc-icon doc-icon-ellipsis-circle" aria-labelledby="title' . get_the_ID() . '"><title id="title' . get_the_ID() . '">%s</title><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM7.5 13.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5S9 11.2 9 12s-.7 1.5-1.5 1.5zm4.5 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm4.5 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg>', 'abraham' ), get_the_title( get_the_ID() ) )
+			sprintf( abe_get_svg( 'ellipsis-circle', '1.5em' ) . '%s', '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
 		);
 		return $link;
 }
@@ -201,8 +200,8 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 
 	if ( file_exists( trailingslashit( $upload_dir['basedir'] ) . $image_abs ) ) {
 		?>
-		<source srcset="<?php echo $webp_url; ?>" class="picture-image webp-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>" type="image/webp">
+		<source srcset="<?php echo $webp_url; ?>" alt="" class="picture-image webp-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>" type="image/webp">
 		<?php } ?>
-		<img src="<?php echo $args['thumb_url']; ?>" class="picture-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>">
+		<img src="<?php echo $args['thumb_url']; ?>" alt="" class="picture-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>">
 	<?php
 }
