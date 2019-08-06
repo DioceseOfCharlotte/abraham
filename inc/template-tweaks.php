@@ -132,7 +132,7 @@ function abe_excerpt_more() {
 		$link = sprintf(
 			'<a href="%1$s" aria-label="Read more" class="more-link btn btn-sm u-p0 u-round u-mx1 u-opacity u-lh-1 btn-readmore">%2$s</a>',
 			esc_url( get_permalink( get_the_ID() ) ),
-			sprintf( abe_get_svg( 'ellipsis-circle', '1.5em' ) . '%s', '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			sprintf( abe_get_svg( 'ellipsis-circle', '1.5em' ) . '%s', '<span class="screen-reader-text">Continue reading ' . get_the_title( get_the_ID() ) . '</span>' )
 		);
 		return $link;
 }
@@ -152,6 +152,7 @@ function abe_custom_logo() {
 		false,
 		array(
 			'class'    => 'custom-logo',
+			'alt'      => get_bloginfo( 'name' ),
 			'itemprop' => 'logo',
 		)
 	);
