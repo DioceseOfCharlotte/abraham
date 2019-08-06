@@ -58,7 +58,7 @@ function abe_get_svg( $icon = 'info', $height = '1em', $width = '', $is_info = f
  * Display the Edit Post Link
  */
 function abe_edit_link() {
-	edit_post_link( abe_get_svg( 'edit', 'sm' ) );
+	return edit_post_link( abe_get_svg( 'edit', '1em', '1em', true ) . '<span class="screen-reader-text">Edit ' . get_the_title( get_the_ID() ) . '</span>' );
 }
 
 
