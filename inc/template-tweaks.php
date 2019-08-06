@@ -179,10 +179,12 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 		'class'     => 'src-img',
 		'thumb_url' => get_the_post_thumbnail_url( $post_id ),
 		'thumb_id'  => get_post_thumbnail_id( $post_id ),
+		'decor'     => false,
 	);
 
 	$args = wp_parse_args( $args, $defaults );
 
+	$thumb_url      = $args['thumb_url'];
 	$thumb_base_url = rtrim( $args['thumb_url'], 'jpengifco' );
 	$webp_url       = "{$thumb_base_url}webp";
 	//$webp_dir = wp_parse_url( $webp_url );
@@ -197,12 +199,22 @@ function abe_get_picture_source( $post_id = '', $args = array() ) {
 		$upload_dir['baseurl'],
 	);
 
-	$image_abs = str_replace( $replace, '', $webp_url );
+	$image_abs    = str_replace( $replace, '', $webp_url );
+	$image_alt    = get_the_title( $post_id );
+	$image_class  = $args['class'];
+	$image_width  = $thumb_src['1'] ?: '900';
+	$image_height = $thumb_src['2'] ?: '900';
+
+	$image_decor = $args['decor'] ? ' aria-hidden="true"' : '';
+
+	$img_src = '';
 
 	if ( file_exists( trailingslashit( $upload_dir['basedir'] ) . $image_abs ) ) {
-		?>
-		<source srcset="<?php echo $webp_url; ?>" alt="" class="picture-image webp-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>" type="image/webp">
-		<?php } ?>
-		<img src="<?php echo $args['thumb_url']; ?>" alt="" class="picture-image <?php echo $args['class']; ?>" width="<?php echo $thumb_src['1']; ?>" height="<?php echo $thumb_src['2']; ?>">
-	<?php
+
+		$img_src .= "<source srcset='{$webp_url}' alt='{$image_alt}' class='picture-image webp-image {$image_class}' width='{$image_width}' height='{$image_height}' type='image/webp'>";
+	}
+
+		$img_src .= "<img src='{$thumb_url}' alt='{$image_alt}' class='picture-image {$image_class}' width='{$image_width}' height='{$image_height}'$image_decor>";
+
+		echo $img_src;
 }

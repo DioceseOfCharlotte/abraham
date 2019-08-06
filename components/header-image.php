@@ -20,6 +20,7 @@ if ( ! abe_custom_header_image() ) {
 				array(
 					'size'      => 'abe-hd-lg',
 					'thumb_url' => abe_custom_header_image(),
+					'decor'     => true,
 				)
 			);
 			?>

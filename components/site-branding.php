@@ -6,12 +6,14 @@
 
 <div class="title-text u-flex u-flex-col u-p05">
 	<?php
-	if ( is_front_page() ) : ?>
-		<h1 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h1>
+	if ( is_front_page() ) :
+		?>
+		<h1 <?php hybrid_attr( 'site-title' ); ?>><?php bloginfo( 'name' ); ?></h1>
 	<?php else : ?>
-		<h2 <?php hybrid_attr( 'site-title' ) ?>><?php bloginfo( 'name' ); ?></h2>
-	<?php
-	endif; ?>
+		<h2 <?php hybrid_attr( 'site-title' ); ?>><?php bloginfo( 'name' ); ?></h2>
+		<?php
+	endif;
+	?>
 
 	<?php hybrid_site_description(); ?>
 </div>
