@@ -13,8 +13,8 @@ use Mexitek\PHPColors\Color;
  * @param string $icon name of the icon.
  * @param string $size css class for icon size.
  */
-function abe_do_svg( $icon = 'info', $height = '1em', $width = '' ) {
-		echo abe_get_svg( $icon, $height, $width );
+function abe_do_svg( $icon = 'info', $height = '1em', $width = '', $is_info = false ) {
+		echo abe_get_svg( $icon, $height, $width, $is_info );
 }
 
 /**
