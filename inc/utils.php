@@ -12,6 +12,17 @@ add_shortcode( 'doc_pass_reset', 'doc_pass_reset_link' );
 add_shortcode( 'abe_permalink', 'abe_do_permalink' );
 add_action( 'add_meta_boxes', 'abe_yoast_seo_remove_metabox', 11 );
 
+function abe_get_id() {
+
+	if ( empty( $GLOBALS['cptarchives'] ) ) {
+		return get_the_ID();
+	}
+
+	$post_id = is_post_type_archive() ? $GLOBALS['cptarchives']->get_archive_id( get_post_type() ) : get_the_ID();
+
+	return $post_id ?: get_the_ID();
+}
+
 function meh_responsive_videos() {
 
 	/* Wrap the videos */
@@ -63,24 +74,27 @@ function meh_responsive_videos_maybe_wrap_oembed( $html, $url = null ) {
 	*
 	* @param array $video_patterns oEmbed video provider Regex patterns.
 	*/
-	$video_patterns = apply_filters( 'meh_responsive_videos_oembed_videos', array(
-		'https?://((m|www)\.)?youtube\.com/watch',
-		'https?://((m|www)\.)?youtube\.com/playlist',
-		'https?://youtu\.be/',
-		'https?://(.+\.)?vimeo\.com/',
-		'https?://(www\.)?dailymotion\.com/',
-		'https?://dai.ly/',
-		'https?://(www\.)?hulu\.com/watch/',
-		'https?://wordpress.tv/',
-		'https?://(www\.)?funnyordie\.com/videos/',
-		'https?://vine.co/v/',
-		'https?://(www\.)?collegehumor\.com/video/',
-		'https?://(www\.|embed\.)?ted\.com/talks/',
-	) );
+	$video_patterns = apply_filters(
+		'meh_responsive_videos_oembed_videos',
+		array(
+			'https?://((m|www)\.)?youtube\.com/watch',
+			'https?://((m|www)\.)?youtube\.com/playlist',
+			'https?://youtu\.be/',
+			'https?://(.+\.)?vimeo\.com/',
+			'https?://(www\.)?dailymotion\.com/',
+			'https?://dai.ly/',
+			'https?://(www\.)?hulu\.com/watch/',
+			'https?://wordpress.tv/',
+			'https?://(www\.)?funnyordie\.com/videos/',
+			'https?://vine.co/v/',
+			'https?://(www\.)?collegehumor\.com/video/',
+			'https?://(www\.|embed\.)?ted\.com/talks/',
+		)
+	);
 	// Merge patterns to run in a single preg_match call.
 	$video_patterns = '(' . implode( '|', $video_patterns ) . ')';
 
-	$is_video       = preg_match( $video_patterns, $url );
+	$is_video = preg_match( $video_patterns, $url );
 
 	// If the oEmbed is a video, wrap it in the responsive wrapper.
 	if ( false === $already_wrapped && 1 === $is_video ) {
@@ -106,7 +120,7 @@ function get_the_slug( $id = null ) {
 		global $post;
 		if ( empty( $post ) ) {
 			return ''; // No global $post var available.
-		}		$id = $post->ID;
+		}       $id = $post->ID;
 	endif;
 
 	$slug = basename( get_permalink( $id ) );
@@ -127,17 +141,22 @@ function doc_pass_reset_link() {
 
 // Permalink
 function abe_do_permalink( $atts ) {
-	extract( shortcode_atts( array(
-		'id'   => get_the_ID(),
-		'text' => '',  // Default value if none supplied.
-		'title' => '',
-	), $atts) );
+	extract(
+		shortcode_atts(
+			array(
+				'id'    => get_the_ID(),
+				'text'  => '',  // Default value if none supplied.
+				'title' => '',
+			),
+			$atts
+		)
+	);
 
 	if ( $text ) {
 		$url = get_permalink( $id );
 		return "<a href='$url'>$text</a>";
 	} elseif ( $title ) {
-		$url = get_permalink( $id );
+		$url   = get_permalink( $id );
 		$title = get_the_title( $id );
 
 		return "<a href='$url'>$title</a>";

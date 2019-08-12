@@ -172,7 +172,7 @@ function abe_edit_post_link( $output ) {
 
 
 function abe_get_picture_source( $post_id = '', $args = array() ) {
-	$post_id = empty( $post_id ) ? get_the_ID() : $post_id;
+	$post_id = empty( $post_id ) ? abe_get_id() : $post_id;
 
 	$defaults = array(
 		'size'      => 'thumbnail',
