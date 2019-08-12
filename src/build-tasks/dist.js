@@ -1,8 +1,8 @@
-const gulp = require("gulp");
-const cssnano = require("gulp-cssnano");
-const uglify = require("gulp-uglify");
-const size = require("gulp-size");
-const rev = require("gulp-rev");
+const gulp = require('gulp');
+const cssnano = require('gulp-cssnano');
+const uglify = require('gulp-uglify');
+const size = require('gulp-size');
+const rev = require('gulp-rev');
 
 const cssMin = () => {
 	return gulp
@@ -10,7 +10,7 @@ const cssMin = () => {
 		.pipe(cssnano())
 		.pipe(rev())
 		.pipe(gulp.dest(global.__buildConfig.dest))
-		.pipe(size({ title: "cssSize" }))
+		.pipe(size({ title: 'cssSize' }))
 		.pipe(rev.manifest({ merge: true }))
 		.pipe(gulp.dest(global.__buildConfig.dest));
 };
@@ -21,7 +21,7 @@ const jsMin = () => {
 		.pipe(uglify())
 		.pipe(rev())
 		.pipe(gulp.dest(`${global.__buildConfig.dest}/js`))
-		.pipe(size({ title: "jsSize" }))
+		.pipe(size({ title: 'jsSize' }))
 		.pipe(rev.manifest({ merge: true }))
 		.pipe(gulp.dest(global.__buildConfig.dest));
 };

@@ -1,11 +1,13 @@
-const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
 
-const extensions = ["jpeg", "jpg", "png", "gif", "svg"];
+const extensions = ['jpeg', 'jpg', 'png', 'gif', 'svg'];
 
 const images = () => {
 	return gulp
-		.src(`${global.__buildConfig.src}/images/**/*.{${extensions.join(",")}}`)
+		.src(
+			`${global.__buildConfig.src}/images/**/*.{${extensions.join(',')}}`
+		)
 		.pipe(
 			imagemin([
 				imagemin.gifsicle({ interlaced: true }),
@@ -16,8 +18,8 @@ const images = () => {
 						{ cleanupIDs: true },
 						{ removeTitle: true },
 						{ removeViewBox: false },
-						{ removeAttrs: { attrs: "(fill|stroke)" } },
-						{ addClassesToSVGElement: { className: "v-icon" } },
+						{ removeAttrs: { attrs: '(fill|stroke)' } },
+						{ addClassesToSVGElement: { className: 'v-icon' } },
 						{ removeUselessStrokeAndFill: true },
 						{ cleanupNumericValues: { floatPrecision: 2 } },
 						{ removeNonInheritableGroupAttrs: true },
