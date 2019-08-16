@@ -12,7 +12,7 @@ add_action( 'wp_head', 'abe_display_font' );
 */
 function abe_font_scripts() {
 
-	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Spectral:400,400i|Open+Sans:300,300i,400,400i,600,600i' );
+	wp_enqueue_style( 'abe_google_font', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Spectral:400&display=swap' );
 
 	wp_enqueue_script( 'font_face', get_theme_file_uri( 'js/vendors/fontfaceobserver.js' ), false, false, true );
 
@@ -26,15 +26,11 @@ function get_font_load_script() {
 	(function () {
 	var titleBold = new FontFaceObserver('Spectral', {weight: 400});
 	var bodyFont = new FontFaceObserver('Open Sans', {weight: 400});
-	var bodyItalic = new FontFaceObserver('Open Sans', {style: 'italic'});
 	var bodyLight = new FontFaceObserver('Open Sans', {weight: 300});
-	var bodyBold = new FontFaceObserver('Open Sans', {weight: 600});
 	Promise.all([
 		titleBold.load(),
 		bodyFont.load(),
-		bodyItalic.load(),
 		bodyLight.load(),
-		bodyBold.load()
 	]).then(function () {
 		document.documentElement.classList.add('fonts-loaded');
 		sessionStorage.fontsLoaded = true;
