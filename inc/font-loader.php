@@ -41,7 +41,7 @@ function get_font_load_script() {
 }
 
 function abe_display_font() {
-?>
+	?>
 	<script>
 		(function () {
 			if (sessionStorage.fontsLoaded) {
@@ -59,4 +59,5 @@ function abe_display_font() {
 			font-weight: normal;
 		}
 	</style>
-<?php }
+	<?php
+}
